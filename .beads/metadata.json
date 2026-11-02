@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "mastu",
+  "project_id": "0cb0aaea-d68a-4d1d-8aec-ad6a42c5f056"
+}
