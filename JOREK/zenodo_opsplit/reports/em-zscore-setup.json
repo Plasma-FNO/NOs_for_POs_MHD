@@ -1,0 +1,89 @@
+{
+  "campaign": "/pitagora_scratch/userexternal/vgopakum/jorek-composite-zscore-20261105/em/campaign",
+  "data": "/pitagora_scratch/userexternal/vgopakum/jorek-composite-zscore-20261105/em/data",
+  "normalization": {
+    "method": "zscore",
+    "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-20261104/em/data",
+    "source_comparison_sha256": "db750c0cba88e814480eaffa881abdf26876447f39487543a90a2d47cb91ba73",
+    "source_data_sha256": "e26c225dc386ca3e3967ba66d5bf4ba41915fc44a50a8489238cebe559697c6e",
+    "fields": [
+      "rho",
+      "T",
+      "potential",
+      "omega",
+      "psi",
+      "j"
+    ],
+    "weighting": "Equal eligible training frame/cell weight; union of windows, no overlap duplication",
+    "count_per_field": 37840000,
+    "mean": [
+      0.07214051701153364,
+      0.6882980890023422,
+      -0.0004652262270125766,
+      -8.356559385387992e-07,
+      0.999859213398306,
+      -0.0010250596960962087
+    ],
+    "population_std": [
+      0.10505310535318163,
+      1.2287211285150943,
+      0.052680838576775225,
+      0.0023704541922353866,
+      0.029074096743925016,
+      0.020392107449618436
+    ],
+    "scale": [
+      0.10505310535318163,
+      1.2287211285150943,
+      0.052680838576775225,
+      0.0023704541922353866,
+      0.029074096743925016,
+      0.020392107449618436
+    ],
+    "constant_channels": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "previous_center": [
+      1.1972873210906982,
+      13.90527057647705,
+      0.035850465297698975,
+      -0.005766868591308594,
+      1.0000286102294922,
+      -0.009893864393234253
+    ],
+    "previous_scale": [
+      1.1967170238494873,
+      13.904911994934082,
+      1.2332651615142822,
+      0.9903148412704468,
+      0.049958258867263794,
+      0.5168224573135376
+    ],
+    "usage": "Network inputs, rollout loss, learned output units and positive-coordinate reference; recurrent exported state stays float64",
+    "limitation": "Affine standardization does not remove skewness or bound outliers; normalized losses differ from min-max campaign"
+  },
+  "jobs": {
+    "smoke": "2784273",
+    "audit": "2784274",
+    "probe": "2784275",
+    "train": "2784276"
+  },
+  "cpu_tests": {
+    "job": 2784265,
+    "passed": 35,
+    "report": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/reports/em-zscore-tests-2784265.log"
+  },
+  "preparation_job": 2784266,
+  "stability_epochs": 110,
+  "total_epochs": 250,
+  "validation_horizon": 49,
+  "validation_trajectories": 11,
+  "status": "Submitted; inspect scheduler and campaign logs for live progress. No GPU audit or optimizer gate result claimed.",
+  "preserved": "Existing ES/EM datasets and campaigns; architecture, seed, optimizer, physical-state recurrence and numerical guards",
+  "metric_note": "Z-score losses are not directly comparable to min-max losses. Decoded R-weighted relative L2 remains comparable."
+}

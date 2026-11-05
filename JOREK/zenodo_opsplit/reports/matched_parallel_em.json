@@ -1,0 +1,162 @@
+{
+  "case": "em",
+  "arm": "opsplit-pretrained",
+  "global_batch": 20,
+  "world_size": 4,
+  "windows": [
+    [
+      16,
+      30
+    ],
+    [
+      12,
+      12
+    ],
+    [
+      6,
+      9
+    ],
+    [
+      6,
+      23
+    ],
+    [
+      8,
+      33
+    ],
+    [
+      12,
+      13
+    ],
+    [
+      25,
+      27
+    ],
+    [
+      65,
+      7
+    ],
+    [
+      10,
+      22
+    ],
+    [
+      74,
+      20
+    ],
+    [
+      11,
+      25
+    ],
+    [
+      73,
+      33
+    ],
+    [
+      8,
+      32
+    ],
+    [
+      3,
+      17
+    ],
+    [
+      39,
+      1
+    ],
+    [
+      58,
+      15
+    ],
+    [
+      52,
+      0
+    ],
+    [
+      7,
+      16
+    ],
+    [
+      48,
+      37
+    ],
+    [
+      44,
+      12
+    ]
+  ],
+  "loss": 2.990528945381064,
+  "measurements": [
+    {
+      "seconds": 42.994814821053296,
+      "peak_memory_bytes": 4162028544
+    },
+    {
+      "seconds": 42.99440831900574,
+      "peak_memory_bytes": 5561209344
+    },
+    {
+      "seconds": 42.99447831790894,
+      "peak_memory_bytes": 6873713152
+    },
+    {
+      "seconds": 42.99484207108617,
+      "peak_memory_bytes": 5326065152
+    }
+  ],
+  "identity": {
+    "arm": "opsplit-pretrained",
+    "comparison_sha256": "db750c0cba88e814480eaffa881abdf26876447f39487543a90a2d47cb91ba73",
+    "initialization_sha256": "9fb0dee3f2cd6785ed614e888dd62a98be44795b0c5dc5f0216aea67e6668d6f",
+    "device": "cuda",
+    "code_sha256": {
+      "prepare_native_terms.py": "ecc2b5f962958bf1b91750f11af2e15a13f72aa31774223802fe08961eaa56d6",
+      "test_parallel.py": "9ed115c9bf6141d6fa2908efc68990bdb6655968c469eac87101e5ab3a706c18",
+      "validate_native.py": "5c6aa3528cca1d8ad28c08b674ca54e195b61a6370e88d40656974708c1fcdb4",
+      "native_terms.py": "26350c3df521d406ca50c821dd6c9b21e849b0af82c7a310fa3783c5403cf99a",
+      "orchestrate_es.py": "5dd367bcb321fa1f3aa791dc71fd521778da428ae0ebb1b59290fdc719a5a3fd",
+      "native_imex.py": "01767ea6f5eb9cd51b889fb973534fd186272858e90310e18051e617ef302803",
+      "test_comparison.py": "d798eb4e6efa03d96f22de00f3da8d65296bdcaa5d9cd776514da44894003de9",
+      "train.py": "4f57824eb8234dcd977cd0fbab7747e15869cc50c0b7f8faed78403e7dc51ce5",
+      "train_es.py": "3d29318ef503914e2e24432b3a17b51d21312efc080d2a03a3d97e9b0ee3b1ba",
+      "data.py": "4fb151682f8182ae2a84eb58b8804b509c3122f06a14df35c872ab707108a83a",
+      "test_workflow.py": "2a4787858cfa34c881a722670f10aa5d1918b936124c345057485ac22cabfba5",
+      "formulation.py": "e60d4b6ba75899220c3c9c6ac7f480efa5c29790d97f560010fa7c730b63af51",
+      "parallel.py": "6da66705ddc0587b84cff8b9c11f028d445cf94e419668ca1ba5b3d11e39f577",
+      "evaluate_native_transfer.py": "7579e396e2906785dc438bf39585b1b3f3ac013ceeea62300d65f99c81dd1269",
+      "test_es.py": "8811f69fe54544e318ac09ee72ea2e975fb471a2cbb9584d221b79c44d3b645b",
+      "download.py": "40072d3850479fa3895ff897377891be3cb1e48cae03266e58ff360ae61c753e",
+      "test_native.py": "64d188046148fe9fc02b44360bc0eada026738e92f3f6c1a76c71907f842188f",
+      "orchestrate_composite.py": "e7f93c7c306e7c2ad69d069e0549058cdeb3bf2b1b6a7f1073b53cbe5ce2e821",
+      "test_gpu_native.py": "f8db12d8e92264e33194eac13ae52a303ecd75ca60749180ecccfee0000d5cd9",
+      "orchestrate.py": "cc7f648732d6777c90ce31149b6fa022d01eaac70349f538b1880df7f33387ca",
+      "equations.py": "eca0f3f30ea4571896698fa0cc4a6a9ee1c5f2479c35ae111b4975f6038e044d",
+      "comparison.py": "fbe96b057437c42814d30a4f528982e2199e6d93c2f726148ad8db1895a29e2b",
+      "orchestrate_native.py": "2817726ad7606ad04799b99380ab3477b7a2b785ac8df8fa871e5fccc650aae3",
+      "test_composite.py": "71c079da5ea507df2622d3f69eae83e0ec8982e9c754e93d73986ff0de88e913",
+      "benchmark_native_gpu.py": "02676c62b15f29d521edab4a738ef3df388346d3e78105e41aa80e0a752eb48d",
+      "summarize.py": "9ad496b8400d44504e60ecf37b9733bf65b0175ae08b232108c3ec4bfbf7adbc",
+      "orchestrate_comparison.py": "b69f19d4d8071c1d8bb2baa44a1dda769654906000e7c8164108c240b6d8c579",
+      "model.py": "ebe7831f0cf338c1cae48d61fecfde1a9dea398f98a040ec7ee716052a65fced",
+      "test_em.py": "e7dd2eeeb8adf68cd487f71541ebef2ab0ca6f238b058762e1505e7f547ef154",
+      "composite.py": "f87a894abdbb3771cd08fa4ba2947c68691390e6e3ee67b19fc75f4c08fac490",
+      "native.py": "38061a276295bb31efd9c1347cc5e0fe0736b42b6ceff496f51fba014c77033c",
+      "native_rollout.py": "40e5918bac5d8b875a63be4b4a70e1e80e8c043c4d830883aa1194a5ffb0b0dc",
+      "validate_native_windows.py": "36849fc8f30b039697d973f69f10d362efe061b21d79ba1551aed3bdc11ece17",
+      "train_comparison.py": "628855ba003b67b755adea5782bbfb856fb41246e062a7a4428c154e4bbfebc7",
+      "test_equations.py": "4b6b798ebef6bab4e015eb373bc80d700de74c3c756de09c46d64f7e83f1fb1b",
+      "gpu_sparse.py": "ce05ec19eeeb15250b750d4415d7407a1ccd33d90f1958e9fe638e6ddddd7ae3",
+      "audit_native.py": "e36dbdab271093b6020b0bb83737d15bbc667be60c6bf43e996d6ed0ba124291",
+      "train_native_rollout.py": "295bf274489bc7f4aebb2fbecb753e28973d62f6ec8ce213c0d68f15d746d701",
+      "validate_native_imex.py": "4f8b64f12fd7afffecef0a83aeccd2d33dfc557adb49aa227bb3f99106dfdccc",
+      "train_native_terms.py": "90f25596ab30918f7881f7078563e16764a93b078ae4f76bfc51b49ca813f4d0"
+    }
+  },
+  "relative_errors": {
+    "gradient": 7.042881067544895e-08,
+    "adam_parameters": 5.0214183094200424e-08
+  },
+  "loss_relative_error": 1.4849854924024992e-16,
+  "speedup": 3.023495956303007,
+  "passed": true
+}

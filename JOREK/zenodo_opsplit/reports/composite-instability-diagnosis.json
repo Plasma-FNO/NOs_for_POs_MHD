@@ -1,0 +1,33 @@
+{
+  "replay_device": "cpu",
+  "diagnosis": {
+    "es": {
+      "epoch": 3,
+      "trajectory": "jorek_run0298",
+      "step": 48,
+      "evidence_path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/es-cpu-replay/diagnosis.json"
+    },
+    "em": {
+      "epoch": 7,
+      "trajectory": "jorek_run083",
+      "step": 33,
+      "evidence_path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/em-cpu-replay/diagnosis.json"
+    }
+  },
+  "corrected_replay": {
+    "es": {
+      "passed": true,
+      "completed": true,
+      "horizon": 49,
+      "mean_relative_l2": 0.6050572341146486,
+      "trajectories": 42
+    },
+    "em": {
+      "passed": true,
+      "completed": true,
+      "horizon": 49,
+      "mean_relative_l2": 0.07838606285672776,
+      "trajectories": 11
+    }
+  }
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "case": "es",
+    "arm": "opsplit-pretrained",
+    "split": "train",
+    "id": "jorek_run0472",
+    "start": 39,
+    "horizon": 5,
+    "module_gradient_norms": {
+      "scalar_advection": 0.06556106302433938,
+      "fluid_momentum": 0.983635367194033,
+      "particle_diffusion": 0.11307938410208575,
+      "thermal_diffusion": 0.12399535786843685
+    },
+    "passed": true,
+    "loss": 0.26676947233186143,
+    "seconds": 76.36635797005147,
+    "limiter": {
+      "substeps": 94,
+      "limited_substeps": 0,
+      "analytic_fallbacks": 0,
+      "minimum_fraction": 1.0,
+      "density_limited": 64,
+      "temperature_limited": 61,
+      "minimum_scalar_fraction": 0.22085559736975055,
+      "cfl_limited_substeps": 94,
+      "minimum_dt_fraction": 0.01419054537043678,
+      "energy_limited": 58,
+      "minimum_energy_fraction": 0.9656215131945733
+    }
+  },
+  {
+    "case": "es",
+    "arm": "opsplit-pretrained",
+    "split": "val",
+    "id": "jorek_run0110",
+    "start": 0,
+    "horizon": 49,
+    "passed": true,
+    "loss": 1.8421415716499887,
+    "seconds": 188.71397283580154,
+    "limiter": {
+      "substeps": 392,
+      "limited_substeps": 0,
+      "analytic_fallbacks": 0,
+      "minimum_fraction": 1.0,
+      "density_limited": 388,
+      "temperature_limited": 339,
+      "minimum_scalar_fraction": 0.006871561758009994,
+      "cfl_limited_substeps": 0,
+      "minimum_dt_fraction": 1.0,
+      "energy_limited": 129,
+      "minimum_energy_fraction": 0.9966602940310207
+    }
+  }
+]

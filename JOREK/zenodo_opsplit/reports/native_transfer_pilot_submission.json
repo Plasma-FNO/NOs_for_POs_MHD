@@ -1,0 +1,21 @@
+{
+  "job_id": "2780074",
+  "root": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-transfer-pilot-20261105",
+  "submission": [
+    "sbatch",
+    "--parsable",
+    "--account=fupb2_ukaea_ml",
+    "--partition=boost_fua_prod",
+    "--nodes=1",
+    "--ntasks=1",
+    "--cpus-per-task=4",
+    "--gres=gpu:1",
+    "--mem=32G",
+    "--time=01:00:00",
+    "--job-name=jorek-native-transfer-pilot",
+    "--output=/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-transfer-pilot-20261105/pilot-%j.log",
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-transfer-pilot-20261105/pilot.sbatch"
+  ],
+  "protocol": "ES checkpoint reuse, EM budget8, four matched trainable arms, frozen and analytic controls",
+  "validation": "43 targeted CPU tests passed; source checkpoint and all cohort states verified"
+}

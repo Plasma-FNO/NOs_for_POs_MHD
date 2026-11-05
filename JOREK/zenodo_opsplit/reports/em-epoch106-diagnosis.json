@@ -1,0 +1,41 @@
+{
+  "case": "em-physical",
+  "date": "2026-11-05",
+  "scope": "Diagnostic only; frozen model, training code, checkpoints and ES campaign unchanged.",
+  "original_failure": {
+    "job": 2780704,
+    "completed_epochs": 105,
+    "failing_epoch_one_based": 106,
+    "trajectory": "jorek_run020",
+    "step": 49,
+    "stage": "neural update",
+    "field": "T",
+    "first_bad_batch_Z_R": [
+      0,
+      71,
+      46
+    ]
+  },
+  "replay": {
+    "cpu_all_validation": "JOREK/zenodo_opsplit/reports/em-epoch106-cpu-restored/summary.json",
+    "cpu_extended": "JOREK/zenodo_opsplit/reports/em-epoch106-cpu-extended/jorek_run020.json",
+    "checkpoint_identity": "Frozen code/data hashes and model config checked; every restored tensor exactly equal to saved tensor. CPU initialization hash/device excluded because weights and buffers are fully restored.",
+    "gpu_job": 2783710,
+    "gpu_status_at_report": "PENDING: QOSGrpNodeLimit; exact original-device reproduction not yet available"
+  },
+  "findings": [
+    "All 11 CPU trajectories complete 49 steps at best, last and failed checkpoints; mean relative L2 respectively 0.0466646, 0.1602481 and 0.3332922. Finite completion alone is not an accuracy/stability certificate.",
+    "Failed checkpoint jorek_run020 error is 3.014747 over the 49-step CPU validation. Normalized T/current inputs grow to maxima 214.0/224.3 at step 49.",
+    "Extending the same CPU rollout without optimizer updates produces 33 zero T cells at step 54, before implicit diffusion or auxiliary reconstruction. No ground-truth accuracy claim is made beyond step 49.",
+    "At the most negative coordinate, native T input=0.43725079834637964, reference=0.00028003600676474176, fluid rate=0.07380130887031555, magnetic rate=-2743.75146484375. Combined update moves coordinate 1561.4092037589796 to -1182.2684597759.",
+    "80-digit Decimal evaluation gives positive native T approximately 9.8752e-518, below the smallest float64 subnormal 4.9407e-324. Float64 evaluation returns zero. This confirms true underflow in the CPU reproduction.",
+    "This reproduction does not erase temperature by recurrent centering. All input temperatures remain positive; the zero is first introduced in the neural positive update.",
+    "The EM correction dominates the collapse at the inspected cell. Current and vorticity reconstruction participates in the recurrent coupled system, but causal responsibility of that feedback or boundary closure is not isolated by this trace.",
+    "Training uses five-step loss and gradient clipping. Neither bounds the learned recurrent dynamics over the 49-step validation horizon. The earlier 26-epoch gate did not certify later optimizer iterates."
+  ],
+  "recommendations": [
+    "Keep EM training stopped and retain best epoch-51 checkpoint as a candidate baseline; its 49-step success does not certify longer horizons.",
+    "Before any restart, evaluate stabilization of the learned EM update and coupled auxiliary feedback using controlled ablations, plus longer rollout training or stability penalties. Preserve ES/EM interface and report any objective change relative to the NS baseline.",
+    "Use full-cohort 49-step validation plus 100/200-step source-valid checks and range/error diagnostics. A temperature floor alone would hide the underflow while leaving runaway dynamics."
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "campaign": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/em-physical",
+  "device": "cpu",
+  "smallest_positive_float64": 5e-324,
+  "checkpoints": {
+    "best.pt": {
+      "sha256": "29e4967dec6ccb9de26b5e3af2edd0ce1b175d4e891775c1f80acc10ce87ada2",
+      "next_epoch": 51,
+      "next_offset": 0,
+      "trajectories": [
+        {
+          "id": "jorek_run020",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.046955457702836545
+        },
+        {
+          "id": "jorek_run006",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.023196560204519143
+        },
+        {
+          "id": "jorek_run100",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.045317595184547525
+        },
+        {
+          "id": "jorek_run083",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.07917674997930928
+        },
+        {
+          "id": "jorek_run085",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.056766059655085105
+        },
+        {
+          "id": "jorek_run008",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.0502741186814115
+        },
+        {
+          "id": "jorek_run048",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.04698853815033057
+        },
+        {
+          "id": "jorek_run035",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.0616729327972647
+        },
+        {
+          "id": "jorek_run033",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.01697345142345738
+        },
+        {
+          "id": "jorek_run051",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.04329549744896047
+        },
+        {
+          "id": "jorek_run057",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.04269361083714193
+        }
+      ],
+      "failed": 0,
+      "mean_relative_l2": 0.0466645974604422
+    },
+    "last.pt": {
+      "sha256": "5d834451f131c08da5c34b6d95535a055c21def1679b5ba8160a73a22d5ce7ed",
+      "next_epoch": 105,
+      "next_offset": 3220,
+      "trajectories": [
+        {
+          "id": "jorek_run020",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 1.1876468093909918
+        },
+        {
+          "id": "jorek_run006",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.02886200825154441
+        },
+        {
+          "id": "jorek_run100",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.05327972630922953
+        },
+        {
+          "id": "jorek_run083",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.08501578929375905
+        },
+        {
+          "id": "jorek_run085",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.06497821188601102
+        },
+        {
+          "id": "jorek_run008",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.0889892325704973
+        },
+        {
+          "id": "jorek_run048",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.04571380772335197
+        },
+        {
+          "id": "jorek_run035",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.08402664488624084
+        },
+        {
+          "id": "jorek_run033",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.026225989514340662
+        },
+        {
+          "id": "jorek_run051",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.045947790276766175
+        },
+        {
+          "id": "jorek_run057",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.05204335682600157
+        }
+      ],
+      "failed": 0,
+      "mean_relative_l2": 0.16024812426624854
+    },
+    "failed-validation.pt": {
+      "sha256": "50c524bb49010c3e2c890ecfd66055667698df590b3ee472c642a8d423e9e2f7",
+      "next_epoch": 105,
+      "next_offset": 3374,
+      "trajectories": [
+        {
+          "id": "jorek_run020",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 3.014746987955688
+        },
+        {
+          "id": "jorek_run006",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.032069866689048813
+        },
+        {
+          "id": "jorek_run100",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.05920451875047351
+        },
+        {
+          "id": "jorek_run083",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.09814504581593408
+        },
+        {
+          "id": "jorek_run085",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.08096792766299561
+        },
+        {
+          "id": "jorek_run008",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.10156126639111099
+        },
+        {
+          "id": "jorek_run048",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.052297146082086306
+        },
+        {
+          "id": "jorek_run035",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.08648230690424068
+        },
+        {
+          "id": "jorek_run033",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.03203686430300024
+        },
+        {
+          "id": "jorek_run051",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.04907278044290517
+        },
+        {
+          "id": "jorek_run057",
+          "completed_steps": 49,
+          "failure": null,
+          "relative_l2": 0.0596296656160632
+        }
+      ],
+      "failed": 0,
+      "mean_relative_l2": 0.333292216055777
+    }
+  }
+}

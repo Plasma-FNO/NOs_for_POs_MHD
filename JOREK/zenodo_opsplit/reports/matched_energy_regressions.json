@@ -1,0 +1,24 @@
+[
+  {
+    "case": "es",
+    "arm": "opsplit-scratch",
+    "id": "jorek_run0472",
+    "start": 39,
+    "passed": true,
+    "loss": 1.2724849308232342,
+    "grad_norm": 21.408966064453125,
+    "seconds": 32.848133952822536,
+    "limiter": {
+      "substeps": 83,
+      "limited_substeps": 0,
+      "analytic_fallbacks": 0,
+      "minimum_fraction": 1.0,
+      "density_limited": 37,
+      "temperature_limited": 43,
+      "minimum_scalar_fraction": 0.2293848456138807,
+      "cfl_limited_substeps": 83,
+      "minimum_dt_fraction": 0.13481237823082068
+    },
+    "energy_limited": 79
+  }
+]

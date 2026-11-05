@@ -1,0 +1,27 @@
+{
+  "reference": "2602.23113v2, section 5 and appendices J.2/K.2",
+  "epochs": 250,
+  "train_trajectories": 76,
+  "train_frames": 50,
+  "batch_size": 20,
+  "horizon": 5,
+  "width": 64,
+  "modes": 32,
+  "layers": 6,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "scheduler_step": 50,
+  "scheduler_gamma": 0.5,
+  "grad_clip": 1.0,
+  "eval_horizon": 200,
+  "seed": 907,
+  "notes": {
+    "published_settings": "250 epochs; Adam 1e-3; LR halving every 50 scheduler steps; 100 simulations; five predicted frames per backward; relative LP loss; range [-1,1]; FNO modes32 width64 layers6 GELU; Euler for NODE/OpsSplit.",
+    "repository_details": "Batch20 and seed907 follow NS_spectral_FNO.yaml. Adam weight_decay1e-4, default betas(0.9,0.999), epoch-wise scheduler and effective gradient clip1 follow Expts/Train.py / Utils/explicit_time.py; the YAML clip2 is not passed to that trainer.",
+    "opsplit": "Native JOREK formulation uses orchestrate_native.py and train_native_rollout.py: primary rho,p,u,(psi), separate term pretraining, anchored five-step loss, implicit diffusion/momentum, reported positivity-backtracked corrections. These are explicit adaptations from the paper Euler solver. See native_readiness.json. Baseline run snapshots remain unchanged.",
+    "implementation_resolution": "Paper takes precedence over older YAML (lr0.005, scheduler100) and trainer (range[0,1], rollout_length-1). Exactly five predictions here. Channels differ from incompressible NS; padded neuralop1.0.2 backend, lifting width64 and projection256; parameter counts recorded, not asserted equal to published counts.",
+    "em_adaptations": "76 EM training trajectories (all available training families), plus14 validation and10 test; first50 frames for training and normalization; six released fields for AR/NODE baselines; saved-frame dt1. Other optimizer, FNO and rollout settings match the ES experiment. No additional trajectories are taken from holdouts to reach100."
+  },
+  "reference_sha256": "0bf1f802a605c96a0b06f0c1d4f613536c2ecaa1635e16f7cbc4c3250a1b0055",
+  "case": "em"
+}

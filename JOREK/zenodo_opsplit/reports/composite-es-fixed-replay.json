@@ -1,0 +1,274 @@
+{
+  "identity": {
+    "arm": "composite",
+    "comparison_sha256": "6672f84ed2ca578ba667f6d846e3a402cb6f20dcd45c9ed4559e0cefaa149cdd",
+    "initialization_sha256": "17bf2a6448052be048980194565a1323722005e38c883c52099610d1d75847e6",
+    "device": "cpu",
+    "code_sha256": {
+      "prepare_native_terms.py": "ecc2b5f962958bf1b91750f11af2e15a13f72aa31774223802fe08961eaa56d6",
+      "test_parallel.py": "9ed115c9bf6141d6fa2908efc68990bdb6655968c469eac87101e5ab3a706c18",
+      "validate_native.py": "5c6aa3528cca1d8ad28c08b674ca54e195b61a6370e88d40656974708c1fcdb4",
+      "native_terms.py": "62758a06177711ee9963630aa2d3afadfdace5172a2fb3f899a65154824061ea",
+      "orchestrate_es.py": "5dd367bcb321fa1f3aa791dc71fd521778da428ae0ebb1b59290fdc719a5a3fd",
+      "native_imex.py": "01767ea6f5eb9cd51b889fb973534fd186272858e90310e18051e617ef302803",
+      "test_comparison.py": "2911599c4dbcc7c41fc6d7a80a35095ccc9fc8681e605e3c27b267c773f13949",
+      "train.py": "4f57824eb8234dcd977cd0fbab7747e15869cc50c0b7f8faed78403e7dc51ce5",
+      "train_es.py": "3d29318ef503914e2e24432b3a17b51d21312efc080d2a03a3d97e9b0ee3b1ba",
+      "data.py": "4fb151682f8182ae2a84eb58b8804b509c3122f06a14df35c872ab707108a83a",
+      "test_workflow.py": "2a4787858cfa34c881a722670f10aa5d1918b936124c345057485ac22cabfba5",
+      "train_native_corrections.py": "0b14838063e4b6bbd5418399d814711a17049e6e1c8c6444e36d085476cf84c1",
+      "formulation.py": "e60d4b6ba75899220c3c9c6ac7f480efa5c29790d97f560010fa7c730b63af51",
+      "parallel.py": "6da66705ddc0587b84cff8b9c11f028d445cf94e419668ca1ba5b3d11e39f577",
+      "evaluate_native_transfer.py": "7579e396e2906785dc438bf39585b1b3f3ac013ceeea62300d65f99c81dd1269",
+      "test_es.py": "8811f69fe54544e318ac09ee72ea2e975fb471a2cbb9584d221b79c44d3b645b",
+      "download.py": "40072d3850479fa3895ff897377891be3cb1e48cae03266e58ff360ae61c753e",
+      "test_native.py": "64d188046148fe9fc02b44360bc0eada026738e92f3f6c1a76c71907f842188f",
+      "orchestrate_composite.py": "8c47ab3551ae01cd997387f5ef6482f19d47f12be828686c33f0aba7da9adb7a",
+      "test_gpu_native.py": "3b70a0b478f7cb117338725bf6e03f502a1c6ace2f9d042901bcc0df750cae07",
+      "orchestrate.py": "cc7f648732d6777c90ce31149b6fa022d01eaac70349f538b1880df7f33387ca",
+      "equations.py": "eca0f3f30ea4571896698fa0cc4a6a9ee1c5f2479c35ae111b4975f6038e044d",
+      "comparison.py": "fbe96b057437c42814d30a4f528982e2199e6d93c2f726148ad8db1895a29e2b",
+      "orchestrate_native.py": "2817726ad7606ad04799b99380ab3477b7a2b785ac8df8fa871e5fccc650aae3",
+      "test_composite.py": "5e9ab46e84d39db6b7992971fb2378f8ead4b83be7c2caa9eed6831cf0222447",
+      "benchmark_native_gpu.py": "02676c62b15f29d521edab4a738ef3df388346d3e78105e41aa80e0a752eb48d",
+      "summarize.py": "9ad496b8400d44504e60ecf37b9733bf65b0175ae08b232108c3ec4bfbf7adbc",
+      "test_native_transfer_pilot.py": "d1bb10626419d3a43e9e440cb7802aa77ff1b9898bb70ae5e0d330894cd96f48",
+      "orchestrate_comparison.py": "b69f19d4d8071c1d8bb2baa44a1dda769654906000e7c8164108c240b6d8c579",
+      "model.py": "ebe7831f0cf338c1cae48d61fecfde1a9dea398f98a040ec7ee716052a65fced",
+      "test_em.py": "e7dd2eeeb8adf68cd487f71541ebef2ab0ca6f238b058762e1505e7f547ef154",
+      "composite.py": "2c71262d6f4f79c8e8d2461a3e8881d8be1ea3d7f987f3b2c74c1db60ac7135e",
+      "native.py": "38061a276295bb31efd9c1347cc5e0fe0736b42b6ceff496f51fba014c77033c",
+      "check_composite.py": "8c155d9c9952f38fe6530fcd05077d66b1573efbba763d1dcfd34ebe2d26d36a",
+      "pilot_native_transfer.py": "68bcd6b16eb783282dafcc8a3bf6aa07f4cab17841e4d9d029445a58520b449f",
+      "native_rollout.py": "808622e336368cf71d1fac2758050edc7de672bcab80e88f04801699a5d209cc",
+      "validate_native_windows.py": "36849fc8f30b039697d973f69f10d362efe061b21d79ba1551aed3bdc11ece17",
+      "train_comparison.py": "031097e2c056aa7e4dd850057e9eb62b11ed983c4bb9c6be953c484f241c1268",
+      "test_equations.py": "4b6b798ebef6bab4e015eb373bc80d700de74c3c756de09c46d64f7e83f1fb1b",
+      "diagnose_composite.py": "105154a0c10ca69cdeba411a5601c0b5a79b2b0941414f20cac5d12ab009b510",
+      "gpu_sparse.py": "ce05ec19eeeb15250b750d4415d7407a1ccd33d90f1958e9fe638e6ddddd7ae3",
+      "audit_native.py": "e36dbdab271093b6020b0bb83737d15bbc667be60c6bf43e996d6ed0ba124291",
+      "train_native_rollout.py": "94cf44845a66d9c15a7bceec0479d6e547f4d7f1d9e339580cade26efaf90d3c",
+      "validate_native_imex.py": "4f8b64f12fd7afffecef0a83aeccd2d33dfc557adb49aa227bb3f99106dfdccc",
+      "train_native_terms.py": "90f25596ab30918f7881f7078563e16764a93b078ae4f76bfc51b49ca813f4d0"
+    }
+  },
+  "checkpoint_sha256": "c06311af381a92e9ad9c75f507b565d5430f7fb6eb4e65fd477fd94f82747f2a",
+  "case": "es",
+  "positive_update": "softplus-rho-T",
+  "horizon": 49,
+  "completed": true,
+  "passed": true,
+  "trajectories": [
+    {
+      "id": "jorek_run0110",
+      "failure": null,
+      "relative_l2": 0.5723488562124455
+    },
+    {
+      "id": "jorek_run0140",
+      "failure": null,
+      "relative_l2": 0.6626247439199313
+    },
+    {
+      "id": "jorek_run0114",
+      "failure": null,
+      "relative_l2": 0.5578269452232769
+    },
+    {
+      "id": "jorek_run0255",
+      "failure": null,
+      "relative_l2": 0.6653687442237602
+    },
+    {
+      "id": "jorek_run0298",
+      "failure": null,
+      "relative_l2": 0.6431739911439808
+    },
+    {
+      "id": "jorek_run0226",
+      "failure": null,
+      "relative_l2": 0.5682045030886598
+    },
+    {
+      "id": "jorek_run0343",
+      "failure": null,
+      "relative_l2": 0.5314475743249203
+    },
+    {
+      "id": "jorek_run0219",
+      "failure": null,
+      "relative_l2": 0.530256545986429
+    },
+    {
+      "id": "jorek_run0229",
+      "failure": null,
+      "relative_l2": 0.5394757908058657
+    },
+    {
+      "id": "jorek_run0469",
+      "failure": null,
+      "relative_l2": 0.6069714815515279
+    },
+    {
+      "id": "jorek_run0088",
+      "failure": null,
+      "relative_l2": 0.5907840175412723
+    },
+    {
+      "id": "jorek_run0087",
+      "failure": null,
+      "relative_l2": 0.5538747850700404
+    },
+    {
+      "id": "jorek_run0222",
+      "failure": null,
+      "relative_l2": 0.6026973184611224
+    },
+    {
+      "id": "jorek_run0406",
+      "failure": null,
+      "relative_l2": 0.6403108431891107
+    },
+    {
+      "id": "jorek_run0020",
+      "failure": null,
+      "relative_l2": 0.5866328924936761
+    },
+    {
+      "id": "jorek_run0163",
+      "failure": null,
+      "relative_l2": 0.5952844515031566
+    },
+    {
+      "id": "jorek_run0384",
+      "failure": null,
+      "relative_l2": 0.6551815627364813
+    },
+    {
+      "id": "jorek_run0136",
+      "failure": null,
+      "relative_l2": 0.5687581190427862
+    },
+    {
+      "id": "jorek_run0268",
+      "failure": null,
+      "relative_l2": 0.605740745859273
+    },
+    {
+      "id": "jorek_run0169",
+      "failure": null,
+      "relative_l2": 0.6478075935092191
+    },
+    {
+      "id": "jorek_run0019",
+      "failure": null,
+      "relative_l2": 0.6279480912219032
+    },
+    {
+      "id": "jorek_run0096",
+      "failure": null,
+      "relative_l2": 0.5367114832030272
+    },
+    {
+      "id": "jorek_run0392",
+      "failure": null,
+      "relative_l2": 0.6815086083527865
+    },
+    {
+      "id": "jorek_run0388",
+      "failure": null,
+      "relative_l2": 0.5994773304719639
+    },
+    {
+      "id": "jorek_run0085",
+      "failure": null,
+      "relative_l2": 0.6140142888783306
+    },
+    {
+      "id": "jorek_run0001",
+      "failure": null,
+      "relative_l2": 0.6414419410481224
+    },
+    {
+      "id": "jorek_run0010",
+      "failure": null,
+      "relative_l2": 0.6694025380503172
+    },
+    {
+      "id": "jorek_run0077",
+      "failure": null,
+      "relative_l2": 0.546801794191579
+    },
+    {
+      "id": "jorek_run0386",
+      "failure": null,
+      "relative_l2": 0.5948501267002813
+    },
+    {
+      "id": "jorek_run0225",
+      "failure": null,
+      "relative_l2": 0.6556475673241038
+    },
+    {
+      "id": "jorek_run0173",
+      "failure": null,
+      "relative_l2": 0.6252317221055884
+    },
+    {
+      "id": "jorek_run0062",
+      "failure": null,
+      "relative_l2": 0.6504946069862573
+    },
+    {
+      "id": "jorek_run0377",
+      "failure": null,
+      "relative_l2": 0.6741362916454623
+    },
+    {
+      "id": "jorek_run0439",
+      "failure": null,
+      "relative_l2": 0.5930699905980327
+    },
+    {
+      "id": "jorek_run0044",
+      "failure": null,
+      "relative_l2": 0.5694123559114003
+    },
+    {
+      "id": "jorek_run0031",
+      "failure": null,
+      "relative_l2": 0.5649160308224945
+    },
+    {
+      "id": "jorek_run0277",
+      "failure": null,
+      "relative_l2": 0.6568329497292813
+    },
+    {
+      "id": "jorek_run0323",
+      "failure": null,
+      "relative_l2": 0.5503040613589982
+    },
+    {
+      "id": "jorek_run0166",
+      "failure": null,
+      "relative_l2": 0.5984417065715641
+    },
+    {
+      "id": "jorek_run0496",
+      "failure": null,
+      "relative_l2": 0.604767055149904
+    },
+    {
+      "id": "jorek_run0379",
+      "failure": null,
+      "relative_l2": 0.6398090667980496
+    },
+    {
+      "id": "jorek_run0095",
+      "failure": null,
+      "relative_l2": 0.5924127198088633
+    }
+  ],
+  "mean_relative_l2": 0.6050572341146486
+}

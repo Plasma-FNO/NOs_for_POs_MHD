@@ -1,0 +1,533 @@
+{
+  "recorded_at": "2026-11-05T11:18:18.873918+00:00",
+  "campaign_root": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-20261104",
+  "protocol": "four arms, shared windows and decoded rollout objective; no term anchor",
+  "validation": {
+    "cpu_regression_tests_passed": 57,
+    "gpu_smokes": "All four replacement four-GPU optimizer smoke jobs completed successfully.",
+    "native_exhaustive_audits": "All four completed and passed with zero failures. Per ES arm:4484 windows,100 worst-window gradient trajectories,42 common 49-step validation prefixes. Per EM arm:3374 windows,76 gradient trajectories,11 validation prefixes.",
+    "parallel_audit": "One worker per GPU across four GPUs; no concurrent backward workers on a shared device.",
+    "matched_counterexamples": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/reports/matched_initialization_regressions.json",
+    "gpu_solver_tests_passed": 7,
+    "targeted_actual_initializations": "Eight five-step backward checks pass across all four initializations, including both remaining ES CFL failures",
+    "targeted_validation_prefixes": "Four first common 49-step prefixes pass",
+    "targeted_evidence": "JOREK/zenodo_opsplit/reports/optimized_initializations.json",
+    "additional_es_checks": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/reports/check_slow_es_guard.json",
+    "production_launch_evidence": "reports/relaunch_observed.json"
+  },
+  "previous_campaign": {
+    "es_audit": "completed, failed: 44 excessive-CFL windows",
+    "em_rollout_2775518": "cancelled: superseded unmatched setup",
+    "em_audit": "completed, failed: 6 excessive-CFL windows"
+  },
+  "cases": {
+    "es": {
+      "data": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-20261104/es/data/comparison.json",
+      "valid_training_windows": 4484,
+      "source_invalid_windows": 16,
+      "valid_validation_trajectories": 42,
+      "test_cohorts": {
+        "10": 53,
+        "49": 51,
+        "100": 51,
+        "200": 51
+      },
+      "jobs": {
+        "data": "2775847",
+        "terms": "2775848",
+        "ar-smoke": "2775849",
+        "ar": "2775850",
+        "node-smoke": "2775851",
+        "node": "2775852",
+        "opsplit-scratch-smoke": "2779850",
+        "opsplit-scratch-audit": "2779851",
+        "opsplit-scratch": "2779852",
+        "opsplit-pretrained-smoke": "2779854",
+        "opsplit-pretrained-audit": "2779855",
+        "opsplit-pretrained": "2779856",
+        "opsplit-scratch-evaluate": "2779853",
+        "opsplit-pretrained-evaluate": "2779857"
+      },
+      "training_progress": {
+        "ar": {
+          "completed_epochs": 250,
+          "latest": {
+            "epoch": 249,
+            "train_relative_l2": 0.014718112439236186,
+            "val_relative_l2": 0.05484361638133102,
+            "lr": 6.25e-05,
+            "elapsed_seconds": 11824.173706233967
+          },
+          "test_complete": true,
+          "test_failures_by_horizon": {
+            "10": 0,
+            "49": 0,
+            "100": 0,
+            "200": 0
+          },
+          "latest_batch": {
+            "epoch": 249,
+            "offset": 4480,
+            "loss": 0.009195270389318467,
+            "seconds": 11818.424546066904
+          }
+        },
+        "node": {
+          "completed_epochs": 250,
+          "latest": {
+            "epoch": 249,
+            "train_relative_l2": 0.012432703626716807,
+            "val_relative_l2": 0.048519033659883096,
+            "lr": 6.25e-05,
+            "elapsed_seconds": 11974.187063673977
+          },
+          "test_complete": true,
+          "test_failures_by_horizon": {
+            "10": 0,
+            "49": 0,
+            "100": 0,
+            "200": 0
+          },
+          "latest_batch": {
+            "epoch": 249,
+            "offset": 4480,
+            "loss": 0.006016410514712333,
+            "seconds": 11968.452372209867
+          }
+        },
+        "opsplit-scratch": {
+          "completed_epochs": 0,
+          "latest": null,
+          "latest_batch": {
+            "epoch": 0,
+            "offset": 1280,
+            "loss": 0.01817619521687288,
+            "seconds": 1369.4563420170452,
+            "limiter": {
+              "substeps": 930,
+              "limited_substeps": 0,
+              "analytic_fallbacks": 0,
+              "minimum_fraction": 1.0,
+              "density_limited": 930,
+              "temperature_limited": 928,
+              "minimum_scalar_fraction": 0.00016580090557871062,
+              "cfl_limited_substeps": 361,
+              "minimum_dt_fraction": 0.008786490681374914,
+              "energy_limited": 71,
+              "minimum_energy_fraction": 0.9838173650526016
+            }
+          }
+        },
+        "opsplit-pretrained": {
+          "completed_epochs": 0,
+          "latest": null,
+          "latest_batch": {
+            "epoch": 0,
+            "offset": 1200,
+            "loss": 0.019371667073873576,
+            "seconds": 1276.8447502839845,
+            "limiter": {
+              "substeps": 934,
+              "limited_substeps": 0,
+              "analytic_fallbacks": 0,
+              "minimum_fraction": 1.0,
+              "density_limited": 934,
+              "temperature_limited": 932,
+              "minimum_scalar_fraction": 0.0010081554774368578,
+              "cfl_limited_substeps": 390,
+              "minimum_dt_fraction": 0.039592442630004145,
+              "energy_limited": 31,
+              "minimum_energy_fraction": 0.9988568088037154
+            }
+          }
+        }
+      },
+      "native_gate": "Both exact code/data/initialization audit certificates passed; full training started.",
+      "superseded_native_jobs": {
+        "opsplit-scratch-smoke": "2775853",
+        "opsplit-scratch-audit": "2775854",
+        "opsplit-scratch": "2775855",
+        "opsplit-pretrained-smoke": "2775856",
+        "opsplit-pretrained-audit": "2775857",
+        "opsplit-pretrained": "2775858"
+      },
+      "native_campaign": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-fast-20261105/es",
+      "native_audits": {
+        "opsplit-scratch": {
+          "report": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-fast-20261105/es/opsplit-scratch-audit.json",
+          "expected_windows": 4484,
+          "attempted_windows": 4484,
+          "gradient_trajectories": 100,
+          "validation_trajectories": 42,
+          "completed": true,
+          "passed": true,
+          "failure_count": 0,
+          "failure_types": {},
+          "first_failures": []
+        },
+        "opsplit-pretrained": {
+          "report": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-fast-20261105/es/opsplit-pretrained-audit.json",
+          "expected_windows": 4484,
+          "attempted_windows": 4484,
+          "gradient_trajectories": 100,
+          "validation_trajectories": 42,
+          "completed": true,
+          "passed": true,
+          "failure_count": 0,
+          "failure_types": {},
+          "first_failures": []
+        }
+      },
+      "previous_native_campaigns": [
+        {
+          "root": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-coupled-20261104/es",
+          "jobs": {
+            "opsplit-scratch-smoke": "2776215",
+            "opsplit-scratch-audit": "2776216",
+            "opsplit-scratch": "2776217",
+            "opsplit-pretrained-smoke": "2776218",
+            "opsplit-pretrained-audit": "2776219",
+            "opsplit-pretrained": "2776220"
+          },
+          "audit_summary": {
+            "opsplit-scratch": {
+              "report": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-coupled-20261104/es/opsplit-scratch-audit.json",
+              "expected_windows": 4484,
+              "completed_windows": 4484,
+              "gradient_trajectories": 94,
+              "validation_trajectories": 42,
+              "completed": true,
+              "passed": false,
+              "window_count_note": "Attempted windows; failures remain listed and must not be counted as passes."
+            },
+            "opsplit-pretrained": {
+              "report": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-coupled-20261104/es/opsplit-pretrained-audit.json",
+              "expected_windows": 4484,
+              "completed_windows": 1035,
+              "gradient_trajectories": 19,
+              "validation_trajectories": 0,
+              "completed": false,
+              "passed": false,
+              "window_count_note": "Attempted windows; failures remain listed and must not be counted as passes."
+            }
+          },
+          "state": "Superseded by shared-corner flux and optimized four-GPU run"
+        }
+      ]
+    },
+    "em": {
+      "data": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-20261104/em/data/comparison.json",
+      "valid_training_windows": 3374,
+      "source_invalid_windows": 46,
+      "valid_validation_trajectories": 11,
+      "test_cohorts": {
+        "10": 10,
+        "49": 9,
+        "100": 9,
+        "200": 9
+      },
+      "jobs": {
+        "data": "2775859",
+        "terms": "2775860",
+        "ar-smoke": "2775861",
+        "ar": "2775862",
+        "node-smoke": "2775863",
+        "node": "2775864",
+        "opsplit-scratch-smoke": "2779858",
+        "opsplit-scratch-audit": "2779859",
+        "opsplit-scratch": "2779860",
+        "opsplit-pretrained-smoke": "2779862",
+        "opsplit-pretrained-audit": "2779863",
+        "opsplit-pretrained": "2779864",
+        "opsplit-scratch-evaluate": "2779861",
+        "opsplit-pretrained-evaluate": "2779865"
+      },
+      "superseded_jobs": {
+        "opsplit-scratch-audit": "2775866",
+        "opsplit-scratch": "2775867",
+        "state": "cancelled while pending after replacement chain submitted"
+      },
+      "parallel_audit_v2": {
+        "root": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-20261104/em/parallel-audit-v2",
+        "smoke": "2776051",
+        "audit": "2776052",
+        "train": "2776053",
+        "dependency": "smoke -> exhaustive audit -> full training; afterok only"
+      },
+      "node_time_limit": "04:00:00; timed checkpoint/requeue at 13200 seconds",
+      "training_progress": {
+        "ar": {
+          "completed_epochs": 250,
+          "latest": {
+            "epoch": 249,
+            "train_relative_l2": 0.01724880079440132,
+            "val_relative_l2": 0.06102519774038849,
+            "lr": 6.25e-05,
+            "elapsed_seconds": 9502.440083052032
+          },
+          "test_complete": true,
+          "test_failures_by_horizon": {
+            "10": 0,
+            "49": 0,
+            "100": 0,
+            "200": 0
+          },
+          "latest_batch": {
+            "epoch": 249,
+            "offset": 3360,
+            "loss": 0.022917025429861886,
+            "seconds": 9500.375361098908
+          }
+        },
+        "node": {
+          "completed_epochs": 250,
+          "latest": {
+            "epoch": 249,
+            "train_relative_l2": 0.013462951484345514,
+            "val_relative_l2": 0.06887221469065254,
+            "lr": 6.25e-05,
+            "elapsed_seconds": 8798.485776622081
+          },
+          "test_complete": true,
+          "test_failures_by_horizon": {
+            "10": 0,
+            "49": 0,
+            "100": 0,
+            "200": 0
+          },
+          "latest_batch": {
+            "epoch": 249,
+            "offset": 3360,
+            "loss": 0.017899107933044434,
+            "seconds": 8796.993255830137
+          }
+        },
+        "opsplit-scratch": {
+          "completed_epochs": 0,
+          "latest": null,
+          "latest_batch": {
+            "epoch": 0,
+            "offset": 140,
+            "loss": 0.06963048107349916,
+            "seconds": 468.67683906597085,
+            "limiter": {
+              "substeps": 1500,
+              "limited_substeps": 0,
+              "analytic_fallbacks": 0,
+              "minimum_fraction": 1.0,
+              "density_limited": 1481,
+              "temperature_limited": 1404,
+              "minimum_scalar_fraction": 0.007537730279409322,
+              "cfl_limited_substeps": 1500,
+              "minimum_dt_fraction": 0.0002737083581735078,
+              "energy_limited": 1247,
+              "minimum_energy_fraction": 0.8153448975049572
+            }
+          }
+        },
+        "opsplit-pretrained": {
+          "completed_epochs": 0,
+          "latest": null,
+          "latest_batch": {
+            "epoch": 0,
+            "offset": 0,
+            "loss": 0.02990528945381064,
+            "seconds": 179.6040924550034,
+            "limiter": {
+              "substeps": 1837,
+              "limited_substeps": 0,
+              "analytic_fallbacks": 0,
+              "minimum_fraction": 1.0,
+              "density_limited": 445,
+              "temperature_limited": 17,
+              "minimum_scalar_fraction": 0.09756774078934974,
+              "cfl_limited_substeps": 1837,
+              "minimum_dt_fraction": 0.0025157573277510893,
+              "energy_limited": 996,
+              "minimum_energy_fraction": 0.9387884226977126
+            }
+          }
+        }
+      },
+      "native_gate": "Both exact code/data/initialization audit certificates passed; full training started.",
+      "superseded_native_jobs": {
+        "opsplit-scratch-smoke": "2775865",
+        "opsplit-scratch-audit": "2775866",
+        "opsplit-scratch": "2775867",
+        "opsplit-pretrained-smoke": "2775868",
+        "opsplit-pretrained-audit": "2775869",
+        "opsplit-pretrained": "2775870"
+      },
+      "native_campaign": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-fast-20261105/em",
+      "native_audits": {
+        "opsplit-scratch": {
+          "report": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-fast-20261105/em/opsplit-scratch-audit.json",
+          "expected_windows": 3374,
+          "attempted_windows": 3374,
+          "gradient_trajectories": 76,
+          "validation_trajectories": 11,
+          "completed": true,
+          "passed": true,
+          "failure_count": 0,
+          "failure_types": {},
+          "first_failures": []
+        },
+        "opsplit-pretrained": {
+          "report": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-fast-20261105/em/opsplit-pretrained-audit.json",
+          "expected_windows": 3374,
+          "attempted_windows": 3374,
+          "gradient_trajectories": 76,
+          "validation_trajectories": 11,
+          "completed": true,
+          "passed": true,
+          "failure_count": 0,
+          "failure_types": {},
+          "first_failures": []
+        }
+      },
+      "previous_native_campaigns": [
+        {
+          "root": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-coupled-20261104/em-conservative",
+          "jobs": {
+            "opsplit-scratch-smoke": "2776467",
+            "opsplit-scratch-audit": "2776468",
+            "opsplit-scratch": "2776469",
+            "opsplit-pretrained-smoke": "2776470",
+            "opsplit-pretrained-audit": "2776471",
+            "opsplit-pretrained": "2776472"
+          },
+          "audit_summary": {
+            "opsplit-scratch": {
+              "report": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-coupled-20261104/em-conservative/opsplit-scratch-audit.json",
+              "expected_windows": 3374,
+              "completed_windows": 3374,
+              "gradient_trajectories": 76,
+              "validation_trajectories": 11,
+              "completed": true,
+              "passed": true,
+              "window_count_note": "Attempted windows; failures remain listed and must not be counted as passes."
+            },
+            "opsplit-pretrained": {
+              "report": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-coupled-20261104/em-conservative/opsplit-pretrained-audit.json",
+              "expected_windows": 3374,
+              "completed_windows": 3374,
+              "gradient_trajectories": 76,
+              "validation_trajectories": 11,
+              "completed": true,
+              "passed": true,
+              "window_count_note": "Attempted windows; failures remain listed and must not be counted as passes."
+            }
+          },
+          "state": "Superseded by shared-corner flux and optimized four-GPU run"
+        }
+      ]
+    }
+  },
+  "numerical_fix": "Shared-corner conservative transport removes artificial wall divergence; existing density bound, kinetic envelope and EM conservative density-advection correction retained.",
+  "timing_caveat": "Warm isolated GPU measurements on one seeded pretrained batch of 20; not end-to-end ETAs or scratch timing. Four-GPU wall speedup must be reported alongside GPU-hours.",
+  "scheduler_snapshot": [
+    "2775847|jorek-compare-es-data|COMPLETED|0:0|00:01:14",
+    "2775848|jorek-compare-es-terms|COMPLETED|0:0|00:11:09",
+    "2775849|jorek-compare-es-ar-smoke|COMPLETED|0:0|00:00:10",
+    "2775850|jorek-compare-es-ar|COMPLETED|0:0|03:18:01",
+    "2775851|jorek-compare-es-node-smoke|COMPLETED|0:0|00:00:09",
+    "2775852|jorek-compare-es-node|COMPLETED|0:0|03:20:18",
+    "2775859|jorek-compare-em-data|COMPLETED|0:0|00:00:51",
+    "2775860|jorek-compare-em-terms|COMPLETED|0:0|00:09:03",
+    "2775861|jorek-compare-em-ar-smoke|COMPLETED|0:0|00:00:08",
+    "2775862|jorek-compare-em-ar|COMPLETED|0:0|02:38:43",
+    "2775863|jorek-compare-em-node-smoke|COMPLETED|0:0|00:00:08",
+    "2775864|jorek-compare-em-node|COMPLETED|0:0|02:26:56",
+    "2779850|jorek-compare-es-opsplit-scratch-smoke|COMPLETED|0:0|00:02:49",
+    "2779851|jorek-compare-es-opsplit-scratch-audit|COMPLETED|0:0|00:28:05",
+    "2779852|jorek-compare-es-opsplit-scratch|RUNNING|0:0|00:23:18",
+    "2779853|jorek-compare-es-opsplit-scratch-evaluate|PENDING|0:0|00:00:00",
+    "2779854|jorek-compare-es-opsplit-pretrained-smoke|COMPLETED|0:0|00:02:47",
+    "2779855|jorek-compare-es-opsplit-pretrained-audit|COMPLETED|0:0|00:29:26",
+    "2779856|jorek-compare-es-opsplit-pretrained|RUNNING|0:0|00:21:50",
+    "2779857|jorek-compare-es-opsplit-pretrained-evaluate|PENDING|0:0|00:00:00",
+    "2779858|jorek-compare-em-opsplit-scratch-smoke|COMPLETED|0:0|00:02:44",
+    "2779859|jorek-compare-em-opsplit-scratch-audit|COMPLETED|0:0|00:40:39",
+    "2779860|jorek-compare-em-opsplit-scratch|RUNNING|0:0|00:08:43",
+    "2779861|jorek-compare-em-opsplit-scratch-evaluate|PENDING|0:0|00:00:00",
+    "2779862|jorek-compare-em-opsplit-pretrained-smoke|COMPLETED|0:0|00:02:33",
+    "2779863|jorek-compare-em-opsplit-pretrained-audit|COMPLETED|0:0|00:45:23",
+    "2779864|jorek-compare-em-opsplit-pretrained|RUNNING|0:0|00:03:48",
+    "2779865|jorek-compare-em-opsplit-pretrained-evaluate|PENDING|0:0|00:00:00"
+  ],
+  "native_campaign_root": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-fast-20261105",
+  "numerical_limitations": "Kinetic envelope is a numerical safeguard, not an exact discrete total-energy law or guarantee of stability for all future trained weights. Limiter activity is recorded.",
+  "superseded_em_guard_only": {
+    "root": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-coupled-20261104/em",
+    "cancelled_pending_jobs": [
+      "2776222",
+      "2776223",
+      "2776225",
+      "2776226"
+    ],
+    "stopped_audit_steps": [
+      "2775862.4",
+      "2775864.0"
+    ],
+    "reason": "Superseded by corrected conservative momentum; baseline parent jobs remain running"
+  },
+  "native_training_state": "All four full native training jobs RUNNING after passed exhaustive audits, with finite optimizer updates and saved last.pt checkpoints observed in every arm: ES scratch2779852/pretrained2779856; EM scratch2779860/pretrained2779864.",
+  "approval_review_history": {
+    "earlier_diagnostic_step": "Diagnostic-step cancellation was rejected; the step timed out normally, leaving its parent training job running.",
+    "current_superseded_em_steps": "Selectively terminated after matching exact step commands; baseline parent jobs stayed running."
+  },
+  "scheduler_queue": [
+    "2779865|jorek-compare-em-opsplit-pretrained-evaluate|PENDING|0:00|(Dependency)",
+    "2779861|jorek-compare-em-opsplit-scratch-evaluate|PENDING|0:00|(Dependency)",
+    "2779857|jorek-compare-es-opsplit-pretrained-evaluate|PENDING|0:00|(Dependency)",
+    "2779853|jorek-compare-es-opsplit-scratch-evaluate|PENDING|0:00|(Dependency)",
+    "2779852|jorek-compare-es-opsplit-scratch|RUNNING|23:18|r315c04s03",
+    "2779856|jorek-compare-es-opsplit-pretrained|RUNNING|21:50|r313c02s02",
+    "2779860|jorek-compare-em-opsplit-scratch|RUNNING|8:43|r311c04s02",
+    "2779864|jorek-compare-em-opsplit-pretrained|RUNNING|3:48|r311c04s01"
+  ],
+  "audit_chunks_previous_snapshot": {
+    "es/opsplit-scratch": {
+      "step": "2775850.6",
+      "state": "completed resumable partial, exit75; 405 windows"
+    },
+    "es/opsplit-pretrained": {
+      "step": "2775852.2",
+      "state": "40-minute step limit; 225 completed windows saved, queued job released"
+    },
+    "em/opsplit-scratch": {
+      "step": "2775864.2",
+      "state": "running corrected EM snapshot"
+    },
+    "em/opsplit-pretrained": {
+      "step": "2775862.7",
+      "state": "running corrected EM snapshot"
+    }
+  },
+  "runtime_changes": "Cached stencil structure, factorization reuse for momentum RHS columns, IMEX-only term evaluation, compiled analytic derivatives, four-GPU summed gradient accumulation with global batch 20.",
+  "performance_evidence": {
+    "es": {
+      "global_batch": 20,
+      "serial_seconds": 55.94130032416433,
+      "four_gpu_seconds": 16.715940522029996,
+      "relative_errors": {
+        "gradient": 1.1291466895318017e-07,
+        "adam_parameters": 1.0822887686990432e-07
+      },
+      "passed": true,
+      "report": "JOREK/zenodo_opsplit/reports/matched_parallel_es.json"
+    },
+    "em": {
+      "global_batch": 20,
+      "serial_seconds": 129.99473114381544,
+      "four_gpu_seconds": 42.99484207108617,
+      "relative_errors": {
+        "gradient": 7.042881067544895e-08,
+        "adam_parameters": 5.0214183094200424e-08
+      },
+      "passed": true,
+      "report": "JOREK/zenodo_opsplit/reports/matched_parallel_em.json",
+      "previous_solver_serial_seconds": 217.58808561693877
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "device": "NVIDIA H100",
+  "cases": {
+    "es": {
+      "id": "jorek_run0446",
+      "measurements": [
+        {
+          "elliptic_device": "cpu",
+          "seconds": 36.07084394292906,
+          "objective": 0.14481588791050218,
+          "relative_gradient_error": 0.0,
+          "limiter": {
+            "substeps": 40,
+            "limited_substeps": 4,
+            "analytic_fallbacks": 0,
+            "minimum_fraction": 0.5
+          }
+        },
+        {
+          "elliptic_device": "cuda",
+          "seconds": 3.3040161330718547,
+          "objective": 0.14481588791050753,
+          "relative_gradient_error": 0.0,
+          "limiter": {
+            "substeps": 40,
+            "limited_substeps": 4,
+            "analytic_fallbacks": 0,
+            "minimum_fraction": 0.5
+          }
+        },
+        {
+          "elliptic_device": "cuda",
+          "seconds": 3.05649231094867,
+          "objective": 0.14481588791050753,
+          "relative_gradient_error": 0.0,
+          "limiter": {
+            "substeps": 40,
+            "limited_substeps": 4,
+            "analytic_fallbacks": 0,
+            "minimum_fraction": 0.5
+          }
+        }
+      ],
+      "speedup": 11.80138546847299
+    },
+    "em": {
+      "id": "jorek_run016",
+      "measurements": [
+        {
+          "elliptic_device": "cpu",
+          "seconds": 32.79719168297015,
+          "objective": 0.26664387270506684,
+          "relative_gradient_error": 0.0,
+          "limiter": {
+            "substeps": 40,
+            "limited_substeps": 0,
+            "analytic_fallbacks": 0,
+            "minimum_fraction": 1.0
+          }
+        },
+        {
+          "elliptic_device": "cuda",
+          "seconds": 3.9885480829980224,
+          "objective": 0.26664387270637463,
+          "relative_gradient_error": 6.461106649702231e-10,
+          "limiter": {
+            "substeps": 40,
+            "limited_substeps": 0,
+            "analytic_fallbacks": 0,
+            "minimum_fraction": 1.0
+          }
+        },
+        {
+          "elliptic_device": "cuda",
+          "seconds": 3.7844294998794794,
+          "objective": 0.26664387270637463,
+          "relative_gradient_error": 6.461106649702231e-10,
+          "limiter": {
+            "substeps": 40,
+            "limited_substeps": 0,
+            "analytic_fallbacks": 0,
+            "minimum_fraction": 1.0
+          }
+        }
+      ],
+      "speedup": 8.66635028714754
+    }
+  }
+}

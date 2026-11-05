@@ -1,0 +1,20 @@
+{
+  "id": "jorek_run017",
+  "start": 35,
+  "offset": 20,
+  "original_error": "Nonpositive density after native step",
+  "original_failed_frame": 1,
+  "fixed_completed": true,
+  "limiter": {
+    "substeps": 87,
+    "limited_substeps": 0,
+    "analytic_fallbacks": 0,
+    "minimum_fraction": 1.0,
+    "density_limited": 0,
+    "temperature_limited": 79,
+    "minimum_scalar_fraction": 0.07393234878098574,
+    "cfl_limited_substeps": 87,
+    "minimum_dt_fraction": 0.09249268431375839
+  },
+  "seconds": 15.55285777989775
+}

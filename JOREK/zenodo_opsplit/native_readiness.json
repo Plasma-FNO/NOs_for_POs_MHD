@@ -1,0 +1,1808 @@
+{
+  "updated_utc": "2026-11-04T17:32:02.555155+00:00",
+  "status": "positivity_cfl_fixed_exhaustive_audits_submitted",
+  "exact_generating_solver_recovered": false,
+  "full_rollout_campaign_completed": false,
+  "units_adapter": "https://github.com/spamela/neural_parareal/blob/5e4203a3edff9aa8e78cca954a8c2b39fcc8ec85/coarse_solver/coarse_solver.py#L112",
+  "frame_interval": {
+    "value": 5.0,
+    "basis": "common native units; nominal release sampling, not recovered timestamp arrays"
+  },
+  "current_source_revision": "01a52be37576f79c785f1f7a80dee296dda5c9c8",
+  "historical_source_inspected": "56335ba115d59a0ac6961dd253945dafe55d7b36",
+  "viscosity_selection": "old for ES/EM, inferred from training-only residuals",
+  "tests": {
+    "passed": 61,
+    "command": "python -m pytest JOREK/zenodo_opsplit -q",
+    "implicit_adjoint_finite_difference_checks": true,
+    "resume_es_em_passed": true,
+    "cpu_passed": 56,
+    "gpu_passed": 5
+  },
+  "limitations": [
+    "The exact generating revision and original per-frame physical timestamps remain unavailable; use nominal common-native dt=5.",
+    "The old EM viscosity profile is inferred from training residuals, not recovered from original run provenance.",
+    "Term targets and static wall/current closure are coarse FV/FD approximations, not exported JOREK FEM residuals.",
+    "Scalar convex limiting and explicit-wave CFL control stabilize reproduced failures; exhaustive initial-checkpoint audits are pending.",
+    "GPU solves are faster, but serial trajectory accumulation and at least eight adaptive substeps make full 250-epoch campaigns expensive."
+  ],
+  "reports": {
+    "original_export_audit": "native_export_audit.json",
+    "training_residuals": "native_validation.json",
+    "reference_rollouts": "native_imex_validation.json",
+    "previous_reference_rollouts": "native_imex_validation_initial.json"
+  },
+  "run_directory": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-20261104",
+  "cases": {
+    "es": {
+      "plan": {
+        "case": "es",
+        "formulation": "jorek-equations",
+        "status": "dedicated_native_workflow",
+        "ready": true,
+        "primary_state": [
+          "rho",
+          "p",
+          "u"
+        ],
+        "pressure": "p=rho*T in common native units",
+        "auxiliary_constraints": {
+          "omega": "Delta_c(u)"
+        },
+        "equation": "M(q) q_dot = A(q) + D(q;c) + C(q)",
+        "learned_modules": [
+          "scalar_advection",
+          "fluid_momentum",
+          "particle_diffusion",
+          "thermal_diffusion"
+        ],
+        "explicit": [
+          "geometry",
+          "coefficients",
+          "constraints",
+          "density-dependent momentum solve",
+          "viscosity",
+          "stabilization"
+        ],
+        "integrator": "first-order IMEX with positivity-backtracked learned corrections and implicit adjoints",
+        "supervision": "Separate FD equation-term pretraining, then anchored five-step trajectory loss",
+        "launcher": "orchestrate_native.py",
+        "trainer": "train_native_rollout.py",
+        "limitations": [
+          "The exact generating revision and original per-frame physical timestamps remain unavailable; use nominal common-native dt=5.",
+          "The old EM viscosity profile is inferred from training residuals, not recovered from original run provenance.",
+          "Term targets and static wall/current closure are coarse FV/FD approximations, not exported JOREK FEM residuals.",
+          "Learned corrections use a reported positivity line search; unrestricted pretrained rollouts failed positivity checks.",
+          "CPU sparse implicit adjoints are a correctness backend; benchmark cost before a full rollout campaign."
+        ],
+        "reference": "README.md: Native training implementation; native_readiness.json records validation and jobs"
+      },
+      "term_pretraining": {
+        "epochs": 250,
+        "job_id": "2773519",
+        "status": "COMPLETED",
+        "checkpoint": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-20261104/es-term-training/best.pt",
+        "test_metrics": {
+          "phase": "term_pretraining",
+          "normalized_term_mse": {
+            "scalar_advection": 0.8209771513938904,
+            "fluid_momentum": 0.8273088335990906,
+            "particle_diffusion": 0.09680033475160599,
+            "thermal_diffusion": 0.11287373304367065
+          }
+        }
+      },
+      "cache_coverage": {
+        "train": {
+          "trajectories": 100,
+          "samples": 1000,
+          "rejected_states": [],
+          "nonpositive_pressure_states": [
+            {
+              "id": "jorek_run0316",
+              "frame": 35
+            },
+            {
+              "id": "jorek_run0259",
+              "frame": 45
+            }
+          ]
+        },
+        "val": {
+          "trajectories": 44,
+          "samples": 440,
+          "rejected_states": [],
+          "nonpositive_pressure_states": [
+            {
+              "id": "jorek_run0367",
+              "frame": 30
+            },
+            {
+              "id": "jorek_run0367",
+              "frame": 35
+            }
+          ]
+        },
+        "test": {
+          "trajectories": 53,
+          "samples": 530,
+          "rejected_states": [],
+          "nonpositive_pressure_states": []
+        }
+      },
+      "rollout_smoke": {
+        "job_id": "2774902",
+        "status": "COMPLETED",
+        "training": [
+          {
+            "epoch": 0,
+            "offset": 0,
+            "objective": 0.13501847696357483,
+            "seconds": 31.795636958209798,
+            "limiter": {
+              "substeps": 40,
+              "limited_substeps": 4,
+              "analytic_fallbacks": 0,
+              "minimum_fraction": 0.5
+            }
+          }
+        ],
+        "validation": {
+          "epoch": 0,
+          "trajectories": [
+            {
+              "id": "jorek_run0367",
+              "status": "ok",
+              "relative_lp": 0.017987365053480076,
+              "limiter": {
+                "substeps": 40,
+                "limited_substeps": 0,
+                "analytic_fallbacks": 0,
+                "minimum_fraction": 1.0
+              }
+            }
+          ]
+        },
+        "checkpoint": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-20261104/es-implicit-transport-rollout/rollout/best.pt",
+        "qualification": "one optimizer update on one five-step window and one validation family; not a trained full-rollout model"
+      },
+      "full_rollout_plan": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-20261104/es-full-rollout-plan/jobs.json",
+      "reference_validation": [
+        {
+          "id": "jorek_run0367",
+          "substeps": {
+            "8": {
+              "completed": true,
+              "failure": null,
+              "frames": [
+                {
+                  "frame": 1,
+                  "relative_l2": [
+                    0.0030070837828097266,
+                    0.003969566653516952,
+                    0.05998552322681466
+                  ]
+                },
+                {
+                  "frame": 2,
+                  "relative_l2": [
+                    0.006174751125106513,
+                    0.011481009479256716,
+                    0.05587760554484489
+                  ]
+                },
+                {
+                  "frame": 3,
+                  "relative_l2": [
+                    0.010623173247819197,
+                    0.022640549605003193,
+                    0.05302840085933055
+                  ]
+                },
+                {
+                  "frame": 4,
+                  "relative_l2": [
+                    0.01641110833552512,
+                    0.0372024751867405,
+                    0.05098099451437388
+                  ]
+                },
+                {
+                  "frame": 5,
+                  "relative_l2": [
+                    0.023584832050280294,
+                    0.05514571716974071,
+                    0.049671497770523036
+                  ]
+                }
+              ],
+              "seconds": 17.26866300299298
+            },
+            "16": {
+              "completed": true,
+              "failure": null,
+              "frames": [
+                {
+                  "frame": 1,
+                  "relative_l2": [
+                    0.002722032260705677,
+                    0.00313963147900492,
+                    0.06075319894826965
+                  ]
+                },
+                {
+                  "frame": 2,
+                  "relative_l2": [
+                    0.005401729211627322,
+                    0.009820666935817455,
+                    0.05656260276838326
+                  ]
+                },
+                {
+                  "frame": 3,
+                  "relative_l2": [
+                    0.009347360607568819,
+                    0.02013871530893832,
+                    0.05360582589320614
+                  ]
+                },
+                {
+                  "frame": 4,
+                  "relative_l2": [
+                    0.014625641160620456,
+                    0.03376612021434122,
+                    0.051430091633902136
+                  ]
+                },
+                {
+                  "frame": 5,
+                  "relative_l2": [
+                    0.02123655398346645,
+                    0.05058633938944817,
+                    0.04996487424317737
+                  ]
+                }
+              ],
+              "seconds": 31.816319453995675
+            }
+          }
+        },
+        {
+          "id": "jorek_run0110",
+          "substeps": {
+            "8": {
+              "completed": true,
+              "failure": null,
+              "frames": [
+                {
+                  "frame": 1,
+                  "relative_l2": [
+                    0.0017532589064155116,
+                    0.001384680170830407,
+                    0.02802506762965938
+                  ]
+                },
+                {
+                  "frame": 2,
+                  "relative_l2": [
+                    0.002987511975988626,
+                    0.0035587438476297846,
+                    0.026432682809388524
+                  ]
+                },
+                {
+                  "frame": 3,
+                  "relative_l2": [
+                    0.004444119078868422,
+                    0.006749197699863902,
+                    0.02527034569615536
+                  ]
+                },
+                {
+                  "frame": 4,
+                  "relative_l2": [
+                    0.006315144973451595,
+                    0.01093646905790979,
+                    0.024342187453303465
+                  ]
+                },
+                {
+                  "frame": 5,
+                  "relative_l2": [
+                    0.008617460870787234,
+                    0.016093035151982214,
+                    0.02357919866517379
+                  ]
+                }
+              ],
+              "seconds": 14.948521669954062
+            },
+            "16": {
+              "completed": true,
+              "failure": null,
+              "frames": [
+                {
+                  "frame": 1,
+                  "relative_l2": [
+                    0.0016640148614587352,
+                    0.0010811769235832254,
+                    0.028551097343606047
+                  ]
+                },
+                {
+                  "frame": 2,
+                  "relative_l2": [
+                    0.0027292614521242874,
+                    0.0029234974432782385,
+                    0.026929517273819953
+                  ]
+                },
+                {
+                  "frame": 3,
+                  "relative_l2": [
+                    0.003975732584272593,
+                    0.005799216884682253,
+                    0.025730275439301106
+                  ]
+                },
+                {
+                  "frame": 4,
+                  "relative_l2": [
+                    0.005634508409436012,
+                    0.009677217753600535,
+                    0.0247604136617255
+                  ]
+                },
+                {
+                  "frame": 5,
+                  "relative_l2": [
+                    0.007732107244902612,
+                    0.014521089308511,
+                    0.02395079810190595
+                  ]
+                }
+              ],
+              "seconds": 38.43335585203022
+            }
+          }
+        }
+      ]
+    },
+    "em": {
+      "plan": {
+        "case": "em",
+        "formulation": "jorek-equations",
+        "status": "dedicated_native_workflow",
+        "ready": true,
+        "primary_state": [
+          "rho",
+          "p",
+          "u",
+          "psi"
+        ],
+        "pressure": "p=rho*T in common native units",
+        "auxiliary_constraints": {
+          "omega": "Delta_c(u)",
+          "j": "Delta_star(psi)"
+        },
+        "equation": "M(q) q_dot = A(q) + D(q;c) + C(q)",
+        "learned_modules": [
+          "scalar_advection",
+          "fluid_momentum",
+          "particle_diffusion",
+          "thermal_diffusion"
+        ],
+        "explicit": [
+          "geometry",
+          "coefficients",
+          "constraints",
+          "density-dependent momentum solve",
+          "viscosity",
+          "stabilization",
+          "induction",
+          "Lorentz force",
+          "resistivity",
+          "anisotropic transport",
+          "conservative-momentum correction"
+        ],
+        "integrator": "first-order IMEX with positivity-backtracked learned corrections and implicit adjoints",
+        "supervision": "Separate FD equation-term pretraining, then anchored five-step trajectory loss",
+        "launcher": "orchestrate_native.py",
+        "trainer": "train_native_rollout.py",
+        "limitations": [
+          "The exact generating revision and original per-frame physical timestamps remain unavailable; use nominal common-native dt=5.",
+          "The old EM viscosity profile is inferred from training residuals, not recovered from original run provenance.",
+          "Term targets and static wall/current closure are coarse FV/FD approximations, not exported JOREK FEM residuals.",
+          "Learned corrections use a reported positivity line search; unrestricted pretrained rollouts failed positivity checks.",
+          "CPU sparse implicit adjoints are a correctness backend; benchmark cost before a full rollout campaign."
+        ],
+        "reference": "README.md: Native training implementation; native_readiness.json records validation and jobs"
+      },
+      "term_pretraining": {
+        "epochs": 250,
+        "job_id": "2773521",
+        "status": "COMPLETED",
+        "checkpoint": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-20261104/em-term-training/best.pt",
+        "test_metrics": {
+          "phase": "term_pretraining",
+          "normalized_term_mse": {
+            "scalar_advection": 1.8535152673721313,
+            "fluid_momentum": 1.4377713203430176,
+            "particle_diffusion": 0.048248469829559326,
+            "thermal_diffusion": 0.08018384128808975
+          }
+        }
+      },
+      "cache_coverage": {
+        "train": {
+          "trajectories": 76,
+          "samples": 760,
+          "rejected_states": [],
+          "nonpositive_pressure_states": [
+            {
+              "id": "jorek_run062",
+              "frame": 35
+            },
+            {
+              "id": "jorek_run098",
+              "frame": 30
+            }
+          ]
+        },
+        "val": {
+          "trajectories": 14,
+          "samples": 140,
+          "rejected_states": [],
+          "nonpositive_pressure_states": [
+            {
+              "id": "jorek_run068",
+              "frame": 45
+            },
+            {
+              "id": "jorek_run032",
+              "frame": 35
+            }
+          ]
+        },
+        "test": {
+          "trajectories": 10,
+          "samples": 99,
+          "rejected_states": [
+            {
+              "id": "jorek_run014",
+              "frame": 40,
+              "reason": "nonfinite state or nonpositive density"
+            }
+          ],
+          "nonpositive_pressure_states": [
+            {
+              "id": "jorek_run014",
+              "frame": 30
+            },
+            {
+              "id": "jorek_run014",
+              "frame": 40
+            }
+          ]
+        }
+      },
+      "rollout_smoke": {
+        "job_id": "2774903",
+        "status": "COMPLETED",
+        "training": [
+          {
+            "epoch": 0,
+            "offset": 0,
+            "objective": 0.2642574953270363,
+            "seconds": 33.75111372512765,
+            "limiter": {
+              "substeps": 40,
+              "limited_substeps": 0,
+              "analytic_fallbacks": 0,
+              "minimum_fraction": 1.0
+            }
+          }
+        ],
+        "validation": {
+          "epoch": 0,
+          "trajectories": [
+            {
+              "id": "jorek_run020",
+              "status": "ok",
+              "relative_lp": 0.007366802823496693,
+              "limiter": {
+                "substeps": 40,
+                "limited_substeps": 37,
+                "analytic_fallbacks": 0,
+                "minimum_fraction": 0.0625
+              }
+            }
+          ]
+        },
+        "checkpoint": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-20261104/em-implicit-transport-rollout/rollout/best.pt",
+        "qualification": "one optimizer update on one five-step window and one validation family; not a trained full-rollout model"
+      },
+      "full_rollout_plan": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-20261104/em-full-rollout-plan/jobs.json",
+      "reference_validation": [
+        {
+          "id": "jorek_run020",
+          "substeps": {
+            "8": {
+              "completed": true,
+              "failure": null,
+              "frames": [
+                {
+                  "frame": 1,
+                  "relative_l2": [
+                    0.003981169715403671,
+                    0.0024875643129386935,
+                    0.048543743598779096,
+                    9.628028096944605e-07
+                  ],
+                  "delta_psi_relative_l2": 0.16740115686889898
+                },
+                {
+                  "frame": 2,
+                  "relative_l2": [
+                    0.00486539935872061,
+                    0.00528865949714238,
+                    0.048134082960003176,
+                    1.672056834082303e-06
+                  ],
+                  "delta_psi_relative_l2": 0.07940607013867332
+                },
+                {
+                  "frame": 3,
+                  "relative_l2": [
+                    0.006213593514327004,
+                    0.009464313978012095,
+                    0.04548832353383965,
+                    2.324950194908489e-06
+                  ],
+                  "delta_psi_relative_l2": 0.05219739308109728
+                },
+                {
+                  "frame": 4,
+                  "relative_l2": [
+                    0.008208278000309262,
+                    0.01496768828927941,
+                    0.0424656650248219,
+                    3.035353098222632e-06
+                  ],
+                  "delta_psi_relative_l2": 0.04032374879515311
+                },
+                {
+                  "frame": 5,
+                  "relative_l2": [
+                    0.01084084044824354,
+                    0.021793871657071178,
+                    0.03993303248284451,
+                    3.831843527292956e-06
+                  ],
+                  "delta_psi_relative_l2": 0.0340212389487946
+                }
+              ],
+              "seconds": 23.8759106680518
+            },
+            "16": {
+              "completed": true,
+              "failure": null,
+              "frames": [
+                {
+                  "frame": 1,
+                  "relative_l2": [
+                    0.0037826150514809927,
+                    0.0020361553071335746,
+                    0.05161438720696606,
+                    7.796122717045394e-07
+                  ],
+                  "delta_psi_relative_l2": 0.13555007824909254
+                },
+                {
+                  "frame": 2,
+                  "relative_l2": [
+                    0.004415591013374376,
+                    0.004236301302271123,
+                    0.052562140838880576,
+                    1.3935252493334693e-06
+                  ],
+                  "delta_psi_relative_l2": 0.06617859000547525
+                },
+                {
+                  "frame": 3,
+                  "relative_l2": [
+                    0.005423986552572331,
+                    0.007877808293742936,
+                    0.050507165212711785,
+                    2.005098829937268e-06
+                  ],
+                  "delta_psi_relative_l2": 0.045016418855718034
+                },
+                {
+                  "frame": 4,
+                  "relative_l2": [
+                    0.007082840968452348,
+                    0.012895940425766304,
+                    0.04749942538025426,
+                    2.6934809066023193e-06
+                  ],
+                  "delta_psi_relative_l2": 0.03578208002422226
+                },
+                {
+                  "frame": 5,
+                  "relative_l2": [
+                    0.009414509445819211,
+                    0.019246812590431973,
+                    0.044500873131611995,
+                    3.468542160451855e-06
+                  ],
+                  "delta_psi_relative_l2": 0.030795647265916933
+                }
+              ],
+              "seconds": 48.38865377090406
+            }
+          }
+        },
+        {
+          "id": "jorek_run006",
+          "substeps": {
+            "8": {
+              "completed": true,
+              "failure": null,
+              "frames": [
+                {
+                  "frame": 1,
+                  "relative_l2": [
+                    0.009260880872200972,
+                    0.017416503103369205,
+                    0.18143563246758349,
+                    7.456181367915681e-07
+                  ],
+                  "delta_psi_relative_l2": 0.40699208521412256
+                },
+                {
+                  "frame": 2,
+                  "relative_l2": [
+                    0.012383287186240252,
+                    0.038177775345088545,
+                    0.19284357652693473,
+                    1.358376609227282e-06
+                  ],
+                  "delta_psi_relative_l2": 0.2392916653413804
+                },
+                {
+                  "frame": 3,
+                  "relative_l2": [
+                    0.016952903711310145,
+                    0.06436538145146534,
+                    0.19074647425457508,
+                    1.9805407146946733e-06
+                  ],
+                  "delta_psi_relative_l2": 0.17313256650124675
+                },
+                {
+                  "frame": 4,
+                  "relative_l2": [
+                    0.022466504218723798,
+                    0.09197810838263291,
+                    0.18444693671781137,
+                    2.6890993718503556e-06
+                  ],
+                  "delta_psi_relative_l2": 0.14230443265208892
+                },
+                {
+                  "frame": 5,
+                  "relative_l2": [
+                    0.02873563390448578,
+                    0.1208701699231026,
+                    0.17730349247473923,
+                    3.501948665387601e-06
+                  ],
+                  "delta_psi_relative_l2": 0.12613805190201102
+                }
+              ],
+              "seconds": 23.91784725699108
+            },
+            "16": {
+              "completed": true,
+              "failure": null,
+              "frames": [
+                {
+                  "frame": 1,
+                  "relative_l2": [
+                    0.008853276993795317,
+                    0.01634708729976785,
+                    0.18129108920057796,
+                    7.388224318331751e-07
+                  ],
+                  "delta_psi_relative_l2": 0.4032826822435649
+                },
+                {
+                  "frame": 2,
+                  "relative_l2": [
+                    0.011673574478197082,
+                    0.03596412780153092,
+                    0.19165349981923288,
+                    1.376250180692182e-06
+                  ],
+                  "delta_psi_relative_l2": 0.24244027424143136
+                },
+                {
+                  "frame": 3,
+                  "relative_l2": [
+                    0.015906893783155105,
+                    0.06093766843412283,
+                    0.18907537162226654,
+                    2.036214402782836e-06
+                  ],
+                  "delta_psi_relative_l2": 0.17799938314065092
+                },
+                {
+                  "frame": 4,
+                  "relative_l2": [
+                    0.02111159991744472,
+                    0.08737172679511519,
+                    0.1826155437014654,
+                    2.778318075564076e-06
+                  ],
+                  "delta_psi_relative_l2": 0.14702579666966317
+                },
+                {
+                  "frame": 5,
+                  "relative_l2": [
+                    0.02709224498562836,
+                    0.1151114896272183,
+                    0.1756017153064151,
+                    3.604403593614279e-06
+                  ],
+                  "delta_psi_relative_l2": 0.12982841583624163
+                }
+              ],
+              "seconds": 50.85173384298105
+            }
+          }
+        }
+      ]
+    }
+  },
+  "code_sha256": {
+    "prepare_native_terms.py": "ecc2b5f962958bf1b91750f11af2e15a13f72aa31774223802fe08961eaa56d6",
+    "validate_native.py": "5c6aa3528cca1d8ad28c08b674ca54e195b61a6370e88d40656974708c1fcdb4",
+    "native_terms.py": "26350c3df521d406ca50c821dd6c9b21e849b0af82c7a310fa3783c5403cf99a",
+    "orchestrate_es.py": "5dd367bcb321fa1f3aa791dc71fd521778da428ae0ebb1b59290fdc719a5a3fd",
+    "native_imex.py": "01767ea6f5eb9cd51b889fb973534fd186272858e90310e18051e617ef302803",
+    "train.py": "4f57824eb8234dcd977cd0fbab7747e15869cc50c0b7f8faed78403e7dc51ce5",
+    "train_es.py": "3d29318ef503914e2e24432b3a17b51d21312efc080d2a03a3d97e9b0ee3b1ba",
+    "data.py": "4fb151682f8182ae2a84eb58b8804b509c3122f06a14df35c872ab707108a83a",
+    "test_workflow.py": "2a4787858cfa34c881a722670f10aa5d1918b936124c345057485ac22cabfba5",
+    "formulation.py": "c1d5d5e93e14c6aa376b2c7616153a03ebe6d7858cdc4716dae45a7760b810b1",
+    "evaluate_native_transfer.py": "7579e396e2906785dc438bf39585b1b3f3ac013ceeea62300d65f99c81dd1269",
+    "test_es.py": "8811f69fe54544e318ac09ee72ea2e975fb471a2cbb9584d221b79c44d3b645b",
+    "download.py": "40072d3850479fa3895ff897377891be3cb1e48cae03266e58ff360ae61c753e",
+    "test_native.py": "fdad7d484c95cb6750531570dd69cd821b4b2075f519990dc8e9aed1b6339bce",
+    "orchestrate.py": "cc7f648732d6777c90ce31149b6fa022d01eaac70349f538b1880df7f33387ca",
+    "equations.py": "eca0f3f30ea4571896698fa0cc4a6a9ee1c5f2479c35ae111b4975f6038e044d",
+    "orchestrate_native.py": "20f1d19866492d829682b677a3d740869e9c6fb6246be26938b35529a845b5a4",
+    "summarize.py": "9ad496b8400d44504e60ecf37b9733bf65b0175ae08b232108c3ec4bfbf7adbc",
+    "model.py": "ebe7831f0cf338c1cae48d61fecfde1a9dea398f98a040ec7ee716052a65fced",
+    "test_em.py": "e7dd2eeeb8adf68cd487f71541ebef2ab0ca6f238b058762e1505e7f547ef154",
+    "native.py": "4fd381d11622d8a8f594bd006f83b4e30f985a63935da4a4d92774ff69872acc",
+    "native_rollout.py": "2db06088f0192ea82144c7ccf038cf2d8797ead57b4227471bb2d8d37d8ccd91",
+    "test_equations.py": "4b6b798ebef6bab4e015eb373bc80d700de74c3c756de09c46d64f7e83f1fb1b",
+    "audit_native.py": "e36dbdab271093b6020b0bb83737d15bbc667be60c6bf43e996d6ed0ba124291",
+    "train_native_rollout.py": "73ea10594bf1efae06d53d0194e1dafa42f2fd253e6da332a7134cdfc03b8a17",
+    "validate_native_imex.py": "4f8b64f12fd7afffecef0a83aeccd2d33dfc557adb49aa227bb3f99106dfdccc",
+    "train_native_terms.py": "90f25596ab30918f7881f7078563e16764a93b078ae4f76bfc51b49ca813f4d0"
+  },
+  "frozen_transfer_check": {
+    "job_id": "2774914",
+    "report": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-20261104/es-to-em-final-validation.json",
+    "trajectories": [
+      {
+        "id": "jorek_run020",
+        "frames": [
+          {
+            "frame": 1,
+            "primary_relative_l2": [
+              0.007833790862025335,
+              0.010074744063945575,
+              1.1349763215196522,
+              5.6884739271952985e-06
+            ],
+            "delta_psi_relative_l2": 0.9890468812957192,
+            "observed_relative_l2": [
+              0.0078091498215692185,
+              0.025400067296612882,
+              1.1366391314760182,
+              0.9974186686625254,
+              5.248257497236126e-06,
+              0.484874028640967
+            ],
+            "persistence_observed_relative_l2": [
+              0.02007466287477983,
+              0.05886638350883144,
+              1.0,
+              1.0,
+              5.31776347948423e-06,
+              1.0
+            ]
+          },
+          {
+            "frame": 2,
+            "primary_relative_l2": [
+              0.025472104628745214,
+              0.03946110809457238,
+              1.129730333255648,
+              2.100948288247083e-05
+            ],
+            "delta_psi_relative_l2": 0.9977414866154113,
+            "observed_relative_l2": [
+              0.02538642328974527,
+              0.05182791083278764,
+              1.1313070485175862,
+              0.9974621286725424,
+              1.9292838144148633e-05,
+              0.8241397846115295
+            ],
+            "persistence_observed_relative_l2": [
+              0.041012234603582165,
+              0.0898276133895958,
+              1.0,
+              1.0,
+              1.933825301524175e-05,
+              1.0
+            ]
+          },
+          {
+            "frame": 3,
+            "primary_relative_l2": [
+              0.05527975927048445,
+              0.08845136642938924,
+              1.1248901766112438,
+              4.460215463045241e-05
+            ],
+            "delta_psi_relative_l2": 1.0013617507196722,
+            "observed_relative_l2": [
+              0.05508441045968211,
+              0.08632130284916578,
+              1.1264031696847296,
+              0.9974783858837993,
+              4.092381925016733e-05,
+              0.9291744521839737
+            ],
+            "persistence_observed_relative_l2": [
+              0.07140374552543023,
+              0.12156030315204003,
+              1.0,
+              1.0,
+              4.0870572829688306e-05,
+              1.0
+            ]
+          },
+          {
+            "frame": 4,
+            "primary_relative_l2": [
+              0.0960345353383756,
+              0.15604775875099078,
+              1.1203720482524782,
+              7.56131934989164e-05
+            ],
+            "delta_psi_relative_l2": 1.0044984295352566,
+            "observed_relative_l2": [
+              0.09568166657198535,
+              0.13001817884813974,
+              1.121828403284388,
+              0.9975499031018081,
+              6.931815213576758e-05,
+              0.9612344689531321
+            ],
+            "persistence_observed_relative_l2": [
+              0.11295226397095884,
+              0.16016933741839362,
+              1.0,
+              1.0,
+              6.901493373478517e-05,
+              1.0
+            ]
+          },
+          {
+            "frame": 5,
+            "primary_relative_l2": [
+              0.1467489106281886,
+              0.24075565436518304,
+              1.1157744363086646,
+              0.00011349132851960159
+            ],
+            "delta_psi_relative_l2": 1.0076391634157453,
+            "observed_relative_l2": [
+              0.14619103083852866,
+              0.18300179625150512,
+              1.1171733351630648,
+              0.9976519876711453,
+              0.00010395424771508273,
+              0.9738367699841145
+            ],
+            "persistence_observed_relative_l2": [
+              0.16546616264894415,
+              0.20818815475603372,
+              1.0,
+              1.0,
+              0.0001031761165429747,
+              1.0
+            ]
+          }
+        ],
+        "status": "ok",
+        "limiter": {
+          "substeps": 40,
+          "limited_substeps": 0,
+          "analytic_fallbacks": 0,
+          "minimum_fraction": 1.0
+        },
+        "seconds": 26.354454805143178
+      },
+      {
+        "id": "jorek_run006",
+        "frames": [
+          {
+            "frame": 1,
+            "primary_relative_l2": [
+              0.012872391946985426,
+              0.0315119211800825,
+              1.8963854801013373,
+              1.696871140952634e-06
+            ],
+            "delta_psi_relative_l2": 0.9262289768965685,
+            "observed_relative_l2": [
+              0.01233606685833311,
+              0.06308184195889775,
+              1.911688702760199,
+              1.0001459436535607,
+              1.697786431857666e-06,
+              0.34550611513910295
+            ],
+            "persistence_observed_relative_l2": [
+              0.044665726953088104,
+              0.17199326699476541,
+              1.0,
+              1.0,
+              1.8613439831752105e-06,
+              1.0
+            ]
+          },
+          {
+            "frame": 2,
+            "primary_relative_l2": [
+              0.03303737463861389,
+              0.10427935470505124,
+              1.787731904649508,
+              5.678368552408005e-06
+            ],
+            "delta_psi_relative_l2": 1.000301579177505,
+            "observed_relative_l2": [
+              0.0316157154728455,
+              0.11867298160121431,
+              1.8015490451588212,
+              1.0002504903359382,
+              5.251928627358815e-06,
+              0.5519056601406592
+            ],
+            "persistence_observed_relative_l2": [
+              0.08102937192227627,
+              0.2506390961464223,
+              1.0,
+              1.0,
+              5.272807188578176e-06,
+              1.0
+            ]
+          },
+          {
+            "frame": 3,
+            "primary_relative_l2": [
+              0.06481656304978647,
+              0.2111423556232492,
+              1.7122205156292833,
+              1.1774098324244665e-05
+            ],
+            "delta_psi_relative_l2": 1.0292542061821566,
+            "observed_relative_l2": [
+              0.06195634678808434,
+              0.18647468813610224,
+              1.725392115098432,
+              1.0003562368747796,
+              1.0783917021386388e-05,
+              0.7293815885215728
+            ],
+            "persistence_observed_relative_l2": [
+              0.1221077352526143,
+              0.32535253621058724,
+              1.0,
+              1.0,
+              1.0472789616080004e-05,
+              1.0
+            ]
+          },
+          {
+            "frame": 4,
+            "primary_relative_l2": [
+              0.1040050513206319,
+              0.33703423280434525,
+              1.656210240842465,
+              1.9733565430154902e-05
+            ],
+            "delta_psi_relative_l2": 1.044280424195993,
+            "observed_relative_l2": [
+              0.09932348920365919,
+              0.2632605664863393,
+              1.6689435271604824,
+              1.0004816289566094,
+              1.8030328370870014e-05,
+              0.8348681160632245
+            ],
+            "persistence_observed_relative_l2": [
+              0.1697469540165771,
+              0.40535262342456474,
+              1.0,
+              1.0,
+              1.7232726128020126e-05,
+              1.0
+            ]
+          },
+          {
+            "frame": 5,
+            "primary_relative_l2": [
+              0.14775355157134126,
+              0.46926850217160726,
+              1.6141373487916766,
+              2.9255772392323024e-05
+            ],
+            "delta_psi_relative_l2": 1.0537750518532567,
+            "observed_relative_l2": [
+              0.14098936449127583,
+              0.34482357662805013,
+              1.626497373616312,
+              1.0006275549155892,
+              2.670547362548998e-05,
+              0.8933276570733746
+            ],
+            "persistence_observed_relative_l2": [
+              0.22281110883914432,
+              0.4898996968879458,
+              1.0,
+              1.0,
+              2.5280905193989902e-05,
+              1.0
+            ]
+          }
+        ],
+        "status": "ok",
+        "limiter": {
+          "substeps": 40,
+          "limited_substeps": 0,
+          "analytic_fallbacks": 0,
+          "minimum_fraction": 1.0
+        },
+        "seconds": 26.06070757796988
+      }
+    ],
+    "interpretation": "Two validation-family diagnostic rollouts only; magnetic perturbation errors near one do not establish useful zero-shot transfer."
+  },
+  "gpu_update": {
+    "updated_utc": "2026-11-04T16:38:39.554174+00:00",
+    "backend": "cuDSS0.7.1 FP64 GPU factorization/solve and transposed adjoints",
+    "tests": {
+      "cpu_passed": 48,
+      "gpu_passed": 4
+    },
+    "benchmark": {
+      "device": "NVIDIA H100",
+      "cases": {
+        "es": {
+          "id": "jorek_run0446",
+          "measurements": [
+            {
+              "elliptic_device": "cpu",
+              "seconds": 36.07084394292906,
+              "objective": 0.14481588791050218,
+              "relative_gradient_error": 0.0,
+              "limiter": {
+                "substeps": 40,
+                "limited_substeps": 4,
+                "analytic_fallbacks": 0,
+                "minimum_fraction": 0.5
+              }
+            },
+            {
+              "elliptic_device": "cuda",
+              "seconds": 3.3040161330718547,
+              "objective": 0.14481588791050753,
+              "relative_gradient_error": 0.0,
+              "limiter": {
+                "substeps": 40,
+                "limited_substeps": 4,
+                "analytic_fallbacks": 0,
+                "minimum_fraction": 0.5
+              }
+            },
+            {
+              "elliptic_device": "cuda",
+              "seconds": 3.05649231094867,
+              "objective": 0.14481588791050753,
+              "relative_gradient_error": 0.0,
+              "limiter": {
+                "substeps": 40,
+                "limited_substeps": 4,
+                "analytic_fallbacks": 0,
+                "minimum_fraction": 0.5
+              }
+            }
+          ],
+          "speedup": 11.80138546847299
+        },
+        "em": {
+          "id": "jorek_run016",
+          "measurements": [
+            {
+              "elliptic_device": "cpu",
+              "seconds": 32.79719168297015,
+              "objective": 0.26664387270506684,
+              "relative_gradient_error": 0.0,
+              "limiter": {
+                "substeps": 40,
+                "limited_substeps": 0,
+                "analytic_fallbacks": 0,
+                "minimum_fraction": 1.0
+              }
+            },
+            {
+              "elliptic_device": "cuda",
+              "seconds": 3.9885480829980224,
+              "objective": 0.26664387270637463,
+              "relative_gradient_error": 6.461106649702231e-10,
+              "limiter": {
+                "substeps": 40,
+                "limited_substeps": 0,
+                "analytic_fallbacks": 0,
+                "minimum_fraction": 1.0
+              }
+            },
+            {
+              "elliptic_device": "cuda",
+              "seconds": 3.7844294998794794,
+              "objective": 0.26664387270637463,
+              "relative_gradient_error": 6.461106649702231e-10,
+              "limiter": {
+                "substeps": 40,
+                "limited_substeps": 0,
+                "analytic_fallbacks": 0,
+                "minimum_fraction": 1.0
+              }
+            }
+          ],
+          "speedup": 8.66635028714754
+        }
+      }
+    },
+    "full_runs": {
+      "es": {
+        "job_id": "2775369",
+        "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-20261104/es-gpu-full",
+        "epochs": 250,
+        "status_at_submission": "PENDING QOSGrpNodeLimit",
+        "continuation": "checkpoint at 22-hour runtime budget, exit75 and self-requeue; no retry on numerical errors"
+      },
+      "em": {
+        "job_id": "2775370",
+        "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-20261104/em-gpu-full",
+        "epochs": 250,
+        "status_at_submission": "PENDING QOSGrpNodeLimit",
+        "continuation": "checkpoint at 22-hour runtime budget, exit75 and self-requeue; no retry on numerical errors"
+      }
+    },
+    "code_sha256": {
+      "prepare_native_terms.py": "ecc2b5f962958bf1b91750f11af2e15a13f72aa31774223802fe08961eaa56d6",
+      "validate_native.py": "5c6aa3528cca1d8ad28c08b674ca54e195b61a6370e88d40656974708c1fcdb4",
+      "native_terms.py": "26350c3df521d406ca50c821dd6c9b21e849b0af82c7a310fa3783c5403cf99a",
+      "orchestrate_es.py": "5dd367bcb321fa1f3aa791dc71fd521778da428ae0ebb1b59290fdc719a5a3fd",
+      "native_imex.py": "01767ea6f5eb9cd51b889fb973534fd186272858e90310e18051e617ef302803",
+      "train.py": "4f57824eb8234dcd977cd0fbab7747e15869cc50c0b7f8faed78403e7dc51ce5",
+      "train_es.py": "3d29318ef503914e2e24432b3a17b51d21312efc080d2a03a3d97e9b0ee3b1ba",
+      "data.py": "4fb151682f8182ae2a84eb58b8804b509c3122f06a14df35c872ab707108a83a",
+      "test_workflow.py": "2a4787858cfa34c881a722670f10aa5d1918b936124c345057485ac22cabfba5",
+      "formulation.py": "e60d4b6ba75899220c3c9c6ac7f480efa5c29790d97f560010fa7c730b63af51",
+      "evaluate_native_transfer.py": "7579e396e2906785dc438bf39585b1b3f3ac013ceeea62300d65f99c81dd1269",
+      "test_es.py": "8811f69fe54544e318ac09ee72ea2e975fb471a2cbb9584d221b79c44d3b645b",
+      "download.py": "40072d3850479fa3895ff897377891be3cb1e48cae03266e58ff360ae61c753e",
+      "test_native.py": "183cc6feabdf67ea32b8c8e7ac0dde2c57c8a70296273a7da70a686a72523bf7",
+      "test_gpu_native.py": "f2b63e10b6a7b31aaa0f03289cb617986ff9c5000d6d4d5544dfd388fcec3ebd",
+      "orchestrate.py": "cc7f648732d6777c90ce31149b6fa022d01eaac70349f538b1880df7f33387ca",
+      "equations.py": "eca0f3f30ea4571896698fa0cc4a6a9ee1c5f2479c35ae111b4975f6038e044d",
+      "orchestrate_native.py": "cae744594bfb1786ad648c48bdce77137e33599675a77bb6fdb95b95c15087a1",
+      "benchmark_native_gpu.py": "02676c62b15f29d521edab4a738ef3df388346d3e78105e41aa80e0a752eb48d",
+      "summarize.py": "9ad496b8400d44504e60ecf37b9733bf65b0175ae08b232108c3ec4bfbf7adbc",
+      "model.py": "ebe7831f0cf338c1cae48d61fecfde1a9dea398f98a040ec7ee716052a65fced",
+      "test_em.py": "e7dd2eeeb8adf68cd487f71541ebef2ab0ca6f238b058762e1505e7f547ef154",
+      "native.py": "4fd381d11622d8a8f594bd006f83b4e30f985a63935da4a4d92774ff69872acc",
+      "native_rollout.py": "a52619fab0bd0e9b972ad32116e6641b8a0bacbb59dc4578522c51a99a2fcb94",
+      "test_equations.py": "4b6b798ebef6bab4e015eb373bc80d700de74c3c756de09c46d64f7e83f1fb1b",
+      "gpu_sparse.py": "980cfb9b9d3739a803deea8b957748b2b71dba74ab15d53540b2e3fab6740367",
+      "audit_native.py": "e36dbdab271093b6020b0bb83737d15bbc667be60c6bf43e996d6ed0ba124291",
+      "train_native_rollout.py": "e1b0e4e9a15d84184406888ccc3e3a6f53619de886597e6d1cdc8bf1c72b7066",
+      "validate_native_imex.py": "4f8b64f12fd7afffecef0a83aeccd2d33dfc557adb49aa227bb3f99106dfdccc",
+      "train_native_terms.py": "90f25596ab30918f7881f7078563e16764a93b078ae4f76bfc51b49ca813f4d0"
+    },
+    "timed_checkpoint_resume_passed": true,
+    "gpu_smoke_resume_passed": [
+      "es",
+      "em"
+    ],
+    "development_allocation_released": "2775318 COMPLETED"
+  },
+  "positivity_update": {
+    "timestamp_utc": "2026-11-04T17:27:19.000658+00:00",
+    "original_failures": {
+      "es": {
+        "job": "2775369",
+        "id": "jorek_run0497",
+        "start": 42
+      },
+      "em": {
+        "job": "2775370",
+        "id": "jorek_run017",
+        "start": 35,
+        "saved_optimizer_update": 1
+      }
+    },
+    "fixes": [
+      "positive implicit upwind/diffusion scalar fallback with global convex limiting, no pointwise clipping",
+      "CFL<=0.4 bound including transport, compression and poloidal Alfven speed; at most4096 substeps per frame",
+      "density and pressure source-state validity checks",
+      "exhaustive matching-code/checkpoint audit gate before full training"
+    ],
+    "tests": {
+      "cpu_passed": 56,
+      "gpu_passed": 5
+    },
+    "data": {
+      "es": {
+        "valid_windows": 4484,
+        "excluded_windows": 16,
+        "invalid_validation_ids": [
+          "jorek_run0367",
+          "jorek_run0236"
+        ]
+      },
+      "em": {
+        "valid_windows": 3374,
+        "excluded_windows": 46,
+        "invalid_validation_ids": [
+          "jorek_run068",
+          "jorek_run032",
+          "jorek_run004"
+        ]
+      }
+    },
+    "reproduced_em": {
+      "id": "jorek_run017",
+      "start": 35,
+      "offset": 20,
+      "original_error": "Nonpositive density after native step",
+      "original_failed_frame": 1,
+      "fixed_completed": true,
+      "limiter": {
+        "substeps": 87,
+        "limited_substeps": 0,
+        "analytic_fallbacks": 0,
+        "minimum_fraction": 1.0,
+        "density_limited": 0,
+        "temperature_limited": 79,
+        "minimum_scalar_fraction": 0.07393234878098574,
+        "cfl_limited_substeps": 87,
+        "minimum_dt_fraction": 0.09249268431375839
+      },
+      "seconds": 15.55285777989775
+    },
+    "code_sha256": {
+      "prepare_native_terms.py": "ecc2b5f962958bf1b91750f11af2e15a13f72aa31774223802fe08961eaa56d6",
+      "validate_native.py": "5c6aa3528cca1d8ad28c08b674ca54e195b61a6370e88d40656974708c1fcdb4",
+      "native_terms.py": "26350c3df521d406ca50c821dd6c9b21e849b0af82c7a310fa3783c5403cf99a",
+      "orchestrate_es.py": "5dd367bcb321fa1f3aa791dc71fd521778da428ae0ebb1b59290fdc719a5a3fd",
+      "native_imex.py": "01767ea6f5eb9cd51b889fb973534fd186272858e90310e18051e617ef302803",
+      "train.py": "4f57824eb8234dcd977cd0fbab7747e15869cc50c0b7f8faed78403e7dc51ce5",
+      "train_es.py": "3d29318ef503914e2e24432b3a17b51d21312efc080d2a03a3d97e9b0ee3b1ba",
+      "data.py": "4fb151682f8182ae2a84eb58b8804b509c3122f06a14df35c872ab707108a83a",
+      "test_workflow.py": "2a4787858cfa34c881a722670f10aa5d1918b936124c345057485ac22cabfba5",
+      "formulation.py": "e60d4b6ba75899220c3c9c6ac7f480efa5c29790d97f560010fa7c730b63af51",
+      "evaluate_native_transfer.py": "7579e396e2906785dc438bf39585b1b3f3ac013ceeea62300d65f99c81dd1269",
+      "test_es.py": "8811f69fe54544e318ac09ee72ea2e975fb471a2cbb9584d221b79c44d3b645b",
+      "download.py": "40072d3850479fa3895ff897377891be3cb1e48cae03266e58ff360ae61c753e",
+      "test_native.py": "a0fdcc5caa01ec7daa7d80f7c433d3a704f1778390386247350b6ebd0823c9ab",
+      "test_gpu_native.py": "9a0982ef6f53448b64c77e1452b1160aadbb4614cc149613a36a8096d25cfcc9",
+      "orchestrate.py": "cc7f648732d6777c90ce31149b6fa022d01eaac70349f538b1880df7f33387ca",
+      "equations.py": "eca0f3f30ea4571896698fa0cc4a6a9ee1c5f2479c35ae111b4975f6038e044d",
+      "orchestrate_native.py": "2817726ad7606ad04799b99380ab3477b7a2b785ac8df8fa871e5fccc650aae3",
+      "benchmark_native_gpu.py": "02676c62b15f29d521edab4a738ef3df388346d3e78105e41aa80e0a752eb48d",
+      "summarize.py": "9ad496b8400d44504e60ecf37b9733bf65b0175ae08b232108c3ec4bfbf7adbc",
+      "model.py": "ebe7831f0cf338c1cae48d61fecfde1a9dea398f98a040ec7ee716052a65fced",
+      "test_em.py": "e7dd2eeeb8adf68cd487f71541ebef2ab0ca6f238b058762e1505e7f547ef154",
+      "native.py": "4fd381d11622d8a8f594bd006f83b4e30f985a63935da4a4d92774ff69872acc",
+      "native_rollout.py": "01480823a7641d2c47ffef3f8db7830e4c27d8907c9aaef61ffcf54afdf5cf0b",
+      "validate_native_windows.py": "36849fc8f30b039697d973f69f10d362efe061b21d79ba1551aed3bdc11ece17",
+      "test_equations.py": "4b6b798ebef6bab4e015eb373bc80d700de74c3c756de09c46d64f7e83f1fb1b",
+      "gpu_sparse.py": "36496b996760fef49e2a0082c614f4f263b2f8cc5183ae341052a7efe12429e1",
+      "audit_native.py": "e36dbdab271093b6020b0bb83737d15bbc667be60c6bf43e996d6ed0ba124291",
+      "train_native_rollout.py": "295bf274489bc7f4aebb2fbecb753e28973d62f6ec8ce213c0d68f15d746d701",
+      "validate_native_imex.py": "4f8b64f12fd7afffecef0a83aeccd2d33dfc557adb49aa227bb3f99106dfdccc",
+      "train_native_terms.py": "90f25596ab30918f7881f7078563e16764a93b078ae4f76bfc51b49ca813f4d0"
+    },
+    "campaigns": {
+      "es": {
+        "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-20261104/es-positive-full",
+        "jobs": [
+          {
+            "stage": "validate-windows",
+            "job_id": "2775515",
+            "submission": [
+              "sbatch",
+              "--parsable",
+              "--account=fupb2_ukaea_ml",
+              "--partition=boost_fua_prod",
+              "--nodes=1",
+              "--ntasks=1",
+              "--cpus-per-task=4",
+              "--mem=32G",
+              "--time=24:00:00",
+              "--job-name=jorek-native-es-validate-windows",
+              "--output=/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-20261104/es-positive-full/validate-windows-%j.log",
+              "--gres=gpu:1",
+              "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-20261104/es-positive-full/validate-windows.sbatch"
+            ],
+            "script": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-20261104/es-positive-full/validate-windows.sbatch"
+          },
+          {
+            "stage": "rollout",
+            "job_id": "2775516",
+            "submission": [
+              "sbatch",
+              "--parsable",
+              "--account=fupb2_ukaea_ml",
+              "--partition=boost_fua_prod",
+              "--nodes=1",
+              "--ntasks=1",
+              "--cpus-per-task=4",
+              "--mem=32G",
+              "--time=24:00:00",
+              "--job-name=jorek-native-es-rollout",
+              "--output=/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-20261104/es-positive-full/rollout-%j.log",
+              "--gres=gpu:1",
+              "--requeue",
+              "--open-mode=append",
+              "--dependency=afterok:2775515",
+              "--kill-on-invalid-dep=yes",
+              "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-20261104/es-positive-full/rollout.sbatch"
+            ],
+            "script": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-20261104/es-positive-full/rollout.sbatch"
+          }
+        ],
+        "full_audit_passed": false,
+        "status": "audit 2775515 RUNNING; training 2775516 waiting afterok"
+      },
+      "em": {
+        "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-20261104/em-positive-full",
+        "jobs": [
+          {
+            "stage": "validate-windows",
+            "job_id": "2775517",
+            "submission": [
+              "sbatch",
+              "--parsable",
+              "--account=fupb2_ukaea_ml",
+              "--partition=boost_fua_prod",
+              "--nodes=1",
+              "--ntasks=1",
+              "--cpus-per-task=4",
+              "--mem=32G",
+              "--time=24:00:00",
+              "--job-name=jorek-native-em-validate-windows",
+              "--output=/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-20261104/em-positive-full/validate-windows-%j.log",
+              "--gres=gpu:1",
+              "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-20261104/em-positive-full/validate-windows.sbatch"
+            ],
+            "script": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-20261104/em-positive-full/validate-windows.sbatch"
+          },
+          {
+            "stage": "rollout",
+            "job_id": "2775518",
+            "submission": [
+              "sbatch",
+              "--parsable",
+              "--account=fupb2_ukaea_ml",
+              "--partition=boost_fua_prod",
+              "--nodes=1",
+              "--ntasks=1",
+              "--cpus-per-task=4",
+              "--mem=32G",
+              "--time=24:00:00",
+              "--job-name=jorek-native-em-rollout",
+              "--output=/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-20261104/em-positive-full/rollout-%j.log",
+              "--gres=gpu:1",
+              "--requeue",
+              "--open-mode=append",
+              "--dependency=afterok:2775517",
+              "--kill-on-invalid-dep=yes",
+              "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-20261104/em-positive-full/rollout.sbatch"
+            ],
+            "script": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-20261104/em-positive-full/rollout.sbatch"
+          }
+        ],
+        "full_audit_passed": false,
+        "status": "audit 2775517 PENDING QOSGrpNodeLimit; training 2775518 waiting afterok"
+      }
+    },
+    "runtime": {
+      "es_days_at_previous_window_timing": 39.656572679513886,
+      "em_days_at_previous_window_timing": 36.94636901909722,
+      "note": "excludes validation, checkpoints, queue time and extra adaptive substeps; batch20 is serial accumulation"
+    },
+    "limitations": [
+      "full window audits still pending; initial-weight audit does not prove future optimizer iterates",
+      "active limiting changes the coarse discretization and can add diffusion; report limiter use",
+      "exact original timestamps and generating JOREK revision remain unavailable"
+    ],
+    "hard_window_optimizer_checks": [
+      {
+        "case": "es",
+        "id": "jorek_run0497",
+        "start": 42,
+        "update": 0,
+        "loss": 1.2444267088795553,
+        "seconds": 13.324323124019429,
+        "limiter": {
+          "substeps": 65,
+          "limited_substeps": 0,
+          "analytic_fallbacks": 0,
+          "minimum_fraction": 1.0,
+          "density_limited": 4,
+          "temperature_limited": 20,
+          "minimum_scalar_fraction": 0.2801405270000334,
+          "cfl_limited_substeps": 65,
+          "minimum_dt_fraction": 0.07777522018145504
+        }
+      },
+      {
+        "case": "es",
+        "id": "jorek_run0497",
+        "start": 42,
+        "update": 1,
+        "loss": 3.617405004584787,
+        "seconds": 14.920239076018333,
+        "limiter": {
+          "substeps": 67,
+          "limited_substeps": 0,
+          "analytic_fallbacks": 0,
+          "minimum_fraction": 1.0,
+          "density_limited": 2,
+          "temperature_limited": 66,
+          "minimum_scalar_fraction": 0.015735818600741285,
+          "cfl_limited_substeps": 67,
+          "minimum_dt_fraction": 0.028452763025705964
+        }
+      },
+      {
+        "case": "em",
+        "id": "jorek_run017",
+        "start": 35,
+        "update": 0,
+        "loss": 13.5124299830469,
+        "seconds": 22.8385221529752,
+        "limiter": {
+          "substeps": 87,
+          "limited_substeps": 0,
+          "analytic_fallbacks": 0,
+          "minimum_fraction": 1.0,
+          "density_limited": 0,
+          "temperature_limited": 79,
+          "minimum_scalar_fraction": 0.07393234878098574,
+          "cfl_limited_substeps": 87,
+          "minimum_dt_fraction": 0.09249268431375839
+        }
+      },
+      {
+        "case": "em",
+        "id": "jorek_run017",
+        "start": 35,
+        "update": 1,
+        "loss": 11.975256469154793,
+        "seconds": 19.937633187044412,
+        "limiter": {
+          "substeps": 94,
+          "limited_substeps": 0,
+          "analytic_fallbacks": 0,
+          "minimum_fraction": 1.0,
+          "density_limited": 0,
+          "temperature_limited": 82,
+          "minimum_scalar_fraction": 0.1694403938682602,
+          "cfl_limited_substeps": 94,
+          "minimum_dt_fraction": 0.013197447404644435
+        }
+      },
+      {
+        "case": "em",
+        "id": "jorek_run016",
+        "start": 28,
+        "update": 0,
+        "loss": 5.907245634711636,
+        "seconds": 20.691712386906147,
+        "limiter": {
+          "substeps": 128,
+          "limited_substeps": 0,
+          "analytic_fallbacks": 0,
+          "minimum_fraction": 1.0,
+          "density_limited": 2,
+          "temperature_limited": 0,
+          "minimum_scalar_fraction": 0.7896117434249375,
+          "cfl_limited_substeps": 128,
+          "minimum_dt_fraction": 0.03700508581633136
+        }
+      },
+      {
+        "case": "em",
+        "id": "jorek_run016",
+        "start": 28,
+        "update": 1,
+        "loss": 9.440463929547219,
+        "seconds": 23.413570566801354,
+        "limiter": {
+          "substeps": 126,
+          "limited_substeps": 0,
+          "analytic_fallbacks": 0,
+          "minimum_fraction": 1.0,
+          "density_limited": 2,
+          "temperature_limited": 109,
+          "minimum_scalar_fraction": 0.04856135333817465,
+          "cfl_limited_substeps": 126,
+          "minimum_dt_fraction": 0.03648597866943319
+        }
+      }
+    ],
+    "em_cfl_pilot": {
+      "case": "em",
+      "passed": false,
+      "samples": 2,
+      "expected_training_windows": 3374,
+      "excluded_training_windows": 46,
+      "substeps": 8,
+      "manifest_sha256": "57a8c22cbddd05a9b000d014ca70381e72650d34ed129d805d7cf4e434c09caa",
+      "checkpoint_sha256": "86e2f5d18749ab719999facfed010542e36db2d859857efc1a33e610d92b7358",
+      "code_sha256": {
+        "prepare_native_terms.py": "ecc2b5f962958bf1b91750f11af2e15a13f72aa31774223802fe08961eaa56d6",
+        "validate_native.py": "5c6aa3528cca1d8ad28c08b674ca54e195b61a6370e88d40656974708c1fcdb4",
+        "native_terms.py": "26350c3df521d406ca50c821dd6c9b21e849b0af82c7a310fa3783c5403cf99a",
+        "orchestrate_es.py": "5dd367bcb321fa1f3aa791dc71fd521778da428ae0ebb1b59290fdc719a5a3fd",
+        "native_imex.py": "01767ea6f5eb9cd51b889fb973534fd186272858e90310e18051e617ef302803",
+        "train.py": "4f57824eb8234dcd977cd0fbab7747e15869cc50c0b7f8faed78403e7dc51ce5",
+        "train_es.py": "3d29318ef503914e2e24432b3a17b51d21312efc080d2a03a3d97e9b0ee3b1ba",
+        "data.py": "4fb151682f8182ae2a84eb58b8804b509c3122f06a14df35c872ab707108a83a",
+        "test_workflow.py": "2a4787858cfa34c881a722670f10aa5d1918b936124c345057485ac22cabfba5",
+        "formulation.py": "e60d4b6ba75899220c3c9c6ac7f480efa5c29790d97f560010fa7c730b63af51",
+        "evaluate_native_transfer.py": "7579e396e2906785dc438bf39585b1b3f3ac013ceeea62300d65f99c81dd1269",
+        "test_es.py": "8811f69fe54544e318ac09ee72ea2e975fb471a2cbb9584d221b79c44d3b645b",
+        "download.py": "40072d3850479fa3895ff897377891be3cb1e48cae03266e58ff360ae61c753e",
+        "test_native.py": "a0fdcc5caa01ec7daa7d80f7c433d3a704f1778390386247350b6ebd0823c9ab",
+        "test_gpu_native.py": "9a0982ef6f53448b64c77e1452b1160aadbb4614cc149613a36a8096d25cfcc9",
+        "orchestrate.py": "cc7f648732d6777c90ce31149b6fa022d01eaac70349f538b1880df7f33387ca",
+        "equations.py": "eca0f3f30ea4571896698fa0cc4a6a9ee1c5f2479c35ae111b4975f6038e044d",
+        "orchestrate_native.py": "2817726ad7606ad04799b99380ab3477b7a2b785ac8df8fa871e5fccc650aae3",
+        "benchmark_native_gpu.py": "02676c62b15f29d521edab4a738ef3df388346d3e78105e41aa80e0a752eb48d",
+        "summarize.py": "9ad496b8400d44504e60ecf37b9733bf65b0175ae08b232108c3ec4bfbf7adbc",
+        "model.py": "ebe7831f0cf338c1cae48d61fecfde1a9dea398f98a040ec7ee716052a65fced",
+        "test_em.py": "e7dd2eeeb8adf68cd487f71541ebef2ab0ca6f238b058762e1505e7f547ef154",
+        "native.py": "4fd381d11622d8a8f594bd006f83b4e30f985a63935da4a4d92774ff69872acc",
+        "native_rollout.py": "01480823a7641d2c47ffef3f8db7830e4c27d8907c9aaef61ffcf54afdf5cf0b",
+        "validate_native_windows.py": "36849fc8f30b039697d973f69f10d362efe061b21d79ba1551aed3bdc11ece17",
+        "test_equations.py": "4b6b798ebef6bab4e015eb373bc80d700de74c3c756de09c46d64f7e83f1fb1b",
+        "gpu_sparse.py": "36496b996760fef49e2a0082c614f4f263b2f8cc5183ae341052a7efe12429e1",
+        "audit_native.py": "e36dbdab271093b6020b0bb83737d15bbc667be60c6bf43e996d6ed0ba124291",
+        "train_native_rollout.py": "295bf274489bc7f4aebb2fbecb753e28973d62f6ec8ce213c0d68f15d746d701",
+        "validate_native_imex.py": "4f8b64f12fd7afffecef0a83aeccd2d33dfc557adb49aa227bb3f99106dfdccc",
+        "train_native_terms.py": "90f25596ab30918f7881f7078563e16764a93b078ae4f76bfc51b49ca813f4d0"
+      },
+      "train_ids": [
+        "jorek_run016",
+        "jorek_run080",
+        "jorek_run074",
+        "jorek_run003",
+        "jorek_run010",
+        "jorek_run046",
+        "jorek_run089",
+        "jorek_run072",
+        "jorek_run054",
+        "jorek_run097",
+        "jorek_run063",
+        "jorek_run095",
+        "jorek_run042",
+        "jorek_run082",
+        "jorek_run024",
+        "jorek_run013",
+        "jorek_run038",
+        "jorek_run092",
+        "jorek_run071",
+        "jorek_run058",
+        "jorek_run099",
+        "jorek_run096",
+        "jorek_run073",
+        "jorek_run043",
+        "jorek_run056",
+        "jorek_run036",
+        "jorek_run007",
+        "jorek_run015",
+        "jorek_run028",
+        "jorek_run039",
+        "jorek_run005",
+        "jorek_run066",
+        "jorek_run021",
+        "jorek_run062",
+        "jorek_run040",
+        "jorek_run026",
+        "jorek_run030",
+        "jorek_run098",
+        "jorek_run077",
+        "jorek_run087",
+        "jorek_run084",
+        "jorek_run070",
+        "jorek_run011",
+        "jorek_run041",
+        "jorek_run037",
+        "jorek_run018",
+        "jorek_run001",
+        "jorek_run060",
+        "jorek_run079",
+        "jorek_run023",
+        "jorek_run076",
+        "jorek_run065",
+        "jorek_run059",
+        "jorek_run093",
+        "jorek_run064",
+        "jorek_run009",
+        "jorek_run031",
+        "jorek_run027",
+        "jorek_run025",
+        "jorek_run029",
+        "jorek_run012",
+        "jorek_run094",
+        "jorek_run052",
+        "jorek_run044",
+        "jorek_run078",
+        "jorek_run081",
+        "jorek_run017",
+        "jorek_run022",
+        "jorek_run091",
+        "jorek_run086",
+        "jorek_run019",
+        "jorek_run055",
+        "jorek_run090",
+        "jorek_run049",
+        "jorek_run047",
+        "jorek_run034"
+      ],
+      "val_ids": [
+        "jorek_run020",
+        "jorek_run006",
+        "jorek_run100",
+        "jorek_run068",
+        "jorek_run083",
+        "jorek_run032",
+        "jorek_run085",
+        "jorek_run008",
+        "jorek_run048",
+        "jorek_run004",
+        "jorek_run035",
+        "jorek_run033",
+        "jorek_run051",
+        "jorek_run057"
+      ],
+      "trajectories": [
+        {
+          "id": "jorek_run080",
+          "split": "train",
+          "windows": 39,
+          "excluded": [
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ],
+          "failures": [],
+          "gradient_checked": true,
+          "gradient_window": 18,
+          "worst_loss": 0.22693432860223145,
+          "limiter": {
+            "substeps": 3021,
+            "limited_substeps": 0,
+            "analytic_fallbacks": 0,
+            "minimum_fraction": 1.0,
+            "density_limited": 0,
+            "temperature_limited": 0,
+            "minimum_scalar_fraction": 1.0,
+            "cfl_limited_substeps": 3021,
+            "minimum_dt_fraction": 0.004109753511572478
+          },
+          "seconds": 293.98909583617933
+        },
+        {
+          "id": "jorek_run020",
+          "split": "val",
+          "windows": 1,
+          "excluded": [],
+          "failures": [],
+          "gradient_checked": false,
+          "worst_loss": 4.869305234442904,
+          "limiter": {
+            "substeps": 539,
+            "limited_substeps": 0,
+            "analytic_fallbacks": 0,
+            "minimum_fraction": 1.0,
+            "density_limited": 0,
+            "temperature_limited": 0,
+            "minimum_scalar_fraction": 1.0,
+            "cfl_limited_substeps": 539,
+            "minimum_dt_fraction": 0.46689142674643164
+          },
+          "seconds": 50.46541971410625
+        },
+        {
+          "id": "jorek_run006",
+          "split": "val",
+          "windows": 1,
+          "excluded": [],
+          "failures": [],
+          "gradient_checked": false,
+          "worst_loss": 0.9277068710601987,
+          "limiter": {
+            "substeps": 539,
+            "limited_substeps": 0,
+            "analytic_fallbacks": 0,
+            "minimum_fraction": 1.0,
+            "density_limited": 0,
+            "temperature_limited": 267,
+            "minimum_scalar_fraction": 0.501912831450711,
+            "cfl_limited_substeps": 539,
+            "minimum_dt_fraction": 0.46688903796798514
+          },
+          "seconds": 74.18623876199126
+        },
+        {
+          "id": "jorek_run016",
+          "split": "train",
+          "windows": 45,
+          "excluded": [],
+          "failures": [],
+          "gradient_checked": true,
+          "gradient_window": 22,
+          "worst_loss": 0.34237026715147695,
+          "limiter": {
+            "substeps": 4842,
+            "limited_substeps": 0,
+            "analytic_fallbacks": 0,
+            "minimum_fraction": 1.0,
+            "density_limited": 3,
+            "temperature_limited": 24,
+            "minimum_scalar_fraction": 0.6174235036215789,
+            "cfl_limited_substeps": 4842,
+            "minimum_dt_fraction": 0.0016232420935480719
+          },
+          "seconds": 478.7028983279597
+        }
+      ],
+      "seconds": 482.14911105204374,
+      "completed": true
+    },
+    "smoke_and_resume_passed": [
+      "es",
+      "em"
+    ],
+    "development_allocation": "2775450 COMPLETED exit0; released"
+  }
+}

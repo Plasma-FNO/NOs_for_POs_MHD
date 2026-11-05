@@ -1,0 +1,123 @@
+[
+  {
+    "id": "jorek_run0432",
+    "start": 36,
+    "passed": true,
+    "loss": 0.5106299270227085,
+    "seconds": 34.16565078194253,
+    "trace": [
+      {
+        "id": "jorek_run0432",
+        "substeps": 0,
+        "rho_min": 0.049399168051650066,
+        "rho_max": 0.9080357655201985,
+        "p_max": 0.00023332725965442535,
+        "u_max": 6.0024746665128245e-05,
+        "physical_div_max": 0.0015335683612303975,
+        "upwind_div_max": 0.01183045917582947,
+        "h": 0.377783663084016
+      },
+      {
+        "id": "jorek_run0432",
+        "substeps": 50,
+        "rho_min": 0.04444933046178382,
+        "rho_max": 0.8734095392391708,
+        "p_max": 0.00022240672521557937,
+        "u_max": 5.697559919597206e-05,
+        "physical_div_max": 0.0018531568178325253,
+        "upwind_div_max": 0.04055594690967878,
+        "h": 0.13130088082740446
+      },
+      {
+        "id": "jorek_run0432",
+        "substeps": 100,
+        "rho_min": 0.04153575661834912,
+        "rho_max": 0.8575982823125556,
+        "p_max": 0.00019511633996427806,
+        "u_max": 5.9193651923222756e-05,
+        "physical_div_max": 0.0016825797963284993,
+        "upwind_div_max": 0.12692161712690775,
+        "h": 0.10564254143780948
+      },
+      {
+        "id": "jorek_run0432",
+        "substeps": 150,
+        "rho_min": 0.003803411014980152,
+        "rho_max": 0.8258132504612529,
+        "p_max": 0.00015214487520077632,
+        "u_max": 5.096053410324634e-05,
+        "physical_div_max": 0.001624322936314728,
+        "upwind_div_max": 0.6690653682745534,
+        "h": 0.12301999344151353
+      }
+    ],
+    "limiter": {
+      "substeps": 168,
+      "limited_substeps": 0,
+      "analytic_fallbacks": 0,
+      "minimum_fraction": 1.0,
+      "density_limited": 126,
+      "temperature_limited": 105,
+      "minimum_scalar_fraction": 0.15127673683328755,
+      "cfl_limited_substeps": 168,
+      "minimum_dt_fraction": 0.0019316809960500335,
+      "energy_limited": 75,
+      "minimum_energy_fraction": 0.9981868085373286
+    }
+  },
+  {
+    "id": "jorek_run0494",
+    "start": 25,
+    "passed": true,
+    "loss": 0.35109216108072683,
+    "seconds": 30.412835894152522,
+    "trace": [
+      {
+        "id": "jorek_run0494",
+        "substeps": 0,
+        "rho_min": 0.049530618866640376,
+        "rho_max": 1.3523998540352666,
+        "p_max": 0.00030410403038474683,
+        "u_max": 2.7855933274919914e-05,
+        "physical_div_max": 0.0011694635756709054,
+        "upwind_div_max": 0.017419925193885914,
+        "h": 0.49165726151037153
+      },
+      {
+        "id": "jorek_run0494",
+        "substeps": 50,
+        "rho_min": 0.014846627438033552,
+        "rho_max": 1.3187064097853853,
+        "p_max": 0.00040003503085998327,
+        "u_max": 2.2540862886367235e-05,
+        "physical_div_max": 0.0025315858662701904,
+        "upwind_div_max": 0.6800362429707966,
+        "h": 0.18454707903168802
+      },
+      {
+        "id": "jorek_run0494",
+        "substeps": 100,
+        "rho_min": 0.01404907432504504,
+        "rho_max": 1.2999754267673118,
+        "p_max": 0.0003578019959041585,
+        "u_max": 3.2038047890599297e-05,
+        "physical_div_max": 0.0035588693895155397,
+        "upwind_div_max": 0.3238521891825042,
+        "h": 0.1140679808826317
+      }
+    ],
+    "limiter": {
+      "substeps": 141,
+      "limited_substeps": 0,
+      "analytic_fallbacks": 0,
+      "minimum_fraction": 1.0,
+      "density_limited": 88,
+      "temperature_limited": 107,
+      "minimum_scalar_fraction": 0.19948016997048182,
+      "cfl_limited_substeps": 141,
+      "minimum_dt_fraction": 0.041482117969974294,
+      "energy_limited": 85,
+      "minimum_energy_fraction": 0.9432656841142064
+    }
+  }
+]

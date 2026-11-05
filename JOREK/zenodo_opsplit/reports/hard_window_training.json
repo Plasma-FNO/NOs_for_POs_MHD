@@ -1,0 +1,116 @@
+[
+  {
+    "case": "es",
+    "id": "jorek_run0497",
+    "start": 42,
+    "update": 0,
+    "loss": 1.2444267088795553,
+    "seconds": 13.324323124019429,
+    "limiter": {
+      "substeps": 65,
+      "limited_substeps": 0,
+      "analytic_fallbacks": 0,
+      "minimum_fraction": 1.0,
+      "density_limited": 4,
+      "temperature_limited": 20,
+      "minimum_scalar_fraction": 0.2801405270000334,
+      "cfl_limited_substeps": 65,
+      "minimum_dt_fraction": 0.07777522018145504
+    }
+  },
+  {
+    "case": "es",
+    "id": "jorek_run0497",
+    "start": 42,
+    "update": 1,
+    "loss": 3.617405004584787,
+    "seconds": 14.920239076018333,
+    "limiter": {
+      "substeps": 67,
+      "limited_substeps": 0,
+      "analytic_fallbacks": 0,
+      "minimum_fraction": 1.0,
+      "density_limited": 2,
+      "temperature_limited": 66,
+      "minimum_scalar_fraction": 0.015735818600741285,
+      "cfl_limited_substeps": 67,
+      "minimum_dt_fraction": 0.028452763025705964
+    }
+  },
+  {
+    "case": "em",
+    "id": "jorek_run017",
+    "start": 35,
+    "update": 0,
+    "loss": 13.5124299830469,
+    "seconds": 22.8385221529752,
+    "limiter": {
+      "substeps": 87,
+      "limited_substeps": 0,
+      "analytic_fallbacks": 0,
+      "minimum_fraction": 1.0,
+      "density_limited": 0,
+      "temperature_limited": 79,
+      "minimum_scalar_fraction": 0.07393234878098574,
+      "cfl_limited_substeps": 87,
+      "minimum_dt_fraction": 0.09249268431375839
+    }
+  },
+  {
+    "case": "em",
+    "id": "jorek_run017",
+    "start": 35,
+    "update": 1,
+    "loss": 11.975256469154793,
+    "seconds": 19.937633187044412,
+    "limiter": {
+      "substeps": 94,
+      "limited_substeps": 0,
+      "analytic_fallbacks": 0,
+      "minimum_fraction": 1.0,
+      "density_limited": 0,
+      "temperature_limited": 82,
+      "minimum_scalar_fraction": 0.1694403938682602,
+      "cfl_limited_substeps": 94,
+      "minimum_dt_fraction": 0.013197447404644435
+    }
+  },
+  {
+    "case": "em",
+    "id": "jorek_run016",
+    "start": 28,
+    "update": 0,
+    "loss": 5.907245634711636,
+    "seconds": 20.691712386906147,
+    "limiter": {
+      "substeps": 128,
+      "limited_substeps": 0,
+      "analytic_fallbacks": 0,
+      "minimum_fraction": 1.0,
+      "density_limited": 2,
+      "temperature_limited": 0,
+      "minimum_scalar_fraction": 0.7896117434249375,
+      "cfl_limited_substeps": 128,
+      "minimum_dt_fraction": 0.03700508581633136
+    }
+  },
+  {
+    "case": "em",
+    "id": "jorek_run016",
+    "start": 28,
+    "update": 1,
+    "loss": 9.440463929547219,
+    "seconds": 23.413570566801354,
+    "limiter": {
+      "substeps": 126,
+      "limited_substeps": 0,
+      "analytic_fallbacks": 0,
+      "minimum_fraction": 1.0,
+      "density_limited": 2,
+      "temperature_limited": 109,
+      "minimum_scalar_fraction": 0.04856135333817465,
+      "cfl_limited_substeps": 126,
+      "minimum_dt_fraction": 0.03648597866943319
+    }
+  }
+]

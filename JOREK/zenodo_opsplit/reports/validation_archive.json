@@ -1,0 +1,22 @@
+[
+  {
+    "name": "matched_serial_es.pt",
+    "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-fast-20261105/validation_artifacts/matched_serial_es.pt",
+    "bytes": 215059579
+  },
+  {
+    "name": "matched_serial_em.pt",
+    "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-fast-20261105/validation_artifacts/matched_serial_em.pt",
+    "bytes": 215059451
+  },
+  {
+    "name": "matched_previous_serial_em.pt",
+    "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-fast-20261105/validation_artifacts/matched_previous_serial_em.pt",
+    "bytes": 215060625
+  },
+  {
+    "name": "frozen_validation_20261105",
+    "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-fast-20261105/validation_artifacts/frozen_validation_20261105",
+    "bytes": 296416
+  }
+]

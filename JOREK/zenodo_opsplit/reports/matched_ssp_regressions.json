@@ -1,0 +1,43 @@
+[
+  {
+    "case": "es",
+    "arm": "opsplit-scratch",
+    "id": "jorek_run0472",
+    "start": 39,
+    "passed": false,
+    "error": "Explicit CFL requires excessive substeps; refusing unstable advance",
+    "seconds": 67.89852301310748,
+    "limiter": {
+      "substeps": 129,
+      "limited_substeps": 0,
+      "analytic_fallbacks": 0,
+      "minimum_fraction": 1.0,
+      "density_limited": 250,
+      "temperature_limited": 293,
+      "minimum_scalar_fraction": 0.0038763506583152346,
+      "cfl_limited_substeps": 129,
+      "minimum_dt_fraction": 1.1370435446309478e-09
+    }
+  },
+  {
+    "case": "es",
+    "arm": "opsplit-pretrained",
+    "id": "jorek_run0472",
+    "start": 39,
+    "passed": true,
+    "loss": 0.6326206885609761,
+    "grad_norm": 4.057543754577637,
+    "seconds": 156.5060844460968,
+    "limiter": {
+      "substeps": 192,
+      "limited_substeps": 0,
+      "analytic_fallbacks": 0,
+      "minimum_fraction": 1.0,
+      "density_limited": 438,
+      "temperature_limited": 473,
+      "minimum_scalar_fraction": 0.07099909879746846,
+      "cfl_limited_substeps": 192,
+      "minimum_dt_fraction": 0.03870787602397172
+    }
+  }
+]

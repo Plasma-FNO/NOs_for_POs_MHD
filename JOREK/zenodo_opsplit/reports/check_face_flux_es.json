@@ -1,0 +1,124 @@
+[
+  {
+    "id": "jorek_run0476",
+    "start": 36,
+    "passed": true,
+    "loss": 0.38654759936064953,
+    "seconds": 8.065443732077256,
+    "trace": [
+      {
+        "id": "jorek_run0476",
+        "substeps": 0,
+        "rho_min": 0.04896471265832916,
+        "rho_max": 0.9923812031594577,
+        "p_max": 0.0002628416048892084,
+        "p_min": 2.499915852074781e-07,
+        "T_max": 0.00037008462454192736,
+        "u_max": 6.277244201529695e-05,
+        "physical_div_max": 0.001243222116484993,
+        "upwind_div_max": 0.001227458528726693,
+        "h": 0.33022188651880646
+      },
+      {
+        "id": "jorek_run0476",
+        "substeps": 50,
+        "rho_min": 0.04849645923295174,
+        "rho_max": 1.791531781684374,
+        "p_max": 0.0003342530720477766,
+        "p_min": 8.342655334399811e-09,
+        "T_max": 0.0005246948191235413,
+        "u_max": 6.207352141968147e-05,
+        "physical_div_max": 0.001242459017647017,
+        "upwind_div_max": 0.0012349072837747705,
+        "h": 0.36916512030800946
+      }
+    ],
+    "limiter": {
+      "substeps": 73,
+      "limited_substeps": 0,
+      "analytic_fallbacks": 0,
+      "minimum_fraction": 1.0,
+      "density_limited": 52,
+      "temperature_limited": 29,
+      "minimum_scalar_fraction": 0.09049795729855623,
+      "cfl_limited_substeps": 73,
+      "minimum_dt_fraction": 0.14746424936626426,
+      "energy_limited": 24,
+      "minimum_energy_fraction": 0.9989149257168697
+    }
+  },
+  {
+    "id": "jorek_run0432",
+    "start": 44,
+    "passed": true,
+    "loss": 0.3610253650583816,
+    "seconds": 17.604263440938666,
+    "trace": [
+      {
+        "id": "jorek_run0432",
+        "substeps": 0,
+        "rho_min": 0.03760427640398544,
+        "rho_max": 0.8134884006757004,
+        "p_max": 0.00020381665810365434,
+        "p_min": 2.500002794842519e-07,
+        "T_max": 0.00031814645632757637,
+        "u_max": 9.74198666826533e-05,
+        "physical_div_max": 0.0012487252187714385,
+        "upwind_div_max": 0.0012304340350230013,
+        "h": 0.3235141194387772
+      },
+      {
+        "id": "jorek_run0432",
+        "substeps": 50,
+        "rho_min": 0.03759873983561196,
+        "rho_max": 0.756148098137618,
+        "p_max": 0.00019718030184942098,
+        "p_min": 8.123849300178903e-08,
+        "T_max": 0.0005171711817918652,
+        "u_max": 9.204449373121454e-05,
+        "physical_div_max": 0.0012668437201644562,
+        "upwind_div_max": 0.0012434258069178269,
+        "h": 0.16807931048543465
+      },
+      {
+        "id": "jorek_run0432",
+        "substeps": 100,
+        "rho_min": 0.03915935050896365,
+        "rho_max": 0.7323970073669086,
+        "p_max": 0.00018658663920930658,
+        "p_min": 3.7221153251544203e-09,
+        "T_max": 0.00042164586037362104,
+        "u_max": 9.065847927255177e-05,
+        "physical_div_max": 0.003077131499881974,
+        "upwind_div_max": 0.0021058747199994014,
+        "h": 0.14272433265599016
+      },
+      {
+        "id": "jorek_run0432",
+        "substeps": 150,
+        "rho_min": 0.04106650140590366,
+        "rho_max": 0.714818309861402,
+        "p_max": 0.00017668251441884232,
+        "p_min": 1.344755537723181e-09,
+        "T_max": 0.0003993203199784026,
+        "u_max": 8.91456496380182e-05,
+        "physical_div_max": 0.0046872553684633176,
+        "upwind_div_max": 0.00394986785617647,
+        "h": 0.09349600501244391
+      }
+    ],
+    "limiter": {
+      "substeps": 154,
+      "limited_substeps": 0,
+      "analytic_fallbacks": 0,
+      "minimum_fraction": 1.0,
+      "density_limited": 141,
+      "temperature_limited": 89,
+      "minimum_scalar_fraction": 0.33373036436895315,
+      "cfl_limited_substeps": 154,
+      "minimum_dt_fraction": 0.030812813835865427,
+      "energy_limited": 62,
+      "minimum_energy_fraction": 0.9978175376977636
+    }
+  }
+]

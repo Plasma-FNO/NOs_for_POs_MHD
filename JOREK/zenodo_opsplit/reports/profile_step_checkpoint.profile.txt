@@ -1,0 +1,53 @@
+         2506038 function calls (2470119 primitive calls) in 20.138 seconds
+
+   Ordered by: cumulative time
+   List reduced from 3600 to 45 due to restriction <45>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000   10.902   10.902 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_tensor.py:592(backward)
+        1    0.000    0.000   10.902   10.902 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/autograd/__init__.py:243(backward)
+        1    0.000    0.000   10.902   10.902 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/autograd/graph.py:815(_engine_run_backward)
+        1   10.902   10.902   10.902   10.902 {method 'run_backward' of 'torch._C._EngineBase' objects}
+        1    0.000    0.000    9.240    9.240 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/train_comparison.py:104(objective)
+        6    0.002    0.000    9.235    1.539 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/train_comparison.py:88(predictions)
+        5    0.001    0.000    9.220    1.844 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/native_rollout.py:204(step)
+       55    0.000    0.000    9.108    0.166 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_compile.py:41(inner)
+       55    0.001    0.000    7.991    0.145 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_dynamo/eval_frame.py:829(_fn)
+       55    0.010    0.000    7.990    0.145 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/utils/checkpoint.py:342(checkpoint)
+       55    0.169    0.003    7.958    0.145 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/native_rollout.py:241(_trial_step)
+      330    0.004    0.000    3.546    0.011 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/native_rollout.py:55(solve)
+      385    0.002    0.000    2.906    0.008 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/autograd/function.py:559(apply)
+      385    0.008    0.000    2.896    0.008 {built-in method apply}
+      330    0.002    0.000    2.877    0.009 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/gpu_sparse.py:136(forward)
+      330    0.003    0.000    2.247    0.007 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/gpu_sparse.py:119(direct_solve)
+       55    0.071    0.001    2.126    0.039 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/native.py:180(terms)
+     2705    0.007    0.000    2.029    0.001 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/equations.py:27(grad)
+     2705    1.526    0.001    2.011    0.001 {built-in method torch.gradient}
+      990    1.891    0.002    1.891    0.002 {method 'coalesce' of 'torch._C.TensorBase' objects}
+      330    0.289    0.001    1.839    0.006 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/gpu_sparse.py:75(solve)
+     1987    1.508    0.001    1.509    0.001 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/gpu_sparse.py:70(call)
+   3403/1    0.005    0.000    1.117    1.117 <frozen importlib._bootstrap>:1165(_find_and_load)
+    732/1    0.003    0.000    1.117    1.117 <frozen importlib._bootstrap>:1120(_find_and_load_unlocked)
+    714/1    0.002    0.000    1.116    1.116 <frozen importlib._bootstrap>:666(_load_unlocked)
+    715/1    0.001    0.000    1.116    1.116 <frozen importlib._bootstrap_external>:934(exec_module)
+   1649/2    0.001    0.000    1.116    0.558 <frozen importlib._bootstrap>:233(_call_with_frames_removed)
+   1844/1    0.082    0.000    1.116    1.116 {built-in method builtins.exec}
+        1    0.000    0.000    1.116    1.116 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_dynamo/__init__.py:1(<module>)
+    738/4    0.001    0.000    1.112    0.278 <frozen importlib._bootstrap>:1207(_handle_fromlist)
+    189/3    0.000    0.000    1.112    0.371 {built-in method builtins.__import__}
+      220    0.018    0.000    0.675    0.003 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/native_rollout.py:105(stiffness_tensor)
+        1    0.000    0.000    0.671    0.671 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py:1(<module>)
+        1    0.000    0.000    0.668    0.668 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py:1(<module>)
+    66303    0.189    0.000    0.666    0.000 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/utils/checkpoint.py:1100(pack_hook)
+      330    0.008    0.000    0.610    0.002 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/equations.py:33(bracket)
+  2684/18    0.002    0.000    0.537    0.030 /pitagora/prod/spack/6.1/install/0.22/linux-rhel9-zen4/gcc-11.4.1/python-3.11.7-qaizwjudodzdvsz2u2yss6hfsmfm5btp/lib/python3.11/importlib/__init__.py:108(import_module)
+  2684/18    0.001    0.000    0.537    0.030 <frozen importlib._bootstrap>:1192(_gcd_import)
+        1    0.000    0.000    0.508    0.508 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_dynamo/trace_rules.py:1(<module>)
+        1    0.000    0.000    0.463    0.463 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_dynamo/variables/__init__.py:1(<module>)
+        1    0.000    0.000    0.462    0.462 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_dynamo/variables/base.py:1(<module>)
+        1    0.000    0.000    0.432    0.432 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_dynamo/polyfills/loader.py:1(<module>)
+        9    0.000    0.000    0.431    0.048 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_dynamo/polyfills/loader.py:25(<genexpr>)
+       21    0.000    0.000    0.427    0.020 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_dynamo/decorators.py:354(wrapper)
+        1    0.000    0.000    0.426    0.426 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_dynamo/variables/builder.py:1(<module>)
+
+

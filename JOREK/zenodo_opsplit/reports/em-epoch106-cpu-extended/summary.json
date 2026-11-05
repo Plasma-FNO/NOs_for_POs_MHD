@@ -1,0 +1,23 @@
+{
+  "campaign": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/em-physical",
+  "device": "cpu",
+  "requested_steps": 64,
+  "smallest_positive_float64": 5e-324,
+  "checkpoints": {
+    "failed-validation.pt": {
+      "sha256": "50c524bb49010c3e2c890ecfd66055667698df590b3ee472c642a8d423e9e2f7",
+      "next_epoch": 105,
+      "next_offset": 3374,
+      "trajectories": [
+        {
+          "id": "jorek_run020",
+          "completed_steps": 53,
+          "failure": "Composite neural update: T: min=0, max=2.97666, first_bad_batch_Z_R=[0, 74, 53]",
+          "relative_l2": 3.014746987955688
+        }
+      ],
+      "failed": 1,
+      "mean_relative_l2": null
+    }
+  }
+}

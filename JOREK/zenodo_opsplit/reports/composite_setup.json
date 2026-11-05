@@ -1,0 +1,349 @@
+{
+  "validation": {
+    "composite_tests": 9,
+    "existing_matched_tests": 14,
+    "final_precision_training_resume_check": "passed"
+  },
+  "cases": {
+    "es": {
+      "campaign": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/es-positive",
+      "jobs": [
+        {
+          "stage": "smoke",
+          "dependency": null,
+          "job_id": "2779756",
+          "request": [
+            "sbatch",
+            "--parsable",
+            "--account=fupb2_ukaea_ml",
+            "--partition=boost_fua_prod",
+            "--nodes=1",
+            "--ntasks=1",
+            "--cpus-per-task=4",
+            "--mem=32G",
+            "--gres=gpu:1",
+            "--time=01:00:00",
+            "--requeue",
+            "--open-mode=append",
+            "--job-name=jorek-composite-es-smoke",
+            "--output=/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/es-positive/smoke-%j.log"
+          ],
+          "script": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/es-positive/smoke.sbatch",
+          "submission": [
+            "sbatch",
+            "--parsable",
+            "--account=fupb2_ukaea_ml",
+            "--partition=boost_fua_prod",
+            "--nodes=1",
+            "--ntasks=1",
+            "--cpus-per-task=4",
+            "--mem=32G",
+            "--gres=gpu:1",
+            "--time=01:00:00",
+            "--requeue",
+            "--open-mode=append",
+            "--job-name=jorek-composite-es-smoke",
+            "--output=/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/es-positive/smoke-%j.log",
+            "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/es-positive/smoke.sbatch"
+          ]
+        },
+        {
+          "stage": "audit",
+          "dependency": "smoke",
+          "job_id": "2779757",
+          "request": [
+            "sbatch",
+            "--parsable",
+            "--account=fupb2_ukaea_ml",
+            "--partition=boost_fua_prod",
+            "--nodes=1",
+            "--ntasks=1",
+            "--cpus-per-task=4",
+            "--mem=32G",
+            "--gres=gpu:1",
+            "--time=24:00:00",
+            "--requeue",
+            "--open-mode=append",
+            "--job-name=jorek-composite-es-audit",
+            "--output=/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/es-positive/audit-%j.log"
+          ],
+          "script": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/es-positive/audit.sbatch",
+          "submission": [
+            "sbatch",
+            "--parsable",
+            "--account=fupb2_ukaea_ml",
+            "--partition=boost_fua_prod",
+            "--nodes=1",
+            "--ntasks=1",
+            "--cpus-per-task=4",
+            "--mem=32G",
+            "--gres=gpu:1",
+            "--time=24:00:00",
+            "--requeue",
+            "--open-mode=append",
+            "--job-name=jorek-composite-es-audit",
+            "--output=/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/es-positive/audit-%j.log",
+            "--dependency=afterok:2779756",
+            "--kill-on-invalid-dep=yes",
+            "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/es-positive/audit.sbatch"
+          ]
+        },
+        {
+          "stage": "train",
+          "dependency": "audit",
+          "job_id": "2779758",
+          "request": [
+            "sbatch",
+            "--parsable",
+            "--account=fupb2_ukaea_ml",
+            "--partition=boost_fua_prod",
+            "--nodes=1",
+            "--ntasks=1",
+            "--cpus-per-task=4",
+            "--mem=32G",
+            "--gres=gpu:1",
+            "--time=24:00:00",
+            "--requeue",
+            "--open-mode=append",
+            "--job-name=jorek-composite-es-train",
+            "--output=/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/es-positive/train-%j.log"
+          ],
+          "script": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/es-positive/train.sbatch",
+          "submission": [
+            "sbatch",
+            "--parsable",
+            "--account=fupb2_ukaea_ml",
+            "--partition=boost_fua_prod",
+            "--nodes=1",
+            "--ntasks=1",
+            "--cpus-per-task=4",
+            "--mem=32G",
+            "--gres=gpu:1",
+            "--time=24:00:00",
+            "--requeue",
+            "--open-mode=append",
+            "--job-name=jorek-composite-es-train",
+            "--output=/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/es-positive/train-%j.log",
+            "--dependency=afterok:2779757",
+            "--kill-on-invalid-dep=yes",
+            "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/es-positive/train.sbatch"
+          ]
+        }
+      ],
+      "scheduler": [
+        "2779756|COMPLETED|0:0",
+        "2779756.batch|COMPLETED|0:0",
+        "2779756.extern|COMPLETED|0:0",
+        "2779757|PENDING|0:0",
+        "2779758|PENDING|0:0"
+      ],
+      "parameters": 13442116,
+      "validation": {
+        "epoch": 0,
+        "trajectories": [
+          {
+            "id": "jorek_run0110",
+            "loss": 8.496578173390416
+          }
+        ]
+      },
+      "smoke_test": {
+        "5": {
+          "eligible": 1,
+          "completed": 1,
+          "failed": 0,
+          "source_excluded": 0,
+          "mean_nrmse": [
+            0.007234849501401186,
+            0.008299291133880615,
+            0.44290316104888916,
+            0.1787649393081665
+          ],
+          "mean_r_weighted_relative_l2": [
+            0.10309425741434097,
+            0.23297785222530365,
+            7.69140625,
+            6.059907913208008
+          ]
+        }
+      },
+      "shared_data": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-20261104/es/data"
+    },
+    "em": {
+      "campaign": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/em-positive",
+      "jobs": [
+        {
+          "stage": "smoke",
+          "dependency": null,
+          "job_id": "2779753",
+          "request": [
+            "sbatch",
+            "--parsable",
+            "--account=fupb2_ukaea_ml",
+            "--partition=boost_fua_prod",
+            "--nodes=1",
+            "--ntasks=1",
+            "--cpus-per-task=4",
+            "--mem=32G",
+            "--gres=gpu:1",
+            "--time=01:00:00",
+            "--requeue",
+            "--open-mode=append",
+            "--job-name=jorek-composite-em-smoke",
+            "--output=/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/em-positive/smoke-%j.log"
+          ],
+          "script": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/em-positive/smoke.sbatch",
+          "submission": [
+            "sbatch",
+            "--parsable",
+            "--account=fupb2_ukaea_ml",
+            "--partition=boost_fua_prod",
+            "--nodes=1",
+            "--ntasks=1",
+            "--cpus-per-task=4",
+            "--mem=32G",
+            "--gres=gpu:1",
+            "--time=01:00:00",
+            "--requeue",
+            "--open-mode=append",
+            "--job-name=jorek-composite-em-smoke",
+            "--output=/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/em-positive/smoke-%j.log",
+            "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/em-positive/smoke.sbatch"
+          ]
+        },
+        {
+          "stage": "audit",
+          "dependency": "smoke",
+          "job_id": "2779754",
+          "request": [
+            "sbatch",
+            "--parsable",
+            "--account=fupb2_ukaea_ml",
+            "--partition=boost_fua_prod",
+            "--nodes=1",
+            "--ntasks=1",
+            "--cpus-per-task=4",
+            "--mem=32G",
+            "--gres=gpu:1",
+            "--time=24:00:00",
+            "--requeue",
+            "--open-mode=append",
+            "--job-name=jorek-composite-em-audit",
+            "--output=/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/em-positive/audit-%j.log"
+          ],
+          "script": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/em-positive/audit.sbatch",
+          "submission": [
+            "sbatch",
+            "--parsable",
+            "--account=fupb2_ukaea_ml",
+            "--partition=boost_fua_prod",
+            "--nodes=1",
+            "--ntasks=1",
+            "--cpus-per-task=4",
+            "--mem=32G",
+            "--gres=gpu:1",
+            "--time=24:00:00",
+            "--requeue",
+            "--open-mode=append",
+            "--job-name=jorek-composite-em-audit",
+            "--output=/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/em-positive/audit-%j.log",
+            "--dependency=afterok:2779753",
+            "--kill-on-invalid-dep=yes",
+            "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/em-positive/audit.sbatch"
+          ]
+        },
+        {
+          "stage": "train",
+          "dependency": "audit",
+          "job_id": "2779755",
+          "request": [
+            "sbatch",
+            "--parsable",
+            "--account=fupb2_ukaea_ml",
+            "--partition=boost_fua_prod",
+            "--nodes=1",
+            "--ntasks=1",
+            "--cpus-per-task=4",
+            "--mem=32G",
+            "--gres=gpu:1",
+            "--time=24:00:00",
+            "--requeue",
+            "--open-mode=append",
+            "--job-name=jorek-composite-em-train",
+            "--output=/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/em-positive/train-%j.log"
+          ],
+          "script": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/em-positive/train.sbatch",
+          "submission": [
+            "sbatch",
+            "--parsable",
+            "--account=fupb2_ukaea_ml",
+            "--partition=boost_fua_prod",
+            "--nodes=1",
+            "--ntasks=1",
+            "--cpus-per-task=4",
+            "--mem=32G",
+            "--gres=gpu:1",
+            "--time=24:00:00",
+            "--requeue",
+            "--open-mode=append",
+            "--job-name=jorek-composite-em-train",
+            "--output=/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/em-positive/train-%j.log",
+            "--dependency=afterok:2779754",
+            "--kill-on-invalid-dep=yes",
+            "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/em-positive/train.sbatch"
+          ]
+        }
+      ],
+      "scheduler": [
+        "2779753|COMPLETED|0:0",
+        "2779753.batch|COMPLETED|0:0",
+        "2779753.extern|COMPLETED|0:0",
+        "2779754|RUNNING|0:0",
+        "2779754.batch|RUNNING|0:0",
+        "2779754.extern|RUNNING|0:0",
+        "2779755|PENDING|0:0"
+      ],
+      "parameters": 17938314,
+      "validation": {
+        "epoch": 0,
+        "trajectories": [
+          {
+            "id": "jorek_run020",
+            "loss": 20.95085029274243
+          }
+        ]
+      },
+      "smoke_test": {
+        "5": {
+          "eligible": 1,
+          "completed": 1,
+          "failed": 0,
+          "source_excluded": 0,
+          "mean_nrmse": [
+            0.026276353746652603,
+            0.02288840152323246,
+            2.616351842880249,
+            2.8687264919281006,
+            0.010753924958407879,
+            1.5030945539474487
+          ],
+          "mean_r_weighted_relative_l2": [
+            0.151045560836792,
+            0.24438291788101196,
+            7.5675435066223145,
+            47.62514114379883,
+            0.0003118141321465373,
+            4.517810344696045
+          ]
+        }
+      },
+      "shared_data": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-20261104/em/data"
+    }
+  },
+  "limitations": [
+    "No completed full campaign or ES-to-EM transfer result yet.",
+    "EM capacity exceeds the existing six-layer whole-state baselines.",
+    "Implicit linear stepping, log rho/T increments and learned auxiliary defects adapt the NS protocol.",
+    "Failed additive-thermodynamic smoke snapshots remain preserved; their dependent full jobs were cancelled automatically."
+  ]
+}

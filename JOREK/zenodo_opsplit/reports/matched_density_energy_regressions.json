@@ -1,0 +1,90 @@
+[
+  {
+    "case": "es",
+    "arm": "opsplit-scratch",
+    "id": "jorek_run0472",
+    "start": 39,
+    "passed": true,
+    "loss": 1.289332326917324,
+    "grad_norm": 16.24570083618164,
+    "seconds": 26.23736608820036,
+    "limiter": {
+      "substeps": 74,
+      "limited_substeps": 0,
+      "analytic_fallbacks": 0,
+      "minimum_fraction": 1.0,
+      "density_limited": 36,
+      "temperature_limited": 34,
+      "minimum_scalar_fraction": 0.20868210638210538,
+      "cfl_limited_substeps": 74,
+      "minimum_dt_fraction": 0.13481237823082068
+    },
+    "energy_limited": 70
+  },
+  {
+    "case": "es",
+    "arm": "opsplit-pretrained",
+    "id": "jorek_run0472",
+    "start": 39,
+    "passed": true,
+    "loss": 0.26676947233186143,
+    "grad_norm": 1.3135504722595215,
+    "seconds": 40.174444660078734,
+    "limiter": {
+      "substeps": 94,
+      "limited_substeps": 0,
+      "analytic_fallbacks": 0,
+      "minimum_fraction": 1.0,
+      "density_limited": 64,
+      "temperature_limited": 61,
+      "minimum_scalar_fraction": 0.22085559736975055,
+      "cfl_limited_substeps": 94,
+      "minimum_dt_fraction": 0.01419054537043678
+    },
+    "energy_limited": 58
+  },
+  {
+    "case": "em",
+    "arm": "opsplit-scratch",
+    "id": "jorek_run063",
+    "start": 21,
+    "passed": true,
+    "loss": 0.8487903221908232,
+    "grad_norm": 7.078859806060791,
+    "seconds": 42.034342454047874,
+    "limiter": {
+      "substeps": 88,
+      "limited_substeps": 0,
+      "analytic_fallbacks": 0,
+      "minimum_fraction": 1.0,
+      "density_limited": 54,
+      "temperature_limited": 0,
+      "minimum_scalar_fraction": 0.27218696740200204,
+      "cfl_limited_substeps": 88,
+      "minimum_dt_fraction": 0.014840272308735792
+    },
+    "energy_limited": 88
+  },
+  {
+    "case": "em",
+    "arm": "opsplit-pretrained",
+    "id": "jorek_run063",
+    "start": 21,
+    "passed": true,
+    "loss": 0.18332562830483728,
+    "grad_norm": 1.9184489250183105,
+    "seconds": 44.551862513879314,
+    "limiter": {
+      "substeps": 111,
+      "limited_substeps": 0,
+      "analytic_fallbacks": 0,
+      "minimum_fraction": 1.0,
+      "density_limited": 61,
+      "temperature_limited": 3,
+      "minimum_scalar_fraction": 0.29187462526224606,
+      "cfl_limited_substeps": 111,
+      "minimum_dt_fraction": 0.018444818383223094
+    },
+    "energy_limited": 70
+  }
+]

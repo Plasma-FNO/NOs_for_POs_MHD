@@ -1,0 +1,226 @@
+{
+  "es": {
+    "horizon": 49,
+    "mean_relative_l2": 0.07743627162531086,
+    "trajectories": [
+      {
+        "id": "jorek_run0110",
+        "relative_l2": 0.04176229488740211
+      },
+      {
+        "id": "jorek_run0140",
+        "relative_l2": 0.10432094774605694
+      },
+      {
+        "id": "jorek_run0114",
+        "relative_l2": 0.013196023652825888
+      },
+      {
+        "id": "jorek_run0255",
+        "relative_l2": 0.08273434622188136
+      },
+      {
+        "id": "jorek_run0298",
+        "relative_l2": 0.08448986639411414
+      },
+      {
+        "id": "jorek_run0226",
+        "relative_l2": 0.049479802083302056
+      },
+      {
+        "id": "jorek_run0343",
+        "relative_l2": 0.05169738341779934
+      },
+      {
+        "id": "jorek_run0219",
+        "relative_l2": 0.032706541973653476
+      },
+      {
+        "id": "jorek_run0229",
+        "relative_l2": 0.05401283439603531
+      },
+      {
+        "id": "jorek_run0469",
+        "relative_l2": 0.056723854317393435
+      },
+      {
+        "id": "jorek_run0088",
+        "relative_l2": 0.045195588666457544
+      },
+      {
+        "id": "jorek_run0087",
+        "relative_l2": 0.021706626287821294
+      },
+      {
+        "id": "jorek_run0222",
+        "relative_l2": 0.07131492058024053
+      },
+      {
+        "id": "jorek_run0406",
+        "relative_l2": 0.12749427829403048
+      },
+      {
+        "id": "jorek_run0020",
+        "relative_l2": 0.037762107380205696
+      },
+      {
+        "id": "jorek_run0163",
+        "relative_l2": 0.06741988540548326
+      },
+      {
+        "id": "jorek_run0384",
+        "relative_l2": 0.07415760587556405
+      },
+      {
+        "id": "jorek_run0136",
+        "relative_l2": 0.06167075398627707
+      },
+      {
+        "id": "jorek_run0268",
+        "relative_l2": 0.07852725355617343
+      },
+      {
+        "id": "jorek_run0169",
+        "relative_l2": 0.14155666099793496
+      },
+      {
+        "id": "jorek_run0019",
+        "relative_l2": 0.1098308410359392
+      },
+      {
+        "id": "jorek_run0096",
+        "relative_l2": 0.052807958562468185
+      },
+      {
+        "id": "jorek_run0392",
+        "relative_l2": 0.13586869752285477
+      },
+      {
+        "id": "jorek_run0388",
+        "relative_l2": 0.08914050781607931
+      },
+      {
+        "id": "jorek_run0085",
+        "relative_l2": 0.1054481810948309
+      },
+      {
+        "id": "jorek_run0001",
+        "relative_l2": 0.13355276892807413
+      },
+      {
+        "id": "jorek_run0010",
+        "relative_l2": 0.16017815731454527
+      },
+      {
+        "id": "jorek_run0077",
+        "relative_l2": 0.021336896147355316
+      },
+      {
+        "id": "jorek_run0386",
+        "relative_l2": 0.07881602118016535
+      },
+      {
+        "id": "jorek_run0225",
+        "relative_l2": 0.10250855646563262
+      },
+      {
+        "id": "jorek_run0173",
+        "relative_l2": 0.07355309725083974
+      },
+      {
+        "id": "jorek_run0062",
+        "relative_l2": 0.11702728402324392
+      },
+      {
+        "id": "jorek_run0377",
+        "relative_l2": 0.15471534821373115
+      },
+      {
+        "id": "jorek_run0439",
+        "relative_l2": 0.09768196538526493
+      },
+      {
+        "id": "jorek_run0044",
+        "relative_l2": 0.05086839824980166
+      },
+      {
+        "id": "jorek_run0031",
+        "relative_l2": 0.006664682597463751
+      },
+      {
+        "id": "jorek_run0277",
+        "relative_l2": 0.10788253372011938
+      },
+      {
+        "id": "jorek_run0323",
+        "relative_l2": 0.04235968652699489
+      },
+      {
+        "id": "jorek_run0166",
+        "relative_l2": 0.0857662699863929
+      },
+      {
+        "id": "jorek_run0496",
+        "relative_l2": 0.09628288405023183
+      },
+      {
+        "id": "jorek_run0379",
+        "relative_l2": 0.10475476516032198
+      },
+      {
+        "id": "jorek_run0095",
+        "relative_l2": 0.027348330910053228
+      }
+    ]
+  },
+  "em": {
+    "horizon": 49,
+    "mean_relative_l2": 0.09189091072737841,
+    "trajectories": [
+      {
+        "id": "jorek_run020",
+        "relative_l2": 0.1202923372599234
+      },
+      {
+        "id": "jorek_run006",
+        "relative_l2": 0.03699446225837771
+      },
+      {
+        "id": "jorek_run100",
+        "relative_l2": 0.09439560147704502
+      },
+      {
+        "id": "jorek_run083",
+        "relative_l2": 0.14531594386239144
+      },
+      {
+        "id": "jorek_run085",
+        "relative_l2": 0.1166642350808619
+      },
+      {
+        "id": "jorek_run008",
+        "relative_l2": 0.10100488389780123
+      },
+      {
+        "id": "jorek_run048",
+        "relative_l2": 0.08016349028444665
+      },
+      {
+        "id": "jorek_run035",
+        "relative_l2": 0.11668457133492703
+      },
+      {
+        "id": "jorek_run033",
+        "relative_l2": 0.02737580702009486
+      },
+      {
+        "id": "jorek_run051",
+        "relative_l2": 0.08287898341507627
+      },
+      {
+        "id": "jorek_run057",
+        "relative_l2": 0.0890297021102168
+      }
+    ]
+  }
+}

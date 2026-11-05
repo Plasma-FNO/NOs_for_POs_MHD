@@ -1,0 +1,44 @@
+{
+  "campaign": "/pitagora_scratch/userexternal/vgopakum/jorek-composite-transfer-20261105/em/campaign",
+  "data": "/pitagora_scratch/userexternal/vgopakum/jorek-composite-transfer-20261105/em/data",
+  "transfer": {
+    "checkpoint": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-composite-20261105/es-softplus/train/best.pt",
+    "sha256": "2ef80268c8320b95847fa00f75f9e12123dbea0dc67d1b84a1cfe84ac52aa8d3",
+    "freeze_fluid": true,
+    "source_data": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-20261104/es/data",
+    "source_comparison_sha256": "6672f84ed2ca578ba667f6d846e3a402cb6f20dcd45c9ed4559e0cefaa149cdd",
+    "heldout_geometry_overlap": {
+      "val": [],
+      "test": []
+    },
+    "source_epoch": 70,
+    "source_best_validation": 0.04378459235103563,
+    "target_data": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-20261104/em/data",
+    "target_comparison_sha256": "db750c0cba88e814480eaffa881abdf26876447f39487543a90a2d47cb91ba73"
+  },
+  "jobs": {
+    "smoke": "2784449",
+    "audit": "2784450",
+    "probe": "2784451",
+    "train": "2784452"
+  },
+  "validation": {
+    "device": "cpu",
+    "initial_mean_relative_l2": 0.06762092207770568,
+    "horizon": 49,
+    "trajectories": 11,
+    "job": 2784436
+  },
+  "regression_tests": {
+    "existing_checks_passed": 35,
+    "existing_checks_job": 2784433,
+    "transfer_check_passed": true,
+    "transfer_check_job": 2784439
+  },
+  "frozen_parameters": 13442116,
+  "trainable_parameters": 4496198,
+  "lr": 0.0001,
+  "stability_epochs": 110,
+  "total_em_epochs": 250,
+  "status": "Submitted; GPU smoke/audit and optimizer probe have not yet been certified."
+}

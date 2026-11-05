@@ -1,0 +1,83 @@
+[
+  {
+    "case": "es",
+    "arm": "opsplit-scratch",
+    "id": "jorek_run0472",
+    "start": 39,
+    "passed": false,
+    "error": "Explicit CFL requires excessive substeps; refusing unstable advance",
+    "seconds": 21.250963561004028,
+    "limiter": {
+      "substeps": 95,
+      "limited_substeps": 0,
+      "analytic_fallbacks": 0,
+      "minimum_fraction": 1.0,
+      "density_limited": 54,
+      "temperature_limited": 60,
+      "minimum_scalar_fraction": 0.05659333963391575,
+      "cfl_limited_substeps": 95,
+      "minimum_dt_fraction": 8.417896179614044e-12
+    }
+  },
+  {
+    "case": "es",
+    "arm": "opsplit-pretrained",
+    "id": "jorek_run0472",
+    "start": 39,
+    "passed": false,
+    "error": "Explicit CFL requires excessive substeps; refusing unstable advance",
+    "seconds": 11.45048426813446,
+    "limiter": {
+      "substeps": 96,
+      "limited_substeps": 0,
+      "analytic_fallbacks": 0,
+      "minimum_fraction": 1.0,
+      "density_limited": 60,
+      "temperature_limited": 60,
+      "minimum_scalar_fraction": 0.05191639374330808,
+      "cfl_limited_substeps": 96,
+      "minimum_dt_fraction": 1.9472404209315883e-11
+    }
+  },
+  {
+    "case": "em",
+    "arm": "opsplit-scratch",
+    "id": "jorek_run063",
+    "start": 21,
+    "passed": true,
+    "loss": 1.1683365252679625,
+    "grad_norm": 25.06914710998535,
+    "seconds": 43.26530954311602,
+    "limiter": {
+      "substeps": 126,
+      "limited_substeps": 0,
+      "analytic_fallbacks": 0,
+      "minimum_fraction": 1.0,
+      "density_limited": 7,
+      "temperature_limited": 14,
+      "minimum_scalar_fraction": 0.28986457199604887,
+      "cfl_limited_substeps": 126,
+      "minimum_dt_fraction": 0.0010559105872530949
+    }
+  },
+  {
+    "case": "em",
+    "arm": "opsplit-pretrained",
+    "id": "jorek_run063",
+    "start": 21,
+    "passed": false,
+    "error": "Explicit CFL requires excessive substeps; refusing unstable advance",
+    "seconds": 40.92841052589938,
+    "limiter": {
+      "substeps": 208,
+      "limited_substeps": 0,
+      "analytic_fallbacks": 0,
+      "minimum_fraction": 1.0,
+      "density_limited": 85,
+      "temperature_limited": 90,
+      "minimum_scalar_fraction": 0.04060122526452695,
+      "cfl_limited_substeps": 208,
+      "minimum_dt_fraction": 9.55852303284603e-12
+    }
+  }
+]

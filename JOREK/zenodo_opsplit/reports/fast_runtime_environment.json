@@ -1,0 +1,1 @@
+{"torch": "2.7.1+cu126", "cuda": "12.6", "neuralop": "1.0.2", "gpu": "NVIDIA H100", "gpu_memory_bytes": 100228136960, "matmul_tf32": false, "cudnn_tf32": true, "cudss": "0.7.1", "cudss_deterministic": true}

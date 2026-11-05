@@ -1,0 +1,58 @@
+{
+  "job_id": "2780287",
+  "root": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-residual-transfer-pilot-20261105",
+  "submission": [
+    "sbatch",
+    "--parsable",
+    "--account=fupb2_ukaea_ml",
+    "--partition=boost_fua_prod",
+    "--nodes=1",
+    "--ntasks=1",
+    "--cpus-per-task=4",
+    "--gres=gpu:1",
+    "--mem=32G",
+    "--time=01:00:00",
+    "--job-name=jorek-residual-transfer-pilot",
+    "--output=/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-residual-transfer-pilot-20261105/pilot-%j.log",
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-residual-transfer-pilot-20261105/pilot.sbatch"
+  ],
+  "commands": [
+    [
+      "/pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-residual-transfer-pilot-20261105/code/test_gpu_native.py",
+      "-k",
+      "zero_residual"
+    ],
+    [
+      "/pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/bin/python",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-residual-transfer-pilot-20261105/code/train_native_corrections.py",
+      "--manifest",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-residual-transfer-pilot-20261105/manifest.json",
+      "--source",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-20261104/es-term-training/best.pt",
+      "--source-data",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-20261104/es-terms-v2",
+      "--output",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-residual-transfer-pilot-20261105/es-corrections"
+    ],
+    [
+      "/pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/bin/python",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-residual-transfer-pilot-20261105/code/pilot_native_transfer.py",
+      "--manifest",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-residual-transfer-pilot-20261105/manifest.json",
+      "--source",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-residual-transfer-pilot-20261105/es-corrections/best.pt",
+      "--source-data",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-native-20261104/es-terms-v2",
+      "--output",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-residual-transfer-pilot-20261105/results"
+    ]
+  ],
+  "cpu_tests_passed": 47,
+  "source": "Fresh zero-output residual model: 8 ES trajectories, 64 updates, source-validation selection",
+  "target": "Same seed907 EM budget8, sixteen updates per trainable arm, same validation/test cohorts",
+  "correction": "analytic + 0.1 * ES training term RMS * tanh(FNO); normalized correction L2 regularization"
+}

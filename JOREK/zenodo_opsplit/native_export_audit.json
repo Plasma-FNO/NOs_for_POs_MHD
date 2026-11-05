@@ -1,0 +1,420 @@
+{
+  "manifest_sha256": "57a8c22cbddd05a9b000d014ca70381e72650d34ed129d805d7cf4e434c09caa",
+  "sampling": "First three training-family trajectories per regime, seed907; frame10; raw exported values, two-cell cropped interior.",
+  "cases": {
+    "es": {
+      "plan": {
+        "case": "es",
+        "formulation": "jorek-equations",
+        "status": "blocked",
+        "ready": false,
+        "primary_state": [
+          "rho",
+          "p",
+          "u"
+        ],
+        "pressure": "p=rho*T in verified native units",
+        "auxiliary_constraints": {
+          "omega": "Delta_c(u)"
+        },
+        "equation": "M(q) q_dot = A(q) + D(q;c) + C(q)",
+        "learned_modules": [
+          "scalar_advection",
+          "fluid_momentum",
+          "particle_diffusion",
+          "thermal_diffusion"
+        ],
+        "explicit": [
+          "geometry",
+          "coefficient factors",
+          "auxiliary constraints",
+          "density-dependent momentum solve"
+        ],
+        "supervision": "Term-level or isolated-subflow targets before rollout fine-tuning; trajectory loss alone does not identify terms.",
+        "transfer": "Scalar advection and diffusion independently; momentum/viscosity only after convention audit.",
+        "blockers": [
+          "Verified exported-to-native signs/scales, density reference and temperature convention are missing.",
+          "Saved-frame physical timestamps and generating JOREK revision are not established.",
+          "Native-consistent density-dependent momentum inversion and sampled-edge boundary closure are not implemented.",
+          "Active stabilization, momentum and viscosity switches need matching to the generating runs.",
+          "Term-level targets and native residual / split-step validation are not yet available."
+        ],
+        "reference": "README.md: Equation-based split: source audit and proposed next experiment; equations.py contains interior diagnostics only."
+      },
+      "samples": [
+        {
+          "id": "jorek_run0446",
+          "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/data/jorek_zenodo/es/raw/jorek_run0446.h5",
+          "frame": 10,
+          "metadata": {
+            "keys": [
+              "Phi",
+              "R_mesh(nR,nZ)",
+              "T",
+              "Z_mesh(nR,nZ)",
+              "nR",
+              "nZ",
+              "n_times",
+              "n_var",
+              "omega",
+              "rho",
+              "variables_list"
+            ],
+            "root_attributes": {},
+            "dataset_attributes": {},
+            "frames": 201,
+            "potential_key": "Phi",
+            "sampled_R": [
+              9.501,
+              10.499
+            ],
+            "sampled_Z": [
+              -0.499,
+              0.499
+            ]
+          },
+          "input_path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/data/jorek_zenodo/es/raw/jorek_input_run0446.txt",
+          "input_sha256": "10139ebbbd0eeb831bc501896d292f4cdf289480c37a70b8e3b8751d109367c4",
+          "input_settings": {
+            "restart": ".f.",
+            "tstep": "0.005",
+            "nstep": "2000",
+            "nout": "10",
+            "visco": "1.d-3",
+            "d_perp": "1.d-4",
+            "zk_perp": "1.d-4"
+          },
+          "constraint_fits": {
+            "exported_omega_vs_laplacian_exported_potential": {
+              "scale": -7.068456002755534e-08,
+              "relative_residual": 0.1158215884754498
+            }
+          },
+          "warning": "Spatial fit only. This does not identify native units, elapsed time, or the generating revision."
+        },
+        {
+          "id": "jorek_run0353",
+          "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/data/jorek_zenodo/es/raw/jorek_run0353.h5",
+          "frame": 10,
+          "metadata": {
+            "keys": [
+              "Phi",
+              "R_mesh(nR,nZ)",
+              "T",
+              "Z_mesh(nR,nZ)",
+              "nR",
+              "nZ",
+              "n_times",
+              "n_var",
+              "omega",
+              "rho",
+              "variables_list"
+            ],
+            "root_attributes": {},
+            "dataset_attributes": {},
+            "frames": 201,
+            "potential_key": "Phi",
+            "sampled_R": [
+              9.501,
+              10.499
+            ],
+            "sampled_Z": [
+              -0.499,
+              0.499
+            ]
+          },
+          "input_path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/data/jorek_zenodo/es/raw/jorek_input_run0353.txt",
+          "input_sha256": "50d61f5fb31acd30955ecbd5c2e7d189322a6aec091cbc667512188d3e26a60c",
+          "input_settings": {
+            "restart": ".f.",
+            "tstep": "0.005",
+            "nstep": "2000",
+            "nout": "10",
+            "visco": "1.d-3",
+            "d_perp": "1.d-4",
+            "zk_perp": "1.d-4"
+          },
+          "constraint_fits": {
+            "exported_omega_vs_laplacian_exported_potential": {
+              "scale": -6.756005084582304e-08,
+              "relative_residual": 0.04925923809224146
+            }
+          },
+          "warning": "Spatial fit only. This does not identify native units, elapsed time, or the generating revision."
+        },
+        {
+          "id": "jorek_run0472",
+          "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/data/jorek_zenodo/es/raw/jorek_run0472.h5",
+          "frame": 10,
+          "metadata": {
+            "keys": [
+              "Phi",
+              "R_mesh(nR,nZ)",
+              "T",
+              "Z_mesh(nR,nZ)",
+              "nR",
+              "nZ",
+              "n_times",
+              "n_var",
+              "omega",
+              "rho",
+              "variables_list"
+            ],
+            "root_attributes": {},
+            "dataset_attributes": {},
+            "frames": 201,
+            "potential_key": "Phi",
+            "sampled_R": [
+              9.501,
+              10.499
+            ],
+            "sampled_Z": [
+              -0.499,
+              0.499
+            ]
+          },
+          "input_path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/data/jorek_zenodo/es/raw/jorek_input_run0472.txt",
+          "input_sha256": "c7a19edb4b2c8d7bd2d3a7455805eb260083fba629954b037f1f958fe1aa4adf",
+          "input_settings": {
+            "restart": ".f.",
+            "tstep": "0.005",
+            "nstep": "2000",
+            "nout": "10",
+            "visco": "1.d-3",
+            "d_perp": "1.d-4",
+            "zk_perp": "1.d-4"
+          },
+          "constraint_fits": {
+            "exported_omega_vs_laplacian_exported_potential": {
+              "scale": -6.74075681533094e-08,
+              "relative_residual": 0.04186270262608109
+            }
+          },
+          "warning": "Spatial fit only. This does not identify native units, elapsed time, or the generating revision."
+        }
+      ]
+    },
+    "em": {
+      "plan": {
+        "case": "em",
+        "formulation": "jorek-equations",
+        "status": "blocked",
+        "ready": false,
+        "primary_state": [
+          "rho",
+          "p",
+          "u",
+          "psi"
+        ],
+        "pressure": "p=rho*T in verified native units",
+        "auxiliary_constraints": {
+          "omega": "Delta_c(u)",
+          "j": "Delta_star(psi)"
+        },
+        "equation": "M(q) q_dot = A(q) + D(q;c) + C(q)",
+        "learned_modules": [
+          "scalar_advection",
+          "fluid_momentum",
+          "particle_diffusion",
+          "thermal_diffusion"
+        ],
+        "explicit": [
+          "geometry",
+          "coefficient factors",
+          "auxiliary constraints",
+          "density-dependent momentum solve",
+          "ideal induction",
+          "Lorentz momentum load",
+          "resistivity",
+          "anisotropic transport"
+        ],
+        "supervision": "Term-level or isolated-subflow targets before rollout fine-tuning; trajectory loss alone does not identify terms.",
+        "transfer": "Scalar advection and diffusion independently; momentum/viscosity only after convention audit.",
+        "blockers": [
+          "Verified exported-to-native signs/scales, density reference and temperature convention are missing.",
+          "Saved-frame physical timestamps and generating JOREK revision are not established.",
+          "Native-consistent density-dependent momentum inversion and sampled-edge boundary closure are not implemented.",
+          "Active stabilization, momentum and viscosity switches need matching to the generating runs.",
+          "Term-level targets and native residual / split-step validation are not yet available."
+        ],
+        "reference": "README.md: Equation-based split: source audit and proposed next experiment; equations.py contains interior diagnostics only."
+      },
+      "samples": [
+        {
+          "id": "jorek_run016",
+          "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/data/jorek_zenodo/em/raw/jorek_run016.h5",
+          "frame": 10,
+          "metadata": {
+            "keys": [
+              "Psi",
+              "R_mesh(nR,nZ)",
+              "T",
+              "Z_mesh(nR,nZ)",
+              "nR",
+              "nZ",
+              "n_times",
+              "n_var",
+              "omega",
+              "rho",
+              "u",
+              "variables_list",
+              "zj"
+            ],
+            "root_attributes": {},
+            "dataset_attributes": {},
+            "frames": 211,
+            "potential_key": "u",
+            "sampled_R": [
+              9.501,
+              10.499
+            ],
+            "sampled_Z": [
+              -0.499,
+              0.499
+            ]
+          },
+          "input_path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/data/jorek_zenodo/em/raw/jorek_input_run016.txt",
+          "input_sha256": "1405be5fbb765cc17fe0eae56d5a7ecf4da292d529c4b246f4f4ed2b683c8132",
+          "input_settings": {
+            "restart": ".t.",
+            "tstep": "0.5",
+            "nstep": "50",
+            "nout": "10",
+            "eta": "1.d-5",
+            "visco": "1.d-5",
+            "d_perp": "1.d-6",
+            "zk_perp": "1.d-6",
+            "zk_par": "0.d0"
+          },
+          "constraint_fits": {
+            "exported_omega_vs_laplacian_exported_potential": {
+              "scale": -6.99484892173712e-08,
+              "relative_residual": 0.1045269860136091
+            },
+            "exported_zj_vs_delta_star_exported_psi": {
+              "scale": 1.0180066205633058,
+              "relative_residual": 0.020955089556601584
+            }
+          },
+          "warning": "Spatial fit only. This does not identify native units, elapsed time, or the generating revision."
+        },
+        {
+          "id": "jorek_run080",
+          "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/data/jorek_zenodo/em/raw/jorek_run080.h5",
+          "frame": 10,
+          "metadata": {
+            "keys": [
+              "Psi",
+              "R_mesh(nR,nZ)",
+              "T",
+              "Z_mesh(nR,nZ)",
+              "nR",
+              "nZ",
+              "n_times",
+              "n_var",
+              "omega",
+              "rho",
+              "u",
+              "variables_list",
+              "zj"
+            ],
+            "root_attributes": {},
+            "dataset_attributes": {},
+            "frames": 211,
+            "potential_key": "u",
+            "sampled_R": [
+              9.501,
+              10.499
+            ],
+            "sampled_Z": [
+              -0.499,
+              0.499
+            ]
+          },
+          "input_path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/data/jorek_zenodo/em/raw/jorek_input_run080.txt",
+          "input_sha256": "1c2877b00c87dc5d1d2e3752e900224e9763c042be3b7261e9b80f7d98f1dba5",
+          "input_settings": {
+            "restart": ".f.",
+            "tstep": "0.5",
+            "nstep": "100",
+            "nout": "10",
+            "eta": "1.d-5",
+            "visco": "1.d-5",
+            "d_perp": "1.d-6",
+            "zk_perp": "1.d-6",
+            "zk_par": "0.d0"
+          },
+          "constraint_fits": {
+            "exported_omega_vs_laplacian_exported_potential": {
+              "scale": -6.996447167085334e-08,
+              "relative_residual": 0.08126896545457289
+            },
+            "exported_zj_vs_delta_star_exported_psi": {
+              "scale": 1.0267317848127973,
+              "relative_residual": 0.023556168076079076
+            }
+          },
+          "warning": "Spatial fit only. This does not identify native units, elapsed time, or the generating revision."
+        },
+        {
+          "id": "jorek_run074",
+          "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/data/jorek_zenodo/em/raw/jorek_run074.h5",
+          "frame": 10,
+          "metadata": {
+            "keys": [
+              "Psi",
+              "R_mesh(nR,nZ)",
+              "T",
+              "Z_mesh(nR,nZ)",
+              "nR",
+              "nZ",
+              "n_times",
+              "n_var",
+              "omega",
+              "rho",
+              "u",
+              "variables_list",
+              "zj"
+            ],
+            "root_attributes": {},
+            "dataset_attributes": {},
+            "frames": 211,
+            "potential_key": "u",
+            "sampled_R": [
+              9.501,
+              10.499
+            ],
+            "sampled_Z": [
+              -0.499,
+              0.499
+            ]
+          },
+          "input_path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/data/jorek_zenodo/em/raw/jorek_input_run074.txt",
+          "input_sha256": "b740198c84c551b24d79047b62c8ab79a4b9a3d9dd52e02a6395c08edf910f47",
+          "input_settings": {
+            "restart": ".f.",
+            "tstep": "0.5",
+            "nstep": "100",
+            "nout": "10",
+            "eta": "1.d-5",
+            "visco": "1.d-5",
+            "d_perp": "1.d-6",
+            "zk_perp": "1.d-6",
+            "zk_par": "0.d0"
+          },
+          "constraint_fits": {
+            "exported_omega_vs_laplacian_exported_potential": {
+              "scale": -7.094353204144904e-08,
+              "relative_residual": 0.11565894853339662
+            },
+            "exported_zj_vs_delta_star_exported_psi": {
+              "scale": 1.0208134356646437,
+              "relative_residual": 0.02026596365965256
+            }
+          },
+          "warning": "Spatial fit only. This does not identify native units, elapsed time, or the generating revision."
+        }
+      ]
+    }
+  }
+}

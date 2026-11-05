@@ -1,0 +1,188 @@
+{
+  "snapshot_date": "2026-11-04",
+  "data_root": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/data/jorek_zenodo",
+  "runs_root": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-transfer-20261104",
+  "pilot_manifest": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/data/jorek_zenodo/pilot-manifest.json",
+  "pilot_counts": {
+    "es": {
+      "train": 14,
+      "val": 3,
+      "test": 2
+    },
+    "em": {
+      "train": 14,
+      "val": 3,
+      "test": 2
+    }
+  },
+  "jobs": {
+    "pilot_prepare": {
+      "id": "2772869",
+      "state": "COMPLETED"
+    },
+    "full_prepare": {
+      "id": "2772887",
+      "state": "COMPLETED"
+    },
+    "pilot_attempt_1": {
+      "id": "2772888",
+      "state": "FAILED",
+      "reason": "neuralop 1.0.2 constructor metadata in parent state_dict; fixed and regression-tested"
+    },
+    "pilot_attempt_2": {
+      "id": "2772901",
+      "state": "COMPLETED",
+      "directory": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-transfer-20261104/pilot-v2",
+      "elapsed": "00:03:27"
+    },
+    "full_study": [
+      {
+        "seed": 0,
+        "script": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-transfer-20261104/full-study/seed-0.sbatch",
+        "submission": [
+          "sbatch",
+          "--parsable",
+          "--account",
+          "fupb2_ukaea_ml",
+          "--partition",
+          "boost_fua_prod",
+          "--job-name",
+          "jorek-transfer-0",
+          "--nodes",
+          "1",
+          "--ntasks",
+          "1",
+          "--cpus-per-task",
+          "4",
+          "--gres",
+          "gpu:1",
+          "--mem",
+          "32G",
+          "--time",
+          "02:00:00",
+          "--output",
+          "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-transfer-20261104/full-study/seed-0-%j.log",
+          "--dependency",
+          "afterok:2772887",
+          "--kill-on-invalid-dep=yes",
+          "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-transfer-20261104/full-study/seed-0.sbatch"
+        ],
+        "job_id": "2772916",
+        "state": "COMPLETED",
+        "elapsed": "00:36:52"
+      },
+      {
+        "seed": 1,
+        "script": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-transfer-20261104/full-study/seed-1.sbatch",
+        "submission": [
+          "sbatch",
+          "--parsable",
+          "--account",
+          "fupb2_ukaea_ml",
+          "--partition",
+          "boost_fua_prod",
+          "--job-name",
+          "jorek-transfer-1",
+          "--nodes",
+          "1",
+          "--ntasks",
+          "1",
+          "--cpus-per-task",
+          "4",
+          "--gres",
+          "gpu:1",
+          "--mem",
+          "32G",
+          "--time",
+          "02:00:00",
+          "--output",
+          "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-transfer-20261104/full-study/seed-1-%j.log",
+          "--dependency",
+          "afterok:2772887",
+          "--kill-on-invalid-dep=yes",
+          "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-transfer-20261104/full-study/seed-1.sbatch"
+        ],
+        "job_id": "2772917",
+        "state": "COMPLETED",
+        "elapsed": "00:36:16"
+      },
+      {
+        "seed": 2,
+        "script": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-transfer-20261104/full-study/seed-2.sbatch",
+        "submission": [
+          "sbatch",
+          "--parsable",
+          "--account",
+          "fupb2_ukaea_ml",
+          "--partition",
+          "boost_fua_prod",
+          "--job-name",
+          "jorek-transfer-2",
+          "--nodes",
+          "1",
+          "--ntasks",
+          "1",
+          "--cpus-per-task",
+          "4",
+          "--gres",
+          "gpu:1",
+          "--mem",
+          "32G",
+          "--time",
+          "02:00:00",
+          "--output",
+          "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-transfer-20261104/full-study/seed-2-%j.log",
+          "--dependency",
+          "afterok:2772887",
+          "--kill-on-invalid-dep=yes",
+          "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-transfer-20261104/full-study/seed-2.sbatch"
+        ],
+        "job_id": "2772918",
+        "state": "COMPLETED",
+        "elapsed": "00:36:30"
+      }
+    ],
+    "full_summary": {
+      "id": "2772919",
+      "dependency": "afterany:2772916:2772917:2772918",
+      "state": "COMPLETED"
+    }
+  },
+  "test_command": "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/bin/python -m pytest -q JOREK/zenodo_opsplit/test_workflow.py",
+  "scientific_status": "Effective split pilot; no claim of identified physical terms or full EM zero-shot dynamics. Physical timestamps and export units remain unaudited.",
+  "full_sweep": "Submitted three seeds, budgets 8/32/64, 20 epochs, 128 batches/epoch; one GPU per seed, two-hour cap each; dependency on full preparation.",
+  "validation": {
+    "tests_passed": 9,
+    "warnings": 1,
+    "warning": "neuralop constructor metadata update warning; checkpoint round trips tested",
+    "slurm_scripts": "bash -n passed",
+    "python_compile": "passed"
+  },
+  "pilot_summary": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-transfer-20261104/pilot-v2/summary.json",
+  "pilot_plot": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-transfer-20261104/pilot-v2/pilot-rollouts.png",
+  "pilot_finding": "No demonstrated transfer advantage. Fine-tuning roughly matches scratch split at frame 10; zero-shot and frozen transfer are worse. All learned rollouts are worse than persistence at frame 100. Only two EM test trajectories.",
+  "download": {
+    "state": "all archives downloaded, checksum-verified, extracted",
+    "es_archives": 50,
+    "em_archives": 10,
+    "physical_timestamps": "not provided by release",
+    "es_trajectories": 497,
+    "em_trajectories": 100
+  },
+  "snapshot_utc": "2026-11-04T13:20:22.703040+00:00",
+  "full_manifest": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/data/jorek_zenodo/full-manifest.json",
+  "full_counts": {
+    "es": {
+      "train": 400,
+      "val": 44,
+      "test": 53
+    },
+    "em": {
+      "train": 76,
+      "val": 14,
+      "test": 10
+    }
+  },
+  "full_comparison": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-transfer-20261104/full-study/transfer-comparison.json",
+  "full_finding": "No shared-field aggregate transfer advantage at any EM budget at frame 10. Fine-tuning improves temperature/current but worsens potential. Long-rollout divergence remains; severe at budget 8."
+}

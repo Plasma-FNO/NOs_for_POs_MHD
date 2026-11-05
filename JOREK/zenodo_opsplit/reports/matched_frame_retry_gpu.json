@@ -1,0 +1,68 @@
+[
+  {
+    "case": "es",
+    "id": "jorek_run0472",
+    "start": 39,
+    "passed": false,
+    "error": "Learned frame collapsed CFL by more than 64x; retry from original frame state",
+    "seconds": 34.25312800100073,
+    "limiter": {
+      "substeps": 87,
+      "limited_substeps": 0,
+      "analytic_fallbacks": 0,
+      "minimum_fraction": 1.0,
+      "density_limited": 51,
+      "temperature_limited": 55,
+      "minimum_scalar_fraction": 0.09323566155501778,
+      "cfl_limited_substeps": 87,
+      "minimum_dt_fraction": 0.011869234875796053,
+      "frame_retries": 10,
+      "rejected_frame_substeps": 131,
+      "minimum_frame_fraction": 0.5
+    }
+  },
+  {
+    "case": "es",
+    "id": "jorek_run0432",
+    "start": 36,
+    "passed": false,
+    "error": "Learned frame collapsed CFL by more than 64x; retry from original frame state",
+    "seconds": 49.930565343936905,
+    "limiter": {
+      "substeps": 144,
+      "limited_substeps": 0,
+      "analytic_fallbacks": 0,
+      "minimum_fraction": 1.0,
+      "density_limited": 76,
+      "temperature_limited": 107,
+      "minimum_scalar_fraction": 0.24253154629953422,
+      "cfl_limited_substeps": 144,
+      "minimum_dt_fraction": 0.04101533524745378,
+      "frame_retries": 9,
+      "rejected_frame_substeps": 198,
+      "minimum_frame_fraction": 1.0
+    }
+  },
+  {
+    "case": "em",
+    "id": "jorek_run063",
+    "start": 21,
+    "passed": false,
+    "error": "Learned frame collapsed CFL by more than 64x; retry from original frame state",
+    "seconds": 208.78595446096733,
+    "limiter": {
+      "substeps": 96,
+      "limited_substeps": 0,
+      "analytic_fallbacks": 0,
+      "minimum_fraction": 1.0,
+      "density_limited": 4,
+      "temperature_limited": 5,
+      "minimum_scalar_fraction": 0.5349656368928242,
+      "cfl_limited_substeps": 96,
+      "minimum_dt_fraction": 0.004622665238260026,
+      "frame_retries": 9,
+      "rejected_frame_substeps": 1046,
+      "minimum_frame_fraction": 1.0
+    }
+  }
+]

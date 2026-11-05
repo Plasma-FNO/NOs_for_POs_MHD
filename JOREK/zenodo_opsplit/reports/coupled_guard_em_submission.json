@@ -1,0 +1,150 @@
+[
+  {
+    "stage": "opsplit-scratch-smoke",
+    "job_id": "2776221",
+    "dependencies": [],
+    "submission": [
+      "sbatch",
+      "--parsable",
+      "--account=fupb2_ukaea_ml",
+      "--partition=boost_fua_prod",
+      "--nodes=1",
+      "--ntasks=1",
+      "--cpus-per-task=4",
+      "--mem=32G",
+      "--time=00:30:00",
+      "--requeue",
+      "--open-mode=append",
+      "--job-name=jorek-compare-em-opsplit-scratch-smoke",
+      "--output=/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-coupled-20261104/em/opsplit-scratch-smoke-%j.log",
+      "--gres=gpu:1",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-coupled-20261104/em/opsplit-scratch-smoke.sbatch"
+    ]
+  },
+  {
+    "stage": "opsplit-scratch-audit",
+    "job_id": "2776222",
+    "dependencies": [
+      "opsplit-scratch-smoke"
+    ],
+    "submission": [
+      "sbatch",
+      "--parsable",
+      "--account=fupb2_ukaea_ml",
+      "--partition=boost_fua_prod",
+      "--nodes=1",
+      "--ntasks=1",
+      "--cpus-per-task=4",
+      "--mem=32G",
+      "--time=24:00:00",
+      "--requeue",
+      "--open-mode=append",
+      "--job-name=jorek-compare-em-opsplit-scratch-audit",
+      "--output=/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-coupled-20261104/em/opsplit-scratch-audit-%j.log",
+      "--gres=gpu:1",
+      "--dependency=afterok:2776221",
+      "--kill-on-invalid-dep=yes",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-coupled-20261104/em/opsplit-scratch-audit.sbatch"
+    ]
+  },
+  {
+    "stage": "opsplit-scratch",
+    "job_id": "2776223",
+    "dependencies": [
+      "opsplit-scratch-audit"
+    ],
+    "submission": [
+      "sbatch",
+      "--parsable",
+      "--account=fupb2_ukaea_ml",
+      "--partition=boost_fua_prod",
+      "--nodes=1",
+      "--ntasks=1",
+      "--cpus-per-task=4",
+      "--mem=32G",
+      "--time=24:00:00",
+      "--requeue",
+      "--open-mode=append",
+      "--job-name=jorek-compare-em-opsplit-scratch",
+      "--output=/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-coupled-20261104/em/opsplit-scratch-%j.log",
+      "--gres=gpu:1",
+      "--dependency=afterok:2776222",
+      "--kill-on-invalid-dep=yes",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-coupled-20261104/em/opsplit-scratch.sbatch"
+    ]
+  },
+  {
+    "stage": "opsplit-pretrained-smoke",
+    "job_id": "2776224",
+    "dependencies": [],
+    "submission": [
+      "sbatch",
+      "--parsable",
+      "--account=fupb2_ukaea_ml",
+      "--partition=boost_fua_prod",
+      "--nodes=1",
+      "--ntasks=1",
+      "--cpus-per-task=4",
+      "--mem=32G",
+      "--time=00:30:00",
+      "--requeue",
+      "--open-mode=append",
+      "--job-name=jorek-compare-em-opsplit-pretrained-smoke",
+      "--output=/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-coupled-20261104/em/opsplit-pretrained-smoke-%j.log",
+      "--gres=gpu:1",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-coupled-20261104/em/opsplit-pretrained-smoke.sbatch"
+    ]
+  },
+  {
+    "stage": "opsplit-pretrained-audit",
+    "job_id": "2776225",
+    "dependencies": [
+      "opsplit-pretrained-smoke"
+    ],
+    "submission": [
+      "sbatch",
+      "--parsable",
+      "--account=fupb2_ukaea_ml",
+      "--partition=boost_fua_prod",
+      "--nodes=1",
+      "--ntasks=1",
+      "--cpus-per-task=4",
+      "--mem=32G",
+      "--time=24:00:00",
+      "--requeue",
+      "--open-mode=append",
+      "--job-name=jorek-compare-em-opsplit-pretrained-audit",
+      "--output=/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-coupled-20261104/em/opsplit-pretrained-audit-%j.log",
+      "--gres=gpu:1",
+      "--dependency=afterok:2776224",
+      "--kill-on-invalid-dep=yes",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-coupled-20261104/em/opsplit-pretrained-audit.sbatch"
+    ]
+  },
+  {
+    "stage": "opsplit-pretrained",
+    "job_id": "2776226",
+    "dependencies": [
+      "opsplit-pretrained-audit"
+    ],
+    "submission": [
+      "sbatch",
+      "--parsable",
+      "--account=fupb2_ukaea_ml",
+      "--partition=boost_fua_prod",
+      "--nodes=1",
+      "--ntasks=1",
+      "--cpus-per-task=4",
+      "--mem=32G",
+      "--time=24:00:00",
+      "--requeue",
+      "--open-mode=append",
+      "--job-name=jorek-compare-em-opsplit-pretrained",
+      "--output=/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-coupled-20261104/em/opsplit-pretrained-%j.log",
+      "--gres=gpu:1",
+      "--dependency=afterok:2776225",
+      "--kill-on-invalid-dep=yes",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-coupled-20261104/em/opsplit-pretrained.sbatch"
+    ]
+  }
+]

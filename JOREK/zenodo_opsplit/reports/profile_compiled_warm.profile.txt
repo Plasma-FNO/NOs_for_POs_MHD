@@ -1,0 +1,53 @@
+         432998 function calls (414909 primitive calls) in 4.032 seconds
+
+   Ordered by: cumulative time
+   List reduced from 452 to 45 due to restriction <45>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    2.051    2.051 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/train_comparison.py:104(objective)
+        6    0.000    0.000    2.050    0.342 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/train_comparison.py:88(predictions)
+        5    0.004    0.001    2.040    0.408 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/native_rollout.py:208(step)
+        1    0.000    0.000    2.006    2.006 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_tensor.py:592(backward)
+        1    0.000    0.000    2.006    2.006 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/autograd/__init__.py:243(backward)
+        1    0.000    0.000    2.006    2.006 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/autograd/graph.py:815(_engine_run_backward)
+        1    2.006    2.006    2.006    2.006 {method 'run_backward' of 'torch._C._EngineBase' objects}
+       55    0.074    0.001    1.966    0.036 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/native_rollout.py:245(_trial_step)
+      384    0.002    0.000    1.038    0.003 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/autograd/function.py:559(apply)
+      384    0.007    0.000    1.029    0.003 {built-in method apply}
+      275    0.003    0.000    1.009    0.004 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/native_rollout.py:56(solve)
+      275    0.001    0.000    0.935    0.003 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/gpu_sparse.py:141(forward)
+      275    0.003    0.000    0.930    0.003 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/gpu_sparse.py:124(direct_solve)
+  385/275    0.025    0.000    0.894    0.003 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/gpu_sparse.py:75(solve)
+     1925    0.830    0.000    0.830    0.000 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/gpu_sparse.py:70(call)
+      110    0.001    0.000    0.474    0.004 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_dynamo/eval_frame.py:829(_fn)
+       55    0.000    0.000    0.381    0.007 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_compile.py:41(inner)
+       55    0.000    0.000    0.380    0.007 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/utils/checkpoint.py:342(checkpoint)
+  4455/55    0.005    0.000    0.365    0.007 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py:1747(_wrapped_call_impl)
+  4455/55    0.010    0.000    0.365    0.007 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py:1755(_call_impl)
+       55    0.004    0.000    0.364    0.007 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/native_terms.py:43(forward)
+       55    0.001    0.000    0.359    0.007 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/native_terms.py:46(<listcomp>)
+      220    0.005    0.000    0.357    0.002 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/neuralop/models/fno.py:333(forward)
+       55    0.000    0.000    0.319    0.006 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/gpu_sparse.py:79(<listcomp>)
+      330    0.001    0.000    0.260    0.001 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/neuralop/layers/fno_block.py:273(forward)
+      330    0.010    0.000    0.259    0.001 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/neuralop/layers/fno_block.py:279(forward_with_postactivation)
+      450    0.002    0.000    0.241    0.001 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/equations.py:27(grad)
+      450    0.237    0.001    0.237    0.001 {built-in method torch.gradient}
+      330    0.022    0.000    0.148    0.000 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/neuralop/layers/spectral_convolution.py:393(forward)
+      770    0.008    0.000    0.114    0.000 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/neuralop/layers/channel_mlp.py:62(forward)
+       55    0.002    0.000    0.099    0.002 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/native.py:180(terms)
+       55    0.003    0.000    0.097    0.002 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_dynamo/eval_frame.py:619(_fn)
+     1870    0.004    0.000    0.095    0.000 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/nn/modules/conv.py:374(forward)
+       55    0.000    0.000    0.093    0.002 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_functorch/aot_autograd.py:1205(forward)
+       55    0.001    0.000    0.092    0.002 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py:291(runtime_wrapper)
+   109/55    0.001    0.000    0.091    0.002 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_functorch/_aot_autograd/utils.py:116(call_func_at_runtime_with_args)
+     1870    0.002    0.000    0.090    0.000 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/nn/modules/conv.py:357(_conv_forward)
+       54    0.000    0.000    0.089    0.002 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_functorch/_aot_autograd/utils.py:99(g)
+     1870    0.056    0.000    0.088    0.000 {built-in method torch.conv1d}
+       54    0.002    0.000    0.086    0.002 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py:1902(forward)
+      110    0.004    0.000    0.082    0.001 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/native.py:161(laplacian)
+       55    0.000    0.000    0.078    0.001 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py:481(wrapper)
+       55    0.000    0.000    0.078    0.001 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_inductor/output_code.py:457(__call__)
+       55    0.001    0.000    0.078    0.001 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_inductor/utils.py:2402(run)
+       54    0.007    0.000    0.075    0.001 /tmp/torchinductor_vgopakum/lj/clj5tksn5wgfteac7b5ful4cyd22ngj4ydtotrvawble5kwvtbr5.py:6118(call)
+
+

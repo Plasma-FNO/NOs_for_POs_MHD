@@ -1,0 +1,1245 @@
+{
+  "run_directory": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-residual-transfer-pilot-20261105",
+  "scheduler": "JobID|State|Elapsed|ExitCode\n2780287|COMPLETED|00:05:41|0:0\n2780287.batch|COMPLETED|00:05:41|0:0\n2780287.extern|COMPLETED|00:05:41|0:0\n2780309|COMPLETED|00:03:47|0:0\n2780309.batch|COMPLETED|00:03:47|0:0\n2780309.extern|COMPLETED|00:03:47|0:0\n",
+  "correction": "analytic + mask * 0.1 * ES term RMS * tanh(FNO)",
+  "source_training": {
+    "epoch": 3,
+    "best_epoch": -1,
+    "best_validation": 0.04667047969996929,
+    "initial_validation": 0.04667047969996929,
+    "seconds": 83.9736889412161,
+    "validation_by_epoch": {
+      "0": 0.06541153492846362,
+      "1": 0.09082785244057029,
+      "2": 0.08704174058774622,
+      "3": 0.08087725907626611
+    }
+  },
+  "selected_source": {
+    "protocol": {
+      "budget": 8,
+      "epochs": 1,
+      "seed": 907,
+      "horizon": 2,
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          7,
+          4
+        ]
+      ],
+      "substeps": 8,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "term_weight": 1.0,
+      "batch_size": 1,
+      "validation_horizon": 5,
+      "test_horizon": 10,
+      "correction_fraction": 0.1
+    },
+    "arms": {
+      "scratch": {
+        "updates": 16,
+        "best_epoch": 0,
+        "transferred": [],
+        "seconds": 52.08150812680833,
+        "failures": 0,
+        "scores": {
+          "1": {
+            "shared_relative_l2": 0.06523462268523872,
+            "fields": [
+              0.0168892964720726,
+              0.032669554464519024,
+              0.040814563632011414,
+              0.17056507617235184,
+              1.1240999242545513e-06,
+              0.25331002473831177
+            ],
+            "delta_psi_relative_l2": 0.16521703367804036
+          },
+          "5": {
+            "shared_relative_l2": 0.08859861153177917,
+            "fields": [
+              0.030853486619889736,
+              0.13970442861318588,
+              0.03204480931162834,
+              0.15179172158241272,
+              4.149720325585804e-06,
+              0.05544985830783844
+            ],
+            "delta_psi_relative_l2": 0.02972470416500291
+          },
+          "10": {
+            "shared_relative_l2": 0.14367604348808527,
+            "fields": [
+              0.06362426094710827,
+              0.2671457901597023,
+              0.02680337242782116,
+              0.21713075041770935,
+              1.054750782714109e-05,
+              0.043365832418203354
+            ],
+            "delta_psi_relative_l2": 0.021811164567887543
+          }
+        },
+        "test_limiter": {
+          "substeps": 225,
+          "density_limited": 225,
+          "temperature_limited": 0,
+          "energy_limited": 2,
+          "minimum_scalar_fraction": 0.041795355554188555,
+          "minimum_energy_fraction": 0.9999685634716751
+        }
+      },
+      "finetune": {
+        "updates": 16,
+        "best_epoch": 0,
+        "transferred": [
+          "scalar_advection",
+          "fluid_momentum",
+          "particle_diffusion",
+          "thermal_diffusion"
+        ],
+        "seconds": 50.55547534395009,
+        "failures": 0,
+        "scores": {
+          "1": {
+            "shared_relative_l2": 0.06523462268523872,
+            "fields": [
+              0.0168892964720726,
+              0.032669554464519024,
+              0.040814563632011414,
+              0.17056507617235184,
+              1.1240999242545513e-06,
+              0.25331002473831177
+            ],
+            "delta_psi_relative_l2": 0.16521703367804036
+          },
+          "5": {
+            "shared_relative_l2": 0.08859861153177917,
+            "fields": [
+              0.030853486619889736,
+              0.13970442861318588,
+              0.03204480931162834,
+              0.15179172158241272,
+              4.149720325585804e-06,
+              0.05544985830783844
+            ],
+            "delta_psi_relative_l2": 0.02972470416500291
+          },
+          "10": {
+            "shared_relative_l2": 0.14367604348808527,
+            "fields": [
+              0.06362426094710827,
+              0.2671457901597023,
+              0.02680337242782116,
+              0.21713075041770935,
+              1.054750782714109e-05,
+              0.043365832418203354
+            ],
+            "delta_psi_relative_l2": 0.021811164567887543
+          }
+        },
+        "test_limiter": {
+          "substeps": 225,
+          "density_limited": 225,
+          "temperature_limited": 0,
+          "energy_limited": 2,
+          "minimum_scalar_fraction": 0.041795355554188555,
+          "minimum_energy_fraction": 0.9999685634716751
+        }
+      },
+      "advection-transfer": {
+        "updates": 16,
+        "best_epoch": 0,
+        "transferred": [
+          "scalar_advection",
+          "fluid_momentum"
+        ],
+        "seconds": 50.351167873013765,
+        "failures": 0,
+        "scores": {
+          "1": {
+            "shared_relative_l2": 0.06523462268523872,
+            "fields": [
+              0.0168892964720726,
+              0.032669554464519024,
+              0.040814563632011414,
+              0.17056507617235184,
+              1.1240999242545513e-06,
+              0.25331002473831177
+            ],
+            "delta_psi_relative_l2": 0.16521703367804036
+          },
+          "5": {
+            "shared_relative_l2": 0.08859861153177917,
+            "fields": [
+              0.030853486619889736,
+              0.13970442861318588,
+              0.03204480931162834,
+              0.15179172158241272,
+              4.149720325585804e-06,
+              0.05544985830783844
+            ],
+            "delta_psi_relative_l2": 0.02972470416500291
+          },
+          "10": {
+            "shared_relative_l2": 0.14367604348808527,
+            "fields": [
+              0.06362426094710827,
+              0.2671457901597023,
+              0.02680337242782116,
+              0.21713075041770935,
+              1.054750782714109e-05,
+              0.043365832418203354
+            ],
+            "delta_psi_relative_l2": 0.021811164567887543
+          }
+        },
+        "test_limiter": {
+          "substeps": 225,
+          "density_limited": 225,
+          "temperature_limited": 0,
+          "energy_limited": 2,
+          "minimum_scalar_fraction": 0.041795355554188555,
+          "minimum_energy_fraction": 0.9999685634716751
+        }
+      },
+      "diffusion-transfer": {
+        "updates": 16,
+        "best_epoch": 0,
+        "transferred": [
+          "particle_diffusion",
+          "thermal_diffusion"
+        ],
+        "seconds": 50.28256489383057,
+        "failures": 0,
+        "scores": {
+          "1": {
+            "shared_relative_l2": 0.06523462268523872,
+            "fields": [
+              0.0168892964720726,
+              0.032669554464519024,
+              0.040814563632011414,
+              0.17056507617235184,
+              1.1240999242545513e-06,
+              0.25331002473831177
+            ],
+            "delta_psi_relative_l2": 0.16521703367804036
+          },
+          "5": {
+            "shared_relative_l2": 0.08859861153177917,
+            "fields": [
+              0.030853486619889736,
+              0.13970442861318588,
+              0.03204480931162834,
+              0.15179172158241272,
+              4.149720325585804e-06,
+              0.05544985830783844
+            ],
+            "delta_psi_relative_l2": 0.02972470416500291
+          },
+          "10": {
+            "shared_relative_l2": 0.14367604348808527,
+            "fields": [
+              0.06362426094710827,
+              0.2671457901597023,
+              0.02680337242782116,
+              0.21713075041770935,
+              1.054750782714109e-05,
+              0.043365832418203354
+            ],
+            "delta_psi_relative_l2": 0.021811164567887543
+          }
+        },
+        "test_limiter": {
+          "substeps": 225,
+          "density_limited": 225,
+          "temperature_limited": 0,
+          "energy_limited": 2,
+          "minimum_scalar_fraction": 0.041795355554188555,
+          "minimum_energy_fraction": 0.9999685634716751
+        }
+      },
+      "frozen": {
+        "updates": 0,
+        "best_epoch": null,
+        "transferred": [
+          "scalar_advection",
+          "fluid_momentum",
+          "particle_diffusion",
+          "thermal_diffusion"
+        ],
+        "seconds": 10.700853401096538,
+        "failures": 0,
+        "scores": {
+          "1": {
+            "shared_relative_l2": 0.058522766921669245,
+            "fields": [
+              0.016912145540118217,
+              0.012900369241833687,
+              0.03323614038527012,
+              0.17104241251945496,
+              1.1139430284856644e-06,
+              0.2526244521141052
+            ],
+            "delta_psi_relative_l2": 0.16371367184167435
+          },
+          "5": {
+            "shared_relative_l2": 0.06379582919180393,
+            "fields": [
+              0.03108135424554348,
+              0.04485644772648811,
+              0.02586589939892292,
+              0.15337961539626122,
+              3.7673733004339738e-06,
+              0.05343802459537983
+            ],
+            "delta_psi_relative_l2": 0.026985109248411042
+          },
+          "10": {
+            "shared_relative_l2": 0.11011547478847206,
+            "fields": [
+              0.06624384596943855,
+              0.13017496839165688,
+              0.025317291729152203,
+              0.2187257930636406,
+              9.691071682027541e-06,
+              0.041615983471274376
+            ],
+            "delta_psi_relative_l2": 0.020066959706008913
+          }
+        },
+        "test_limiter": {
+          "substeps": 225,
+          "density_limited": 225,
+          "temperature_limited": 0,
+          "energy_limited": 0,
+          "minimum_scalar_fraction": 0.04136054319890618,
+          "minimum_energy_fraction": 1.0
+        }
+      },
+      "analytic": {
+        "updates": 0,
+        "best_epoch": null,
+        "transferred": [],
+        "seconds": 8.529118623118848,
+        "failures": 0,
+        "scores": {
+          "1": {
+            "shared_relative_l2": 0.058522766921669245,
+            "fields": [
+              0.016912145540118217,
+              0.012900369241833687,
+              0.03323614038527012,
+              0.17104241251945496,
+              1.1139430284856644e-06,
+              0.2526244521141052
+            ],
+            "delta_psi_relative_l2": 0.16371367184167435
+          },
+          "5": {
+            "shared_relative_l2": 0.06379582919180393,
+            "fields": [
+              0.03108135424554348,
+              0.04485644772648811,
+              0.02586589939892292,
+              0.15337961539626122,
+              3.7673733004339738e-06,
+              0.05343802459537983
+            ],
+            "delta_psi_relative_l2": 0.026985109248411042
+          },
+          "10": {
+            "shared_relative_l2": 0.11011547478847206,
+            "fields": [
+              0.06624384596943855,
+              0.13017496839165688,
+              0.025317291729152203,
+              0.2187257930636406,
+              9.691071682027541e-06,
+              0.041615983471274376
+            ],
+            "delta_psi_relative_l2": 0.020066959706008913
+          }
+        },
+        "test_limiter": {
+          "substeps": 225,
+          "density_limited": 225,
+          "temperature_limited": 0,
+          "energy_limited": 0,
+          "minimum_scalar_fraction": 0.04136054319890618,
+          "minimum_energy_fraction": 1.0
+        }
+      }
+    }
+  },
+  "trained_source_diagnostic": {
+    "protocol": {
+      "budget": 8,
+      "epochs": 1,
+      "seed": 907,
+      "horizon": 2,
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          7,
+          4
+        ]
+      ],
+      "substeps": 8,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "term_weight": 1.0,
+      "batch_size": 1,
+      "validation_horizon": 5,
+      "test_horizon": 10,
+      "correction_fraction": 0.1
+    },
+    "arms": {
+      "scratch": {
+        "updates": 16,
+        "best_epoch": 0,
+        "transferred": [],
+        "seconds": 51.751912866020575,
+        "failures": 0,
+        "scores": {
+          "1": {
+            "shared_relative_l2": 0.06523462268523872,
+            "fields": [
+              0.0168892964720726,
+              0.032669554464519024,
+              0.040814563632011414,
+              0.17056507617235184,
+              1.1240999242545513e-06,
+              0.25331002473831177
+            ],
+            "delta_psi_relative_l2": 0.16521703367804036
+          },
+          "5": {
+            "shared_relative_l2": 0.08859861153177917,
+            "fields": [
+              0.030853486619889736,
+              0.13970442861318588,
+              0.03204480931162834,
+              0.15179172158241272,
+              4.149720325585804e-06,
+              0.05544985830783844
+            ],
+            "delta_psi_relative_l2": 0.02972470416500291
+          },
+          "10": {
+            "shared_relative_l2": 0.14367604348808527,
+            "fields": [
+              0.06362426094710827,
+              0.2671457901597023,
+              0.02680337242782116,
+              0.21713075041770935,
+              1.054750782714109e-05,
+              0.043365832418203354
+            ],
+            "delta_psi_relative_l2": 0.021811164567887543
+          }
+        },
+        "test_limiter": {
+          "substeps": 225,
+          "density_limited": 225,
+          "temperature_limited": 0,
+          "energy_limited": 2,
+          "minimum_scalar_fraction": 0.041795355554188555,
+          "minimum_energy_fraction": 0.9999685634716751
+        }
+      },
+      "finetune": {
+        "updates": 16,
+        "best_epoch": 0,
+        "transferred": [
+          "scalar_advection",
+          "fluid_momentum",
+          "particle_diffusion",
+          "thermal_diffusion"
+        ],
+        "seconds": 50.379326638998464,
+        "failures": 0,
+        "scores": {
+          "1": {
+            "shared_relative_l2": 0.05957994656637311,
+            "fields": [
+              0.016906699165701866,
+              0.019790788181126118,
+              0.030811495147645473,
+              0.17081080377101898,
+              1.120551587519003e-06,
+              0.2530564144253731
+            ],
+            "delta_psi_relative_l2": 0.16469013584756573
+          },
+          "5": {
+            "shared_relative_l2": 0.07103991322219372,
+            "fields": [
+              0.031024417839944363,
+              0.07741453871130943,
+              0.02318538073450327,
+              0.1525353156030178,
+              3.877785502481856e-06,
+              0.05432918481528759
+            ],
+            "delta_psi_relative_l2": 0.02777174647329294
+          },
+          "10": {
+            "shared_relative_l2": 0.11874480592086911,
+            "fields": [
+              0.06561965495347977,
+              0.16916587948799133,
+              0.022562818601727486,
+              0.21763087064027786,
+              9.466621122555807e-06,
+              0.04212501645088196
+            ],
+            "delta_psi_relative_l2": 0.019594295397778405
+          }
+        },
+        "test_limiter": {
+          "substeps": 225,
+          "density_limited": 225,
+          "temperature_limited": 0,
+          "energy_limited": 8,
+          "minimum_scalar_fraction": 0.04146267394719136,
+          "minimum_energy_fraction": 0.9999607709967389
+        }
+      },
+      "advection-transfer": {
+        "updates": 16,
+        "best_epoch": 0,
+        "transferred": [
+          "scalar_advection",
+          "fluid_momentum"
+        ],
+        "seconds": 50.87832882697694,
+        "failures": 0,
+        "scores": {
+          "1": {
+            "shared_relative_l2": 0.05958398408256471,
+            "fields": [
+              0.01690713968127966,
+              0.01977021060883999,
+              0.030843662098050117,
+              0.17081492394208908,
+              1.1205493706256675e-06,
+              0.25305554270744324
+            ],
+            "delta_psi_relative_l2": 0.16468992224417212
+          },
+          "5": {
+            "shared_relative_l2": 0.07103053806349635,
+            "fields": [
+              0.031028633937239647,
+              0.07731760293245316,
+              0.023234080523252487,
+              0.15254183486104012,
+              3.8784409071013215e-06,
+              0.05432749353349209
+            ],
+            "delta_psi_relative_l2": 0.027776628158618206
+          },
+          "10": {
+            "shared_relative_l2": 0.11874127527698874,
+            "fields": [
+              0.06566324457526207,
+              0.16907481104135513,
+              0.02260134555399418,
+              0.2176256999373436,
+              9.472832516621565e-06,
+              0.042122982442379
+            ],
+            "delta_psi_relative_l2": 0.019606560564089916
+          }
+        },
+        "test_limiter": {
+          "substeps": 225,
+          "density_limited": 225,
+          "temperature_limited": 0,
+          "energy_limited": 9,
+          "minimum_scalar_fraction": 0.041454303502974806,
+          "minimum_energy_fraction": 0.9999608428058729
+        }
+      },
+      "diffusion-transfer": {
+        "updates": 16,
+        "best_epoch": 0,
+        "transferred": [
+          "particle_diffusion",
+          "thermal_diffusion"
+        ],
+        "seconds": 50.50472191697918,
+        "failures": 0,
+        "scores": {
+          "1": {
+            "shared_relative_l2": 0.06419506925158203,
+            "fields": [
+              0.01688959915190935,
+              0.03305429499596357,
+              0.0363024128600955,
+              0.17053396999835968,
+              1.1237954709031328e-06,
+              0.2533313110470772
+            ],
+            "delta_psi_relative_l2": 0.1651707096714649
+          },
+          "5": {
+            "shared_relative_l2": 0.08801224059425294,
+            "fields": [
+              0.030855106189846992,
+              0.1415519304573536,
+              0.027888131327927113,
+              0.15175379440188408,
+              4.0545330648456e-06,
+              0.055424341931939125
+            ],
+            "delta_psi_relative_l2": 0.029038069680920858
+          },
+          "10": {
+            "shared_relative_l2": 0.14388364786282182,
+            "fields": [
+              0.0636519342660904,
+              0.27034197747707367,
+              0.024441445246338844,
+              0.21709923446178436,
+              1.0018539342127042e-05,
+              0.043319735676050186
+            ],
+            "delta_psi_relative_l2": 0.020733031424974867
+          }
+        },
+        "test_limiter": {
+          "substeps": 225,
+          "density_limited": 225,
+          "temperature_limited": 0,
+          "energy_limited": 2,
+          "minimum_scalar_fraction": 0.0417896466041715,
+          "minimum_energy_fraction": 0.9999620987406785
+        }
+      },
+      "frozen": {
+        "updates": 0,
+        "best_epoch": null,
+        "transferred": [
+          "scalar_advection",
+          "fluid_momentum",
+          "particle_diffusion",
+          "thermal_diffusion"
+        ],
+        "seconds": 10.74883537297137,
+        "failures": 0,
+        "scores": {
+          "1": {
+            "shared_relative_l2": 0.06411029992159456,
+            "fields": [
+              0.01690135896205902,
+              0.013089255895465612,
+              0.055245667695999146,
+              0.17120491713285446,
+              1.1161486668243015e-06,
+              0.25247444212436676
+            ],
+            "delta_psi_relative_l2": 0.1640455574075775
+          },
+          "5": {
+            "shared_relative_l2": 0.07004536245949566,
+            "fields": [
+              0.03098816331475973,
+              0.04869282804429531,
+              0.04686012864112854,
+              0.15364032983779907,
+              4.408087988849729e-06,
+              0.05364544503390789
+            ],
+            "delta_psi_relative_l2": 0.03160037362177427
+          },
+          "10": {
+            "shared_relative_l2": 0.11411577695980668,
+            "fields": [
+              0.06515760719776154,
+              0.1354948841035366,
+              0.036506591364741325,
+              0.21930402517318726,
+              1.284153813685407e-05,
+              0.042141204699873924
+            ],
+            "delta_psi_relative_l2": 0.02648545965693217
+          }
+        },
+        "test_limiter": {
+          "substeps": 225,
+          "density_limited": 225,
+          "temperature_limited": 0,
+          "energy_limited": 0,
+          "minimum_scalar_fraction": 0.04156593719958765,
+          "minimum_energy_fraction": 1.0
+        }
+      },
+      "analytic": {
+        "updates": 0,
+        "best_epoch": null,
+        "transferred": [],
+        "seconds": 8.570267691044137,
+        "failures": 0,
+        "scores": {
+          "1": {
+            "shared_relative_l2": 0.058522766921669245,
+            "fields": [
+              0.016912145540118217,
+              0.012900369241833687,
+              0.03323614038527012,
+              0.17104241251945496,
+              1.1139430284856644e-06,
+              0.2526244521141052
+            ],
+            "delta_psi_relative_l2": 0.16371367184167435
+          },
+          "5": {
+            "shared_relative_l2": 0.06379582919180393,
+            "fields": [
+              0.03108135424554348,
+              0.04485644772648811,
+              0.02586589939892292,
+              0.15337961539626122,
+              3.7673733004339738e-06,
+              0.05343802459537983
+            ],
+            "delta_psi_relative_l2": 0.026985109248411042
+          },
+          "10": {
+            "shared_relative_l2": 0.11011547478847206,
+            "fields": [
+              0.06624384596943855,
+              0.13017496839165688,
+              0.025317291729152203,
+              0.2187257930636406,
+              9.691071682027541e-06,
+              0.041615983471274376
+            ],
+            "delta_psi_relative_l2": 0.020066959706008913
+          }
+        },
+        "test_limiter": {
+          "substeps": 225,
+          "density_limited": 225,
+          "temperature_limited": 0,
+          "energy_limited": 0,
+          "minimum_scalar_fraction": 0.04136054319890618,
+          "minimum_energy_fraction": 1.0
+        }
+      }
+    }
+  },
+  "previous_replacement": {
+    "protocol": {
+      "budget": 8,
+      "epochs": 1,
+      "seed": 907,
+      "horizon": 2,
+      "windows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          7,
+          4
+        ]
+      ],
+      "substeps": 8,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "term_weight": 1.0,
+      "batch_size": 1,
+      "validation_horizon": 5,
+      "test_horizon": 10
+    },
+    "arms": {
+      "scratch": {
+        "updates": 16,
+        "best_epoch": 0,
+        "transferred": [],
+        "seconds": 59.13539080088958,
+        "failures": 0,
+        "scores": {
+          "1": {
+            "shared_relative_l2": 1.1067123163957149,
+            "fields": [
+              0.022650045342743397,
+              0.1421850100159645,
+              3.2605652809143066,
+              1.001448929309845,
+              9.392968877364183e-06,
+              0.5420239269733429
+            ],
+            "delta_psi_relative_l2": 1.3780678807390645
+          },
+          "5": {
+            "shared_relative_l2": 0.7160717491060495,
+            "fields": [
+              0.20890121906995773,
+              0.27177001535892487,
+              1.3837727904319763,
+              0.9998429715633392,
+              0.00015386388986371458,
+              0.9802136421203613
+            ],
+            "delta_psi_relative_l2": 1.1019398715688453
+          },
+          "10": {
+            "shared_relative_l2": 0.8371070995926857,
+            "fields": [
+              0.5865192115306854,
+              0.619532972574234,
+              1.1425082683563232,
+              0.9998679459095001,
+              0.0005139097629580647,
+              0.9955511689186096
+            ],
+            "delta_psi_relative_l2": 1.0613647312018197
+          }
+        }
+      },
+      "finetune": {
+        "updates": 16,
+        "best_epoch": 0,
+        "transferred": [
+          "scalar_advection",
+          "fluid_momentum",
+          "particle_diffusion",
+          "thermal_diffusion"
+        ],
+        "seconds": 51.227919133147225,
+        "failures": 0,
+        "scores": {
+          "1": {
+            "shared_relative_l2": 0.5070192329585552,
+            "fields": [
+              0.020814428105950356,
+              0.05332586728036404,
+              0.9445641040802002,
+              1.0093725323677063,
+              6.867342108307639e-06,
+              0.5396253019571304
+            ],
+            "delta_psi_relative_l2": 1.0022972345392998
+          },
+          "5": {
+            "shared_relative_l2": 0.6015407852828503,
+            "fields": [
+              0.18179360032081604,
+              0.32212264835834503,
+              0.8960495591163635,
+              1.0061973333358765,
+              0.00013875435979571193,
+              1.000010222196579
+            ],
+            "delta_psi_relative_l2": 0.995013461925617
+          },
+          "10": {
+            "shared_relative_l2": 0.8107492253184319,
+            "fields": [
+              0.5471617579460144,
+              0.8132370114326477,
+              0.880214273929596,
+              1.0023838579654694,
+              0.0004731364460894838,
+              1.0067043900489807
+            ],
+            "delta_psi_relative_l2": 0.9735968898387488
+          }
+        }
+      },
+      "advection-transfer": {
+        "updates": 16,
+        "best_epoch": 0,
+        "transferred": [
+          "scalar_advection",
+          "fluid_momentum"
+        ],
+        "seconds": 50.98632123786956,
+        "failures": 0,
+        "scores": {
+          "1": {
+            "shared_relative_l2": 0.6017274807672948,
+            "fields": [
+              0.02143160905689001,
+              0.045877452939748764,
+              1.3453142046928406,
+              0.9942866563796997,
+              6.872841595395585e-06,
+              0.5245101302862167
+            ],
+            "delta_psi_relative_l2": 1.002072947820453
+          },
+          "5": {
+            "shared_relative_l2": 0.6726049613207579,
+            "fields": [
+              0.18452288210391998,
+              0.26317162066698074,
+              1.2460561394691467,
+              0.996669203042984,
+              0.0001439898187527433,
+              0.9728471636772156
+            ],
+            "delta_psi_relative_l2": 1.0311934789663146
+          },
+          "10": {
+            "shared_relative_l2": 0.8450898677110672,
+            "fields": [
+              0.556357741355896,
+              0.6787810623645782,
+              1.1466888785362244,
+              0.9985317885875702,
+              0.0005065513250883669,
+              0.9896550178527832
+            ],
+            "delta_psi_relative_l2": 1.0458300249641888
+          }
+        }
+      },
+      "diffusion-transfer": {
+        "updates": 16,
+        "best_epoch": 0,
+        "transferred": [
+          "particle_diffusion",
+          "thermal_diffusion"
+        ],
+        "seconds": 57.7612551569473,
+        "failures": 0,
+        "scores": {
+          "1": {
+            "shared_relative_l2": 1.128306970698759,
+            "fields": [
+              0.021890471689403057,
+              0.2213171049952507,
+              3.2689199447631836,
+              1.0011003613471985,
+              9.403599051438505e-06,
+              0.542062520980835
+            ],
+            "delta_psi_relative_l2": 1.3795478933838492
+          },
+          "5": {
+            "shared_relative_l2": 0.8451203592121601,
+            "fields": [
+              0.1925111562013626,
+              0.8377701044082642,
+              1.3515228033065796,
+              0.9986773729324341,
+              0.00015326323045883328,
+              0.97854945063591
+            ],
+            "delta_psi_relative_l2": 1.0976015152310885
+          },
+          "10": {
+            "shared_relative_l2": 1.0248729586601257,
+            "fields": [
+              0.5618650019168854,
+              1.4048157930374146,
+              1.133180022239685,
+              0.9996310174465179,
+              0.0005125714524183422,
+              0.9947313964366913
+            ],
+            "delta_psi_relative_l2": 1.0585924496727328
+          }
+        }
+      },
+      "frozen": {
+        "updates": 0,
+        "best_epoch": null,
+        "transferred": [
+          "scalar_advection",
+          "fluid_momentum",
+          "particle_diffusion",
+          "thermal_diffusion"
+        ],
+        "seconds": 10.595406791893765,
+        "failures": 0,
+        "scores": {
+          "1": {
+            "shared_relative_l2": 0.4956104401499033,
+            "fields": [
+              0.01979746390134096,
+              0.025138008408248425,
+              0.9346293210983276,
+              1.0028769671916962,
+              6.799921493438887e-06,
+              0.5330219864845276
+            ],
+            "delta_psi_relative_l2": 0.991843922965485
+          },
+          "5": {
+            "shared_relative_l2": 0.5835647080093622,
+            "fields": [
+              0.18082073330879211,
+              0.21055469661951065,
+              0.9405445158481598,
+              1.0023388862609863,
+              0.00013861698971595615,
+              0.9880449175834656
+            ],
+            "delta_psi_relative_l2": 0.9935038578148657
+          },
+          "10": {
+            "shared_relative_l2": 0.772667933255434,
+            "fields": [
+              0.5474659949541092,
+              0.5926768183708191,
+              0.9485974907875061,
+              1.0019314289093018,
+              0.00047867682587821037,
+              0.9986752271652222
+            ],
+            "delta_psi_relative_l2": 0.9863004873369795
+          }
+        }
+      },
+      "analytic": {
+        "updates": 0,
+        "best_epoch": null,
+        "transferred": [],
+        "seconds": 8.504908708157018,
+        "failures": 0,
+        "scores": {
+          "1": {
+            "shared_relative_l2": 0.058522766921669245,
+            "fields": [
+              0.016912145540118217,
+              0.012900369241833687,
+              0.03323614038527012,
+              0.17104241251945496,
+              1.1139430284856644e-06,
+              0.2526244521141052
+            ],
+            "delta_psi_relative_l2": 0.16371367184167435
+          },
+          "5": {
+            "shared_relative_l2": 0.06379582919180393,
+            "fields": [
+              0.03108135424554348,
+              0.04485644772648811,
+              0.02586589939892292,
+              0.15337961539626122,
+              3.7673733004339738e-06,
+              0.05343802459537983
+            ],
+            "delta_psi_relative_l2": 0.026985109248411042
+          },
+          "10": {
+            "shared_relative_l2": 0.11011547478847206,
+            "fields": [
+              0.06624384596943855,
+              0.13017496839165688,
+              0.025317291729152203,
+              0.2187257930636406,
+              9.691071682027541e-06,
+              0.041615983471274376
+            ],
+            "delta_psi_relative_l2": 0.020066959706008913
+          }
+        }
+      }
+    }
+  },
+  "validation": {
+    "cpu_tests": 47,
+    "gpu_tests": 2,
+    "completed_ten_step_rollouts": 24,
+    "identical_EM_cohorts_and_order": true
+  },
+  "comparison_changes": {
+    "source_training": "new8 ES/64 trajectory updates vs previous100 ES/250 term epochs",
+    "regularizer": "normalized correction L2 replaces whole-term matching",
+    "momentum_guard": "analytic candidate replaces force-only envelope for residuals; zero correction exactly analytic"
+  },
+  "limitation": "Diagnostic uses final trained ES checkpoint despite worse ES validation. One seed/two test trajectories, shared ES normalization, nominal timing and approximate boundaries.",
+  "decision": "Residuals improve accuracy greatly; exploratory transfer gain, but no trained composition beats analytic shared-field error. No budget sweep launched.",
+  "diagnostic_change_vs_residual_scratch_percent": {
+    "scratch": 0.0,
+    "finetune": -17.352397074661685,
+    "advection-transfer": -17.354854439017398,
+    "diffusion-transfer": 0.14449477428277735,
+    "frozen": -20.574248713029153,
+    "analytic": -23.358500056689213
+  },
+  "scratch_change_vs_replacement_percent": -82.83659957513271
+}

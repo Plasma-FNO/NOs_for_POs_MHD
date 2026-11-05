@@ -1,0 +1,1052 @@
+{
+  "epoch": 14,
+  "trajectory": "jorek_run083",
+  "device": "cuda",
+  "T_mean": 13.90527057647705,
+  "T_scale": 13.904911994934082,
+  "T_native_factor": 2.013935844159e-05,
+  "steps": [
+    {
+      "step": 1,
+      "decoded_min_exported_T": 0.19734756562896827,
+      "decoded_T_at_49_23": 0.2465444707073683,
+      "normalized_T_at_49_23": -0.9822950415468943,
+      "stages": {
+        "input": {
+          "min_native_T": 4.1899223535384305e-06,
+          "native_T_at_49_23": 5.000000121242095e-06
+        },
+        "neural update": {
+          "min_native_T": 3.974453361777012e-06,
+          "native_T_at_49_23": 4.965247467367786e-06
+        },
+        "implicit diffusion": {
+          "min_native_T": 3.974453361777012e-06,
+          "native_T_at_49_23": 4.965247467367786e-06
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 3.974453361777012e-06,
+          "native_T_at_49_23": 4.965247467367786e-06
+        }
+      }
+    },
+    {
+      "step": 2,
+      "decoded_min_exported_T": 0.17075613131985712,
+      "decoded_T_at_49_23": 0.24328850988888995,
+      "normalized_T_at_49_23": -0.9825292005850575,
+      "stages": {
+        "input": {
+          "min_native_T": 3.974453361776999e-06,
+          "native_T_at_49_23": 4.965247467367776e-06
+        },
+        "neural update": {
+          "min_native_T": 3.438918934749819e-06,
+          "native_T_at_49_23": 4.899674505372651e-06
+        },
+        "implicit diffusion": {
+          "min_native_T": 3.438918934749819e-06,
+          "native_T_at_49_23": 4.899674505372651e-06
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 3.438918934749819e-06,
+          "native_T_at_49_23": 4.899674505372651e-06
+        }
+      }
+    },
+    {
+      "step": 3,
+      "decoded_min_exported_T": 0.14712449519228343,
+      "decoded_T_at_49_23": 0.2388413963619751,
+      "normalized_T_at_49_23": -0.9828490237905935,
+      "stages": {
+        "input": {
+          "min_native_T": 3.438918934749815e-06,
+          "native_T_at_49_23": 4.899674505372667e-06
+        },
+        "neural update": {
+          "min_native_T": 2.962992944215368e-06,
+          "native_T_at_49_23": 4.810112492023698e-06
+        },
+        "implicit diffusion": {
+          "min_native_T": 2.962992944215368e-06,
+          "native_T_at_49_23": 4.810112492023698e-06
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 2.962992944215368e-06,
+          "native_T_at_49_23": 4.810112492023698e-06
+        }
+      }
+    },
+    {
+      "step": 4,
+      "decoded_min_exported_T": 0.1269873429786017,
+      "decoded_T_at_49_23": 0.23400349771527829,
+      "normalized_T_at_49_23": -0.9831969511020686,
+      "stages": {
+        "input": {
+          "min_native_T": 2.9629929442153806e-06,
+          "native_T_at_49_23": 4.810112492023686e-06
+        },
+        "neural update": {
+          "min_native_T": 2.557443617791177e-06,
+          "native_T_at_49_23": 4.712680317073764e-06
+        },
+        "implicit diffusion": {
+          "min_native_T": 2.557443617791177e-06,
+          "native_T_at_49_23": 4.712680317073764e-06
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 2.557443617791177e-06,
+          "native_T_at_49_23": 4.712680317073764e-06
+        }
+      }
+    },
+    {
+      "step": 5,
+      "decoded_min_exported_T": 0.11073011096935659,
+      "decoded_T_at_49_23": 0.230327027001195,
+      "normalized_T_at_49_23": -0.9834613519638233,
+      "stages": {
+        "input": {
+          "min_native_T": 2.557443617791187e-06,
+          "native_T_at_49_23": 4.712680317073776e-06
+        },
+        "neural update": {
+          "min_native_T": 2.2300333950889244e-06,
+          "native_T_at_49_23": 4.638638555562846e-06
+        },
+        "implicit diffusion": {
+          "min_native_T": 2.2300333950889244e-06,
+          "native_T_at_49_23": 4.638638555562846e-06
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 2.2300333950889244e-06,
+          "native_T_at_49_23": 4.638638555562846e-06
+        }
+      }
+    },
+    {
+      "step": 6,
+      "decoded_min_exported_T": 0.09829499772546058,
+      "decoded_T_at_49_23": 0.23038166129671467,
+      "normalized_T_at_49_23": -0.9834574228274476,
+      "stages": {
+        "input": {
+          "min_native_T": 2.230033395088909e-06,
+          "native_T_at_49_23": 4.638638555562844e-06
+        },
+        "neural update": {
+          "min_native_T": 1.979598192208325e-06,
+          "native_T_at_49_23": 4.639738855223517e-06
+        },
+        "implicit diffusion": {
+          "min_native_T": 1.979598192208325e-06,
+          "native_T_at_49_23": 4.639738855223517e-06
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 1.979598192208325e-06,
+          "native_T_at_49_23": 4.639738855223517e-06
+        }
+      }
+    },
+    {
+      "step": 7,
+      "decoded_min_exported_T": 0.0893666088236742,
+      "decoded_T_at_49_23": 0.23913150058358035,
+      "normalized_T_at_49_23": -0.9828281603560236,
+      "stages": {
+        "input": {
+          "min_native_T": 1.9795981922083242e-06,
+          "native_T_at_49_23": 4.639738855223518e-06
+        },
+        "neural update": {
+          "min_native_T": 1.7997861678093421e-06,
+          "native_T_at_49_23": 4.815955004928015e-06
+        },
+        "implicit diffusion": {
+          "min_native_T": 1.7997861678093421e-06,
+          "native_T_at_49_23": 4.815955004928015e-06
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 1.7997861678093421e-06,
+          "native_T_at_49_23": 4.815955004928015e-06
+        }
+      }
+    },
+    {
+      "step": 8,
+      "decoded_min_exported_T": 0.08354816797708509,
+      "decoded_T_at_49_23": 0.2680815350460879,
+      "normalized_T_at_49_23": -0.9807461598030497,
+      "stages": {
+        "input": {
+          "min_native_T": 1.7997861678093343e-06,
+          "native_T_at_49_23": 4.815955004928013e-06
+        },
+        "neural update": {
+          "min_native_T": 1.6826065020286954e-06,
+          "native_T_at_49_23": 5.398990125864848e-06
+        },
+        "implicit diffusion": {
+          "min_native_T": 1.6826065020286954e-06,
+          "native_T_at_49_23": 5.398990125864848e-06
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 1.6826065020286954e-06,
+          "native_T_at_49_23": 5.398990125864848e-06
+        }
+      }
+    },
+    {
+      "step": 9,
+      "decoded_min_exported_T": 0.08035234274567671,
+      "decoded_T_at_49_23": 0.3499024173805676,
+      "normalized_T_at_49_23": -0.97486184479521,
+      "stages": {
+        "input": {
+          "min_native_T": 1.6826065020286878e-06,
+          "native_T_at_49_23": 5.398990125864836e-06
+        },
+        "neural update": {
+          "min_native_T": 1.6182446321766743e-06,
+          "native_T_at_49_23": 7.046810203206097e-06
+        },
+        "implicit diffusion": {
+          "min_native_T": 1.6182446321766743e-06,
+          "native_T_at_49_23": 7.046810203206097e-06
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 1.6182446321766743e-06,
+          "native_T_at_49_23": 7.046810203206097e-06
+        }
+      }
+    },
+    {
+      "step": 10,
+      "decoded_min_exported_T": 0.07903951834983403,
+      "decoded_T_at_49_23": 0.6012957380222925,
+      "normalized_T_at_49_23": -0.9567823833262475,
+      "stages": {
+        "input": {
+          "min_native_T": 1.6182446321766772e-06,
+          "native_T_at_49_23": 7.046810203206081e-06
+        },
+        "neural update": {
+          "min_native_T": 1.5918051910979209e-06,
+          "native_T_at_49_23": 1.2109710397431343e-05
+        },
+        "implicit diffusion": {
+          "min_native_T": 1.5918051910979209e-06,
+          "native_T_at_49_23": 1.2109710397431343e-05
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 1.5918051910979209e-06,
+          "native_T_at_49_23": 1.2109710397431343e-05
+        }
+      }
+    },
+    {
+      "step": 11,
+      "decoded_min_exported_T": 0.07866041707752203,
+      "decoded_T_at_49_23": 1.5324007391707202,
+      "normalized_T_at_49_23": -0.8898200752233517,
+      "stages": {
+        "input": {
+          "min_native_T": 1.5918051910979376e-06,
+          "native_T_at_49_23": 1.2109710397431346e-05
+        },
+        "neural update": {
+          "min_native_T": 1.5841703346891926e-06,
+          "native_T_at_49_23": 3.0861567762316594e-05
+        },
+        "implicit diffusion": {
+          "min_native_T": 1.5841703346891926e-06,
+          "native_T_at_49_23": 3.0861567762316594e-05
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 1.5841703346891926e-06,
+          "native_T_at_49_23": 3.0861567762316594e-05
+        }
+      }
+    },
+    {
+      "step": 12,
+      "decoded_min_exported_T": 0.07822384807503369,
+      "decoded_T_at_49_23": 5.147493324078031,
+      "normalized_T_at_49_23": -0.6298333463447812,
+      "stages": {
+        "input": {
+          "min_native_T": 1.5841703346891835e-06,
+          "native_T_at_49_23": 3.08615677623166e-05
+        },
+        "neural update": {
+          "min_native_T": 1.575378115063567e-06,
+          "native_T_at_49_23": 0.00010366721312929905
+        },
+        "implicit diffusion": {
+          "min_native_T": 1.575378115063567e-06,
+          "native_T_at_49_23": 0.00010366721312929905
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 1.575378115063567e-06,
+          "native_T_at_49_23": 0.00010366721312929905
+        }
+      }
+    },
+    {
+      "step": 13,
+      "decoded_min_exported_T": 0.07700042908399318,
+      "decoded_T_at_49_23": 11.8815389741426,
+      "normalized_T_at_49_23": -0.14554077027396853,
+      "stages": {
+        "input": {
+          "min_native_T": 1.5753781150635833e-06,
+          "native_T_at_49_23": 0.00010366721312929906
+        },
+        "neural update": {
+          "min_native_T": 1.5507392414787879e-06,
+          "native_T_at_49_23": 0.00023928657223797934
+        },
+        "implicit diffusion": {
+          "min_native_T": 1.5507392414787879e-06,
+          "native_T_at_49_23": 0.00023928657223797934
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 1.5507392414787879e-06,
+          "native_T_at_49_23": 0.00023928657223797934
+        }
+      }
+    },
+    {
+      "step": 14,
+      "decoded_min_exported_T": 0.07498073874142364,
+      "decoded_T_at_49_23": 17.162930452871173,
+      "normalized_T_at_49_23": 0.23428122936563509,
+      "stages": {
+        "input": {
+          "min_native_T": 1.55073924147877e-06,
+          "native_T_at_49_23": 0.00023928657223797934
+        },
+        "neural update": {
+          "min_native_T": 1.5100639737287334e-06,
+          "native_T_at_49_23": 0.0003456504082984531
+        },
+        "implicit diffusion": {
+          "min_native_T": 1.5100639737287334e-06,
+          "native_T_at_49_23": 0.0003456504082984531
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 1.5100639737287334e-06,
+          "native_T_at_49_23": 0.0003456504082984531
+        }
+      }
+    },
+    {
+      "step": 15,
+      "decoded_min_exported_T": 0.07213426167802695,
+      "decoded_T_at_49_23": 20.07416080709528,
+      "normalized_T_at_49_23": 0.44364827572196885,
+      "stages": {
+        "input": {
+          "min_native_T": 1.5100639737287444e-06,
+          "native_T_at_49_23": 0.0003456504082984531
+        },
+        "neural update": {
+          "min_native_T": 1.4527377518532185e-06,
+          "native_T_at_49_23": 0.0004042807199082094
+        },
+        "implicit diffusion": {
+          "min_native_T": 1.4527377518532185e-06,
+          "native_T_at_49_23": 0.0004042807199082094
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 1.4527377518532185e-06,
+          "native_T_at_49_23": 0.0004042807199082094
+        }
+      }
+    },
+    {
+      "step": 16,
+      "decoded_min_exported_T": 0.06656906152995745,
+      "decoded_T_at_49_23": 21.396216925398814,
+      "normalized_T_at_49_23": 0.5387266278025282,
+      "stages": {
+        "input": {
+          "min_native_T": 1.452737751853234e-06,
+          "native_T_at_49_23": 0.0004042807199082094
+        },
+        "neural update": {
+          "min_native_T": 1.3406581912720816e-06,
+          "native_T_at_49_23": 0.0004309060819546214
+        },
+        "implicit diffusion": {
+          "min_native_T": 1.3406581912720816e-06,
+          "native_T_at_49_23": 0.0004309060819546214
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 1.3406581912720816e-06,
+          "native_T_at_49_23": 0.0004309060819546214
+        }
+      }
+    },
+    {
+      "step": 17,
+      "decoded_min_exported_T": 0.06229414907274666,
+      "decoded_T_at_49_23": 21.130941578373577,
+      "normalized_T_at_49_23": 0.5196488121988132,
+      "stages": {
+        "input": {
+          "min_native_T": 1.3406581912720727e-06,
+          "native_T_at_49_23": 0.0004309060819546214
+        },
+        "neural update": {
+          "min_native_T": 1.2545641969898884e-06,
+          "native_T_at_49_23": 0.00042556360665516296
+        },
+        "implicit diffusion": {
+          "min_native_T": 1.2545641969898884e-06,
+          "native_T_at_49_23": 0.00042556360665516296
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 1.2545641969898884e-06,
+          "native_T_at_49_23": 0.00042556360665516296
+        }
+      }
+    },
+    {
+      "step": 18,
+      "decoded_min_exported_T": 0.05926790357589873,
+      "decoded_T_at_49_23": 18.41165612133849,
+      "normalized_T_at_49_23": 0.32408587314347836,
+      "stages": {
+        "input": {
+          "min_native_T": 1.2545641969898863e-06,
+          "native_T_at_49_23": 0.000425563606655163
+        },
+        "neural update": {
+          "min_native_T": 1.193617554196624e-06,
+          "native_T_at_49_23": 0.00037079894213093044
+        },
+        "implicit diffusion": {
+          "min_native_T": 1.193617554196624e-06,
+          "native_T_at_49_23": 0.00037079894213093044
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 1.193617554196624e-06,
+          "native_T_at_49_23": 0.00037079894213093044
+        }
+      }
+    },
+    {
+      "step": 19,
+      "decoded_min_exported_T": 0.057722042467453605,
+      "decoded_T_at_49_23": 14.372233606737097,
+      "normalized_T_at_49_23": 0.03358259515990992,
+      "stages": {
+        "input": {
+          "min_native_T": 1.1936175541966182e-06,
+          "native_T_at_49_23": 0.0003707989421309305
+        },
+        "neural update": {
+          "min_native_T": 1.1624849032327116e-06,
+          "native_T_at_49_23": 0.00028944756421234424
+        },
+        "implicit diffusion": {
+          "min_native_T": 1.1624849032327116e-06,
+          "native_T_at_49_23": 0.00028944756421234424
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 1.1624849032327116e-06,
+          "native_T_at_49_23": 0.00028944756421234424
+        }
+      }
+    },
+    {
+      "step": 20,
+      "decoded_min_exported_T": 0.057816987124923,
+      "decoded_T_at_49_23": 9.472926142819631,
+      "normalized_T_at_49_23": -0.3187610561844791,
+      "stages": {
+        "input": {
+          "min_native_T": 1.162484903232728e-06,
+          "native_T_at_49_23": 0.00028944756421234424
+        },
+        "neural update": {
+          "min_native_T": 1.164397027721611e-06,
+          "native_T_at_49_23": 0.00019077865508095314
+        },
+        "implicit diffusion": {
+          "min_native_T": 1.164397027721611e-06,
+          "native_T_at_49_23": 0.00019077865508095314
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 1.164397027721611e-06,
+          "native_T_at_49_23": 0.00019077865508095314
+        }
+      }
+    },
+    {
+      "step": 21,
+      "decoded_min_exported_T": 0.056906405660017256,
+      "decoded_T_at_49_23": 4.346621452470723,
+      "normalized_T_at_49_23": -0.6874296743114081,
+      "stages": {
+        "input": {
+          "min_native_T": 1.1643970277216184e-06,
+          "native_T_at_49_23": 0.00019077865508095311
+        },
+        "neural update": {
+          "min_native_T": 1.1460585012096149e-06,
+          "native_T_at_49_23": 8.753816744121244e-05
+        },
+        "implicit diffusion": {
+          "min_native_T": 1.1460585012096149e-06,
+          "native_T_at_49_23": 8.753816744121244e-05
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 1.1460585012096149e-06,
+          "native_T_at_49_23": 8.753816744121244e-05
+        }
+      }
+    },
+    {
+      "step": 22,
+      "decoded_min_exported_T": 0.050114074041538004,
+      "decoded_T_at_49_23": 1.5291563738446197,
+      "normalized_T_at_49_23": -0.8900534003481193,
+      "stages": {
+        "input": {
+          "min_native_T": 1.1460585012096134e-06,
+          "native_T_at_49_23": 8.753816744121244e-05
+        },
+        "neural update": {
+          "min_native_T": 1.0092653000909232e-06,
+          "native_T_at_49_23": 3.079622832609878e-05
+        },
+        "implicit diffusion": {
+          "min_native_T": 1.0092653000909232e-06,
+          "native_T_at_49_23": 3.079622832609878e-05
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 1.0092653000909232e-06,
+          "native_T_at_49_23": 3.079622832609878e-05
+        }
+      }
+    },
+    {
+      "step": 23,
+      "decoded_min_exported_T": 0.043108612623473874,
+      "decoded_T_at_49_23": 0.47036427951332804,
+      "normalized_T_at_49_23": -0.9661985852091984,
+      "stages": {
+        "input": {
+          "min_native_T": 1.0092653000909147e-06,
+          "native_T_at_49_23": 3.079622832609879e-05
+        },
+        "neural update": {
+          "min_native_T": 8.681798015437778e-07,
+          "native_T_at_49_23": 9.472834823239131e-06
+        },
+        "implicit diffusion": {
+          "min_native_T": 8.681798015437778e-07,
+          "native_T_at_49_23": 9.472834823239131e-06
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 8.681798015437778e-07,
+          "native_T_at_49_23": 9.472834823239131e-06
+        }
+      }
+    },
+    {
+      "step": 24,
+      "decoded_min_exported_T": 0.01921272007948005,
+      "decoded_T_at_49_23": 0.13139253802070172,
+      "normalized_T_at_49_23": -0.9905764267673559,
+      "stages": {
+        "input": {
+          "min_native_T": 8.681798015437918e-07,
+          "native_T_at_49_23": 9.472834823239141e-06
+        },
+        "neural update": {
+          "min_native_T": 3.869318563185866e-07,
+          "native_T_at_49_23": 2.6461614197491376e-06
+        },
+        "implicit diffusion": {
+          "min_native_T": 3.869318563185866e-07,
+          "native_T_at_49_23": 2.6461614197491376e-06
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 3.869318563185866e-07,
+          "native_T_at_49_23": 2.6461614197491376e-06
+        }
+      }
+    },
+    {
+      "step": 25,
+      "decoded_min_exported_T": 0.008132923472045306,
+      "decoded_T_at_49_23": 0.03371726197513247,
+      "normalized_T_at_49_23": -0.9976009427140339,
+      "stages": {
+        "input": {
+          "min_native_T": 3.869318563185822e-07,
+          "native_T_at_49_23": 2.646161419749154e-06
+        },
+        "neural update": {
+          "min_native_T": 1.6379186098152945e-07,
+          "native_T_at_49_23": 6.790440245861767e-07
+        },
+        "implicit diffusion": {
+          "min_native_T": 1.6379186098152945e-07,
+          "native_T_at_49_23": 6.790440245861767e-07
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 1.6379186098152945e-07,
+          "native_T_at_49_23": 6.790440245861767e-07
+        }
+      }
+    },
+    {
+      "step": 26,
+      "decoded_min_exported_T": 0.003271964627886703,
+      "decoded_T_at_49_23": 0.00804994257116931,
+      "normalized_T_at_49_23": -0.9994468601433074,
+      "stages": {
+        "input": {
+          "min_native_T": 1.6379186098154107e-07,
+          "native_T_at_49_23": 6.790440245861857e-07
+        },
+        "neural update": {
+          "min_native_T": 6.589526844920247e-08,
+          "native_T_at_49_23": 1.621206788749763e-07
+        },
+        "implicit diffusion": {
+          "min_native_T": 6.589526844920247e-08,
+          "native_T_at_49_23": 1.621206788749763e-07
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 6.589526844920247e-08,
+          "native_T_at_49_23": 1.621206788749763e-07
+        }
+      }
+    },
+    {
+      "step": 27,
+      "decoded_min_exported_T": 0.0012612020934401613,
+      "decoded_T_at_49_23": 0.0018104732086126063,
+      "normalized_T_at_49_23": -0.999895584260715,
+      "stages": {
+        "input": {
+          "min_native_T": 6.589526844921396e-08,
+          "native_T_at_49_23": 1.6212067887499337e-07
+        },
+        "neural update": {
+          "min_native_T": 2.5399801027071446e-08,
+          "native_T_at_49_23": 3.646176889713533e-08
+        },
+        "implicit diffusion": {
+          "min_native_T": 2.5399801027071446e-08,
+          "native_T_at_49_23": 3.646176889713533e-08
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 2.5399801027071446e-08,
+          "native_T_at_49_23": 3.646176889713533e-08
+        }
+      }
+    },
+    {
+      "step": 28,
+      "decoded_min_exported_T": 0.00038346196967609103,
+      "decoded_T_at_49_23": 0.00038346196967609103,
+      "normalized_T_at_49_23": -0.9999982106735579,
+      "stages": {
+        "input": {
+          "min_native_T": 2.5399801027075092e-08,
+          "native_T_at_49_23": 3.6461768897144824e-08
+        },
+        "neural update": {
+          "min_native_T": 7.722678056018053e-09,
+          "native_T_at_49_23": 7.722678056018053e-09
+        },
+        "implicit diffusion": {
+          "min_native_T": 7.722678056018053e-09,
+          "native_T_at_49_23": 7.722678056018053e-09
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 7.722678056018053e-09,
+          "native_T_at_49_23": 7.722678056018053e-09
+        }
+      }
+    },
+    {
+      "step": 29,
+      "decoded_min_exported_T": 7.726336398938827e-05,
+      "decoded_T_at_49_23": 7.726336398938827e-05,
+      "normalized_T_at_49_23": -1.0000202315684616,
+      "stages": {
+        "input": {
+          "min_native_T": 7.722678056024912e-09,
+          "native_T_at_49_23": 7.722678056024912e-09
+        },
+        "neural update": {
+          "min_native_T": 1.5560345818221345e-09,
+          "native_T_at_49_23": 1.5560345818221345e-09
+        },
+        "implicit diffusion": {
+          "min_native_T": 1.5560345818221345e-09,
+          "native_T_at_49_23": 1.5560345818221345e-09
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 1.5560345818221345e-09,
+          "native_T_at_49_23": 1.5560345818221345e-09
+        }
+      }
+    },
+    {
+      "step": 30,
+      "decoded_min_exported_T": 1.4835933832557657e-05,
+      "decoded_T_at_49_23": 1.4835933832557657e-05,
+      "normalized_T_at_49_23": -1.00002472116395,
+      "stages": {
+        "input": {
+          "min_native_T": 1.5560345817853273e-09,
+          "native_T_at_49_23": 1.5560345817853273e-09
+        },
+        "neural update": {
+          "min_native_T": 2.9878618927565334e-10,
+          "native_T_at_49_23": 2.9878618927565334e-10
+        },
+        "implicit diffusion": {
+          "min_native_T": 2.9878618927565334e-10,
+          "native_T_at_49_23": 2.9878618927565334e-10
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 2.9878618927565334e-10,
+          "native_T_at_49_23": 2.9878618927565334e-10
+        }
+      }
+    },
+    {
+      "step": 31,
+      "decoded_min_exported_T": 2.722196033033697e-06,
+      "decoded_T_at_49_23": 2.722196033033697e-06,
+      "normalized_T_at_49_23": -1.0000255923480181,
+      "stages": {
+        "input": {
+          "min_native_T": 2.987861892695907e-10,
+          "native_T_at_49_23": 2.987861892695907e-10
+        },
+        "neural update": {
+          "min_native_T": 5.48232816486148e-11,
+          "native_T_at_49_23": 5.48232816486148e-11
+        },
+        "implicit diffusion": {
+          "min_native_T": 5.48232816486148e-11,
+          "native_T_at_49_23": 5.48232816486148e-11
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 5.48232816486148e-11,
+          "native_T_at_49_23": 5.48232816486148e-11
+        }
+      }
+    },
+    {
+      "step": 32,
+      "decoded_min_exported_T": 4.807032460973915e-07,
+      "decoded_T_at_49_23": 4.807032460973915e-07,
+      "normalized_T_at_49_23": -1.0000257535495265,
+      "stages": {
+        "input": {
+          "min_native_T": 5.4823281657539994e-11,
+          "native_T_at_49_23": 5.4823281657539994e-11
+        },
+        "neural update": {
+          "min_native_T": 9.681054976709218e-12,
+          "native_T_at_49_23": 9.681054976709218e-12
+        },
+        "implicit diffusion": {
+          "min_native_T": 9.681054976709218e-12,
+          "native_T_at_49_23": 9.681054976709218e-12
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 9.681054976709218e-12,
+          "native_T_at_49_23": 9.681054976709218e-12
+        }
+      }
+    },
+    {
+      "step": 33,
+      "decoded_min_exported_T": 8.245563698494607e-08,
+      "decoded_T_at_49_23": 8.245563698494607e-08,
+      "normalized_T_at_49_23": -1.0000257821903125,
+      "stages": {
+        "input": {
+          "min_native_T": 9.681054977191216e-12,
+          "native_T_at_49_23": 9.681054977191216e-12
+        },
+        "neural update": {
+          "min_native_T": 1.6606036179589622e-12,
+          "native_T_at_49_23": 1.6606036179589622e-12
+        },
+        "implicit diffusion": {
+          "min_native_T": 1.6606036179589622e-12,
+          "native_T_at_49_23": 1.6606036179589622e-12
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 1.6606036179589622e-12,
+          "native_T_at_49_23": 1.6606036179589622e-12
+        }
+      }
+    },
+    {
+      "step": 34,
+      "decoded_min_exported_T": 1.3844816848518349e-08,
+      "decoded_T_at_49_23": 1.3844816848518349e-08,
+      "normalized_T_at_49_23": -1.000025787124599,
+      "stages": {
+        "input": {
+          "min_native_T": 1.660603628769454e-12,
+          "native_T_at_49_23": 1.660603628769454e-12
+        },
+        "neural update": {
+          "min_native_T": 2.788257165720718e-13,
+          "native_T_at_49_23": 2.788257165720718e-13
+        },
+        "implicit diffusion": {
+          "min_native_T": 2.788257165720718e-13,
+          "native_T_at_49_23": 2.788257165720718e-13
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 2.788257165720718e-13,
+          "native_T_at_49_23": 2.788257165720718e-13
+        }
+      }
+    },
+    {
+      "step": 35,
+      "decoded_min_exported_T": 2.2885142669792913e-09,
+      "decoded_T_at_49_23": 2.2885142669792913e-09,
+      "normalized_T_at_49_23": -1.000025787955694,
+      "stages": {
+        "input": {
+          "min_native_T": 2.7882572907047546e-13,
+          "native_T_at_49_23": 2.7882572907047546e-13
+        },
+        "neural update": {
+          "min_native_T": 4.608921832458817e-14,
+          "native_T_at_49_23": 4.608921832458817e-14
+        },
+        "implicit diffusion": {
+          "min_native_T": 4.608921832458817e-14,
+          "native_T_at_49_23": 4.608921832458817e-14
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 4.608921832458817e-14,
+          "native_T_at_49_23": 4.608921832458817e-14
+        }
+      }
+    },
+    {
+      "step": 36,
+      "decoded_min_exported_T": 3.7490721638278046e-10,
+      "decoded_T_at_49_23": 3.7490721638278046e-10,
+      "normalized_T_at_49_23": -1.000025788093315,
+      "stages": {
+        "input": {
+          "min_native_T": 4.608920912138854e-14,
+          "native_T_at_49_23": 4.608920912138854e-14
+        },
+        "neural update": {
+          "min_native_T": 7.55037578954279e-15,
+          "native_T_at_49_23": 7.55037578954279e-15
+        },
+        "implicit diffusion": {
+          "min_native_T": 7.55037578954279e-15,
+          "native_T_at_49_23": 7.55037578954279e-15
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 7.55037578954279e-15,
+          "native_T_at_49_23": 7.55037578954279e-15
+        }
+      }
+    },
+    {
+      "step": 37,
+      "decoded_min_exported_T": 6.107114813858061e-11,
+      "decoded_T_at_49_23": 6.107114813858061e-11,
+      "normalized_T_at_49_23": -1.0000257881158852,
+      "stages": {
+        "input": {
+          "min_native_T": 7.550390813071558e-15,
+          "native_T_at_49_23": 7.550390813071558e-15
+        },
+        "neural update": {
+          "min_native_T": 1.2299021702528705e-15,
+          "native_T_at_49_23": 1.2299021702528705e-15
+        },
+        "implicit diffusion": {
+          "min_native_T": 1.2299021702528705e-15,
+          "native_T_at_49_23": 1.2299021702528705e-15
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 1.2299021702528705e-15,
+          "native_T_at_49_23": 1.2299021702528705e-15
+        }
+      }
+    },
+    {
+      "step": 38,
+      "decoded_min_exported_T": 9.928058375408e-12,
+      "decoded_T_at_49_23": 9.928058375408e-12,
+      "normalized_T_at_49_23": -1.000025788119563,
+      "stages": {
+        "input": {
+          "min_native_T": 1.2299337428023167e-15,
+          "native_T_at_49_23": 1.2299337428023167e-15
+        },
+        "neural update": {
+          "min_native_T": 1.999738423582555e-16,
+          "native_T_at_49_23": 1.999738423582555e-16
+        },
+        "implicit diffusion": {
+          "min_native_T": 1.999738423582555e-16,
+          "native_T_at_49_23": 1.999738423582555e-16
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 1.999738423582555e-16,
+          "native_T_at_49_23": 1.999738423582555e-16
+        }
+      }
+    },
+    {
+      "step": 39,
+      "decoded_min_exported_T": 1.6058265828178264e-12,
+      "decoded_T_at_49_23": 1.6058265828178264e-12,
+      "normalized_T_at_49_23": -1.0000257881201617,
+      "stages": {
+        "input": {
+          "min_native_T": 1.999447262513714e-16,
+          "native_T_at_49_23": 1.999447262513714e-16
+        },
+        "neural update": {
+          "min_native_T": 3.235208179293557e-17,
+          "native_T_at_49_23": 3.235208179293557e-17
+        },
+        "implicit diffusion": {
+          "min_native_T": 3.235208179293557e-17,
+          "native_T_at_49_23": 3.235208179293557e-17
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 3.235208179293557e-17,
+          "native_T_at_49_23": 3.235208179293557e-17
+        }
+      }
+    },
+    {
+      "step": 40,
+      "decoded_min_exported_T": 2.5934809855243657e-13,
+      "decoded_T_at_49_23": 2.5934809855243657e-13,
+      "normalized_T_at_49_23": -1.0000257881202586,
+      "stages": {
+        "input": {
+          "min_native_T": 3.234031714640182e-17,
+          "native_T_at_49_23": 3.234031714640182e-17
+        },
+        "neural update": {
+          "min_native_T": 5.1910294432160385e-18,
+          "native_T_at_49_23": 5.1910294432160385e-18
+        },
+        "implicit diffusion": {
+          "min_native_T": 5.1910294432160385e-18,
+          "native_T_at_49_23": 5.1910294432160385e-18
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 5.1910294432160385e-18,
+          "native_T_at_49_23": 5.1910294432160385e-18
+        }
+      }
+    },
+    {
+      "step": 41,
+      "decoded_min_exported_T": 3.907985046680551e-14,
+      "decoded_T_at_49_23": 3.907985046680551e-14,
+      "normalized_T_at_49_23": -1.0000257881202743,
+      "stages": {
+        "input": {
+          "min_native_T": 5.223104317892329e-18,
+          "native_T_at_49_23": 5.223104317892329e-18
+        },
+        "neural update": {
+          "min_native_T": 8.369115512989873e-19,
+          "native_T_at_49_23": 8.369115512989873e-19
+        },
+        "implicit diffusion": {
+          "min_native_T": 8.369115512989873e-19,
+          "native_T_at_49_23": 8.369115512989873e-19
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 8.369115512989873e-19,
+          "native_T_at_49_23": 8.369115512989873e-19
+        }
+      }
+    },
+    {
+      "step": 42,
+      "decoded_min_exported_T": 5.329070518200751e-15,
+      "decoded_T_at_49_23": 5.329070518200751e-15,
+      "normalized_T_at_49_23": -1.0000257881202768,
+      "stages": {
+        "input": {
+          "min_native_T": 7.870431163947344e-19,
+          "native_T_at_49_23": 7.870431163947344e-19
+        },
+        "neural update": {
+          "min_native_T": 1.2613664703285502e-19,
+          "native_T_at_49_23": 1.2613664703285502e-19
+        },
+        "implicit diffusion": {
+          "min_native_T": 1.2613664703285502e-19,
+          "native_T_at_49_23": 1.2613664703285502e-19
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 1.2613664703285502e-19,
+          "native_T_at_49_23": 1.2613664703285502e-19
+        }
+      }
+    },
+    {
+      "step": 43,
+      "decoded_min_exported_T": 0.0,
+      "decoded_T_at_49_23": 0.0,
+      "normalized_T_at_49_23": -1.0000257881202772,
+      "stages": {
+        "input": {
+          "min_native_T": 1.073240613265547e-19,
+          "native_T_at_49_23": 1.073240613265547e-19
+        },
+        "neural update": {
+          "min_native_T": 1.7145207234131832e-20,
+          "native_T_at_49_23": 1.7145207234131832e-20
+        },
+        "implicit diffusion": {
+          "min_native_T": 1.7145207234131832e-20,
+          "native_T_at_49_23": 1.7145207234131832e-20
+        },
+        "auxiliary reconstruction": {
+          "min_native_T": 1.7145207234131832e-20,
+          "native_T_at_49_23": 1.7145207234131832e-20
+        }
+      }
+    },
+    {
+      "step": 44,
+      "failure": "Composite input: T: min=0, max=0.0116416, first_bad_batch_Z_R=[0, 49, 23]",
+      "stages": {
+        "input": {
+          "min_native_T": 0.0,
+          "native_T_at_49_23": 0.0
+        }
+      }
+    }
+  ]
+}

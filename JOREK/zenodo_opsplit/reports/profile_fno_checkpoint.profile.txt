@@ -1,0 +1,53 @@
+         1425536 function calls (1389947 primitive calls) in 13.389 seconds
+
+   Ordered by: cumulative time
+   List reduced from 3600 to 45 due to restriction <45>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    9.357    9.357 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/train_comparison.py:104(objective)
+        6    0.002    0.000    9.354    1.559 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/train_comparison.py:88(predictions)
+        5    0.012    0.002    9.331    1.866 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/native_rollout.py:204(step)
+       55    0.170    0.003    9.222    0.168 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/native_rollout.py:241(_trial_step)
+        1    0.000    0.000    4.035    4.035 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_tensor.py:592(backward)
+        1    0.000    0.000    4.035    4.035 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/autograd/__init__.py:243(backward)
+        1    0.000    0.000    4.035    4.035 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/autograd/graph.py:815(_engine_run_backward)
+        1    4.035    4.035    4.035    4.035 {method 'run_backward' of 'torch._C._EngineBase' objects}
+      330    0.004    0.000    3.276    0.010 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/native_rollout.py:55(solve)
+       55    0.000    0.000    2.812    0.051 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_compile.py:41(inner)
+      385    0.002    0.000    2.705    0.007 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/autograd/function.py:559(apply)
+      385    0.007    0.000    2.695    0.007 {built-in method apply}
+      330    0.002    0.000    2.688    0.008 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/gpu_sparse.py:136(forward)
+   3403/1    0.005    0.000    2.418    2.418 <frozen importlib._bootstrap>:1165(_find_and_load)
+    732/1    0.003    0.000    2.418    2.418 <frozen importlib._bootstrap>:1120(_find_and_load_unlocked)
+    714/1    0.002    0.000    2.418    2.418 <frozen importlib._bootstrap>:666(_load_unlocked)
+    715/1    0.002    0.000    2.417    2.417 <frozen importlib._bootstrap_external>:934(exec_module)
+   1649/2    0.001    0.000    2.416    1.208 <frozen importlib._bootstrap>:233(_call_with_frames_removed)
+   1844/1    0.084    0.000    2.416    2.416 {built-in method builtins.exec}
+        1    0.000    0.000    2.416    2.416 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_dynamo/__init__.py:1(<module>)
+    738/4    0.001    0.000    2.411    0.603 <frozen importlib._bootstrap>:1207(_handle_fromlist)
+    189/3    0.000    0.000    2.411    0.804 {built-in method builtins.__import__}
+      330    0.004    0.000    2.090    0.006 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/gpu_sparse.py:119(direct_solve)
+      330    0.268    0.001    1.794    0.005 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/gpu_sparse.py:75(solve)
+        1    0.000    0.000    1.696    1.696 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_dynamo/convert_frame.py:1(<module>)
+        1    0.000    0.000    1.690    1.690 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_dynamo/symbolic_convert.py:1(<module>)
+      990    1.679    0.002    1.679    0.002 {method 'coalesce' of 'torch._C.TensorBase' objects}
+     1987    1.485    0.001    1.486    0.001 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/gpu_sparse.py:70(call)
+       55    0.059    0.001    1.479    0.027 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/native.py:180(terms)
+     2705    0.006    0.000    1.414    0.001 /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/zenodo_opsplit/equations.py:27(grad)
+     2705    1.398    0.001    1.398    0.001 {built-in method torch.gradient}
+        1    0.000    0.000    0.917    0.917 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_dynamo/exc.py:1(<module>)
+        1    0.000    0.000    0.913    0.913 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_dynamo/utils.py:1(<module>)
+  2684/18    0.002    0.000    0.892    0.050 /pitagora/prod/spack/6.1/install/0.22/linux-rhel9-zen4/gcc-11.4.1/python-3.11.7-qaizwjudodzdvsz2u2yss6hfsmfm5btp/lib/python3.11/importlib/__init__.py:108(import_module)
+  2684/18    0.001    0.000    0.892    0.050 <frozen importlib._bootstrap>:1192(_gcd_import)
+        1    0.000    0.000    0.848    0.848 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/utils/_triton.py:6(has_triton_package)
+        1    0.000    0.000    0.847    0.847 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/triton/__init__.py:1(<module>)
+        1    0.000    0.000    0.753    0.753 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/triton/runtime/__init__.py:1(<module>)
+        1    0.000    0.000    0.751    0.751 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/triton/runtime/autotuner.py:1(<module>)
+        1    0.000    0.000    0.750    0.750 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/triton/runtime/jit.py:1(<module>)
+  720/719    0.001    0.000    0.749    0.001 <frozen importlib._bootstrap>:566(module_from_spec)
+        1    0.000    0.000    0.749    0.749 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/torch/_dynamo/trace_rules.py:1(<module>)
+        1    0.000    0.000    0.747    0.747 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/triton/runtime/driver.py:1(<module>)
+        1    0.000    0.000    0.746    0.746 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/triton/backends/__init__.py:1(<module>)
+        1    0.000    0.000    0.742    0.742 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/lib/python3.11/site-packages/triton/backends/__init__.py:35(_discover_backends)
+
+

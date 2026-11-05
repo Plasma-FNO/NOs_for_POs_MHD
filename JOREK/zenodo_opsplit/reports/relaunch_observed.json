@@ -1,0 +1,117 @@
+{
+  "recorded_at": "2026-11-05T11:18:19.423005+00:00",
+  "runs": {
+    "es-scratch": {
+      "job": 2779852,
+      "observed_batches": 65,
+      "latest": {
+        "epoch": 0,
+        "offset": 1280,
+        "loss": 0.01817619521687288,
+        "seconds": 1369.4563420170452,
+        "limiter": {
+          "substeps": 930,
+          "limited_substeps": 0,
+          "analytic_fallbacks": 0,
+          "minimum_fraction": 1.0,
+          "density_limited": 930,
+          "temperature_limited": 928,
+          "minimum_scalar_fraction": 0.00016580090557871062,
+          "cfl_limited_substeps": 361,
+          "minimum_dt_fraction": 0.008786490681374914,
+          "energy_limited": 71,
+          "minimum_energy_fraction": 0.9838173650526016
+        }
+      },
+      "all_logged_losses_finite": true,
+      "checkpoint_bytes": 322632361,
+      "failure_file": false,
+      "mean_warm_batch_seconds": 18.869607177235594,
+      "log": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-fast-20261105/es/opsplit-scratch-2779852.log"
+    },
+    "es-pretrained": {
+      "job": 2779856,
+      "observed_batches": 61,
+      "latest": {
+        "epoch": 0,
+        "offset": 1200,
+        "loss": 0.019371667073873576,
+        "seconds": 1276.8447502839845,
+        "limiter": {
+          "substeps": 934,
+          "limited_substeps": 0,
+          "analytic_fallbacks": 0,
+          "minimum_fraction": 1.0,
+          "density_limited": 934,
+          "temperature_limited": 932,
+          "minimum_scalar_fraction": 0.0010081554774368578,
+          "cfl_limited_substeps": 390,
+          "minimum_dt_fraction": 0.039592442630004145,
+          "energy_limited": 31,
+          "minimum_energy_fraction": 0.9988568088037154
+        }
+      },
+      "all_logged_losses_finite": true,
+      "checkpoint_bytes": 322632425,
+      "failure_file": false,
+      "mean_warm_batch_seconds": 18.605556113882145,
+      "log": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-fast-20261105/es/opsplit-pretrained-2779856.log"
+    },
+    "em-scratch": {
+      "job": 2779860,
+      "observed_batches": 8,
+      "latest": {
+        "epoch": 0,
+        "offset": 140,
+        "loss": 0.06963048107349916,
+        "seconds": 468.67683906597085,
+        "limiter": {
+          "substeps": 1500,
+          "limited_substeps": 0,
+          "analytic_fallbacks": 0,
+          "minimum_fraction": 1.0,
+          "density_limited": 1481,
+          "temperature_limited": 1404,
+          "minimum_scalar_fraction": 0.007537730279409322,
+          "cfl_limited_substeps": 1500,
+          "minimum_dt_fraction": 0.0002737083581735078,
+          "energy_limited": 1247,
+          "minimum_energy_fraction": 0.8153448975049572
+        }
+      },
+      "all_logged_losses_finite": true,
+      "checkpoint_bytes": 322632361,
+      "failure_file": false,
+      "mean_warm_batch_seconds": 43.18270061614125,
+      "log": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-fast-20261105/em/opsplit-scratch-2779860.log"
+    },
+    "em-pretrained": {
+      "job": 2779864,
+      "observed_batches": 1,
+      "latest": {
+        "epoch": 0,
+        "offset": 0,
+        "loss": 0.02990528945381064,
+        "seconds": 179.6040924550034,
+        "limiter": {
+          "substeps": 1837,
+          "limited_substeps": 0,
+          "analytic_fallbacks": 0,
+          "minimum_fraction": 1.0,
+          "density_limited": 445,
+          "temperature_limited": 17,
+          "minimum_scalar_fraction": 0.09756774078934974,
+          "cfl_limited_substeps": 1837,
+          "minimum_dt_fraction": 0.0025157573277510893,
+          "energy_limited": 996,
+          "minimum_energy_fraction": 0.9387884226977126
+        }
+      },
+      "all_logged_losses_finite": true,
+      "checkpoint_bytes": 322632361,
+      "failure_file": false,
+      "mean_warm_batch_seconds": null,
+      "log": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/jorek-matched-fast-20261105/em/opsplit-pretrained-2779864.log"
+    }
+  }
+}
