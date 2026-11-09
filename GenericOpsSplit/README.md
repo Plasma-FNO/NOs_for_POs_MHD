@@ -30,6 +30,8 @@ One linearly implicit theta-step of size h (no Newton iteration; one linear solv
 | known | learned | MAST-U implicit OpsSplit |
 | L0 + mu L1, known | learned | coefficient physics (affine in mu) |
 | learned J - D (+ mu-affine) | learned | **structured implicit neural operator** (section 4.1.2) |
+| known L, plus learned J - D correction (warm start) | learned | **physics-anchored structured operator** (best in the tests) |
+| any of the above, two-stage Rosenbrock-W (ROS2) | learned | second-order linearly implicit step, same factorisation |
 
 Keeping A explicit and *solving* with it is the inductive bias; learning A^-1 directly is just AR.
 
@@ -43,7 +45,11 @@ Assume M is symmetric positive definite and use the M-norm.
    (||q'||^2 - ||q||^2)/2 = h qbar^T L qbar - (theta - 1/2)||q' - q||^2 <= 0.
 2. **With the learned explicit remainder** (theta = 1): q' = E_h (q + h M^-1 N(q)). If M^-1 N has
    Lipschitz constant l, the step has Lipschitz constant <= (1 + h l)/(1 + h gamma). The bound does not
-   depend on how stiff L is, and the step is contractive for every h when l <= gamma.
+   depend on how stiff L is, and the step is contractive for every h when l <= gamma. In practice the bound
+   is sufficient, not necessary: the true flow map over one data interval already amplifies by 1.40 (KdV),
+   2.2 (KS) and 1.15 (NS2D) at the worst test state, so a correct model cannot be contractive there, and
+   penalising amplification above the physical value had no effect. The bound predicts which *classical*
+   IMEX steps fail (KdV, KS, NS2D with exact N; stable for Burgers and FEM), not how well a learned one does.
 3. **Parameterisation that guarantees (1).** L = J - D with J skew-symmetric (transport, dispersion,
    ideal/Hamiltonian coupling) and D symmetric positive semidefinite (viscosity, resistivity, diffusion,
    drag). With a local stencil (tridiagonal in 1D, the native element graph in general) A stays sparse
@@ -63,6 +69,37 @@ Assume M is symmetric positive definite and use the M-norm.
 | advection-dominated CFD | high-Re NS, Euler | advective CFL (nonlinear) | linearised advection about q* or q_n (Oseen/Picard) | J (+ -D); needs re-linearisation (Rosenbrock-W) and an iterative solve |
 | low-Mach compressible, MHD | acoustics, Alfven/magnetosonic waves | linear waves about a background | linearised wave operator (native tangent) | J - D about a stable equilibrium; plus constraint rows (div B, current definition) |
 | physically unstable | KS, tearing, RT | unstable band + stiff damping | linear operator | J - D + omega I (omega bounded) or growth in N |
+
+## What the experiments say about the formulation
+
+Evidence from the 381 runs below (14 + 11 variants x 3 seeds x 5 problems), stated as revisions to the notes:
+
+1. **Implicit L is necessary.** The explicit split of section 4.1.1 diverges on all five problems at these
+   steps; every implicit variant trains. This is the part of section 4.1.2 the tests confirm outright.
+2. **A dissipative parameterisation alone is not enough.** Learned from scratch, a J - D operator is not
+   identified (the network absorbs the linear response) and gives no measurable gain over an unconstrained
+   one. Where a learned implicit L is identified it moves toward the operator whose resolvent reproduces
+   exp(hL) (for skew L this has Re > 0, which J - D cannot represent), not toward the PDE operator.
+3. **Recommended form: physical operator + learned structured correction + learned remainder.** Initialising
+   the J - D operator at the known L and training it with the network keeps the physics (FEM conductance
+   within 5%) and gives the best accuracy (KdV 0.10 vs 0.19 known L) and out-of-range robustness (FEM
+   0.026 vs 0.163 from scratch). This is the testbed form of "L* + Delta L" for MAST-U.
+4. **Put varying coefficients in L(mu), never in network conditioning.** Known L(mu) gives the OOD gains
+   (FEM 0.018 vs NODE 0.157), as with D_perp on MAST-U. A learned mu-affine L carries the coefficient only once
+   it is identified (warm start, or partly on Burgers).
+5. **Exact remainder labels trade accuracy for identifiability at coarse steps.** They roughly halve
+   operator-recovery error but worsen rollouts (FEM 0.005 -> 0.14), because the remainder can no longer absorb
+   the time-discretisation error. Use them when h is small relative to the dynamics, or with a higher-order
+   step.
+6. **Step-size robustness needs multi-step training and a second-order step.** Single-step training does not
+   transfer to 2h-4h for any arm; training on {h, 2h, 4h} does, at ~5x accuracy cost with backward Euler, most
+   of which ROS2 recovers (Burgers 0.026 -> 0.012). With a non-stiff learned RHS, explicit Heun is as good; the
+   implicit step pays off when stiff physics is in L (FEM at 4h: ROS2 0.0087, best of any arm).
+7. **Put the stiff part where it actually is.** In advection-dominated NS2D the binding stiffness is advective;
+   frozen viscous L gives no gain. Re-linearising advection into L (Oseen, GMRES) stabilises the classical
+   scheme (bounded 1.0 vs 0.5) but the learned version has not yet trained successfully.
+8. **theta: use 1 for robustness, 1/2 only with damping elsewhere.** On KdV, theta = 1/2 is bounded in 56% of
+   long rollouts vs 94% for theta = 1.
 
 ## Testbed
 
