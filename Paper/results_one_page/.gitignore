@@ -1,0 +1,7 @@
+__pycache__/
+.pytest_cache/
+.twopage-*/
+.refresh-*/
+*.part
+!results_one_page.pdf
+!figure_field.npz

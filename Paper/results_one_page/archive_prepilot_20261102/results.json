@@ -1,0 +1,12 @@
+{
+  "scope": "current_jorek_experiment",
+  "study_root": "JOREK/mastu_opsplit",
+  "validation": "reports/validation_cpu_budget_refinement_20261102.json",
+  "initializer_build": "reports/initializer_build.json",
+  "regression_status": "reports/equilibrium_regression_status.json",
+  "gates": "reports/gates.json",
+  "reference_snapshot": "runs/prepared_equilibrium_authorized_20261102",
+  "reference_geometry_label": "Pinned upstream equilibrium; not a new regression result",
+  "scientific_comparison_metrics": null,
+  "equation_audit": "reports/equations.md"
+}

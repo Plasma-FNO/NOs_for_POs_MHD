@@ -1,0 +1,21 @@
+{
+  "pages": 1,
+  "pdf_sha256": "1a934acf79be91024a50fdd366a3392109a56e383b04bb5502fffef906eaceb9",
+  "tex_sha256": "4a205d0431652d65b3041cc83093793daf5a880e52a39b9f531398d8da9dd7de",
+  "results_sha256": "d4e1acb0ed6dc8790fc2b7e06d2e148dad68f0cf356568a12d4a36eafb5276c2",
+  "scope": "current_jorek_experiment",
+  "evidence_sha256": {
+    "JOREK/mastu_opsplit/reports/validation_cpu_budget_refinement_20261102.json": "fb58f9622cb8203d6acce4b372a74aaab1f582ad9f6aeead82a4f1b80078bf16",
+    "JOREK/mastu_opsplit/reports/initializer_build.json": "d104c269bd2448834643559a28d43468ee57916e4949143af0a3a3e5b6cf1781",
+    "JOREK/mastu_opsplit/reports/equilibrium_regression_status.json": "d9cc90d1533144fc7a6dc52b4d99891f6ae2ca4faa37d20eb2b1f9af884e7425",
+    "JOREK/mastu_opsplit/reports/gates.json": "3aaa46d29b1749743ec75d0643e84b0cca6ef8f35b39b0555c970d99130be6e9",
+    "JOREK/mastu_opsplit/runs/prepared_equilibrium_authorized_20261102/equilibrium_reference.h5": "30a3f81b44358720b02ec995dc6049e393d3321bfb173e3a075d1aedf6cf413e",
+    "JOREK/mastu_opsplit/reports/equations.md": "64dc0fda544b6f9915dcf987e29b924073122f46be05aa99201f17b99d4c07d8",
+    "JOREK/mastu_opsplit/runs/prepared_equilibrium_authorized_20261102/source_residual.f90": "16928a171df02b23dc2ea2371897f4540f2966d18bbcc85882d61d0bc9b7f732"
+  },
+  "reference_nodes": 2876,
+  "scientific_comparison_metrics": null,
+  "regression_state": "COMPLETED",
+  "style_reference_sha256": "0bf1f802a605c96a0b06f0c1d4f613536c2ecaa1635e16f7cbc4c3250a1b0055",
+  "source": "Current JOREK study reports and pinned upstream equilibrium; original paper is style/method reference only"
+}

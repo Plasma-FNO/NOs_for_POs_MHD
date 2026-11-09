@@ -1,0 +1,141 @@
+\documentclass[10pt,letterpaper,twocolumn]{article}
+\usepackage[left=0.875in,right=0.875in,top=0.82in,bottom=0.75in,headheight=14pt,headsep=12pt]{geometry}
+\usepackage{amsmath,amssymb,graphicx,booktabs,caption,fancyhdr,array,enumitem}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={MAST-U JOREK OpsSplit: Methods and Interim Results},pdfauthor={MAST-U OpsSplit study}}
+\setlength{\columnsep}{0.25in}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[C]{\small\bfseries Physical Operator Learning in Axisymmetric JOREK}
+\fancyfoot[L]{\scriptsize MAST-U OpsSplit\enspace---\enspace evidence snapshot \SnapshotTime}
+\fancyfoot[R]{\scriptsize\thepage/2}
+\renewcommand{\headrulewidth}{0.4pt}
+\captionsetup{font=small,labelfont=normalfont}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}{8pt}{4pt}{\normalfont\fontsize{11}{13}\bfseries}}
+\makeatother
+\input{experiment_values.tex}
+\newcount\companionpages
+\AddToHook{shipout/before}{\global\advance\companionpages by 1
+\ifnum\companionpages>2\PackageError{pagelimit}{TWO PAGE LIMIT EXCEEDED}{Shorten the content.}\fi}
+\begin{document}
+\twocolumn[{
+\begin{center}
+{\large\bfseries MAST-U OpsSplit: Explicit and Implicit Operator Splits}\par
+\vspace{3pt}{\small JOREK model 303, axisymmetric $n=0$\enspace---\enspace 80/20 perturbation ensemble\enspace---\enspace interim results}
+\end{center}\vspace{-3pt}
+\textbf{Result.} Carrying the complete frozen model303 tangent in an implicit step lowers held-out error
+\ImplicitGain$\times$ relative to NODE and the explicit continuity OpsSplit.
+Giving that frozen physics the true $D_\perp$ lowers out-of-distribution error a further \CoefGain$\times$.
+The gain comes from the frozen native physics: the untrained physics-only model matches the trained arms wherever both are complete.
+Unfinished runs are marked pending and are never averaged.
+\begin{center}\includegraphics[width=\textwidth]{results_figure.pdf}\end{center}\vspace{-10pt}
+\captionof{figure}{(a) Native bicubic mesh coloured by the training-mean pressure; dashed box: range of perturbation centres.
+(b, c) Normalized volume MSE over all seven fields; seed means with seed min--max bars, one Euler substep.
+Off-scale AR points are labelled. OOD networks receive the training conditioning value 1.}\vspace{5pt}
+}]
+
+\section*{1\quad Case, data and split}
+Unmodified JOREK model303 evolves one axisymmetric MAST-U equilibrium with seven fields
+$q=(\psi,u,z_j,w,\rho,T,V_\parallel)$.
+The state is the native bicubic coefficient vector on one fixed mesh:
+\Elements\ elements, \DofsPerField\ DOFs per field and \Unknowns\ unknowns.
+Each of the \Cases\ trajectories multiplies $\rho$ and $T$ by $1+A_fS(R,Z,\psi_N)$.
+$S$ is a compact Gaussian bump (centre $R=$\,\CentreR\,m, $|Z|\le\CentreZ$\,m; widths \WidthR\ by \WidthZ\,m), tapered to zero between $\psi_N=\TaperLo$ and \TaperHi.
+The amplitudes are $|A_f|=$\,\AmpMin--\AmpMax, with a random sign per field.
+Runs are saved every \IntervalNs\,ns for \Intervals\ intervals (\DurationUs\,$\mu$s).
+
+The split was frozen before any simulation as 60/20/20.
+On 6 November validation joined training, giving \TrainCases/0/\TestCases; every model uses its final update.
+The OOD set reruns \OodCases\ held-out test initial states with $D_\perp$ multiplied by \OodMin--\OodMax.
+It never trains or normalizes anything.
+
+% Defined on page 1 so that it floats to the top of page 2.
+\begin{table*}[t]
+\centering\footnotesize
+\caption*{\small Table 1: Normalized volume MSE, mean over completed seeds, one substep; ``Seeds'': completed/expected; ``run.'': running; ``pend.'': not started;
+``n.i.'': not interpretable (Section 4); ``--'': not evaluated by design. Train: summed wall time of the optimizer updates per seed, mean over finished seeds, without setup or evaluation;
+explicit families on 4 CPUs (\ThreadsExplicit\ threads), implicit arms on 8 (\ThreadsImplicit\ threads). $D_\perp$ rows reuse the trained checkpoints. Labels $+$ rollout also needs a one-off \LabelStates-state native label export (\LabelHours\,h summed, parallel).}
+\vspace{-4pt}
+\setlength{\tabcolsep}{4.5pt}
+\begin{tabular}{@{}lrcccccccc@{}}\toprule
+& & \multicolumn{4}{c}{Held-out test (20 cases)} & \multicolumn{4}{c}{$D_\perp$ OOD (10 cases)}\\\cmidrule(lr){3-6}\cmidrule(l){7-10}
+Method & Train (h) & Seeds & 16 & 32 & 96 & Seeds & 16 & 32 & 96\\\midrule
+\ResultsRows
+\bottomrule\end{tabular}
+\end{table*}
+
+\section*{2\quad Shared protocol}
+\textbf{Network.} Every family uses one L-SplineFNO $N_\theta$ (16$\times$32 latent grid, 4 modes, width 8, two layers; \ParamsEnsemble\ parameters).
+The consistent-mass projection $P$ maps its point outputs to native coefficients.
+A FiLM input carries a coefficient multiplier that is 1 in all training.
+
+\textbf{Guard $\mathcal G$.} After every step of every family, $\psi$ and $u$ are recomputed from the predicted $z_j$ and $w$ through their native weak (elliptic) definitions, with fixed boundary values.
+A subdivided-Bernstein limiter then keeps $\rho$ and $T$ positive on every cell by blending toward the training mean.
+Negative proposals add a penalty (weight $10^{-3}$) to the loss.
+
+\textbf{Training.} Seeds 17/18/19; within a seed, every family starts from identical weights and sees the same sampled windows.
+Each run takes 2,000 Adam updates (learning rate $10^{-3}$, gradient clip 2, batch one), using training-only normalization.
+Each update rolls out four saved intervals and averages the volume-weighted normalized MSE over them.
+
+\textbf{Evaluation.} Each test trajectory runs autonomously from frame 0 for 16/32/96 intervals (\HorizonUs\,$\mu$s), scored by normalized volume MSE over all seven fields.
+A horizon counts only if every trajectory passes the positivity, constraint and boundary audits.
+All families except AR also run 2 and 4 substeps.
+
+\section*{3\quad How each method is conducted}
+Here $h$ is one saved interval and $s$ the number of Euler substeps.
+
+\textbf{AR.} $q^{n+1}=\mathcal G\big(PN_\theta(q^n)\big)$: the network predicts the next state directly.
+
+\textbf{Euler NODE.} $q\leftarrow\mathcal G\big(q+\tfrac hs PN_\theta(q)\big)$, repeated $s$ times.
+
+\textbf{Explicit physical OpsSplit.} NODE plus a frozen physical branch:
+\begin{equation*}
+q\leftarrow\mathcal G\Big(q+\tfrac hs\big[PN_\theta(q)+PL_c(q)\big]\Big).
+\end{equation*}
+$L_c$ is the exact linearization of model303's density and temperature advection--compression,
+$\rho_t=\mathbf a\cdot\nabla\rho+c\rho$ and $T_t=\mathbf a\cdot\nabla T+(\gamma-1)cT$, about the training-mean background.
+It acts on $\rho$ and $T$ only and adds no parameters.
+State gradients come from the network's learned spline synthesis; a gradient study retrains three seeds with exact native bicubic gradients.
+A seed-17 variant also adds the known density diffusion $D_\perp\nabla^2\rho$.
+
+\textbf{Implicit native-tangent OpsSplit.} The full model303 volume right-hand side is split about a warm baseline state $q^*$:
+$F(q)=F(q^*)+L^*(q-q^*)+N(q)$.
+$L^*$ is the complex-step tangent of the complete pointwise RHS for all seven fields, with transport and sources fixed.
+$M^*$ is the native mass (temporal) operator at $q^*$. One step solves
+\begin{equation*}
+(M^*-hL^*)\,q'=M^*q+h\big(F(q^*)-L^*q^*+N_\theta(q)\big)
+\end{equation*}
+and then applies $\mathcal G$, reusing one cached sparse LU per step size.
+Current and vorticity rows are their weak definitions, and DOFs that never change in training data are Dirichlet rows.
+JOREK's Mach-1 wall condition on $V_\parallel$ is reproduced by 870 data-identified algebraic rows, and 513 further wall rows are held.
+$N_\theta$ is the same backbone with 13 weak-form output channels (\ParamsImplicit\ parameters).
+Its output layer starts at zero, so the untrained model is exactly the physics-only model. There are three arms:
+\begin{itemize}[leftmargin=10pt,itemsep=0pt,topsep=2pt,parsep=0pt]
+\item \emph{Labels $+$ rollout:} 2,000 updates on exact native remainder labels (2,000 training states), then the shared 2,000 rollout updates.
+\item \emph{Rollout only:} the 2,000 rollout updates from the physics-only start.
+\item \emph{Physics only:} $N=0$, no training.
+\end{itemize}
+
+\textbf{Coefficient physics for OOD.} Only $D_\perp$ changes in the OOD set, and the native RHS is exactly affine in it.
+This variant therefore updates $F(q^*)$ and $L^*$ for each case's true $D_\perp$, refactorizes, and applies the remaining $D_\perp$ term explicitly.
+The network and its conditioning value of 1 are unchanged.
+A native check reproduces the forcing and tangent changes to \CoefForcing\ and \CoefTangent\ relative error.
+Other families see $D_\perp$ only through FiLM, trained at 1, so their OOD input stays 1.
+
+
+\section*{4\quad Interim results}
+Substeps change NODE and explicit OpsSplit by at most \SubstepChange\%, and exact native gradients change explicit OpsSplit by at most \GradientChange\%.
+At 96 intervals, the implicit arms beat NODE in all \PairedTotal\ paired test comparisons (arm, seed and trajectory) and all \OodPairedTotal\ OOD comparisons.
+Their remaining test error is \TestCurrentShare\% current $z_j$.
+With $D_\perp$ withheld, their OOD error is \OodDensityShare\% $\rho$ and $T$; supplying the true $D_\perp$ removes most of it.
+The untrained physics-only arm matches both trained arms, and label pretraining lowers the normalized remainder loss only from 1 to \PretrainLoss: the \ParamsImplicit-parameter remainder adds little, so a larger one is the next lever.
+The density-diffusion OOD run also fed $D_\perp$ into FiLM, so it is not interpretable.
+
+\section*{5\quad Caveats}
+AR and NODE have one seed (18/19 cancelled); explicit OpsSplit seeds 18/19 come from the gradient study's matched arm.
+$M^*$ and $L^*$ are frozen at $q^*$; the small perturbations share one equilibrium and mesh, so mesh convergence and cross-equilibrium generalization are untested.
+With exact labels and more CPUs, the implicit family is not compute-matched.
+
+\end{document}

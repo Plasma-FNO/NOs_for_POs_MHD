@@ -1,0 +1,125 @@
+\documentclass[10pt,letterpaper,twocolumn]{article}
+\usepackage[left=0.875in,right=0.875in,top=0.82in,bottom=0.75in,headheight=14pt,headsep=12pt]{geometry}
+\usepackage{amsmath,amssymb,graphicx,booktabs,caption,fancyhdr}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={MAST-U JOREK OpsSplit: One-Page Experiment Record},
+  pdfsubject={Current axisymmetric model303 experiment with L-SplineFNO},
+  pdfauthor={MAST-U OpsSplit study}}
+\setlength{\columnsep}{0.25in}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\bfseries Physical Operator Learning in Axisymmetric JOREK}
+\fancyfoot[L]{\scriptsize MAST-U experiment record\enspace---\enspace 2 November 2026}
+\fancyfoot[R]{\scriptsize 1/1}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+\captionsetup{font=small,labelfont=normalfont,justification=justified,singlelinecheck=false}
+\renewcommand{\thefigure}{1}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}{9pt}{5pt}{\normalfont\fontsize{11}{13}\bfseries}}
+\makeatother
+\input{experiment_values.tex}
+
+% Fail on overflow; the build also checks the actual PDF before publishing it.
+\newcount\companionpages
+\AddToHook{shipout/before}{%
+  \global\advance\companionpages by 1
+  \ifnum\companionpages>1
+    \PackageError{onepage}{ONE PAGE LIMIT EXCEEDED}{Shorten the content; do not shrink or clip it.}%
+  \fi}
+
+\begin{document}
+\twocolumn[{
+  \begin{center}
+    {\large\bfseries MAST-U OpsSplit with L-SplineFNO}\par
+    \vspace{3pt}
+    {\small JOREK model 303\enspace---\enspace axisymmetric $n=0$\enspace---\enspace pre-pilot study}
+  \end{center}
+  \vspace{-3pt}
+  \textbf{Proposed partial replacement.} Learn density and pressure advection/compression
+  while retaining magnetic and momentum dynamics numerically. Test autonomous
+  generalisation within one fixed MAST-U equilibrium and native finite-element mesh.
+  \vspace{2pt}
+  \begin{center}
+    \includegraphics[width=\textwidth]{results_figure.pdf}
+  \end{center}
+  \vspace{-9pt}
+  \captionof{figure}{Pinned upstream equilibrium (\ReferenceNodes\ nodes; colour $\rho T$ in code units) and proposed hybrid step. The figure is not a new run; the native numerical bridge remains unvalidated.}
+  \vspace{7pt}
+}]
+
+\section*{1\quad Axisymmetric reduced-MHD balances}
+Use JOREK notation $p=\rho T$, $\partial_\phi=0$ and the case setting
+$\tau_{IC}=0$. The field ansatz is
+\begin{equation*}
+\begin{aligned}
+ \mathbf B&=\nabla\psi\times\nabla\phi+F_0\nabla\phi,\\
+ \mathbf v&=-R^2\nabla u\times\nabla\phi+V_\parallel\mathbf B.
+\end{aligned}
+\end{equation*}
+Selected balances and constraints are
+\begin{equation}
+\begin{aligned}
+ \partial_t\rho &= \underbrace{-\nabla\!\cdot(\rho\mathbf v)}_{\mathcal A_\rho(q)}+\mathcal R_\rho(q),\\
+ \partial_t p &= \underbrace{-\mathbf v\!\cdot\nabla p-\gamma p\nabla\!\cdot\mathbf v}_{\mathcal A_p(q)}+\mathcal R_p(q),\\
+ \partial_t\psi &= R[\psi,u]+\mathcal R_\psi(q),\\
+ z_j&=\Delta^*\psi,\qquad w=\Delta_{\rm pol}u.
+\end{aligned}
+\label{eq:mhd}
+\end{equation}
+Here $q=(\psi,u,z_j,w,\rho,T,V_\parallel)$ and
+$[a,b]=a_Rb_Z-a_Zb_R$. The remainders retain transport, sources,
+heating and resistivity/current drive. Momentum, Lorentz/pressure forces
+and native temporal/weak operators stay numerical.
+
+\section*{2\quad Physical terms selected for learning}
+For $n=0$ and adiabatic index $\gamma$, the selected blocks are
+\begin{equation}
+\begin{aligned}
+ \mathcal A_\rho(q)&=\frac{[R^2\rho,u]-[\rho V_\parallel,\psi]}{R},\\
+ \mathcal A_p(q)&=R[p,u]+2\gamma p\,u_Z\\
+ &\quad-\frac{V_\parallel[p,\psi]+\gamma p[V_\parallel,\psi]}{R}.
+\end{aligned}
+\label{eq:targets}
+\end{equation}
+\section*{3\quad Proposed neural-operator replacement}
+Two independent L-SplineFNOs replace
+$\mathcal A_\rho\mapsto\mathcal N_{\theta_\rho}$ and
+$\mathcal A_p\mapsto\mathcal N_{\theta_p}$:
+\begin{equation}
+\begin{aligned}
+ \partial_t\rho&=\mathcal N_{\theta_\rho}(q)+\mathcal R_\rho(q),\\
+ \partial_t(\rho T)&=\mathcal N_{\theta_p}(q)+\mathcal R_p(q).
+\end{aligned}
+\label{eq:neural}
+\end{equation}
+Networks consume current fields at each integrator stage and return scalar
+RHS terms at native quadrature queries.
+
+With native weak assembly $\mathcal W$ and row injections $E_\rho,E_p$,
+\begin{equation}
+\begin{aligned}
+ M(q)\dot q &= F_{\rm kept}(q;h)
+       +E_\rho\mathcal W[\mathcal N_{\theta_\rho}(q)]\\
+ &\quad+E_p\mathcal W[\mathcal N_{\theta_p}(q)],\qquad C(q)=0.
+\end{aligned}
+\label{eq:assembly}
+\end{equation}
+$M$ stays coupled: \textbf{a pressure residual is not $\dot T$}.
+Magnetic/momentum dynamics, transport, boundaries, constraints and
+step-dependent stabilization ($h$) remain numerical.
+
+\section*{4\quad Evidence and pending comparisons}
+\StudyChecks\ study and \SplineChecks\ spline tests passed.
+Magnetic-loss diagnostics corrected;
+full energy and mesh checks remain open.
+Job \textbf{\RegressionJob}: \textbf{\RegressionState}.
+Gates A/B/C: \GateA/\GateB/\GateC.
+\textbf{ID/OOD errors, completion and speedup: not measured.}
+
+{\footnotesize\textbf{Equation source.} Pinned model303
+\texttt{mod\_elt\_matrix\_fft.f90}, rows 1--7;
+local \texttt{reports/equations.md}. This is a proposed partial replacement.}
+\end{document}

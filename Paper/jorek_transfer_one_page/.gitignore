@@ -1,0 +1,4 @@
+__pycache__/
+.onepage-*/
+*.part
+!results_one_page.pdf

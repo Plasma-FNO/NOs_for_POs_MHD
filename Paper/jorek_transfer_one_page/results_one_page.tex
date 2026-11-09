@@ -1,0 +1,166 @@
+\documentclass[10pt,letterpaper,twocolumn]{article}
+\usepackage[left=0.875in,right=0.875in,top=0.82in,bottom=0.75in,headheight=14pt,headsep=12pt]{geometry}
+\usepackage{amsmath,amssymb,graphicx,booktabs,caption,fancyhdr,array,enumitem}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={JOREK ES to EM OpsSplit: Results and Methods},pdfauthor={JOREK OpsSplit study}}
+\setlength{\columnsep}{0.25in}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[C]{\small\bfseries Physical Operator Learning in Gridded JOREK}
+\fancyfoot[L]{\scriptsize ES--EM transfer\enspace---\enspace results 4 November 2026; methods expanded 9 November 2026; evidence snapshot \SnapshotTime}
+\fancyfoot[R]{\scriptsize\thepage/2}
+\renewcommand{\headrulewidth}{0.4pt}
+\captionsetup{font=small,labelfont=normalfont}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{0pt}{8pt}{4pt}{\normalfont\fontsize{11}{13}\bfseries}}
+\makeatother
+\input{experiment_values.tex}
+\newcount\companionpages
+\AddToHook{shipout/before}{\global\advance\companionpages by 1
+\ifnum\companionpages>2\PackageError{pagelimit}{TWO PAGE LIMIT EXCEEDED}{Shorten the content.}\fi}
+\begin{document}
+\twocolumn[{
+\begin{center}
+{\large\bfseries JOREK OpsSplit: Electrostatic-to-Electromagnetic Transfer}\par
+\vspace{3pt}{\small Model003 $\rightarrow$ model600\enspace---\enspace full-data, three-seed experiment}
+\end{center}\vspace{-3pt}
+\textbf{Result.} In this configuration, ES pretraining gives no consistent advantage over training the same split from scratch.
+Long rollouts expose large errors despite finite outputs. This tests an effective learned split, not recovery of individual physical terms.
+\begin{center}\includegraphics[width=\textwidth]{results_figure.pdf}\end{center}\vspace{-10pt}
+\captionof{figure}{Ten shared EM holdouts; lower is better. Dashed: persistence. Panel (b): seed means; zero-shot uses no EM training.}\vspace{5pt}
+}]
+\section*{1\quad Data and controlled protocol}
+The releases contain 497 ES and 100 EM trajectories on a $100\!\times\!100$ sampled $(R,Z)$ grid,
+with 201 (ES) or 211 (EM) saved frames each.
+Train/validation/test: ES 400/44/53; EM 76/14/10.
+Splits are assigned by a hash of each run's blob geometry, so blob-family hashes prevent cross-regime split leakage.
+Time is the saved-frame index.
+
+Each seed (0, 1, 2) retrains the ES source and every EM arm.
+EM training subsets are nested: cases are ordered by a hash of (seed, family, id) and the first 8/32/64 are taken,
+so $8\subset32\subset64$ within a seed, while different seeds draw different subsets.
+Within a seed, all arms share these subsets, the 14 validation and the 10 test trajectories.
+
+% Defined on page 1 so the full-width table lands at the top of page 2.
+\begin{table*}[t]
+\centering\small
+\caption*{Table 1: How each EM arm is conducted. ``ES'': copied from that seed's ES source checkpoint; ``EM data'': EM training trajectories.
+Parameter counts, learning rates and times come from run provenance. Train: wall time of the 20 epochs with validation on one H100 GPU,
+mean over three seeds and budgets (budget-independent), excluding test rollouts; ``$+$\SourceMinutes'': the reused ES source pretraining.}
+\vspace{-4pt}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lllrcccr@{}}\toprule
+Arm & Fluid $F$ & Correction $M_\varphi$ & Trainable / total & LR & Scaling & EM data & Train (min)\\\midrule
+Zero-shot & ES, frozen & removed; $\psi,j$ persist & \TrainZeroShot\ / \TotalZeroShot & -- & ES & none & 0 $+$\SourceMinutes\\
+Frozen transfer & ES, frozen & random, trained & \TrainFrozen\ / \TotalFrozen & $\LrFrozen$ & ES & 8/32/64 & \MinutesFrozen\ $+$\SourceMinutes\\
+Fine-tuned & ES init, trained & random, trained & \TrainFinetune\ / \TotalFinetune & $\LrFinetune$ & ES & 8/32/64 & \MinutesFinetune\ $+$\SourceMinutes\\
+Scratch split & random, trained & random, trained & \TrainScratch\ / \TotalScratch & $\LrScratch$ & EM & 8/32/64 & \MinutesScratch\\
+Monolithic & \multicolumn{2}{l}{single $W_\varphi(q)$, random, trained} & \TrainMonolithic\ / \TotalMonolithic & $\LrMonolithic$ & EM & 8/32/64 & \MinutesMonolithic\\
+\bottomrule\end{tabular}
+\vspace{-6pt}
+\end{table*}
+
+\section*{2\quad Additive operator formulation}
+For standardized fields $q_f=(\rho,T,u,\omega)$ and $q_b=(\psi,j)$, learn
+\begin{equation*}
+\begin{aligned}
+F_\theta(q_f)&=N_\theta(q_f)+\operatorname{diag}(d_\theta)\Delta_{R,Z}q_f,\\
+G_{\theta,\varphi}(q)&=(F_\theta(q_f),0)+M_\varphi(q),\\
+q^{n+1}&=q^n+G_{\theta,\varphi}(q^n),\\
+\Delta_{R,Z}&=\partial_{RR}+R^{-1}\partial_R+\partial_{ZZ}.
+\end{aligned}
+\end{equation*}
+$q_f$ holds the four fields both regimes share; $q_b$ holds the EM-only flux and current.
+$N$ is the fluid FNO ($4\!\to\!4$), and it sees only $q_f$.
+FNO: width 16, 12 modes/axis, three layers, 20\% domain padding.
+The diffusivity $d_\theta=d_{\max}\,\sigma(\ell_\theta)$ is learned per field.
+Its cap $d_{\max}=0.2/(\Delta R^{-2}+\Delta Z^{-2})$ keeps this positive effective diffusion below the explicit-Euler limit, and $\Delta_{R,Z}$ acts on interior points only; neural stability is not guaranteed.
+$M$ is the EM correction, a $6\!\to\!6$ FNO of the same size.
+It sees all six fields and writes all six channels, so it supplies the magnetic tendency and can also correct the fluid one.
+One step advances one saved frame.
+
+\section*{3\quad How each OpsSplit arm is conducted}
+\textbf{Stage 1: ES source.} For each seed, a four-channel split $F_\theta$ (no $M$) is trained on all 400 ES training
+trajectories with the loop of Section~4. On ES data the third channel is the electrostatic potential $\Phi$.
+The checkpoint $\theta_{\rm ES}$ ($N_\theta$ and $d_\theta$, \TrainSource\ parameters) is kept along with the ES per-field mean and SD.
+
+\textbf{Stage 2: five EM arms.} Table~1 lists what each arm loads, trains and rescales.
+The arms are built as paired contrasts.
+\begin{itemize}[leftmargin=10pt,itemsep=1pt,topsep=2pt,parsep=0pt]
+\item \emph{Zero-shot vs.\ persistence:} does the ES fluid operator alone predict EM fluid evolution?
+\item \emph{Frozen vs.\ fine-tuned:} can the ES fluid operator be reused as is, or must it adapt?
+\item \emph{Fine-tuned vs.\ scratch split:} same architecture, capacity, data and update count, but different initialization.
+The learning rate and shared-field scaling also differ, so this is not a single-variable contrast.
+\item \emph{Scratch split vs.\ monolithic:} does the split structure help compared with one unstructured operator?
+\end{itemize}
+
+\textbf{Zero-shot.} $\theta_{\rm ES}$ is copied into $F$ and nothing is trained.
+The step runs with $M$ removed: $q_f$ advances under $F_{\theta_{\rm ES}}$, while $\psi$ and $j$ keep their frame-0 values.
+No EM trajectory or EM statistic is used.
+
+\textbf{Frozen transfer.} $\theta_{\rm ES}$ is copied and frozen; only a randomly initialized $M_\varphi$ trains.
+$M$ must absorb induction, fluid--magnetic coupling and any ES-to-EM fluid mismatch.
+$d_\theta$ stays at its ES values.
+
+\textbf{Fine-tuned.} Same initialization, but $N_\theta$, $d_\theta$ and $M_\varphi$ all train, at a lower learning rate so the fluid part stays close to $\theta_{\rm ES}$.
+
+\textbf{Scratch split.} The fine-tuned architecture trained from random initialization, with EM statistics for all six fields.
+
+\textbf{Monolithic.} A single FNO $W_\varphi$ ($6\!\to\!6$) with $q^{n+1}=q^n+W_\varphi(q^n)$: no split and no diffusion term.
+
+\textbf{Scaling in transfer.} Transfer arms keep the ES mean/SD for $(\rho,T,u,\omega)$, so the copied network receives the shared fields in the units it was trained on.
+Magnetic scaling uses EM training data only.
+The third channel, however, is $\Phi$ in ES and $u$ in EM.
+Under ES scaling, EM $u$ has a standardized SD of 0.17--0.24, and $\omega$ has 0.4--0.6, rather than 1 (every seed and budget).
+The copied operator therefore sees these two fields at a fraction of the amplitude it was trained on.
+
+\section*{4\quad Common training, selection and evaluation}
+\textbf{Training.} Every trained arm, and the ES source, uses the same loop.
+A sample is a five-frame window $(q^s,\dots,q^{s+\Horizon})$ drawn uniformly, with replacement, from all start frames of the training trajectories.
+The model rolls out freely from $q^s$, and the loss is the standardized squared error averaged over the \Horizon\ steps:
+\begin{equation*}
+\mathcal L=\frac{1}{\Horizon}\sum_{k=1}^{\Horizon}\big\langle\big(G^{k}(q^s)-q^{s+k}\big)^2\big\rangle,
+\end{equation*}
+where $\langle\cdot\rangle$ averages over batch, channels and grid.
+For EM arms, $\psi$ and $j$ enter $\mathcal L$ with the same weight as the shared fields.
+Optimizer: AdamW (weight decay $10^{-4}$), gradient-norm clip 1, batch eight.
+Training runs \Epochs\ epochs of \StepsPerEpoch\ steps, i.e.\ \Updates\ updates whatever the budget.
+With 8 EM cases ($\approx$1.7k windows), each window is drawn about 12 times on average; with 64 cases ($\approx$13k windows), about 1.5 times.
+
+\textbf{Selection.} After each epoch, the same loss on the validation trajectories (windows every 20 frames) picks the best checkpoint.
+EM arms always validate on all 14 EM validation trajectories.
+At the 8-case budget, model selection therefore sees more EM trajectories than training does.
+
+\textbf{Testing.} From frame 0 of each of the 10 EM holdouts, each arm rolls out 100 saved frames autoregressively, without resetting to the truth.
+For field $f$ at horizon $h$, with prediction $\tilde q$ and sums over the grid,
+\begin{equation*}
+E_{h,f}=\Big(\textstyle\sum R\,(\tilde q^{\,h}_f-q^{h}_f)^2\big/\sum R\,(q^{h}_f)^2\Big)^{1/2}
+\end{equation*}
+in unstandardized units; $R$ is the toroidal-volume weight.
+$E_h$ averages $E_{h,f}$ over $(\rho,T,u,\omega)$ and the ten holdouts.
+$\psi$ and $j$ are trained but not scored; persistence predicts $q^0$ at every horizon.
+
+\section*{5\quad Full-study results}
+\begin{center}\small\setlength{\tabcolsep}{2pt}
+\begin{tabular}{lccc}\toprule
+EM cases & 8 & 32 & 64\\\midrule
+\ResultsRows
+\bottomrule\end{tabular}\\[2pt]
+{\small Table 2: $E_{10}$, mean $\pm$ sample SD across three seeds.}\end{center}\vspace{-4pt}
+Zero-shot: $E_{10}=\ZeroTen$ and $E_{100}=\ZeroHundred$; persistence: \PersistenceTen\ and \PersistenceHundred.
+All rollouts remain finite, yet the worst eight-case fine-tuning seed reaches $E_{100}=\texttt{\WorstEight}$.
+Seeds share ten test cases, not 30 independent holdouts.
+
+\section*{6\quad Interpretation and next checks}
+ES has no induction targets: full-EM zero-shot is not established.
+The correction absorbs magnetic effects and mismatch; endpoint data do not identify PDE terms.
+Potential/vorticity and flux/current constraints are not enforced.
+
+Export units and timestamps remain unaudited.
+Next: audit exports/constraints, test transfer with regime-appropriate scaling of $u$ and $\omega$, then select longer-rollout training on validation data.
+
+{\footnotesize\textbf{Sources.} \href{https://zenodo.org/records/11099659}{ES: Zenodo 11099659};
+\href{https://zenodo.org/records/11099527}{EM: 11099527};
+\href{https://doi.org/10.1016/j.cpc.2024.109391}{Pamela et al., CPC 307, 109391}.}
+\end{document}

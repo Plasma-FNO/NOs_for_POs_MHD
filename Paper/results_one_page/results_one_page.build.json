@@ -1,0 +1,9 @@
+{
+  "pages": 2,
+  "page_limit": 2,
+  "pdf_sha256": "7bc6e1cf568dd50524f348d5bde0bd89216afc622281db81b4654f4f1f8c0656",
+  "tex_sha256": "9828cc1c6a4e7a56b2b21ab486606550ca4a803e9d65f80caefcea4a3dab730e",
+  "snapshot_sha256": "1919a270c8b4ac6eb90b280e4ed543870ff743e0fe4226b9832313d18637273a",
+  "captured_utc": "2026-11-09T11:54:52.639986+00:00",
+  "schema": "mastu-opsplit-methods-v1"
+}
