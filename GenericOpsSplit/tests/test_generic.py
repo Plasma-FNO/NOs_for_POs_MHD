@@ -95,6 +95,8 @@ def test_fem_burgers_load_is_energy_neutral():
 @pytest.mark.parametrize('arm', sorted(ARMS))
 @pytest.mark.parametrize('name', ['burgers', 'ns2d', 'burgers_fem'])
 def test_arm_gradients_and_jacobian(arm, name):
+    if arm.startswith('oseen') and name != 'ns2d':
+        pytest.skip('Oseen operator is defined for ns2d only')
     problem = get_problem(name, DEVICE)
     net = dict(CONFIG[name]['net'], modes=4, width=8, layers=2)
     model = StepModel(problem, arm, net, 0.3, DEVICE).to(DEVICE)
@@ -124,11 +126,52 @@ def test_reference_converges_in_time():
 def test_tangent_free_remainder_has_no_linear_response(name):
     problem = get_problem(name, DEVICE)
     net = dict(CONFIG[name]['net'], modes=4, width=8, layers=2)
-    model = StepModel(problem, 'implicit_free_tf', net, 0.3, DEVICE).to(DEVICE)
-    torch.nn.init.normal_(model.net.project[-1].weight)
+    torch.manual_seed(1)
+    tf = StepModel(problem, 'implicit_free_tf', net, 0.3, DEVICE).to(DEVICE)
+    torch.nn.init.normal_(tf.net.project[-1].weight, std=0.1)
+    full = StepModel(problem, 'implicit_free', net, 0.3, DEVICE).to(DEVICE)
+    full.load_state_dict(tf.state_dict())
     grid = make_linear(problem, 'known', DEVICE).grid
     v = torch.randn(1, 1, *grid.shape, device=DEVICE)
     mu = torch.ones(1, device=DEVICE)
-    base = model.load(torch.zeros_like(v), mu)
-    r = [float((model.load(eps*v, mu) - base).norm()) for eps in (0.1, 0.2)]
-    assert r[1]/r[0] > 3.0  # ~4 for a quadratic response, 2 for a linear one: the tangent at 0 is removed
+    response = lambda m, e: float((m.load(e*v, mu) - m.load(torch.zeros_like(v), mu)).norm())
+    # same network; removing the tangent leaves a much smaller, higher-order response at small amplitude
+    assert response(tf, 0.05) < 0.2*response(full, 0.05)
+
+
+@pytest.mark.parametrize('name', ['burgers', 'kdv', 'burgers_fem'])
+@pytest.mark.parametrize('mode', ['struct', 'free'])
+def test_init_from_known_reproduces_operator(name, mode):
+    problem = get_problem(name, DEVICE)
+    lin, true = (make_linear(problem, m, DEVICE).to(DEVICE) for m in (mode, 'known'))
+    lin.init_from(true)
+    q = torch.randn(2, 1, *lin.grid.shape, device=DEVICE)
+    mu = torch.tensor([0.7, 1.3], device=DEVICE)
+    a, b = lin.apply(q, mu), true.apply(q, mu)
+    assert float((a-b).norm()/b.norm()) < 1e-3
+
+
+def test_ros2_is_second_order_with_exact_physics():
+    from gos.models import ARMS
+    ARMS['ros2_exact'] = dict(kind='ros2', linear='known', exact=True)
+    problem = get_problem('burgers_fem', DEVICE)
+    model = StepModel(problem, 'ros2_exact', CONFIG['burgers_fem']['net'], 1.0, DEVICE).to(DEVICE)
+    q0 = problem.initial(2, torch.Generator().manual_seed(0))[:, None, 3::4].float().to(DEVICE)
+    mu = torch.ones(2, device=DEVICE)
+    with torch.no_grad():
+        ref = model(q0, mu, 1, 1, 256)[:, -1]
+        errs = [float((model(q0, mu, 1, 1, s)[:, -1] - ref).norm()) for s in (4, 8, 16)]
+    del ARMS['ros2_exact']
+    assert errs[0]/errs[1] > 2.8 and errs[1]/errs[2] > 2.8, errs  # ~4 asymptotically; 2 would be first order
+
+
+def test_oseen_gmres_converges_and_is_differentiable():
+    problem = get_problem('ns2d', DEVICE)
+    net = dict(CONFIG['ns2d']['net'], modes=4, width=8, layers=2)
+    model = StepModel(problem, 'oseen', net, 0.6, DEVICE).to(DEVICE)
+    q = problem.initial(2, torch.Generator().manual_seed(0))[:, None, ::2, ::2].float().to(DEVICE)
+    mu = torch.ones(2, device=DEVICE)
+    out = model(q, mu, 2)
+    assert float(model.linear.last_residual.max()) < 1e-4
+    out.square().mean().backward()
+    assert all(torch.isfinite(p.grad).all() for p in model.parameters() if p.grad is not None)

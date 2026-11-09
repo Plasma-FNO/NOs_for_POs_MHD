@@ -67,6 +67,19 @@ class FourierLinear(nn.Module):
         qh, fh = self.grid.fft(q), self.grid.fft(load)
         return self.grid.ifft(((1 + (1-theta)*dt*s)*qh + dt*fh)/(1 - theta*dt*s))
 
+    def shifted_solve(self, rhs, mu_t, shift):
+        """Solve (M - shift L) x = rhs."""
+        return self.grid.ifft(self.grid.fft(rhs)/(1 - shift*self.symbol(mu_t).unsqueeze(1)))
+
+    @torch.no_grad()
+    def init_from(self, true):
+        """Warm start: set (O0, O1) to the true operator (projected onto Re <= 0 for struct)."""
+        h = self.h
+        for i, o in enumerate(true.components()):
+            re, im = o.real.float()*h, o.imag.float()*h
+            self.re[i] = torch.log((-re).clamp_min(1e-8)) if self.mode == 'struct' else torch.asinh(re)
+            self.im[i] = torch.asinh(im)
+
 
 class FEMLinear(nn.Module):
     """Tridiagonal operator on a 1D P1 mesh with consistent mass matrix M (SPD)."""
@@ -136,8 +149,108 @@ class FEMLinear(nn.Module):
             + dt*load.squeeze(1)
         return torch.linalg.solve(A, rhs).unsqueeze(1)
 
+    def shifted_solve(self, rhs, mu_t, shift):
+        A = self.mass_dense[None] - shift*FEM1D.dense(self.bands(mu_t))
+        return torch.linalg.solve(A, rhs.squeeze(1)).unsqueeze(1)
+
+    @torch.no_grad()
+    def init_from(self, true):
+        """Warm start from the true operator: O0 = skew advection, O1 = diffusion at mu_ref."""
+        p, g = self.problem, self.grid
+        conductance = p.mu_ref*p.kappa_shape(g.xe.double())/g.dx
+        skew = -p.velocity(g.x[:-1].double() + g.dx/2)/2
+        if self.mode == 'struct':
+            self.conductance[0].fill_(math.log(1e-8))
+            self.conductance[1].copy_(torch.log((conductance/self.unit).clamp_min(1e-8)).float())
+            self.skew[0].copy_(torch.asinh(skew/self.unit).float())
+            self.skew[1].zero_()
+            self.reaction.fill_(math.log(1e-8))
+        else:
+            for i, bands in enumerate(true.components()):
+                for j, band in enumerate(bands):
+                    self.bands_raw[j, i].copy_(torch.asinh(band.float()/self.unit))
+
+
+def gmres(A, b, Minv, iterations, eps=1e-30):
+    """Batched right-preconditioned GMRES from x0 = 0 (differentiable, fixed iteration count).
+    Returns (x, relative residual of the preconditioned least-squares problem)."""
+    B, shape = b.shape[0], b.shape
+    flat = lambda z: z.reshape(B, -1)
+    beta = flat(b).norm(dim=1)
+    V = [flat(b)/beta[:, None].clamp_min(eps)]
+    columns = []
+    for j in range(iterations):
+        w = flat(A(Minv(V[j].view(shape))))
+        h = []
+        for i in range(j+1):  # modified Gram-Schmidt
+            hij = (w*V[i]).sum(1)
+            w = w - hij[:, None]*V[i]
+            h.append(hij)
+        hn = w.norm(dim=1)
+        h.append(hn)
+        V.append(w/hn[:, None].clamp_min(eps))
+        columns.append(torch.stack(h + [torch.zeros_like(hn)]*(iterations-j-1), 1))
+    H = torch.stack(columns, 2)                      # [B, m+1, m]
+    e1 = torch.zeros(B, iterations+1, 1, device=b.device, dtype=b.dtype)
+    e1[:, 0, 0] = beta
+    Q, R = torch.linalg.qr(H)
+    y = torch.linalg.solve_triangular(R, Q.transpose(1, 2) @ e1, upper=True)
+    residual = (e1 - H @ y).squeeze(-1).norm(dim=1)/beta.clamp_min(eps)
+    x = sum(y[:, j]*V[j] for j in range(iterations))
+    return Minv(x.view(shape)), residual
+
+
+class OseenNS(nn.Module):
+    """2D vorticity: L(q_n) = nu lap - u(q_n).grad, re-linearised every step (Picard/Oseen), so the stiff
+    advection is implicit. Solved by GMRES right-preconditioned with (I - dt nu lap)^-1. M = I, theta = 1."""
+
+    def __init__(self, problem, mode, device, iterations=40):
+        super().__init__()
+        if problem.name != 'ns2d' or mode != 'known':
+            raise ValueError('Oseen operator is implemented for the known ns2d operator only')
+        self.problem, self.mode, self.h, self.iterations = problem, mode, problem.h, iterations
+        self.grid = FourierGrid(problem.n, problem.length, problem.dim, device, torch.float32)
+        self.scale, self.last_residual = 1.0, None
+
+    def velocity(self, q):
+        g = self.grid
+        k2 = g.k2.clone()
+        k2[0, 0] = 1.
+        psi = g.fft(q*self.scale)/k2
+        return g.ifft(1j*g.ks[0]*psi), g.ifft(-1j*g.ks[1]*psi)
+
+    def advect(self, u, w, x):
+        g = self.grid
+        xh = g.fft(x)
+        return g.ifft(g.fft(u*g.ifft(1j*g.ks[1]*xh) + w*g.ifft(1j*g.ks[0]*xh))*g.mask)
+
+    def apply(self, q, mu_t):
+        nu = (mu_t*self.problem.mu_ref).view(-1, 1, 1, 1)
+        u, w = self.velocity(q)
+        return self.grid.ifft(-nu*self.grid.k2*self.grid.fft(q)) - self.advect(u, w, q)
+
+    def mass(self, r):
+        return r
+
+    def mass_solve(self, load):
+        return load
+
+    def solve(self, q, load, mu_t, dt, theta):
+        if theta != 1:
+            raise ValueError('Oseen step is backward Euler only')
+        g = self.grid
+        nu = (mu_t*self.problem.mu_ref).view(-1, 1, 1, 1)
+        u, w = self.velocity(q)
+        diag = 1 + dt*nu*g.k2
+        A = lambda x: x + dt*(g.ifft(nu*g.k2*g.fft(x)) + self.advect(u, w, x))
+        Minv = lambda r: g.ifft(g.fft(r)/diag)
+        x, self.last_residual = gmres(A, q + dt*load, Minv, self.iterations)
+        return x
+
 
 def make_linear(problem, mode, device):
+    if mode == 'oseen':
+        return OseenNS(problem, 'known', device)
     return (FourierLinear if problem.space == 'fourier' else FEMLinear)(problem, mode, device)
 
 

@@ -12,6 +12,7 @@ from pathlib import Path
 import torch
 
 from .models import ARMS, StepModel
+from .operators import OseenNS
 from .operators import make_linear
 from .problems import get_problem, PROBLEMS
 
@@ -28,6 +29,9 @@ CONFIG = {
                         horizons=[12, 25, 50, 100], long=500),
 }
 SPLIT_SEEDS = dict(train=1, val=2, test=3)
+# Largest step-Jacobian amplification of the near-exact flow map over h on test states (set from
+# measure_amplification.py); the penalty only acts above what the physics itself does.
+JAC_THRESHOLD = dict(burgers=1.035, kdv=1.40, ks=2.23, ns2d=1.15, burgers_fem=1.021)
 
 
 # ------------------------------------------------------------------------------------------- data
@@ -229,6 +233,21 @@ def validation_multi(model, frames, mu, steps, dt_mults):
     return sum(errs)/len(errs)
 
 
+def amplification(model, q, mu, dt):
+    """One power-iteration estimate of the largest singular value of the step Jacobian per sample, with
+    a graph through the final Jacobian-vector product (used as a training penalty)."""
+    f = lambda x: model.step(x, mu, dt)
+    view = lambda n: n.view(-1, *([1]*(q.ndim-1)))
+    v = torch.randn_like(q)
+    v = v/view(norms(v[:, None])[:, 0])
+    _, Jv = torch.func.jvp(f, (q,), (v,))
+    _, pullback = torch.func.vjp(f, q)
+    w = pullback(Jv.detach())[0].detach()
+    w = w/view(norms(w[:, None])[:, 0])
+    _, Jw = torch.func.jvp(f, (q,), (w,))
+    return norms(Jw[:, None])[:, 0]
+
+
 def train(model, data, cfg, log):
     frames, mu = data['train']
     val_frames, val_mu = data['val']
@@ -249,14 +268,30 @@ def train(model, data, cfg, log):
     opt = torch.optim.Adam(params)
     sched = torch.optim.lr_scheduler.CosineAnnealingLR(opt, cfg['iters'], eta_min=1e-5)
     window, bad, status, t0 = cfg['window'], 0, 'completed', time.time()
+    label_iters = int(cfg.get('label_pretrain', 0.)*cfg['iters'])
+    label_scale = None
     for it in range(1, cfg['iters']+1):
         stride = dt_mults[it % len(dt_mults)]
         b = torch.randint(len(frames), (cfg['batch'],), device=frames.device)
         s = torch.randint(T_train-window*stride+1, (cfg['batch'],), device=frames.device)
         idx = s[:, None] + stride*torch.arange(window+1, device=frames.device)
         clip = frames[b[:, None], idx]
-        pred = model(clip[:, 0], mu[b], window, dt_mult=stride)
-        loss = (pred-clip[:, 1:]).pow(2).mean()
+        loss = torch.zeros((), device=frames.device)
+        if cfg.get('label_weight', 0.) > 0:
+            states = clip[:, :window].flatten(0, 1)
+            mus = mu[b].repeat_interleave(window)
+            with torch.no_grad():
+                target = model.exact_increment(states, mus)
+                if label_scale is None:
+                    label_scale = float(target.pow(2).mean())
+            label = (model.remainder_increment(states, mus) - target).pow(2).mean()/label_scale
+            loss = loss + (label if it <= label_iters else cfg['label_weight']*label)
+        if it > label_iters:
+            pred = model(clip[:, 0], mu[b], window, dt_mult=stride)
+            loss = loss + (pred-clip[:, 1:]).pow(2).mean()
+            if cfg.get('jac_weight', 0.) > 0:
+                sigma = amplification(model, clip[:, 0], mu[b], model.h*stride)
+                loss = loss + cfg['jac_weight']*torch.relu(sigma - cfg['jac_threshold']).pow(2).mean()
         opt.zero_grad(set_to_none=True)
         if not torch.isfinite(loss):
             bad += 1
@@ -275,7 +310,7 @@ def train(model, data, cfg, log):
         if it % 500 == 0 or it == cfg['iters']:
             v = validation_error_(model, val_frames, val_mu, T_train)
             history['val'].append((it, v))
-            if v < best['val']:
+            if v < best['val'] and it > label_iters:
                 best = dict(val=v, iteration=it, state={k: x.detach().clone() for k, x in model.state_dict().items()})
             log(f'it {it} loss {float(loss):.3e} val {v:.4f} ({time.time()-t0:.0f}s)')
     return best, history, dict(status=status, seconds=time.time()-t0)
@@ -306,12 +341,17 @@ def evaluate(model, problem, data, cfg, device):
         out['jacobian_sigma'] = dict(median=float(sigma.median()), max=float(sigma.max()))
     except Exception as exc:  # explicit arms can be non-finite
         out['jacobian_sigma'] = dict(error=repr(exc))
-    out['operator'] = operator_diagnostics(model, problem, device)
+    out['operator'] = operator_diagnostics(model, problem, device) if not isinstance(model.linear, OseenNS) else None
+    if isinstance(model.linear, OseenNS):
+        with torch.no_grad():
+            for dt_mult in (1, 4):
+                model.step(frames[:16, 40], mu[:16], model.h*dt_mult)
+                out[f'gmres_residual_x{dt_mult}'] = float(model.linear.last_residual.max())
     return out
 
 
-def run_name(arm, dt_mults):
-    return arm if dt_mults == [1] else f'{arm}_mdt'
+def run_name(arm, dt_mults, label=False, lip=False, init=False):
+    return arm + '_lab'*label + '_lip'*lip + '_init'*init + ('' if dt_mults == [1] else '_mdt')
 
 
 def run(args):
@@ -322,10 +362,20 @@ def run(args):
     if args.iters is not None:
         cfg['iters'] = args.iters
     cfg['dt_mults'] = [int(x) for x in args.dt_mults.split(',')]
+    if args.labels:
+        cfg.update(label_pretrain=0.4, label_weight=1e-2)
+    if args.jac_weight:
+        cfg.update(jac_weight=args.jac_weight, jac_threshold=args.jac_threshold or JAC_THRESHOLD[args.problem])
+    cfg['init_known'] = bool(args.init_known)
     data, scale = load_data(args.root, problem, device)
     model = StepModel(problem, args.arm, cfg['net'], scale, device).to(device)
-    name = run_name(args.arm, cfg['dt_mults'])
+    if args.init_known:
+        model.init_operator_from_known(device)
+    name = run_name(args.arm, cfg['dt_mults'], args.labels, bool(args.jac_weight), args.init_known)
     out_dir = Path(args.root)/'runs'/args.problem/f'{name}_s{args.seed}'
+    if args.skip_existing and (out_dir/'result.json').exists():
+        print('skip', out_dir.name)
+        return
     out_dir.mkdir(parents=True, exist_ok=True)
     log_file = open(out_dir/'log.txt', 'w')
 
@@ -379,6 +429,11 @@ def main():
     ap.add_argument('--iters', type=int)
     ap.add_argument('--device', default='cuda')
     ap.add_argument('--dt-mults', default='1', help='comma-separated training step multiples, e.g. 1,2,4')
+    ap.add_argument('--labels', action='store_true', help='exact remainder labels: pretrain then regularise N')
+    ap.add_argument('--jac-weight', type=float, default=0., help='weight of the step-amplification penalty')
+    ap.add_argument('--jac-threshold', type=float, help='allowed amplification (default: true flow map, JAC_THRESHOLD)')
+    ap.add_argument('--init-known', action='store_true', help='initialise learned L from the true operator')
+    ap.add_argument('--skip-existing', action='store_true')
     args = ap.parse_args()
     if args.command == 'data':
         generate_data(args.problem, args.root, args.device)

@@ -58,7 +58,7 @@ def main():
         runs[r['problem']][r['arm']].append(r)
     summary, md = {}, []
     for problem in [p for p in PROBLEM_ORDER if p in runs]:
-        arms = [a for a in ARM_ORDER if a in runs[problem]]
+        arms = [a for a in ARM_ORDER if a in runs[problem]] + sorted(a for a in runs[problem] if a not in ARM_ORDER)
         any_run = runs[problem][arms[0]][0]
         horizons = [str(h) for h in any_run['config']['horizons']]
         oods = sorted(any_run['eval']['ood'], key=float)

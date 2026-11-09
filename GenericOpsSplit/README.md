@@ -125,11 +125,12 @@ Findings:
 2. **The stability bound predicts which classical IMEX steps fail.** With exact N, IMEX Euler is stable
    where L is strongly dissipative (Burgers, FEM: sigma_max ~ 1.0) and unstable where it is not: KdV (skew L,
    gamma = 0), KS and NS2D (advective h*l >> 1 + h*gamma).
-3. **The structured guarantee on L is necessary but not the binding constraint.** On KdV every learned arm
-   has sigma_max 1.33-1.41 whatever L is; the explicit remainder's Lipschitz constant decides boundedness.
-   theta = 1/2 (energy-neutral for skew L) is less bounded than theta = 1 (0.56 vs 0.94), as the bound
-   predicts. An unconditionally stable neural operator must also constrain N (l <= gamma) or move more of
-   the dynamics into L.
+3. **The structured guarantee on L does not show up as a measurable gain.** Correction (follow-up): the
+   one-step amplification of the near-exact flow map is itself 1.40 (KdV), 2.2 (KS), 1.15 (NS2D) at the
+   largest test state (`measure_amplification.py`), so the learned models' sigma_max of 1.33-1.41 on KdV is
+   physical, not a defect of N. KdV long-horizon unboundedness is therefore not explained by one-step
+   amplification. theta = 1/2 is less bounded than theta = 1 (0.56 vs 0.94), consistent with backward
+   Euler's extra numerical damping.
 4. **Learned operators are not identified by rollout loss.** The FNO absorbs most linear response. Partial
    exceptions: free L recovers Burgers diffusion for k <~ 20 (low-band error 0.50; 0.40 with a tangent-free
    remainder); struct L recovers about half the FEM advection profile (0.53; 0.35 with multi-step training).
@@ -155,3 +156,35 @@ Findings:
 Next experiments: supervise N with exact remainder labels (available for all five problems; the MAST-U
 recipe) to test identifiability of learned L; penalise sigma_max(DPhi) or spectrally normalise N; SBDF2 /
 Rosenbrock-W steps with multi-step training; warm-start struct L; NS2D with linearised advection in L.
+
+## Follow-up experiments (9-10 November 2026; 171 runs, 3 seeds each)
+
+Flags: `--labels` (exact remainder labels: 40% label-only pretraining of N, then rollout loss + 0.01 x label
+loss), `--jac-weight` (penalty on step-Jacobian amplification above the near-exact flow map's own value,
+`measure_amplification.py`), `--init-known` (learned L initialised from the true operator), arms `ros2_*` /
+`node_rk2` (second order, trained on {h, 2h, 4h}), `oseen*` (NS2D with advection re-linearised every step and
+solved implicitly by batched GMRES). Run names carry suffixes `_lab`, `_lip`, `_init`, `_mdt`.
+
+1. **Warm-started learned operators are the strongest variant.** The structure-constrained L keeps the physics
+   and learns a correction. KdV H=200: 0.10 (free) / 0.12 (struct) vs 0.19 known L and 0.22 free from scratch,
+   bounded 0.96-1.0. FEM: struct_init 0.0039 (known 0.0038) with conductance recovered to 5% (was 97% wrong) and
+   skew to 15%; kappa0 = 0.024 OOD 0.026 vs 0.163 untrained-init struct. Burgers OOD nu = 0.1: 0.014-0.022 vs
+   0.036 known L. NS2D: propagator error 5 -> 0.7, accuracy unchanged. KS: no change.
+2. **Exact remainder labels improve operator recovery but cost accuracy at the coarse step.** Recovery: KdV free
+   0.93 -> 0.44, KS struct 8.6 -> 2.0, FEM skew (free) 0.92 -> 0.44; FEM conductance still not found. Test error
+   worsens (FEM 0.005 -> 0.14; Burgers struct 0.005 -> 0.08): pinning N to the exact nonlinearity leaves only L to
+   absorb the time-discretisation error. KdV OOD improves (free 1.99 -> 0.56).
+3. **The amplification penalty is a null result.** With the threshold at the physical amplification it rarely
+   activates; results match the unpenalised runs on every problem.
+4. **Second-order steps recover most of the accuracy multi-step training costs.** At h / at 4h: Burgers ROS2-known
+   0.012 / 0.012 vs implicit-Euler 0.026 / 0.018; FEM 0.017 / 0.0087 (best 4h of any arm) vs 0.039 / 0.013; KdV
+   ROS2-free 0.53 / 0.27 (best 4h). Explicit Heun with a learned RHS does as well or better elsewhere (Burgers
+   0.009 / 0.009; FEM 0.012 / 0.011), because the network does not represent the stiff modes. ROS2 with the known
+   KS operator is unbounded.
+5. **NS2D with implicit linearised advection.** Without learning (`oseen_exact`) it stabilises the classical
+   scheme (bounded 1.0 vs 0.5; H=80 error 0.52 vs 0.91; 4h 0.66 vs 1.17) and is the most accurate model at H=10
+   (0.108 vs ~0.15 learned), but less accurate than learned models at H=80 (~0.26). The learned `oseen` arm did not
+   train: losses diverged in 2/3 seeds (best checkpoint = initialisation) and reached val 0.67 in the third, so
+   this result is inconclusive. Likely fixes: keep the exact forcing in the physics part so training starts from
+   `oseen_exact`, adjoint (implicit) differentiation instead of backpropagating through 40 GMRES iterations, lower
+   learning rate.
