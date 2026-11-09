@@ -1,0 +1,129 @@
+{
+  "seed": 17,
+  "checkpoint_step": 2000,
+  "checkpoint_sha256": "716c4e20f2ea5bcf6ea1b029b5778d22d5467b705004a1567e32f6501911486d",
+  "source_report_sha256": "9a435a24ff7d6e3530335cb5a9cdf7daed8ddcf80f3d4e30c67605f27bb5b966",
+  "diagnostic_source_sha256": "ffec2485b1d190b6715519974b01f23c0309899a8861346a3fa47f57bdbcd5e4",
+  "job": {
+    "id": 2795887,
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed_seconds": 333,
+    "allocated_cpus": 4,
+    "peak_rss_kib": 9673140
+  },
+  "windows": 16,
+  "independent_trajectories": 8,
+  "horizon": 4,
+  "training_only": true,
+  "retrained": false,
+  "metric": "Future-frame normalized volume MSE, averaged equally over seven fields and sixteen windows",
+  "overall": {
+    "learned_mse": 0.00569454784953788,
+    "native_mse": 0.005691668785049161,
+    "without_linear_mse": 0.005702355852267576,
+    "native_change_percent": -0.0505582631806778
+  },
+  "per_field": [
+    {
+      "field": "psi",
+      "learned_gradient_relative_rms": 0.3578548606261255,
+      "linear_rhs_relative_rms": null,
+      "learned_rollout_mse": 0.0004752711676585947,
+      "native_rollout_mse": 0.00047535723060865737,
+      "without_linear_rollout_mse": 0.00047487033725428706,
+      "native_rollout_change_percent": 0.01810817821890076,
+      "trajectories_with_lower_native_mse": 1
+    },
+    {
+      "field": "u",
+      "learned_gradient_relative_rms": 0.33627317366798243,
+      "linear_rhs_relative_rms": null,
+      "learned_rollout_mse": 0.0074261186662084025,
+      "native_rollout_mse": 0.007424928153182442,
+      "without_linear_rollout_mse": 0.007426584051395907,
+      "native_rollout_change_percent": -0.016031430138296887,
+      "trajectories_with_lower_native_mse": 5
+    },
+    {
+      "field": "zj",
+      "learned_gradient_relative_rms": 0.9999686529807689,
+      "linear_rhs_relative_rms": null,
+      "learned_rollout_mse": 0.0021606312486857596,
+      "native_rollout_mse": 0.0021606462803310396,
+      "without_linear_rollout_mse": 0.002160484566694797,
+      "native_rollout_change_percent": 0.0006957061872148174,
+      "trajectories_with_lower_native_mse": 1
+    },
+    {
+      "field": "w",
+      "learned_gradient_relative_rms": 0.9994905976163568,
+      "linear_rhs_relative_rms": null,
+      "learned_rollout_mse": 0.01615490520506942,
+      "native_rollout_mse": 0.01615484631758901,
+      "without_linear_rollout_mse": 0.016154304143365515,
+      "native_rollout_change_percent": -0.00036451764749978466,
+      "trajectories_with_lower_native_mse": 5
+    },
+    {
+      "field": "rho",
+      "learned_gradient_relative_rms": 0.9777154865984392,
+      "linear_rhs_relative_rms": 0.3663239065563148,
+      "learned_rollout_mse": 0.0015612289266575935,
+      "native_rollout_mse": 0.0015374156508082394,
+      "without_linear_rollout_mse": 0.001607611428751484,
+      "native_rollout_change_percent": -1.5252904582248261,
+      "trajectories_with_lower_native_mse": 8
+    },
+    {
+      "field": "T",
+      "learned_gradient_relative_rms": 0.629748353765235,
+      "linear_rhs_relative_rms": 0.38837095500722696,
+      "learned_rollout_mse": 0.007559600891874278,
+      "native_rollout_mse": 0.007564439498655027,
+      "without_linear_rollout_mse": 0.007568474133475399,
+      "native_rollout_change_percent": 0.06400611421100155,
+      "trajectories_with_lower_native_mse": 1
+    },
+    {
+      "field": "Vpar",
+      "learned_gradient_relative_rms": 0.7729546454618109,
+      "linear_rhs_relative_rms": null,
+      "learned_rollout_mse": 0.004524078840611111,
+      "native_rollout_mse": 0.004524048364169707,
+      "without_linear_rollout_mse": 0.004524162304935643,
+      "native_rollout_change_percent": -0.0006736496528492175,
+      "trajectories_with_lower_native_mse": 4
+    }
+  ],
+  "guards": {
+    "learned": {
+      "steps": 64,
+      "limited_field_steps": 0,
+      "minimum_alpha": 1.0
+    },
+    "native": {
+      "steps": 64,
+      "limited_field_steps": 0,
+      "minimum_alpha": 1.0
+    },
+    "without_linear": {
+      "steps": 64,
+      "limited_field_steps": 0,
+      "minimum_alpha": 1.0
+    }
+  },
+  "interpretation": "Native derivatives substantially change the density/temperature linear branch, but replacing gradients at fixed trained weights gives only a small overall rollout gain. Density improves; temperature worsens slightly.",
+  "next_experiment": "Retrain with native gradients under the same initialization, windows, budget and guards before judging a production replacement.",
+  "limitations": [
+    "One training seed; sixteen four-step training windows from eight trajectories.",
+    "Overlapping windows are not independent uncertainty samples.",
+    "No retraining, long-horizon native-gradient rollout, or held-out native-gradient evaluation.",
+    "CPU solver regression coverage; GPU/cuDSS fallback untested."
+  ],
+  "regression_tests": {
+    "mastu": 341,
+    "blobs_cpu": 136,
+    "total": 477
+  }
+}

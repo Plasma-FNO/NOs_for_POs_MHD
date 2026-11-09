@@ -1,0 +1,59 @@
+{
+  "scope": "Geometry-only boundary approximation diagnosis against unchanged input limiter polygon; no acceptance threshold or physical boundary change.",
+  "results": {
+    "poloidal220": {
+      "restart_sha256": "b167317b01562a3a31ceb2ec3195e50fbe95972f8b088b5554711b31ef79638f",
+      "boundary_edges": 1324,
+      "maximum_distance_to_input_limiter_polygon_m": 0.6089723295715072,
+      "arclength_rms_distance_m": 0.03706622128147442,
+      "distance_quantiles_m": [
+        0.00015917487993565805,
+        0.6089723295715069,
+        0.6089723295715072,
+        0.6089723295715072
+      ],
+      "maximum_point_rz_m": [
+        0.8699723295715072,
+        6.038223874415445e-06
+      ],
+      "fraction_boundary_length_over_1mm": 0.11705301941787738
+    },
+    "poloidal440": {
+      "restart_sha256": "616e2c45a9dd0431a8a2c96c725efefa359e26c8a77698709eecdb0ad78654d5",
+      "boundary_edges": 1764,
+      "maximum_distance_to_input_limiter_polygon_m": 0.6089723295715072,
+      "arclength_rms_distance_m": 0.0350977670024546,
+      "distance_quantiles_m": [
+        0.0001556959342807887,
+        0.6089723295715069,
+        0.6089723295715072,
+        0.6089723295715072
+      ],
+      "maximum_point_rz_m": [
+        0.8699723295715072,
+        6.038223874415445e-06
+      ],
+      "fraction_boundary_length_over_1mm": 0.11015340343850741
+    },
+    "poloidal880": {
+      "restart_sha256": "e718da6ee4301e5a91b69e0951cc4ecda51622d4f7d6985df52285e9ed0fe1e1",
+      "boundary_edges": 2644,
+      "maximum_distance_to_input_limiter_polygon_m": 0.6089723295715072,
+      "arclength_rms_distance_m": 0.03410719420786165,
+      "distance_quantiles_m": [
+        0.0001543031977965302,
+        0.608972329571507,
+        0.6089723295715072,
+        0.6089723295715072
+      ],
+      "maximum_point_rz_m": [
+        0.8699723295715072,
+        6.038223874415445e-06
+      ],
+      "fraction_boundary_length_over_1mm": 0.10683500226795854
+    }
+  },
+  "scientific_gates_passed": [],
+  "status": "invalid_diagnosis",
+  "error": "Topological unshared edges include duplicated axis/seam nodes; native physical boundary flags must filter the edge set. Results must not be used."
+}

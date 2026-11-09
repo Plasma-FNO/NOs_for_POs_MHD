@@ -1,0 +1,355 @@
+{
+  "created_utc": "2026-11-02T21:32:34.391044+00:00",
+  "script_sha256": "f1b6c3a91f2d215d577f6e088e11ab99b3a5ac632d58c14c134b8bca5f6e1e24",
+  "surface_source_sha256": "3fb02ce91c96b552f96da5037ac0b30487de004c0c384c38cd20c6dd5a076eb1",
+  "native_source_hashes": {
+    "models/model303/mod_elt_matrix_fft.f90": "16928a171df02b23dc2ea2371897f4540f2966d18bbcc85882d61d0bc9b7f732",
+    "models/preset_parameters.f90": "b23321614424e8b2f01464db8472b93798d5e815ce72f58b76b03d4bea274317",
+    "diagnostics/mod_integrals3D.f90": "cd68995ec4f763fe02257b42f86672f29cab640a1757ed6bd506b6b500371f96",
+    "models/model303/mod_boundary_conditions.f90": "8c5e8755814414ad7a8418d632869eb9bda5ea4501f59d5778477f1097b26507"
+  },
+  "scope": "Same-time source-derived normalized-profile viscous contributions. Exterior edges are inferred from canonical topology and labels; native modified boundary rows remain unvalidated.",
+  "gate_A_passed": false,
+  "full_energy_acceptance": false,
+  "formulas": {
+    "parallel_boundary_work": "integral(nu_par*Vpar*grad(Vpar).n*dS)/(mu0*time_unit)",
+    "legacy_perpendicular_loss": "-integral(nu(T)*grad(u).grad(w)*dV)/(mu0*time_unit)",
+    "provisional_rhs": "native corrected magnetic RHS - generic perpendicular loss + legacy perpendicular loss - incoming parallel viscous boundary work"
+  },
+  "runs": {
+    "baseline": [
+      {
+        "step": 8,
+        "time_s": 2.343188518713464e-07,
+        "restart_sha256": "d0b799c39a138ffb8ba28d79af36b30556671337f6241c14b0e1fffdc63a7e9d",
+        "minus_dE_dt_W": -3869758.373,
+        "native_magnetic_corrected_rhs_W": 6547914.571,
+        "generic_perpendicular_loss_W": 62419.63795431233,
+        "legacy_model303_perpendicular_loss_W": 218583.95175814716,
+        "incoming_parallel_viscous_boundary_work_W": 4486517.10485855,
+        "provisional_rhs_W": 2217561.779945285,
+        "remaining_net_mismatch_W": -6087320.152945286,
+        "native_snapshot_state_exact": true,
+        "reconstructed_particle_fluxes_per_s": [
+          0.0,
+          5.7742791506955285e+20,
+          8.828500693390942e+22,
+          -3578826.609874751,
+          0.0
+        ],
+        "native_particle_fluxes_per_s": [
+          0.0,
+          5.774279151e+20,
+          8.828500693e+22,
+          -3580077.312,
+          -0.0
+        ],
+        "particle_flux_error_scaled_by_largest_component": 4.428169890957497e-11,
+        "exterior_edges": 528,
+        "unknown_edges": 0,
+        "collapsed_axis_edges": 108,
+        "surface_area_m2": 76.43658083314611,
+        "native_modified_boundary_rows_checked": false
+      },
+      {
+        "step": 16,
+        "time_s": 4.686377037426928e-07,
+        "restart_sha256": "4730ca86601d8bd64e46d0697679fd0bbb4e7ddad81573f5407eeb6da1f1e81b",
+        "minus_dE_dt_W": -2841043.365,
+        "native_magnetic_corrected_rhs_W": 5625739.17,
+        "generic_perpendicular_loss_W": 73525.690939063,
+        "legacy_model303_perpendicular_loss_W": 272788.713880207,
+        "incoming_parallel_viscous_boundary_work_W": 5338408.0862478465,
+        "provisional_rhs_W": 486594.1066932976,
+        "remaining_net_mismatch_W": -3327637.471693298,
+        "native_snapshot_state_exact": true,
+        "reconstructed_particle_fluxes_per_s": [
+          0.0,
+          3.278917279040124e+20,
+          8.645929335972741e+22,
+          -3508253.1806568387,
+          0.0
+        ],
+        "native_particle_fluxes_per_s": [
+          0.0,
+          3.278917279e+20,
+          8.645929336e+22,
+          -3515763.063,
+          -0.0
+        ],
+        "particle_flux_error_scaled_by_largest_component": 3.1526909110514158e-12,
+        "exterior_edges": 528,
+        "unknown_edges": 0,
+        "collapsed_axis_edges": 108,
+        "surface_area_m2": 76.43658083314611,
+        "native_modified_boundary_rows_checked": false
+      },
+      {
+        "step": 24,
+        "time_s": 7.029565556140392e-07,
+        "restart_sha256": "f489abe980fa41f7d54278670e0126102ef90d010bd6997bca29fbd42ac467a1",
+        "minus_dE_dt_W": -2480985.164,
+        "native_magnetic_corrected_rhs_W": 5290230.798,
+        "generic_perpendicular_loss_W": 70992.98827685036,
+        "legacy_model303_perpendicular_loss_W": 268634.0510156131,
+        "incoming_parallel_viscous_boundary_work_W": 5702258.10520285,
+        "provisional_rhs_W": -214386.2444640873,
+        "remaining_net_mismatch_W": -2266598.9195359126,
+        "native_snapshot_state_exact": true,
+        "reconstructed_particle_fluxes_per_s": [
+          0.0,
+          2.2249387733479483e+20,
+          8.488750042152288e+22,
+          1951909.2040960942,
+          0.0
+        ],
+        "native_particle_fluxes_per_s": [
+          0.0,
+          2.224938773e+20,
+          8.488750042e+22,
+          1929811.257,
+          -0.0
+        ],
+        "particle_flux_error_scaled_by_largest_component": 1.794003435136134e-11,
+        "exterior_edges": 528,
+        "unknown_edges": 0,
+        "collapsed_axis_edges": 108,
+        "surface_area_m2": 76.43658083314611,
+        "native_modified_boundary_rows_checked": false
+      },
+      {
+        "step": 32,
+        "time_s": 9.372754074853856e-07,
+        "restart_sha256": "7a6bd2a7080f1732a3cd7d66a1d62f065da546cbe1ce4edd87e48514d5aed741",
+        "minus_dE_dt_W": -2317831.384,
+        "native_magnetic_corrected_rhs_W": 5106235.943,
+        "generic_perpendicular_loss_W": 65343.12582646136,
+        "legacy_model303_perpendicular_loss_W": 243576.42037661665,
+        "incoming_parallel_viscous_boundary_work_W": 5881956.316943263,
+        "provisional_rhs_W": -597487.0793931074,
+        "remaining_net_mismatch_W": -1720344.3046068926,
+        "native_snapshot_state_exact": true,
+        "reconstructed_particle_fluxes_per_s": [
+          0.0,
+          1.679785964238842e+20,
+          8.346648006562153e+22,
+          13705626.46175599,
+          0.0
+        ],
+        "native_particle_fluxes_per_s": [
+          0.0,
+          1.679785964e+20,
+          8.346648007e+22,
+          13703978.29,
+          -0.0
+        ],
+        "particle_flux_error_scaled_by_largest_component": 5.245779498979656e-11,
+        "exterior_edges": 528,
+        "unknown_edges": 0,
+        "collapsed_axis_edges": 108,
+        "surface_area_m2": 76.43658083314611,
+        "native_modified_boundary_rows_checked": false
+      },
+      {
+        "step": 40,
+        "time_s": 1.1715942593567321e-06,
+        "restart_sha256": "d413df1fbabfed88847a9d6bc5b0c71bba7f691955c4a6c2f699ae11d3039359",
+        "minus_dE_dt_W": -2234343.822,
+        "native_magnetic_corrected_rhs_W": 4988141.985,
+        "generic_perpendicular_loss_W": 60759.69014983242,
+        "legacy_model303_perpendicular_loss_W": 215771.68837257446,
+        "incoming_parallel_viscous_boundary_work_W": 5980981.355233245,
+        "provisional_rhs_W": -837827.372010502,
+        "remaining_net_mismatch_W": -1396516.4499894981,
+        "native_snapshot_state_exact": true,
+        "reconstructed_particle_fluxes_per_s": [
+          0.0,
+          1.3830850488089646e+20,
+          8.21629815957873e+22,
+          32182465.454463247,
+          0.0
+        ],
+        "native_particle_fluxes_per_s": [
+          0.0,
+          1.383085049e+20,
+          8.21629816e+22,
+          32163614.54,
+          -0.0
+        ],
+        "particle_flux_error_scaled_by_largest_component": 5.127238260710831e-11,
+        "exterior_edges": 528,
+        "unknown_edges": 0,
+        "collapsed_axis_edges": 108,
+        "surface_area_m2": 76.43658083314611,
+        "native_modified_boundary_rows_checked": false
+      }
+    ],
+    "perturbed": [
+      {
+        "step": 8,
+        "time_s": 2.343188518713464e-07,
+        "restart_sha256": "854306f698021eaf610ab2c0a23a2966faab7439c7edeb4d50bec2f923bd70e3",
+        "minus_dE_dt_W": -3787087.797,
+        "native_magnetic_corrected_rhs_W": 6697209.074,
+        "generic_perpendicular_loss_W": 150353.74216401292,
+        "legacy_model303_perpendicular_loss_W": 281172.5757761232,
+        "incoming_parallel_viscous_boundary_work_W": 4486610.8142793225,
+        "provisional_rhs_W": 2341417.093332788,
+        "remaining_net_mismatch_W": -6128504.890332788,
+        "native_snapshot_state_exact": true,
+        "reconstructed_particle_fluxes_per_s": [
+          0.0,
+          5.7843500188179517e+20,
+          8.828642787634364e+22,
+          -27537690.751679044,
+          0.0
+        ],
+        "native_particle_fluxes_per_s": [
+          0.0,
+          5.784350019e+20,
+          8.828642788e+22,
+          -27557404.54,
+          -0.0
+        ],
+        "particle_flux_error_scaled_by_largest_component": 4.141473875402195e-11,
+        "exterior_edges": 528,
+        "unknown_edges": 0,
+        "collapsed_axis_edges": 108,
+        "surface_area_m2": 76.43658083314611,
+        "native_modified_boundary_rows_checked": false
+      },
+      {
+        "step": 16,
+        "time_s": 4.686377037426928e-07,
+        "restart_sha256": "b697ed4ed04091301885f2841162f8ba4efd27ef7fe5eba7493d2c97d8795eb9",
+        "minus_dE_dt_W": -2700312.011,
+        "native_magnetic_corrected_rhs_W": 5824677.941,
+        "generic_perpendicular_loss_W": 145992.97555113578,
+        "legacy_model303_perpendicular_loss_W": 329804.96487042,
+        "incoming_parallel_viscous_boundary_work_W": 5338544.825528845,
+        "provisional_rhs_W": 669945.1047904389,
+        "remaining_net_mismatch_W": -3370257.115790439,
+        "native_snapshot_state_exact": true,
+        "reconstructed_particle_fluxes_per_s": [
+          0.0,
+          3.304880190539745e+20,
+          8.646305848359257e+22,
+          -51768770.6291204,
+          0.0
+        ],
+        "native_particle_fluxes_per_s": [
+          0.0,
+          3.304880191e+20,
+          8.646305848e+22,
+          -51801632.94,
+          -0.0
+        ],
+        "particle_flux_error_scaled_by_largest_component": 4.1550373467010855e-11,
+        "exterior_edges": 528,
+        "unknown_edges": 0,
+        "collapsed_axis_edges": 108,
+        "surface_area_m2": 76.43658083314611,
+        "native_modified_boundary_rows_checked": false
+      },
+      {
+        "step": 24,
+        "time_s": 7.029565556140392e-07,
+        "restart_sha256": "9a14d7b9323b8c490e232b60baa7c99f9f5c408a255e15d3c92d23219d51eb1c",
+        "minus_dE_dt_W": -2348107.141,
+        "native_magnetic_corrected_rhs_W": 5452534.771,
+        "generic_perpendicular_loss_W": 76579.77868465881,
+        "legacy_model303_perpendicular_loss_W": 282838.8199042657,
+        "incoming_parallel_viscous_boundary_work_W": 5702400.114713313,
+        "provisional_rhs_W": -43606.302493706346,
+        "remaining_net_mismatch_W": -2304500.8385062935,
+        "native_snapshot_state_exact": true,
+        "reconstructed_particle_fluxes_per_s": [
+          0.0,
+          2.269080153179343e+20,
+          8.489382272708965e+22,
+          -64817402.87097259,
+          0.0
+        ],
+        "native_particle_fluxes_per_s": [
+          0.0,
+          2.269080153e+20,
+          8.489382273e+22,
+          -64857096.47,
+          -0.0
+        ],
+        "particle_flux_error_scaled_by_largest_component": 3.428216053806628e-11,
+        "exterior_edges": 528,
+        "unknown_edges": 0,
+        "collapsed_axis_edges": 108,
+        "surface_area_m2": 76.43658083314611,
+        "native_modified_boundary_rows_checked": false
+      },
+      {
+        "step": 32,
+        "time_s": 9.372754074853856e-07,
+        "restart_sha256": "75cd6561631ab940a80ad683973c549c6191828b6a61368c2c35ec5ac98a7998",
+        "minus_dE_dt_W": -2222191.087,
+        "native_magnetic_corrected_rhs_W": 5211488.788,
+        "generic_perpendicular_loss_W": 19650.116732123992,
+        "legacy_model303_perpendicular_loss_W": 219151.81384991965,
+        "incoming_parallel_viscous_boundary_work_W": 5882078.172683996,
+        "provisional_rhs_W": -471087.6875662012,
+        "remaining_net_mismatch_W": -1751103.3994337986,
+        "native_snapshot_state_exact": true,
+        "reconstructed_particle_fluxes_per_s": [
+          0.0,
+          1.7420860028103072e+20,
+          8.347516595510128e+22,
+          -66758640.00171506,
+          0.0
+        ],
+        "native_particle_fluxes_per_s": [
+          0.0,
+          1.742086003e+20,
+          8.347516596e+22,
+          -66771778.39,
+          -0.0
+        ],
+        "particle_flux_error_scaled_by_largest_component": 5.868466548869621e-11,
+        "exterior_edges": 528,
+        "unknown_edges": 0,
+        "collapsed_axis_edges": 108,
+        "surface_area_m2": 76.43658083314611,
+        "native_modified_boundary_rows_checked": false
+      },
+      {
+        "step": 40,
+        "time_s": 1.1715942593567321e-06,
+        "restart_sha256": "3b9ec8df71185f851307d0099a2053b2422441d4fb9ae230be1bc401c56e8fc8",
+        "minus_dE_dt_W": -2187379.11,
+        "native_magnetic_corrected_rhs_W": 5041173.825,
+        "generic_perpendicular_loss_W": -607.1120465852226,
+        "legacy_model303_perpendicular_loss_W": 172151.16523178894,
+        "incoming_parallel_viscous_boundary_work_W": 5981082.322267405,
+        "provisional_rhs_W": -767150.2199890306,
+        "remaining_net_mismatch_W": -1420228.8900109692,
+        "native_snapshot_state_exact": true,
+        "reconstructed_particle_fluxes_per_s": [
+          0.0,
+          1.4604171155159656e+20,
+          8.217362845303188e+22,
+          -56772310.01197229,
+          0.0
+        ],
+        "native_particle_fluxes_per_s": [
+          0.0,
+          1.460417116e+20,
+          8.217362845e+22,
+          -56793063.94,
+          -0.0
+        ],
+        "particle_flux_error_scaled_by_largest_component": 3.689599533831952e-11,
+        "exterior_edges": 528,
+        "unknown_edges": 0,
+        "collapsed_axis_edges": 108,
+        "surface_area_m2": 76.43658083314611,
+        "native_modified_boundary_rows_checked": false
+      }
+    ]
+  }
+}

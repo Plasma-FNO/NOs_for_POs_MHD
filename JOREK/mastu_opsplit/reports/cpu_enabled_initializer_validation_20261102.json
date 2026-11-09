@@ -1,0 +1,136 @@
+{
+  "created_utc": "2026-11-02T17:45:16.306738+00:00",
+  "scope": "Enabled native zero-step initialization validation only; physical pilot and Gates A/B/C remain incomplete",
+  "script_sha256": "56c0698e1f2983bc1954c5ab58322f33074cbe47c18f05bde514b99a681b29d5",
+  "baseline_sha256": "3089280584d6f871926c417cd594145a6e95ab97f0eccab142f4dbcdc46624b7",
+  "enabled_restart_sha256": "cc371c5095d7b1e173c98b3ecefdced88b101a451faf9e7d2ed5ee1fb2065e7b",
+  "enabled_mpi4_restart_sha256": "73562cf08b49a391e29c902a82b40e9444597cdf3c4669b5bb75efdbc128e76a",
+  "parameters": {
+    "amplitudes": [
+      0.05,
+      0.05
+    ],
+    "center_m": [
+      0.95,
+      0.0
+    ],
+    "width_m": [
+      0.08,
+      0.16
+    ],
+    "psi_n_taper": [
+      0.55,
+      0.75
+    ]
+  },
+  "mpi1_mpi4_fields_exact": true,
+  "unselected_fields_exact": true,
+  "boundary_coefficients_exact": true,
+  "affected_elements": 560,
+  "affected_elements_touch_boundary": false,
+  "affected_elements_psi_n_control_hull_max_with_rounding_interval": 0.8088422907789726,
+  "flux_normalization_limitation": "Conservative +/-5e-6 intervals for final printed native axis/boundary flux; runtime initializer itself uses full-precision ES values",
+  "max_nodal_relative_perturbation": [
+    0.048619576575598344,
+    0.048619576575598344
+  ],
+  "metadata": {
+    "time_seconds": 0.0,
+    "steps": 0,
+    "quadrature_order": 8,
+    "mapping_status": "diagnostic_restart_only",
+    "expanded_nodal_dofs": 46324,
+    "canonical_native_dofs": 46203,
+    "native_dof_aliases_verified": true,
+    "minimum_signed_jacobian_m2": 6.314530488518828e-07,
+    "negative_jacobian_samples": 0,
+    "patch_ids_available": false,
+    "native_constraints_available": false
+  },
+  "diagnostics": {
+    "synthetic": false,
+    "scope": "native restart diagnostics; scientific gates remain open",
+    "restart_sha256": "cc371c5095d7b1e173c98b3ecefdced88b101a451faf9e7d2ed5ee1fb2065e7b",
+    "reference_sha256": "3089280584d6f871926c417cd594145a6e95ab97f0eccab142f4dbcdc46624b7",
+    "diagnostic_source_sha256": "830671db304963210d913ec14e202579f8252331bbedee1b6c4c4f5ec059c795",
+    "metadata": {
+      "time_seconds": 0.0,
+      "steps": 0,
+      "quadrature_order": 8,
+      "mapping_status": "diagnostic_restart_only",
+      "expanded_nodal_dofs": 46324,
+      "canonical_native_dofs": 46203,
+      "native_dof_aliases_verified": true,
+      "minimum_signed_jacobian_m2": 6.314530488518828e-07,
+      "negative_jacobian_samples": 0,
+      "patch_ids_available": false,
+      "native_constraints_available": false
+    },
+    "domain": "full wall-extended mesh, including exterior and private-flux regions",
+    "elements": 11257,
+    "quadrature_points": 720448,
+    "volume_m3": 21.651889338636714,
+    "fields": {
+      "psi": {
+        "min": -0.10330459193119522,
+        "max": 0.1233323970614373,
+        "absolute_rms_drift": 0.0,
+        "relative_l2_drift": 0.0
+      },
+      "u": {
+        "min": 0.0,
+        "max": 0.0,
+        "absolute_rms_drift": 0.0,
+        "relative_l2_drift": null
+      },
+      "zj": {
+        "min": -1.1545391300995497e-14,
+        "max": 1.4894285270968397,
+        "absolute_rms_drift": 0.0,
+        "relative_l2_drift": 0.0
+      },
+      "w": {
+        "min": 0.0,
+        "max": 0.0,
+        "absolute_rms_drift": 0.0,
+        "relative_l2_drift": null
+      },
+      "rho": {
+        "min": 0.009999999999804544,
+        "max": 1.0442091512243197,
+        "absolute_rms_drift": 0.005186998298307533,
+        "relative_l2_drift": 0.00947772963269934
+      },
+      "T": {
+        "min": 9.999999999965152e-05,
+        "max": 0.018729898088992447,
+        "absolute_rms_drift": 9.041625803591563e-05,
+        "relative_l2_drift": 0.014662516323196232
+      },
+      "Vpar": {
+        "min": 0.0,
+        "max": 0.0,
+        "absolute_rms_drift": 0.0,
+        "relative_l2_drift": null
+      }
+    },
+    "moments_code_units": {
+      "density": {
+        "initial": 7.223651956400207,
+        "final": 7.247084205282132,
+        "relative_change": 0.0032438230722291904
+      },
+      "pressure": {
+        "initial": 0.06616778659808246,
+        "final": 0.06695406024168032,
+        "relative_change": 0.011883027739371981
+      }
+    },
+    "positive_at_sampled_quadrature": true,
+    "balance_checked": false,
+    "constraints_checked": false
+  },
+  "gate_A_passed": false,
+  "balance_checked": false,
+  "native_constraints_independently_checked": false
+}

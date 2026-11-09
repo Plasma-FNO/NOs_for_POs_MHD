@@ -1,0 +1,56 @@
+{
+  "as_of_utc": "2026-11-02T21:34:24.580065+00:00",
+  "integrated_tests": {
+    "passed": 73,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "wall_seconds": 15.996,
+    "xml": "reports/cpu_energy_surface_tests.xml",
+    "python": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/envs/cfo/bin/python"
+  },
+  "upstream_selected_tests": {
+    "deselected": 57,
+    "passed": 23,
+    "wall_seconds": 55.96
+  },
+  "upstream_tests_evidence": "Historical upstream suite; not rerun here.",
+  "scientific_gates_passed": [],
+  "validation_scope": "Software, unchanged native state, exact FE queries and provisional boundary/energy diagnostics; no accepted dataset or scientific training",
+  "source_sha256": {
+    "src/mastu_opsplit/queries.py": "b2e24b4422b94677819ed6ed642888b2451b5655d2790d3b1c3b60abb5f3b9bc",
+    "src/mastu_opsplit/surface.py": "3fb02ce91c96b552f96da5037ac0b30487de004c0c384c38cd20c6dd5a076eb1",
+    "src/mastu_opsplit/runner.py": "1b02c0fb9a1bbf7620f8bc292503acf197cd570fcad9196eb376e86aa0fee398",
+    "src/mastu_opsplit/restart.py": "830671db304963210d913ec14e202579f8252331bbedee1b6c4c4f5ec059c795",
+    "src/mastu_opsplit/numerical.py": "3c903bbfd3cf4d72bdac1978f706300d45ef6e293e7a3f3e4f53a030b40f90f3",
+    "patches/0005-model303-energy-diagnostics.patch": "36e5ec61e02bc294d5f3479534030a47e53c5ad6a12c945b52505f4e02e2018f",
+    "patches/0006-model303-partition-resistive-loss.patch": "e6efa1c72d2c3b64e7a4f2c6246fcc3e8a7f7fff68f9cf9e5337a86d86201e7b"
+  },
+  "diagnostic_reports": {
+    "cpu_mesh_field_comparison_20261102.json": "cf03846aaee0de871de476e8f8b3ddd0747cd84b8e62df66b3077b4d8ad56a08",
+    "cpu_energy_balance_validation_20261102.json": "c3fc472d98e4af580a36fea3909ccd6292a339bc8d14610741d4b3eb08d49cc7",
+    "cpu_viscous_work_audit_20261102.json": "16f8615a7faa1e0b6e75fe5d2ff0d67cf1b54d59ea84162516b4a08962855c55",
+    "cpu_spatial_refinement_cost_20261102.json": "f3604ec8d28266c032380344c2d733ee1bd31183d69f94b81e2e382a13131273",
+    "cpu_energy_complete_continuation_20261102.json": "65aa4232383a91a416fca2ef22f5557dceb2bbaba8ddfe03370c44132db87b0d",
+    "cpu_energy_continuation_20261102.json": "d738de5c35c7e763008bd010faab0ced279ad16486a2767c974cea05cb30d597"
+  },
+  "new_allocated_cpu_core_hours": 1.2366666666666666,
+  "current_completed_jobs": [
+    {
+      "label": "energy_equilibrium",
+      "job_id": "2768314"
+    },
+    {
+      "label": "energy_complete_equilibrium",
+      "job_id": "2768318"
+    },
+    {
+      "label": "energy_complete_baseline48",
+      "job_id": "2768319"
+    },
+    {
+      "label": "energy_complete_perturbed48",
+      "job_id": "2768320"
+    }
+  ]
+}

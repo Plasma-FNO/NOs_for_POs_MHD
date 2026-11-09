@@ -1,0 +1,91 @@
+{
+  "status": "completed",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/exact_core_poloidal_crossing_20261103",
+  "budget": {
+    "authorization": "User requested numerical convergence and completion of the science plan.",
+    "scope": "One three-step closed-core poloidal440 proof using the exact-flux crossing binary; retain the original divertor-leg and wall counts to isolate the closed-core poloidal direction. Divertor-leg refinement remains separately unqualified.",
+    "allocations_max": 1,
+    "attempts_each_max": 1,
+    "mpi_ranks": 4,
+    "threads": 1,
+    "memory_GiB": 256,
+    "wall_hours_max": 3,
+    "rank_CPU_hours_max": 12,
+    "node_hours_max": 3,
+    "conservative_resource_hours_max": 768,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+    "equilibrium_tolerance": 1e-10,
+    "physics_changed": false,
+    "spatial_targets_changed": false
+  },
+  "manifest_sha256": "7f900cc6f2f019967711fa7ddfc2e98e49f88a13014a8d75b26a80687b7a47d5",
+  "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_exact_core_poloidal_crossing_20261103.sbatch",
+  "script_sha256": "e78c66870d2df1531a0f981fb610abf818745491bac88f5b8ff540a602b63869",
+  "scheduler_preflight": "sbatch: Job 2771341 to start at 2026-11-03T22:09:35 a using 4 processors on nodes r354c01s10 in partition dcgp_fua_prod\n",
+  "scientific_gates_passed": [],
+  "job_id": "2771342",
+  "stage_results": {
+    "core_poloidal440": {
+      "stage": "core_poloidal440",
+      "status": "completed",
+      "returncode": 0,
+      "process_wall_seconds": 2034.9627814790001,
+      "binary_sha256": "c67571ee579eaf8f5190d9038796affcbd5de7c3d030c5d765b93b8799d166ff",
+      "scientific_gates_passed": [],
+      "initial": {
+        "health": {
+          "steps": 0,
+          "final_time_s": 0.0,
+          "restart_sha256": "1cd39fc161dfbdae5625a5dcfc301cac87cbf022811e96eb60f9f432d9f1a4a0"
+        },
+        "metadata": {
+          "time_seconds": 0.0,
+          "steps": 0,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 361368,
+          "canonical_native_dofs": 360917,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 9.591795047498284e-09,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 61,
+        "minimum_density": 0.009999999999999992,
+        "minimum_temperature": 9.999999999999996e-05,
+        "restart_sha256": "1cd39fc161dfbdae5625a5dcfc301cac87cbf022811e96eb60f9f432d9f1a4a0"
+      },
+      "final": {
+        "health": {
+          "steps": 3,
+          "final_time_s": 8.78695694517549e-08,
+          "restart_sha256": "c60db812b9166635d8231c7fbf7b67ff58e6cf98ecc4266eb593fbe52d53f266"
+        },
+        "metadata": {
+          "time_seconds": 8.78695694517549e-08,
+          "steps": 3,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 361368,
+          "canonical_native_dofs": 360917,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 9.591795047498284e-09,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 131,
+        "minimum_density": 0.008299020114823164,
+        "minimum_temperature": 9.714260012491993e-05,
+        "restart_sha256": "c60db812b9166635d8231c7fbf7b67ff58e6cf98ecc4266eb593fbe52d53f266"
+      },
+      "workspace_retries": 0,
+      "equilibrium_summary": {
+        "iterations": 166,
+        "last_raw_update": 9.9e-11,
+        "converged": true
+      }
+    }
+  }
+}

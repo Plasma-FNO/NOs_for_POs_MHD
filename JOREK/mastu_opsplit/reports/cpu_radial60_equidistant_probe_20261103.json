@@ -1,0 +1,24 @@
+{
+  "budget": {
+    "authorization": "Current explicit diagnosis and next required refinement request",
+    "scope": "One parallel native3-step fallback at core60 original wall counts with equidistant wall spacing. Priority: healthy original-wall candidates in2770618, then this candidate; full48-step errors are not used for selection.",
+    "allocations_max": 1,
+    "attempts_max": 1,
+    "mpi_ranks": 4,
+    "threads": 1,
+    "memory_GiB": 256,
+    "wall_seconds": 7200,
+    "process_timeout_seconds": 6600,
+    "rank_CPU_hours_max": 8,
+    "node_hours_max": 2,
+    "conservative_resource_hours_max": 512,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+    "equil_accuracy": 1e-10,
+    "amix": 0.5,
+    "physics_changed": false
+  },
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/radial60_equidistant_probe_20261103",
+  "manifest_sha256": "b3f314a34c3973dd23142ede705178d37fa34f7b561d58076aa959409a84ee3d",
+  "script_sha256": "17b94864bc9f362cf7f0559df38582826c14f2bc838b9c0a8e2ce202e6895472",
+  "job_id": "2770937"
+}

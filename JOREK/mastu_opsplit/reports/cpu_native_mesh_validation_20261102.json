@@ -1,0 +1,90 @@
+{
+  "coarse_native_equality": {
+    "boundary": true,
+    "constrained": true,
+    "n_sons": true,
+    "size": true,
+    "values": true,
+    "vertex": true,
+    "x": true
+  },
+  "created_utc": "2026-11-02T17:21:31.845235+00:00",
+  "meshes": {
+    "axis_order_equilibrium": {
+      "density_min": 0.006232397363124541,
+      "elements": 2715,
+      "full_wall_volume_m3": 21.66354552616525,
+      "metadata": {
+        "canonical_native_dofs": 11437,
+        "expanded_nodal_dofs": 11504,
+        "mapping_status": "diagnostic_restart_only",
+        "minimum_signed_jacobian_m2": 5.338590873957931e-06,
+        "native_constraints_available": false,
+        "native_dof_aliases_verified": true,
+        "negative_jacobian_samples": 0,
+        "patch_ids_available": false,
+        "quadrature_order": 8,
+        "steps": 0,
+        "time_seconds": 0.0
+      },
+      "native_integral_checks": {
+        "density": {
+          "absolute_difference": 1.6806608380548482e-06,
+          "native_printed": 7.22821,
+          "reconstructed": 7.228211680660838,
+          "rounding_tolerance": 5.1e-06
+        },
+        "pressure": {
+          "absolute_difference": 3.5144350336441255e-06,
+          "native_printed": 0.06622,
+          "reconstructed": 0.06621648556496636,
+          "rounding_tolerance": 5.1e-06
+        }
+      },
+      "nodes": 2876,
+      "positive_density_temperature_at_quadrature": true,
+      "query_points": 173760,
+      "restart_sha256": "92548aea2966e2167048806afbfcdd76cb4053919d2f70cee21a4af5ae52a71e",
+      "temperature_min": 8.847847940441061e-05
+    },
+    "mesh2_axis_order_equilibrium": {
+      "density_min": 0.009999999999804544,
+      "elements": 11257,
+      "full_wall_volume_m3": 21.651889338636714,
+      "metadata": {
+        "canonical_native_dofs": 46203,
+        "expanded_nodal_dofs": 46324,
+        "mapping_status": "diagnostic_restart_only",
+        "minimum_signed_jacobian_m2": 6.314530488518828e-07,
+        "native_constraints_available": false,
+        "native_dof_aliases_verified": true,
+        "negative_jacobian_samples": 0,
+        "patch_ids_available": false,
+        "quadrature_order": 8,
+        "steps": 0,
+        "time_seconds": 0.0
+      },
+      "native_integral_checks": {
+        "density": {
+          "absolute_difference": 1.9564002071703612e-06,
+          "native_printed": 7.22365,
+          "reconstructed": 7.223651956400207,
+          "rounding_tolerance": 5.1e-06
+        },
+        "pressure": {
+          "absolute_difference": 2.213401917541824e-06,
+          "native_printed": 0.06617,
+          "reconstructed": 0.06616778659808246,
+          "rounding_tolerance": 5.1e-06
+        }
+      },
+      "nodes": 11581,
+      "positive_density_temperature_at_quadrature": true,
+      "query_points": 720448,
+      "restart_sha256": "3089280584d6f871926c417cd594145a6e95ab97f0eccab142f4dbcdc46624b7",
+      "temperature_min": 9.999999999965152e-05
+    }
+  },
+  "reader_sha256": "830671db304963210d913ec14e202579f8252331bbedee1b6c4c4f5ec059c795",
+  "scope": "Native unperturbed equilibrium/mesh diagnostics only; Gates A/B/C remain pending"
+}

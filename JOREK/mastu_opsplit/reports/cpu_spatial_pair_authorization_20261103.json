@@ -1,0 +1,35 @@
+{
+  "created_utc": "2026-11-03T10:05:42.609131+00:00",
+  "approval_source": "Explicit user: Can you now run the refined baseline and perturbed cases to the same final time as the existing runs and check spatial convergence?",
+  "scope": "Two refined 48-step cases and one dependent spatial-analysis allocation; no production or training.",
+  "slurm_account": "fupa2_fauna",
+  "partition": "dcgp_fua_prod",
+  "selected_raw_credit_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+  "remaining_local_resource_hours": 26481732,
+  "monthly_remaining_local_resource_hours": 2531290,
+  "simulation_allocations_max": 2,
+  "analysis_allocations_max": 1,
+  "concurrent_simulation_allocations_max": 2,
+  "simulation": {
+    "nodes": 1,
+    "mpi_ranks": 4,
+    "omp_threads": 1,
+    "memory_GiB": 128,
+    "wall_seconds": 7200,
+    "process_timeout_seconds": 5400,
+    "attempts": 1
+  },
+  "analysis": {
+    "nodes": 1,
+    "cpus": 1,
+    "threads": 1,
+    "memory_GiB": 64,
+    "wall_seconds": 3600
+  },
+  "requested_cpu_core_hours_max": 17,
+  "requested_node_hours_max": 5,
+  "conservative_local_resource_hours_max": 1280,
+  "billing_note": "Shared-project resource-hours include memory and differ from rank CPU-hours.",
+  "scientific_training_enabled": false,
+  "production_ensemble_enabled": false
+}

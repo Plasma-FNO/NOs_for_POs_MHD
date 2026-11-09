@@ -1,0 +1,83 @@
+{
+  "balance_checked": false,
+  "constraints_checked": false,
+  "diagnostic_source_sha256": "830671db304963210d913ec14e202579f8252331bbedee1b6c4c4f5ec059c795",
+  "domain": "full wall-extended mesh, including exterior and private-flux regions",
+  "elements": 11257,
+  "fields": {
+    "T": {
+      "absolute_rms_drift": 4.82594206001047e-07,
+      "max": 0.017999125503871408,
+      "min": 8.95964553963781e-05,
+      "relative_l2_drift": 7.823435639009972e-05
+    },
+    "Vpar": {
+      "absolute_rms_drift": 1.0871151387867838e-05,
+      "max": 0.03387042769354037,
+      "min": -0.033870835174761395,
+      "relative_l2_drift": 0.0012616341468293373
+    },
+    "psi": {
+      "absolute_rms_drift": 6.054033827689938e-09,
+      "max": 0.12333240859260418,
+      "min": -0.10330462190220016,
+      "relative_l2_drift": 1.3810915031243795e-07
+    },
+    "rho": {
+      "absolute_rms_drift": 1.9260542755082413e-06,
+      "max": 0.9999937066861724,
+      "min": 0.004381279546626406,
+      "relative_l2_drift": 3.527706342994363e-06
+    },
+    "u": {
+      "absolute_rms_drift": 2.451604906911458e-08,
+      "max": 9.754292807340134e-05,
+      "min": -9.831563764563125e-05,
+      "relative_l2_drift": 0.0021537242346262343
+    },
+    "w": {
+      "absolute_rms_drift": 2.647724050634877e-06,
+      "max": 0.029756249587311285,
+      "min": -0.029690805407874818,
+      "relative_l2_drift": 0.0011456665488941118
+    },
+    "zj": {
+      "absolute_rms_drift": 6.49032969230626e-06,
+      "max": 1.4854082514063094,
+      "min": -0.0007900904235979961,
+      "relative_l2_drift": 1.3913458232943613e-05
+    }
+  },
+  "metadata": {
+    "canonical_native_dofs": 46203,
+    "expanded_nodal_dofs": 46324,
+    "mapping_status": "diagnostic_restart_only",
+    "minimum_signed_jacobian_m2": 6.314530488518828e-07,
+    "native_constraints_available": false,
+    "native_dof_aliases_verified": true,
+    "negative_jacobian_samples": 0,
+    "patch_ids_available": false,
+    "quadrature_order": 8,
+    "steps": 48,
+    "time_seconds": 1.4059131112280784e-06
+  },
+  "moments_code_units": {
+    "density": {
+      "final": 7.222037494139331,
+      "initial": 7.222026556906946,
+      "relative_change": 1.5144270515310761e-06
+    },
+    "pressure": {
+      "final": 0.06617164899708108,
+      "initial": 0.06617143731865541,
+      "relative_change": 3.1989395161140244e-06
+    }
+  },
+  "positive_at_sampled_quadrature": true,
+  "quadrature_points": 720448,
+  "reference_sha256": "95c50f6d65a8cdf64f35acc6d18620ba793b45d6cd7452db01bd4875ee17f49b",
+  "restart_sha256": "807422e4b1b6b844442348c597c4003ad514c97e1c1bc175103b6258c4e2ac71",
+  "scope": "native restart diagnostics; scientific gates remain open",
+  "synthetic": false,
+  "volume_m3": 21.651889338636714
+}

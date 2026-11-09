@@ -1,0 +1,11 @@
+--- a/models/model303/initialise_parameters.f90
++++ b/models/model303/initialise_parameters.f90
+@@ -17,7 +17,7 @@
+ integer :: ierr,err,i
+ 
+ ! --- Namelist with input parameters.
+-namelist /in1/  opsplit_amplitude, opsplit_center, opsplit_width, opsplit_psin_taper, &
++namelist /in1/  gamma, opsplit_amplitude, opsplit_center, opsplit_width, opsplit_psin_taper, &
+                 tstep, nstep, tstep_n, nstep_n,                     &
+                 rst_hdf5, rst_hdf5_version, keep_current_prof,      &
+                 eta, visco, visco_par,                              &

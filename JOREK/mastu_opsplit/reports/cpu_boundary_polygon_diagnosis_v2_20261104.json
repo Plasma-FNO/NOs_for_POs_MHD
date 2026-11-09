@@ -1,0 +1,57 @@
+{
+  "scope": "Native positive-boundary-flag-filtered geometry-only boundary approximation diagnosis against unchanged input limiter polygon; no acceptance threshold or physical boundary change.",
+  "results": {
+    "poloidal220": {
+      "restart_sha256": "b167317b01562a3a31ceb2ec3195e50fbe95972f8b088b5554711b31ef79638f",
+      "boundary_edges": 1074,
+      "maximum_distance_to_input_limiter_polygon_m": 0.023202430502393477,
+      "arclength_rms_distance_m": 0.0013421103540559192,
+      "distance_quantiles_m": [
+        4.317081673703656e-05,
+        0.0010656671902387854,
+        0.009506218199191077,
+        0.022227936234326173
+      ],
+      "maximum_point_rz_m": [
+        0.4280459472001612,
+        1.3635880418331028
+      ],
+      "fraction_boundary_length_over_1mm": 0.05782001582263079
+    },
+    "poloidal440": {
+      "restart_sha256": "616e2c45a9dd0431a8a2c96c725efefa359e26c8a77698709eecdb0ad78654d5",
+      "boundary_edges": 1294,
+      "maximum_distance_to_input_limiter_polygon_m": 0.023202430502393477,
+      "arclength_rms_distance_m": 0.0013303290011315177,
+      "distance_quantiles_m": [
+        5.570596418383217e-06,
+        0.0009247118935399116,
+        0.008191665096985712,
+        0.02182174018481629
+      ],
+      "maximum_point_rz_m": [
+        0.4280459472001612,
+        1.3635880418331028
+      ],
+      "fraction_boundary_length_over_1mm": 0.05614784710064761
+    },
+    "poloidal880": {
+      "restart_sha256": "e718da6ee4301e5a91b69e0951cc4ecda51622d4f7d6985df52285e9ed0fe1e1",
+      "boundary_edges": 1734,
+      "maximum_distance_to_input_limiter_polygon_m": 0.023202430502393477,
+      "arclength_rms_distance_m": 0.001326501253608612,
+      "distance_quantiles_m": [
+        2.220446049250313e-16,
+        0.0007832146031686371,
+        0.0064380568828101645,
+        0.020954467260953433
+      ],
+      "maximum_point_rz_m": [
+        0.4280459472001612,
+        1.3635880418331028
+      ],
+      "fraction_boundary_length_over_1mm": 0.0554658310856724
+    }
+  },
+  "scientific_gates_passed": []
+}

@@ -1,0 +1,187 @@
+{
+  "created_utc": "2026-11-02T20:29:34.996814+00:00",
+  "script_sha256": "1f32bc5b4a17b073b29ba717959ed5290b5fb952e60ecb37495dd2d690302ffc",
+  "numerical_source_sha256": "3c903bbfd3cf4d72bdac1978f706300d45ef6e293e7a3f3e4f53a030b40f90f3",
+  "scope": "Source-derived interior weak current/vorticity relations only; native modified rows and full constraint elimination remain unvalidated",
+  "scientific_threshold_ratified": false,
+  "gate_A_passed": false,
+  "gate_B_passed": false,
+  "runs": {
+    "cpu_fine_mpi4_equilibrium": {
+      "restart_sha256": "0d172e8decfad130258735c2910bf8c5ab542c2b009e6351c4a0bf84a270b63f",
+      "metadata": {
+        "time_seconds": 0.0,
+        "steps": 0,
+        "quadrature_order": 8,
+        "mapping_status": "diagnostic_restart_only",
+        "expanded_nodal_dofs": 46324,
+        "canonical_native_dofs": 46203,
+        "native_dof_aliases_verified": true,
+        "minimum_signed_jacobian_m2": 6.314530488518828e-07,
+        "negative_jacobian_samples": 0,
+        "patch_ids_available": false,
+        "native_constraints_available": false
+      },
+      "interior_dofs": 43766,
+      "excluded_boundary_or_axis_dofs": 2437,
+      "quadrature_checks": {
+        "4": {
+          "current": {
+            "relative_residual_to_component_norms": 4.6351140407754803e-05,
+            "absolute_l2_residual": 2.8938467243528915e-05,
+            "component_norm_sum": 0.6243312891323672
+          },
+          "vorticity": {
+            "relative_residual_to_component_norms": null,
+            "absolute_l2_residual": 0.0,
+            "component_norm_sum": 0.0
+          }
+        },
+        "8": {
+          "current": {
+            "relative_residual_to_component_norms": 5.311791708498906e-05,
+            "absolute_l2_residual": 3.3163179595705225e-05,
+            "component_norm_sum": 0.624331325767987
+          },
+          "vorticity": {
+            "relative_residual_to_component_norms": null,
+            "absolute_l2_residual": 0.0,
+            "component_norm_sum": 0.0
+          }
+        }
+      }
+    },
+    "cpu_fine_initializer_mpi4": {
+      "restart_sha256": "73562cf08b49a391e29c902a82b40e9444597cdf3c4669b5bb75efdbc128e76a",
+      "metadata": {
+        "time_seconds": 0.0,
+        "steps": 0,
+        "quadrature_order": 8,
+        "mapping_status": "diagnostic_restart_only",
+        "expanded_nodal_dofs": 46324,
+        "canonical_native_dofs": 46203,
+        "native_dof_aliases_verified": true,
+        "minimum_signed_jacobian_m2": 6.314530488518828e-07,
+        "negative_jacobian_samples": 0,
+        "patch_ids_available": false,
+        "native_constraints_available": false
+      },
+      "interior_dofs": 43766,
+      "excluded_boundary_or_axis_dofs": 2437,
+      "quadrature_checks": {
+        "4": {
+          "current": {
+            "relative_residual_to_component_norms": 4.6351140407754803e-05,
+            "absolute_l2_residual": 2.8938467243528915e-05,
+            "component_norm_sum": 0.6243312891323672
+          },
+          "vorticity": {
+            "relative_residual_to_component_norms": null,
+            "absolute_l2_residual": 0.0,
+            "component_norm_sum": 0.0
+          }
+        },
+        "8": {
+          "current": {
+            "relative_residual_to_component_norms": 5.311791708498906e-05,
+            "absolute_l2_residual": 3.3163179595705225e-05,
+            "component_norm_sum": 0.624331325767987
+          },
+          "vorticity": {
+            "relative_residual_to_component_norms": null,
+            "absolute_l2_residual": 0.0,
+            "component_norm_sum": 0.0
+          }
+        }
+      }
+    },
+    "cpu_fine_mpi4_baseline96": {
+      "restart_sha256": "95c50f6d65a8cdf64f35acc6d18620ba793b45d6cd7452db01bd4875ee17f49b",
+      "metadata": {
+        "time_seconds": 1.4059131112280784e-06,
+        "steps": 96,
+        "quadrature_order": 8,
+        "mapping_status": "diagnostic_restart_only",
+        "expanded_nodal_dofs": 46324,
+        "canonical_native_dofs": 46203,
+        "native_dof_aliases_verified": true,
+        "minimum_signed_jacobian_m2": 6.314530488518828e-07,
+        "negative_jacobian_samples": 0,
+        "patch_ids_available": false,
+        "native_constraints_available": false
+      },
+      "interior_dofs": 43766,
+      "excluded_boundary_or_axis_dofs": 2437,
+      "quadrature_checks": {
+        "4": {
+          "current": {
+            "relative_residual_to_component_norms": 5.491625095726362e-13,
+            "absolute_l2_residual": 3.4293128247500715e-13,
+            "component_norm_sum": 0.624462297584516
+          },
+          "vorticity": {
+            "relative_residual_to_component_norms": 3.309400107820353e-11,
+            "absolute_l2_residual": 3.015619061939333e-14,
+            "component_norm_sum": 0.0009112283083611455
+          }
+        },
+        "8": {
+          "current": {
+            "relative_residual_to_component_norms": 2.625063477428856e-05,
+            "absolute_l2_residual": 1.6392532680723097e-05,
+            "component_norm_sum": 0.6244623347843353
+          },
+          "vorticity": {
+            "relative_residual_to_component_norms": 4.245988547690094e-05,
+            "absolute_l2_residual": 3.8690577818728606e-08,
+            "component_norm_sum": 0.0009112266174099101
+          }
+        }
+      }
+    },
+    "cpu_fine_perturbed96": {
+      "restart_sha256": "6f156fe76643923e323f94ef33cf17cc25e6b255720673a96b47976d8b8b2411",
+      "metadata": {
+        "time_seconds": 1.4059131112280784e-06,
+        "steps": 96,
+        "quadrature_order": 8,
+        "mapping_status": "diagnostic_restart_only",
+        "expanded_nodal_dofs": 46324,
+        "canonical_native_dofs": 46203,
+        "native_dof_aliases_verified": true,
+        "minimum_signed_jacobian_m2": 6.314530488518828e-07,
+        "negative_jacobian_samples": 0,
+        "patch_ids_available": false,
+        "native_constraints_available": false
+      },
+      "interior_dofs": 43766,
+      "excluded_boundary_or_axis_dofs": 2437,
+      "quadrature_checks": {
+        "4": {
+          "current": {
+            "relative_residual_to_component_norms": 6.056228815369882e-13,
+            "absolute_l2_residual": 3.781114522647875e-13,
+            "component_norm_sum": 0.6243348192280851
+          },
+          "vorticity": {
+            "relative_residual_to_component_norms": 6.044841119260071e-12,
+            "absolute_l2_residual": 8.753469793813185e-15,
+            "component_norm_sum": 0.0014480893080750928
+          }
+        },
+        "8": {
+          "current": {
+            "relative_residual_to_component_norms": 2.6244349729569243e-05,
+            "absolute_l2_residual": 1.638526230695918e-05,
+            "component_norm_sum": 0.624334855913693
+          },
+          "vorticity": {
+            "relative_residual_to_component_norms": 2.799695197461285e-05,
+            "absolute_l2_residual": 4.0542081832709e-08,
+            "component_norm_sum": 0.0014480891301835949
+          }
+        }
+      }
+    }
+  }
+}

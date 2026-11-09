@@ -1,0 +1,44 @@
+{
+  "created_utc": "2026-11-02T20:27:09.428332+00:00",
+  "script_sha256": "6882ae14e0bc1716153a4ed82b66d4ee5fe57ece29f29cc40ed58fb18edce9b6",
+  "source_hashes": {
+    "models/model303/mod_elt_matrix_fft.f90": "16928a171df02b23dc2ea2371897f4540f2966d18bbcc85882d61d0bc9b7f732",
+    "models/mod_plasma_functions.f90": "1940e414f78a66c98fc08758d42cb3a814a955afde66938a31b252ca474d73d9",
+    "models/corr_neg_include.f90": "5be1a4cb976426438068aaddb4c4aec52eb2157ed775b6cd53f4514203270c73",
+    "diagnostics/mod_integrals3D.f90": "cd68995ec4f763fe02257b42f86672f29cab640a1757ed6bd506b6b500371f96",
+    "communication/live_data.f90": "f6436b327797144d29c9daef6491f8be7a9d5f7f85de29eb6140e5529e09b7f6"
+  },
+  "findings": [
+    "Pinned model303 evolves induction with eta(T); eta_ohmic=0 disables thermal Ohmic heating, not resistive magnetic loss.",
+    "Native J2_tot uses eta_T_ohm, so native ohmic_tot_t is zero here. The live-data balance consequently omits resistive loss.",
+    "Generic diagnostics apply eta_coul_log_dep=true to magnetic source power; legacy model303 element assembly does not use this flag.",
+    "Both diagnostic laws need reconciliation before native energy-conservation columns can approve physical acceptance."
+  ],
+  "scope": "Endpoint model303 resistive-loss estimate only, not an independent complete energy balance or a validated source-power correction",
+  "physical_acceptance": false,
+  "gate_A_passed": false,
+  "runs": {
+    "cpu_fine_mpi4_baseline96": {
+      "restart_sha256": "95c50f6d65a8cdf64f35acc6d18620ba793b45d6cd7452db01bd4875ee17f49b",
+      "time_s": 1.4059131112280784e-06,
+      "resistive_loss_W_by_quadrature_order": {
+        "4": 317773876.413753,
+        "8": 317773877.9938944
+      },
+      "q4_q8_relative_difference": 4.972534039324377e-09,
+      "native_generic_magnetic_source_W_at_final_time": 296801109.2,
+      "source_power_limitation": "Generic source power uses a different resistivity law; it is not a matching sink/source pair."
+    },
+    "cpu_fine_perturbed96": {
+      "restart_sha256": "6f156fe76643923e323f94ef33cf17cc25e6b255720673a96b47976d8b8b2411",
+      "time_s": 1.4059131112280784e-06,
+      "resistive_loss_W_by_quadrature_order": {
+        "4": 316425013.78078437,
+        "8": 316425015.3363073
+      },
+      "q4_q8_relative_difference": 4.915929029972264e-09,
+      "native_generic_magnetic_source_W_at_final_time": 295449096.9,
+      "source_power_limitation": "Generic source power uses a different resistivity law; it is not a matching sink/source pair."
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "scope": "Native nonzero boundary labels at coincident physical coordinates; not a field interpolation or convergence metric.",
+  "tolerance_m": 1e-08,
+  "reference_boundary_nodes": 1074,
+  "next_boundary_nodes": 1074,
+  "coincident_next_boundary_nodes": 1074,
+  "label_mismatches_at_shared_nodes": 0
+}

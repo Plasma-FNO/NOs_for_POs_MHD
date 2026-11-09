@@ -1,0 +1,188 @@
+{
+  "source_sha256": "0da97168abfdd6afd68f97c83bb0a9d6989231a464c386bf019740637c5897b7",
+  "native_gauss_order": 4,
+  "scope": "Interior weak current/vorticity blocks only; native boundary/axis rows excluded; no Gate B approval.",
+  "normalization": "Euclidean native weak-vector norm divided by mass-vector norm; diagnostic within each mesh, not a mesh-independent field norm.",
+  "comparisons": {
+    "existing_q4_baseline": {
+      "interior_test_dofs": 43464,
+      "fields": {
+        "zj": {
+          "relative_weak_residual": 4.253055899187328e-11,
+          "mass_vector_norm": 0.3100857095539349,
+          "residual_vector_norm": 1.3188118562720511e-11
+        },
+        "w": {
+          "relative_weak_residual": 1.5834798979073273e-10,
+          "mass_vector_norm": 0.00045323266610594213,
+          "residual_vector_norm": 7.17684815853703e-14
+        }
+      }
+    },
+    "existing_q4_perturbed": {
+      "interior_test_dofs": 43464,
+      "fields": {
+        "zj": {
+          "relative_weak_residual": 5.180689418266935e-13,
+          "mass_vector_norm": 0.3100068472855766,
+          "residual_vector_norm": 1.6060491933226803e-13
+        },
+        "w": {
+          "relative_weak_residual": 2.2114967322453953e-11,
+          "mass_vector_norm": 0.0007224148872062242,
+          "residual_vector_norm": 1.5976181623819906e-14
+        }
+      }
+    },
+    "existing_q4_paired_response": {
+      "interior_test_dofs": 43464,
+      "fields": {
+        "zj": {
+          "relative_weak_residual": 8.345707989108328e-09,
+          "mass_vector_norm": 0.0015878180513269238,
+          "residual_vector_norm": 1.3251465796209525e-11
+        },
+        "w": {
+          "relative_weak_residual": 1.1443808930215867e-10,
+          "mass_vector_norm": 0.0005634799202210244,
+          "residual_vector_norm": 6.448356543022683e-14
+        }
+      }
+    },
+    "existing_q8_baseline": {
+      "interior_test_dofs": 43464,
+      "fields": {
+        "zj": {
+          "relative_weak_residual": 5.28638146640534e-05,
+          "mass_vector_norm": 0.3100857138669908,
+          "residual_vector_norm": 1.6392313707835294e-05
+        },
+        "w": {
+          "relative_weak_residual": 8.393226875734263e-05,
+          "mass_vector_norm": 0.0004532328527309235,
+          "residual_vector_norm": 3.804086160506896e-08
+        }
+      }
+    },
+    "existing_q8_perturbed": {
+      "interior_test_dofs": 43464,
+      "fields": {
+        "zj": {
+          "relative_weak_residual": 5.285382359195963e-05,
+          "mass_vector_norm": 0.3100068507076515,
+          "residual_vector_norm": 1.6385047399601178e-05
+        },
+        "w": {
+          "relative_weak_residual": 5.330286410029552e-05,
+          "mass_vector_norm": 0.0007224160202340329,
+          "residual_vector_norm": 3.8506842950410994e-08
+        }
+      }
+    },
+    "existing_q8_paired_response": {
+      "interior_test_dofs": 43464,
+      "fields": {
+        "zj": {
+          "relative_weak_residual": 1.296963569590088e-05,
+          "mass_vector_norm": 0.0015878216125743592,
+          "residual_vector_norm": 2.0593467865167305e-08
+        },
+        "w": {
+          "relative_weak_residual": 4.972480531059872e-05,
+          "mass_vector_norm": 0.0005634812799582583,
+          "residual_vector_norm": 2.8018996942091365e-08
+        }
+      }
+    },
+    "refined_q4_baseline": {
+      "interior_test_dofs": 181412,
+      "fields": {
+        "zj": {
+          "relative_weak_residual": 7.481893162338663e-10,
+          "mass_vector_norm": 0.15805231882459803,
+          "residual_vector_norm": 1.1825305635055303e-10
+        },
+        "w": {
+          "relative_weak_residual": 4.604438262655674e-08,
+          "mass_vector_norm": 0.00023021103010016574,
+          "residual_vector_norm": 1.0599924754785802e-11
+        }
+      }
+    },
+    "refined_q4_perturbed": {
+      "interior_test_dofs": 181412,
+      "fields": {
+        "zj": {
+          "relative_weak_residual": 1.1151830327909658e-10,
+          "mass_vector_norm": 0.15801681551150726,
+          "residual_vector_norm": 1.762176715540932e-11
+        },
+        "w": {
+          "relative_weak_residual": 3.581386226976887e-08,
+          "mass_vector_norm": 0.0003692196085594631,
+          "residual_vector_norm": 1.3223180208246586e-11
+        }
+      }
+    },
+    "refined_q4_paired_response": {
+      "interior_test_dofs": 181412,
+      "fields": {
+        "zj": {
+          "relative_weak_residual": 1.3532605138008756e-07,
+          "mass_vector_norm": 0.0008170155008736304,
+          "residual_vector_norm": 1.1056348164955289e-10
+        },
+        "w": {
+          "relative_weak_residual": 6.507215977707521e-08,
+          "mass_vector_norm": 0.0002882197203090139,
+          "residual_vector_norm": 1.8755079690852082e-11
+        }
+      }
+    },
+    "refined_q8_baseline": {
+      "interior_test_dofs": 181412,
+      "fields": {
+        "zj": {
+          "relative_weak_residual": 7.309381974436564e-05,
+          "mass_vector_norm": 0.15805231894126617,
+          "residual_vector_norm": 1.1552647710871897e-05
+        },
+        "w": {
+          "relative_weak_residual": 0.00015554309197392125,
+          "mass_vector_norm": 0.00023021105185080167,
+          "residual_vector_norm": 3.58077388114424e-08
+        }
+      }
+    },
+    "refined_q8_perturbed": {
+      "interior_test_dofs": 181412,
+      "fields": {
+        "zj": {
+          "relative_weak_residual": 7.310120740637309e-05,
+          "mass_vector_norm": 0.1580168156348775,
+          "residual_vector_norm": 1.1551220013419797e-05
+        },
+        "w": {
+          "relative_weak_residual": 9.634060732616622e-05,
+          "mass_vector_norm": 0.0003692196712055666,
+          "residual_vector_norm": 3.5570847360711696e-08
+        }
+      }
+    },
+    "refined_q8_paired_response": {
+      "interior_test_dofs": 181412,
+      "fields": {
+        "zj": {
+          "relative_weak_residual": 7.715083729088666e-06,
+          "mass_vector_norm": 0.0008170156620115975,
+          "residual_vector_norm": 6.303344240396281e-09
+        },
+        "w": {
+          "relative_weak_residual": 4.829247050393508e-05,
+          "mass_vector_norm": 0.00028821978493538973,
+          "residual_vector_norm": 1.391884546264282e-08
+        }
+      }
+    }
+  }
+}

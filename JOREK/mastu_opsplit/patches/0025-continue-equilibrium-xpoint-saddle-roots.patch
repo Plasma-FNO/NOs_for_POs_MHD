@@ -1,0 +1,156 @@
+--- a/models/equil_info.f90
++++ b/models/equil_info.f90
+@@ -191,8 +191,14 @@
+     ES%ifail_xpoint = 0
+     ES%far_axis_xpoint(:) = .false. 
+     if ( xpoint ) then 
++      if (ES%xpoint_init) then
++      call find_xpoint(my_id_fake, node_list, element_list, ES%psi_xpoint, ES%R_xpoint,     &
++        ES%Z_xpoint, ES%i_elm_xpoint, ES%s_xpoint, ES%t_xpoint, ES%xcase, ES%ifail_xpoint,ES%far_axis_xpoint, &
++        previous_xpoint=reshape([ES%R_xpoint(1),ES%Z_xpoint(1),ES%R_xpoint(2),ES%Z_xpoint(2)],[2,2]))
++      else
+       call find_xpoint(my_id_fake, node_list, element_list, ES%psi_xpoint, ES%R_xpoint,     &
+         ES%Z_xpoint, ES%i_elm_xpoint, ES%s_xpoint, ES%t_xpoint, ES%xcase, ES%ifail_xpoint,ES%far_axis_xpoint)
++      endif
+ 
+       ES%xpoint_init = .true.
+     endif
+@@ -443,7 +449,7 @@
+ 
+ 
+   !> Routine determines the position(s) of the xpoint(s).
+-  subroutine find_xpoint(my_id,node_list,element_list,psi_xpoint,R_xpoint,Z_xpoint,i_elm_xpoint,s_xpoint,t_xpoint,xcase,ifail,far_axis_xpoint)
++  subroutine find_xpoint(my_id,node_list,element_list,psi_xpoint,R_xpoint,Z_xpoint,i_elm_xpoint,s_xpoint,t_xpoint,xcase,ifail,far_axis_xpoint,previous_xpoint)
+ 
+ 
+   ! --- Routine parameters
+@@ -459,6 +465,7 @@
+   integer,                  intent(in)    :: xcase        
+   integer,                  intent(out)   :: ifail
+   logical,    optional,     intent(inout) :: far_axis_xpoint(2)
++  real*8, optional, intent(in) :: previous_xpoint(2,2)
+ 
+   ! --- Local variables
+   real*8  :: ps_s, ps_t, ps_x, ps_y, xjac
+@@ -570,8 +577,16 @@
+ 
+   enddo    ! --- end loop over elements
+ 
+-
+-  if(xcase .ne. UPPER_XPOINT) then
++  ! Reuse the same nearby saddle when multiple discrete stationary roots coexist.
++  ! Invalid continuation falls back to the original global search below.
++  if (present(previous_xpoint)) then
++    if (xcase /= UPPER_XPOINT) call opsplit_continue_xpoint(node_list,element_list,previous_xpoint(:,1), &
++      R_axis0,Z_axis0,r_margin,-1,i_elm_xpoint(1),s_xpoint(1),t_xpoint(1),found_lower)
++    if (xcase /= LOWER_XPOINT) call opsplit_continue_xpoint(node_list,element_list,previous_xpoint(:,2), &
++      R_axis0,Z_axis0,r_margin,1,i_elm_xpoint(2),s_xpoint(2),t_xpoint(2),found_upper)
++  endif
++
++  if(xcase .ne. UPPER_XPOINT .and. .not. found_lower) then
+ 
+     i_init = 0
+ 
+@@ -619,7 +634,7 @@
+     
+   endif
+ 
+-  if(xcase .ne. LOWER_XPOINT) then
++  if(xcase .ne. LOWER_XPOINT .and. .not. found_upper) then
+ 
+     i_init = 0
+ 
+@@ -734,10 +749,61 @@
+   endif
+ 
+ 
++  if ((xcase == UPPER_XPOINT .or. found_lower) .and. &
++      (xcase == LOWER_XPOINT .or. found_upper)) ifail=0
++
+   deallocate(include_pt_lw,include_pt_up, grad_psi)
+ 
+   return
+   end subroutine find_xpoint
++
++! Continue a nearby stationary saddle; failure leaves the global search in charge.
++subroutine opsplit_continue_xpoint(node_list,element_list,previous,R_axis,Z_axis,radius,side,ielm,s,t,found)
++  use data_structure, only: type_node_list,type_element_list
++  use mod_interp, only: interp,interp_RZ
++  use, intrinsic :: ieee_arithmetic, only: ieee_is_finite
++  implicit none
++  type(type_node_list), intent(in) :: node_list
++  type(type_element_list), intent(in) :: element_list
++  real*8, intent(in) :: previous(2),R_axis,Z_axis,radius
++  integer, intent(in) :: side
++  integer, intent(out) :: ielm
++  real*8, intent(out) :: s,t
++  logical, intent(out) :: found
++  integer :: seed,candidates(5),i,e,ifail
++  real*8 :: ss,tt,seed_s,seed_t,R,Z,Rs,Rt,Zs,Zt,P,Ps,Pt,Pst,Pss,Ptt
++  real*8 :: xerr,ferr,distance,best,det,jac
++  found=.false.; ielm=0; s=0.d0; t=0.d0
++  if (.not. all(ieee_is_finite(previous))) return
++  call find_RZ(node_list,element_list,previous(1),previous(2),R,Z,seed,seed_s,seed_t,ifail)
++  if (ifail /= 0 .or. seed < 1 .or. seed > element_list%n_elements) return
++  candidates=[seed,element_list%element(seed)%neighbours]
++  best=radius
++  do i=1,5
++    e=candidates(i)
++    if (e < 1 .or. e > element_list%n_elements) cycle
++    ss=.5d0; tt=.5d0
++    if (i == 1) then
++      ss=seed_s; tt=seed_t
++    endif
++    call mnewtax(node_list,element_list,e,ss,tt,xerr,ferr,ifail)
++    if (ifail /= 0 .or. min(ss,tt) < 0.d0 .or. max(ss,tt) > 1.d0) cycle
++    call interp(node_list,element_list,e,1,1,ss,tt,P,Ps,Pt,Pst,Pss,Ptt)
++    call interp_RZ(node_list,element_list,e,ss,tt,R,Rs,Rt,Z,Zs,Zt)
++    if (.not. all(ieee_is_finite([P,Ps,Pt,Pst,Pss,Ptt,R,Z,Rs,Rt,Zs,Zt]))) cycle
++    if (abs(Ps)+abs(Pt) > 1.d-12) cycle
++    det=Pss*Ptt-Pst*Pst
++    if (det >= -64*epsilon(det)*(abs(Pss*Ptt)+Pst*Pst)) cycle
++    jac=Rs*Zt-Rt*Zs
++    if (abs(jac) <= 64*epsilon(jac)*sqrt((Rs*Rs+Zs*Zs)*(Rt*Rt+Zt*Zt))) cycle
++    if (side*(Z-Z_axis) <= 0.d0) cycle
++    if (sqrt((R-R_axis)**2+(Z-Z_axis)**2) <= radius) cycle
++    distance=sqrt(sum(([R,Z]-previous)**2))
++    if (distance >= best) cycle
++    best=distance; ielm=e; s=ss; t=tt; found=.true.
++  enddo
++end subroutine opsplit_continue_xpoint
++
+   
+   
+   
+--- a/models/equilibrium.f90
++++ b/models/equilibrium.f90
+@@ -400,7 +400,8 @@
+   psi_bnd = 0.d0
+   
+   if (xpoint2) then
+-    call find_xpoint(my_id,node_list,element_list,psi_xpoint,R_xpoint,Z_xpoint,i_elm_xpoint,s_xpoint,t_xpoint,xcase2,ifail)
++    call find_xpoint(my_id,node_list,element_list,psi_xpoint,R_xpoint,Z_xpoint,i_elm_xpoint,s_xpoint,t_xpoint,xcase2,ifail, &
++      previous_xpoint=reshape([ES%R_xpoint(1),ES%Z_xpoint(1),ES%R_xpoint(2),ES%Z_xpoint(2)],[2,2]))
+     if (ifail .ne. 1) then      
+       psi_bnd  = psi_xpoint(1)
+       if( (xcase2 .eq. 2) .or. ((xcase2 .eq. 3) .and. (abs(psi_xpoint(2)-psi_axis) .lt. abs(psi_xpoint(1)-psi_axis))) ) then
+@@ -577,7 +578,8 @@
+   ! --- except dn_dpsi and dT_dpsi for current profile...)
+   if (n_order .ge. 5) then
+     call find_axis(my_id,node_list,element_list,psi_axis,R_axis,Z_axis,i_elm_axis,s_axis,t_axis,ifail)
+-    call find_xpoint(my_id,node_list,element_list,psi_xpoint,R_xpoint2,Z_xpoint2,i_elm_xpoint,s_xpoint,t_xpoint,xcase2,ifail)
++    call find_xpoint(my_id,node_list,element_list,psi_xpoint,R_xpoint2,Z_xpoint2,i_elm_xpoint,s_xpoint,t_xpoint,xcase2,ifail, &
++      previous_xpoint=reshape([ES%R_xpoint(1),ES%Z_xpoint(1),ES%R_xpoint(2),ES%Z_xpoint(2)],[2,2]))
+     if (xpoint2) then
+       ES%xpoint = xpoint2
+       ES%Z_xpoint = Z_xpoint
+@@ -597,7 +599,8 @@
+   if (xpoint2 .and. (n_flux .gt. 1)) then
+     
+     call find_axis(my_id,node_list,element_list,psi_axis,R_axis,Z_axis,i_elm_axis,s_axis,t_axis,ifail)
+-    call find_xpoint(my_id,node_list,element_list,psi_xpoint,R_xpoint2,Z_xpoint2,i_elm_xpoint,s_xpoint,t_xpoint,xcase2,ifail)
++    call find_xpoint(my_id,node_list,element_list,psi_xpoint,R_xpoint2,Z_xpoint2,i_elm_xpoint,s_xpoint,t_xpoint,xcase2,ifail, &
++      previous_xpoint=reshape([ES%R_xpoint(1),ES%Z_xpoint(1),ES%R_xpoint(2),ES%Z_xpoint(2)],[2,2]))
+     
+     n_grids = 0
+     sigmas  = 0.d0

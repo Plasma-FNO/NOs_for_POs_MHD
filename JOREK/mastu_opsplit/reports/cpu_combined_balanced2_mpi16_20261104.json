@@ -1,0 +1,289 @@
+{
+  "status": "failed_validation",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/combined_balanced2_mpi16_20261104",
+  "budget": {
+    "authorization": "User requested numerical convergence and completion of the science plan.",
+    "scope": "Already-built capacity-only 240001 executable; strict initial/final original-control parity at16 ranks then a three-step balanced twofold refinement of every flux-aligned and wall count.",
+    "allocations_max": 1,
+    "attempts_each_max": 1,
+    "mpi_ranks": 16,
+    "threads": 1,
+    "memory_GiB": 512,
+    "wall_hours_max": 6,
+    "rank_CPU_hours_max": 96,
+    "node_hours_max": 6,
+    "conservative_resource_hours_max": 3072,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4240119       4240119            13.8       2531868               2430",
+    "equilibrium_tolerance": 1e-10,
+    "physics_changed": false,
+    "spatial_targets_changed": false
+  },
+  "manifest_sha256": "9a60fab1b464e4a327b2252b73ecb63afb829aa4ea9304aa277196614133fa5c",
+  "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_combined_balanced2_mpi16_20261104.sbatch",
+  "script_sha256": "db8632bd884c35bc09dab561242ad2793327691f7634067e25ab38f0cf92faca",
+  "scheduler_preflight": "sbatch: Job 2773004 to start at 2026-11-04T13:39:33 a using 16 processors on nodes r334c03s08 in partition dcgp_fua_prod\n",
+  "scientific_gates_passed": [],
+  "job_id": "2773005",
+  "failure_evidence": "Final extension11 nearest-node attachment selects a non-corner past the intended original corner. No balanced equilibrium or time step reached.",
+  "stage_results": {
+    "probe3": {
+      "stage": "probe3",
+      "status": "failed_validation",
+      "returncode": 1,
+      "process_wall_seconds": 1466.225712764077,
+      "binary_sha256": "27a69e654689db18c95f6ed641cdd5e6f8c2dfef4f0bca0b43b5f98011dbffec",
+      "scientific_gates_passed": [],
+      "error": "exit_nonzero"
+    },
+    "control3": {
+      "stage": "control3",
+      "status": "completed",
+      "returncode": 0,
+      "process_wall_seconds": 399.6208240289707,
+      "binary_sha256": "27a69e654689db18c95f6ed641cdd5e6f8c2dfef4f0bca0b43b5f98011dbffec",
+      "scientific_gates_passed": [],
+      "initial": {
+        "health": {
+          "steps": 0,
+          "final_time_s": 0.0,
+          "restart_sha256": "988338c61edebc535574a353dc823a3ab000b35ab8ac8c387ec2715ab822b3f4"
+        },
+        "metadata": {
+          "time_seconds": 0.0,
+          "steps": 0,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 223148,
+          "canonical_native_dofs": 222917,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 1.9233925177217095e-08,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 61,
+        "minimum_density": 0.00999999999999999,
+        "minimum_temperature": 9.999999999999996e-05,
+        "restart_sha256": "988338c61edebc535574a353dc823a3ab000b35ab8ac8c387ec2715ab822b3f4"
+      },
+      "final": {
+        "health": {
+          "steps": 3,
+          "final_time_s": 8.78695694517549e-08,
+          "restart_sha256": "ea497862b08caa9bd32a2ed2b08428977a5c4a21348e4dc361bfc709039070c4"
+        },
+        "metadata": {
+          "time_seconds": 8.78695694517549e-08,
+          "steps": 3,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 223148,
+          "canonical_native_dofs": 222917,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 1.9233925177217095e-08,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 131,
+        "minimum_density": 0.00886688214273911,
+        "minimum_temperature": 9.742912396647377e-05,
+        "restart_sha256": "ea497862b08caa9bd32a2ed2b08428977a5c4a21348e4dc361bfc709039070c4"
+      },
+      "initial_parity": {
+        "exact_reference_arrays": {
+          "x": true,
+          "values": true,
+          "vertex": true,
+          "size": true,
+          "boundary": true,
+          "constrained": true,
+          "n_sons": true,
+          "t_now": true,
+          "index_now": true
+        },
+        "passed": true,
+        "metrics": {
+          "field": {
+            "absolute_rms_errors": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "reference_rms": [
+              0.04383320014545139,
+              0.0,
+              0.4663303622253062,
+              0.0,
+              0.5470619604001429,
+              0.006163768086297527,
+              0.0
+            ],
+            "tolerances": [
+              4.383420014545139e-08,
+              1e-12,
+              4.663313622253062e-07,
+              1e-12,
+              5.470629604001428e-07,
+              6.164768086297527e-09,
+              1e-12
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "gradient": {
+            "absolute_rms_errors": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "reference_rms": [
+              0.20696829724954713,
+              0.0,
+              12.821542783533513,
+              0.0,
+              5.584940933655634,
+              0.027816512916270898,
+              0.0
+            ],
+            "tolerances": [
+              2.0696929724954713e-07,
+              1e-12,
+              1.2821543783533511e-05,
+              1e-12,
+              5.584941933655634e-06,
+              2.7817512916270897e-08,
+              1e-12
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          }
+        },
+        "snapshot_kind": "initial"
+      },
+      "parity": {
+        "exact_reference_arrays": {
+          "x": true,
+          "values": false,
+          "vertex": true,
+          "size": true,
+          "boundary": true,
+          "constrained": true,
+          "n_sons": true,
+          "t_now": true,
+          "index_now": true,
+          "xtime": true,
+          "energies": false
+        },
+        "passed": true,
+        "metrics": {
+          "field": {
+            "absolute_rms_errors": [
+              9.525049119837946e-19,
+              1.3590034184615947e-18,
+              1.8051861258138533e-14,
+              5.83591386163035e-15,
+              1.8082472137874684e-17,
+              6.890579548189122e-19,
+              3.3139045659465147e-18
+            ],
+            "reference_rms": [
+              0.043833194904420315,
+              6.574304554590385e-06,
+              0.4663304363820991,
+              0.0013389234705639384,
+              0.546959262236139,
+              0.00616384481724956,
+              0.005230056092142175
+            ],
+            "tolerances": [
+              4.383419490442031e-08,
+              7.574304554590385e-12,
+              4.6633143638209904e-07,
+              1.3399234705639385e-09,
+              5.46960262236139e-07,
+              6.16484481724956e-09,
+              5.231056092142175e-09
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "gradient": {
+            "absolute_rms_errors": [
+              5.664118127338168e-16,
+              1.957525071636144e-17,
+              4.850571010844243e-11,
+              6.155155530405952e-12,
+              2.5976876224644826e-14,
+              4.64546274691661e-16,
+              1.860525442064738e-15
+            ],
+            "reference_rms": [
+              0.2069681533071649,
+              8.256349761392498e-05,
+              12.82122825655105,
+              0.03055972948666766,
+              5.438405549803316,
+              0.02701251197613165,
+              0.18669465743503683
+            ],
+            "tolerances": [
+              2.0696915330716488e-07,
+              8.356349761392497e-11,
+              1.282122925655105e-05,
+              3.056072948666766e-08,
+              5.438406549803316e-06,
+              2.701351197613165e-08,
+              1.8669565743503683e-07
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          }
+        },
+        "snapshot_kind": "evolved"
+      },
+      "workspace_retries": 0,
+      "equilibrium_summary": {
+        "iterations": 7,
+        "last_raw_update": 4.005e-11,
+        "converged": true
+      }
+    }
+  }
+}

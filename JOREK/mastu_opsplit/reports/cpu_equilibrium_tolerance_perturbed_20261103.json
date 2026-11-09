@@ -1,0 +1,21 @@
+{
+  "budget": {
+    "authorization": "Current user diagnosis and next spatial refinement request",
+    "scope": "One 48-step perturbed reference at equilibrium tolerance1e-10, matching the completed same-mesh strict baseline after measured8.8percent baseline-flow contamination from loose equilibrium stopping. Physics and1percent thresholds unchanged.",
+    "allocations_max": 1,
+    "attempts_max": 1,
+    "nodes": 1,
+    "mpi_ranks": 4,
+    "threads": 1,
+    "memory_GiB": 128,
+    "wall_seconds": 7200,
+    "rank_CPU_hours_max": 8,
+    "node_hours_max": 2,
+    "conservative_resource_hours_max": 512,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578"
+  },
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/equilibrium_tolerance_perturbed_20261103",
+  "manifest_sha256": "35c84d1093cc8be1ad5754b4e39cdd1d111fb376c2326def73c691ccc812b3fa",
+  "script_sha256": "8e7f86f45ff6dffaf6db643676e23d31b91697547dbf776c6b99d713288aec06",
+  "job_id": "2770132"
+}

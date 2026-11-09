@@ -1,0 +1,12 @@
+{
+  "status": "submitted",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/combined_mpi16_20261104",
+  "replaces_analysis_only_job": "2772939",
+  "native_attempt_started": false,
+  "script_sha256": "61d801e5257d1d702e16fb55c1422008e0a2ff60a4a19a45c0581033924e3fdb",
+  "analysis_source_sha256": "ef732afaf4d3c73de79289b4c88799be3f221eeaa396a727fa49ab8c1cbec64d",
+  "snapshot_parity_source_sha256": "3893a4b0e40a45450516c9d203de9122d101e5ee46f7fa30ca80c86979414eeb",
+  "scientific_gates_passed": [],
+  "job_id": "2772998",
+  "kind": "analysis"
+}

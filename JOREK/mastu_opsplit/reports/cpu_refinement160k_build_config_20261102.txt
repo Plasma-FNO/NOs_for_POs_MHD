@@ -1,0 +1,1 @@
+model=303 n_tor=1 n_coord_tor=1 l_pol_domm=0 n_plane=1 n_period=1 n_coord_period=1 n_nodes_max=160001 n_elements_max=160001 n_boundary_max=4001

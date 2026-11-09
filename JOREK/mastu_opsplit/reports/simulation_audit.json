@@ -1,0 +1,25 @@
+{
+  "audit_date": "2026-11-02",
+  "status": "scaffolding_and_source_checks_only",
+  "gate_A": "not_passed",
+  "gate_B": "not_passed",
+  "simulation_processes_launched": 0,
+  "jobs_submitted": 0,
+  "test_count": 16,
+  "tests_passed": 16,
+  "isolated_syntax_checks_passed": 5,
+  "patch_applied_to_production": false,
+  "artifacts": {
+    "configs/case.yaml": "66e8068d0f0d168cc81af2f4bdc46c9d152bbc476526bbb42f854a76304ca28b",
+    "configs/equilibrium_request.yaml": "9029f28db63c0dc00d3f5145d9126a759e59d63e7b81147504efe2704bbc2c14",
+    "patches/0001-model303-axisymmetric-perturbation.patch": "0a7b0c157f01eea52d05b3088016fa356bc6a7b8b56a9c256443cae2a4676df3",
+    "reports/initializer_syntax_check.json": "0285b69fce2da098c7f2bfceedb0b7ad88686b39057013fa350bf39bb6fcaf67",
+    "reports/simulation_tests.xml": "ccfbbc9e131dfa2e10597e544fdb993c17e51c2abce90432e25d6111ac078e83",
+    "reports/equilibrium_request.sbatch": "0832f24653ae8ad85cfdafe521f5b8311e79456099a603771b1ee6223684d69a",
+    "reports/initializer_build.json": "d104c269bd2448834643559a28d43468ee57916e4949143af0a3a3e5b6cf1781"
+  },
+  "prepared_snapshot": "runs/prepared_equilibrium_20261102_v3/case.json",
+  "request_status": "proposed_not_authorized",
+  "isolated_build_status": "compiled_and_linked",
+  "isolated_binary_sha256": "0a8547092540244f967096b169e9bc78a95e21767be2931c2d3fc397f33ccaf3"
+}

@@ -1,0 +1,40 @@
+{
+  "created_utc": "2026-11-02T21:12:31.037942+00:00",
+  "purpose": "Complete diagnostic correction: inside/outside magnetic resistive loss must sum to the corrected total",
+  "parent_report": "cpu_energy_diagnostics_build_20261102.json",
+  "parent_report_sha256": "c3b2cd4f41facda45fd64056884d30dd871b8be5129f5b6117f0ac955596dc61",
+  "patch": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/patches/0006-model303-partition-resistive-loss.patch",
+  "patch_sha256": "e6efa1c72d2c3b64e7a4f2c6246fcc3e8a7f7fff68f9cf9e5337a86d86201e7b",
+  "source_directory": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/energy_partition_build_20261102/source",
+  "binary_path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/energy_partition_build_20261102/source/jorek_model303",
+  "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_energy_partition_build_20261102.sbatch",
+  "script_sha256": "4101361bb5998a68462c1bc5b36be1171a87dc311221df5c76581082f2757525",
+  "physical_settings_modified": false,
+  "production_source_modified": false,
+  "maximum_compiler_processes": 2,
+  "memory_gb": 8,
+  "wall_minutes": 10,
+  "status": "compiled_and_linked",
+  "submission": {
+    "command": [
+      "sbatch",
+      "--parsable",
+      "--chdir",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/energy_partition_build_20261102/source",
+      "--output",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/energy_partition_build_20261102/build-%j.out",
+      "--error",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/energy_partition_build_20261102/build-%j.err",
+      "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_energy_partition_build_20261102.sbatch"
+    ],
+    "returncode": 0,
+    "stdout": "2768317\n",
+    "stderr": "",
+    "utc": "2026-11-02T21:12:31.062805+00:00"
+  },
+  "job_id": "2768317",
+  "completed_utc": "2026-11-02T21:14:29.800652+00:00",
+  "binary_sha256": "50a860bcd9f06233e1e1aa080b520fef8f27fbcf74651fb1af36499726ca1a9b",
+  "diagnostic_source_sha256": "1ea30aed6f90c1adbd4698eef4a6e7628aca80e7df4502d79bb4223122b6d04c",
+  "accounting": "2768317|COMPLETED|15|2|0:0"
+}

@@ -1,0 +1,367 @@
+{
+  "created_utc": "2026-11-03T10:05:42.609131+00:00",
+  "status": "completed",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_pair_20261103",
+  "budget_record": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_spatial_pair_authorization_20261103.json",
+  "budget_sha256": "b1e39ace193e46705d2fae0510b7b91fa7ef2b1b5cf6cabe07317fad8d8767a3",
+  "validated_probe_record": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_restart_capacity_recovery_20261103.json",
+  "binary_sha256": "dd786f76a5c815976ad54bcd31b744ad2c3d6cafddfcc064dcae8e6761d8ccd6",
+  "source_directory": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/restart_capacity_recovery_20261103/source",
+  "preparation_source_sha256": "e8782f0117d93b666806256686bd0792a47cef8c6576f03ecdb6bea4b9e4b1c7",
+  "input_hashes": {
+    "baseline48/input": "85948411cdec26dc43d5eb1d3e8a7786908fab3ebf5cf0b51af786e4eea2040a",
+    "baseline48/jorek_equil_rz.h5": "e59091e6ef0e893a89f9f1d11a097b01ddc6ce306708ef5c1eb7cfba6ed35627",
+    "baseline48/eqdsk.dat": "ac787dd266a9b4b93ccdadf9883c9d97a115e7dd9bb5bd3f724321576883bf4e",
+    "perturbed48/jorek_equil_rz.h5": "e59091e6ef0e893a89f9f1d11a097b01ddc6ce306708ef5c1eb7cfba6ed35627",
+    "perturbed48/input": "37cfce46812965f358825112828cc25bafc4ec04466e7c896147558f8b771a97",
+    "perturbed48/eqdsk.dat": "ac787dd266a9b4b93ccdadf9883c9d97a115e7dd9bb5bd3f724321576883bf4e",
+    "jorek.exe": "dd786f76a5c815976ad54bcd31b744ad2c3d6cafddfcc064dcae8e6761d8ccd6",
+    "refined_reference_initial.h5": "a49b57caf6405a714b3cbf360d7cd1a16858c27cf81354eae07c94dd6693e473",
+    "jorek-env.sh": "73cbfa45446945116a6829eee662fb099ed98a8008dc18a8ee6f5e6965422bab",
+    "worker.py": "7679fd0f23595b50f3852f3516201e930d22884d800d9d144584f8f1af903ecf"
+  },
+  "runs": {
+    "baseline48": {
+      "amplitudes": [
+        0.0,
+        0.0
+      ],
+      "steps": 48,
+      "tstep_code_units": 0.0625,
+      "output_cadence_steps": 8,
+      "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_pair_20261103/baseline48",
+      "job_id": "2769727",
+      "status": "completed",
+      "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_spatial_baseline48_20261103.sbatch",
+      "script_sha256": "2af98f295851ee5c011f11eda5e622502ae474c8306a500d35c9c5fcd660f3fd",
+      "submission_command": [
+        "sbatch",
+        "--parsable",
+        "--chdir",
+        "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_pair_20261103",
+        "--output",
+        "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_pair_20261103/baseline48-%j.out",
+        "--error",
+        "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_pair_20261103/baseline48-%j.err",
+        "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_spatial_baseline48_20261103.sbatch"
+      ],
+      "scheduler_preflight": "sbatch: Job 2769726 to start at 2026-11-03T11:15:43 a using 4 processors on nodes r331c03s05 in partition dcgp_fua_prod\n",
+      "submitted_utc": "2026-11-03T10:05:43.618907+00:00",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 2603,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      },
+      "scheduler_state": "COMPLETED",
+      "steps_logged": 48,
+      "result": {
+        "label": "baseline48",
+        "returncode": 0,
+        "status": "completed",
+        "process_wall_seconds": 2594.967963299947,
+        "scientific_gates_passed": [],
+        "initial": {
+          "health": {
+            "steps": 0,
+            "final_time_s": 0.0,
+            "restart_sha256": "e45ac209513f7ce12b9343507a3097fc0b1c3836218bf5428d02f5d1d9febc8d"
+          },
+          "metadata": {
+            "time_seconds": 0.0,
+            "steps": 0,
+            "quadrature_order": 8,
+            "mapping_status": "diagnostic_restart_only",
+            "expanded_nodal_dofs": 188268,
+            "canonical_native_dofs": 188037,
+            "native_dof_aliases_verified": true,
+            "minimum_signed_jacobian_m2": 7.754036608537834e-08,
+            "negative_jacobian_samples": 0,
+            "patch_ids_available": false,
+            "native_constraints_available": false
+          },
+          "readable_finite_datasets": 61,
+          "minimum_density": 0.00999999999999999,
+          "minimum_temperature": 9.999999999999996e-05,
+          "restart_sha256": "e45ac209513f7ce12b9343507a3097fc0b1c3836218bf5428d02f5d1d9febc8d"
+        },
+        "final": {
+          "health": {
+            "steps": 48,
+            "final_time_s": 1.4059131112280784e-06,
+            "restart_sha256": "ffcc0ee8852f1474ddaced7a067de264111de2b487a05d6753d50d6e77d37ada"
+          },
+          "metadata": {
+            "time_seconds": 1.4059131112280784e-06,
+            "steps": 48,
+            "quadrature_order": 8,
+            "mapping_status": "diagnostic_restart_only",
+            "expanded_nodal_dofs": 188268,
+            "canonical_native_dofs": 188037,
+            "native_dof_aliases_verified": true,
+            "minimum_signed_jacobian_m2": 7.754036608537834e-08,
+            "negative_jacobian_samples": 0,
+            "patch_ids_available": false,
+            "native_constraints_available": false
+          },
+          "readable_finite_datasets": 131,
+          "minimum_density": 0.0029677505170918397,
+          "minimum_temperature": 8.861544437781217e-05,
+          "restart_sha256": "ffcc0ee8852f1474ddaced7a067de264111de2b487a05d6753d50d6e77d37ada"
+        },
+        "initializer": {
+          "unselected_fields_exact": true,
+          "boundary_coefficients_exact": true,
+          "affected_elements": 0,
+          "affected_elements_touch_boundary": false,
+          "maximum_psi_n_control_hull_with_rounding_interval": null,
+          "maximum_nodal_relative_perturbations": [
+            0.0,
+            0.0
+          ]
+        },
+        "workspace_retries": 0
+      }
+    },
+    "perturbed48": {
+      "amplitudes": [
+        0.05,
+        0.05
+      ],
+      "steps": 48,
+      "tstep_code_units": 0.0625,
+      "output_cadence_steps": 8,
+      "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_pair_20261103/perturbed48",
+      "job_id": "2769729",
+      "status": "completed",
+      "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_spatial_perturbed48_20261103.sbatch",
+      "script_sha256": "c1b2a5ac5ca5cb1ba4555a40016c851b26d492fc279a8a95edd7fb344eff17b5",
+      "submission_command": [
+        "sbatch",
+        "--parsable",
+        "--chdir",
+        "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_pair_20261103",
+        "--output",
+        "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_pair_20261103/perturbed48-%j.out",
+        "--error",
+        "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_pair_20261103/perturbed48-%j.err",
+        "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_spatial_perturbed48_20261103.sbatch"
+      ],
+      "scheduler_preflight": "sbatch: Job 2769728 to start at 2026-11-03T11:16:43 a using 4 processors on nodes r331c03s05 in partition dcgp_fua_prod\n",
+      "submitted_utc": "2026-11-03T10:05:43.659980+00:00",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 2426,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      },
+      "scheduler_state": "COMPLETED",
+      "steps_logged": 48,
+      "result": {
+        "label": "perturbed48",
+        "returncode": 0,
+        "status": "completed",
+        "process_wall_seconds": 2416.0086095839506,
+        "scientific_gates_passed": [],
+        "initial": {
+          "health": {
+            "steps": 0,
+            "final_time_s": 0.0,
+            "restart_sha256": "d39d2051a8b8263ead8207e9c688f37e6d024aae3a41cb70fd2a967963d01912"
+          },
+          "metadata": {
+            "time_seconds": 0.0,
+            "steps": 0,
+            "quadrature_order": 8,
+            "mapping_status": "diagnostic_restart_only",
+            "expanded_nodal_dofs": 188268,
+            "canonical_native_dofs": 188037,
+            "native_dof_aliases_verified": true,
+            "minimum_signed_jacobian_m2": 7.754036608537834e-08,
+            "negative_jacobian_samples": 0,
+            "patch_ids_available": false,
+            "native_constraints_available": false
+          },
+          "readable_finite_datasets": 61,
+          "minimum_density": 0.00999999999999999,
+          "minimum_temperature": 9.999999999999996e-05,
+          "restart_sha256": "d39d2051a8b8263ead8207e9c688f37e6d024aae3a41cb70fd2a967963d01912"
+        },
+        "final": {
+          "health": {
+            "steps": 48,
+            "final_time_s": 1.4059131112280784e-06,
+            "restart_sha256": "787df3d00fe7cddd8c4ac60474978fe3150de4802dc6484f204fdbecc85d6895"
+          },
+          "metadata": {
+            "time_seconds": 1.4059131112280784e-06,
+            "steps": 48,
+            "quadrature_order": 8,
+            "mapping_status": "diagnostic_restart_only",
+            "expanded_nodal_dofs": 188268,
+            "canonical_native_dofs": 188037,
+            "native_dof_aliases_verified": true,
+            "minimum_signed_jacobian_m2": 7.754036608537834e-08,
+            "negative_jacobian_samples": 0,
+            "patch_ids_available": false,
+            "native_constraints_available": false
+          },
+          "readable_finite_datasets": 131,
+          "minimum_density": 0.002940291405720145,
+          "minimum_temperature": 8.862203621443264e-05,
+          "restart_sha256": "787df3d00fe7cddd8c4ac60474978fe3150de4802dc6484f204fdbecc85d6895"
+        },
+        "initializer": {
+          "unselected_fields_exact": true,
+          "boundary_coefficients_exact": true,
+          "affected_elements": 2210,
+          "affected_elements_touch_boundary": false,
+          "maximum_psi_n_control_hull_with_rounding_interval": 0.8095523438469315,
+          "maximum_nodal_relative_perturbations": [
+            0.04949009681769212,
+            0.04949009681769212
+          ]
+        },
+        "workspace_retries": 0
+      }
+    }
+  },
+  "references": {
+    "baseline48": {
+      "work": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/cpu_energy_complete_baseline48_20261102/attempt_1/work",
+      "initial_sha256": "b1aaf26aca3d6200644d60b631e884fc1ad4604ea560713c20a837797aac47b3",
+      "final_sha256": "32996162db1eab071870c68833484f2c865932b4ad28e52081ed7082b9b38f54",
+      "job_id": "2768319"
+    },
+    "perturbed48": {
+      "work": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/cpu_energy_complete_perturbed48_20261102/attempt_1/work",
+      "initial_sha256": "d55965530a1edc250b12ad406443e67c6600e638c1c8f26c28dbffe76c5dd7f4",
+      "final_sha256": "8c90aa460c7463e2ba2c352c8f73435c2a56ac45f24cd7eda4b51f24cf3aad29",
+      "job_id": "2768320"
+    }
+  },
+  "reference_psi_axis": -0.10327,
+  "reference_psi_boundary": -0.01228,
+  "final_time_s": 1.4059131112280784e-06,
+  "quadrature_order_comparison": 4,
+  "field_relative_target": 0.01,
+  "integral_relative_target": 0.02,
+  "perturbation_parameters": {
+    "amplitudes": [
+      0.05,
+      0.05
+    ],
+    "center_m": [
+      0.95,
+      0.0
+    ],
+    "width_m": [
+      0.08,
+      0.16
+    ],
+    "psi_n_taper": [
+      0.55,
+      0.75
+    ]
+  },
+  "scientific_gates_passed": [],
+  "ledger_before_pair": {
+    "actual_hpc_cpu_core_hours": 9.827777777777778,
+    "actual_hpc_node_hours": 2.761388888888889,
+    "simulation_jobs_submitted": 42,
+    "scientific_jobs_submitted": 42,
+    "development_jobs_with_accounting": 51
+  },
+  "analysis": {
+    "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_spatial_analysis_retry_20261103.sbatch",
+    "script_sha256": "9f5d72d03116ee249b088f3f748f04d5c4308fea6f22d45077993dc66744837f",
+    "source_sha256": "9792df4bf7519ea3b76273f8d91640113ffc61ec1db2ea119dae767bd2e30a86",
+    "checked_source_hashes": {
+      "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_spatial_pair_analysis_20261103.py": "9792df4bf7519ea3b76273f8d91640113ffc61ec1db2ea119dae767bd2e30a86",
+      "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_spatial_analysis_tests_20261103.xml": "a1e6b19f676a7617b46ce50fe2fcafa190bb5b2dc95a8c12ab273f9666ff95be",
+      "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/configs/evaluation.yaml": "e9cc81e0f3c3ef5623986788c685665c934f002d86111944557f8fa0ff1e5314",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_pair_20261103/manifest.json": "c4a01102697ce335905d47bb1b1c6bb4e4f45e52ea783ba1a8b394afc3e1d64c",
+      "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/src/mastu_opsplit/queries.py": "b2e24b4422b94677819ed6ed642888b2451b5655d2790d3b1c3b60abb5f3b9bc",
+      "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/src/mastu_opsplit/numerical.py": "3c903bbfd3cf4d72bdac1978f706300d45ef6e293e7a3f3e4f53a030b40f90f3",
+      "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/src/mastu_opsplit/restart.py": "830671db304963210d913ec14e202579f8252331bbedee1b6c4c4f5ec059c795",
+      "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/src/mastu_opsplit/common.py": "fd31887b3f2532cf5d5f47bf05e96aa955ed7378290e28971a11b05d45d6277f"
+    },
+    "tests_passed": 22,
+    "submission_command": [
+      "sbatch",
+      "--parsable",
+      "--chdir",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_pair_20261103",
+      "--output",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_pair_20261103/analysis-retry-%j.out",
+      "--error",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_pair_20261103/analysis-retry-%j.err",
+      "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_spatial_analysis_retry_20261103.sbatch"
+    ],
+    "scheduler_preflight": "sbatch: Job 2769888 to start at 2026-11-03T12:00:40 a using 1 processors on nodes r355c06s11 in partition dcgp_fua_prod\n",
+    "submitted_utc": "2026-11-03T10:50:40.904603+00:00",
+    "job_id": "2769889",
+    "status": "submitted",
+    "budget_record": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_spatial_analysis_retry_authorization_20261103.json",
+    "budget_sha256": "51e8c66b377d3d156a625e6e10208979d2ca90edf907a9f69d3a19f42f816467",
+    "dependency": "Both validated simulation outputs already complete; runtime hashes checked.",
+    "accounting": {
+      "state": "COMPLETED",
+      "elapsed_seconds": 76,
+      "allocated_cpus": 1,
+      "allocated_nodes": 1,
+      "exit_code": "0:0"
+    },
+    "scheduler_state": "COMPLETED"
+  },
+  "as_of_utc": "2026-11-03T10:56:09.161773+00:00",
+  "previous_analysis_attempts": [
+    {
+      "job_id": "2769740",
+      "status": "submitted",
+      "dependency": "afterok:2769727:2769729",
+      "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_spatial_analysis_20261103.sbatch",
+      "script_sha256": "5bad73ad73206ef9eaf4d6c2a95e32307f3340342d1f77fbe2c7fcd2af1c2a3c",
+      "source_sha256": "9792df4bf7519ea3b76273f8d91640113ffc61ec1db2ea119dae767bd2e30a86",
+      "checked_source_hashes": {
+        "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_spatial_pair_analysis_20261103.py": "9792df4bf7519ea3b76273f8d91640113ffc61ec1db2ea119dae767bd2e30a86",
+        "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_spatial_analysis_tests_20261103.xml": "a1e6b19f676a7617b46ce50fe2fcafa190bb5b2dc95a8c12ab273f9666ff95be",
+        "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/configs/evaluation.yaml": "e9cc81e0f3c3ef5623986788c685665c934f002d86111944557f8fa0ff1e5314",
+        "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_pair_20261103/manifest.json": "c4a01102697ce335905d47bb1b1c6bb4e4f45e52ea783ba1a8b394afc3e1d64c",
+        "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/src/mastu_opsplit/queries.py": "b2e24b4422b94677819ed6ed642888b2451b5655d2790d3b1c3b60abb5f3b9bc",
+        "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/src/mastu_opsplit/numerical.py": "3c903bbfd3cf4d72bdac1978f706300d45ef6e293e7a3f3e4f53a030b40f90f3",
+        "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/src/mastu_opsplit/restart.py": "830671db304963210d913ec14e202579f8252331bbedee1b6c4c4f5ec059c795",
+        "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/src/mastu_opsplit/common.py": "fd31887b3f2532cf5d5f47bf05e96aa955ed7378290e28971a11b05d45d6277f"
+      },
+      "tests_passed": 22,
+      "submission_command": [
+        "sbatch",
+        "--parsable",
+        "--dependency",
+        "afterok:2769727:2769729",
+        "--chdir",
+        "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_pair_20261103",
+        "--output",
+        "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_pair_20261103/analysis-%j.out",
+        "--error",
+        "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_pair_20261103/analysis-%j.err",
+        "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_spatial_analysis_20261103.sbatch"
+      ],
+      "scheduler_preflight": "sbatch: Job 2769739 to start at 2026-11-03T11:20:26 a using 1 processors on nodes r355c06s10 in partition dcgp_fua_prod\n",
+      "submitted_utc": "2026-11-03T10:10:26.719331+00:00",
+      "accounting": {
+        "state": "FAILED",
+        "elapsed_seconds": 2,
+        "allocated_cpus": 1,
+        "allocated_nodes": 1,
+        "exit_code": "2:0"
+      },
+      "scheduler_state": "FAILED",
+      "failure_reason": "Relative analysis script path resolved against the batch work directory."
+    }
+  ],
+  "comparison_report": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_spatial_convergence_20261103.json",
+  "comparison_status": "spatial_targets_not_met"
+}

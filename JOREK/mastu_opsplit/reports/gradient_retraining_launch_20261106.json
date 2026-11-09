@@ -1,0 +1,166 @@
+{
+  "status": "full_runs_submitted",
+  "run_directory": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_gradient_retraining_20261106",
+  "smoke_array_job_id": "2796035",
+  "reference_run": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_ensemble80_comparison_20261106",
+  "source_manifest_sha256": "69e5bd6ab15132188c31021e5960876016b460baffec6a278b81a74c58c2d1b8",
+  "seeds": [
+    17,
+    18,
+    19
+  ],
+  "variants": {
+    "learned": "lspline_continuity",
+    "native": "native_continuity"
+  },
+  "split_counts": {
+    "train": 80,
+    "validation": 0,
+    "test": 20
+  },
+  "updates_per_run": 2000,
+  "training_horizon": 4,
+  "training_stride": 1,
+  "training_batch_size": 1,
+  "evaluation_horizons": [
+    16,
+    32,
+    96
+  ],
+  "evaluation_substeps": [
+    1,
+    2,
+    4
+  ],
+  "guards": "Unchanged elliptic closure, boundary values, subdivided Bernstein positivity, Q12/vertex audits",
+  "checkpoint_selection": "Final fixed-budget update; no selection on held-out performance",
+  "matching": "Same seed, neural initialization, sampled windows, architecture, optimizer, normalization and guards; only continuity derivative source differs",
+  "resources": {
+    "account": "fupa2_fauna",
+    "partition": "dcgp_fua_prod",
+    "cpus_per_task": 4,
+    "torch_threads": 2,
+    "memory_gib": 24,
+    "maximum_wall_hours_per_task": 24,
+    "array": "0-5%3"
+  },
+  "original_configuration_exact_match": true,
+  "reference_sampling_checks": {
+    "17": [
+      "ar",
+      "node",
+      "opsplit"
+    ],
+    "18": [
+      "ar",
+      "node"
+    ],
+    "19": []
+  },
+  "final_comparison": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_gradient_retraining_20261106/comparison.json",
+  "finalizer_trigger": "afterany: full six-task array",
+  "notification": "Persistent Slurm logs and comparison artifact; automatic chat wake-up is unavailable",
+  "training_array_job_id": "2796071",
+  "comparison_job_id": "2796075",
+  "comparison_dependency": "afterany:2796071",
+  "smoke_validation": {
+    "status": "passed",
+    "full_suite_passed": 355,
+    "frozen_gradient_tests_passed": 36,
+    "initial_weights_matched": true,
+    "original_initial_weights_matched": true,
+    "original_learned_smoke_weights_bitwise_equal": true,
+    "native_training_updates_differ": true,
+    "sampled_windows_identical": true,
+    "original_schedule_prefix_matched": true,
+    "normalization_identical": true,
+    "only_branch_differs_in_provenance": true,
+    "source_manifest_verified": true,
+    "all_smoke_audits_passed": true,
+    "numerical_failures": 0,
+    "variants": {
+      "learned": {
+        "seconds_per_update": 5.668721453364317,
+        "smoke_evaluation_seconds": 35.688175639137626,
+        "estimated_full_hours_per_seed": 5.572170722557972,
+        "process_peak_rss_kib": 4252332,
+        "parameters": 9673
+      },
+      "native": {
+        "seconds_per_update": 4.523439838706206,
+        "smoke_evaluation_seconds": 31.928174165077507,
+        "estimated_full_hours_per_seed": 4.682423065462262,
+        "process_peak_rss_kib": 3611732,
+        "parameters": 9673
+      }
+    }
+  },
+  "full_test_log": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_gradient_retraining_20261106/workspace_tests.log",
+  "frozen_test_log": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_gradient_retraining_20261106/frozen_gradient_tests.log",
+  "accounting_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_gradient_retraining_20261106/training_accounting.txt",
+  "smoke_scheduler_peak_rss_kib": {
+    "learned": 10487572,
+    "native": 9844204
+  },
+  "task_mapping": [
+    {
+      "task": 0,
+      "seed": 17,
+      "variant": "learned"
+    },
+    {
+      "task": 1,
+      "seed": 17,
+      "variant": "native"
+    },
+    {
+      "task": 2,
+      "seed": 18,
+      "variant": "learned"
+    },
+    {
+      "task": 3,
+      "seed": 18,
+      "variant": "native"
+    },
+    {
+      "task": 4,
+      "seed": 19,
+      "variant": "learned"
+    },
+    {
+      "task": 5,
+      "seed": 19,
+      "variant": "native"
+    }
+  ],
+  "estimated_task_hours": 30.7637813640607,
+  "estimated_allocated_cpu_hours": 123.0551254562428,
+  "initial_full_run_progress": [
+    {
+      "task": 0,
+      "seed": 17,
+      "variant": "learned",
+      "verified": true,
+      "last_update": 5,
+      "training_loss": 3.6631371494774685
+    },
+    {
+      "task": 1,
+      "seed": 17,
+      "variant": "native",
+      "verified": true,
+      "last_update": 6,
+      "training_loss": 3.312378562292073
+    },
+    {
+      "task": 2,
+      "seed": 18,
+      "variant": "learned",
+      "verified": true,
+      "last_update": 5,
+      "training_loss": 1.4971558038447423
+    }
+  ],
+  "running_tasks_verified": 3
+}

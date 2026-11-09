@@ -1,0 +1,3735 @@
+{
+  "scope": "Failed balanced mesh diagnosis only; q8 folds and straight polygon geometry, no acceptance.",
+  "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/combined_balanced2_attachment_20261104/probe3/jorek_grid.h5",
+  "folds": [
+    {
+      "element": 75630,
+      "minimum_q8_jacobian_m2": -6.079093727216031e-06,
+      "polygon_signed_area_m2": 2.7833448300595975e-06,
+      "polygon_convex_ccw": false,
+      "rz_center_m": [
+        0.9535896620306892,
+        -0.8377735404998654
+      ],
+      "vertices": [
+        75832,
+        76095,
+        76096,
+        75833
+      ]
+    },
+    {
+      "element": 75631,
+      "minimum_q8_jacobian_m2": -5.649539421861436e-06,
+      "polygon_signed_area_m2": 2.3149801690047767e-06,
+      "polygon_convex_ccw": false,
+      "rz_center_m": [
+        0.9656320764526803,
+        -0.8237912253322192
+      ],
+      "vertices": [
+        75833,
+        76096,
+        76097,
+        75834
+      ]
+    },
+    {
+      "element": 90053,
+      "minimum_q8_jacobian_m2": -6.606080178803949e-07,
+      "polygon_signed_area_m2": 2.1697306373247294e-06,
+      "polygon_convex_ccw": false,
+      "rz_center_m": [
+        0.37141757314312307,
+        -1.328410163463293
+      ],
+      "vertices": [
+        90592,
+        90615,
+        90616,
+        90593
+      ]
+    },
+    {
+      "element": 90054,
+      "minimum_q8_jacobian_m2": -5.116110027915413e-07,
+      "polygon_signed_area_m2": 1.3446369256375768e-06,
+      "polygon_convex_ccw": false,
+      "rz_center_m": [
+        0.36948764001975687,
+        -1.3293359637929845
+      ],
+      "vertices": [
+        90593,
+        90616,
+        90617,
+        90594
+      ]
+    },
+    {
+      "element": 106612,
+      "minimum_q8_jacobian_m2": -1.134276798088723e-07,
+      "polygon_signed_area_m2": 2.7982515498070626e-06,
+      "polygon_convex_ccw": false,
+      "rz_center_m": [
+        0.6898190701545068,
+        1.5545982057364007
+      ],
+      "vertices": [
+        107372,
+        107531,
+        107532,
+        107373
+      ]
+    },
+    {
+      "element": 106613,
+      "minimum_q8_jacobian_m2": -1.1979581993953977e-07,
+      "polygon_signed_area_m2": 2.723576931762395e-07,
+      "polygon_convex_ccw": false,
+      "rz_center_m": [
+        0.6947963700909627,
+        1.5612305935017867
+      ],
+      "vertices": [
+        107373,
+        107532,
+        107533,
+        107374
+      ]
+    },
+    {
+      "element": 107248,
+      "minimum_q8_jacobian_m2": -2.5043126715389063e-07,
+      "polygon_signed_area_m2": 2.20942491113707e-06,
+      "polygon_convex_ccw": false,
+      "rz_center_m": [
+        0.6942492453860447,
+        1.5560846183402026
+      ],
+      "vertices": [
+        108008,
+        108167,
+        108168,
+        108009
+      ]
+    },
+    {
+      "element": 107249,
+      "minimum_q8_jacobian_m2": -2.677766906662315e-07,
+      "polygon_signed_area_m2": 1.848996745934528e-06,
+      "polygon_convex_ccw": false,
+      "rz_center_m": [
+        0.6993722931284098,
+        1.562746547677801
+      ],
+      "vertices": [
+        108009,
+        108168,
+        108169,
+        108010
+      ]
+    },
+    {
+      "element": 132916,
+      "minimum_q8_jacobian_m2": -5.932986784099948e-07,
+      "polygon_signed_area_m2": 1.8305850346678199e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8514143604836515,
+        -1.5651751377710816
+      ],
+      "vertices": [
+        133816,
+        133914,
+        133915,
+        133817
+      ]
+    },
+    {
+      "element": 132922,
+      "minimum_q8_jacobian_m2": -3.1836198507465177e-07,
+      "polygon_signed_area_m2": 1.8148099474313284e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8266704417743721,
+        -1.52864290563189
+      ],
+      "vertices": [
+        133822,
+        133920,
+        133921,
+        133823
+      ]
+    },
+    {
+      "element": 159140,
+      "minimum_q8_jacobian_m2": -1.0610869635247066e-07,
+      "polygon_signed_area_m2": 5.012255679726074e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8010329569145105,
+        1.5682716441470603
+      ],
+      "vertices": [
+        160112,
+        160210,
+        160211,
+        160113
+      ]
+    },
+    {
+      "element": 159238,
+      "minimum_q8_jacobian_m2": -4.5056601481793793e-07,
+      "polygon_signed_area_m2": 4.998733240557662e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8020746837919784,
+        1.5683275063979318
+      ],
+      "vertices": [
+        160210,
+        160308,
+        160309,
+        160211
+      ]
+    },
+    {
+      "element": 159336,
+      "minimum_q8_jacobian_m2": -8.263427096924976e-07,
+      "polygon_signed_area_m2": 4.98519652902818e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8031179505116351,
+        1.5683834749245222
+      ],
+      "vertices": [
+        160308,
+        160406,
+        160407,
+        160309
+      ]
+    },
+    {
+      "element": 159434,
+      "minimum_q8_jacobian_m2": -1.268314258586478e-06,
+      "polygon_signed_area_m2": 4.971525321306736e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8041627749011284,
+        1.5684395514557354
+      ],
+      "vertices": [
+        160406,
+        160504,
+        160505,
+        160407
+      ]
+    },
+    {
+      "element": 159532,
+      "minimum_q8_jacobian_m2": -1.7036156790689062e-06,
+      "polygon_signed_area_m2": 4.957561354546058e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8052091459069456,
+        1.568495736103709
+      ],
+      "vertices": [
+        160504,
+        160602,
+        160603,
+        160505
+      ]
+    },
+    {
+      "element": 159630,
+      "minimum_q8_jacobian_m2": -2.1311836466326224e-06,
+      "polygon_signed_area_m2": 4.9430853905629846e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8062570127153728,
+        1.56855202685127
+      ],
+      "vertices": [
+        160602,
+        160700,
+        160701,
+        160603
+      ]
+    },
+    {
+      "element": 159728,
+      "minimum_q8_jacobian_m2": -2.5497892144776196e-06,
+      "polygon_signed_area_m2": 4.92778680949435e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8073062681634775,
+        1.5686084187761211
+      ],
+      "vertices": [
+        160700,
+        160798,
+        160799,
+        160701
+      ]
+    },
+    {
+      "element": 159826,
+      "minimum_q8_jacobian_m2": -2.9576767531890475e-06,
+      "polygon_signed_area_m2": 4.911218283609742e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8083567240015778,
+        1.5686649028997406
+      ],
+      "vertices": [
+        160798,
+        160896,
+        160897,
+        160799
+      ]
+    },
+    {
+      "element": 159924,
+      "minimum_q8_jacobian_m2": -3.3521238415826698e-06,
+      "polygon_signed_area_m2": 4.892735953165861e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8094080747556796,
+        1.5687214645056557
+      ],
+      "vertices": [
+        160896,
+        160994,
+        160995,
+        160897
+      ]
+    },
+    {
+      "element": 160022,
+      "minimum_q8_jacobian_m2": -3.7289533218128494e-06,
+      "polygon_signed_area_m2": 4.8714258654714016e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8104598470044773,
+        1.568778080781584
+      ],
+      "vertices": [
+        160994,
+        161092,
+        161093,
+        160995
+      ]
+    },
+    {
+      "element": 160120,
+      "minimum_q8_jacobian_m2": -4.082084483608481e-06,
+      "polygon_signed_area_m2": 4.84602053296701e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8115113312703985,
+        1.568834717653893
+      ],
+      "vertices": [
+        161092,
+        161190,
+        161191,
+        161093
+      ]
+    },
+    {
+      "element": 160218,
+      "minimum_q8_jacobian_m2": -4.403294472820556e-06,
+      "polygon_signed_area_m2": 4.814823469811991e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.812561495919983,
+        1.568891325782996
+      ],
+      "vertices": [
+        161190,
+        161288,
+        161289,
+        161191
+      ]
+    },
+    {
+      "element": 160316,
+      "minimum_q8_jacobian_m2": -4.6824408088123385e-06,
+      "polygon_signed_area_m2": 4.775674236290328e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8136088877888008,
+        1.5689478359427627
+      ],
+      "vertices": [
+        161288,
+        161386,
+        161387,
+        161289
+      ]
+    },
+    {
+      "element": 160414,
+      "minimum_q8_jacobian_m2": -4.90839316605375e-06,
+      "polygon_signed_area_m2": 4.726002887922576e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.814651532956457,
+        1.569004154409983
+      ],
+      "vertices": [
+        161386,
+        161484,
+        161485,
+        161387
+      ]
+    },
+    {
+      "element": 160512,
+      "minimum_q8_jacobian_m2": -5.070737318130753e-06,
+      "polygon_signed_area_m2": 4.663038494001626e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8156868634914347,
+        1.5690601595690044
+      ],
+      "vertices": [
+        161484,
+        161582,
+        161583,
+        161485
+      ]
+    },
+    {
+      "element": 160610,
+      "minimum_q8_jacobian_m2": -5.161924349503073e-06,
+      "polygon_signed_area_m2": 4.584216124259299e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8167117082686323,
+        1.5691157015117418
+      ],
+      "vertices": [
+        161582,
+        161680,
+        161681,
+        161583
+      ]
+    },
+    {
+      "element": 160708,
+      "minimum_q8_jacobian_m2": -5.1791790562119824e-06,
+      "polygon_signed_area_m2": 4.487762208738033e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8177223895611421,
+        1.5691706065821485
+      ],
+      "vertices": [
+        161680,
+        161778,
+        161779,
+        161681
+      ]
+    },
+    {
+      "element": 160806,
+      "minimum_q8_jacobian_m2": -5.125460603437124e-06,
+      "polygon_signed_area_m2": 4.373327527784632e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8187149520395073,
+        1.5692246881084086
+      ],
+      "vertices": [
+        161778,
+        161876,
+        161877,
+        161779
+      ]
+    },
+    {
+      "element": 160904,
+      "minimum_q8_jacobian_m2": -5.009119714595625e-06,
+      "polygon_signed_area_m2": 4.242413612964846e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.819685510147556,
+        1.5692777626656507
+      ],
+      "vertices": [
+        161876,
+        161974,
+        161975,
+        161877
+      ]
+    },
+    {
+      "element": 161002,
+      "minimum_q8_jacobian_m2": -4.842424185656593e-06,
+      "polygon_signed_area_m2": 4.098369997929119e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8206306480753393,
+        1.569329668795473
+      ],
+      "vertices": [
+        161974,
+        162072,
+        162073,
+        161975
+      ]
+    },
+    {
+      "element": 161100,
+      "minimum_q8_jacobian_m2": -4.639425047890238e-06,
+      "polygon_signed_area_m2": 3.945879171962652e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8215477717328841,
+        1.5693802834792918
+      ],
+      "vertices": [
+        162072,
+        162170,
+        162171,
+        162073
+      ]
+    },
+    {
+      "element": 161198,
+      "minimum_q8_jacobian_m2": -4.413876329129135e-06,
+      "polygon_signed_area_m2": 3.790122254598849e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8224353213940934,
+        1.5694295320970486
+      ],
+      "vertices": [
+        162170,
+        162268,
+        162269,
+        162171
+      ]
+    },
+    {
+      "element": 161296,
+      "minimum_q8_jacobian_m2": -4.177625554301361e-06,
+      "polygon_signed_area_m2": 3.6359252222339933e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8232928048820055,
+        1.5694773899953511
+      ],
+      "vertices": [
+        162268,
+        162366,
+        162367,
+        162269
+      ]
+    },
+    {
+      "element": 161394,
+      "minimum_q8_jacobian_m2": -3.939827416985591e-06,
+      "polygon_signed_area_m2": 3.4871667089486635e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8241206735249984,
+        1.5695238767037003
+      ],
+      "vertices": [
+        162366,
+        162464,
+        162465,
+        162367
+      ]
+    },
+    {
+      "element": 161492,
+      "minimum_q8_jacobian_m2": -3.706840628944984e-06,
+      "polygon_signed_area_m2": 3.346547680083134e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8249201054869012,
+        1.5695690458186005
+      ],
+      "vertices": [
+        162464,
+        162562,
+        162563,
+        162465
+      ]
+    },
+    {
+      "element": 161590,
+      "minimum_q8_jacobian_m2": -3.4826420097816676e-06,
+      "polygon_signed_area_m2": 3.2156327199883705e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8256927638996289,
+        1.5696129737066602
+      ],
+      "vertices": [
+        162562,
+        162660,
+        162661,
+        162563
+      ]
+    },
+    {
+      "element": 161688,
+      "minimum_q8_jacobian_m2": -3.275670210755209e-06,
+      "polygon_signed_area_m2": 3.095070160274993e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8264405788791446,
+        1.5696557493207102
+      ],
+      "vertices": [
+        162660,
+        162758,
+        162759,
+        162661
+      ]
+    },
+    {
+      "element": 161786,
+      "minimum_q8_jacobian_m2": -3.1784782075517166e-06,
+      "polygon_signed_area_m2": 2.984847725540085e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8271655777080559,
+        1.5696974662648318
+      ],
+      "vertices": [
+        162758,
+        162856,
+        162857,
+        162759
+      ]
+    },
+    {
+      "element": 161884,
+      "minimum_q8_jacobian_m2": -3.0812046585886637e-06,
+      "polygon_signed_area_m2": 2.8845278359224125e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8278697660145551,
+        1.569738217240124
+      ],
+      "vertices": [
+        162856,
+        162954,
+        162955,
+        162857
+      ]
+    },
+    {
+      "element": 161982,
+      "minimum_q8_jacobian_m2": -2.9840146205934103e-06,
+      "polygon_signed_area_m2": 2.7934287031294858e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8285550528660117,
+        1.5697780905408971
+      ],
+      "vertices": [
+        162954,
+        163052,
+        163053,
+        162955
+      ]
+    },
+    {
+      "element": 162080,
+      "minimum_q8_jacobian_m2": -2.8906752641351388e-06,
+      "polygon_signed_area_m2": 2.710769614000519e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8292232107813554,
+        1.5698171681813562
+      ],
+      "vertices": [
+        163052,
+        163150,
+        163151,
+        163053
+      ]
+    },
+    {
+      "element": 162178,
+      "minimum_q8_jacobian_m2": -2.803449495566193e-06,
+      "polygon_signed_area_m2": 2.6357344186100917e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8298758583036884,
+        1.569855525075619
+      ],
+      "vertices": [
+        163150,
+        163248,
+        163249,
+        163151
+      ]
+    },
+    {
+      "element": 162276,
+      "minimum_q8_jacobian_m2": -2.7169673527055875e-06,
+      "polygon_signed_area_m2": 2.5675380915801682e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8305144568347753,
+        1.5698932288831973
+      ],
+      "vertices": [
+        163248,
+        163346,
+        163347,
+        163249
+      ]
+    },
+    {
+      "element": 162374,
+      "minimum_q8_jacobian_m2": -2.6315056901730156e-06,
+      "polygon_signed_area_m2": 2.5054472579943976e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8311403172232887,
+        1.5699303403098344
+      ],
+      "vertices": [
+        163346,
+        163444,
+        163445,
+        163347
+      ]
+    },
+    {
+      "element": 162472,
+      "minimum_q8_jacobian_m2": -2.5472161946211005e-06,
+      "polygon_signed_area_m2": 2.4487957961394358e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8317546105776615,
+        1.569966913605628
+      ],
+      "vertices": [
+        163444,
+        163542,
+        163543,
+        163445
+      ]
+    },
+    {
+      "element": 162570,
+      "minimum_q8_jacobian_m2": -2.464159381194905e-06,
+      "polygon_signed_area_m2": 2.3969839577642205e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8323583809712987,
+        1.57000299715142
+      ],
+      "vertices": [
+        163542,
+        163640,
+        163641,
+        163543
+      ]
+    },
+    {
+      "element": 162668,
+      "minimum_q8_jacobian_m2": -2.382342128368212e-06,
+      "polygon_signed_area_m2": 2.3494810998947457e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8329525586253741,
+        1.5700386340676966
+      ],
+      "vertices": [
+        163640,
+        163738,
+        163739,
+        163641
+      ]
+    },
+    {
+      "element": 162766,
+      "minimum_q8_jacobian_m2": -2.3017361807834113e-06,
+      "polygon_signed_area_m2": 2.3058206592985186e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.833537973106786,
+        1.5700738628244868
+      ],
+      "vertices": [
+        163738,
+        163836,
+        163837,
+        163739
+      ]
+    },
+    {
+      "element": 162864,
+      "minimum_q8_jacobian_m2": -2.222286407113285e-06,
+      "polygon_signed_area_m2": 2.2655883619160377e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8341153648710291,
+        1.570108717774254
+      ],
+      "vertices": [
+        163836,
+        163934,
+        163935,
+        163837
+      ]
+    },
+    {
+      "element": 162962,
+      "minimum_q8_jacobian_m2": -2.143926120487237e-06,
+      "polygon_signed_area_m2": 2.228423462757867e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8346853958392806,
+        1.5701432296401654
+      ],
+      "vertices": [
+        163934,
+        164032,
+        164033,
+        163935
+      ]
+    },
+    {
+      "element": 163060,
+      "minimum_q8_jacobian_m2": -2.066582038522772e-06,
+      "polygon_signed_area_m2": 2.1940086855076757e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8352486591819577,
+        1.5701774259677295
+      ],
+      "vertices": [
+        164032,
+        164130,
+        164131,
+        164033
+      ]
+    },
+    {
+      "element": 163158,
+      "minimum_q8_jacobian_m2": -1.990175080584004e-06,
+      "polygon_signed_area_m2": 2.162064732025293e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8358056875092936,
+        1.5702113315025492
+      ],
+      "vertices": [
+        164130,
+        164228,
+        164229,
+        164131
+      ]
+    },
+    {
+      "element": 163256,
+      "minimum_q8_jacobian_m2": -1.914626436554602e-06,
+      "polygon_signed_area_m2": 2.1323475634105193e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8363569602860051,
+        1.570244968532327
+      ],
+      "vertices": [
+        164228,
+        164326,
+        164327,
+        164229
+      ]
+    },
+    {
+      "element": 163354,
+      "minimum_q8_jacobian_m2": -1.8398569116930369e-06,
+      "polygon_signed_area_m2": 2.1046416978087734e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8369029103070911,
+        1.5702783571855004
+      ],
+      "vertices": [
+        164326,
+        164424,
+        164425,
+        164327
+      ]
+    },
+    {
+      "element": 163452,
+      "minimum_q8_jacobian_m2": -1.765786761537717e-06,
+      "polygon_signed_area_m2": 2.0787560737201005e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8374439290452026,
+        1.5703115156776575
+      ],
+      "vertices": [
+        164424,
+        164522,
+        164523,
+        164425
+      ]
+    },
+    {
+      "element": 163550,
+      "minimum_q8_jacobian_m2": -1.6923397886676364e-06,
+      "polygon_signed_area_m2": 2.054523594696711e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8379803715783197,
+        1.5703444605387678
+      ],
+      "vertices": [
+        164522,
+        164620,
+        164621,
+        164523
+      ]
+    },
+    {
+      "element": 163648,
+      "minimum_q8_jacobian_m2": -1.6194400444476073e-06,
+      "polygon_signed_area_m2": 2.0317957811766263e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8385125609414117,
+        1.5703772068139368
+      ],
+      "vertices": [
+        164620,
+        164718,
+        164719,
+        164621
+      ]
+    },
+    {
+      "element": 163746,
+      "minimum_q8_jacobian_m2": -1.5470115095039311e-06,
+      "polygon_signed_area_m2": 2.010439817401455e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8390407915908324,
+        1.5704097682230735
+      ],
+      "vertices": [
+        164718,
+        164816,
+        164817,
+        164719
+      ]
+    },
+    {
+      "element": 163844,
+      "minimum_q8_jacobian_m2": -1.4749794129267317e-06,
+      "polygon_signed_area_m2": 1.9903376728969135e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8395653324919339,
+        1.570442157303282
+      ],
+      "vertices": [
+        164816,
+        164914,
+        164915,
+        164817
+      ]
+    },
+    {
+      "element": 163942,
+      "minimum_q8_jacobian_m2": -1.4032711836959188e-06,
+      "polygon_signed_area_m2": 1.9713862331460774e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8400864301896358,
+        1.5704743855507746
+      ],
+      "vertices": [
+        164914,
+        165012,
+        165013,
+        164915
+      ]
+    },
+    {
+      "element": 164040,
+      "minimum_q8_jacobian_m2": -1.3318119286820055e-06,
+      "polygon_signed_area_m2": 1.953490947337322e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8406043111999808,
+        1.5705064635313044
+      ],
+      "vertices": [
+        165012,
+        165110,
+        165111,
+        165013
+      ]
+    },
+    {
+      "element": 164138,
+      "minimum_q8_jacobian_m2": -1.2605262190024907e-06,
+      "polygon_signed_area_m2": 1.936566765503578e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8411191838049665,
+        1.570538400962941
+      ],
+      "vertices": [
+        165110,
+        165208,
+        165209,
+        165111
+      ]
+    },
+    {
+      "element": 164236,
+      "minimum_q8_jacobian_m2": -1.1893398261824202e-06,
+      "polygon_signed_area_m2": 1.9205404768740664e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8416312402882522,
+        1.5705702068196539
+      ],
+      "vertices": [
+        165208,
+        165306,
+        165307,
+        165209
+      ]
+    },
+    {
+      "element": 164334,
+      "minimum_q8_jacobian_m2": -1.1181744280785548e-06,
+      "polygon_signed_area_m2": 1.9053424186177281e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8421406584956047,
+        1.5706018894034932
+      ],
+      "vertices": [
+        165306,
+        165404,
+        165405,
+        165307
+      ]
+    },
+    {
+      "element": 164432,
+      "minimum_q8_jacobian_m2": -1.0469517624741178e-06,
+      "polygon_signed_area_m2": 1.8909128565169908e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8426476032022863,
+        1.570633456407896
+      ],
+      "vertices": [
+        165404,
+        165502,
+        165503,
+        165405
+      ]
+    },
+    {
+      "element": 164530,
+      "minimum_q8_jacobian_m2": -9.755894626001912e-07,
+      "polygon_signed_area_m2": 1.877194873878274e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8431522274203433,
+        1.5706649149782979
+      ],
+      "vertices": [
+        165502,
+        165600,
+        165601,
+        165503
+      ]
+    },
+    {
+      "element": 164628,
+      "minimum_q8_jacobian_m2": -9.04004643741667e-07,
+      "polygon_signed_area_m2": 1.864140219853816e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8436546735844351,
+        1.5706962717671629
+      ],
+      "vertices": [
+        165600,
+        165698,
+        165699,
+        165601
+      ]
+    },
+    {
+      "element": 164726,
+      "minimum_q8_jacobian_m2": -8.321105506371713e-07,
+      "polygon_signed_area_m2": 1.8517026666442504e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.844155074664737,
+        1.5707275329856893
+      ],
+      "vertices": [
+        165698,
+        165796,
+        165797,
+        165699
+      ]
+    },
+    {
+      "element": 164824,
+      "minimum_q8_jacobian_m2": -7.598184502435298e-07,
+      "polygon_signed_area_m2": 1.8398405781105964e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8446535548024775,
+        1.5707587044332671
+      ],
+      "vertices": [
+        165796,
+        165894,
+        165895,
+        165797
+      ]
+    },
+    {
+      "element": 164922,
+      "minimum_q8_jacobian_m2": -6.870390514879667e-07,
+      "polygon_signed_area_m2": 1.8285175195087433e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8451502303567366,
+        1.5707897915462075
+      ],
+      "vertices": [
+        165894,
+        165992,
+        165993,
+        165895
+      ]
+    },
+    {
+      "element": 165020,
+      "minimum_q8_jacobian_m2": -6.136822833384358e-07,
+      "polygon_signed_area_m2": 1.817698431327841e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8456452105726522,
+        1.5708207994288248
+      ],
+      "vertices": [
+        165992,
+        166090,
+        166091,
+        165993
+      ]
+    },
+    {
+      "element": 165118,
+      "minimum_q8_jacobian_m2": -5.396606051077887e-07,
+      "polygon_signed_area_m2": 1.8073523986306128e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.846138598134442,
+        1.5708517328791631
+      ],
+      "vertices": [
+        166090,
+        166188,
+        166189,
+        166091
+      ]
+    },
+    {
+      "element": 165216,
+      "minimum_q8_jacobian_m2": -4.648927300917149e-07,
+      "polygon_signed_area_m2": 1.7974514487928417e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8466304899285718,
+        1.5708825964245774
+      ],
+      "vertices": [
+        166188,
+        166286,
+        166287,
+        166189
+      ]
+    },
+    {
+      "element": 165314,
+      "minimum_q8_jacobian_m2": -3.8930640979938817e-07,
+      "polygon_signed_area_m2": 1.7879681583066187e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8471209773694635,
+        1.5709133943368847
+      ],
+      "vertices": [
+        166286,
+        166384,
+        166385,
+        166287
+      ]
+    },
+    {
+      "element": 165412,
+      "minimum_q8_jacobian_m2": -3.1284721899831003e-07,
+      "polygon_signed_area_m2": 1.7788803212681614e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8476101470244329,
+        1.5709441306615193
+      ],
+      "vertices": [
+        166384,
+        166482,
+        166483,
+        166385
+      ]
+    },
+    {
+      "element": 165510,
+      "minimum_q8_jacobian_m2": -2.3548354689437909e-07,
+      "polygon_signed_area_m2": 1.7701641902290177e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8480980809837779,
+        1.570974809234791
+      ],
+      "vertices": [
+        166482,
+        166580,
+        166581,
+        166483
+      ]
+    },
+    {
+      "element": 165608,
+      "minimum_q8_jacobian_m2": -1.5721808954060732e-07,
+      "polygon_signed_area_m2": 1.7618011911579856e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8485848572377764,
+        1.5710054337014725
+      ],
+      "vertices": [
+        166580,
+        166678,
+        166679,
+        166581
+      ]
+    },
+    {
+      "element": 165706,
+      "minimum_q8_jacobian_m2": -7.809672690894166e-08,
+      "polygon_signed_area_m2": 1.7537709259274337e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8490705500228615,
+        1.5710360075309573
+      ],
+      "vertices": [
+        166678,
+        166776,
+        166777,
+        166679
+      ]
+    },
+    {
+      "element": 167562,
+      "minimum_q8_jacobian_m2": -3.59177082711993e-07,
+      "polygon_signed_area_m2": 8.999812247667549e-07,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8307479477747297,
+        1.5366574305282223
+      ],
+      "vertices": [
+        168534,
+        168632,
+        168633,
+        168535
+      ]
+    },
+    {
+      "element": 167568,
+      "minimum_q8_jacobian_m2": -7.236322570426392e-07,
+      "polygon_signed_area_m2": 1.6336239975212052e-06,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.8581729676709806,
+        1.5716137510656403
+      ],
+      "vertices": [
+        168540,
+        168638,
+        168639,
+        168541
+      ]
+    },
+    {
+      "element": 183768,
+      "minimum_q8_jacobian_m2": -2.05838116125601e-07,
+      "polygon_signed_area_m2": 1.231620661013011e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0172544827102703,
+        -1.8282152946656707
+      ],
+      "vertices": [
+        184917,
+        184859,
+        184860,
+        184918
+      ]
+    },
+    {
+      "element": 183769,
+      "minimum_q8_jacobian_m2": -1.4481798628229628e-07,
+      "polygon_signed_area_m2": 1.2573543059279935e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0090286194901357,
+        -1.824033699330436
+      ],
+      "vertices": [
+        184918,
+        184860,
+        184861,
+        184919
+      ]
+    },
+    {
+      "element": 183826,
+      "minimum_q8_jacobian_m2": -8.568427773110327e-07,
+      "polygon_signed_area_m2": 1.2632983824589772e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0165735878024988,
+        -1.8294178523458986
+      ],
+      "vertices": [
+        184975,
+        184917,
+        184918,
+        184976
+      ]
+    },
+    {
+      "element": 183827,
+      "minimum_q8_jacobian_m2": -8.079187724349678e-07,
+      "polygon_signed_area_m2": 1.2849084651600506e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0083553270429453,
+        -1.8252154007253953
+      ],
+      "vertices": [
+        184976,
+        184918,
+        184919,
+        184977
+      ]
+    },
+    {
+      "element": 183884,
+      "minimum_q8_jacobian_m2": -1.5349551161324776e-06,
+      "polygon_signed_area_m2": 1.2943846513180368e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0158757240088683,
+        -1.8306503758741943
+      ],
+      "vertices": [
+        185033,
+        184975,
+        184976,
+        185034
+      ]
+    },
+    {
+      "element": 183885,
+      "minimum_q8_jacobian_m2": -1.4973161570555417e-06,
+      "polygon_signed_area_m2": 1.3117277793406323e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0076678039597473,
+        -1.8264220879482553
+      ],
+      "vertices": [
+        185034,
+        184976,
+        184977,
+        185035
+      ]
+    },
+    {
+      "element": 183942,
+      "minimum_q8_jacobian_m2": -2.232577428878265e-06,
+      "polygon_signed_area_m2": 1.324688669157581e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.015161279486443,
+        -1.8319121752907852
+      ],
+      "vertices": [
+        185091,
+        185033,
+        185034,
+        185092
+      ]
+    },
+    {
+      "element": 183943,
+      "minimum_q8_jacobian_m2": -2.2057927057725375e-06,
+      "polygon_signed_area_m2": 1.3377838954831134e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0069664631010078,
+        -1.8276530410894143
+      ],
+      "vertices": [
+        185092,
+        185034,
+        185035,
+        185093
+      ]
+    },
+    {
+      "element": 184000,
+      "minimum_q8_jacobian_m2": -2.941149999032273e-06,
+      "polygon_signed_area_m2": 1.3541153933371852e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0144307210802705,
+        -1.8332024210554851
+      ],
+      "vertices": [
+        185149,
+        185091,
+        185092,
+        185150
+      ]
+    },
+    {
+      "element": 184001,
+      "minimum_q8_jacobian_m2": -2.9254703075482228e-06,
+      "polygon_signed_area_m2": 1.3631424688576033e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0062517084174738,
+        -1.8289075563192503
+      ],
+      "vertices": [
+        185150,
+        185092,
+        185093,
+        185151
+      ]
+    },
+    {
+      "element": 184058,
+      "minimum_q8_jacobian_m2": -3.6515287704648556e-06,
+      "polygon_signed_area_m2": 1.382687360451662e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0136845361539595,
+        -1.8345202468250987
+      ],
+      "vertices": [
+        185207,
+        185149,
+        185150,
+        185208
+      ]
+    },
+    {
+      "element": 184059,
+      "minimum_q8_jacobian_m2": -3.648203644872866e-06,
+      "polygon_signed_area_m2": 1.3879672599692583e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.005523884157569,
+        -1.8301850350057283
+      ],
+      "vertices": [
+        185208,
+        185150,
+        185151,
+        185209
+      ]
+    },
+    {
+      "element": 184116,
+      "minimum_q8_jacobian_m2": -4.3544441163479075e-06,
+      "polygon_signed_area_m2": 1.4105445354739565e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0129231685783913,
+        -1.8358648625510594
+      ],
+      "vertices": [
+        185265,
+        185207,
+        185208,
+        185266
+      ]
+    },
+    {
+      "element": 184117,
+      "minimum_q8_jacobian_m2": -4.3659966868134035e-06,
+      "polygon_signed_area_m2": 1.412508535314494e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0047832261416596,
+        -1.8314850692191784
+      ],
+      "vertices": [
+        185266,
+        185208,
+        185209,
+        185267
+      ]
+    },
+    {
+      "element": 184174,
+      "minimum_q8_jacobian_m2": -5.040730628054476e-06,
+      "polygon_signed_area_m2": 1.437946874927043e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.012146954150389,
+        -1.8372356685662161
+      ],
+      "vertices": [
+        185323,
+        185265,
+        185266,
+        185324
+      ]
+    },
+    {
+      "element": 184175,
+      "minimum_q8_jacobian_m2": -5.071222228072176e-06,
+      "polygon_signed_area_m2": 1.4371001049728882e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.004029816992301,
+        -1.8328075203225316
+      ],
+      "vertices": [
+        185324,
+        185266,
+        185267,
+        185325
+      ]
+    },
+    {
+      "element": 184232,
+      "minimum_q8_jacobian_m2": -5.701511534748996e-06,
+      "polygon_signed_area_m2": 1.4652611956433859e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0113560589944033,
+        -1.8386323643691336
+      ],
+      "vertices": [
+        185381,
+        185323,
+        185324,
+        185382
+      ]
+    },
+    {
+      "element": 184233,
+      "minimum_q8_jacobian_m2": -5.756777956968275e-06,
+      "polygon_signed_area_m2": 1.4621454012542223e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0032635459504726,
+        -1.8341525895520672
+      ],
+      "vertices": [
+        185382,
+        185324,
+        185325,
+        185383
+      ]
+    },
+    {
+      "element": 184290,
+      "minimum_q8_jacobian_m2": -6.328147892045992e-06,
+      "polygon_signed_area_m2": 1.4929510619876574e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0105504244130716,
+        -1.8400550459760598
+      ],
+      "vertices": [
+        185439,
+        185381,
+        185382,
+        185440
+      ]
+    },
+    {
+      "element": 184291,
+      "minimum_q8_jacobian_m2": -6.41603685753873e-06,
+      "polygon_signed_area_m2": 1.4881131264021796e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0024840736530012,
+        -1.8355208799324099
+      ],
+      "vertices": [
+        185440,
+        185382,
+        185383,
+        185441
+      ]
+    },
+    {
+      "element": 184348,
+      "minimum_q8_jacobian_m2": -6.912075272141372e-06,
+      "polygon_signed_area_m2": 1.5215630566389748e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0097297183582385,
+        -1.8415042915269195
+      ],
+      "vertices": [
+        185497,
+        185439,
+        185440,
+        185498
+      ]
+    },
+    {
+      "element": 184349,
+      "minimum_q8_jacobian_m2": -7.0426942795970985e-06,
+      "polygon_signed_area_m2": 1.5155317877546537e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.001690799647057,
+        -1.836913453435101
+      ],
+      "vertices": [
+        185498,
+        185440,
+        185441,
+        185499
+      ]
+    },
+    {
+      "element": 184406,
+      "minimum_q8_jacobian_m2": -7.444469713900738e-06,
+      "polygon_signed_area_m2": 1.5517222249905593e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0088932920174143,
+        -1.8429812377996906
+      ],
+      "vertices": [
+        185555,
+        185497,
+        185498,
+        185556
+      ]
+    },
+    {
+      "element": 184407,
+      "minimum_q8_jacobian_m2": -7.630464018598505e-06,
+      "polygon_signed_area_m2": 1.544994067959049e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0008828303484798,
+        -1.83833188740775
+      ],
+      "vertices": [
+        185556,
+        185498,
+        185499,
+        185557
+      ]
+    },
+    {
+      "element": 184464,
+      "minimum_q8_jacobian_m2": -7.915814735765149e-06,
+      "polygon_signed_area_m2": 1.5841321075127368e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0080401377819492,
+        -1.844487654220586
+      ],
+      "vertices": [
+        185613,
+        185555,
+        185556,
+        185614
+      ]
+    },
+    {
+      "element": 184465,
+      "minimum_q8_jacobian_m2": -8.172681837727977e-06,
+      "polygon_signed_area_m2": 1.5771659098162694e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0000589436224747,
+        -1.83977833698777
+      ],
+      "vertices": [
+        185614,
+        185556,
+        185557,
+        185615
+      ]
+    },
+    {
+      "element": 184522,
+      "minimum_q8_jacobian_m2": -8.31535114527351e-06,
+      "polygon_signed_area_m2": 1.6195851525568905e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0071688445421358,
+        -1.8460260215274322
+      ],
+      "vertices": [
+        185671,
+        185613,
+        185614,
+        185672
+      ]
+    },
+    {
+      "element": 184523,
+      "minimum_q8_jacobian_m2": -8.661808130798615e-06,
+      "polygon_signed_area_m2": 1.612804037520732e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9992175465419828,
+        -1.8412556095519
+      ],
+      "vertices": [
+        185672,
+        185614,
+        185615,
+        185673
+      ]
+    },
+    {
+      "element": 184580,
+      "minimum_q8_jacobian_m2": -8.630446302314028e-06,
+      "polygon_signed_area_m2": 1.6589797710797605e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0062775457051014,
+        -1.8475996232126515
+      ],
+      "vertices": [
+        185729,
+        185671,
+        185672,
+        185730
+      ]
+    },
+    {
+      "element": 184581,
+      "minimum_q8_jacobian_m2": -9.08883814317545e-06,
+      "polygon_signed_area_m2": 1.6527783043396305e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9983566228609202,
+        -1.8427672572869889
+      ],
+      "vertices": [
+        185730,
+        185672,
+        185673,
+        185731
+      ]
+    },
+    {
+      "element": 184638,
+      "minimum_q8_jacobian_m2": -9.14189098663692e-06,
+      "polygon_signed_area_m2": 1.7033408361122326e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.005363857222886,
+        -1.8492126545384584
+      ],
+      "vertices": [
+        185787,
+        185729,
+        185730,
+        185788
+      ]
+    },
+    {
+      "element": 184639,
+      "minimum_q8_jacobian_m2": -9.442606405837385e-06,
+      "polygon_signed_area_m2": 1.698095871538463e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9974736684799203,
+        -1.8443176909052688
+      ],
+      "vertices": [
+        185788,
+        185730,
+        185731,
+        185789
+      ]
+    },
+    {
+      "element": 184696,
+      "minimum_q8_jacobian_m2": -9.92463111490639e-06,
+      "polygon_signed_area_m2": 1.753850503538601e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0044248019303523,
+        -1.8508703556524284
+      ],
+      "vertices": [
+        185845,
+        185787,
+        185788,
+        185846
+      ]
+    },
+    {
+      "element": 184697,
+      "minimum_q8_jacobian_m2": -9.708896766878213e-06,
+      "polygon_signed_area_m2": 1.7499344577287523e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9965656120813688,
+        -1.845912319468582
+      ],
+      "vertices": [
+        185846,
+        185788,
+        185789,
+        185847
+      ]
+    },
+    {
+      "element": 184754,
+      "minimum_q8_jacobian_m2": -1.0668639230549908e-05,
+      "polygon_signed_area_m2": 1.8118569473979385e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0034567234111393,
+        -1.8525791631462538
+      ],
+      "vertices": [
+        185903,
+        185845,
+        185846,
+        185904
+      ]
+    },
+    {
+      "element": 184755,
+      "minimum_q8_jacobian_m2": -1.0089607278910499e-05,
+      "polygon_signed_area_m2": 1.8096514516008355e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9956287249076589,
+        -1.847557709320695
+      ],
+      "vertices": [
+        185904,
+        185846,
+        185847,
+        185905
+      ]
+    },
+    {
+      "element": 184812,
+      "minimum_q8_jacobian_m2": -1.1381585765506885e-05,
+      "polygon_signed_area_m2": 1.8788687330406617e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0024551992772472,
+        -1.8543468626568198
+      ],
+      "vertices": [
+        185961,
+        185903,
+        185904,
+        185962
+      ]
+    },
+    {
+      "element": 184813,
+      "minimum_q8_jacobian_m2": -1.065664158718224e-05,
+      "polygon_signed_area_m2": 1.8787776904671816e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9946585300227955,
+        -1.849261743919482
+      ],
+      "vertices": [
+        185962,
+        185904,
+        185905,
+        185963
+      ]
+    },
+    {
+      "element": 184870,
+      "minimum_q8_jacobian_m2": -1.2040225271307928e-05,
+      "polygon_signed_area_m2": 1.9564667142146774e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0014149800334722,
+        -1.8561826964313108
+      ],
+      "vertices": [
+        186019,
+        185961,
+        185962,
+        186020
+      ]
+    },
+    {
+      "element": 184871,
+      "minimum_q8_jacobian_m2": -1.1139687180698307e-05,
+      "polygon_signed_area_m2": 1.9589252925333867e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9936497374979726,
+        -1.8510337380130504
+      ],
+      "vertices": [
+        186020,
+        185962,
+        185963,
+        186021
+      ]
+    },
+    {
+      "element": 184928,
+      "minimum_q8_jacobian_m2": -1.2606048803703951e-05,
+      "polygon_signed_area_m2": 2.046102796637861e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0003300062941671,
+        -1.8580973329467942
+      ],
+      "vertices": [
+        186077,
+        186019,
+        186020,
+        186078
+      ]
+    },
+    {
+      "element": 184929,
+      "minimum_q8_jacobian_m2": -1.1842284494686516e-05,
+      "polygon_signed_area_m2": 2.0515782937602367e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9925962584592098,
+        -1.8528844129497621
+      ],
+      "vertices": [
+        186078,
+        186020,
+        186021,
+        186079
+      ]
+    },
+    {
+      "element": 184986,
+      "minimum_q8_jacobian_m2": -1.3067962387466792e-05,
+      "polygon_signed_area_m2": 2.1486490875188835e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9991936020618446,
+        -1.8601025265417541
+      ],
+      "vertices": [
+        186135,
+        186077,
+        186078,
+        186136
+      ]
+    },
+    {
+      "element": 184987,
+      "minimum_q8_jacobian_m2": -1.2641329035419682e-05,
+      "polygon_signed_area_m2": 2.157624895138266e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9914913957318056,
+        -1.8548255610367126
+      ],
+      "vertices": [
+        186136,
+        186078,
+        186079,
+        186137
+      ]
+    },
+    {
+      "element": 185044,
+      "minimum_q8_jacobian_m2": -1.3375244843564328e-05,
+      "polygon_signed_area_m2": 2.2636401577069698e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9979989937292367,
+        -1.862210203541768
+      ],
+      "vertices": [
+        186193,
+        186135,
+        186136,
+        186194
+      ]
+    },
+    {
+      "element": 185045,
+      "minimum_q8_jacobian_m2": -1.329279526156879e-05,
+      "polygon_signed_area_m2": 2.2765721765960478e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9903283607202191,
+        -1.8568691354719697
+      ],
+      "vertices": [
+        186194,
+        186136,
+        186137,
+        186195
+      ]
+    },
+    {
+      "element": 185102,
+      "minimum_q8_jacobian_m2": -1.342825127781497e-05,
+      "polygon_signed_area_m2": 2.3882385366102987e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9967403112474497,
+        -1.8644306994215922
+      ],
+      "vertices": [
+        186251,
+        186193,
+        186194,
+        186252
+      ]
+    },
+    {
+      "element": 185103,
+      "minimum_q8_jacobian_m2": -1.3697671104322573e-05,
+      "polygon_signed_area_m2": 2.40547450178763e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9891012729162361,
+        -1.859025490483397
+      ],
+      "vertices": [
+        186252,
+        186194,
+        186195,
+        186253
+      ]
+    },
+    {
+      "element": 185160,
+      "minimum_q8_jacobian_m2": -1.3211061357721644e-05,
+      "polygon_signed_area_m2": 2.51637163676266e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9954140983425201,
+        -1.8667700996689929
+      ],
+      "vertices": [
+        186309,
+        186251,
+        186252,
+        186310
+      ]
+    },
+    {
+      "element": 185161,
+      "minimum_q8_jacobian_m2": -1.3732018219487703e-05,
+      "polygon_signed_area_m2": 2.5380397009500122e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9878066688482063,
+        -1.861300724464697
+      ],
+      "vertices": [
+        186310,
+        186252,
+        186253,
+        186311
+      ]
+    },
+    {
+      "element": 185218,
+      "minimum_q8_jacobian_m2": -1.2599287705536443e-05,
+      "polygon_signed_area_m2": 2.6390080723692755e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9940209768103717,
+        -1.8692273093615852
+      ],
+      "vertices": [
+        186367,
+        186309,
+        186310,
+        186368
+      ]
+    },
+    {
+      "element": 185219,
+      "minimum_q8_jacobian_m2": -1.3273563178156589e-05,
+      "polygon_signed_area_m2": 2.6649149449609055e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9864451654248243,
+        -1.8636937512573835
+      ],
+      "vertices": [
+        186368,
+        186310,
+        186311,
+        186369
+      ]
+    },
+    {
+      "element": 185276,
+      "minimum_q8_jacobian_m2": -1.156402490662948e-05,
+      "polygon_signed_area_m2": 2.74641468709369e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9925666236778719,
+        -1.8717923326185428
+      ],
+      "vertices": [
+        186425,
+        186367,
+        186368,
+        186426
+      ]
+    },
+    {
+      "element": 185277,
+      "minimum_q8_jacobian_m2": -1.2246752906990088e-05,
+      "polygon_signed_area_m2": 2.7760230051021573e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9850224363983132,
+        -1.8661945808534681
+      ],
+      "vertices": [
+        186426,
+        186368,
+        186369,
+        186427
+      ]
+    },
+    {
+      "element": 185334,
+      "minimum_q8_jacobian_m2": -1.0168093871696767e-05,
+      "polygon_signed_area_m2": 2.831695914473631e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.991061184520994,
+        -1.8744473055899755
+      ],
+      "vertices": [
+        186483,
+        186425,
+        186426,
+        186484
+      ]
+    },
+    {
+      "element": 185335,
+      "minimum_q8_jacobian_m2": -1.066060626402402e-05,
+      "polygon_signed_area_m2": 2.8642256652333664e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9835486251792874,
+        -1.8687853532870227
+      ],
+      "vertices": [
+        186484,
+        186426,
+        186427,
+        186485
+      ]
+    },
+    {
+      "element": 185392,
+      "minimum_q8_jacobian_m2": -8.45130270950902e-06,
+      "polygon_signed_area_m2": 2.8931653083041908e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9895170969996963,
+        -1.8771703286575188
+      ],
+      "vertices": [
+        186541,
+        186483,
+        186484,
+        186542
+      ]
+    },
+    {
+      "element": 185393,
+      "minimum_q8_jacobian_m2": -8.60733181888899e-06,
+      "polygon_signed_area_m2": 2.9277779037717444e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9820361680143939,
+        -1.8714441714751375
+      ],
+      "vertices": [
+        186542,
+        186484,
+        186485,
+        186543
+      ]
+    },
+    {
+      "element": 185450,
+      "minimum_q8_jacobian_m2": -6.528488434533422e-06,
+      "polygon_signed_area_m2": 2.933848886277346e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9879464156996987,
+        -1.8799401767100894
+      ],
+      "vertices": [
+        186599,
+        186541,
+        186542,
+        186600
+      ]
+    },
+    {
+      "element": 185451,
+      "minimum_q8_jacobian_m2": -6.221414293077411e-06,
+      "polygon_signed_area_m2": 2.969813017439371e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9804971185787061,
+        -1.874149811940729
+      ],
+      "vertices": [
+        186600,
+        186542,
+        186543,
+        186601
+      ]
+    },
+    {
+      "element": 185508,
+      "minimum_q8_jacobian_m2": -4.453810643178573e-06,
+      "polygon_signed_area_m2": 2.959044349404305e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9863589343222473,
+        -1.882739605491942
+      ],
+      "vertices": [
+        186657,
+        186599,
+        186600,
+        186658
+      ]
+    },
+    {
+      "element": 185509,
+      "minimum_q8_jacobian_m2": -3.63216144869699e-06,
+      "polygon_signed_area_m2": 2.9958155856046886e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9789412699942176,
+        -1.876885031467653
+      ],
+      "vertices": [
+        186658,
+        186600,
+        186601,
+        186659
+      ]
+    },
+    {
+      "element": 185566,
+      "minimum_q8_jacobian_m2": -2.2961438371427983e-06,
+      "polygon_signed_area_m2": 2.9740072767903136e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9847615913232823,
+        -1.885556398120289
+      ],
+      "vertices": [
+        186715,
+        186657,
+        186658,
+        186716
+      ]
+    },
+    {
+      "element": 185567,
+      "minimum_q8_jacobian_m2": -9.800857638322212e-07,
+      "polygon_signed_area_m2": 3.0112262384585087e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9773755603531475,
+        -1.8796376138260695
+      ],
+      "vertices": [
+        186716,
+        186658,
+        186659,
+        186717
+      ]
+    },
+    {
+      "element": 185624,
+      "minimum_q8_jacobian_m2": -1.0041446174320764e-07,
+      "polygon_signed_area_m2": 2.982802403406204e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9831588077307074,
+        -1.8883827702725573
+      ],
+      "vertices": [
+        186773,
+        186715,
+        186716,
+        186774
+      ]
+    },
+    {
+      "element": 198976,
+      "minimum_q8_jacobian_m2": -5.68388957708715e-07,
+      "polygon_signed_area_m2": 1.0611354498535341e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0224450287459321,
+        1.8234065327133513
+      ],
+      "vertices": [
+        200205,
+        200078,
+        200077,
+        200204
+      ]
+    },
+    {
+      "element": 199103,
+      "minimum_q8_jacobian_m2": -1.2407760236178267e-06,
+      "polygon_signed_area_m2": 1.0910551325071793e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.021971836249549,
+        1.8244826333000732
+      ],
+      "vertices": [
+        200332,
+        200205,
+        200204,
+        200331
+      ]
+    },
+    {
+      "element": 199230,
+      "minimum_q8_jacobian_m2": -1.9721197311329052e-06,
+      "polygon_signed_area_m2": 1.1215995824542802e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0214852082787225,
+        1.8255892579401647
+      ],
+      "vertices": [
+        200459,
+        200332,
+        200331,
+        200458
+      ]
+    },
+    {
+      "element": 199357,
+      "minimum_q8_jacobian_m2": -2.7622893972844178e-06,
+      "polygon_signed_area_m2": 1.1524207763180527e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0209849363535817,
+        1.8267268819678524
+      ],
+      "vertices": [
+        200586,
+        200459,
+        200458,
+        200585
+      ]
+    },
+    {
+      "element": 199358,
+      "minimum_q8_jacobian_m2": -4.811921631923572e-07,
+      "polygon_signed_area_m2": 1.0970121089193263e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0134921030054778,
+        1.8212818388967476
+      ],
+      "vertices": [
+        200587,
+        200460,
+        200459,
+        200586
+      ]
+    },
+    {
+      "element": 199484,
+      "minimum_q8_jacobian_m2": -3.60931013735705e-06,
+      "polygon_signed_area_m2": 1.1831241522375358e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0204709747349545,
+        1.8278956115437335
+      ],
+      "vertices": [
+        200713,
+        200586,
+        200585,
+        200712
+      ]
+    },
+    {
+      "element": 199485,
+      "minimum_q8_jacobian_m2": -1.1960185495195678e-06,
+      "polygon_signed_area_m2": 1.1281284754471876e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0130035766792154,
+        1.8224077026994716
+      ],
+      "vertices": [
+        200714,
+        200587,
+        200586,
+        200713
+      ]
+    },
+    {
+      "element": 199611,
+      "minimum_q8_jacobian_m2": -4.5092779301012835e-06,
+      "polygon_signed_area_m2": 1.2132905325756838e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0199434561927703,
+        1.8290951478889939
+      ],
+      "vertices": [
+        200840,
+        200713,
+        200712,
+        200839
+      ]
+    },
+    {
+      "element": 199612,
+      "minimum_q8_jacobian_m2": -1.9707125191541242e-06,
+      "polygon_signed_area_m2": 1.1590675978445653e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.012501284775629,
+        1.823565317434993
+      ],
+      "vertices": [
+        200841,
+        200714,
+        200713,
+        200840
+      ]
+    },
+    {
+      "element": 199738,
+      "minimum_q8_jacobian_m2": -5.456363822909745e-06,
+      "polygon_signed_area_m2": 1.2425057658749239e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0194026964489367,
+        1.8303247772261089
+      ],
+      "vertices": [
+        200967,
+        200840,
+        200839,
+        200966
+      ]
+    },
+    {
+      "element": 199739,
+      "minimum_q8_jacobian_m2": -2.8027049693861217e-06,
+      "polygon_signed_area_m2": 1.1893928452910707e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.011985386350664,
+        1.8247543128470929
+      ],
+      "vertices": [
+        200968,
+        200841,
+        200840,
+        200967
+      ]
+    },
+    {
+      "element": 199865,
+      "minimum_q8_jacobian_m2": -6.443127254462717e-06,
+      "polygon_signed_area_m2": 1.2703954318404875e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0188491844661947,
+        1.8315833928491583
+      ],
+      "vertices": [
+        201094,
+        200967,
+        200966,
+        201093
+      ]
+    },
+    {
+      "element": 199866,
+      "minimum_q8_jacobian_m2": -3.687418133782795e-06,
+      "polygon_signed_area_m2": 1.2186779999812103e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0114562286934508,
+        1.8259738836904191
+      ],
+      "vertices": [
+        201095,
+        200968,
+        200967,
+        201094
+      ]
+    },
+    {
+      "element": 199992,
+      "minimum_q8_jacobian_m2": -7.460971453882912e-06,
+      "polygon_signed_area_m2": 1.2966596836250233e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0182835574193794,
+        1.8328695519556333
+      ],
+      "vertices": [
+        201221,
+        201094,
+        201093,
+        201220
+      ]
+    },
+    {
+      "element": 199993,
+      "minimum_q8_jacobian_m2": -4.618434683701349e-06,
+      "polygon_signed_area_m2": 1.2465462508770564e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0109143343648856,
+        1.8272228196355007
+      ],
+      "vertices": [
+        201222,
+        201095,
+        201094,
+        201221
+      ]
+    },
+    {
+      "element": 200119,
+      "minimum_q8_jacobian_m2": -8.500750784765817e-06,
+      "polygon_signed_area_m2": 1.3210999445179006e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0177065620875254,
+        1.8341815633056318
+      ],
+      "vertices": [
+        201348,
+        201221,
+        201220,
+        201347
+      ]
+    },
+    {
+      "element": 200120,
+      "minimum_q8_jacobian_m2": -5.587918499266166e-06,
+      "polygon_signed_area_m2": 1.2727082535524126e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.01036037134402,
+        1.8284995741770897
+      ],
+      "vertices": [
+        201349,
+        201222,
+        201221,
+        201348
+      ]
+    },
+    {
+      "element": 200246,
+      "minimum_q8_jacobian_m2": -9.553384461411717e-06,
+      "polygon_signed_area_m2": 1.3436386167797743e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0171190059748094,
+        1.835517598206267
+      ],
+      "vertices": [
+        201475,
+        201348,
+        201347,
+        201474
+      ]
+    },
+    {
+      "element": 200247,
+      "minimum_q8_jacobian_m2": -6.587199780226301e-06,
+      "polygon_signed_area_m2": 1.2969901840742537e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0097951086446666,
+        1.8298023670840582
+      ],
+      "vertices": [
+        201476,
+        201349,
+        201348,
+        201475
+      ]
+    },
+    {
+      "element": 200373,
+      "minimum_q8_jacobian_m2": -1.06104466661081e-05,
+      "polygon_signed_area_m2": 1.364315181773268e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0165217048860424,
+        1.8368758095387323
+      ],
+      "vertices": [
+        201602,
+        201475,
+        201474,
+        201601
+      ]
+    },
+    {
+      "element": 200374,
+      "minimum_q8_jacobian_m2": -7.607502618874055e-06,
+      "polygon_signed_area_m2": 1.3193444943881971e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0092193633751134,
+        1.831129306615665
+      ],
+      "vertices": [
+        201603,
+        201476,
+        201475,
+        201602
+      ]
+    },
+    {
+      "element": 200500,
+      "minimum_q8_jacobian_m2": -1.166452446239295e-05,
+      "polygon_signed_area_m2": 1.3832811635139386e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0159154323944142,
+        1.8382544465012138
+      ],
+      "vertices": [
+        201729,
+        201602,
+        201601,
+        201728
+      ]
+    },
+    {
+      "element": 200501,
+      "minimum_q8_jacobian_m2": -8.640551212440287e-06,
+      "polygon_signed_area_m2": 1.3398520597118768e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0086339448854065,
+        1.8324785184531558
+      ],
+      "vertices": [
+        201730,
+        201603,
+        201602,
+        201729
+      ]
+    },
+    {
+      "element": 200627,
+      "minimum_q8_jacobian_m2": -1.2709413307270976e-05,
+      "polygon_signed_area_m2": 1.4007773419422165e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0153008753566986,
+        1.8396519556507709
+      ],
+      "vertices": [
+        201856,
+        201729,
+        201728,
+        201855
+      ]
+    },
+    {
+      "element": 200628,
+      "minimum_q8_jacobian_m2": -9.679091957027059e-06,
+      "polygon_signed_area_m2": 1.3587058583675038e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.008039601911868,
+        1.8338482676840024
+      ],
+      "vertices": [
+        201857,
+        201730,
+        201729,
+        201856
+      ]
+    },
+    {
+      "element": 200754,
+      "minimum_q8_jacobian_m2": -1.3740140273611481e-05,
+      "polygon_signed_area_m2": 1.4171082033054283e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0146786000066135,
+        1.8410670579407045
+      ],
+      "vertices": [
+        201983,
+        201856,
+        201855,
+        201982
+      ]
+    },
+    {
+      "element": 200755,
+      "minimum_q8_jacobian_m2": -1.0717197443948705e-05,
+      "polygon_signed_area_m2": 1.3761853600913199e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0074369788226354,
+        1.835237059764015
+      ],
+      "vertices": [
+        201984,
+        201857,
+        201856,
+        201983
+      ]
+    },
+    {
+      "element": 200881,
+      "minimum_q8_jacobian_m2": -1.475280795639725e-05,
+      "polygon_signed_area_m2": 1.4326182424362344e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0140490288341242,
+        1.8424988012947885
+      ],
+      "vertices": [
+        202110,
+        201983,
+        201982,
+        202109
+      ]
+    },
+    {
+      "element": 200882,
+      "minimum_q8_jacobian_m2": -1.1750340108790104e-05,
+      "polygon_signed_area_m2": 1.392630005536688e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0068265831962622,
+        1.8366437152887265
+      ],
+      "vertices": [
+        202111,
+        201984,
+        201983,
+        202110
+      ]
+    },
+    {
+      "element": 201008,
+      "minimum_q8_jacobian_m2": -1.5744333651291204e-05,
+      "polygon_signed_area_m2": 1.4476740051172499e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.013412426579386,
+        1.8439465925296603
+      ],
+      "vertices": [
+        202237,
+        202110,
+        202109,
+        202236
+      ]
+    },
+    {
+      "element": 201009,
+      "minimum_q8_jacobian_m2": -1.2775302067008155e-05,
+      "polygon_signed_area_m2": 1.4084163322714005e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0062087641242479,
+        1.8380674199616882
+      ],
+      "vertices": [
+        202238,
+        202111,
+        202110,
+        202237
+      ]
+    },
+    {
+      "element": 201135,
+      "minimum_q8_jacobian_m2": -1.6712195601097048e-05,
+      "polygon_signed_area_m2": 1.4626474239221032e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0127688938023285,
+        1.8454102121068032
+      ],
+      "vertices": [
+        202364,
+        202237,
+        202236,
+        202363
+      ]
+    },
+    {
+      "element": 201136,
+      "minimum_q8_jacobian_m2": -1.3789982924938571e-05,
+      "polygon_signed_area_m2": 1.423935706656998e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0055837003277341,
+        1.8395077518727752
+      ],
+      "vertices": [
+        202365,
+        202238,
+        202237,
+        202364
+      ]
+    },
+    {
+      "element": 201262,
+      "minimum_q8_jacobian_m2": -1.7654109045669613e-05,
+      "polygon_signed_area_m2": 1.4779118728713847e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.012118364935704,
+        1.8468898187442055
+      ],
+      "vertices": [
+        202491,
+        202364,
+        202363,
+        202490
+      ]
+    },
+    {
+      "element": 201263,
+      "minimum_q8_jacobian_m2": -1.4793129465150815e-05,
+      "polygon_signed_area_m2": 1.4395855981730321e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0049513949785867,
+        1.8409646932556658
+      ],
+      "vertices": [
+        202492,
+        202365,
+        202364,
+        202491
+      ]
+    },
+    {
+      "element": 201389,
+      "minimum_q8_jacobian_m2": -1.856776351573041e-05,
+      "polygon_signed_area_m2": 1.493841206223756e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0114606073465349,
+        1.8483859517928511
+      ],
+      "vertices": [
+        202618,
+        202491,
+        202490,
+        202617
+      ]
+    },
+    {
+      "element": 201390,
+      "minimum_q8_jacobian_m2": -1.5784075460791617e-05,
+      "polygon_signed_area_m2": 1.4557647142976471e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.004311673386741,
+        1.8424386355693454
+      ],
+      "vertices": [
+        202619,
+        202492,
+        202491,
+        202618
+      ]
+    },
+    {
+      "element": 201516,
+      "minimum_q8_jacobian_m2": -1.9450568026563555e-05,
+      "polygon_signed_area_m2": 1.5108145825171171e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0107952194625216,
+        1.8498995357856785
+      ],
+      "vertices": [
+        202745,
+        202618,
+        202617,
+        202744
+      ]
+    },
+    {
+      "element": 201517,
+      "minimum_q8_jacobian_m2": -1.6762506903572058e-05,
+      "polygon_signed_area_m2": 1.4728752024240066e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.003664181152495,
+        1.8439303834527714
+      ],
+      "vertices": [
+        202746,
+        202619,
+        202618,
+        202745
+      ]
+    },
+    {
+      "element": 201643,
+      "minimum_q8_jacobian_m2": -2.029937220118674e-05,
+      "polygon_signed_area_m2": 1.5292323874316338e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.010121624195659,
+        1.8514318957534797
+      ],
+      "vertices": [
+        202872,
+        202745,
+        202744,
+        202871
+      ]
+    },
+    {
+      "element": 201644,
+      "minimum_q8_jacobian_m2": -1.7728244558913014e-05,
+      "polygon_signed_area_m2": 1.4913371840341583e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0030083784563477,
+        1.8454411675011313
+      ],
+      "vertices": [
+        202873,
+        202746,
+        202745,
+        202872
+      ]
+    },
+    {
+      "element": 201770,
+      "minimum_q8_jacobian_m2": -2.1110236629052825e-05,
+      "polygon_signed_area_m2": 1.549530061761839e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.009439055635419,
+        1.8529847879291375
+      ],
+      "vertices": [
+        202999,
+        202872,
+        202871,
+        202998
+      ]
+    },
+    {
+      "element": 201771,
+      "minimum_q8_jacobian_m2": -1.8681091739404233e-05,
+      "polygon_signed_area_m2": 1.5116016870986293e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.002343528078078,
+        1.8469726714051025
+      ],
+      "vertices": [
+        203000,
+        202873,
+        202872,
+        202999
+      ]
+    },
+    {
+      "element": 201897,
+      "minimum_q8_jacobian_m2": -2.187816761338365e-05,
+      "polygon_signed_area_m2": 1.5721993244177668e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0087465377959461,
+        1.8545604486115521
+      ],
+      "vertices": [
+        203126,
+        202999,
+        202998,
+        203125
+      ]
+    },
+    {
+      "element": 201898,
+      "minimum_q8_jacobian_m2": -1.9620699344261556e-05,
+      "polygon_signed_area_m2": 1.534171863781797e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.001668675623685,
+        1.848527076953471
+      ],
+      "vertices": [
+        203127,
+        203000,
+        202999,
+        203126
+      ]
+    },
+    {
+      "element": 202024,
+      "minimum_q8_jacobian_m2": -2.2596714559189934e-05,
+      "polygon_signed_area_m2": 1.597826325649976e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0080428499266894,
+        1.8561616737529862
+      ],
+      "vertices": [
+        203253,
+        203126,
+        203125,
+        203252
+      ]
+    },
+    {
+      "element": 202025,
+      "minimum_q8_jacobian_m2": -2.0546441079186013e-05,
+      "polygon_signed_area_m2": 1.5596410521956372e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0009826162509712,
+        1.8501071399764948
+      ],
+      "vertices": [
+        203254,
+        203127,
+        203126,
+        203253
+      ]
+    },
+    {
+      "element": 202151,
+      "minimum_q8_jacobian_m2": -2.3531762134329945e-05,
+      "polygon_signed_area_m2": 1.627120170910601e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0073264766787475,
+        1.8577919331785562
+      ],
+      "vertices": [
+        203380,
+        203253,
+        203252,
+        203379
+      ]
+    },
+    {
+      "element": 202152,
+      "minimum_q8_jacobian_m2": -2.145729645334939e-05,
+      "polygon_signed_area_m2": 1.5887215549015288e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0002838461139967,
+        1.8517163013056628
+      ],
+      "vertices": [
+        203381,
+        203254,
+        203253,
+        203380
+      ]
+    },
+    {
+      "element": 202278,
+      "minimum_q8_jacobian_m2": -2.482415492168957e-05,
+      "polygon_signed_area_m2": 1.6609813871304446e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0065955362310208,
+        1.8594555352253712
+      ],
+      "vertices": [
+        203507,
+        203380,
+        203379,
+        203506
+      ]
+    },
+    {
+      "element": 202279,
+      "minimum_q8_jacobian_m2": -2.253064403746505e-05,
+      "polygon_signed_area_m2": 1.6223130488768334e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9995704915631171,
+        1.853358848687387
+      ],
+      "vertices": [
+        203508,
+        203381,
+        203380,
+        203507
+      ]
+    },
+    {
+      "element": 202405,
+      "minimum_q8_jacobian_m2": -2.614318993241635e-05,
+      "polygon_signed_area_m2": 1.7005709775030908e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0058476771436506,
+        1.8611578629385614
+      ],
+      "vertices": [
+        203634,
+        203507,
+        203506,
+        203633
+      ]
+    },
+    {
+      "element": 202406,
+      "minimum_q8_jacobian_m2": -2.383582400336944e-05,
+      "polygon_signed_area_m2": 1.6615715366929962e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.998840206866421,
+        1.855040150783584
+      ],
+      "vertices": [
+        203635,
+        203508,
+        203507,
+        203634
+      ]
+    },
+    {
+      "element": 202532,
+      "minimum_q8_jacobian_m2": -2.7504530465404404e-05,
+      "polygon_signed_area_m2": 1.747427076814745e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0050799329107787,
+        1.8629057070716437
+      ],
+      "vertices": [
+        203761,
+        203634,
+        203633,
+        203760
+      ]
+    },
+    {
+      "element": 202533,
+      "minimum_q8_jacobian_m2": -2.5165043784655515e-05,
+      "polygon_signed_area_m2": 1.7080254306911513e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9980900294414092,
+        1.8567669884588185
+      ],
+      "vertices": [
+        203762,
+        203635,
+        203634,
+        203761
+      ]
+    },
+    {
+      "element": 202659,
+      "minimum_q8_jacobian_m2": -2.8937771998549347e-05,
+      "polygon_signed_area_m2": 1.80362799725442e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.004288512802587,
+        1.864707744903214
+      ],
+      "vertices": [
+        203888,
+        203761,
+        203760,
+        203887
+      ]
+    },
+    {
+      "element": 202660,
+      "minimum_q8_jacobian_m2": -2.6525995580211947e-05,
+      "polygon_signed_area_m2": 1.7637375453571913e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9973161712133002,
+        1.8585480322962145
+      ],
+      "vertices": [
+        203889,
+        203762,
+        203761,
+        203888
+      ]
+    },
+    {
+      "element": 202786,
+      "minimum_q8_jacobian_m2": -3.0436945845251654e-05,
+      "polygon_signed_area_m2": 1.8720382376269384e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0034684994682563,
+        1.86657523246439
+      ],
+      "vertices": [
+        204015,
+        203888,
+        203887,
+        204014
+      ]
+    },
+    {
+      "element": 202787,
+      "minimum_q8_jacobian_m2": -2.792833639619426e-05,
+      "polygon_signed_area_m2": 1.8315492597342775e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9965137166009727,
+        1.86039453386084
+      ],
+      "vertices": [
+        204016,
+        203889,
+        203888,
+        204015
+      ]
+    },
+    {
+      "element": 202913,
+      "minimum_q8_jacobian_m2": -3.2020024270443736e-05,
+      "polygon_signed_area_m2": 1.9566663717274224e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0026134088018646,
+        1.8685230120364607
+      ],
+      "vertices": [
+        204142,
+        204015,
+        204014,
+        204141
+      ]
+    },
+    {
+      "element": 202914,
+      "minimum_q8_jacobian_m2": -2.93834569666484e-05,
+      "polygon_signed_area_m2": 1.915435512533925e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9956761826605933,
+        1.862321332498541
+      ],
+      "vertices": [
+        204143,
+        204016,
+        204015,
+        204142
+      ]
+    },
+    {
+      "element": 203040,
+      "minimum_q8_jacobian_m2": -3.370780678378395e-05,
+      "polygon_signed_area_m2": 2.063188564238594e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0017145486089372,
+        1.8705709801869785
+      ],
+      "vertices": [
+        204269,
+        204142,
+        204141,
+        204268
+      ]
+    },
+    {
+      "element": 203041,
+      "minimum_q8_jacobian_m2": -3.0902845050079706e-05,
+      "polygon_signed_area_m2": 2.0210239156215337e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9947948779495626,
+        1.8643483228754039
+      ],
+      "vertices": [
+        204270,
+        204143,
+        204142,
+        204269
+      ]
+    },
+    {
+      "element": 203167,
+      "minimum_q8_jacobian_m2": -3.5534181865704126e-05,
+      "polygon_signed_area_m2": 2.1996137523183634e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        1.0007601054536217,
+        1.872746177996127
+      ],
+      "vertices": [
+        204396,
+        204269,
+        204268,
+        204395
+      ]
+    },
+    {
+      "element": 203168,
+      "minimum_q8_jacobian_m2": -3.254827510333086e-05,
+      "polygon_signed_area_m2": 2.156254210328168e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9938579895113888,
+        1.8665025448576187
+      ],
+      "vertices": [
+        204397,
+        204270,
+        204269,
+        204396
+      ]
+    },
+    {
+      "element": 203294,
+      "minimum_q8_jacobian_m2": -3.758449300370398e-05,
+      "polygon_signed_area_m2": 2.376871665143998e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9997339434855994,
+        1.8750855405589446
+      ],
+      "vertices": [
+        204523,
+        204396,
+        204395,
+        204522
+      ]
+    },
+    {
+      "element": 203295,
+      "minimum_q8_jacobian_m2": -3.5347296758939835e-05,
+      "polygon_signed_area_m2": 2.3319610838345994e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.992849381796953,
+        1.8688209327761687
+      ],
+      "vertices": [
+        204524,
+        204397,
+        204396,
+        204523
+      ]
+    },
+    {
+      "element": 203421,
+      "minimum_q8_jacobian_m2": -3.9752898597698484e-05,
+      "polygon_signed_area_m2": 2.6082157160045583e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9986143992249391,
+        1.8776386557367757
+      ],
+      "vertices": [
+        204650,
+        204523,
+        204522,
+        204649
+      ]
+    },
+    {
+      "element": 203422,
+      "minimum_q8_jacobian_m2": -3.9130341959084814e-05,
+      "polygon_signed_area_m2": 2.5612818382869662e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9917473915128346,
+        1.8713530740183741
+      ],
+      "vertices": [
+        204651,
+        204524,
+        204523,
+        204650
+      ]
+    },
+    {
+      "element": 203548,
+      "minimum_q8_jacobian_m2": -4.186576240452915e-05,
+      "polygon_signed_area_m2": 2.904121257363279e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9973743610986406,
+        1.8804675821019732
+      ],
+      "vertices": [
+        204777,
+        204650,
+        204649,
+        204776
+      ]
+    },
+    {
+      "element": 203549,
+      "minimum_q8_jacobian_m2": -4.319510890267974e-05,
+      "polygon_signed_area_m2": 2.854597950319171e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9905249071998452,
+        1.8741610268666926
+      ],
+      "vertices": [
+        204778,
+        204651,
+        204650,
+        204777
+      ]
+    },
+    {
+      "element": 203675,
+      "minimum_q8_jacobian_m2": -4.3555389013021095e-05,
+      "polygon_signed_area_m2": 3.2566364010278015e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9959860537006896,
+        1.8836358977397503
+      ],
+      "vertices": [
+        204904,
+        204777,
+        204776,
+        204903
+      ]
+    },
+    {
+      "element": 203676,
+      "minimum_q8_jacobian_m2": -4.677786075221106e-05,
+      "polygon_signed_area_m2": 3.204020207892011e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9891541535204057,
+        1.8773083692315848
+      ],
+      "vertices": [
+        204905,
+        204778,
+        204777,
+        204904
+      ]
+    },
+    {
+      "element": 203802,
+      "minimum_q8_jacobian_m2": -4.362081155300116e-05,
+      "polygon_signed_area_m2": 3.6167424756206046e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9944345333522837,
+        1.887177808828771
+      ],
+      "vertices": [
+        205031,
+        204904,
+        204903,
+        205030
+      ]
+    },
+    {
+      "element": 203803,
+      "minimum_q8_jacobian_m2": -4.833754945905651e-05,
+      "polygon_signed_area_m2": 3.560945759206735e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9876201868362597,
+        1.8808293071878825
+      ],
+      "vertices": [
+        205032,
+        204905,
+        204904,
+        205031
+      ]
+    },
+    {
+      "element": 203929,
+      "minimum_q8_jacobian_m2": -4.135917588393893e-05,
+      "polygon_signed_area_m2": 3.904516045016848e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9927340834966188,
+        1.8910606204817344
+      ],
+      "vertices": [
+        205158,
+        205031,
+        205030,
+        205157
+      ]
+    },
+    {
+      "element": 203930,
+      "minimum_q8_jacobian_m2": -4.631228691667141e-05,
+      "polygon_signed_area_m2": 3.846137930052507e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9859372906142683,
+        1.8846911457874846
+      ],
+      "vertices": [
+        205159,
+        205032,
+        205031,
+        205158
+      ]
+    },
+    {
+      "element": 204056,
+      "minimum_q8_jacobian_m2": -3.658598249967445e-05,
+      "polygon_signed_area_m2": 4.07537043404238e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9909273276258225,
+        1.8951867672619032
+      ],
+      "vertices": [
+        205285,
+        205158,
+        205157,
+        205284
+      ]
+    },
+    {
+      "element": 204057,
+      "minimum_q8_jacobian_m2": -4.061117414211942e-05,
+      "polygon_signed_area_m2": 4.0154005335413245e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9841480883601612,
+        1.8887963195585755
+      ],
+      "vertices": [
+        205286,
+        205159,
+        205158,
+        205285
+      ]
+    },
+    {
+      "element": 204183,
+      "minimum_q8_jacobian_m2": -3.029165330160537e-05,
+      "polygon_signed_area_m2": 4.151263945062489e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9890621770751711,
+        1.899446579825958
+      ],
+      "vertices": [
+        205412,
+        205285,
+        205284,
+        205411
+      ]
+    },
+    {
+      "element": 204184,
+      "minimum_q8_jacobian_m2": -3.255553989330201e-05,
+      "polygon_signed_area_m2": 4.090511904608629e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9823004914169148,
+        1.893035159137896
+      ],
+      "vertices": [
+        205413,
+        205286,
+        205285,
+        205412
+      ]
+    },
+    {
+      "element": 204310,
+      "minimum_q8_jacobian_m2": -2.3258267640871434e-05,
+      "polygon_signed_area_m2": 4.176463778426953e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9871716318709657,
+        1.9037645209091063
+      ],
+      "vertices": [
+        205539,
+        205412,
+        205411,
+        205538
+      ]
+    },
+    {
+      "element": 204311,
+      "minimum_q8_jacobian_m2": -2.3470898531027134e-05,
+      "polygon_signed_area_m2": 4.115363688950158e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9804274998151203,
+        1.8973321272494876
+      ],
+      "vertices": [
+        205540,
+        205413,
+        205412,
+        205539
+      ]
+    },
+    {
+      "element": 204437,
+      "minimum_q8_jacobian_m2": -1.5990439343750902e-05,
+      "polygon_signed_area_m2": 4.180988300539479e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9852718832313677,
+        1.9081035287126467
+      ],
+      "vertices": [
+        205666,
+        205539,
+        205538,
+        205665
+      ]
+    },
+    {
+      "element": 204438,
+      "minimum_q8_jacobian_m2": -1.4466962229919936e-05,
+      "polygon_signed_area_m2": 4.119717801176481e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9785453047752924,
+        1.9016501620884942
+      ],
+      "vertices": [
+        205667,
+        205540,
+        205539,
+        205666
+      ]
+    },
+    {
+      "element": 204564,
+      "minimum_q8_jacobian_m2": -8.687386201493616e-06,
+      "polygon_signed_area_m2": 4.178450956460189e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9833692307992093,
+        1.9124491833151662
+      ],
+      "vertices": [
+        205793,
+        205666,
+        205665,
+        205792
+      ]
+    },
+    {
+      "element": 204565,
+      "minimum_q8_jacobian_m2": -5.4456277043147e-06,
+      "polygon_signed_area_m2": 4.117070903630893e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9766602059415315,
+        1.9059748437301613
+      ],
+      "vertices": [
+        205794,
+        205667,
+        205666,
+        205793
+      ]
+    },
+    {
+      "element": 204691,
+      "minimum_q8_jacobian_m2": -1.4206574839538335e-06,
+      "polygon_signed_area_m2": 4.173799221429686e-05,
+      "polygon_convex_ccw": true,
+      "rz_center_m": [
+        0.9814657608142058,
+        1.916796709301096
+      ],
+      "vertices": [
+        205920,
+        205793,
+        205792,
+        205919
+      ]
+    }
+  ],
+  "scientific_gates_passed": []
+}

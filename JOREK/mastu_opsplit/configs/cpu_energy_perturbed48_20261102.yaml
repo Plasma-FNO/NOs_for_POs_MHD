@@ -1,0 +1,159 @@
+case_id: mastu-model303-energy_perturbed48
+parent_family_id: mastu-localized-cpu-validation
+mode: perturbed_validation_evolution
+jorek:
+  source: /pitagora_work/FUPB2_UKAEA_ML/vgopakum/src/jorek/src
+  executable: /pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/energy_diagnostics_build_20261102/source/jorek_model303
+  input_directory: /pitagora_work/FUPB2_UKAEA_ML/vgopakum/src/jorek/runs/j1-check/grid_with_patches_mastu_303
+  runtime_environment: /pitagora_work/FUPB2_UKAEA_ML/vgopakum/src/jorek/jorek-env.sh
+  pinned_commit: 01a52be37576f79c785f1f7a80dee296dda5c9c8
+  executable_sha256: a2ca05225a52ed7aad7828820b55bf4ac754508381296764ae9758b4173faf9d
+  build_config: model=303 n_tor=1 n_coord_tor=1 l_pol_domm=0 n_plane=1 n_period=1
+    n_coord_period=1 n_boundary_max=4001
+  toolkit_runner_revision: 14fcecb664cbb084b86051370bc415d8446e1637
+  derivative_build:
+    report: /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_mesh_axis_order_build_20261102.json
+    report_sha256: 3ed3b2c9ae586ad0348ab17ab2523e37c2ca68dd4506741f0ed29ba574b1400b
+    initializer_patch_sha256: 0a7b0c157f01eea52d05b3088016fa356bc6a7b8b56a9c256443cae2a4676df3
+    shared_attachment_patch_sha256: 0291538c67b6a0af9f060ebca2a1d90bec70cfa6544bf0a012513a6a6b626607
+    axis_order_patch_sha256: 6f17731d587c4599bfc792e9e75da048e52f3f1e34e89bafb5ce5e5cbc0b9163
+    n_boundary_max: 4001
+    single_writer_report: /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_single_writer_build_20261102.json
+    single_writer_report_sha256: 057a9109a23da59daed406c98a7abc0722f7ca512ed3ea332c8cd92defe0259d
+    energy_diagnostic_report: /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_energy_diagnostics_build_20261102.json
+    energy_diagnostic_report_sha256: c3b2cd4f41facda45fd64056884d30dd871b8be5129f5b6117f0ac955596dc61
+evolution:
+  nstep_n: 48
+  tstep_n: 0.0625
+  nout: 8
+input_defaults:
+  central_mass: 2.01410177811
+  time_evol_scheme: Crank-Nicholson
+  eta: 1.0e-05
+  visco: 1.0e-05
+  visco_par: 1.0e-05
+  eta_T_dependent: true
+  visco_T_dependent: true
+  ZKpar_T_dependent: true
+  ZK_par: 1.0
+  ZK_par_max: 1.0e+20
+  D_par: 0.0
+  D_perp(1): 1.0e-05
+  D_perp(2): 0.0
+  D_perp(3): 0.0
+  D_perp(4): 99.0
+  D_perp(5): 99.0
+  ZK_perp(1): 1.0e-05
+  ZK_perp(2): 0.0
+  ZK_perp(3): 0.0
+  ZK_perp(4): 99.0
+  ZK_perp(5): 99.0
+  eta_num: 0.0
+  visco_num: 0.0
+  visco_par_num: 0.0
+  D_perp_num: 0.0
+  ZK_perp_num: 0.0
+  particlesource: 1.0e-05
+  particlesource_psin: 100.0
+  particlesource_sig: 0.1
+  heatsource: 1.0e-07
+  heatsource_psin: 1.0
+  heatsource_sig: 0.1
+  edgeparticlesource: 0.0
+  T_min: 1.0e-20
+  rho_min: 1.0e-20
+  T_min_neg: -1000000000000.0
+  rho_min_neg: -1000000000000.0
+  tauIC: 0.0
+  no_mach1_bc: false
+  bc_natural_open: false
+  freeboundary: false
+  freeboundary_equil: false
+  use_mumps: true
+  use_strumpack: false
+  keep_current_prof: true
+  keep_n0_const: false
+  linear_run: false
+  n_R: 90
+  n_Z: 260
+  n_flux: 20
+  n_tht: 110
+  n_open: 2
+  n_outer: 16
+  n_inner: 4
+  n_leg: 6
+  n_leg_out: 40
+  n_private: 4
+  n_up_leg: 6
+  n_up_leg_out: 40
+  n_up_priv: 4
+  n_ext_block(1): 20
+  n_ext_block(2): 20
+  n_ext_block(3): 38
+  n_ext_block(4): 20
+  n_ext_block(5): 20
+  n_ext_block(6): 20
+  n_ext_block(7): 20
+  n_ext_block(8): 20
+  n_ext_block(9): 20
+  n_ext_block(10): 20
+  n_ext_block(11): 20
+  opsplit_amplitude(1): 0.05
+  opsplit_amplitude(2): 0.05
+  opsplit_center(1): 0.95
+  opsplit_center(2): 0.0
+  opsplit_width(1): 0.08
+  opsplit_width(2): 0.16
+  opsplit_psin_taper(1): 0.55
+  opsplit_psin_taper(2): 0.75
+  eta_ohmic: 0.0
+  T_max_eta: 1.0e+99
+  T_max_eta_ohm: 1.0e+99
+perturbation:
+  enabled: true
+  purpose: Short native perturbed diagnostic evolution; physical gate and reference-data
+    acceptance remain pending
+  shape_screen: /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_initializer_shape_screen_20261102.json
+  shape_screen_sha256: 5ccbb6bc8d698b2575147594983f363a98177b5f42db63ed2adf057909d1ea64
+  normalization: Exact ES axis/boundary values used inside native source; screen values
+    rounded
+  runtime_acceptance_pending: false
+  runtime_validation: /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_enabled_initializer_validation_20261102.json
+  runtime_validation_sha256: 39130996f3a5955d81ee188ce0cb986c9914bd320c81ee8706771ec8bd1ddcf4
+execution:
+  mpi_ranks: 4
+  omp_threads: 1
+  timeout_s: 1740
+  max_attempts: 1
+  launcher:
+  - mpirun
+  - --bind-to
+  - none
+  - -n
+  require_slurm: true
+acceptance:
+  required_files:
+  - jorek_restart.h5
+  final_time_s: 1.4059131112280784e-06
+  equilibrium_regression:
+    dataset: values
+    absolute_tolerance: 1.0e-12
+slurm:
+  account: fupa2_fauna
+  partition: dcgp_fua_dbg
+  nodes: 1
+  walltime: 00:30:00
+  memory: 16G
+  python: /pitagora_work/FUPB2_UKAEA_ML/vgopakum/envs/cfo/bin/python
+resource_authorization:
+  status: approved_cpu_study_continuation
+  submission_allowed: true
+  scope: One capped diagnostics-only unchanged-state regression; physical configuration
+    unchanged, no ensemble
+  requested_cpu_core_hours: 2.0
+  requested_node_hours: 0.5
+  billable_usage: scheduler/accounting dependent; not inferred from process core-hours
+  max_submissions: 1
+  approval_date: '2026-11-02'
+  approval_source: Explicit user instruction to continue
+  total_authorized_runs: 22

@@ -1,0 +1,14 @@
+{
+  "status": "cancelled_dependency_failed",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/combined_core_poloidal_next_coverage_20261104",
+  "dependencies": [
+    "2772841"
+  ],
+  "script_sha256": "7d6a759ee908170f72cc60f115b2870f08929d100e1268547ccbb955756ab646",
+  "analysis_source_sha256": "51d37a67d22c5a5c271112ff473f04ef109ed6ecf2dbb1c9fab62903dbf9b1c2",
+  "scientific_gates_passed": [],
+  "job_id": "2772900",
+  "reason": "Poloidal880 native probe failed physical positivity; no qualified output for this audit.",
+  "kind": "analysis",
+  "native_attempt_started": false
+}

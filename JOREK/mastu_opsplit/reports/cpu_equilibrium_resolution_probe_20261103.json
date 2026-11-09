@@ -1,0 +1,43 @@
+{
+  "status": "failed_validation",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/equilibrium_resolution_probe_20261103",
+  "budget": {
+    "authorization": "User request to resolve Gates A/B/C blockers for validated training data.",
+    "scope": "One unchanged-solver native three-step proof: fresh doubled R/Z counts, radial160 and original wall/poloidal counts.",
+    "allocations_max": 1,
+    "attempts_max": 1,
+    "mpi_ranks": 4,
+    "threads": 1,
+    "memory_GiB": 256,
+    "wall_hours_max": 4,
+    "rank_CPU_hours_max": 16,
+    "node_hours_max": 4,
+    "conservative_resource_hours_max": 1024,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+    "spatial_targets_changed": false,
+    "physics_changed": false
+  },
+  "manifest_sha256": "837fc3fef01ee009ed196141e15006fe4de10955dd8795062ecec3bce49ae6bf",
+  "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_equilibrium_resolution_probe_20261103.sbatch",
+  "script_sha256": "95b4abed62ecd59fe38369b992fcddb61d1dc3034fad9cfc44c3289b7b23ff46",
+  "scheduler_preflight": "sbatch: Job 2771208 to start at 2026-11-03T20:25:54 a using 4 processors on nodes r350c01s08 in partition dcgp_fua_prod\n",
+  "scientific_gates_passed": [],
+  "job_id": "2771209",
+  "failure": "Fresh doubled R/Z equilibrium produces six contacts where the native symmetric grid requires four. No time evolution or accepted refined fields.",
+  "stage_results": {
+    "probe3": {
+      "stage": "probe3",
+      "status": "failed_validation",
+      "returncode": 1,
+      "process_wall_seconds": 772.0671620270004,
+      "binary_sha256": "dd786f76a5c815976ad54bcd31b744ad2c3d6cafddfcc064dcae8e6761d8ccd6",
+      "scientific_gates_passed": [],
+      "error": "exit_nonzero",
+      "equilibrium_summary": {
+        "iterations": 80,
+        "last_raw_update": 9.62e-11,
+        "converged": true
+      }
+    }
+  }
+}

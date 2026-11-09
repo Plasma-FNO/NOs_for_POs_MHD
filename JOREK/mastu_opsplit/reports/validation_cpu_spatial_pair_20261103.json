@@ -1,0 +1,333 @@
+{
+  "created_utc": "2026-11-03T10:54:51.847286+00:00",
+  "status": "completed_comparison_spatial_targets_not_met",
+  "pair_record": "cpu_spatial_pair_20261103.json",
+  "comparison_record": "cpu_spatial_convergence_20261103.json",
+  "final_time_s": 1.4059131112280784e-06,
+  "mesh_elements": {
+    "existing": 11257,
+    "refined": 46415
+  },
+  "mesh_nodes": {
+    "existing": 11581,
+    "refined": 47067
+  },
+  "simulation_jobs": {
+    "baseline48": "2769727",
+    "perturbed48": "2769729"
+  },
+  "analysis_job_id": "2769889",
+  "both_simulations_validated": true,
+  "both_simulations_48_steps": true,
+  "both_simulations_workspace_retries": {
+    "baseline48": 0,
+    "perturbed48": 0
+  },
+  "readable_finite_final_datasets": {
+    "baseline48": 131,
+    "perturbed48": 131
+  },
+  "coverage": {
+    "total_queries": 742640,
+    "covered_queries": 741859,
+    "covered_refined_volume_fraction": 0.9996447092610835,
+    "uncovered_refined_volume_m3": 0.007694674994376021,
+    "uncovered_coordinate_examples_m": [
+      [
+        0.9045442293873014,
+        -1.5917521891871647
+      ],
+      [
+        0.9090145110610756,
+        -1.5924834439088782
+      ],
+      [
+        0.9049005106102491,
+        -1.5917160730741946
+      ],
+      [
+        0.9027579462841916,
+        -1.5913820938355165
+      ],
+      [
+        0.909215567283511,
+        -1.5924588955505858
+      ],
+      [
+        0.9050875826845476,
+        -1.591697908533428
+      ],
+      [
+        0.9095980954047875,
+        -1.5924119762118063
+      ],
+      [
+        0.9054420572623962,
+        -1.59166197042698
+      ],
+      [
+        0.9155722454943868,
+        -1.593282647889136
+      ],
+      [
+        0.910102953522258,
+        -1.5923498652793076
+      ],
+      [
+        0.9059085664320202,
+        -1.5916132805472714
+      ],
+      [
+        0.9202381894863774,
+        -1.5936006618210508
+      ],
+      [
+        0.9159926809185384,
+        -1.5932202858478224
+      ],
+      [
+        0.9104854816435346,
+        -1.592302945940528
+      ],
+      [
+        0.9062630410098688,
+        -1.5915773424408235
+      ],
+      [
+        0.9029433838583234,
+        -1.5913652018462792
+      ],
+      [
+        0.9032897481317828,
+        -1.5913360470005407
+      ],
+      [
+        0.8993737569622804,
+        -1.5907352423719512
+      ],
+      [
+        0.9037409775656738,
+        -1.591300309519103
+      ],
+      [
+        0.8998193232963057,
+        -1.5907155034218907
+      ]
+    ],
+    "maximum_inverse_coordinate_error_m": 9.999914581073372e-11,
+    "fallback_points": 1487,
+    "full_wall_coverage": false
+  },
+  "final_field_metrics": {
+    "baseline48": {
+      "psi": {
+        "relative_l2_difference": 0.000976205676542982,
+        "absolute_rms_difference": 4.278800082503452e-05,
+        "reference_rms": 0.04383092810580535,
+        "target_met": true
+      },
+      "u": {
+        "relative_l2_difference": 0.10787471352628816,
+        "absolute_rms_difference": 1.213801758806855e-06,
+        "reference_rms": 1.1251958120019124e-05,
+        "target_met": false
+      },
+      "zj": {
+        "relative_l2_difference": 0.005275425446740712,
+        "absolute_rms_difference": 0.002460348141885458,
+        "reference_rms": 0.46637909429760244,
+        "target_met": true
+      },
+      "w": {
+        "relative_l2_difference": 0.026817715165501903,
+        "absolute_rms_difference": 6.140627387561526e-05,
+        "reference_rms": 0.0022897653098578586,
+        "target_met": false
+      },
+      "rho": {
+        "relative_l2_difference": 0.0017164199464692717,
+        "absolute_rms_difference": 0.000936928556841886,
+        "reference_rms": 0.545862076917235,
+        "target_met": true
+      },
+      "T": {
+        "relative_l2_difference": 0.0007630739713015874,
+        "absolute_rms_difference": 4.7059065141523235e-06,
+        "reference_rms": 0.006167038440749569,
+        "target_met": true
+      },
+      "Vpar": {
+        "relative_l2_difference": 0.10443823308771386,
+        "absolute_rms_difference": 0.0009042925673022413,
+        "reference_rms": 0.00865863525805496,
+        "target_met": false
+      },
+      "pressure": {
+        "relative_l2_difference": 0.0008424031687669219,
+        "absolute_rms_difference": 4.980204418636498e-06,
+        "reference_rms": 0.005911901335706433,
+        "target_met": true
+      }
+    },
+    "perturbed48": {
+      "psi": {
+        "relative_l2_difference": 0.0009747412460575684,
+        "absolute_rms_difference": 4.2735189923475394e-05,
+        "reference_rms": 0.043842599352722424,
+        "target_met": true
+      },
+      "u": {
+        "relative_l2_difference": 0.026502849161101225,
+        "absolute_rms_difference": 1.1966269399380245e-06,
+        "reference_rms": 4.5150879162619935e-05,
+        "target_met": false
+      },
+      "zj": {
+        "relative_l2_difference": 0.005352807653762162,
+        "absolute_rms_difference": 0.0025002834045065583,
+        "reference_rms": 0.46709756192140806,
+        "target_met": true
+      },
+      "w": {
+        "relative_l2_difference": 0.16378643953969224,
+        "absolute_rms_difference": 0.0004328407968047662,
+        "reference_rms": 0.0026427144885817666,
+        "target_met": false
+      },
+      "rho": {
+        "relative_l2_difference": 0.0017102884701866823,
+        "absolute_rms_difference": 0.0009367081261474557,
+        "reference_rms": 0.5476901367669348,
+        "target_met": true
+      },
+      "T": {
+        "relative_l2_difference": 0.0007610040016715179,
+        "absolute_rms_difference": 4.7302143435209186e-06,
+        "reference_rms": 0.006215754888451537,
+        "target_met": true
+      },
+      "Vpar": {
+        "relative_l2_difference": 0.10438476359521061,
+        "absolute_rms_difference": 0.0009042945078243616,
+        "reference_rms": 0.008663089101117172,
+        "target_met": false
+      },
+      "pressure": {
+        "relative_l2_difference": 0.0008387300852940065,
+        "absolute_rms_difference": 5.035638199374583e-06,
+        "reference_rms": 0.00600388407148815,
+        "target_met": true
+      }
+    },
+    "paired_response": {
+      "psi": {
+        "relative_l2_difference": 0.0014030496028412433,
+        "absolute_rms_difference": 1.0639450040257135e-07,
+        "reference_rms": 7.583089021736461e-05,
+        "target_met": true
+      },
+      "u": {
+        "relative_l2_difference": 0.0019366542104253984,
+        "absolute_rms_difference": 9.119394020367156e-08,
+        "reference_rms": 4.708839591123509e-05,
+        "target_met": true
+      },
+      "zj": {
+        "relative_l2_difference": 0.08283527116511952,
+        "absolute_rms_difference": 0.0005181876018282045,
+        "reference_rms": 0.00625563959095729,
+        "target_met": false
+      },
+      "w": {
+        "relative_l2_difference": 0.3521418121001115,
+        "absolute_rms_difference": 0.00044125913237268107,
+        "reference_rms": 0.0012530722487656028,
+        "target_met": false
+      },
+      "rho": {
+        "relative_l2_difference": 0.004260410505846822,
+        "absolute_rms_difference": 1.9601016621805922e-05,
+        "reference_rms": 0.004600734270771854,
+        "target_met": true
+      },
+      "T": {
+        "relative_l2_difference": 0.0016129813451864266,
+        "absolute_rms_difference": 1.1114507601270351e-07,
+        "reference_rms": 6.89066097040679e-05,
+        "target_met": true
+      },
+      "Vpar": {
+        "relative_l2_difference": 0.003776718957435966,
+        "absolute_rms_difference": 1.0820327232420358e-06,
+        "reference_rms": 0.0002865007260102386,
+        "target_met": true
+      },
+      "pressure": {
+        "relative_l2_difference": 0.0015606630274904196,
+        "absolute_rms_difference": 2.1776233384458214e-07,
+        "reference_rms": 0.0001395319361122745,
+        "target_met": true
+      }
+    }
+  },
+  "integral_metrics": {
+    "baseline48": {
+      "density_integral": {
+        "relative_difference": 0.0004817995497250623,
+        "target_met": true
+      },
+      "pressure_integral": {
+        "relative_difference": 0.0005960888030106742,
+        "target_met": true
+      }
+    },
+    "perturbed48": {
+      "density_integral": {
+        "relative_difference": 0.0004860673979541543,
+        "target_met": true
+      },
+      "pressure_integral": {
+        "relative_difference": 0.0006020169791491652,
+        "target_met": true
+      }
+    }
+  },
+  "full_field_one_percent_target_met": false,
+  "paired_density_temperature_pressure_one_percent_target_met": true,
+  "density_pressure_integrals_two_percent_target_met": true,
+  "scientific_gates_passed": [],
+  "limitations": [
+    "Two-resolution consistency at fixed timestep; asymptotic convergence order is not measured.",
+    "Refined-mesh timestep sensitivity is not independently measured.",
+    "Uncovered points are excluded explicitly; no extrapolation is used.",
+    "Full physical balance and autonomous numerical backend remain unvalidated."
+  ],
+  "launcher_failure_preserved": {
+    "job_id": "2769740",
+    "elapsed_seconds": 2,
+    "reason": "Relative analysis script path resolved against the batch working directory. Absolute-path replacement 2769889 completed; analysis source and outputs were unchanged."
+  },
+  "tests": {
+    "initializer_and_runner_preflight_passed": 21,
+    "focused_analysis_passed": 22,
+    "separate_end_to_end_report_test_passed": 1
+  },
+  "artifacts": {
+    "cpu_spatial_convergence_20261103.json": {
+      "sha256": "c4c5a05c2c9cc0c4bba5b1b8ec5a461105063fb4bceb2415199f2f48c745c681",
+      "bytes": 21072
+    },
+    "cpu_spatial_convergence_20261103.png": {
+      "sha256": "4b085a0f39b68ca387abe589e0d254cbbd4019cc0892a57d461db2f9e2c359f2",
+      "bytes": 114899
+    },
+    "cpu_spatial_convergence_20261103.pdf": {
+      "sha256": "13c8a7bb0c388504a23430ba9f0e31fb5afd4fa4303b3343edd2ae62490e5057",
+      "bytes": 20349
+    },
+    "cpu_spatial_convergence_fields_20261103.csv": {
+      "sha256": "7706944c600bfca171870fd91449df93aaa519bf313633773d48c66efaf5943a",
+      "bytes": 2201
+    }
+  }
+}

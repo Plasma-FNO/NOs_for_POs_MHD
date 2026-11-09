@@ -1,0 +1,1009 @@
+{
+  "created_utc": "2026-11-03T09:51:45.808027+00:00",
+  "status": "passed_short_refined_probe",
+  "job_id": "2769623",
+  "record": "cpu_restart_capacity_recovery_20261103.json",
+  "result": {
+    "status": "completed",
+    "stages": [
+      {
+        "stage": "ordinary8",
+        "returncode": 0,
+        "status": "completed",
+        "wall_seconds": 159.70235760998912,
+        "binary_sha256": "dd786f76a5c815976ad54bcd31b744ad2c3d6cafddfcc064dcae8e6761d8ccd6",
+        "scientific_gates_passed": [],
+        "health": {
+          "steps": 8,
+          "final_time_s": 2.343188518713464e-07,
+          "restart_sha256": "01ffae884ff9014fc847bdbb9ae650dc02a2b91e4b70d83259d726980ca5d5d4"
+        },
+        "parity": {
+          "exact_reference_arrays": {
+            "x": true,
+            "values": true,
+            "vertex": true,
+            "size": true,
+            "boundary": true,
+            "constrained": true,
+            "n_sons": true,
+            "xtime": true,
+            "energies": true
+          },
+          "passed": true
+        }
+      },
+      {
+        "stage": "cached8",
+        "returncode": 0,
+        "status": "completed",
+        "wall_seconds": 120.2374288769206,
+        "binary_sha256": "dd786f76a5c815976ad54bcd31b744ad2c3d6cafddfcc064dcae8e6761d8ccd6",
+        "scientific_gates_passed": [],
+        "health": {
+          "steps": 8,
+          "final_time_s": 2.343188518713464e-07,
+          "restart_sha256": "8b3edf898ce3a785ead93ae1acf71bb4db3ed524653f2663588775294100a024"
+        },
+        "parity": {
+          "exact_reference_arrays": {
+            "x": true,
+            "values": true,
+            "vertex": true,
+            "size": true,
+            "boundary": true,
+            "constrained": true,
+            "n_sons": true,
+            "xtime": true,
+            "energies": true
+          },
+          "passed": true,
+          "metrics": {
+            "field": {
+              "absolute_rms_errors": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "reference_rms": [
+                0.04383493098866354,
+                1.0992853389236824e-05,
+                0.4665273725802755,
+                0.002147163683620754,
+                0.5470197115336213,
+                0.006166760035207791,
+                0.006530480841968516
+              ],
+              "tolerances": [
+                4.383593098866354e-08,
+                1.1992853389236824e-11,
+                4.6652837258027544e-07,
+                2.1481636836207536e-09,
+                5.470207115336213e-07,
+                6.167760035207791e-09,
+                6.531480841968516e-09
+              ],
+              "passed": [
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+              ]
+            },
+            "gradient": {
+              "absolute_rms_errors": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "reference_rms": [
+                0.20703282931596165,
+                0.00013695367486794794,
+                12.823139154431388,
+                0.05037335556535655,
+                5.24712734913534,
+                0.02622573783224263,
+                0.14959942462971165
+              ],
+              "tolerances": [
+                2.0703382931596165e-07,
+                1.3795367486794794e-10,
+                1.2823140154431386e-05,
+                5.0374355565356544e-08,
+                5.24712834913534e-06,
+                2.622673783224263e-08,
+                1.4960042462971166e-07
+              ],
+              "passed": [
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+              ]
+            }
+          }
+        }
+      },
+      {
+        "stage": "refined3",
+        "returncode": 0,
+        "status": "completed",
+        "wall_seconds": 494.48195051797666,
+        "binary_sha256": "dd786f76a5c815976ad54bcd31b744ad2c3d6cafddfcc064dcae8e6761d8ccd6",
+        "scientific_gates_passed": [],
+        "health": {
+          "steps": 3,
+          "final_time_s": 8.78695694517549e-08,
+          "restart_sha256": "5e2353a61e045d596502a982fcb30142750e3e6ca8e6a93cd6c3adf26c200e25"
+        },
+        "sampled_admissibility": {
+          "quadrature_order": 8,
+          "finite_fields": true,
+          "minimum_density": 0.008866882220878397,
+          "minimum_temperature": 9.742912025167962e-05
+        },
+        "metadata": {
+          "time_seconds": 8.78695694517549e-08,
+          "steps": 3,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 188268,
+          "canonical_native_dofs": 188037,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 7.754036608537834e-08,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        }
+      }
+    ],
+    "scientific_gates_passed": []
+  },
+  "mesh": {
+    "nodes": 47067,
+    "elements": 46415
+  },
+  "restart_datasets_readable_and_finite": 131,
+  "restart_datasets": {
+    "E_tot_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "F0": {
+      "shape": [
+        1
+      ],
+      "dtype": "float64"
+    },
+    "Ip_tot_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "Magwork_tot_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "Px_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "Py_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "RCS_version": {
+      "shape": [
+        1
+      ],
+      "dtype": "|S50"
+    },
+    "R_axis_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "R_bnd_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "R_domm": {
+      "shape": [
+        1
+      ],
+      "dtype": "float64"
+    },
+    "R_xpoint_t": {
+      "shape": [
+        2,
+        3
+      ],
+      "dtype": "float64"
+    },
+    "Wmag_tot_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "Z_axis_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "Z_bnd_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "Z_xpoint_t": {
+      "shape": [
+        2,
+        3
+      ],
+      "dtype": "float64"
+    },
+    "area_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "axis_dof": {
+      "shape": [
+        47067
+      ],
+      "dtype": "int32"
+    },
+    "axis_node": {
+      "shape": [
+        47067
+      ],
+      "dtype": "|S1"
+    },
+    "beta_n_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "beta_p_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "beta_t_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "boundary": {
+      "shape": [
+        47067
+      ],
+      "dtype": "int32"
+    },
+    "central_density": {
+      "shape": [
+        1
+      ],
+      "dtype": "float64"
+    },
+    "central_mass": {
+      "shape": [
+        1
+      ],
+      "dtype": "float64"
+    },
+    "constrained": {
+      "shape": [
+        47067
+      ],
+      "dtype": "|S1"
+    },
+    "contain_node": {
+      "shape": [
+        5,
+        46415
+      ],
+      "dtype": "int32"
+    },
+    "current_prof_initialized": {
+      "shape": [
+        1
+      ],
+      "dtype": "|S1"
+    },
+    "current_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "dE_tot_dt": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "dPx_dt": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "dPy_dt": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "dWmag_tot_dt": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "deltas": {
+      "shape": [
+        7,
+        4,
+        1,
+        47067
+      ],
+      "dtype": "float64"
+    },
+    "density_in_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "density_out_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "density_tot_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "dkinpar_tot_dt": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "dkinperp_tot_dt": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "dnpart_tot_dt": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "dpart_tot_dt": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "dthermal_tot_dt": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "energies": {
+      "shape": [
+        3,
+        2,
+        1
+      ],
+      "dtype": "float64"
+    },
+    "eta": {
+      "shape": [
+        1
+      ],
+      "dtype": "float64"
+    },
+    "father": {
+      "shape": [
+        46415
+      ],
+      "dtype": "int32"
+    },
+    "flux_Pvn_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "flux_kinpar_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "flux_poynting_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "flux_qpar_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "flux_qperp_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "freeboundary": {
+      "shape": [
+        1
+      ],
+      "dtype": "|S1"
+    },
+    "friction_dissip_tot_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "heat_src_in_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "heat_src_out_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "heat_src_tot_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "helicity_tot_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "index": {
+      "shape": [
+        4,
+        47067
+      ],
+      "dtype": "int32"
+    },
+    "index_now": {
+      "shape": [
+        1
+      ],
+      "dtype": "int32"
+    },
+    "jorek_model": {
+      "shape": [
+        1
+      ],
+      "dtype": "int32"
+    },
+    "kin_par_tot_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "kin_perp_tot_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "l_pol_domm": {
+      "shape": [
+        1
+      ],
+      "dtype": "int32"
+    },
+    "li3_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "li3_tot_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "mag_ener_src_tot": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "n_aux_var": {
+      "shape": [
+        1
+      ],
+      "dtype": "int32"
+    },
+    "n_boundary_max": {
+      "shape": [
+        1
+      ],
+      "dtype": "int32"
+    },
+    "n_coord_tor": {
+      "shape": [
+        1
+      ],
+      "dtype": "int32"
+    },
+    "n_degrees": {
+      "shape": [
+        1
+      ],
+      "dtype": "int32"
+    },
+    "n_dim": {
+      "shape": [
+        1
+      ],
+      "dtype": "int32"
+    },
+    "n_dof": {
+      "shape": [
+        1
+      ],
+      "dtype": "int32"
+    },
+    "n_elements": {
+      "shape": [
+        1
+      ],
+      "dtype": "int32"
+    },
+    "n_elements_max": {
+      "shape": [
+        1
+      ],
+      "dtype": "int32"
+    },
+    "n_gen": {
+      "shape": [
+        46415
+      ],
+      "dtype": "int32"
+    },
+    "n_nodes": {
+      "shape": [
+        1
+      ],
+      "dtype": "int32"
+    },
+    "n_nodes_max": {
+      "shape": [
+        1
+      ],
+      "dtype": "int32"
+    },
+    "n_order": {
+      "shape": [
+        1
+      ],
+      "dtype": "int32"
+    },
+    "n_period": {
+      "shape": [
+        1
+      ],
+      "dtype": "int32"
+    },
+    "n_pieces_max": {
+      "shape": [
+        1
+      ],
+      "dtype": "int32"
+    },
+    "n_plane": {
+      "shape": [
+        1
+      ],
+      "dtype": "int32"
+    },
+    "n_ref_list": {
+      "shape": [
+        1
+      ],
+      "dtype": "int32"
+    },
+    "n_sons": {
+      "shape": [
+        46415
+      ],
+      "dtype": "int32"
+    },
+    "n_spi_tot": {
+      "shape": [
+        1
+      ],
+      "dtype": "int32"
+    },
+    "n_tor": {
+      "shape": [
+        1
+      ],
+      "dtype": "int32"
+    },
+    "n_var": {
+      "shape": [
+        1
+      ],
+      "dtype": "int32"
+    },
+    "n_vertex_max": {
+      "shape": [
+        1
+      ],
+      "dtype": "int32"
+    },
+    "neighbours": {
+      "shape": [
+        4,
+        46415
+      ],
+      "dtype": "int32"
+    },
+    "npart_flux_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "npart_tot_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "nref": {
+      "shape": [
+        46415
+      ],
+      "dtype": "int32"
+    },
+    "nref_max": {
+      "shape": [
+        1
+      ],
+      "dtype": "int32"
+    },
+    "ohmic_tot_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "parent_elem": {
+      "shape": [
+        47067
+      ],
+      "dtype": "int32"
+    },
+    "parents": {
+      "shape": [
+        2,
+        47067
+      ],
+      "dtype": "int32"
+    },
+    "part_flux_Dpar_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "part_flux_Dperp_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "part_flux_Vpar_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "part_flux_Vperp_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "part_src_in_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "part_src_out_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "part_src_tot_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "pressure_in_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "pressure_out_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "psi_axis_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "psi_bnd_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "psi_xpoint_t": {
+      "shape": [
+        2,
+        3
+      ],
+      "dtype": "float64"
+    },
+    "ref_lambda": {
+      "shape": [
+        47067
+      ],
+      "dtype": "float64"
+    },
+    "ref_mu": {
+      "shape": [
+        47067
+      ],
+      "dtype": "float64"
+    },
+    "rst_hdf5_version": {
+      "shape": [
+        1
+      ],
+      "dtype": "int32"
+    },
+    "size": {
+      "shape": [
+        4,
+        4,
+        46415
+      ],
+      "dtype": "float64"
+    },
+    "sons": {
+      "shape": [
+        4,
+        46415
+      ],
+      "dtype": "int32"
+    },
+    "sqrt_mu0_over_rho0": {
+      "shape": [
+        1
+      ],
+      "dtype": "float64"
+    },
+    "sqrt_mu0_rho0": {
+      "shape": [
+        1
+      ],
+      "dtype": "float64"
+    },
+    "t_norm": {
+      "shape": [
+        1
+      ],
+      "dtype": "float64"
+    },
+    "t_now": {
+      "shape": [
+        1
+      ],
+      "dtype": "float64"
+    },
+    "thermal_e_tot_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "thermal_i_tot_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "thermal_tot_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "thmwork_tot_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "treat_axis": {
+      "shape": [
+        1
+      ],
+      "dtype": "|S50"
+    },
+    "tstep": {
+      "shape": [
+        1
+      ],
+      "dtype": "float64"
+    },
+    "values": {
+      "shape": [
+        7,
+        4,
+        1,
+        47067
+      ],
+      "dtype": "float64"
+    },
+    "vertex": {
+      "shape": [
+        4,
+        46415
+      ],
+      "dtype": "int32"
+    },
+    "visco": {
+      "shape": [
+        1
+      ],
+      "dtype": "float64"
+    },
+    "visco_dissip_tot_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "visco_par": {
+      "shape": [
+        1
+      ],
+      "dtype": "float64"
+    },
+    "viscopar_dissip_tot_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "viscopar_flux_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "volume_t": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "x": {
+      "shape": [
+        2,
+        4,
+        1,
+        47067
+      ],
+      "dtype": "float64"
+    },
+    "xtime": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    },
+    "xtime_P_ei": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64"
+    }
+  },
+  "workspace_retries": 0,
+  "poisson_calls": 7,
+  "refined_stderr_bytes": 0,
+  "inputs_byte_identical_to_previous_attempt": {
+    "ordinary8": true,
+    "cached8": true,
+    "refined3": true
+  },
+  "related_tests_passed": 60,
+  "test_report": "cpu_restart_capacity_recovery_tests_20261103.xml",
+  "test_report_sha256": "8fdcae749d39d894eef19ec17f88ddd4e51b4ec7527bf29609ba3c768feaaa76",
+  "root_cause": "Restart import reduced node capacity to 32,832, smaller than the 47,067-node refined grid. Grid copying corrupted allocation descriptors and later crashed at the Poisson delta-array write.",
+  "root_fix": "Both restart readers reserve max(n_nodes_max, saved_nodes), then restore the active saved node count.",
+  "scientific_gates_passed": [],
+  "limitations": [
+    "Three-step diagnostic only; no spatial-convergence or full physical-acceptance claim.",
+    "Production source and scientific training remain unchanged."
+  ]
+}

@@ -1,0 +1,13 @@
+# Exploratory stronger OOD pilot: release requires every case to pass.
+manifest: /pitagora_scratch/userexternal/vgopakum/mastu_coefficient_ood_strong4_20261106/manifest.json
+completion_record: /pitagora_scratch/userexternal/vgopakum/mastu_coefficient_ood_strong4_20261106/completion.json
+activity_report: /pitagora_scratch/userexternal/vgopakum/mastu_coefficient_ood_strong4_20261106/activity.json
+loader: mastu_opsplit.coefficient_ood.CoefficientOODDataset
+model_class: mastu_opsplit.coefficient_ood.DensityDiffusionEulerModel
+split_counts: {train: 0, validation: 0, test: 4}
+coefficient: D_perp(1)
+baseline_coefficient: 1.0e-5
+multipliers: [20, 40, 70, 100]
+normalization: use the evaluated checkpoint training normalization; never fit on OOD
+activity_target: 0.10 final volume-weighted density RMS difference relative to matched ID
+activity_is_acceptance_gate: false

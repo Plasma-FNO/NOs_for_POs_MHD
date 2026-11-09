@@ -1,0 +1,78 @@
+{
+  "balance_checked": false,
+  "constraints_checked": false,
+  "diagnostic_source_sha256": "fa27fb478cdb78ccb09255c9bdd090d457069cf0485da018ba4d4f06f27ec88a",
+  "domain": "full wall-extended mesh, including exterior and private-flux regions",
+  "elements": 2715,
+  "fields": {
+    "T": {
+      "absolute_rms_drift": 0.00017704226089682032,
+      "max": 0.017999563639139605,
+      "min": 9.018377490529815e-05,
+      "relative_l2_drift": 0.02870984986649988
+    },
+    "Vpar": {
+      "absolute_rms_drift": 0.008325525818100003,
+      "max": 0.03393568494930761,
+      "min": -0.0339367882834889,
+      "relative_l2_drift": null
+    },
+    "psi": {
+      "absolute_rms_drift": 5.3210109229183506e-06,
+      "max": 0.12315317123354529,
+      "min": -0.10334987113333759,
+      "relative_l2_drift": 0.00012135084774462794
+    },
+    "rho": {
+      "absolute_rms_drift": 0.012305885313395862,
+      "max": 1.0000015440203205,
+      "min": 0.006118525929942988,
+      "relative_l2_drift": 0.022483249180314514
+    },
+    "u": {
+      "absolute_rms_drift": 1.3592124315615226e-05,
+      "max": 0.0001094635041500255,
+      "min": -0.00010519402505402526,
+      "relative_l2_drift": null
+    },
+    "w": {
+      "absolute_rms_drift": 0.0024695665350901873,
+      "max": 0.03267723033250947,
+      "min": -0.033632415237138474,
+      "relative_l2_drift": null
+    },
+    "zj": {
+      "absolute_rms_drift": 0.0016533893069934616,
+      "max": 1.4983630374264054,
+      "min": -0.0009866403377057438,
+      "relative_l2_drift": 0.0035438441313435016
+    }
+  },
+  "metadata": {
+    "mapping_status": "diagnostic_restart_only",
+    "native_constraints_available": false,
+    "patch_ids_available": false,
+    "quadrature_order": 8,
+    "steps": 3,
+    "time_seconds": 1.4059131112280784e-06
+  },
+  "moments_code_units": {
+    "density": {
+      "final": 7.227001530996734,
+      "initial": 7.228211680660838,
+      "relative_change": -0.00016742034095950444
+    },
+    "pressure": {
+      "final": 0.06622581824420014,
+      "initial": 0.06621648556496636,
+      "relative_change": 0.00014094192940252971
+    }
+  },
+  "positive_at_sampled_quadrature": true,
+  "quadrature_points": 173760,
+  "reference_sha256": "2d066b56bc0f1aa4d6b1e8eff22aa3a008a1917825ea9d218a9bc1f78e517224",
+  "restart_sha256": "f34f717703cb56edee8f228dfc660cbc0ecc66627bdd2985bc824fefaf224de0",
+  "scope": "native restart diagnostics; scientific gates remain open",
+  "synthetic": false,
+  "volume_m3": 21.66354552616525
+}

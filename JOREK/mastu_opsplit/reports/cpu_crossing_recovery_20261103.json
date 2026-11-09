@@ -1,0 +1,40 @@
+{
+  "status": "failed_validation",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/crossing_recovery_20261103",
+  "budget": {
+    "authorization": "User requested numerical convergence and completion of the science plan.",
+    "scope": "One isolated crossing build and two three-step probes; radial160 must pass before control80 runs. No production acceptance.",
+    "allocations_max": 1,
+    "attempts_each_max": 1,
+    "mpi_ranks": 4,
+    "threads": 1,
+    "memory_GiB": 256,
+    "wall_hours_max": 3,
+    "rank_CPU_hours_max": 12,
+    "node_hours_max": 3,
+    "conservative_resource_hours_max": 768,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+    "equilibrium_tolerance": 1e-10,
+    "physics_changed": false,
+    "spatial_targets_changed": false
+  },
+  "manifest_sha256": "bf001d5215eb7fcff2dd7a5491c242b98c562e3db40c1c033b29c574193a9a35",
+  "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_crossing_recovery_20261103.sbatch",
+  "script_sha256": "ee76db90c492079427f8492ca73996960d84afb94e98759ea3d577d32e322bd6",
+  "scheduler_preflight": "sbatch: Job 2771239 to start at 2026-11-03T20:54:43 a using 4 processors on nodes r353c01s05 in partition dcgp_fua_prod\n",
+  "scientific_gates_passed": [],
+  "job_id": "2771240",
+  "failure": "Global segment bounds reject required exterior extrapolation. Native grid construction fails before evolution; candidate rejected.",
+  "candidate_patch_accepted": false,
+  "stage_results": {
+    "radial160": {
+      "stage": "radial160",
+      "status": "failed_validation",
+      "returncode": 139,
+      "process_wall_seconds": 106.50686558103189,
+      "binary_sha256": "765d29b512c5e1c9a05abe8c747e0f7d0ea3d3aeeb82bb21f91848165317ec60",
+      "scientific_gates_passed": [],
+      "error": "exit_nonzero"
+    }
+  }
+}

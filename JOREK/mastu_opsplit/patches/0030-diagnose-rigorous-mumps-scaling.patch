@@ -1,0 +1,29 @@
+--- a/solvers/mod_mumps.f90
++++ b/solvers/mod_mumps.f90
+@@ -58,7 +58,7 @@
+     ! Bound refinement and retain MUMPS' rollback on a deteriorating residual.
+     mmss%mumps_par%icntl(10) = 5
+     mmss%mumps_par%cntl(2) = 1.d-16
+-    mmss%mumps_par%icntl(11) = 2
++    mmss%mumps_par%icntl(11) = 1
+     mmss%initialized = .true.
+     
+   end subroutine mumps_initialize
+@@ -82,7 +82,7 @@
+       mmss%mumps_par%nz_loc = a_mat%nnz
+ 
+       mmss%mumps_par%icntl(7)  = mmss%mumps_ordering               ! ordering option (7:automatic, 3:Scotch, 4:PORD, 5:METIS), default: 7
+-      mmss%mumps_par%icntl(8)  = 7                            ! row and column scaling  7: automatic scaling
++      mmss%mumps_par%icntl(8)  = 8                            ! rigorous iterative row/column scaling (MUMPS 5.7.3)
+       mmss%mumps_par%icntl(18) = 3
+       mmss%mumps_par%icntl(14) = 50                           ! MAXS
+       
+@@ -176,6 +176,8 @@
+     call MPI_COMM_RANK(mmss%comm,my_id,ierr)
+     if (my_id == 0) write(*,*) 'MUMPS refinement steps and backward errors:', &
+       mmss%mumps_par%infog(15),mmss%mumps_par%rinfog(7:8)
++    if (my_id == 0) write(*,*) 'MUMPS norms, residual, backward/forward errors, conditions:', &
++      mmss%mumps_par%rinfog(4:11)
+ 
+     
+     call MPI_Bcast(mmss%mumps_par%rhs,mmss%mumps_par%n,MPI_DOUBLE_PRECISION,0,mmss%mumps_par%comm,ierr)    

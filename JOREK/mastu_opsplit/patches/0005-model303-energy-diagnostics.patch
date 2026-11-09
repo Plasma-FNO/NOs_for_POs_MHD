@@ -1,0 +1,34 @@
+--- a/diagnostics/mod_integrals3D.f90
++++ b/diagnostics/mod_integrals3D.f90
+@@ -1193,7 +1193,18 @@
+         alpha_e    = 0.d0
+ #endif 
+         call coulomb_log_ei(T_or_Te, T_or_Te_corr, r0, r0_corr, rimp0, rimp0_corr, alpha_e, lnA)
++#if JOREK_MODEL == 303
++        ! Match model303 induction; generic Coulomb-log scaling is absent there.
++        ! OPSPLIT_MODEL303_RESISTIVITY_BEGIN
++        eta_T = eta
++        if (eta_T_dependent) then
++          eta_T = eta * (min(corr_neg_temp(T0), T_max_eta)/T_0)**(-1.5d0)
++          if (xpoint .and. T0 < T_min) eta_T = eta * (T_min/T_0)**(-1.5d0)
++        endif
++        ! OPSPLIT_MODEL303_RESISTIVITY_END
++#else
+         call resistivity(eta,       T_or_Te, T_or_Te_corr, T_max_eta,     T_or_Te_0, Z_eff, lnA, eta_T    )           
++#endif
+         call resistivity(eta_ohmic, T_or_Te, T_or_Te_corr, T_max_eta_ohm, T_or_Te_0, Z_eff, lnA, eta_T_ohm)           
+ 
+         ! --- Switch to use old viscosity model
+@@ -1289,7 +1300,12 @@
+         VB_tot = VB_tot + 2.0*r0*T0 / BB2 * xjac * BigR * wst * delta_phi
+         mag_pres_tot = mag_pres_tot + BB2/2 * xjac * BigR * wst * delta_phi
+ #endif
++#if JOREK_MODEL == 303
++        ! This diagnostic is magnetic resistive loss, including disabled thermal heating.
++        J2_tot = J2_tot + eta_T *(ZJ0/BigR)**2.d0 * xjac * BigR * wst * delta_phi
++#else
+         J2_tot = J2_tot + eta_T_ohm *(ZJ0/BigR)**2.d0 * xjac * BigR * wst * delta_phi
++#endif
+         
+         ! Momentum in the Cartesian x- and y-directions
+         momentum_x = momentum_x + r0*(-BigR**2*dudy*cos(phi) - F0*vpar0*sin(phi) + vpar0*dpsidy*cos(phi))*xjac*wst*delta_phi

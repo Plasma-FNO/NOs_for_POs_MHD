@@ -1,0 +1,22 @@
+--- a/grids/grid_utils/find_crossing.f90
++++ b/grids/grid_utils/find_crossing.f90
+@@ -2,6 +2,7 @@
+                          R_out,Z_out,ielm_flux,r_flux,s_flux,t_tht,ifail, gofast)
+ 
+   use data_structure
++  use phys_module, only: n_flux
+   
+   implicit none
+   
+@@ -32,6 +33,11 @@
+     call find_crossing_on_surface_piece(node_list,element_list,surface_list%flux_surfaces(j_surf), &
+                                         k, R_c,Z_c, R_out,Z_out, r_flux,s_flux, t_tht, ifail, gofast)
+     if (ifail .eq. 0) then
++      ! Closed core surfaces must not be snapped onto a parent-element edge.
++      ! Exterior surfaces retain the native extrapolation needed at the wall.
++      if (gofast .and. j_surf < n_flux) then
++        if (min(r_flux,s_flux) < -1.d-10 .or. max(r_flux,s_flux) > 1.d0+1.d-10) cycle
++      endif
+       ielm_flux = surface_list%flux_surfaces(j_surf)%elm(k)
+       return
+     endif

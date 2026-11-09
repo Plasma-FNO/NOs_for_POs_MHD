@@ -1,0 +1,68 @@
+{
+  "created_utc": "2026-11-02T21:28:52.524188+00:00",
+  "scope": "Measured cost and explicit heuristic planning only; no larger simulation submitted",
+  "current_refined_elements": 11257,
+  "current_refined_nodes": 11581,
+  "current_memory_cap_GiB": 16,
+  "current_wall_cap_s": 1800,
+  "measurements": [
+    {
+      "job_id": "2768294.batch",
+      "state": "COMPLETED",
+      "elapsed_s": 457,
+      "reported_batch_peak_rss_GiB": 8.670440673828125,
+      "allocated_cpus": 4
+    },
+    {
+      "job_id": "2768296.batch",
+      "state": "COMPLETED",
+      "elapsed_s": 458,
+      "reported_batch_peak_rss_GiB": 8.787261962890625,
+      "allocated_cpus": 4
+    },
+    {
+      "job_id": "2768319.batch",
+      "state": "COMPLETED",
+      "elapsed_s": 456,
+      "reported_batch_peak_rss_GiB": 8.786262512207031,
+      "allocated_cpus": 4
+    }
+  ],
+  "heuristics_not_validated_bounds": true,
+  "candidates": {
+    "1.1": {
+      "approximate_element_count": 13621,
+      "resolution_factor_per_direction": 1.1,
+      "linear_memory_heuristic_GiB": 10.632586975097658,
+      "N_power_1p5_memory_heuristic_GiB": 11.695845672607426,
+      "N_power_1p5_wall_heuristic_s": 608.2670000000002,
+      "requires_measured_bounded_probe": true
+    },
+    "1.2": {
+      "approximate_element_count": 16210,
+      "resolution_factor_per_direction": 1.2,
+      "linear_memory_heuristic_GiB": 12.6536572265625,
+      "N_power_1p5_memory_heuristic_GiB": 15.184388671875,
+      "N_power_1p5_wall_heuristic_s": 789.696,
+      "requires_measured_bounded_probe": true
+    },
+    "2.0": {
+      "approximate_element_count": 45028,
+      "resolution_factor_per_direction": 2.0,
+      "linear_memory_heuristic_GiB": 35.1490478515625,
+      "N_power_1p5_memory_heuristic_GiB": 70.298095703125,
+      "N_power_1p5_wall_heuristic_s": 3656.0,
+      "requires_measured_bounded_probe": true
+    }
+  },
+  "next_bounded_probe": {
+    "purpose": "Construct a modest finer mesh and measure a few evolution steps before a full horizon",
+    "resolution_factor_per_direction": 1.1,
+    "mpi_ranks": 4,
+    "memory_GiB": 16,
+    "wall_minutes": 30,
+    "attempts": 1,
+    "physical_settings_change": false,
+    "acceptance": "Probe is a cost/health measurement, not a mesh-convergence pass."
+  }
+}

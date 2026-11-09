@@ -1,0 +1,30 @@
+{
+  "status": "cancelled_after_physical_failure",
+  "kind": "simulation",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/combined_core_poloidal880_20261104",
+  "budget": {
+    "authorization": "User requested continued solver convergence and science-plan progress.",
+    "scope": "One three-step core-poloidal880 probe with the unchanged combined Newton/MUMPS executable; no physical or acceptance changes.",
+    "mpi_ranks": 4,
+    "memory_GiB": 512,
+    "wall_hours_max": 4,
+    "rank_CPU_hours_max": 16,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4240119       4240119            13.8       2531868               2430"
+  },
+  "binary_sha256": "38d428235a842b7a6f8fb256f81ddfed2a1c12355c2d4e322f12e27ef6af1ec9",
+  "manifest_sha256": "18565232ab57987863659fb51ee76cc2be9e432cb09e58431316a4d7374218e0",
+  "script_sha256": "6952413ca3a56f728b81538aa00432f86a5b69ef6adc9e15f99d7e27cfbb500a",
+  "scheduler_preflight": "sbatch: Job 2772840 to start at 2026-11-04T12:49:46 a using 4 processors on nodes r350c03s03 in partition dcgp_fua_prod\n",
+  "scientific_gates_passed": [],
+  "job_id": "2772841",
+  "failure_evidence": {
+    "native_step1_minimum_density": -1.554147,
+    "native_step1_minimum_temperature": -3.043044,
+    "native_step2_density_range": [
+      -42296180000.0,
+      43438190000.0
+    ],
+    "first_mhd_backward_error": 7.47183526682266e-13,
+    "reason": "Stop unphysical evolution during the third linear solve; retain all outputs. Newton convergence is not healthy MHD evolution."
+  }
+}

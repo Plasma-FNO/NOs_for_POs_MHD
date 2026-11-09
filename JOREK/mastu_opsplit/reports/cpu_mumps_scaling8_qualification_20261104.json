@@ -1,0 +1,62 @@
+{
+  "status": "scaling8_control_parity_and_restart_rescue_verified",
+  "binary_sha256": "80304f3243d2a803815435e87a124e779e354ab77cd7828c52c7eb888a787cb6",
+  "manifest_sha256": "c503a500ab29782d21d4545fae6f016bb68d1ce4be7c0fcb2785cfacca68bdfc",
+  "cases": {
+    "control3": {
+      "result": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mumps_scaling8_20261104/control3/result.json",
+      "result_sha256": "d6ca653d2ce4d60a29fc57b9c7697944b009571887626b51b92370e93e243367",
+      "parity_max_relative": {
+        "initial_parity": {
+          "field": 2.957629336336417e-15,
+          "gradient": 8.470327409388105e-14
+        },
+        "parity": {
+          "field": 4.715860232026304e-10,
+          "gradient": 4.990001225151296e-08
+        }
+      },
+      "minimum_density": 0.008866882142739108,
+      "minimum_temperature": 9.742912396647377e-05,
+      "maximum_backward_error": 4.1251402138079076e-16,
+      "maximum_refinements": 2
+    },
+    "perturbed3": {
+      "result": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mumps_scaling8_20261104/perturbed3/result.json",
+      "result_sha256": "17e08445feedc9065da9391e51ad4a4cb56bd29f04b2bceae80f7326b6f4dc43",
+      "parity_max_relative": {
+        "initial_parity": {
+          "field": 2.957629336336417e-15,
+          "gradient": 8.468335600615336e-14
+        },
+        "parity": {
+          "field": 4.5161612276756034e-10,
+          "gradient": 4.869019070874864e-08
+        }
+      },
+      "minimum_density": 0.008866888033074028,
+      "minimum_temperature": 9.742901416298584e-05,
+      "maximum_backward_error": 4.1251402138079076e-16,
+      "maximum_refinements": 2
+    },
+    "poloidal880_step1": {
+      "result": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mumps_scaling8_20261104/poloidal880_step1/result.json",
+      "result_sha256": "d3226a9b8fea3f7849713fe1bb0166a210db54bf634cf9a18ff137d28ef36f3d",
+      "parity_max_relative": {},
+      "minimum_density": 0.009280643616704292,
+      "minimum_temperature": 9.896697554942385e-05,
+      "maximum_backward_error": 1.108105090114678e-16,
+      "maximum_refinements": 1
+    }
+  },
+  "scientific_gates_passed": [],
+  "limitation": "Fresh refined equilibrium/three-step qualification and matched full trajectories remain required. A small backward error alone does not certify the forward solution.",
+  "source_change": {
+    "patch": "0030-diagnose-rigorous-mumps-scaling.patch",
+    "scaling": "ICNTL(8):7 to8, more rigorous iterative row/column scaling",
+    "diagnostic": "ICNTL(11):2 to1, add forward error/condition estimates",
+    "refinement_bound": 5,
+    "equations_changed": false,
+    "primary_manual": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/src/jorek/deps/MUMPS/doc/userguide_5.7.3.pdf"
+  }
+}

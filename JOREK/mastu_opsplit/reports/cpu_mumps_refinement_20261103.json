@@ -1,0 +1,438 @@
+{
+  "kind": "simulation",
+  "status": "completed_balances_verified_legacy_gradient_parity_failed",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mumps_refinement_20261103",
+  "budget": {
+    "authorization": "User requested solver convergence and science-plan completion.",
+    "scope": "One isolated MUMPS accuracy build and two single-step restart proofs, baseline and perturbed. Original fields, timestep and thresholds preserved.",
+    "mpi_ranks": 4,
+    "memory_GiB": 128,
+    "wall_hours_max": 2,
+    "rank_CPU_hours_max": 8,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578"
+  },
+  "script_sha256": "37934afa5ec47eaf365c8dcc5c43c83d66e30b373f6ea25fc49b112b21d95490",
+  "manifest_sha256": "b8501154b645193455b2ba06b0fa96b6b51a8ceb954023477d1fafe1d8c09afe",
+  "scientific_gates_passed": [],
+  "job_id": "2771526",
+  "stage_results": {
+    "enabled8": {
+      "status": "failed_validation",
+      "returncode": 0,
+      "binary_sha256": "fc0cc0157763f697fd09565b01cb2793cd496996707541207400dc8fdd5e56eb",
+      "scientific_gates_passed": [],
+      "final": {
+        "health": {
+          "steps": 9,
+          "final_time_s": 2.636087083552647e-07,
+          "restart_sha256": "5f3914ccc3e32ebd01ef9a3866e6eaab59874248112a72ed7e36d6ffcff247c9"
+        },
+        "metadata": {
+          "time_seconds": 2.636087083552647e-07,
+          "steps": 9,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 223148,
+          "canonical_native_dofs": 222917,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 1.9235618605202478e-08,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 131,
+        "minimum_density": 0.007201880610733401,
+        "minimum_temperature": 9.493338227284525e-05,
+        "restart_sha256": "5f3914ccc3e32ebd01ef9a3866e6eaab59874248112a72ed7e36d6ffcff247c9"
+      },
+      "error": "cached-start physical parity failed: {'field': {'absolute_rms_errors': [1.1491953650768037e-13, 4.439637661583182e-13, 3.4524747550871505e-09, 1.1139326114621108e-10, 7.809338890431247e-12, 3.259482101774054e-09, 7.528835575023417e-10], 'reference_rms': [0.04383319237322929, 1.1456450786519439e-05, 0.4663276886267307, 0.002223590896126173, 0.5467679375440407, 0.00616407972885098, 0.006723023801727355], 'tolerances': [4.383419237322929e-08, 1.2456450786519439e-11, 4.6632868862673066e-07, 2.224590896126173e-09, 5.467689375440408e-07, 6.16507972885098e-09, 6.7240238017273554e-09], 'passed': [True, True, True, True, True, True, True]}, 'gradient': {'absolute_rms_errors': [9.95767093631415e-12, 5.398387348999415e-12, 4.082520522247546e-06, 1.1670424207900123e-08, 2.9754479849886553e-09, 2.764033308854755e-06, 2.1769383267537877e-07], 'reference_rms': [0.20696755459710123, 0.00014285520600571886, 12.819822285159379, 0.05204573348201697, 5.2128642201092195, 0.02609978906712833, 0.15969020015868696], 'tolerances': [2.0696855459710121e-07, 1.4385520600571884e-10, 1.2819823285159378e-05, 5.204673348201697e-08, 5.212865220109219e-06, 2.610078906712833e-08, 1.5969120015868695e-07], 'passed': [True, True, True, True, True, False, False]}}",
+      "native_export": {
+        "status": "native_selected_export_verified",
+        "restart_sha256": "103f55bd387500664b52dffdaf148b9e7ffed460eb808f478038bd8e2eac4d29",
+        "export_files": {
+          "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mumps_refinement_20261103/enabled8/opsplit-native-rank-000000.bin": {
+            "sha256": "cd7722702a9c1239b089694bd00fec49d9dccc2b8d8e6aeb112b51a96c207620",
+            "bytes": 1556072876
+          },
+          "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mumps_refinement_20261103/enabled8/opsplit-native-rank-000001.bin": {
+            "sha256": "6173c3233baabe9418bfa5e3962de8df430d301bcd7fcf89153137851d8c54be",
+            "bytes": 1587974648
+          },
+          "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mumps_refinement_20261103/enabled8/opsplit-native-rank-000002.bin": {
+            "sha256": "649ddd2e151f68ed6476b977c267713b764d63d4b020d3e3388de7be249cbcb3",
+            "bytes": 1557295592
+          },
+          "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mumps_refinement_20261103/enabled8/opsplit-native-rank-000003.bin": {
+            "sha256": "eae9c98194308a95a08ac7a2523b20d71a471d26cf5db6039480ce65c782e292",
+            "bytes": 1535731328
+          }
+        },
+        "elements_verified": 55135,
+        "ranks": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "halo_overlap": {
+          "identical_halo_copies": 976,
+          "halo_elements": 976,
+          "ranks": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        "quadrature_order": 4,
+        "metrics": {
+          "coordinates": {
+            "maximum_absolute_error": 1.3322676295501878e-15,
+            "absolute_l2_error": 3.2661614836280573e-13,
+            "reference_l2_norm": 1415.369598305819,
+            "relative_l2_error": 2.307638575491246e-16,
+            "passed": true
+          },
+          "poloidal_weights": {
+            "maximum_absolute_error": 2.642742795433417e-18,
+            "absolute_l2_error": 1.3158193705898887e-16,
+            "reference_l2_norm": 0.007118167688531143,
+            "relative_l2_error": 1.8485366293209823e-14,
+            "passed": true
+          },
+          "basis": {
+            "maximum_absolute_error": 5.273559366969494e-16,
+            "absolute_l2_error": 2.5485790966221453e-13,
+            "reference_l2_norm": 748.2336743612717,
+            "relative_l2_error": 3.4061272353155384e-16,
+            "passed": true
+          },
+          "basis_gradient": {
+            "maximum_absolute_error": 2.0798761397600174e-06,
+            "absolute_l2_error": 1.1582660373948128e-05,
+            "reference_l2_norm": 3501186.0374122355,
+            "relative_l2_error": 3.3082104892972207e-12,
+            "passed": true
+          },
+          "state": {
+            "maximum_absolute_error": 8.881784197001252e-16,
+            "absolute_l2_error": 1.4041271196271787e-13,
+            "reference_l2_norm": 605.3190834747039,
+            "relative_l2_error": 2.319647865002189e-16,
+            "passed": true
+          },
+          "state_gradient": {
+            "maximum_absolute_error": 2.5133317649306264e-10,
+            "absolute_l2_error": 6.961689523741378e-09,
+            "reference_l2_norm": 32321.917260298927,
+            "relative_l2_error": 2.1538603256968406e-13,
+            "passed": true
+          },
+          "strong_selected_terms": {
+            "maximum_absolute_error": 1.5678430775878383e-14,
+            "absolute_l2_error": 7.727704428528269e-14,
+            "reference_l2_norm": 0.3887380897157654,
+            "relative_l2_error": 1.9878948405026515e-13,
+            "passed": true
+          },
+          "independent_selected_weak_assembly": {
+            "maximum_absolute_error": 3.134021904840911e-20,
+            "absolute_l2_error": 1.7619164357750688e-19,
+            "reference_l2_norm": 1.7306394429988447e-05,
+            "relative_l2_error": 1.0180725066117917e-14,
+            "passed": true
+          }
+        },
+        "term_strength_coefficient_norms": {
+          "density": {
+            "selected_weak_l2": 3.0013341921439698e-05,
+            "total_volume_weak_l2": 0.00023278653762530974,
+            "ratio": 0.1289307458567419
+          },
+          "pressure": {
+            "selected_weak_l2": 7.297861652396212e-08,
+            "total_volume_weak_l2": 6.749417754083909e-07,
+            "ratio": 0.10812579571001443
+          }
+        },
+        "mapping_status": "provisional",
+        "scientific_gates_passed": [],
+        "limitations": [
+          "First pre-update frame only; algebraic and differential rows remain distinct.",
+          "Native element RHS/matrix precede axis transforms and modified boundary rows.",
+          "Term strengths use coefficient norms, not physical L2 field norms.",
+          "Autonomous retained evaluation, temporal/constraint solves and adjoint remain unverified."
+        ]
+      },
+      "native_linearized_volume_balance": {
+        "status": "interior_linearized_balance_verified",
+        "before_sha256": "103f55bd387500664b52dffdaf148b9e7ffed460eb808f478038bd8e2eac4d29",
+        "after_sha256": "0b02c6681fbf9597d3f19a7b824ea964719a010af65469b3f4e13cb0796b95cd",
+        "time_interval_s": 2.9289856483918314e-08,
+        "included_native_dofs_per_equation": 212862,
+        "excluded_native_dofs_per_equation": 10055,
+        "metrics": {
+          "psi": {
+            "absolute_l2_residual": 2.604574565944696e-19,
+            "component_l2_scale": 4.9580926378838254e-08,
+            "component_relative_residual": 5.2531785026436304e-12,
+            "target_met": true
+          },
+          "u": {
+            "absolute_l2_residual": 5.447087699104338e-18,
+            "component_l2_scale": 4.064249433216037e-06,
+            "component_relative_residual": 1.3402444383916818e-12,
+            "target_met": true
+          },
+          "zj": {
+            "absolute_l2_residual": 8.5906993255439e-14,
+            "component_l2_scale": 8.709964187490934e-10,
+            "component_relative_residual": 9.863070778042555e-05,
+            "target_met": true
+          },
+          "w": {
+            "absolute_l2_residual": 1.3998119694098312e-17,
+            "component_l2_scale": 2.042157048364286e-10,
+            "component_relative_residual": 6.854575511374327e-08,
+            "target_met": true
+          },
+          "rho": {
+            "absolute_l2_residual": 1.9808639781650884e-18,
+            "component_l2_scale": 2.9031216304747524e-05,
+            "component_relative_residual": 6.823220761305665e-14,
+            "target_met": true
+          },
+          "T": {
+            "absolute_l2_residual": 2.2667373371899208e-18,
+            "component_l2_scale": 8.436683044273766e-08,
+            "component_relative_residual": 2.686763654975073e-11,
+            "target_met": true
+          },
+          "Vpar": {
+            "absolute_l2_residual": 2.3628474343615406e-20,
+            "component_l2_scale": 2.9090899673921117e-07,
+            "component_relative_residual": 8.122290684876079e-14,
+            "target_met": true
+          }
+        },
+        "rtol": 1e-08,
+        "atol": 1e-12,
+        "scientific_gates_passed": [],
+        "limitations": [
+          "Boundary elements and every axis-touching element are excluded conservatively.",
+          "An algebraic linear-system balance does not establish physical energy/source/flux balance.",
+          "This check does not supply an autonomous retained evaluator or adjoint."
+        ]
+      }
+    },
+    "perturbed8": {
+      "status": "failed_validation",
+      "returncode": 0,
+      "binary_sha256": "fc0cc0157763f697fd09565b01cb2793cd496996707541207400dc8fdd5e56eb",
+      "scientific_gates_passed": [],
+      "final": {
+        "health": {
+          "steps": 9,
+          "final_time_s": 2.636087083552647e-07,
+          "restart_sha256": "3bdbd3d4b8e38f0aa3c04be043409beb81268703416c0121aafab88f004df37f"
+        },
+        "metadata": {
+          "time_seconds": 2.636087083552647e-07,
+          "steps": 9,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 223148,
+          "canonical_native_dofs": 222917,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 1.9235618605202478e-08,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 131,
+        "minimum_density": 0.007200430511823639,
+        "minimum_temperature": 9.493392082300517e-05,
+        "restart_sha256": "3bdbd3d4b8e38f0aa3c04be043409beb81268703416c0121aafab88f004df37f"
+      },
+      "error": "cached-start physical parity failed: {'field': {'absolute_rms_errors': [5.149801712599178e-13, 1.2642121938327152e-11, 3.3298520734482847e-09, 1.5927714013787667e-09, 7.807698076893271e-12, 3.4948743585761777e-09, 8.903374765000725e-10], 'reference_rms': [0.043834057518426894, 3.598935723705069e-05, 0.46637979549570824, 0.0024688881309984194, 0.5487128019777064, 0.006213931394579577, 0.006723449255006777], 'tolerances': [4.3835057518426896e-08, 3.698935723705069e-11, 4.663807954957082e-07, 2.469888130998419e-09, 5.487138019777064e-07, 6.2149313945795775e-09, 6.7244492550067775e-09], 'passed': [True, True, True, True, True, True, True]}, 'gradient': {'absolute_rms_errors': [1.961851596159686e-11, 1.2191800459392068e-10, 3.5696584211707523e-06, 1.304839713557344e-07, 2.8485228842028116e-09, 1.530724905713449e-06, 2.212657622674686e-07], 'reference_rms': [0.20697792717195104, 0.00020903040215371942, 12.83520668341908, 0.061511834672446794, 5.213547380765323, 0.026261743316951087, 0.15969345746167038], 'tolerances': [2.0697892717195104e-07, 2.100304021537194e-10, 1.283520768341908e-05, 6.151283467244679e-08, 5.213548380765324e-06, 2.626274331695109e-08, 1.5969445746167038e-07], 'passed': [True, True, True, False, True, False, False]}}",
+      "native_export": {
+        "status": "native_selected_export_verified",
+        "restart_sha256": "3721789d22b7544331f1d7e582689f4e97a88f7a801384664ef4dde762f5f3fb",
+        "export_files": {
+          "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mumps_refinement_20261103/perturbed8/opsplit-native-rank-000000.bin": {
+            "sha256": "e799037a58669d54b29e7ba45526ffae9f56fb75230ad88af3768e68be577ee5",
+            "bytes": 1556072876
+          },
+          "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mumps_refinement_20261103/perturbed8/opsplit-native-rank-000001.bin": {
+            "sha256": "798e7218e3ba5c5248e269cc304abeda711d653b888a6b6a5f08dfffc64cd30f",
+            "bytes": 1587974648
+          },
+          "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mumps_refinement_20261103/perturbed8/opsplit-native-rank-000002.bin": {
+            "sha256": "d1d2d550d772b8b91feff874fbdcc4cff791c64183650bad32afd9252167d881",
+            "bytes": 1557295592
+          },
+          "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mumps_refinement_20261103/perturbed8/opsplit-native-rank-000003.bin": {
+            "sha256": "da546e680e9a9e278bbd087720bd1d4ec8603f78763a7b7eb729dea5519d70ea",
+            "bytes": 1535731328
+          }
+        },
+        "elements_verified": 55135,
+        "ranks": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "halo_overlap": {
+          "identical_halo_copies": 976,
+          "halo_elements": 976,
+          "ranks": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        "quadrature_order": 4,
+        "metrics": {
+          "coordinates": {
+            "maximum_absolute_error": 1.3322676295501878e-15,
+            "absolute_l2_error": 3.2661614836280573e-13,
+            "reference_l2_norm": 1415.369598305819,
+            "relative_l2_error": 2.307638575491246e-16,
+            "passed": true
+          },
+          "poloidal_weights": {
+            "maximum_absolute_error": 2.642742795433417e-18,
+            "absolute_l2_error": 1.3158193705898887e-16,
+            "reference_l2_norm": 0.007118167688531143,
+            "relative_l2_error": 1.8485366293209823e-14,
+            "passed": true
+          },
+          "basis": {
+            "maximum_absolute_error": 5.273559366969494e-16,
+            "absolute_l2_error": 2.5485790966221453e-13,
+            "reference_l2_norm": 748.2336743612717,
+            "relative_l2_error": 3.4061272353155384e-16,
+            "passed": true
+          },
+          "basis_gradient": {
+            "maximum_absolute_error": 2.0798761397600174e-06,
+            "absolute_l2_error": 1.1582660373948128e-05,
+            "reference_l2_norm": 3501186.0374122355,
+            "relative_l2_error": 3.3082104892972207e-12,
+            "passed": true
+          },
+          "state": {
+            "maximum_absolute_error": 1.1102230246251565e-15,
+            "absolute_l2_error": 1.4184141199434204e-13,
+            "reference_l2_norm": 606.9959335804688,
+            "relative_l2_error": 2.336776972420002e-16,
+            "passed": true
+          },
+          "state_gradient": {
+            "maximum_absolute_error": 2.356557615712518e-09,
+            "absolute_l2_error": 1.35742817609367e-08,
+            "reference_l2_norm": 32509.646138419248,
+            "relative_l2_error": 4.175462785150062e-13,
+            "passed": true
+          },
+          "strong_selected_terms": {
+            "maximum_absolute_error": 2.6502671585104665e-14,
+            "absolute_l2_error": 3.5747786964704626e-13,
+            "reference_l2_norm": 1.4114599554042186,
+            "relative_l2_error": 2.53268162712183e-13,
+            "passed": true
+          },
+          "independent_selected_weak_assembly": {
+            "maximum_absolute_error": 4.158402375426581e-20,
+            "absolute_l2_error": 8.859663508518541e-19,
+            "reference_l2_norm": 2.3448731111164343e-05,
+            "relative_l2_error": 3.7783125519744235e-14,
+            "passed": true
+          }
+        },
+        "term_strength_coefficient_norms": {
+          "density": {
+            "selected_weak_l2": 4.366112223970175e-05,
+            "total_volume_weak_l2": 0.00023550927725415964,
+            "ratio": 0.18539024342800317
+          },
+          "pressure": {
+            "selected_weak_l2": 6.353039444652723e-07,
+            "total_volume_weak_l2": 3.266349577387446e-06,
+            "ratio": 0.19449967904948287
+          }
+        },
+        "mapping_status": "provisional",
+        "scientific_gates_passed": [],
+        "limitations": [
+          "First pre-update frame only; algebraic and differential rows remain distinct.",
+          "Native element RHS/matrix precede axis transforms and modified boundary rows.",
+          "Term strengths use coefficient norms, not physical L2 field norms.",
+          "Autonomous retained evaluation, temporal/constraint solves and adjoint remain unverified."
+        ]
+      },
+      "native_linearized_volume_balance": {
+        "status": "interior_linearized_balance_verified",
+        "before_sha256": "3721789d22b7544331f1d7e582689f4e97a88f7a801384664ef4dde762f5f3fb",
+        "after_sha256": "14dcee365d17b1fed04888ff5584e68da6184fef3b6cf49ba4606f1817e2b997",
+        "time_interval_s": 2.9289856483918314e-08,
+        "included_native_dofs_per_equation": 212862,
+        "excluded_native_dofs_per_equation": 10055,
+        "metrics": {
+          "psi": {
+            "absolute_l2_residual": 2.5938563507755634e-19,
+            "component_l2_scale": 3.3753528796177816e-07,
+            "component_relative_residual": 7.684696810335536e-13,
+            "target_met": true
+          },
+          "u": {
+            "absolute_l2_residual": 8.130079324780632e-17,
+            "component_l2_scale": 2.492742645994844e-05,
+            "component_relative_residual": 3.261499672998112e-12,
+            "target_met": true
+          },
+          "zj": {
+            "absolute_l2_residual": 8.642762167488307e-14,
+            "component_l2_scale": 4.165687342178882e-10,
+            "component_relative_residual": 0.00020747505651654764,
+            "target_met": true
+          },
+          "w": {
+            "absolute_l2_residual": 1.0187131858672696e-16,
+            "component_l2_scale": 2.2163154074669876e-10,
+            "component_relative_residual": 4.596426945529158e-07,
+            "target_met": true
+          },
+          "rho": {
+            "absolute_l2_residual": 2.069056277271066e-18,
+            "component_l2_scale": 2.9369563468787955e-05,
+            "component_relative_residual": 7.044899661072332e-14,
+            "target_met": true
+          },
+          "T": {
+            "absolute_l2_residual": 2.4930606696570942e-18,
+            "component_l2_scale": 4.0803254411296037e-07,
+            "component_relative_residual": 6.109955457295366e-12,
+            "target_met": true
+          },
+          "Vpar": {
+            "absolute_l2_residual": 2.441921168427032e-20,
+            "component_l2_scale": 1.0483876840540612e-06,
+            "component_relative_residual": 2.3292158097319956e-14,
+            "target_met": true
+          }
+        },
+        "rtol": 1e-08,
+        "atol": 1e-12,
+        "scientific_gates_passed": [],
+        "limitations": [
+          "Boundary elements and every axis-touching element are excluded conservatively.",
+          "An algebraic linear-system balance does not establish physical energy/source/flux balance.",
+          "This check does not supply an autonomous retained evaluator or adjoint."
+        ]
+      }
+    }
+  }
+}

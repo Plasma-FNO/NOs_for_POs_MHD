@@ -1,0 +1,115 @@
+{
+  "elements": 55135,
+  "exact_oriented_corner_identity": true,
+  "groups": {
+    "0": {
+      "elements": 28976,
+      "first_element_id": 1,
+      "last_element_id": 28976,
+      "name": "central_and_divertor",
+      "sha256": "4cf79e95f3991ee6d32b290aa0f979f27bcf18721948bb8f0156abef64a39d27",
+      "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/radial_native_probe_20261103/radial80wall1/grid_no_patch.h5"
+    },
+    "1": {
+      "elements": 2145,
+      "first_element_id": 28977,
+      "last_element_id": 31121,
+      "name": "wall_extension_1",
+      "sha256": "a292e656086b85d51d2e3c464a63b040c8596bb69ef9320ebf2b997dc49dc642",
+      "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/radial_native_probe_20261103/radial80wall1/grid_patch1.h5"
+    },
+    "10": {
+      "elements": 2457,
+      "first_element_id": 48389,
+      "last_element_id": 50845,
+      "name": "wall_extension_10",
+      "sha256": "7bd84c2bc89eddff00a3dd0f039da5b2efa1a03860509e82b92276b8f6dcf663",
+      "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/radial_native_probe_20261103/radial80wall1/grid_patch10.h5"
+    },
+    "11": {
+      "elements": 4290,
+      "first_element_id": 50846,
+      "last_element_id": 55135,
+      "name": "wall_extension_11",
+      "sha256": "93551854738826e53597a1022a71d84b27f715da66912af403638b347dd5287b",
+      "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/radial_native_probe_20261103/radial80wall1/grid_patch11.h5"
+    },
+    "2": {
+      "elements": 1872,
+      "first_element_id": 31122,
+      "last_element_id": 32993,
+      "name": "wall_extension_2",
+      "sha256": "7cc3df39fa041b5da039f395b507ea9fa4c401e1f1f4515fddba189faa9a1c62",
+      "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/radial_native_probe_20261103/radial80wall1/grid_patch2.h5"
+    },
+    "3": {
+      "elements": 6150,
+      "first_element_id": 32994,
+      "last_element_id": 39143,
+      "name": "wall_extension_3",
+      "sha256": "18b014674669720fcd02b7ae1dae1937c7f057c95758b822a876d69cfb3344e9",
+      "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/radial_native_probe_20261103/radial80wall1/grid_patch3.h5"
+    },
+    "4": {
+      "elements": 2400,
+      "first_element_id": 39144,
+      "last_element_id": 41543,
+      "name": "wall_extension_4",
+      "sha256": "046cd7386edb6b4050cf45a0dcecdfbe0b0244907e3e25670235590e0f752a0e",
+      "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/radial_native_probe_20261103/radial80wall1/grid_patch4.h5"
+    },
+    "5": {
+      "elements": 2750,
+      "first_element_id": 41544,
+      "last_element_id": 44293,
+      "name": "wall_extension_5",
+      "sha256": "2c86804a9093af3163924276692310d2ad33e1ae19d0e147d14e8c5c3efe6fb5",
+      "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/radial_native_probe_20261103/radial80wall1/grid_patch5.h5"
+    },
+    "6": {
+      "elements": 819,
+      "first_element_id": 44294,
+      "last_element_id": 45112,
+      "name": "wall_extension_6",
+      "sha256": "7f97ee6ec30584a5d3bf449c381a80af0375f367a27f70ca0b1564462a400f6b",
+      "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/radial_native_probe_20261103/radial80wall1/grid_patch6.h5"
+    },
+    "7": {
+      "elements": 1131,
+      "first_element_id": 45113,
+      "last_element_id": 46243,
+      "name": "wall_extension_7",
+      "sha256": "9bf8bff078059794af8410706fbe57da7c60ad093276dc0bfc5fb4b8516c6ae8",
+      "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/radial_native_probe_20261103/radial80wall1/grid_patch7.h5"
+    },
+    "8": {
+      "elements": 1326,
+      "first_element_id": 46244,
+      "last_element_id": 47569,
+      "name": "wall_extension_8",
+      "sha256": "af2b900158fe3f70ab16a07e3ab53d4330b233202c34a7fe4dee2133125e6e3e",
+      "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/radial_native_probe_20261103/radial80wall1/grid_patch8.h5"
+    },
+    "9": {
+      "elements": 819,
+      "first_element_id": 47570,
+      "last_element_id": 48388,
+      "name": "wall_extension_9",
+      "sha256": "b6201b1945706fb28898c79d10cd574287cf6c73cb0b43641a82078555c826dc",
+      "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/radial_native_probe_20261103/radial80wall1/grid_patch9.h5"
+    }
+  },
+  "limitation": "Group 0 combines central and divertor subpatches; native constraint elimination is separate.",
+  "patch_ids": {
+    "path": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_native_patch_ids_20261103.npz",
+    "sha256": "58c6d97fff79ce52cd93a95323fe2288d504a0c114259dbdf0a4ec4446163874"
+  },
+  "physical_basis_source": "Final native restart, after patch joining and tangent rescaling.",
+  "restart_sha256": "078690c3f6c5ecd1d1d1a5f1cf7cae1a4a1465dbf3b56ad86a663824a33afc9f",
+  "scientific_gates_passed": [],
+  "source_sha256": {
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/restart_capacity_recovery_20261103/source/grids/grid_double_xpoint_inside_wall.f90": "4ed15e55868788aad4f6230751afce28c2eb276d6c94d0e0240d41d3c034fdae",
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/restart_capacity_recovery_20261103/source/grids/grid_utils/join_grid_patches.f90": "77a08e41dd5d0da3fd337e308d1e6a5509b360a1fec21e98944643324acc3c67"
+  },
+  "status": "native_construction_group_identity_verified"
+}

@@ -1,0 +1,189 @@
+--- a/models/phys_module.f90
++++ b/models/phys_module.f90
+@@ -9,6 +9,8 @@
+ 
+   implicit none
+   
++  !> MAST-U OpsSplit initializer, disabled unless either amplitude is positive.
++  real*8 :: opsplit_amplitude(2), opsplit_center(2), opsplit_width(2), opsplit_psin_taper(2)
+   !> @name Various parameters
+   real*8  :: eta                  !< Resistivity at plasma cener (normalized)
+   real*8  :: eta_T_0              !< Initial resistivity
+--- a/models/preset_parameters.f90
++++ b/models/preset_parameters.f90
+@@ -11,6 +11,10 @@
+   integer :: i, j ! for iterations
+   character(len=20) :: tmp !< for temporary name tag
+ 
++  opsplit_amplitude = 0.d0
++  opsplit_center = 0.d0
++  opsplit_width = -1.d0
++  opsplit_psin_taper = (/ -1.d0, -1.d0 /)
+   time_evol_scheme = 'Crank-Nicholson'
+   
+   n_tor_fft_thresh = 2
+--- a/models/model303/initialise_parameters.f90
++++ b/models/model303/initialise_parameters.f90
+@@ -17,7 +17,8 @@
+ integer :: ierr,err,i
+ 
+ ! --- Namelist with input parameters.
+-namelist /in1/  tstep, nstep, tstep_n, nstep_n,                     &
++namelist /in1/  opsplit_amplitude, opsplit_center, opsplit_width, opsplit_psin_taper, &
++                tstep, nstep, tstep_n, nstep_n,                     &
+                 rst_hdf5, rst_hdf5_version, keep_current_prof,      &
+                 eta, visco, visco_par,                              &
+                 restart, rst_format, regrid, bootstrap, write_ps,   &
+--- a/models/model303/initial_conditions.f90
++++ b/models/model303/initial_conditions.f90
+@@ -3,6 +3,7 @@
+ !
+ !-----------------------------------------------------------------------
+ use constants
++use, intrinsic :: ieee_arithmetic, only: ieee_is_finite
+ use data_structure
+ use phys_module
+ use mod_poiss
+@@ -35,6 +36,19 @@
+   write(*,*) '***************************************'
+ endif
+ 
++! --- OpsSplit supports only the verified axisymmetric bicubic nodal basis.
++if (.not. all(ieee_is_finite(opsplit_amplitude))) error stop 'OpsSplit amplitude must be finite'
++if (any(opsplit_amplitude < 0.d0)) error stop 'OpsSplit amplitudes must be nonnegative'
++if (any(opsplit_amplitude > 0.d0)) then
++  if (.not. all(ieee_is_finite(opsplit_center)) .or. .not. all(ieee_is_finite(opsplit_width)) .or. &
++      .not. all(ieee_is_finite(opsplit_psin_taper))) error stop 'OpsSplit shape parameters must be finite'
++  if (n_tor /= 1 .or. n_order /= 3) error stop 'OpsSplit requires n_tor=1 and n_order=3'
++  if (any(opsplit_width <= 0.d0)) error stop 'OpsSplit widths must be positive'
++  if (opsplit_psin_taper(1) < 0.d0 .or. opsplit_psin_taper(2) >= 1.d0 .or. &
++      opsplit_psin_taper(1) >= opsplit_psin_taper(2)) error stop 'OpsSplit taper requires 0<=a<b<1'
++  if (ES%psi_bnd == ES%psi_axis) error stop 'OpsSplit requires nonzero poloidal flux range'
++endif
++
+ ! --- This old projection method should be replaced by a direct solve on the elements
+ ! --- It is much cleaner and more generic
+ if ( (my_id .eq. 0) .and. (n_order .le. 3) ) then
+@@ -88,6 +102,17 @@
+                                     + dT_dpsi_dz * node_list%node(i)%values(1,3,1) * node_list%node(i)%x(1,2,2)         &
+                                     + dT_dpsi_dz * node_list%node(i)%values(1,2,1) * node_list%node(i)%x(1,3,2)      
+ 
++    ! --- Product-rule updates preserve all four native value/derivative DOFs.
++    if (any(opsplit_amplitude > 0.d0) .and. node_list%node(i)%boundary == 0) then
++      if (.not. (xpoint2 .and. xcase2 /= UPPER_XPOINT .and. Z <= ES%Z_xpoint(1)) .and. &
++          .not. (xpoint2 .and. xcase2 /= LOWER_XPOINT .and. Z >= ES%Z_xpoint(2))) then
++        call opsplit_perturb_node(node_list%node(i)%x(1,1:4,1), node_list%node(i)%x(1,1:4,2), &
++             node_list%node(i)%values(1,1:4,1), ES%psi_axis, ES%psi_bnd, &
++             opsplit_center, opsplit_width, opsplit_psin_taper, opsplit_amplitude, &
++             node_list%node(i)%values(1,1:4,5), node_list%node(i)%values(1,1:4,6))
++      endif
++    endif
++
+     node_list%node(i)%values(1,1,2) = - tauIC * zp 
+     node_list%node(i)%values(1,2,2) = - tauIC * (dp_dpsi  * node_list%node(i)%values(1,2,1) + dp_dz * node_list%node(i)%x(1,2,2))
+     node_list%node(i)%values(1,3,2) = - tauIC * (dp_dpsi  * node_list%node(i)%values(1,3,1) + dp_dz * node_list%node(i)%x(1,3,2))
+@@ -97,6 +122,25 @@
+                                     + dP_dpsi_dz * node_list%node(i)%values(1,3,1) * node_list%node(i)%x(1,2,2)         &
+                                     + dP_dpsi_dz * node_list%node(i)%values(1,2,1) * node_list%node(i)%x(1,3,2) )
+  
++    if (any(opsplit_amplitude > 0.d0) .and. node_list%node(i)%boundary == 0 .and. &
++        .not. (xpoint2 .and. xcase2 /= UPPER_XPOINT .and. Z <= ES%Z_xpoint(1)) .and. &
++        .not. (xpoint2 .and. xcase2 /= LOWER_XPOINT .and. Z >= ES%Z_xpoint(2))) then
++      ! --- Recompute the existing diamagnetic stream-function constraint from perturbed pressure.
++      node_list%node(i)%values(1,1,2) = -tauIC * &
++        node_list%node(i)%values(1,1,5) * node_list%node(i)%values(1,1,6)
++      node_list%node(i)%values(1,2,2) = -tauIC * ( &
++        node_list%node(i)%values(1,2,5) * node_list%node(i)%values(1,1,6) + &
++        node_list%node(i)%values(1,1,5) * node_list%node(i)%values(1,2,6))
++      node_list%node(i)%values(1,3,2) = -tauIC * ( &
++        node_list%node(i)%values(1,3,5) * node_list%node(i)%values(1,1,6) + &
++        node_list%node(i)%values(1,1,5) * node_list%node(i)%values(1,3,6))
++      node_list%node(i)%values(1,4,2) = -tauIC * ( &
++        node_list%node(i)%values(1,4,5) * node_list%node(i)%values(1,1,6) + &
++        node_list%node(i)%values(1,2,5) * node_list%node(i)%values(1,3,6) + &
++        node_list%node(i)%values(1,3,5) * node_list%node(i)%values(1,2,6) + &
++        node_list%node(i)%values(1,1,5) * node_list%node(i)%values(1,4,6))
++    endif
++
+     node_list%node(i)%values(1,:,4) = 0.d0        ! vorticity (will be filled just below with inverse Poisson)
+ 
+     node_list%node(i)%values(1,:,var_Vpar) = 0.d0        ! parallel velocity
+@@ -263,3 +307,54 @@
+ 
+ return
+ end
++
++! MAST-U OpsSplit study addition; JOREK file remains LGPL-3.0-or-later.
++! The 4-vector is (value, d/ds, d/dt, d2/dsdt), not four point values.
++subroutine opsplit_perturb_node(r, z, psi, psi_axis, psi_bnd, center, width, taper, amplitude, rho, temp)
++  implicit none
++  real*8, intent(in) :: r(4), z(4), psi(4), psi_axis, psi_bnd, center(2), width(2), taper(2), amplitude(2)
++  real*8, intent(inout) :: rho(4), temp(4)
++  real*8 :: xr(4), xz(4), radius2(4), psin(4), gauss(4), shape(4), factor(4), unit(4)
++  unit = (/ 1.d0, 0.d0, 0.d0, 0.d0 /)
++  xr = (r - center(1)*unit) / width(1)
++  xz = (z - center(2)*unit) / width(2)
++  radius2 = multiply(xr,xr) + multiply(xz,xz)
++  psin = (psi - psi_axis*unit) / (psi_bnd - psi_axis)
++  gauss = compose(radius2, exp(-0.5d0*radius2(1)), &
++                  -0.5d0*exp(-0.5d0*radius2(1)), 0.25d0*exp(-0.5d0*radius2(1)))
++  ! Compact support ends at four widths; flux taper vanishes strictly inside separatrix.
++  shape = multiply(multiply(gauss, cutoff(radius2,9.d0,16.d0)), cutoff(psin,taper(1),taper(2)))
++  factor = unit + amplitude(1)*shape
++  rho = multiply(rho, factor)
++  factor = unit + amplitude(2)*shape
++  temp = multiply(temp, factor)
++contains
++  pure function multiply(a,b) result(c)
++    real*8, intent(in) :: a(4),b(4)
++    real*8 :: c(4)
++    c(1) = a(1)*b(1)
++    c(2) = a(2)*b(1) + a(1)*b(2)
++    c(3) = a(3)*b(1) + a(1)*b(3)
++    c(4) = a(4)*b(1) + a(2)*b(3) + a(3)*b(2) + a(1)*b(4)
++  end function multiply
++  pure function compose(x,f,df,ddf) result(y)
++    real*8, intent(in) :: x(4),f,df,ddf
++    real*8 :: y(4)
++    y = (/ f, df*x(2), df*x(3), df*x(4)+ddf*x(2)*x(3) /)
++  end function compose
++  pure function cutoff(x,a,b) result(y)
++    real*8, intent(in) :: x(4),a,b
++    real*8 :: y(4),v,f,df,ddf
++    if (x(1) <= a) then
++      y = (/1.d0,0.d0,0.d0,0.d0/)
++    else if (x(1) >= b) then
++      y = 0.d0
++    else
++      v = (x(1)-a)/(b-a)
++      f = (1.d0-v)**3 * (1.d0+3.d0*v+6.d0*v**2)
++      df = -30.d0*v**2*(1.d0-v)**2/(b-a)
++      ddf = -60.d0*v*(1.d0-v)*(1.d0-2.d0*v)/(b-a)**2
++      y = compose(x,f,df,ddf)
++    endif
++  end function cutoff
++end subroutine opsplit_perturb_node
+--- a/communication/broadcast_phys.f90
++++ b/communication/broadcast_phys.f90
+@@ -55,6 +55,10 @@
+ if (my_id .eq. 0) then
+   position = 0
+ 
++  call MPI_PACK(opsplit_amplitude,2,MPI_REAL8,buffer,bufsize,position,MPI_COMM_WORLD,ierr)
++  call MPI_PACK(opsplit_center,2,MPI_REAL8,buffer,bufsize,position,MPI_COMM_WORLD,ierr)
++  call MPI_PACK(opsplit_width,2,MPI_REAL8,buffer,bufsize,position,MPI_COMM_WORLD,ierr)
++  call MPI_PACK(opsplit_psin_taper,2,MPI_REAL8,buffer,bufsize,position,MPI_COMM_WORLD,ierr)
+   call MPI_PACK(tstep,                  1,MPI_REAL8,buffer,bufsize,position,MPI_COMM_WORLD,ierr)
+   call MPI_PACK(tstep_prev,             1,MPI_REAL8,buffer,bufsize,position,MPI_COMM_WORLD,ierr)
+   call MPI_PACK(tstep_n,               10,MPI_REAL8,buffer,bufsize,position,MPI_COMM_WORLD,ierr)
+@@ -1059,6 +1063,10 @@
+ 
+   position = 0
+ 
++  call MPI_UNPACK(buffer,bufsize,position,opsplit_amplitude,2,MPI_REAL8,MPI_COMM_WORLD,ierr)
++  call MPI_UNPACK(buffer,bufsize,position,opsplit_center,2,MPI_REAL8,MPI_COMM_WORLD,ierr)
++  call MPI_UNPACK(buffer,bufsize,position,opsplit_width,2,MPI_REAL8,MPI_COMM_WORLD,ierr)
++  call MPI_UNPACK(buffer,bufsize,position,opsplit_psin_taper,2,MPI_REAL8,MPI_COMM_WORLD,ierr)
+   call MPI_UNPACK(buffer,bufsize,position,tstep,                  1,MPI_REAL8,MPI_COMM_WORLD,ierr)
+   call MPI_UNPACK(buffer,bufsize,position,tstep_prev,             1,MPI_REAL8,MPI_COMM_WORLD,ierr)
+   call MPI_UNPACK(buffer,bufsize,position,tstep_n,               10,MPI_REAL8,MPI_COMM_WORLD,ierr)

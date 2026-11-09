@@ -1,0 +1,79 @@
+{
+  "A": {
+    "status": "pending",
+    "evidence": [
+      "cpu_continuation_20261102.json",
+      "initializer_runtime_validation_20261102.json",
+      "cpu_baseline_timestep_refined_20261102.json",
+      "cpu_baseline_timestep_final_20261102.json",
+      "cpu_native_mesh_validation_20261102.json",
+      "cpu_mesh_axis_order_build_20261102.json",
+      "cpu_enabled_initializer_validation_20261102.json",
+      "cpu_initializer_shape_screen_20261102.json",
+      "cpu_short_pilot_validation_20261102.json",
+      "cpu_fine_timestep_validation_20261102.json",
+      "cpu_energy_diagnostic_audit_20261102.json",
+      "cpu_constraint_diagnostics_20261102.json",
+      "cpu_dynamic_mesh_moments_20261102.json",
+      "cpu_io_continuation_20261102.json",
+      "cpu_mesh_field_comparison_20261102.json",
+      "cpu_energy_balance_validation_20261102.json",
+      "cpu_viscous_work_audit_20261102.json",
+      "cpu_spatial_refinement_cost_20261102.json",
+      "cpu_energy_complete_continuation_20261102.json",
+      "science_completion_20261103.json",
+      "cpu_spatial_next_convergence_20261103.json",
+      "cpu_radial160_geometry_diagnosis_20261103.json",
+      "cpu_newton_equilibrium_20261103.json",
+      "cpu_exact_core_crossing_20261103.json",
+      "cpu_newton_anchored_equilibrium_20261103.json",
+      "cpu_newton_equilibrium_comparison_20261103.json",
+      "cpu_normalized_newton_comparison_20261103.json",
+      "cpu_newton_tight_equilibrium_comparison_20261103.json",
+      "cpu_exact_core_poloidal_crossing_20261103.json",
+      "cpu_xpoint_continuation_20261103.json",
+      "cpu_xpoint_cycle_mpi_20261103.json",
+      "cpu_xpoint_cycle_comparison_20261103.json",
+      "cpu_exact_radial_convergence_20261103.json",
+      "cpu_combined_refined_qualification_20261103.json",
+      "cpu_exact_core_poloidal_convergence_20261103.json",
+      "cpu_spatial_error_diagnosis_20261104.json",
+      "cpu_poloidal880_timestep_diagnosis_20261104.json",
+      "cpu_balanced_attachment_diagnosis_20261104.json",
+      "cpu_combined_mpi16_parity_20261104.json",
+      "cpu_combined_radial_convergence_20261104.json",
+      "cpu_combined_radial_order_20261104.json",
+      "cpu_scaling8_poloidal_next_convergence_20261104.json",
+      "cpu_corner_handle_qualification_20261104.json",
+      "cpu_xpoint_handle_qualification_20261104.json",
+      "cpu_scaling8_capacity400_qualification_20261104.json"
+    ],
+    "reason": "Combined Newton and exact closed-core crossing fixes are qualified. Full radial160/320 comparison has complete coverage and passes individual fields/integrals, but paired vorticity remains 1.25495% against 1%. Stronger MUMPS scaling gives healthy full poloidal880 trajectories; poloidal440/880 still has 2.76921% parallel-velocity difference and 57 uncovered queries, although every paired response and integral passes. Wall160 and divertor160 repairs pass strict probe health/reference qualification; their full spatial comparisons are running. Radial640 and poloidal1760 qualification continue. Full combined spatial convergence, final refined timestep sensitivity, physical balances and term strength remain pending."
+  },
+  "B": {
+    "status": "pending",
+    "evidence": [
+      "cpu_native_mesh_validation_20261102.json",
+      "validation_cpu_continuation_20261102.json",
+      "cpu_constraint_diagnostics_20261102.json",
+      "validation_cpu_io_continuation_20261102.json",
+      "cpu_mesh_field_comparison_20261102.json",
+      "cpu_viscous_work_audit_20261102.json",
+      "validation_cpu_energy_continuation_20261102.json",
+      "science_completion_20261103.json",
+      "cpu_native_bridge_20261103.json",
+      "cpu_native_halo_validation_20261103.json",
+      "cpu_mumps_refinement_20261103.json",
+      "cpu_mumps_repeat_v2_20261103.json"
+    ],
+    "reason": "Selected native labels verify on all 55135 physical elements for both cases. Bounded MUMPS refinement passes independent interior linearized balance and refined-reference field/gradient repeatability. Legacy T/Vpar gradient parity still fails and is preserved. Full trajectories, complete boundary/axis rows, autonomous retained evaluation, temporal stepping and differentiable solve validation remain unqualified."
+  },
+  "C": {
+    "status": "pending",
+    "evidence": [
+      "science_completion_20261103.json",
+      "cpu_gate_c_pilot_20261103.json"
+    ],
+    "reason": "A ten-case development envelope and resource estimate are prepared, not submitted. Pilot qualification and frozen family-separated production ranges still depend on converged simulations and native-label validation."
+  }
+}

@@ -1,0 +1,583 @@
+{
+  "status": "original_baseline_perturbed_and_poloidal880_parity_verified",
+  "binary_sha256": "76980764f5eaf588fad54225e0bf7efe66a1b3064b470a6c450e9589404d927d",
+  "input_hashes": {
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/scaling8_capacity400_20261104/control3/result.json": "1f119663986fb55255dbcddde662341d4a496e132fbd38abc99fe05a826927ca",
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/scaling8_capacity400_20261104/perturbed3/result.json": "87e8606b0bd87a36ccdb93be9a9242c5126b21d626f36445092e041f88f3aaff",
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/scaling8_capacity400_20261104/poloidal880/result.json": "9a00c1a4a4a7fb8c73463558d1e88cee309396a96b90932c54c4cd7d44e3afb4"
+  },
+  "evidence": {
+    "control3": {
+      "initial_parity": {
+        "exact_reference_arrays": {
+          "x": true,
+          "values": true,
+          "vertex": true,
+          "size": true,
+          "boundary": true,
+          "constrained": true,
+          "n_sons": true,
+          "t_now": true,
+          "index_now": true
+        },
+        "passed": true,
+        "metrics": {
+          "field": {
+            "absolute_rms_errors": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "reference_rms": [
+              0.04383320014545138,
+              0.0,
+              0.46633036222530605,
+              0.0,
+              0.5470619604001429,
+              0.006163768086297527,
+              0.0
+            ],
+            "tolerances": [
+              4.3834200145451384e-08,
+              1e-12,
+              4.66331362225306e-07,
+              1e-12,
+              5.470629604001428e-07,
+              6.164768086297527e-09,
+              1e-12
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "gradient": {
+            "absolute_rms_errors": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "reference_rms": [
+              0.20696829724954707,
+              0.0,
+              12.821542783533548,
+              0.0,
+              5.584940933655634,
+              0.027816512916270877,
+              0.0
+            ],
+            "tolerances": [
+              2.0696929724954707e-07,
+              1e-12,
+              1.2821543783533547e-05,
+              1e-12,
+              5.584941933655634e-06,
+              2.7817512916270877e-08,
+              1e-12
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          }
+        },
+        "snapshot_kind": "initial"
+      },
+      "parity": {
+        "exact_reference_arrays": {
+          "x": true,
+          "values": false,
+          "vertex": true,
+          "size": true,
+          "boundary": true,
+          "constrained": true,
+          "n_sons": true,
+          "t_now": true,
+          "index_now": true,
+          "xtime": true,
+          "energies": false
+        },
+        "passed": true,
+        "metrics": {
+          "field": {
+            "absolute_rms_errors": [
+              1.091506009292318e-18,
+              1.2063054040911383e-18,
+              1.87952749822891e-14,
+              1.204435063666426e-14,
+              1.9060126138324075e-17,
+              3.851760325758459e-19,
+              2.800209831313945e-18
+            ],
+            "reference_rms": [
+              0.04383319490442031,
+              6.5743045545901085e-06,
+              0.4663304363820985,
+              0.001338923470563927,
+              0.546959262236139,
+              0.006163844817249559,
+              0.005230056092142175
+            ],
+            "tolerances": [
+              4.3834194904420306e-08,
+              7.574304554590109e-12,
+              4.6633143638209846e-07,
+              1.3399234705639269e-09,
+              5.46960262236139e-07,
+              6.164844817249559e-09,
+              5.231056092142175e-09
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "gradient": {
+            "absolute_rms_errors": [
+              5.761851168839768e-16,
+              3.5075302556308617e-17,
+              4.741515247958227e-11,
+              8.302817982416282e-12,
+              2.5901493571691545e-14,
+              2.4820739363004785e-16,
+              1.5251080045751611e-15
+            ],
+            "reference_rms": [
+              0.20696815330716475,
+              8.25634976139243e-05,
+              12.82122825655124,
+              0.03055972948666687,
+              5.438405549803324,
+              0.027012511976131647,
+              0.18669465743503683
+            ],
+            "tolerances": [
+              2.0696915330716475e-07,
+              8.356349761392429e-11,
+              1.282122925655124e-05,
+              3.056072948666687e-08,
+              5.438406549803324e-06,
+              2.7013511976131647e-08,
+              1.8669565743503683e-07
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          }
+        },
+        "snapshot_kind": "evolved"
+      }
+    },
+    "perturbed3": {
+      "initial_parity": {
+        "exact_reference_arrays": {
+          "x": true,
+          "values": true,
+          "vertex": true,
+          "size": true,
+          "boundary": true,
+          "constrained": true,
+          "n_sons": true,
+          "t_now": true,
+          "index_now": true
+        },
+        "passed": true,
+        "metrics": {
+          "field": {
+            "absolute_rms_errors": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "reference_rms": [
+              0.04383320014545138,
+              0.0,
+              0.46633036222530605,
+              0.0,
+              0.5490171800359542,
+              0.006213673663975621,
+              0.0
+            ],
+            "tolerances": [
+              4.3834200145451384e-08,
+              1e-12,
+              4.66331362225306e-07,
+              1e-12,
+              5.490181800359543e-07,
+              6.214673663975622e-09,
+              1e-12
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "gradient": {
+            "absolute_rms_errors": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "reference_rms": [
+              0.20696829724954707,
+              0.0,
+              12.821542783533548,
+              0.0,
+              5.585524406421251,
+              0.027983769901979462,
+              0.0
+            ],
+            "tolerances": [
+              2.0696929724954707e-07,
+              1e-12,
+              1.2821543783533547e-05,
+              1e-12,
+              5.585525406421251e-06,
+              2.7984769901979463e-08,
+              1e-12
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          }
+        },
+        "snapshot_kind": "initial"
+      },
+      "parity": {
+        "exact_reference_arrays": {
+          "x": true,
+          "values": false,
+          "vertex": true,
+          "size": true,
+          "boundary": true,
+          "constrained": true,
+          "n_sons": true,
+          "t_now": true,
+          "index_now": true,
+          "xtime": true,
+          "energies": false
+        },
+        "passed": true,
+        "metrics": {
+          "field": {
+            "absolute_rms_errors": [
+              1.4722716637189486e-18,
+              6.143141782922329e-18,
+              3.424443724983054e-14,
+              2.4146609612957818e-14,
+              2.618935429494659e-17,
+              8.326810870154703e-19,
+              3.1753016046693074e-18
+            ],
+            "reference_rms": [
+              0.04383331001627416,
+              1.513345952697462e-05,
+              0.46633685220104615,
+              0.0014173374561091748,
+              0.5489131631199169,
+              0.006213746972254411,
+              0.005230133930560146
+            ],
+            "tolerances": [
+              4.3834310016274163e-08,
+              1.613345952697462e-11,
+              4.663378522010461e-07,
+              1.4183374561091748e-09,
+              5.489141631199169e-07,
+              6.214746972254411e-09,
+              5.231133930560146e-09
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "gradient": {
+            "absolute_rms_errors": [
+              6.771093262472088e-16,
+              4.643472172438261e-17,
+              1.1733234947528444e-10,
+              3.472650923847773e-11,
+              3.0829161330327634e-14,
+              5.372407861447558e-16,
+              1.7843206898751186e-15
+            ],
+            "reference_rms": [
+              0.20696953792743442,
+              0.00010276502471141839,
+              12.824839495116803,
+              0.03235508468022396,
+              5.439002109733472,
+              0.027177705773081783,
+              0.18669517632804555
+            ],
+            "tolerances": [
+              2.069705379274344e-07,
+              1.0376502471141838e-10,
+              1.2824840495116803e-05,
+              3.235608468022396e-08,
+              5.439003109733472e-06,
+              2.7178705773081783e-08,
+              1.8669617632804553e-07
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          }
+        },
+        "snapshot_kind": "evolved"
+      }
+    },
+    "poloidal880": {
+      "initial_parity": {
+        "exact_reference_arrays": {
+          "x": true,
+          "values": true,
+          "vertex": true,
+          "size": true,
+          "boundary": true,
+          "constrained": true,
+          "n_sons": true,
+          "t_now": true,
+          "index_now": true
+        },
+        "passed": true,
+        "metrics": {
+          "field": {
+            "absolute_rms_errors": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "reference_rms": [
+              0.04383180309375037,
+              0.0,
+              0.4663239790762208,
+              0.0,
+              0.5470521940126059,
+              0.006163667380818632,
+              0.0
+            ],
+            "tolerances": [
+              4.383280309375037e-08,
+              1e-12,
+              4.6632497907622075e-07,
+              1e-12,
+              5.470531940126058e-07,
+              6.164667380818632e-09,
+              1e-12
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "gradient": {
+            "absolute_rms_errors": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "reference_rms": [
+              0.2069481653207231,
+              0.0,
+              12.821780118252176,
+              0.0,
+              5.5849713718926886,
+              0.027816684161281028,
+              0.0
+            ],
+            "tolerances": [
+              2.069491653207231e-07,
+              1e-12,
+              1.2821781118252175e-05,
+              1e-12,
+              5.584972371892689e-06,
+              2.781768416128103e-08,
+              1e-12
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          }
+        },
+        "snapshot_kind": "initial"
+      },
+      "parity": {
+        "exact_reference_arrays": {
+          "x": true,
+          "values": false,
+          "vertex": true,
+          "size": true,
+          "boundary": true,
+          "constrained": true,
+          "n_sons": true,
+          "t_now": true,
+          "index_now": true,
+          "xtime": true,
+          "energies": false
+        },
+        "passed": true,
+        "metrics": {
+          "field": {
+            "absolute_rms_errors": [
+              8.987090015790225e-19,
+              9.694985365944422e-19,
+              2.100930383894943e-13,
+              9.606602654682514e-14,
+              1.658691341493197e-17,
+              9.8325797062301e-19,
+              2.7957593967137737e-18
+            ],
+            "reference_rms": [
+              0.04383179785854973,
+              6.578139234700631e-06,
+              0.4663240506746497,
+              0.001339640931636169,
+              0.5469494910966487,
+              0.0061637441004755945,
+              0.005239987273448145
+            ],
+            "tolerances": [
+              4.383279785854973e-08,
+              7.578139234700632e-12,
+              4.663250506746497e-07,
+              1.340640931636169e-09,
+              5.469504910966487e-07,
+              6.1647441004755945e-09,
+              5.240987273448145e-09
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "gradient": {
+            "absolute_rms_errors": [
+              2.748767305186335e-15,
+              5.812174915683718e-17,
+              2.927125068599097e-09,
+              3.730865331460141e-10,
+              5.5683935014683656e-14,
+              1.7513363025349152e-15,
+              1.4417662103653604e-15
+            ],
+            "reference_rms": [
+              0.20694802133833173,
+              8.261336954237458e-05,
+              12.821466938507154,
+              0.030576966654680404,
+              5.438433362963783,
+              0.027012663258465047,
+              0.19534070613354135
+            ],
+            "tolerances": [
+              2.0694902133833173e-07,
+              8.361336954237458e-11,
+              1.2821467938507153e-05,
+              3.05779666546804e-08,
+              5.438434362963783e-06,
+              2.7013663258465048e-08,
+              1.9534170613354133e-07
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          }
+        },
+        "snapshot_kind": "evolved"
+      }
+    }
+  },
+  "scope": "Strict physical parity on healthy controls only; refined trajectories and spatial convergence require separate validation.",
+  "scientific_gates_passed": []
+}

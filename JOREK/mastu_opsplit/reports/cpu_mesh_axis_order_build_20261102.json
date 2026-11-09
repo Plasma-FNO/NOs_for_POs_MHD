@@ -1,0 +1,99 @@
+{
+  "prepared_utc": "2026-11-02T16:58:05.248452+00:00",
+  "approval_source": "Explicit user reply: Continue the study on CPU",
+  "purpose": "Construct the RTree after deterministic axis-flag assignment and optional axis geometry finalization; preserve assertions and equations",
+  "parent_build_report": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_mesh_shared_anchor_build_20261102.json",
+  "parent_build_report_sha256": "f4674c825ee3aafe920ff1400638ad4dbd504f1dfad0b72bdf4d802a80ac3419",
+  "source_commit": "01a52be37576f79c785f1f7a80dee296dda5c9c8",
+  "source_archive_sha256": "c997cf634cb8359bae61fccee6fd43b35b54e154b8c4ffeee042f207b5f950f4",
+  "initializer_patch_sha256": "0a7b0c157f01eea52d05b3088016fa356bc6a7b8b56a9c256443cae2a4676df3",
+  "shared_attachment_patch_sha256": "0291538c67b6a0af9f060ebca2a1d90bec70cfa6544bf0a012513a6a6b626607",
+  "axis_order_patch": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/patches/0003-finish-grid-initialize-axis-before-rtree.patch",
+  "axis_order_patch_sha256": "6f17731d587c4599bfc792e9e75da048e52f3f1e34e89bafb5ce5e5cbc0b9163",
+  "source_directory": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mesh_axis_order_build_20261102/source",
+  "binary_path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mesh_axis_order_build_20261102/source/jorek_model303",
+  "script": "reports/cpu_mesh_axis_order_build_20261102.sbatch",
+  "script_sha256": "b0a23b5de58874895395dc4e4c2016aa41a817a6085807661a542bceb32d41d9",
+  "production_source_modified": false,
+  "cpu_request": 2,
+  "memory_gb": 8,
+  "wall_minutes": 10,
+  "compiler_processes_max": 2,
+  "status": "compiled_and_linked",
+  "job_id": "2768105",
+  "scheduler_preflight": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "sbatch: Job 2768104 to start at 2026-11-02T17:58:05 a using 2 processors on nodes r331c01s01 in partition dcgp_fua_dbg\n"
+  },
+  "submission": {
+    "command": [
+      "sbatch",
+      "--parsable",
+      "--chdir",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mesh_axis_order_build_20261102/source",
+      "--output",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mesh_axis_order_build_20261102/build-%j.out",
+      "--error",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mesh_axis_order_build_20261102/build-%j.err",
+      "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_mesh_axis_order_build_20261102.sbatch"
+    ],
+    "returncode": 0,
+    "stdout": "2768105\n",
+    "stderr": "",
+    "utc": "2026-11-02T17:01:02.769919+00:00"
+  },
+  "submission_attempts": [
+    {
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--partition=dcgp_fua_dbg,dcgp_fua_prod",
+        "--chdir",
+        "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mesh_axis_order_build_20261102/source",
+        "--output",
+        "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mesh_axis_order_build_20261102/build-%j.out",
+        "--error",
+        "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mesh_axis_order_build_20261102/build-%j.err",
+        "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_mesh_axis_order_build_20261102.sbatch"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "sbatch: error: invalid partition dcgp_fua_dbg,dcgp_fua_prod\nsbatch: error: Batch job submission failed: Unspecified error\n",
+      "utc": "2026-11-02T16:58:05.260872+00:00"
+    },
+    {
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--chdir",
+        "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mesh_axis_order_build_20261102/source",
+        "--output",
+        "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mesh_axis_order_build_20261102/build-%j.out",
+        "--error",
+        "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mesh_axis_order_build_20261102/build-%j.err",
+        "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_mesh_axis_order_build_20261102.sbatch"
+      ],
+      "returncode": 0,
+      "stdout": "2768105\n",
+      "stderr": "",
+      "utc": "2026-11-02T17:01:02.769919+00:00"
+    }
+  ],
+  "site_partition_note": "Site sbatch validation rejects a comma-separated partition list; submit to the CPU debug queue explicitly. The rejected request allocated no resources.",
+  "completed_utc": "2026-11-02T17:07:07.856358+00:00",
+  "binary_sha256": "2466b44094727b22bc0af249d03552875bdd19eb14f53d0df18c3fe9fac097f8",
+  "binary_bytes": 7630424,
+  "changed_fortran_files_from_parent": [
+    "grids/grid_utils/finish_grid.f90"
+  ],
+  "axis_flags_assigned_before_rtree": true,
+  "accounting": {
+    "elapsed_seconds": 16,
+    "allocated_cpus": 2,
+    "allocated_nodes": 1,
+    "exit_code": "0:0",
+    "alloc_tres": "billing=2,cpu=2,mem=8G,node=1",
+    "partition": "dcgp_fua_dbg"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/xpoint_continuation_20261103/wall3/jorek000000.h5",
+  "source_sha256": "aeae571744df6af458f5a2a6ea6fd39f361016232e42bdd9771768e437a6f687",
+  "stationary_points": [
+    {
+      "element": 21688,
+      "st": [
+        0.0021312827913857885,
+        0.9911841089610404
+      ],
+      "rz": [
+        0.4835936527777374,
+        -1.2443354363593453
+      ],
+      "psi": -0.012279978593367335,
+      "hessian_eigenvalues_st": [
+        -7.112949822598907e-05,
+        0.00013193050714665496
+      ],
+      "hessian_determinant_st": -9.384150774041828e-09,
+      "parent_gradient_norm": 1.0173214800699614e-20
+    },
+    {
+      "element": 22393,
+      "st": [
+        0.002862310779391104,
+        0.015557538938157655
+      ],
+      "rz": [
+        0.4835338622922797,
+        -1.2446102734354227
+      ],
+      "psi": -0.012279977929682762,
+      "hessian_eigenvalues_st": [
+        -3.718425646679831e-05,
+        8.880599681966028e-05
+      ],
+      "hessian_determinant_st": -3.302184961531929e-09,
+      "parent_gradient_norm": 2.6469779601696886e-23
+    },
+    {
+      "element": 21601,
+      "st": [
+        0.0027619582758739406,
+        0.008914067909753779
+      ],
+      "rz": [
+        0.4835899570972078,
+        1.244352641600715
+      ],
+      "psi": -0.012280806752141332,
+      "hessian_eigenvalues_st": [
+        -6.812783106175401e-05,
+        0.00013392816191220119
+      ],
+      "hessian_determinant_st": -9.124235189165668e-09,
+      "parent_gradient_norm": 2.9778502051908996e-23
+    },
+    {
+      "element": 25729,
+      "st": [
+        0.0010091775911169679,
+        0.9806037644490363
+      ],
+      "rz": [
+        0.4835398804956387,
+        1.2446664156154716
+      ],
+      "psi": -0.012280803723918403,
+      "hessian_eigenvalues_st": [
+        -3.250430847034206e-05,
+        8.924560482042058e-05
+      ],
+      "hessian_determinant_st": -2.9008666687052005e-09,
+      "parent_gradient_norm": 4.172497108539625e-21
+    }
+  ],
+  "scope": "Independent local stationary-point audit; does not select the physical separatrix or establish field parity.",
+  "scientific_gates_passed": []
+}

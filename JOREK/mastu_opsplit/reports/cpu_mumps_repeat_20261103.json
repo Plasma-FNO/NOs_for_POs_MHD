@@ -1,0 +1,22 @@
+{
+  "status": "failed_reference_file_identity_guard_before_native_launch",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mumps_refinement_repeat_20261103",
+  "budget": {
+    "authorization": "User requested solver convergence and science-plan completion.",
+    "scope": "Two independent single-step repeats from exactly the same saved inputs and binary; references must first pass native linearized balance.",
+    "mpi_ranks": 4,
+    "memory_GiB": 128,
+    "wall_hours_max": 1,
+    "rank_CPU_hours_max": 4,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578"
+  },
+  "dependencies": [
+    "2771526"
+  ],
+  "script_sha256": "9cd18b90105e0258b8b869af5aa1baf5d621de062739e1d161b8d66c6d67a479",
+  "manifest_sha256": "cfe0bfece2c7bb5ba3c561ca9d955fe28ca0a8851949ab4558358364ed7ef617",
+  "scientific_gates_passed": [],
+  "job_id": "2771540",
+  "conclusion": "Guard compared the final-restart byte hash against the numbered snapshot; both files are valid but have different byte identities. Corrected guard uses the balance-verified numbered snapshot hash; no native attempt began.",
+  "native_attempt_started": false
+}

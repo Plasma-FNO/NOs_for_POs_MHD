@@ -1,0 +1,18 @@
+{
+  "job_id": "2772844",
+  "status": "completed",
+  "kind": "analysis",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_error_diagnosis_20261104",
+  "budget": {
+    "mpi_ranks": 1,
+    "memory_GiB": 128,
+    "wall_hours_max": 1
+  },
+  "source_hashes": {
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_spatial_error_diagnosis_20261104.py": "b45c234da6639b21d9557c7f58f8cbd55106d0f9a98b5456939c31984457213e",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_spatial_error_diagnosis_20261104.sbatch": "3201bf6990ffb5ea26d6940c46ec8f1628d73f8beceff1292aeb0ea8977c15eb",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/src/mastu_opsplit/queries.py": "b2e24b4422b94677819ed6ed642888b2451b5655d2790d3b1c3b60abb5f3b9bc",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_spatial_directions_analysis_20261103.py": "c9886f3d1885afbfb06af80e6a22d9cc78626fe0684e436884697f5a4c56971d"
+  },
+  "scientific_gates_passed": []
+}

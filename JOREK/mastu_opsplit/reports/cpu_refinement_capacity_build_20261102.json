@@ -1,0 +1,50 @@
+{
+  "created_utc": "2026-11-02T21:50:26.612758+00:00",
+  "purpose": "Capacity for a nested 2x refinement; initial 180x520 R/Z grid exceeds the original 60001-node limit",
+  "parent_report": "cpu_energy_partition_build_20261102.json",
+  "parent_report_sha256": "69a47f12ad9b9ac4d5fa203fa49ff46576c157614b0027222ad3f92a28a81bff",
+  "patch": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/patches/0007-double-refinement-grid-capacity.patch",
+  "patch_sha256": "de97d0d6c4e987cc3377c6042388d670a3b25ea8b909b402313fcaf4d8c45d1e",
+  "source_directory": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/refinement_capacity_build_20261102/source",
+  "binary_path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/refinement_capacity_build_20261102/source/jorek_model303",
+  "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_refinement_capacity_build_20261102.sbatch",
+  "script_sha256": "9b00e1dc7471bfb8a1c8ac4d919b7a5cbd7aa6d060ce7cbf09b19ec8d75fb993",
+  "maximum_compiler_processes": 2,
+  "memory_gb": 8,
+  "wall_minutes": 10,
+  "production_source_modified": false,
+  "equations_modified": false,
+  "n_nodes_max": 120001,
+  "n_elements_max": 120001,
+  "n_boundary_max": 4001,
+  "status": "compiled_and_linked",
+  "scheduler_preflight": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "sbatch: Job 2768361 to start at 2026-11-02T23:53:26 a using 2 processors on nodes r331c01s01 in partition dcgp_fua_prod\n"
+  },
+  "submission": {
+    "command": [
+      "sbatch",
+      "--parsable",
+      "--chdir",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/refinement_capacity_build_20261102/source",
+      "--output",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/refinement_capacity_build_20261102/build-%j.out",
+      "--error",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/refinement_capacity_build_20261102/build-%j.err",
+      "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_refinement_capacity_build_20261102.sbatch"
+    ],
+    "returncode": 0,
+    "stdout": "2768362\n",
+    "stderr": "",
+    "utc": "2026-11-02T21:50:26.649429+00:00"
+  },
+  "job_id": "2768362",
+  "completed_utc": "2026-11-02T21:54:40.844917+00:00",
+  "binary_sha256": "1b118530b14fb42fa0ed3e013cc37396ba8ac4dfdaacd3715c6d92efe0b41737",
+  "mesh_settings_sha256": "90958d468806a11df8a27e404ff0172c983bbdaeaa8bce51d5295866647f3f40",
+  "accounting": "2768362|COMPLETED|59|2|0:0",
+  "build_settings_summary": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_refinement_build_config_20261102.txt",
+  "build_settings_summary_sha256": "dd6d09c8b3d91681f201a8f8445065605c471d3e9b6a4d339d08e860681e951d"
+}

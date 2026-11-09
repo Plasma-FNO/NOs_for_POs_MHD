@@ -1,0 +1,34 @@
+{
+  "approved_utc": "2026-11-02T14:56:34.097815+00:00",
+  "approval_source": "Explicit user reply: Yes move it to that queue",
+  "job_id": "2767445",
+  "operation": "update existing pending job; no resubmission",
+  "original": {
+    "account": "fupb2_ukaea_ml",
+    "partition": "boost_fua_dbg",
+    "qos": "normal"
+  },
+  "effective": {
+    "account": "fupa2_fauna",
+    "partition": "dcgp_fua_dbg",
+    "qos": "normal"
+  },
+  "caps": {
+    "nodes": 1,
+    "mpi_ranks": 1,
+    "omp_threads": 1,
+    "memory_gb": 8,
+    "wall_minutes": 10,
+    "attempts_max": 1
+  },
+  "scheduler_updates": [
+    "scontrol update JobId=2767445 Account=fupa2_fauna Partition=dcgp_fua_dbg QOS=normal TresPerNode=gres/tmpfs:0",
+    "scontrol update JobId=2767445 Gres=0",
+    "scontrol update JobId=2767445 TresPerNode=",
+    "scontrol update JobId=2767445 NumCPUs=1"
+  ],
+  "original_config_and_prepared_snapshot_preserved": true,
+  "scheduler_snapshot": "JobId=2767445 JobName=mastu-eq-20261102 UserId=vgopakum(34213) GroupId=interactive(25200) MCS_label=N/A Priority=132812 Nice=0 Account=fupa2_fauna QOS=normal JobState=PENDING Reason=Nodes_required_for_job_are_DOWN,_DRAINED_or_reserved_for_jobs_in_higher_priority_partitions Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=00:10:00 TimeMin=N/A SubmitTime=2026-11-02T14:07:35 EligibleTime=2026-11-02T14:07:35 AccrueTime=2026-11-02T14:07:35 StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-11-02T15:58:34 Scheduler=Main Partition=dcgp_fua_dbg AllocNode:Sid=login06:3741494 ReqNodeList=(null) ExcNodeList=(null) NodeList= NumNodes=1-1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=1,mem=8G,node=1,billing=1,gres/tmpfs=10737418240 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=1 MinMemoryNode=8G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null) Command=/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/equilibrium_authorized.sbatch SubmitLine=sbatch --parsable --job-name=mastu-eq-20261102 --chdir /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit --output /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium-%j.out --error /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium-%j.err /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/equilibrium_authorized.sbatch WorkDir=/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit StdErr=/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium-2767445.err StdIn=/dev/null StdOut=/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium-2767445.out TresPerTask=cpu=1",
+  "last_checked_utc": "2026-11-02T14:58:36.356681+00:00",
+  "inherited_gres_note": "TresPerNode has been cleared, and scheduler JSON reports empty per-job/node/socket GRES fields. ReqTRES still reports the original tmpfs; whether this display affects scheduling is unverified."
+}

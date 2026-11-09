@@ -1,0 +1,35 @@
+{
+  "label": "contour_bounds_debug",
+  "status": "confirmed_contour_capacity_overflow",
+  "diagnostic_only": true,
+  "equations_modified": false,
+  "source_directory": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/contour_bounds_debug_20261102/source",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/contour_bounds_debug_20261102",
+  "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_contour_bounds_debug_20261102.sbatch",
+  "script_sha256": "0f38718ac747e8c9fd77a6b3459c9f2b17485ad43d94e2aa8686f77efb6bf3c3",
+  "requested_cpu_core_hours": 1.3333333333333333,
+  "requested_node_hours": 0.3333333333333333,
+  "startup_hashes": {
+    "jorek_equil_rz.h5": "9e535e9cf09fd0af5e7c7e6b521457647df6f0a8297d19c550cbe432607f56a4",
+    "input": "cdaf9715536b2f3bb5e5060365f397086b203a619a98f8775371f490fed7ccd3",
+    "eqdsk.dat": "ac787dd266a9b4b93ccdadf9883c9d97a115e7dd9bb5bd3f724321576883bf4e"
+  },
+  "parent_build_report_sha256": "26f6d529f2c4cdd4fdcb145e593d323da8ab2383090428dba612900018eabeb2",
+  "bounds_checked_module": "reorder_and_clean_flux_surfaces",
+  "reuse_RZ_equilibrium": true,
+  "job_id": "2768423",
+  "submitted_utc": "2026-11-02T22:39:03.220490+00:00",
+  "returncode": 2,
+  "finding": {
+    "source_line": 1968,
+    "array": "R_outer_contour",
+    "index": 10001,
+    "upper_bound": 10000,
+    "routine": "get_symmetric_separatrix_contours"
+  },
+  "stderr_sha256": "fbdff88037f5b937dc2269d898977ff6e2515e9e353a343fda56e3cea80031b3",
+  "stdout_sha256": "670dbd9ae1f1690cbe14867382e67bd1ab05c068a2d0a00f7da6713c321b40bd",
+  "binary_sha256": "781a96cbff1993c68f01502fdaaad53c9b1f064ab08cc3fa2a9c458a615de483",
+  "preparation_source": "reports/cpu_contour_bounds_prepare_source_20261102.py",
+  "preparation_source_sha256": "35ae673ac4066383dbf167448bcb238dfc7ddb8a40f8aa91f90e61e71c548f92"
+}

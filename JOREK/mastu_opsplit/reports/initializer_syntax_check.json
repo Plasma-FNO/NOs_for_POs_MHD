@@ -1,0 +1,32 @@
+{
+  "kind": "isolated_source_syntax_check",
+  "full_jorek_build": false,
+  "production_source_modified": false,
+  "checks": [
+    {
+      "source": "models/phys_module.f90",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "source": "models/preset_parameters.f90",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "source": "models/model303/initialise_parameters.f90",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "source": "models/model303/initial_conditions.f90",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "source": "communication/broadcast_phys.f90",
+      "exit_code": 0,
+      "output": ""
+    }
+  ]
+}

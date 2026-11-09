@@ -1,0 +1,11 @@
+{
+  "scope": "Boundary label comparison only at coincident physical wall nodes, not field interpolation or a convergence metric",
+  "coincidence_tolerance_m": 1e-08,
+  "fine_wall_nodes": 1074,
+  "shared_physical_wall_nodes": 76,
+  "mismatching_labels_at_shared_nodes": 0,
+  "mismatch_coordinates_m": [],
+  "old_labels": [],
+  "fine_labels": [],
+  "nonshared_wall_nodes_not_classification_tested": 998
+}

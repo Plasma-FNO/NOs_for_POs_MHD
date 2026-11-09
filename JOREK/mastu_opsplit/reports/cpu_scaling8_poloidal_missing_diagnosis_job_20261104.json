@@ -1,0 +1,15 @@
+{
+  "status": "submitted",
+  "kind": "analysis",
+  "native_attempt_started": false,
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/combined_core_poloidal880_20261104",
+  "analysis_source_sha256": "0e5f66df83488c5dc808e6cb8431227407b04bdedb963d15f1ce7ba54125a2aa",
+  "script_sha256": "97384f330eefc5dcba9e6a6f4fbe865f1eed73d9951ba55b59fbee08f2249314",
+  "budget": {
+    "mpi_ranks": 1,
+    "memory_GiB": 128,
+    "wall_hours_max": 1
+  },
+  "job_id": "2773276",
+  "scientific_gates_passed": []
+}

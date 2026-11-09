@@ -1,0 +1,358 @@
+{
+  "anchors": [
+    {
+      "block": 1,
+      "coarse_corner_m": [
+        1.6368517818884187,
+        -1.77233287549701
+      ],
+      "distance_m": 5.8359100302542484e-05,
+      "native_node_id": 1136,
+      "original_interior_anchor_m": [
+        1.6369,
+        -1.7723
+      ],
+      "side": "left",
+      "source_file": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium_regression_dcgp_20261102/attempt_1/work/grid_no_patch.h5",
+      "source_sha256": "c5ca80827721289685dbcd3765e6770474bd6b549961e74d031a520408b8e99a"
+    },
+    {
+      "block": 1,
+      "coarse_corner_m": [
+        0.8159007164015228,
+        -1.6004761154622167
+      ],
+      "distance_m": 0.009035435720117767,
+      "native_node_id": 22,
+      "original_interior_anchor_m": [
+        0.8096,
+        -1.594
+      ],
+      "side": "right",
+      "source_file": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium_regression_dcgp_20261102/attempt_1/work/grid_patch1.h5",
+      "source_sha256": "7f974b972d2960fa92062014ca9acf3b409954cf48fd60a5c68b5e8a3243215e"
+    },
+    {
+      "block": 2,
+      "coarse_corner_m": [
+        0.8159007164015228,
+        -1.6004761154622167
+      ],
+      "distance_m": 0.009035435720117767,
+      "native_node_id": 22,
+      "original_interior_anchor_m": [
+        0.8096,
+        -1.594
+      ],
+      "side": "left",
+      "source_file": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium_regression_dcgp_20261102/attempt_1/work/grid_patch1.h5",
+      "source_sha256": "7f974b972d2960fa92062014ca9acf3b409954cf48fd60a5c68b5e8a3243215e"
+    },
+    {
+      "block": 2,
+      "coarse_corner_m": [
+        1.0208868868653562,
+        -0.8186630264027484
+      ],
+      "distance_m": 0.004602323900152602,
+      "native_node_id": 21,
+      "original_interior_anchor_m": [
+        1.0238,
+        -0.8151
+      ],
+      "side": "right",
+      "source_file": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium_regression_dcgp_20261102/attempt_1/work/grid_patch2.h5",
+      "source_sha256": "00b5e4b73cf1cc372ad4ed114e72155a4a175d2881d2f4abbf91576adb12d7fb"
+    },
+    {
+      "block": 3,
+      "coarse_corner_m": [
+        1.0208868868653562,
+        -0.8186630264027484
+      ],
+      "distance_m": 0.004602323900152602,
+      "native_node_id": 21,
+      "original_interior_anchor_m": [
+        1.0238,
+        -0.8151
+      ],
+      "side": "left",
+      "source_file": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium_regression_dcgp_20261102/attempt_1/work/grid_patch2.h5",
+      "source_sha256": "00b5e4b73cf1cc372ad4ed114e72155a4a175d2881d2f4abbf91576adb12d7fb"
+    },
+    {
+      "block": 3,
+      "coarse_corner_m": [
+        1.020848228751964,
+        0.8186961947213597
+      ],
+      "distance_m": 0.004589685798075936,
+      "native_node_id": 29,
+      "original_interior_anchor_m": [
+        1.0237,
+        0.8151
+      ],
+      "side": "right",
+      "source_file": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium_regression_dcgp_20261102/attempt_1/work/grid_patch3.h5",
+      "source_sha256": "461c25213378726c265b1b1f107393d59041aa24221ca28eec699738a39d5fcb"
+    },
+    {
+      "block": 4,
+      "coarse_corner_m": [
+        1.020848228751964,
+        0.8186961947213597
+      ],
+      "distance_m": 0.004589685798075936,
+      "native_node_id": 29,
+      "original_interior_anchor_m": [
+        1.0237,
+        0.8151
+      ],
+      "side": "left",
+      "source_file": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium_regression_dcgp_20261102/attempt_1/work/grid_patch3.h5",
+      "source_sha256": "461c25213378726c265b1b1f107393d59041aa24221ca28eec699738a39d5fcb"
+    },
+    {
+      "block": 4,
+      "coarse_corner_m": [
+        0.8159086999634825,
+        1.6002915175524377
+      ],
+      "distance_m": 0.009122207618649925,
+      "native_node_id": 21,
+      "original_interior_anchor_m": [
+        0.8094,
+        1.5939
+      ],
+      "side": "right",
+      "source_file": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium_regression_dcgp_20261102/attempt_1/work/grid_patch4.h5",
+      "source_sha256": "620b6f5218f5f569c205685d8d405fecdfd84ea242a9d8bf5ae3cdf97919334c"
+    },
+    {
+      "block": 5,
+      "coarse_corner_m": [
+        0.8159086999634825,
+        1.6002915175524377
+      ],
+      "distance_m": 0.009122207618649925,
+      "native_node_id": 21,
+      "original_interior_anchor_m": [
+        0.8094,
+        1.5939
+      ],
+      "side": "left",
+      "source_file": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium_regression_dcgp_20261102/attempt_1/work/grid_patch4.h5",
+      "source_sha256": "620b6f5218f5f569c205685d8d405fecdfd84ea242a9d8bf5ae3cdf97919334c"
+    },
+    {
+      "block": 5,
+      "coarse_corner_m": [
+        1.6368518985398692,
+        1.772332379613112
+      ],
+      "distance_m": 5.7984392831195706e-05,
+      "native_node_id": 1359,
+      "original_interior_anchor_m": [
+        1.6369,
+        1.7723
+      ],
+      "side": "right",
+      "source_file": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium_regression_dcgp_20261102/attempt_1/work/grid_no_patch.h5",
+      "source_sha256": "c5ca80827721289685dbcd3765e6770474bd6b549961e74d031a520408b8e99a"
+    },
+    {
+      "block": 6,
+      "coarse_corner_m": [
+        1.370129882286427,
+        -2.0385861540360786
+      ],
+      "distance_m": 0.0001727145385561302,
+      "native_node_id": 945,
+      "original_interior_anchor_m": [
+        1.37,
+        -2.0387
+      ],
+      "side": "left",
+      "source_file": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium_regression_dcgp_20261102/attempt_1/work/grid_no_patch.h5",
+      "source_sha256": "c5ca80827721289685dbcd3765e6770474bd6b549961e74d031a520408b8e99a"
+    },
+    {
+      "block": 6,
+      "coarse_corner_m": [
+        1.1785787654551183,
+        -1.8999279573082788
+      ],
+      "distance_m": 0.005615939515791818,
+      "native_node_id": 14,
+      "original_interior_anchor_m": [
+        1.175,
+        -1.8956
+      ],
+      "side": "right",
+      "source_file": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium_regression_dcgp_20261102/attempt_1/work/grid_patch6.h5",
+      "source_sha256": "894821d29b6eab5c16f9aa3fd45ade95206975f8ad57d90fa7d66ab112d77483"
+    },
+    {
+      "block": 7,
+      "coarse_corner_m": [
+        1.1785787654551183,
+        -1.8999279573082788
+      ],
+      "distance_m": 0.005615939515791818,
+      "native_node_id": 14,
+      "original_interior_anchor_m": [
+        1.175,
+        -1.8956
+      ],
+      "side": "left",
+      "source_file": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium_regression_dcgp_20261102/attempt_1/work/grid_patch6.h5",
+      "source_sha256": "894821d29b6eab5c16f9aa3fd45ade95206975f8ad57d90fa7d66ab112d77483"
+    },
+    {
+      "block": 7,
+      "coarse_corner_m": [
+        0.7126279109440263,
+        -1.603168870031841
+      ],
+      "distance_m": 0.0038929881607401963,
+      "native_node_id": 16,
+      "original_interior_anchor_m": [
+        0.7153,
+        -1.606
+      ],
+      "side": "right",
+      "source_file": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium_regression_dcgp_20261102/attempt_1/work/grid_patch7.h5",
+      "source_sha256": "32b3199ebc48e144083593717deee0bd317fa660188e3f0e137d35043939aecf"
+    },
+    {
+      "block": 8,
+      "coarse_corner_m": [
+        0.7126279109440263,
+        -1.603168870031841
+      ],
+      "distance_m": 0.0038929881607401963,
+      "native_node_id": 16,
+      "original_interior_anchor_m": [
+        0.7153,
+        -1.606
+      ],
+      "side": "left",
+      "source_file": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium_regression_dcgp_20261102/attempt_1/work/grid_patch7.h5",
+      "source_sha256": "32b3199ebc48e144083593717deee0bd317fa660188e3f0e137d35043939aecf"
+    },
+    {
+      "block": 8,
+      "coarse_corner_m": [
+        0.4251352163136719,
+        -1.3644555367107398
+      ],
+      "distance_m": 7.857423309265023e-05,
+      "native_node_id": 17,
+      "original_interior_anchor_m": [
+        0.4252,
+        -1.3645
+      ],
+      "side": "right",
+      "source_file": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium_regression_dcgp_20261102/attempt_1/work/grid_patch8.h5",
+      "source_sha256": "bbbcaab0f4312e4ffcff41f056bfb28c1f687fba92a43bfbf8cf3c08f683cad8"
+    },
+    {
+      "block": 9,
+      "coarse_corner_m": [
+        1.3701325636006958,
+        2.0385873068094362
+      ],
+      "distance_m": 0.00017399098663102962,
+      "native_node_id": 1168,
+      "original_interior_anchor_m": [
+        1.37,
+        2.0387
+      ],
+      "side": "left",
+      "source_file": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium_regression_dcgp_20261102/attempt_1/work/grid_no_patch.h5",
+      "source_sha256": "c5ca80827721289685dbcd3765e6770474bd6b549961e74d031a520408b8e99a"
+    },
+    {
+      "block": 9,
+      "coarse_corner_m": [
+        1.1771502710774646,
+        1.8971462554959473
+      ],
+      "distance_m": 0.004848196449955326,
+      "native_node_id": 9,
+      "original_interior_anchor_m": [
+        1.1733,
+        1.8942
+      ],
+      "side": "right",
+      "source_file": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium_regression_dcgp_20261102/attempt_1/work/grid_patch10.h5",
+      "source_sha256": "3faa5ef19d75c0184594487941d041fb3eb2907255ffed9c6e66bbf170234615"
+    },
+    {
+      "block": 10,
+      "coarse_corner_m": [
+        1.1771502710774646,
+        1.8971462554959473
+      ],
+      "distance_m": 0.004848196449955326,
+      "native_node_id": 9,
+      "original_interior_anchor_m": [
+        1.1733,
+        1.8942
+      ],
+      "side": "left",
+      "source_file": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium_regression_dcgp_20261102/attempt_1/work/grid_patch10.h5",
+      "source_sha256": "3faa5ef19d75c0184594487941d041fb3eb2907255ffed9c6e66bbf170234615"
+    },
+    {
+      "block": 10,
+      "coarse_corner_m": [
+        0.42513892371713224,
+        1.3644598007209696
+      ],
+      "distance_m": 7.31183585942072e-05,
+      "native_node_id": 24,
+      "original_interior_anchor_m": [
+        0.4252,
+        1.3645
+      ],
+      "side": "right",
+      "source_file": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium_regression_dcgp_20261102/attempt_1/work/grid_patch10.h5",
+      "source_sha256": "3faa5ef19d75c0184594487941d041fb3eb2907255ffed9c6e66bbf170234615"
+    },
+    {
+      "block": 11,
+      "coarse_corner_m": [
+        0.3553348178030782,
+        1.3235835898596147
+      ],
+      "distance_m": 0.00021919313007672154,
+      "native_node_id": 1149,
+      "original_interior_anchor_m": [
+        0.3553,
+        1.3238
+      ],
+      "side": "left",
+      "source_file": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium_regression_dcgp_20261102/attempt_1/work/grid_no_patch.h5",
+      "source_sha256": "c5ca80827721289685dbcd3765e6770474bd6b549961e74d031a520408b8e99a"
+    },
+    {
+      "block": 11,
+      "coarse_corner_m": [
+        0.35512530542198045,
+        -1.324010049769738
+      ],
+      "distance_m": 0.002732818428776451,
+      "native_node_id": 926,
+      "original_interior_anchor_m": [
+        0.3538,
+        -1.3264
+      ],
+      "side": "right",
+      "source_file": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium_regression_dcgp_20261102/attempt_1/work/grid_no_patch.h5",
+      "source_sha256": "c5ca80827721289685dbcd3765e6770474bd6b549961e74d031a520408b8e99a"
+    }
+  ],
+  "basis": "Coordinates of corners from the successful coarse native grid; coarse exact-field regression is required before the refined run",
+  "scope": "Internal patch attachment anchors only; preserve physical wall endpoints and all profile/transport parameters"
+}

@@ -1,0 +1,18 @@
+status: candidate_pre_pilot
+seed: 20261102
+train_amplitude: [0.02, 0.15]
+strong_amplitude: [0.20, 0.30]
+train_transport: [0.7, 1.4]
+low_transport: [0.35, 0.5]
+high_transport: [2.0, 2.8]
+# Centers and widths require verified flux surfaces and local resolution.
+admissible_centers_m: null
+resolved_widths_m: null
+splits:
+  train: 160
+  validation: 20
+  id_test: 20
+  strong_test: 20
+  low_transport_test: 20
+  high_transport_test: 20
+  combined_test: 20

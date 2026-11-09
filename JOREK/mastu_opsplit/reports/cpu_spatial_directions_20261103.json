@@ -1,0 +1,832 @@
+{
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_directions_20261103",
+  "reference": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_radial_pair_20261103",
+  "budget": {
+    "authorization": "User requested next radial refinement to reach 1% and wall/poloidal convergence checks.",
+    "mpi_ranks": 4,
+    "threads": 1,
+    "memory_GiB_simulation": 256,
+    "probe_allocations_max": 6,
+    "probe_hours_each_max": 2,
+    "full_pair_count_max": 4,
+    "full_allocations_max": 8,
+    "full_hours_each_max": 6,
+    "analysis_allocations_max": 4,
+    "analysis_hours_each_max": 1,
+    "rank_CPU_hours_max": 244,
+    "node_hours_max": 64,
+    "conservative_resource_hours_max": 16384,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+    "policy": "Start radial160, wall60, poloidal440. Only failed wall/poloidal proofs enable wall50/poloidal330. Only healthy radial160 full pair failing the frozen field/integral/coverage targets enables radial320, compared against radial160. No retry of any candidate; no physics/tolerance/build changes."
+  },
+  "candidates": {
+    "radial160": {
+      "direction": "core radial",
+      "overrides": {
+        "n_flux": 160
+      },
+      "reference": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_radial_pair_20261103"
+    },
+    "radial320": {
+      "direction": "core radial",
+      "overrides": {
+        "n_flux": 320
+      },
+      "reference": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_directions_20261103/radial160"
+    },
+    "wall60": {
+      "direction": "wall normal",
+      "overrides": {
+        "n_ext_block(1)": 60,
+        "n_ext_block(2)": 60,
+        "n_ext_block(3)": 114,
+        "n_ext_block(4)": 60,
+        "n_ext_block(5)": 60,
+        "n_ext_block(6)": 60,
+        "n_ext_block(7)": 60,
+        "n_ext_block(8)": 60,
+        "n_ext_block(9)": 60,
+        "n_ext_block(10)": 60,
+        "n_ext_block(11)": 60
+      },
+      "reference": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_radial_pair_20261103"
+    },
+    "wall50": {
+      "direction": "wall normal",
+      "overrides": {
+        "n_ext_block(1)": 50,
+        "n_ext_block(2)": 50,
+        "n_ext_block(3)": 95,
+        "n_ext_block(4)": 50,
+        "n_ext_block(5)": 50,
+        "n_ext_block(6)": 50,
+        "n_ext_block(7)": 50,
+        "n_ext_block(8)": 50,
+        "n_ext_block(9)": 50,
+        "n_ext_block(10)": 50,
+        "n_ext_block(11)": 50
+      },
+      "reference": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_radial_pair_20261103"
+    },
+    "poloidal440": {
+      "direction": "poloidal including divertor legs",
+      "overrides": {
+        "n_tht": 440,
+        "n_leg": 24,
+        "n_leg_out": 160,
+        "n_up_leg": 24,
+        "n_up_leg_out": 160
+      },
+      "reference": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_radial_pair_20261103"
+    },
+    "poloidal330": {
+      "direction": "poloidal including divertor legs",
+      "overrides": {
+        "n_tht": 330,
+        "n_leg": 18,
+        "n_leg_out": 120,
+        "n_up_leg": 18,
+        "n_up_leg_out": 120
+      },
+      "reference": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_radial_pair_20261103"
+    }
+  },
+  "frozen_sources": {
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_spatial_directions_20261103.py": "f2033e7d18be8458601778bd17cf2dfe9f06c95874285e30d3f74bb9e4120f9b",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_spatial_directions_analysis_20261103.py": "c9886f3d1885afbfb06af80e6a22d9cc78626fe0684e436884697f5a4c56971d",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_spatial_directions_tests_20261103.xml": "f62063766ff3bc4bfb725af1355e7a3d0fab711989ea75d4f43ddf94f18e213b",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_spatial_next_launch_20261103.py": "4f3fd5e6ba8735c36d7538575cf5c84ba8b7750f48f96f8ee2a379182ac7770b",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_spatial_pair_worker_20261103.py": "7679fd0f23595b50f3852f3516201e930d22884d800d9d144584f8f1af903ecf",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_cached_rz_recovery_worker_20261103.py": "152624e4df1e061ad797f62eb582cd426bfa7edc85882b59fb2140885d051e7e",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/src/mastu_opsplit/queries.py": "b2e24b4422b94677819ed6ed642888b2451b5655d2790d3b1c3b60abb5f3b9bc",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/src/mastu_opsplit/restart.py": "830671db304963210d913ec14e202579f8252331bbedee1b6c4c4f5ec059c795",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/src/mastu_opsplit/numerical.py": "3c903bbfd3cf4d72bdac1978f706300d45ef6e293e7a3f3e4f53a030b40f90f3",
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_directions_20261103/radial160/manifest.json": "0b7863b6cd13d99f3c1cf99368a51b09fdbfc1304d347403d18a2dc7b1ae1fed",
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_directions_20261103/radial320/manifest.json": "2ef8015c467d2ee972eb616d122b88986a4883ad1f738b5fc200af25e230a8b1",
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_directions_20261103/wall60/manifest.json": "9ee79a638b41f2cdffdbf6e202587b588e8f6820ca8522d8331b5f8d85ac3054",
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_directions_20261103/wall50/manifest.json": "2c0fe286a2a87f3a55ad026f97b13ff67032dc3779120c9ca55f89d46440e7f1",
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_directions_20261103/poloidal440/manifest.json": "cdb1dbd3c1ffed44a2c272680ffeec9139c59eca549302c54ddd7dee98b4f5c0",
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_directions_20261103/poloidal330/manifest.json": "8dfe6361f2a0bbc4301bade969451b110aa40a28a6ed59786fac3c498bee4885"
+  },
+  "ledger_before": {
+    "as_of": "2026-11-02",
+    "scientific_jobs_submitted": 63,
+    "new_reference_trajectories": 0,
+    "new_scientific_checkpoints": 0,
+    "actual_hpc_cpu_core_hours": 55.084999999999994,
+    "actual_hpc_gpu_hours": 0,
+    "actual_hpc_node_hours": 14.139444444444443,
+    "local_validation_cost": "CPU software/manufactured checks and read-only native restart diagnostics; the original initializer build was local, later isolated builds used capped Slurm CPU requests.",
+    "storage": {
+      "bulk_root": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit",
+      "retention_confirmed": false,
+      "development_bulk_root": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102",
+      "development_relocation_approved": true,
+      "transfer_record": "reports/cpu_storage_transfer_20261102.json"
+    },
+    "first_request": {
+      "scope": "one unchanged n_tor=1 equilibrium regression",
+      "account": "fupa2_fauna",
+      "partition": "dcgp_fua_dbg",
+      "nodes": 1,
+      "mpi_ranks": 1,
+      "threads": 1,
+      "memory_gb": 8,
+      "wall_minutes": 10,
+      "attempts_max": 1,
+      "requested_rank_core_hours_max": 0.16666666666666666,
+      "node_hours_max": 0.16666666666666666,
+      "full_node_cpu_core_hours_max": 10.666666666666666,
+      "gpu_request": 0,
+      "authorization": "approved_single_regression",
+      "job_id": "2767445",
+      "state": "CANCELLED",
+      "queue_reason": "Replaced before execution under dual-partition approval",
+      "authorized_config": "configs/equilibrium_authorized.yaml",
+      "authorized_script": "reports/equilibrium_authorized.sbatch",
+      "script_sha256": "fb5676a84cb579ad87fd3a9b9a283e13d0b3864cdefe2e8a1a68ce09f778499d",
+      "original_account": "fupb2_ukaea_ml",
+      "original_partition": "boost_fua_dbg",
+      "qos": "normal",
+      "queue_move_record": "reports/equilibrium_queue_move_20261102.json",
+      "replaced_by": [
+        "2767719",
+        "2767720"
+      ],
+      "actual_allocated_cpu_hours": 0,
+      "actual_allocated_node_hours": 0
+    },
+    "pilot": {
+      "trajectories_target": 16,
+      "baseline_and_refinement_jobs_max": 8,
+      "attempts_per_job_max": 2,
+      "mpi_ranks": 4,
+      "wall_minutes_per_attempt": 30,
+      "requested_rank_core_hours_max": 96,
+      "node_hours_max": 24,
+      "full_node_cpu_core_hours_max": 1536,
+      "gpu_request": 0,
+      "storage_gb_max": 50,
+      "authorization": "CPU development continuation authorized; ensemble and production budget not yet frozen"
+    },
+    "production": {
+      "trajectories_target": 280,
+      "authorized_cpu_core_hours": 0,
+      "authorized_gpu_hours": 0,
+      "estimate": "Pending measured pilot runtime, variance, failures, storage, and numerical gate costs."
+    },
+    "local_initializer_build": {
+      "wall_seconds": 88.16819067695178,
+      "compiler_processes_max": 2,
+      "linked": true,
+      "runtime_validated": true,
+      "evidence": "initializer_build.json",
+      "runtime_validation_scope": "Default zero amplitudes only; see separate runtime validation report."
+    },
+    "dual_partition_regressions": {
+      "approval_source": "Explicit user reply: Run it in both partitions",
+      "record": "reports/equilibrium_both_partitions_20261102.json",
+      "max_executions": 2,
+      "attempts_per_job_max": 1,
+      "requested_node_hours_max_total": 0.3333333333333333,
+      "requested_rank_core_hours_max_total": 0.3333333333333333,
+      "jobs": [
+        {
+          "label": "boost",
+          "job_id": "2767719",
+          "account": "fupb2_ukaea_ml",
+          "partition": "boost_fua_dbg",
+          "state": "COMPLETED",
+          "queue_reason": null,
+          "prepared": "runs/prepared_equilibrium_boost_authorized_20261102",
+          "output": "runs/equilibrium_regression_boost_20261102",
+          "equilibrium_passed": true,
+          "accounting": {
+            "elapsed_seconds": 25,
+            "allocated_cpus": 1,
+            "allocated_nodes": 1,
+            "exit_code": "0:0",
+            "alloc_tres": "billing=1,cpu=1,gres/tmpfs=10737418240,mem=8G,node=1"
+          }
+        },
+        {
+          "label": "dcgp",
+          "job_id": "2767720",
+          "account": "fupa2_fauna",
+          "partition": "dcgp_fua_dbg",
+          "state": "COMPLETED",
+          "queue_reason": null,
+          "prepared": "runs/prepared_equilibrium_dcgp_authorized_20261102",
+          "output": "runs/equilibrium_regression_dcgp_20261102",
+          "equilibrium_passed": true,
+          "accounting": {
+            "elapsed_seconds": 27,
+            "allocated_cpus": 1,
+            "allocated_nodes": 1,
+            "exit_code": "0:0",
+            "alloc_tres": "billing=1,cpu=1,mem=8G,node=1"
+          }
+        }
+      ],
+      "completed_cpu_job_accounting": {
+        "job_id": "2767720",
+        "elapsed_seconds": 27,
+        "allocated_cpus": 1,
+        "allocated_nodes": 1,
+        "exit_code": "0:0",
+        "alloc_tres": "billing=1,cpu=1,mem=8G,node=1"
+      }
+    },
+    "cpu_continuation": {
+      "approval_source": "Explicit user reply: Continue the study on CPU",
+      "record": "reports/cpu_continuation_20261102.json",
+      "account": "fupa2_fauna",
+      "jobs": [
+        {
+          "label": "baseline3",
+          "job_id": "2767763",
+          "state": "COMPLETED",
+          "accounting": {
+            "state": "COMPLETED",
+            "elapsed_seconds": 42,
+            "allocated_cpus": 1,
+            "allocated_nodes": 1,
+            "exit_code": "0:0",
+            "alloc_tres": "billing=1,cpu=1,mem=8G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "label": "initializer_default",
+          "job_id": "2767771",
+          "state": "COMPLETED",
+          "accounting": {
+            "state": "COMPLETED",
+            "elapsed_seconds": 24,
+            "allocated_cpus": 1,
+            "allocated_nodes": 1,
+            "exit_code": "0:0",
+            "alloc_tres": "billing=1,cpu=1,mem=8G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "label": "baseline6",
+          "job_id": "2767836",
+          "state": "COMPLETED",
+          "accounting": {
+            "state": "COMPLETED",
+            "elapsed_seconds": 60,
+            "allocated_cpus": 1,
+            "allocated_nodes": 1,
+            "exit_code": "0:0",
+            "alloc_tres": "billing=1,cpu=1,mem=8G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "label": "baseline12",
+          "job_id": "2767838",
+          "state": "COMPLETED",
+          "accounting": {
+            "state": "COMPLETED",
+            "elapsed_seconds": 93,
+            "allocated_cpus": 1,
+            "allocated_nodes": 1,
+            "exit_code": "0:0",
+            "alloc_tres": "billing=1,cpu=1,mem=8G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "label": "baseline24",
+          "job_id": "2767851",
+          "state": "FAILED",
+          "accounting": {
+            "state": "FAILED",
+            "elapsed_seconds": 23,
+            "allocated_cpus": 1,
+            "allocated_nodes": 1,
+            "exit_code": "1:0",
+            "alloc_tres": "billing=1,cpu=1,mem=8G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "label": "baseline48",
+          "job_id": "2767853",
+          "state": "COMPLETED",
+          "accounting": {
+            "state": "COMPLETED",
+            "elapsed_seconds": 292,
+            "allocated_cpus": 1,
+            "allocated_nodes": 1,
+            "exit_code": "0:0",
+            "alloc_tres": "billing=1,cpu=1,mem=8G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "label": "baseline24_retry1",
+          "job_id": "2767860",
+          "state": "COMPLETED",
+          "accounting": {
+            "state": "COMPLETED",
+            "elapsed_seconds": 160,
+            "allocated_cpus": 1,
+            "allocated_nodes": 1,
+            "exit_code": "0:0",
+            "alloc_tres": "billing=1,cpu=1,mem=8G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "label": "baseline96",
+          "job_id": "2767868",
+          "state": "COMPLETED",
+          "accounting": {
+            "state": "COMPLETED",
+            "elapsed_seconds": 483,
+            "allocated_cpus": 1,
+            "allocated_nodes": 1,
+            "exit_code": "0:0",
+            "alloc_tres": "billing=1,cpu=1,mem=8G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "label": "mesh2_equilibrium",
+          "job_id": "2767989",
+          "state": "FAILED",
+          "accounting": {
+            "state": "FAILED",
+            "elapsed_seconds": 15,
+            "allocated_cpus": 1,
+            "allocated_nodes": 1,
+            "exit_code": "1:0",
+            "alloc_tres": "billing=1,cpu=1,mem=16G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "label": "capacity_equilibrium",
+          "job_id": "2768025",
+          "state": "COMPLETED",
+          "accounting": {
+            "state": "COMPLETED",
+            "elapsed_seconds": 26,
+            "allocated_cpus": 1,
+            "allocated_nodes": 1,
+            "exit_code": "0:0",
+            "alloc_tres": "billing=1,cpu=1,mem=8G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "label": "mesh2_capacity_equilibrium",
+          "job_id": "2768027",
+          "state": "FAILED",
+          "accounting": {
+            "state": "FAILED",
+            "elapsed_seconds": 76,
+            "allocated_cpus": 1,
+            "allocated_nodes": 1,
+            "exit_code": "1:0",
+            "alloc_tres": "billing=1,cpu=1,mem=16G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "label": "anchor_equilibrium",
+          "job_id": "2768042",
+          "state": "COMPLETED",
+          "accounting": {
+            "state": "COMPLETED",
+            "elapsed_seconds": 26,
+            "allocated_cpus": 1,
+            "allocated_nodes": 1,
+            "exit_code": "0:0",
+            "alloc_tres": "billing=1,cpu=1,mem=8G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "label": "mesh2_anchor_equilibrium",
+          "job_id": "2768044",
+          "state": "FAILED",
+          "accounting": {
+            "state": "FAILED",
+            "elapsed_seconds": 72,
+            "allocated_cpus": 1,
+            "allocated_nodes": 1,
+            "exit_code": "1:0",
+            "alloc_tres": "billing=1,cpu=1,mem=16G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "label": "shared_anchor_equilibrium",
+          "job_id": "2768079",
+          "state": "COMPLETED",
+          "accounting": {
+            "state": "COMPLETED",
+            "elapsed_seconds": 21,
+            "allocated_cpus": 1,
+            "allocated_nodes": 1,
+            "exit_code": "0:0",
+            "alloc_tres": "billing=1,cpu=1,mem=8G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "label": "mesh2_shared_anchor_equilibrium",
+          "job_id": "2768081",
+          "state": "FAILED",
+          "accounting": {
+            "state": "FAILED",
+            "elapsed_seconds": 80,
+            "allocated_cpus": 1,
+            "allocated_nodes": 1,
+            "exit_code": "1:0",
+            "alloc_tres": "billing=1,cpu=1,mem=16G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "label": "axis_order_equilibrium",
+          "job_id": "2768115",
+          "state": "COMPLETED",
+          "accounting": {
+            "state": "COMPLETED",
+            "elapsed_seconds": 22,
+            "allocated_cpus": 1,
+            "allocated_nodes": 1,
+            "exit_code": "0:0",
+            "alloc_tres": "billing=1,cpu=1,mem=8G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "label": "mesh2_axis_order_equilibrium",
+          "job_id": "2768117",
+          "state": "COMPLETED",
+          "accounting": {
+            "state": "COMPLETED",
+            "elapsed_seconds": 87,
+            "allocated_cpus": 1,
+            "allocated_nodes": 1,
+            "exit_code": "0:0",
+            "alloc_tres": "billing=1,cpu=1,mem=16G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "label": "fine_mpi4_equilibrium",
+          "job_id": "2768142",
+          "state": "COMPLETED",
+          "accounting": {
+            "state": "COMPLETED",
+            "elapsed_seconds": 88,
+            "allocated_cpus": 4,
+            "allocated_nodes": 1,
+            "exit_code": "0:0",
+            "alloc_tres": "billing=4,cpu=4,mem=16G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "label": "fine_mpi4_baseline96",
+          "job_id": "2768143",
+          "state": "COMPLETED",
+          "accounting": {
+            "state": "COMPLETED",
+            "elapsed_seconds": 820,
+            "allocated_cpus": 4,
+            "allocated_nodes": 1,
+            "exit_code": "0:0",
+            "alloc_tres": "billing=4,cpu=4,mem=16G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "label": "fine_initializer_mpi1",
+          "job_id": "2768146",
+          "state": "COMPLETED",
+          "accounting": {
+            "state": "COMPLETED",
+            "elapsed_seconds": 88,
+            "allocated_cpus": 1,
+            "allocated_nodes": 1,
+            "exit_code": "0:0",
+            "alloc_tres": "billing=1,cpu=1,mem=16G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "label": "fine_initializer_mpi4",
+          "job_id": "2768147",
+          "state": "COMPLETED",
+          "accounting": {
+            "state": "COMPLETED",
+            "elapsed_seconds": 88,
+            "allocated_cpus": 4,
+            "allocated_nodes": 1,
+            "exit_code": "0:0",
+            "alloc_tres": "billing=4,cpu=4,mem=16G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "label": "fine_perturbed96",
+          "job_id": "2768153",
+          "state": "COMPLETED",
+          "accounting": {
+            "state": "COMPLETED",
+            "elapsed_seconds": 887,
+            "allocated_cpus": 4,
+            "allocated_nodes": 1,
+            "exit_code": "0:0",
+            "alloc_tres": "billing=4,cpu=4,mem=16G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "label": "io_equilibrium",
+          "job_id": "2768291",
+          "state": "COMPLETED",
+          "accounting": {
+            "state": "COMPLETED",
+            "elapsed_seconds": 92,
+            "allocated_cpus": 4,
+            "allocated_nodes": 1,
+            "exit_code": "0:0",
+            "alloc_tres": "billing=4,cpu=4,mem=16G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "label": "io_baseline48",
+          "job_id": "2768294",
+          "state": "COMPLETED",
+          "accounting": {
+            "state": "COMPLETED",
+            "elapsed_seconds": 457,
+            "allocated_cpus": 4,
+            "allocated_nodes": 1,
+            "exit_code": "0:0",
+            "alloc_tres": "billing=4,cpu=4,mem=16G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "label": "io_perturbed48",
+          "job_id": "2768296",
+          "state": "COMPLETED",
+          "accounting": {
+            "state": "COMPLETED",
+            "elapsed_seconds": 458,
+            "allocated_cpus": 4,
+            "allocated_nodes": 1,
+            "exit_code": "0:0",
+            "alloc_tres": "billing=4,cpu=4,mem=16G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "label": "energy_equilibrium",
+          "job_id": "2768314",
+          "state": "COMPLETED",
+          "accounting": {
+            "state": "COMPLETED",
+            "elapsed_seconds": 89,
+            "allocated_cpus": 4,
+            "allocated_nodes": 1,
+            "exit_code": "0:0",
+            "alloc_tres": "billing=4,cpu=4,mem=16G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "label": "energy_complete_equilibrium",
+          "job_id": "2768318",
+          "state": "COMPLETED",
+          "accounting": {
+            "state": "COMPLETED",
+            "elapsed_seconds": 89,
+            "allocated_cpus": 4,
+            "allocated_nodes": 1,
+            "exit_code": "0:0",
+            "alloc_tres": "billing=4,cpu=4,mem=16G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "label": "energy_complete_baseline48",
+          "job_id": "2768319",
+          "state": "COMPLETED",
+          "accounting": {
+            "state": "COMPLETED",
+            "elapsed_seconds": 456,
+            "allocated_cpus": 4,
+            "allocated_nodes": 1,
+            "exit_code": "0:0",
+            "alloc_tres": "billing=4,cpu=4,mem=16G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "label": "energy_complete_perturbed48",
+          "job_id": "2768320",
+          "state": "COMPLETED",
+          "accounting": {
+            "state": "COMPLETED",
+            "elapsed_seconds": 456,
+            "allocated_cpus": 4,
+            "allocated_nodes": 1,
+            "exit_code": "0:0",
+            "alloc_tres": "billing=4,cpu=4,mem=16G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        }
+      ],
+      "builds": [
+        {
+          "report": "reports/cpu_mesh_capacity_build_20261102.json",
+          "job_id": "2768017",
+          "state": "COMPLETED",
+          "allocated_cpu_seconds": 168
+        },
+        {
+          "report": "reports/cpu_mesh_shared_anchor_build_20261102.json",
+          "job_id": "2768068",
+          "state": "COMPLETED",
+          "allocated_cpu_seconds": 34
+        },
+        {
+          "report": "reports/cpu_mesh_axis_order_build_20261102.json",
+          "job_id": "2768105",
+          "state": "COMPLETED",
+          "allocated_cpu_seconds": 32
+        },
+        {
+          "report": "reports/cpu_single_writer_build_20261102.json",
+          "job_id": "2768289",
+          "state": "COMPLETED",
+          "allocated_cpu_seconds": 38
+        },
+        {
+          "job_id": "2768304",
+          "report": "reports/cpu_energy_diagnostics_build_20261102.json",
+          "state": "FAILED",
+          "allocated_cpu_seconds": 28,
+          "accounting": {
+            "state": "FAILED",
+            "elapsed_seconds": 14,
+            "allocated_cpus": 2,
+            "allocated_nodes": 1,
+            "exit_code": "2:0",
+            "alloc_tres": "billing=2,cpu=2,mem=8G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "job_id": "2768312",
+          "report": "reports/cpu_energy_diagnostics_build_20261102.json",
+          "state": "COMPLETED",
+          "allocated_cpu_seconds": 34,
+          "accounting": {
+            "state": "COMPLETED",
+            "elapsed_seconds": 17,
+            "allocated_cpus": 2,
+            "allocated_nodes": 1,
+            "exit_code": "0:0",
+            "alloc_tres": "billing=2,cpu=2,mem=8G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        },
+        {
+          "job_id": "2768317",
+          "report": "reports/cpu_energy_partition_build_20261102.json",
+          "state": "COMPLETED",
+          "allocated_cpu_seconds": 30,
+          "accounting": {
+            "state": "COMPLETED",
+            "elapsed_seconds": 15,
+            "allocated_cpus": 2,
+            "allocated_nodes": 1,
+            "exit_code": "0:0",
+            "alloc_tres": "billing=2,cpu=2,mem=8G,node=1",
+            "partition": "dcgp_fua_dbg"
+          }
+        }
+      ],
+      "additional_record": "reports/cpu_io_continuation_20261102.json",
+      "additional_build_and_runs_cpu_core_hours": 1.1294444444444445,
+      "energy_record": "reports/cpu_energy_complete_continuation_20261102.json",
+      "energy_build_history_record": "reports/cpu_energy_diagnostics_build_20261102.json",
+      "energy_continuation_allocated_cpu_hours": 1.2366666666666666
+    },
+    "as_of_utc": "2026-11-03T17:56:00.072401+00:00",
+    "cpu_build_jobs_submitted": 9,
+    "accepted_reference_trajectories": 0,
+    "usage_scope": "Unique scheduler allocations, including failed jobs; running-job elapsed usage is provisional. Memory-weighted final billing is separate. Unrelated jobs excluded.",
+    "development_jobs_with_accounting": 78,
+    "simulation_jobs_submitted": 63,
+    "job_count_scope": "Simulation jobs include development/regression failures and exclude separately counted builds; accepted scientific reference trajectories remain zero.",
+    "cpu_refinement": {
+      "budget_record": "reports/cpu_budget_authorization_20261102.json",
+      "phase_record": "reports/cpu_refinement_continuation_20261102.json",
+      "usage_record": "reports/cpu_budget_refinement_usage_20261102.json",
+      "reserved_cpu_core_hours": 28.666666666666664,
+      "reserved_node_hours": 6.333333333333334,
+      "scientific_training_enabled": false,
+      "production_ensemble_enabled": false
+    },
+    "cached_rz_recovery": {
+      "record": "reports/cpu_cached_rz_recovery_20261103.json",
+      "budget_record": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_cached_rz_recovery_authorization_20261103.json",
+      "job_id": "2768489",
+      "requested_cpu_core_hours": 8,
+      "requested_node_hours": 2,
+      "usage_note": "One composite build/regression/probe allocation; counted once. Running elapsed usage is provisional.",
+      "scientific_training_enabled": false,
+      "production_ensemble_enabled": false
+    },
+    "mumps_recovery": {
+      "record": "reports/cpu_mumps_recovery_20261103.json",
+      "budget_record": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_mumps_recovery_authorization_20261103.json",
+      "job_id": "2769482",
+      "requested_cpu_core_hours": 8,
+      "requested_node_hours": 2,
+      "usage_note": "One composite build/regression/probe allocation; counted once. Running elapsed usage is provisional.",
+      "scientific_training_enabled": false,
+      "production_ensemble_enabled": false
+    },
+    "mumps_workspace_recovery": {
+      "record": "reports/cpu_mumps_workspace_recovery_20261103.json",
+      "budget_record": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_mumps_workspace_recovery_authorization_20261103.json",
+      "job_id": "2769505",
+      "requested_cpu_core_hours": 8,
+      "requested_node_hours": 2,
+      "usage_note": "One composite build/regression/probe allocation; counted once. Running elapsed usage is provisional.",
+      "scientific_training_enabled": false,
+      "production_ensemble_enabled": false
+    },
+    "restart_capacity_recovery": {
+      "record": "reports/cpu_restart_capacity_recovery_20261103.json",
+      "budget_record": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_restart_capacity_recovery_authorization_20261103.json",
+      "job_id": "2769623",
+      "requested_cpu_core_hours": 8,
+      "requested_node_hours": 2,
+      "usage_note": "One composite build/regression/probe allocation; counted once. Running elapsed usage is provisional.",
+      "scientific_training_enabled": false,
+      "production_ensemble_enabled": false
+    },
+    "spatial_pair": {
+      "record": "cpu_spatial_pair_20261103.json",
+      "job_ids": [
+        "2769727",
+        "2769729",
+        "2769740",
+        "2769889"
+      ],
+      "requested_cpu_core_hours_max": 18,
+      "requested_node_hours_max": 6,
+      "scientific_gates_passed": [],
+      "usage_note": "Unique allocations include two simulations and dependent analysis; running elapsed usage is provisional."
+    },
+    "spatial_next": {
+      "record": "cpu_spatial_next_20261103.json",
+      "job_ids": [
+        "2770013",
+        "2770036",
+        "2770044",
+        "2770030",
+        "2770050",
+        "2770112",
+        "2770132",
+        "2770116",
+        "2770201",
+        "2770193",
+        "2770273",
+        "2770374",
+        "2770445",
+        "2770560",
+        "2770562",
+        "2770558",
+        "2770413",
+        "2770598",
+        "2770618",
+        "2770937",
+        "2770971",
+        "2770973",
+        "2770975"
+      ],
+      "requested_cpu_core_hours_max": 192,
+      "requested_node_hours_max": 51,
+      "scientific_gates_passed": [],
+      "usage_note": "Unique allocations include separate localization and composite capacity/probe; active elapsed usage provisional."
+    }
+  },
+  "status": "prepared"
+}

@@ -1,0 +1,25 @@
+{
+  "budget": {
+    "authorization": "Current explicit diagnosis and next spatial refinement request",
+    "scope": "One zero-step native mesh-quality repair allocation, at most3 pre-frozen candidates; no invalid geometry or unqualified fields accepted.",
+    "allocations_max": 1,
+    "attempts_max": 1,
+    "nodes": 1,
+    "mpi_ranks": 4,
+    "threads": 1,
+    "memory_GiB": 128,
+    "wall_seconds": 7200,
+    "rank_CPU_hours_max": 8,
+    "node_hours_max": 2,
+    "conservative_resource_hours_max": 512,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+    "selection": "First positive native/q8 geometry <=155000: core80 wall2x equidistant, core80 original wall, core60 original wall; unchanged exterior attachment counts. No evolution used for selection.",
+    "spatial_target": 0.01,
+    "physical_coefficients_changed": false
+  },
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/radial_mesh_20261103",
+  "manifest_sha256": "91967b38e391b6d10096aaf4722d376b376a6dbdce969fee1e207b44fbda9613",
+  "controller_sha256": "1859b2f0af3bcfbd6e0b6c7967227629d62d3c860eb15631cae1b24a837a229d",
+  "script_sha256": "e8a895da9d0144ba28d62aa6b00bf66f7f57f3ffe515b9c467a4c47cf52c72a0",
+  "job_id": "2770413"
+}

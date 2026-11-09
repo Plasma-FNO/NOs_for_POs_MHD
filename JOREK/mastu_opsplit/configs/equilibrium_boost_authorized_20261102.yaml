@@ -1,0 +1,104 @@
+case_id: mastu-model303-equilibrium
+parent_family_id: mastu-equilibrium-baseline
+mode: equilibrium_regression
+jorek:
+  source: /pitagora_work/FUPB2_UKAEA_ML/vgopakum/src/jorek/src
+  executable: /pitagora_work/FUPB2_UKAEA_ML/vgopakum/src/jorek/builds/mastu_grid_303_n1/jorek_model303
+  input_directory: /pitagora_work/FUPB2_UKAEA_ML/vgopakum/src/jorek/runs/j1-check/grid_with_patches_mastu_303
+  runtime_environment: /pitagora_work/FUPB2_UKAEA_ML/vgopakum/src/jorek/jorek-env.sh
+  pinned_commit: 01a52be37576f79c785f1f7a80dee296dda5c9c8
+  executable_sha256: 7c533e0b03b5ed8f87fe3a877080e313ee2caf043c35470a87f6fbfa51ea528c
+  build_config: model=303 n_tor=1 n_coord_tor=1 l_pol_domm=0 n_plane=1 n_period=1
+    n_coord_period=1
+  toolkit_runner_revision: 14fcecb664cbb084b86051370bc415d8446e1637
+evolution:
+  nstep_n: 0
+  tstep_n: 1.0
+  nout: 1
+input_defaults:
+  central_mass: 2.01410177811
+  time_evol_scheme: Crank-Nicholson
+  eta: 1.0e-05
+  visco: 1.0e-05
+  visco_par: 1.0e-05
+  eta_T_dependent: true
+  visco_T_dependent: true
+  ZKpar_T_dependent: true
+  ZK_par: 1.0
+  ZK_par_max: 1.0e+20
+  D_par: 0.0
+  D_perp(1): 1.0e-05
+  D_perp(2): 0.0
+  D_perp(3): 0.0
+  D_perp(4): 99.0
+  D_perp(5): 99.0
+  ZK_perp(1): 1.0e-05
+  ZK_perp(2): 0.0
+  ZK_perp(3): 0.0
+  ZK_perp(4): 99.0
+  ZK_perp(5): 99.0
+  eta_num: 0.0
+  visco_num: 0.0
+  visco_par_num: 0.0
+  D_perp_num: 0.0
+  ZK_perp_num: 0.0
+  particlesource: 1.0e-05
+  particlesource_psin: 100.0
+  particlesource_sig: 0.1
+  heatsource: 1.0e-07
+  heatsource_psin: 1.0
+  heatsource_sig: 0.1
+  edgeparticlesource: 0.0
+  T_min: 1.0e-20
+  rho_min: 1.0e-20
+  T_min_neg: -1000000000000.0
+  rho_min_neg: -1000000000000.0
+  tauIC: 0.0
+  no_mach1_bc: false
+  bc_natural_open: false
+  freeboundary: false
+  freeboundary_equil: false
+  use_mumps: true
+  use_strumpack: false
+  keep_current_prof: true
+  keep_n0_const: false
+  linear_run: false
+perturbation:
+  enabled: false
+execution:
+  mpi_ranks: 1
+  omp_threads: 1
+  timeout_s: 540
+  max_attempts: 1
+  launcher:
+  - mpirun
+  - --bind-to
+  - none
+  - -n
+  require_slurm: true
+acceptance:
+  required_files:
+  - jorek_restart.h5
+  final_time_s: 0.0
+  equilibrium_regression:
+    dataset: values
+    absolute_tolerance: 0.0001
+slurm:
+  account: fupb2_ukaea_ml
+  partition: boost_fua_dbg
+  nodes: 1
+  walltime: 00:10:00
+  memory: 8G
+  python: /pitagora_work/FUPB2_UKAEA_ML/vgopakum/envs/cfo/bin/python
+resource_authorization:
+  status: approved_dual_partition_regression
+  submission_allowed: true
+  scope: one unchanged equilibrium regression in each debug partition; one attempt
+    per run; no pilot or training
+  requested_cpu_core_hours: 0.16666666666666666
+  requested_node_hours: 0.16666666666666666
+  billable_usage: scheduler/accounting dependent; not inferred from process core-hours
+  max_submissions: 1
+  approval_date: '2026-11-02'
+  approval_source: 'Explicit user reply: Run it in both partitions'
+  total_authorized_runs: 2

@@ -1,0 +1,132 @@
+{
+  "created_utc": "2026-11-02T22:14:37.111772+00:00",
+  "script_sha256": "25d5c553f121fe675f09415fc1e24c5a7c3f2f4c60e050bb2335f9ee0687e6eb",
+  "protocol_sha256": "ea1ab92f1fc1c4ffa1e9fd0f60cd691c661800e11a88ccd17596c4d9c048f92b",
+  "label": "refine_stable_parity8",
+  "job_id": "2768394",
+  "original_runner_status": "completed",
+  "original_result_preserved": true,
+  "restart_sha256": "e9436a3dd70448ffcc3e154510b8e74c662e8b57eef8023dc3b41b25bac6f54a",
+  "reference_sha256": "d0b799c39a138ffb8ba28d79af36b30556671337f6241c14b0e1fffdc63a7e9d",
+  "metadata": {
+    "time_seconds": 2.343188518713464e-07,
+    "steps": 8,
+    "quadrature_order": 8,
+    "mapping_status": "diagnostic_restart_only",
+    "expanded_nodal_dofs": 46324,
+    "canonical_native_dofs": 46203,
+    "native_dof_aliases_verified": true,
+    "minimum_signed_jacobian_m2": 6.314530488518828e-07,
+    "negative_jacobian_samples": 0,
+    "patch_ids_available": false,
+    "native_constraints_available": false
+  },
+  "raw_maximum_canonical_coefficient_difference": 0.0,
+  "positive_density_temperature_at_sampled_quadrature": true,
+  "physical_parity_targets_met": true,
+  "metrics": {
+    "field": {
+      "psi": {
+        "absolute_rms_error": 0.0,
+        "reference_rms": 0.04383493098866354,
+        "relative_l2_error": 0.0,
+        "absolute_rms_tolerance": 4.383593098866354e-08,
+        "passed": true
+      },
+      "u": {
+        "absolute_rms_error": 0.0,
+        "reference_rms": 1.0992853389236824e-05,
+        "relative_l2_error": 0.0,
+        "absolute_rms_tolerance": 1.1992853389236824e-11,
+        "passed": true
+      },
+      "zj": {
+        "absolute_rms_error": 0.0,
+        "reference_rms": 0.4665273725802755,
+        "relative_l2_error": 0.0,
+        "absolute_rms_tolerance": 4.6652837258027544e-07,
+        "passed": true
+      },
+      "w": {
+        "absolute_rms_error": 0.0,
+        "reference_rms": 0.002147163683620754,
+        "relative_l2_error": 0.0,
+        "absolute_rms_tolerance": 2.1481636836207536e-09,
+        "passed": true
+      },
+      "rho": {
+        "absolute_rms_error": 0.0,
+        "reference_rms": 0.5470197115336213,
+        "relative_l2_error": 0.0,
+        "absolute_rms_tolerance": 5.470207115336213e-07,
+        "passed": true
+      },
+      "T": {
+        "absolute_rms_error": 0.0,
+        "reference_rms": 0.006166760035207791,
+        "relative_l2_error": 0.0,
+        "absolute_rms_tolerance": 6.167760035207791e-09,
+        "passed": true
+      },
+      "Vpar": {
+        "absolute_rms_error": 0.0,
+        "reference_rms": 0.006530480841968516,
+        "relative_l2_error": 0.0,
+        "absolute_rms_tolerance": 6.531480841968516e-09,
+        "passed": true
+      }
+    },
+    "gradient": {
+      "psi": {
+        "absolute_rms_error": 0.0,
+        "reference_rms": 0.20703282931596165,
+        "relative_l2_error": 0.0,
+        "absolute_rms_tolerance": 2.0703382931596165e-07,
+        "passed": true
+      },
+      "u": {
+        "absolute_rms_error": 0.0,
+        "reference_rms": 0.00013695367486794794,
+        "relative_l2_error": 0.0,
+        "absolute_rms_tolerance": 1.3795367486794794e-10,
+        "passed": true
+      },
+      "zj": {
+        "absolute_rms_error": 0.0,
+        "reference_rms": 12.823139154431388,
+        "relative_l2_error": 0.0,
+        "absolute_rms_tolerance": 1.2823140154431386e-05,
+        "passed": true
+      },
+      "w": {
+        "absolute_rms_error": 0.0,
+        "reference_rms": 0.05037335556535655,
+        "relative_l2_error": 0.0,
+        "absolute_rms_tolerance": 5.0374355565356544e-08,
+        "passed": true
+      },
+      "rho": {
+        "absolute_rms_error": 0.0,
+        "reference_rms": 5.24712734913534,
+        "relative_l2_error": 0.0,
+        "absolute_rms_tolerance": 5.24712834913534e-06,
+        "passed": true
+      },
+      "T": {
+        "absolute_rms_error": 0.0,
+        "reference_rms": 0.02622573783224263,
+        "relative_l2_error": 0.0,
+        "absolute_rms_tolerance": 2.622673783224263e-08,
+        "passed": true
+      },
+      "Vpar": {
+        "absolute_rms_error": 0.0,
+        "reference_rms": 0.14959942462971165,
+        "relative_l2_error": 0.0,
+        "absolute_rms_tolerance": 1.4960042462971166e-07,
+        "passed": true
+      }
+    }
+  },
+  "scientific_gates_passed": []
+}

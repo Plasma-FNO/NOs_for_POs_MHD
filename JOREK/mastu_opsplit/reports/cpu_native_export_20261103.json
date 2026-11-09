@@ -1,0 +1,37 @@
+{
+  "status": "submitted",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/native_export_20261103",
+  "manifest_sha256": "9322a31f1d5ea0a02ff5604033693ac590a5b7c160ddcb02fe247f07c1814397",
+  "patch": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/patches/0016-native-selected-export.patch",
+  "patch_sha256": "51d62d6efef8b0facd3e81ad5ec9bd7e99f91ab17512be8bf84fb9b641236971",
+  "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_native_export_20261103.sbatch",
+  "script_sha256": "faa39b72ca9d25a1e000e6e6dee6588f7f32f557f139494f892d5573ded410d1",
+  "budget": {
+    "authorization": "Explicit user request to resolve remaining Gates A/B/C blockers for validated data.",
+    "scope": "One isolated build plus parent/disabled/enabled baseline eight-step restart regressions and enabled perturbed eight-step export.",
+    "allocations_max": 1,
+    "mpi_ranks": 4,
+    "threads": 1,
+    "memory_GiB": 256,
+    "wall_hours_max": 3,
+    "rank_CPU_hours_max": 12,
+    "node_hours_max": 3,
+    "conservative_resource_hours_max": 768,
+    "compiler_processes_max": 2,
+    "storage_GiB_max": 32,
+    "attempts_per_stage_max": 1,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578"
+  },
+  "scheduler_preflight": "sbatch: Job 2771171 to start at 2026-11-03T20:12:21 a using 4 processors on nodes r334c04s09 in partition dcgp_fua_prod\n",
+  "scientific_gates_passed": [],
+  "job_id": "2771172",
+  "stage_results": {
+    "parent8": {
+      "status": "failed_validation",
+      "returncode": 132,
+      "binary_sha256": "dd786f76a5c815976ad54bcd31b744ad2c3d6cafddfcc064dcae8e6761d8ccd6",
+      "scientific_gates_passed": [],
+      "error": "native solve failed or emitted unreviewed diagnostics"
+    }
+  }
+}

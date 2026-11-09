@@ -1,0 +1,32 @@
+{
+  "budget": {
+    "authorization": "Current explicit diagnosis and next-refinement request",
+    "scope": "One allocation containing at most three frozen direct native3-step probes; first healthy geometry, strict equilibrium and time evolution selected before full48-step errors.",
+    "allocations_max": 1,
+    "candidates_max": 3,
+    "attempts_each_max": 1,
+    "mpi_ranks": 4,
+    "threads": 1,
+    "memory_GiB": 256,
+    "wall_seconds": 10800,
+    "rank_CPU_hours_max": 12,
+    "node_hours_max": 3,
+    "conservative_resource_hours_max": 768,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+    "frozen_candidates": [
+      "radial80wall1eq",
+      "radial80wall1",
+      "radial60wall1"
+    ],
+    "equil_accuracy": 1e-10,
+    "amix": 0.5,
+    "spatial_target": 0.01,
+    "physics_changed": false,
+    "limitation": "Directional core radial test; original wall counts retained after doubled-wall geometry or strict-equilibrium failures."
+  },
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/radial_native_probe_20261103",
+  "manifest_sha256": "2432e5a7177149e41c7ac7916990cb0020ca0d0954821a73bb9793e20535f8b3",
+  "controller_sha256": "01415868bfcafe160d10e3a639e4bc3d8d0ee75a2ea730d1e14b8ea02a8e3ab9",
+  "script_sha256": "eb4a690d73f7029d555279247f19e46039cbbf9a4728a9361df91d51231489a1",
+  "job_id": "2770618"
+}

@@ -1,0 +1,68 @@
+{
+  "as_of_utc": "2026-11-02T22:43:02.204347+00:00",
+  "integrated_tests": {
+    "passed": 81,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "wall_seconds": 14.493,
+    "xml": "reports/cpu_budget_refinement_tests.xml",
+    "python": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/envs/cfo/bin/python"
+  },
+  "upstream_selected_tests": {
+    "deselected": 57,
+    "passed": 23,
+    "wall_seconds": 55.96
+  },
+  "upstream_tests_evidence": "Historical upstream suite; not rerun here.",
+  "scientific_gates_passed": [],
+  "validation_scope": "Software, budget-bound cap enforcement, exact four-rank state parity, confirmed native contour overflow and provisional temporal-mass audit; no accepted dataset or scientific training",
+  "source_sha256": {
+    "src/mastu_opsplit/queries.py": "b2e24b4422b94677819ed6ed642888b2451b5655d2790d3b1c3b60abb5f3b9bc",
+    "src/mastu_opsplit/surface.py": "3fb02ce91c96b552f96da5037ac0b30487de004c0c384c38cd20c6dd5a076eb1",
+    "src/mastu_opsplit/runner.py": "f6f54604659f09f18527ed762dbc35b35da4171c6806a8bb8411e376aff096ce",
+    "src/mastu_opsplit/restart.py": "830671db304963210d913ec14e202579f8252331bbedee1b6c4c4f5ec059c795",
+    "src/mastu_opsplit/numerical.py": "3c903bbfd3cf4d72bdac1978f706300d45ef6e293e7a3f3e4f53a030b40f90f3",
+    "patches/0005-model303-energy-diagnostics.patch": "36e5ec61e02bc294d5f3479534030a47e53c5ad6a12c945b52505f4e02e2018f",
+    "patches/0006-model303-partition-resistive-loss.patch": "e6efa1c72d2c3b64e7a4f2c6246fcc3e8a7f7fff68f9cf9e5337a86d86201e7b",
+    "tests/test_runner.py": "e53c7e342a975a51cca8a0531ad9aff62df19dd4fbb355d2aec88acab9b941ad",
+    "configs/resources.yaml": "ce8a656645106d1661932d244e0188596d63f512fbe04b83473b6bb5ed46f386",
+    "patches/0007-double-refinement-grid-capacity.patch": "de97d0d6c4e987cc3377c6042388d670a3b25ea8b909b402313fcaf4d8c45d1e",
+    "patches/0008-cover-intermediate-refined-grid-capacity.patch": "5ec2d0f77d4f506e1e692da8d93c2e9c11a70379ce1d655491afd932746a5e59",
+    "patches/0009-refined-flux-contour-capacity.patch": "3d7d32b1058c3e2df77f189b029b3034b910f2294d4cab9cd8fa71bafc3f01a4",
+    "reports/cpu_contour_fix_worker_source_20261102.py": "3e30c4370458ccf76e4c4809d81d4e41c31f2ec1576772daabcbf82c4b6dff2a"
+  },
+  "diagnostic_reports": {
+    "cpu_mesh_field_comparison_20261102.json": "cf03846aaee0de871de476e8f8b3ddd0747cd84b8e62df66b3077b4d8ad56a08",
+    "cpu_energy_balance_validation_20261102.json": "c3fc472d98e4af580a36fea3909ccd6292a339bc8d14610741d4b3eb08d49cc7",
+    "cpu_viscous_work_audit_20261102.json": "16f8615a7faa1e0b6e75fe5d2ff0d67cf1b54d59ea84162516b4a08962855c55",
+    "cpu_spatial_refinement_cost_20261102.json": "f3604ec8d28266c032380344c2d733ee1bd31183d69f94b81e2e382a13131273",
+    "cpu_energy_complete_continuation_20261102.json": "65aa4232383a91a416fca2ef22f5557dceb2bbaba8ddfe03370c44132db87b0d",
+    "cpu_energy_continuation_20261102.json": "d738de5c35c7e763008bd010faab0ced279ad16486a2767c974cea05cb30d597",
+    "cpu_budget_authorization_20261102.json": "48312b96fb375e14305a6cfcde70665ab2abab03e6493ad58d45cd3c1efb6103",
+    "cpu_native_parity_protocol_20261102.json": "ea1ab92f1fc1c4ffa1e9fd0f60cd691c661800e11a88ccd17596c4d9c048f92b",
+    "cpu_refine_parity8_physical_parity_20261102.json": "467c8eb4b401f77b94649108daaec095b77615413aa67541779ff229d651a52d",
+    "cpu_refine_stable_parity8_physical_parity_20261102.json": "17995717d7adc4918e88df5aa6b684bf3624e6ca1b9a77b4190c1d2f88cf299f",
+    "cpu_temporal_mass_audit_20261102.json": "988560994546818c84bf4d45f7d2ef97012dc941fc8fe24f94850b51b3087a5c"
+  },
+  "current_completed_jobs": [
+    {
+      "label": "energy_equilibrium",
+      "job_id": "2768314"
+    },
+    {
+      "label": "energy_complete_equilibrium",
+      "job_id": "2768318"
+    },
+    {
+      "label": "energy_complete_baseline48",
+      "job_id": "2768319"
+    },
+    {
+      "label": "energy_complete_perturbed48",
+      "job_id": "2768320"
+    }
+  ],
+  "resource_usage_live_record": "reports/cpu_budget_refinement_usage_20261102.json",
+  "live_refinement_phase": "reports/cpu_refinement_continuation_20261102.json"
+}

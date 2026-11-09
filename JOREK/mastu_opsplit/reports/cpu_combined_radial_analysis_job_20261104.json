@@ -1,0 +1,25 @@
+{
+  "job_id": "2772846",
+  "kind": "analysis",
+  "status": "submitted",
+  "dependencies": [
+    "2772811",
+    "2772813",
+    "2772815",
+    "2772817"
+  ],
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/combined_pair_radial320_20261104",
+  "budget": {
+    "mpi_ranks": 1,
+    "memory_GiB": 128,
+    "wall_hours_max": 1
+  },
+  "source_hashes": {
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_combined_radial_analysis_20261104.py": "c6e489e8f20f65a075b9faff0ec70b78024a0b4e3f5fe61be16e5e2fd5720beb",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_combined_radial_analysis_20261104.sbatch": "cdc82c7c2ce8bcede8a562b1e95bb4f8979075f60e1ce19f131572d05bf3ace4",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_spatial_directions_analysis_20261103.py": "c9886f3d1885afbfb06af80e6a22d9cc78626fe0684e436884697f5a4c56971d",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/src/mastu_opsplit/queries.py": "b2e24b4422b94677819ed6ed642888b2451b5655d2790d3b1c3b60abb5f3b9bc"
+  },
+  "scientific_gates_passed": [],
+  "native_attempt_started": false
+}

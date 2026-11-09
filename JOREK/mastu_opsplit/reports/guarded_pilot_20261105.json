@@ -1,0 +1,80 @@
+{
+  "job_id": "2784836",
+  "slurm_state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed": "00:17:33",
+  "tests_passed": 28,
+  "source_snapshot_verified": true,
+  "updates_per_model": 120,
+  "training_rollout_steps": 2,
+  "heldout_rollout_steps": 16,
+  "matched": [
+    "reference_data",
+    "normalization",
+    "architecture",
+    "initial_neural_weights",
+    "window_order",
+    "updates",
+    "loss",
+    "elliptic_closure",
+    "Bernstein_positivity_limiter"
+  ],
+  "normalized_volume_mse": {
+    "ar": 5.6232044963334635,
+    "node": 0.7691943617650024,
+    "opsplit": 0.7916847427119701
+  },
+  "opsplit_error_increase_vs_node_percent": 2.9238879098594683,
+  "all_predicted_cells_positive_density_temperature": true,
+  "independent_Q12_vertex_check_pass": true,
+  "max_interior_current_vorticity_relative_defect": 5.162424455117973e-13,
+  "guarded_admissibility_pass": true,
+  "limiter_interventions_out_of_64_field_updates": {
+    "ar": 15,
+    "node": 26,
+    "opsplit": 27
+  },
+  "minimum_retained_proposal_fraction": {
+    "ar": 0.38609817254301737,
+    "node": 0.8891642511421096,
+    "opsplit": 0.8853910258491563
+  },
+  "signed_curvature_coefficients_per_frame": {
+    "psi": 5.727148527512327e-05,
+    "u": -9.278012294089422e-05,
+    "zj": -0.00012930661614518613,
+    "w": -7.801597530487925e-05,
+    "rho": -4.840172914555296e-05,
+    "T": 6.221463263500482e-05,
+    "Vpar": 7.529331924160942e-05
+  },
+  "opsplit_fixed_weight_substep_squared_difference_ratios": [
+    4.0133336765218575,
+    3.9124200132267113
+  ],
+  "substep_check_window_steps": 4,
+  "reference_max_dynamic_timestep_error": 0.0032963496442470156,
+  "independent_trajectory_test": false,
+  "full_linearized_mhd_operator": false,
+  "full_conservation_validated": false,
+  "scientific_superiority_established": false,
+  "diagnosis": "Old imposed positive curvature opposed several validation increments; disabling it reduced validation rollout errors. Independent fields violated algebraic constraints. Q8-only positivity missed between-point undershoots.",
+  "fixes": [
+    "Zero-initialized signed analytic L-SplineFNO curvature branch",
+    "Shared native elliptic reconstruction of interior psi/u with fixed boundary nodal values and learned boundary derivatives",
+    "Shared whole-cell Bernstein positivity limiter anchored in the training-only mean"
+  ],
+  "limitations": [
+    "One seed and same-parent time blocks; not independent generalization",
+    "Corrections actively enforce admissibility and may damp dynamics",
+    "Bernstein positivity is sufficient and conservative",
+    "Full physical boundary conditions and MHD conservation are not established"
+  ],
+  "stopped_attempt": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_guarded_pilot_20261105/stopped.json",
+  "artifacts": {
+    "metrics": "pilot/results.json",
+    "audit": "pilot/audit.json",
+    "plot": "pilot/comparison.png",
+    "diagnosis": "diagnosis.json"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "budget": {
+    "authorization": "Explicit current diagnosis and next refinement request",
+    "scope": "One damped three-step finer probe and two matched48-step strict reference cases; conditional full-pair reservation reused.",
+    "allocations_max": 3,
+    "attempts_each_max": 1,
+    "mpi_ranks_each": 4,
+    "threads": 1,
+    "wall_seconds_each": 7200,
+    "rank_CPU_hours_max": 24,
+    "node_hours_max": 6,
+    "memory_GiB_probe": 256,
+    "memory_GiB_each_reference": 128,
+    "conservative_resource_hours_max": 1536,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+    "equil_accuracy": 1e-10,
+    "amix": 0.5
+  },
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_damped_pair_20261103",
+  "reference_works": {
+    "baseline48": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/equilibrium_damped_baseline48_20261103",
+    "perturbed48": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/equilibrium_damped_perturbed48_20261103"
+  },
+  "manifest_sha256": "1f28f3a38c7bed8726b541ec6b233f3823dca1237fe58e4dd686b335182cdb38",
+  "jobs": {
+    "probe": {
+      "job_id": "2770558",
+      "kind": "simulation",
+      "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_equilibrium_damped_probe_20261103.sbatch",
+      "script_sha256": "a4200761b3bd1e36e9e2b200c73de2596db7717b2add8125f7d4fb6a365837b5",
+      "budget_record": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_equilibrium_damping_20261103.json"
+    },
+    "baseline48": {
+      "job_id": "2770560",
+      "kind": "simulation",
+      "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_equilibrium_damped_baseline48_20261103.sbatch",
+      "script_sha256": "655ad250261a7dd350b2a44d16c9aa1a945d59001f309ff467ab4e3a393ac469",
+      "budget_record": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_equilibrium_damping_20261103.json"
+    },
+    "perturbed48": {
+      "job_id": "2770562",
+      "kind": "simulation",
+      "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_equilibrium_damped_perturbed48_20261103.sbatch",
+      "script_sha256": "17bdace6744ad41467bd2458b7a52589aa0436f65f1d3c1ad52253327dc1fea8",
+      "budget_record": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_equilibrium_damping_20261103.json"
+    }
+  }
+}

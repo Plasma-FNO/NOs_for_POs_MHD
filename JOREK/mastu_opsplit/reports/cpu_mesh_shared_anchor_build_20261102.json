@@ -1,0 +1,70 @@
+{
+  "prepared_utc": "2026-11-02T16:40:51.653418+00:00",
+  "approval_source": "Explicit user reply: Continue the study on CPU",
+  "purpose": "Propagate exact aliases of interior patch attachments after snapping; retain physical wall endpoints and the native corner guard",
+  "parent_build_report": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_mesh_capacity_build_20261102.json",
+  "parent_build_report_sha256": "66b85e2c9d97c8c90061ed6f0820fb1561c9f13d9d178c83411b26f43c7d06f0",
+  "source_commit": "01a52be37576f79c785f1f7a80dee296dda5c9c8",
+  "source_archive_sha256": "c997cf634cb8359bae61fccee6fd43b35b54e154b8c4ffeee042f207b5f950f4",
+  "initializer_patch_sha256": "0a7b0c157f01eea52d05b3088016fa356bc6a7b8b56a9c256443cae2a4676df3",
+  "shared_attachment_patch": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/patches/0002-grid-shared-patch-attachments.patch",
+  "shared_attachment_patch_sha256": "0291538c67b6a0af9f060ebca2a1d90bec70cfa6544bf0a012513a6a6b626607",
+  "source_directory": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mesh_shared_anchor_build_20261102/source",
+  "binary_path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mesh_shared_anchor_build_20261102/source/jorek_model303",
+  "script": "reports/cpu_mesh_shared_anchor_build_20261102.sbatch",
+  "script_sha256": "745390a63edd5da21143aff4f1af6e10a9c665e5f41cd42411685e2cb8bf5df8",
+  "production_source_modified": false,
+  "cpu_request": 2,
+  "memory_gb": 8,
+  "wall_minutes": 10,
+  "compiler_processes_max": 2,
+  "status": "compiled_and_linked",
+  "job_id": "2768068",
+  "scheduler_preflight": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "sbatch: Job 2768067 to start at 2026-11-02T17:40:51 a using 2 processors on nodes r331c01s01 in partition dcgp_fua_dbg\n"
+  },
+  "submission": {
+    "command": [
+      "sbatch",
+      "--parsable",
+      "--chdir",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mesh_shared_anchor_build_20261102/source",
+      "--output",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mesh_shared_anchor_build_20261102/build-%j.out",
+      "--error",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mesh_shared_anchor_build_20261102/build-%j.err",
+      "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_mesh_shared_anchor_build_20261102.sbatch"
+    ],
+    "returncode": 0,
+    "stdout": "2768068\n",
+    "stderr": "",
+    "utc": "2026-11-02T16:40:51.675606+00:00"
+  },
+  "scheduler_partition_override": {
+    "command": [
+      "scontrol",
+      "update",
+      "JobId=2768068",
+      "Partition=dcgp_fua_dbg,dcgp_fua_prod"
+    ],
+    "utc": "2026-11-02T16:42:28.897969+00:00",
+    "reason": "Allow either CPU queue on the same approved FAUNA account with unchanged resource caps; one execution only."
+  },
+  "completed_utc": "2026-11-02T16:46:34.170516+00:00",
+  "binary_sha256": "829159ec05e50499f8ecf39e00ca9299552db7e245977549040ff155a4253828",
+  "binary_bytes": 7630424,
+  "changed_fortran_files_from_capacity_build": [
+    "grids/grid_utils/define_extension_patch.f90"
+  ],
+  "linked_shared_attachment_helper": true,
+  "accounting": {
+    "elapsed_seconds": 17,
+    "allocated_cpus": 2,
+    "allocated_nodes": 1,
+    "exit_code": "0:0",
+    "alloc_tres": "billing=2,cpu=2,mem=8G,node=1",
+    "partition": "dcgp_fua_dbg"
+  }
+}

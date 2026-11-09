@@ -1,0 +1,15 @@
+{
+  "status": "failed_analysis",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/combined_mpi16_20261104",
+  "dependencies": [
+    "2772930",
+    "2772932"
+  ],
+  "script_sha256": "597d6e9d227f5a420c43c084e2b768251ba77d9034b04b6ac9670ae598e923d6",
+  "analysis_source_sha256": "c9331de50b6ad069b60ecbf4b696653b178cdb6f734844fb0cda01b23114536d",
+  "scientific_gates_passed": [],
+  "job_id": "2772939",
+  "error": "Initial snapshots intentionally omit xtime and energies; old helper assumes evolved schema. Native runs completed.",
+  "kind": "analysis",
+  "native_attempt_started": false
+}

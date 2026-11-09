@@ -1,0 +1,263 @@
+{
+  "status": "completed",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/scaling8_mpi4_poloidal880_20261104",
+  "binary_sha256": "80304f3243d2a803815435e87a124e779e354ab77cd7828c52c7eb888a787cb6",
+  "manifest_sha256": "f777d22efbac496c30dcecf0ba2903627fc2d586e294dc654b1d0e1d95a20629",
+  "script_sha256": "4ec311ce6ad332b7afeb2cf36ad432427276247f0586f169eacb4f962b9c43e6",
+  "budget": {
+    "mpi_ranks": 4,
+    "memory_GiB": 512,
+    "wall_hours_max": 2,
+    "rank_CPU_hours_max": 8,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4240119       4240119            13.8       2531868               2430"
+  },
+  "job_id": "2773236",
+  "scientific_gates_passed": [],
+  "stage_results": {
+    "replay1": {
+      "stage": "replay1",
+      "status": "completed",
+      "returncode": 0,
+      "process_wall_seconds": 393.7775976760313,
+      "binary_sha256": "80304f3243d2a803815435e87a124e779e354ab77cd7828c52c7eb888a787cb6",
+      "scientific_gates_passed": [],
+      "initial": {
+        "health": {
+          "steps": 0,
+          "final_time_s": 0.0,
+          "restart_sha256": "3dd06e24d97f65a55a225dd835761343a4aa435680dc5e1aa8469cd92a37ced4"
+        },
+        "metadata": {
+          "time_seconds": 0.0,
+          "steps": 0,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 637328,
+          "canonical_native_dofs": 636437,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 4.782998760814461e-09,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 61,
+        "minimum_density": 0.00999999999999999,
+        "minimum_temperature": 9.999999999999996e-05,
+        "restart_sha256": "3dd06e24d97f65a55a225dd835761343a4aa435680dc5e1aa8469cd92a37ced4"
+      },
+      "final": {
+        "health": {
+          "steps": 1,
+          "final_time_s": 2.92898564839183e-08,
+          "restart_sha256": "3cb7fc52ba74e0b032b64d698b933c38e00a15daa6ba0c4592f70ccdf9fbf398"
+        },
+        "metadata": {
+          "time_seconds": 2.92898564839183e-08,
+          "steps": 1,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 637328,
+          "canonical_native_dofs": 636437,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 4.782998760814461e-09,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 131,
+        "minimum_density": 0.00928064361670429,
+        "minimum_temperature": 9.896697554942385e-05,
+        "restart_sha256": "3cb7fc52ba74e0b032b64d698b933c38e00a15daa6ba0c4592f70ccdf9fbf398"
+      },
+      "initial_parity": {
+        "exact_reference_arrays": {
+          "x": true,
+          "values": true,
+          "vertex": true,
+          "size": true,
+          "boundary": true,
+          "constrained": true,
+          "n_sons": true,
+          "t_now": true,
+          "index_now": true
+        },
+        "passed": true,
+        "metrics": {
+          "field": {
+            "absolute_rms_errors": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "reference_rms": [
+              0.043831803093750385,
+              0.0,
+              0.46632397907622075,
+              0.0,
+              0.5470521940126061,
+              0.006163667380818634,
+              0.0
+            ],
+            "tolerances": [
+              4.383280309375039e-08,
+              1e-12,
+              4.663249790762207e-07,
+              1e-12,
+              5.47053194012606e-07,
+              6.164667380818634e-09,
+              1e-12
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "gradient": {
+            "absolute_rms_errors": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "reference_rms": [
+              0.2069481653207233,
+              0.0,
+              12.821780118252162,
+              0.0,
+              5.584971371892692,
+              0.02781668416128105,
+              0.0
+            ],
+            "tolerances": [
+              2.0694916532072328e-07,
+              1e-12,
+              1.2821781118252162e-05,
+              1e-12,
+              5.584972371892692e-06,
+              2.781768416128105e-08,
+              1e-12
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          }
+        },
+        "snapshot_kind": "initial"
+      },
+      "parity": {
+        "exact_reference_arrays": {
+          "x": true,
+          "values": false,
+          "vertex": true,
+          "size": true,
+          "boundary": true,
+          "constrained": true,
+          "n_sons": true,
+          "t_now": true,
+          "index_now": true,
+          "xtime": true,
+          "energies": false
+        },
+        "passed": true,
+        "metrics": {
+          "field": {
+            "absolute_rms_errors": [
+              1.9369771612040563e-19,
+              6.497935562043171e-19,
+              2.0337148514925267e-16,
+              1.894560807089528e-16,
+              3.0221294049244196e-18,
+              8.293485889083473e-20,
+              4.284395563228498e-18
+            ],
+            "reference_rms": [
+              0.04383180210196932,
+              3.7172441578159915e-06,
+              0.46632405911292757,
+              0.0007468052859815589,
+              0.5470172990546961,
+              0.006163686398946159,
+              0.0032100703854498415
+            ],
+            "tolerances": [
+              4.3832802101969316e-08,
+              4.7172441578159914e-12,
+              4.6632505911292754e-07,
+              7.478052859815588e-10,
+              5.470182990546961e-07,
+              6.164686398946159e-09,
+              3.211070385449841e-09
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "gradient": {
+            "absolute_rms_errors": [
+              1.1043063281416554e-16,
+              2.4603043220525307e-18,
+              4.006120582057451e-12,
+              7.437535971513169e-13,
+              6.7694244227425154e-15,
+              8.134581039873009e-17,
+              1.6103633916197975e-15
+            ],
+            "reference_rms": [
+              0.20694814562851693,
+              4.564654209293191e-05,
+              12.821711272167116,
+              0.016005750817791427,
+              5.532624549159847,
+              0.027492829916717625,
+              0.2816699737032375
+            ],
+            "tolerances": [
+              2.0694914562851693e-07,
+              4.664654209293191e-11,
+              1.2821712272167115e-05,
+              1.6006750817791426e-08,
+              5.5326255491598466e-06,
+              2.7493829916717626e-08,
+              2.8167097370323745e-07
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          }
+        },
+        "snapshot_kind": "evolved"
+      },
+      "workspace_retries": 0
+    }
+  }
+}

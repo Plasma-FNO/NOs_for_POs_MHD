@@ -1,0 +1,127 @@
+{
+  "scope": "Diagnostic comparison using stored native increments instead of subtracting rounded fields. Every non-axis field update and alias verified exactly.",
+  "script_sha256": "9e7105f6c91796a5b0cee1348ee24764b0eb8cefe48d1155f285936526120d9f",
+  "scientific_gates_passed": [],
+  "cases": {
+    "enabled8": {
+      "status": "interior_linearized_balance_failed",
+      "before_sha256": "103f55bd387500664b52dffdaf148b9e7ffed460eb808f478038bd8e2eac4d29",
+      "after_sha256": "5daeafc26027dd907431b7f24481c5d7d822ad6b75b446f8afebf6b6ff4504b7",
+      "time_interval_s": 2.9289856483918314e-08,
+      "included_native_dofs_per_equation": 212862,
+      "excluded_native_dofs_per_equation": 10055,
+      "metrics": {
+        "psi": {
+          "absolute_l2_residual": 5.452827820393859e-14,
+          "component_l2_scale": 4.958092636542676e-08,
+          "component_relative_residual": 1.0997833683471002e-06,
+          "target_met": true
+        },
+        "u": {
+          "absolute_l2_residual": 6.321336191923923e-11,
+          "component_l2_scale": 4.064249448826911e-06,
+          "component_relative_residual": 1.5553514299543028e-05,
+          "target_met": false
+        },
+        "zj": {
+          "absolute_l2_residual": 2.1484247720996326e-10,
+          "component_l2_scale": 9.389725855836718e-10,
+          "component_relative_residual": 0.22880591031996497,
+          "target_met": false
+        },
+        "w": {
+          "absolute_l2_residual": 5.863845387231499e-12,
+          "component_l2_scale": 2.050328797982864e-10,
+          "component_relative_residual": 0.028599536781614806,
+          "target_met": false
+        },
+        "rho": {
+          "absolute_l2_residual": 5.517418782084027e-14,
+          "component_l2_scale": 2.9031216304748368e-05,
+          "component_relative_residual": 1.900512442939428e-09,
+          "target_met": true
+        },
+        "T": {
+          "absolute_l2_residual": 4.288721355182799e-12,
+          "component_l2_scale": 8.43668323320736e-08,
+          "component_relative_residual": 5.083421098829573e-05,
+          "target_met": false
+        },
+        "Vpar": {
+          "absolute_l2_residual": 1.136998639581758e-12,
+          "component_l2_scale": 2.90908996335641e-07,
+          "component_relative_residual": 3.908434094179498e-06,
+          "target_met": false
+        }
+      },
+      "rtol": 1e-08,
+      "atol": 1e-12,
+      "scientific_gates_passed": [],
+      "limitations": [
+        "Boundary elements and every axis-touching element are excluded conservatively.",
+        "An algebraic linear-system balance does not establish physical energy/source/flux balance.",
+        "This check does not supply an autonomous retained evaluator or adjoint."
+      ]
+    },
+    "perturbed8": {
+      "status": "interior_linearized_balance_failed",
+      "before_sha256": "3721789d22b7544331f1d7e582689f4e97a88f7a801384664ef4dde762f5f3fb",
+      "after_sha256": "334e6812e929af1a4539cf36d8a5fcceee7364e9b47c1b41c9eb556a801274c5",
+      "time_interval_s": 2.9289856483918314e-08,
+      "included_native_dofs_per_equation": 212862,
+      "excluded_native_dofs_per_equation": 10055,
+      "metrics": {
+        "psi": {
+          "absolute_l2_residual": 1.2248747543209332e-13,
+          "component_l2_scale": 3.375352879594851e-07,
+          "component_relative_residual": 3.628879106909725e-07,
+          "target_met": true
+        },
+        "u": {
+          "absolute_l2_residual": 5.756078353057751e-10,
+          "component_l2_scale": 2.492742654422528e-05,
+          "component_relative_residual": 2.3091346163814938e-05,
+          "target_met": false
+        },
+        "zj": {
+          "absolute_l2_residual": 3.3445506072127814e-10,
+          "component_l2_scale": 6.39011078122791e-10,
+          "component_relative_residual": 0.5233947769791402,
+          "target_met": false
+        },
+        "w": {
+          "absolute_l2_residual": 1.036190543725606e-10,
+          "component_l2_scale": 3.0874250230915293e-10,
+          "component_relative_residual": 0.3356164233870327,
+          "target_met": false
+        },
+        "rho": {
+          "absolute_l2_residual": 5.853443473326242e-14,
+          "component_l2_scale": 2.936956346879001e-05,
+          "component_relative_residual": 1.9930304648710516e-09,
+          "target_met": true
+        },
+        "T": {
+          "absolute_l2_residual": 6.108685547829324e-12,
+          "component_l2_scale": 4.080325440931018e-07,
+          "component_relative_residual": 1.4971074332824517e-05,
+          "target_met": false
+        },
+        "Vpar": {
+          "absolute_l2_residual": 1.418858873688961e-12,
+          "component_l2_scale": 1.0483876840233533e-06,
+          "component_relative_residual": 1.3533723214334853e-06,
+          "target_met": false
+        }
+      },
+      "rtol": 1e-08,
+      "atol": 1e-12,
+      "scientific_gates_passed": [],
+      "limitations": [
+        "Boundary elements and every axis-touching element are excluded conservatively.",
+        "An algebraic linear-system balance does not establish physical energy/source/flux balance.",
+        "This check does not supply an autonomous retained evaluator or adjoint."
+      ]
+    }
+  }
+}

@@ -1,0 +1,5891 @@
+{
+  "files": [
+    {
+      "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/native_bridge_20261103/enabled8/opsplit-native-rank-000000.bin",
+      "records": 13999,
+      "minimum_id": 1,
+      "maximum_id": 26449,
+      "unique": 13999
+    },
+    {
+      "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/native_bridge_20261103/enabled8/opsplit-native-rank-000001.bin",
+      "records": 14286,
+      "minimum_id": 13764,
+      "maximum_id": 50955,
+      "unique": 14286
+    },
+    {
+      "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/native_bridge_20261103/enabled8/opsplit-native-rank-000002.bin",
+      "records": 14010,
+      "minimum_id": 27463,
+      "maximum_id": 44019,
+      "unique": 14010
+    },
+    {
+      "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/native_bridge_20261103/enabled8/opsplit-native-rank-000003.bin",
+      "records": 13816,
+      "minimum_id": 41320,
+      "maximum_id": 55135,
+      "unique": 13816
+    }
+  ],
+  "unique_elements": 55135,
+  "duplicates": [
+    {
+      "element": 13764,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13765,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13766,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13767,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13768,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13769,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13770,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13771,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13772,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13773,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13774,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13775,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13776,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13777,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13778,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13779,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13780,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13781,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13782,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13783,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13784,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13785,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13786,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13787,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13788,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13789,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13790,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13791,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13792,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13793,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13794,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13795,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13796,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13797,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13798,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13799,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13800,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13801,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13802,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13803,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13804,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13805,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13806,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13807,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13808,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13809,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13810,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13811,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13812,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13813,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13814,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13815,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13816,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13817,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13818,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13819,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13820,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13821,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13822,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13823,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13824,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13825,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13826,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13827,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13828,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13829,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13830,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13831,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13832,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13833,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13834,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13835,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13836,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13837,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13838,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13839,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13840,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13841,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13842,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13843,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13844,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13845,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13846,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13847,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13848,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13849,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13850,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13851,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13852,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13853,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13854,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13855,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13856,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13857,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13858,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13859,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13860,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13861,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13862,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13863,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13864,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13865,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13866,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13867,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13868,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13869,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13870,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13871,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13872,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13873,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13874,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13875,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13876,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13877,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13878,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13879,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13880,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13881,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13882,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13883,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13884,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13885,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13886,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13887,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13888,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13889,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13890,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13891,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13892,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13893,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13894,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13895,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13896,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13897,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13898,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13899,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13900,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13901,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13902,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13903,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13904,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13905,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13906,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13907,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13908,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13909,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13910,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13911,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13912,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13913,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13914,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13915,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13916,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13917,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13918,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13919,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13920,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13921,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13922,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13923,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13924,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13925,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13926,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13927,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13928,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13929,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13930,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13931,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13932,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13933,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13934,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13935,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13936,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13937,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13938,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13939,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13940,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13941,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13942,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13943,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13944,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13945,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13946,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13947,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13948,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13949,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13950,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13951,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13952,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13953,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13954,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13955,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13956,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13957,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13958,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13959,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13960,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13961,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13962,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13963,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13964,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13965,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13966,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13967,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13968,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13969,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13970,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13971,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13972,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13973,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13974,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13975,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13976,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13977,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13978,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13979,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13980,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13981,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 13982,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 14170,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 17223,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 17352,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 17353,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 17440,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 17441,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 17570,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 21601,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 21688,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 22382,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 22393,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 23034,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 23113,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 25718,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 25729,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 26370,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 26449,
+      "first_rank_file": "opsplit-native-rank-000000.bin",
+      "second_rank_file": "opsplit-native-rank-000001.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27463,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27464,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27465,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27466,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27467,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27468,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27469,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27470,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27471,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27472,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27473,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27474,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27475,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27476,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27477,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27478,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27479,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27480,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27481,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27482,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27483,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27484,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27485,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27486,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27487,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27488,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27489,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27490,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27491,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27492,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27493,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27494,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27495,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27496,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27497,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27498,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27499,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27500,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27501,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27502,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27503,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27504,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27505,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27506,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27507,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27508,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27509,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27510,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27511,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27512,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27513,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27514,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27515,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27516,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27517,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27518,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27519,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27520,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27521,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27522,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27523,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27524,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27525,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27526,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27527,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27528,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27529,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27530,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27531,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27532,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27533,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27534,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27535,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27536,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27537,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27538,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27539,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27540,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27541,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27542,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27543,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27555,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27634,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27713,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27792,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27871,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 27950,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28029,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28108,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28187,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28266,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28345,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28424,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28503,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28582,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28661,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28740,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28819,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28898,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28977,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28978,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28979,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28980,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28981,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28982,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28983,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28984,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28985,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28986,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28987,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28988,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28989,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28990,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28991,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28992,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28993,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28994,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28995,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28996,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28997,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28998,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 28999,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29000,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29001,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29002,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29003,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29004,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29005,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29006,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29007,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29008,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29009,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29010,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29011,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29012,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29013,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29014,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29015,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29016,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29017,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29018,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29019,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29020,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29021,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29022,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29023,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29024,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29025,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29026,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29027,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29028,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29029,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29030,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 29031,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31122,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31123,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31124,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31125,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31126,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31127,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31128,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31129,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31130,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31131,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31132,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31133,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31134,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31135,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31136,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31137,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31138,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31139,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31140,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31141,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31142,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31143,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31144,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31145,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31146,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31147,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31148,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31149,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31150,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31151,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31152,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31153,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31154,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31155,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31156,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31157,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31158,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31159,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31160,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31161,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31162,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31163,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31164,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31165,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31166,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31167,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31168,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 31169,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 32994,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 32995,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 32996,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 32997,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 32998,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 32999,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33000,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33001,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33002,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33003,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33004,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33005,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33006,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33007,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33008,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33009,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33010,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33011,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33012,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33013,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33014,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33015,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33016,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33017,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33018,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33019,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33020,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33021,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33022,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33023,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33024,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33025,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33026,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33027,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33028,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33029,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33030,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33031,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33032,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33033,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33034,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33035,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33036,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33037,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33038,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33039,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33040,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33041,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33042,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33043,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33044,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33045,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33046,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33047,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33048,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33049,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33050,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33051,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33052,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33053,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33054,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33055,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33056,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33057,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33058,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33059,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33060,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33061,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33062,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33063,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33064,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33065,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33066,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33067,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33068,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33069,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33070,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33071,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33072,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33073,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33074,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 33075,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 39144,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 39145,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 39146,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 39147,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 39148,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 39149,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 39150,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 39151,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 39152,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 39153,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 39154,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 39155,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 39156,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 39157,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 39158,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 39159,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 39160,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 39161,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 39162,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 39163,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 39164,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 39165,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 39166,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 39167,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 39168,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000002.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41320,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41321,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41322,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41323,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41324,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41325,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41326,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41327,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41328,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41329,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41330,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41331,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41332,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41333,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41334,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41335,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41336,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41337,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41338,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41339,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41340,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41341,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41342,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41343,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41344,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41345,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41346,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41347,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41348,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41349,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41350,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41351,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41352,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41353,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41354,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41355,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41356,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41357,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41358,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41359,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41360,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41361,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41362,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41363,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41364,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41365,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41366,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41367,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41368,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41369,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41400,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41448,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41496,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41544,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41545,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41546,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41547,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41548,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41549,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41550,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41551,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41552,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41553,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41554,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41555,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41556,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41557,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41558,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41559,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41560,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41561,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41562,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41563,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41564,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41565,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41566,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41567,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41568,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41569,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41570,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41571,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41572,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41573,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41574,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41575,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41576,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41577,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41578,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41579,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41580,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41581,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41582,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41583,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41584,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41585,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41586,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41587,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41588,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41589,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41590,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41591,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41592,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41593,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41594,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41595,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41596,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41597,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41598,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41599,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41654,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41709,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41764,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41819,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41874,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41929,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 41984,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 42039,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 42094,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 42149,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 42204,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 42259,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 42314,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 42369,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 42424,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 42479,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 42534,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 42589,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 42644,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 42699,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 42754,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 42809,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 42864,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 42919,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 42974,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 43029,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 43084,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 43139,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 43194,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 43249,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 43304,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 43359,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 43414,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 43469,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 43524,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 43579,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 43634,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 43689,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 43744,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 43799,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 43854,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 43909,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 43964,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 44019,
+      "first_rank_file": "opsplit-native-rank-000002.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 44294,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 44295,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 44296,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 44297,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 44298,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 44299,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 44300,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 44301,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 44302,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 44303,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 44304,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 44305,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 44306,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 44307,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 44308,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 44309,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 44310,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 44311,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 44312,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 44313,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 44314,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 45113,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 45114,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 45115,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 45116,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 45117,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 45118,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 45119,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 45120,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 45121,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 45122,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 45123,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 45124,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 45125,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 45126,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 45127,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 45128,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 45129,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 45130,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 45131,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 45132,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 45133,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 45134,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 45135,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 45136,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 45137,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 45138,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 45139,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 45140,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 45141,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46244,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46245,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46246,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46247,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46248,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46249,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46250,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46251,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46252,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46253,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46254,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46255,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46256,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46257,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46258,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46259,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46260,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46261,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46262,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46263,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46264,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46265,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46266,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46267,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46268,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46269,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46270,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46271,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46272,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46273,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46274,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46275,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46276,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 46277,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 47570,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 47571,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 47572,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 47573,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 47574,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 47575,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 47576,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 47577,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 47578,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 47579,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 47580,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 47581,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 47582,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 47583,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 47584,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 47585,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 47586,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 47587,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 47588,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 47589,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 47590,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48389,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48390,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48391,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48392,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48393,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48394,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48395,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48396,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48397,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48398,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48399,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48400,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48401,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48402,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48403,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48404,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48405,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48406,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48407,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48408,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48409,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48410,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48411,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48412,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48413,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48414,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48415,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48416,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48417,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48418,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48419,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48420,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48421,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48422,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48423,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48424,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48425,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48426,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48427,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48428,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48429,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48430,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48431,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48432,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48433,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48434,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48435,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48436,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48437,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48438,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48439,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48440,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48441,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48442,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48443,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48444,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48445,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48446,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48447,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48448,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48449,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48450,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 48451,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50846,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50847,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50848,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50849,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50850,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50851,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50852,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50853,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50854,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50855,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50856,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50857,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50858,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50859,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50860,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50861,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50862,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50863,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50864,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50865,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50866,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50867,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50868,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50869,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50870,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50871,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50872,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50873,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50874,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50875,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50876,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50877,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50878,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50879,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50880,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50881,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50882,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50883,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50884,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50885,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50886,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50887,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50888,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50889,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50890,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50891,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50892,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50893,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50894,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50895,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50896,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50897,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50898,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50899,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50900,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50901,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50902,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50903,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50904,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50905,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50906,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50907,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50908,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50909,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50910,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50911,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50912,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50913,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50914,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50915,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50916,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50917,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50918,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50919,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50920,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50921,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50922,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50923,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50924,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50925,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50926,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50927,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50928,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50929,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50930,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50931,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50932,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50933,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50934,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50935,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50936,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50937,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50938,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50939,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50940,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50941,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50942,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50943,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50944,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50945,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50946,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50947,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50948,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50949,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50950,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50951,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50952,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50953,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50954,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    },
+    {
+      "element": 50955,
+      "first_rank_file": "opsplit-native-rank-000001.bin",
+      "second_rank_file": "opsplit-native-rank-000003.bin",
+      "all_record_bytes_identical": true
+    }
+  ]
+}

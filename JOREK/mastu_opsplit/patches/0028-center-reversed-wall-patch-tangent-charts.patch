@@ -1,0 +1,73 @@
+--- a/grids/grid_utils/define_extension_patch.f90
++++ b/grids/grid_utils/define_extension_patch.f90
+@@ -1704,6 +1704,11 @@
+   enddo
+ enddo
+ newnode_list%n_nodes = index
++! Center interior tangents only when an incoming chart reverses against its next chord.
++! Patch boundary nodes and every coordinate stay unchanged; finish_grid rebuilds chart sizes.
++call opsplit_center_patch_tangents(newnode_list,n_start,n_seg,n_nodes,R_seg,Z_seg, &
++  any(element_direction == [3,4,7,8]))
++
+ 
+ 
+ !----------------------------------- Print a python file that plots a cross with the 4 nodes of each element
+@@ -1954,3 +1959,58 @@
+     endif
+   enddo
+ end subroutine opsplit_share_patch_attachment
++
++! Repair inconsistent interior tangent charts; retain every patch boundary node.
++subroutine opsplit_center_patch_tangents(nodes,n_start,n_seg,n_nodes,R,Z,s_side)
++  use data_structure, only: type_node_list
++  use, intrinsic :: ieee_arithmetic, only: ieee_is_finite
++  implicit none
++  type(type_node_list), intent(inout) :: nodes
++  integer, intent(in) :: n_start,n_seg,n_nodes
++  real*8, intent(in) :: R(n_seg,n_nodes),Z(n_seg,n_nodes)
++  logical, intent(in) :: s_side
++  integer :: i,j,d,k,axis,dof(2)
++  real*8 :: incoming(2),outgoing(2),old(2),average(2),ni,no,na
++  real*8, allocatable :: candidate(:,:,:,:)
++  logical :: reversed
++  if (min(n_seg,n_nodes) < 3) return
++  dof=[3,2]
++  if (s_side) dof=[2,3]
++  allocate(candidate(2,2,n_seg,n_nodes))
++  reversed=.false.
++  do i=2,n_seg-1
++    do j=2,n_nodes-1
++      k=n_start+(i-1)*n_nodes+j
++      do axis=1,2
++        d=dof(axis)
++        if (axis == 1) then
++          incoming=[R(i,j)-R(i-1,j),Z(i,j)-Z(i-1,j)]
++          outgoing=[R(i+1,j)-R(i,j),Z(i+1,j)-Z(i,j)]
++        else
++          incoming=[R(i,j)-R(i,j-1),Z(i,j)-Z(i,j-1)]
++          outgoing=[R(i,j+1)-R(i,j),Z(i,j+1)-Z(i,j)]
++        endif
++        old=nodes%node(k)%x(1,d,:)
++        if (.not. all(ieee_is_finite([incoming,outgoing,old]))) return
++        ni=sqrt(sum(incoming**2));no=sqrt(sum(outgoing**2))
++        if (min(ni,no) <= tiny(ni)) return
++        incoming=incoming/ni;outgoing=outgoing/no
++        average=incoming+outgoing;na=sqrt(sum(average**2))
++        if (na <= 64*epsilon(na)) return
++        average=average/na
++        if (dot_product(old,average) < 0.d0) average=-average
++        candidate(:,axis,i,j)=average
++        if (dot_product(old,incoming)*dot_product(old,outgoing) < 0.d0) reversed=.true.
++      enddo
++    enddo
++  enddo
++  if (.not. reversed) return
++  do i=2,n_seg-1
++    do j=2,n_nodes-1
++      k=n_start+(i-1)*n_nodes+j
++      do axis=1,2
++        nodes%node(k)%x(1,dof(axis),:)=candidate(:,axis,i,j)
++      enddo
++    enddo
++  enddo
++end subroutine opsplit_center_patch_tangents

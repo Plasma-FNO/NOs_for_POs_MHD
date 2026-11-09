@@ -1,0 +1,16 @@
+{
+  "account": "fupa2_fauna",
+  "as_of_utc": "2026-11-02T16:08:11.108917+00:00",
+  "build_report_sha256": "d104c269bd2448834643559a28d43468ee57916e4949143af0a3a3e5b6cf1781",
+  "default_amplitude_equivalence_passed": true,
+  "enabled_perturbation_validated": false,
+  "gate_A_passed": false,
+  "job_id": "2767771",
+  "maximum_absolute_values_difference": 0.0,
+  "mpi_ranks": 1,
+  "multi_rank_broadcast_validated": false,
+  "native_geometry_identical": true,
+  "original_restart_sha256": "2d066b56bc0f1aa4d6b1e8eff22aa3a008a1917825ea9d218a9bc1f78e517224",
+  "partition": "dcgp_fua_dbg",
+  "patched_restart_sha256": "c3cd48d34259d702b2f2916a3bb7c2ba42c3a048c94534fb63df698124a0c4bd"
+}

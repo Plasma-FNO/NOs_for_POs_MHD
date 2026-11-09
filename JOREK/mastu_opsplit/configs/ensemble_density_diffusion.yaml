@@ -1,0 +1,27 @@
+# Opt-in baseline training for physical coefficient-OOD evaluation. Not launched automatically.
+manifest: /pitagora_scratch/userexternal/vgopakum/mastu_euler_ensemble100_20261105/manifest.json
+manifest_sha256: f0f0f56c611c9f9d48081d4a611bfa44a0709e5cf4b691fc219c69396c81b87c
+source_split_counts: {train: 60, validation: 20, test: 20}
+split_counts: {train: 80, validation: 0, test: 20}
+seed: 17
+threads: 2
+steps: 2000
+horizon: 4
+stride: 1
+batch_size: 1
+learning_rate: 0.001
+physical_guard: true
+positivity_basis: bernstein_subdivided
+positivity_penalty: 0.001
+linear_branch: lspline_continuity
+gamma: 1.6666666666666667
+architecture:
+  grid_shape: [16, 32]
+  modes: 4
+  width: 8
+  n_layers: 2
+evaluation_horizons: [16, 32, 96]
+evaluation_substeps: [1, 2, 4]
+diagnostic_only: false
+
+coefficient_split: density_diffusion

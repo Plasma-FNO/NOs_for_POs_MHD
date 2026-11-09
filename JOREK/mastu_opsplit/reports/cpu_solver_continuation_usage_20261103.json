@@ -1,0 +1,1247 @@
+{
+  "ledger_before": {
+    "actual_hpc_cpu_core_hours": 55.084999999999994,
+    "actual_hpc_node_hours": 14.139444444444443,
+    "development_jobs_with_accounting": 78,
+    "simulation_jobs_submitted": 63,
+    "scientific_jobs_submitted": 63
+  },
+  "as_of_utc": "2026-11-04T16:06:07.592278+00:00",
+  "jobs": {
+    "2771312": {
+      "kind": "analysis",
+      "record": "cpu_newton_equilibrium_comparison_20261103.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 31,
+        "allocated_cpus": 1,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771301": {
+      "kind": "simulation",
+      "record": "cpu_polar_grid_diagnosis_20261103.json",
+      "accounting": {
+        "state": "FAILED",
+        "elapsed_seconds": 406,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "1:0"
+      }
+    },
+    "2773106": {
+      "kind": "simulation",
+      "record": "cpu_poloidal880_dt1_20261104.json",
+      "accounting": {
+        "state": "FAILED",
+        "elapsed_seconds": 217,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "1:0"
+      }
+    },
+    "2772898": {
+      "kind": "analysis",
+      "record": "cpu_combined_wall_coverage_job_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 86,
+        "allocated_cpus": 1,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2772874": {
+      "kind": "simulation",
+      "record": "cpu_combined_pair_control80_perturbed48_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 3719,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771571": {
+      "kind": "analysis",
+      "record": "cpu_combined_refined_qualification_job_20261103.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 20,
+        "allocated_cpus": 1,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771235": {
+      "kind": "simulation",
+      "record": "cpu_native_bridge_20261103.json",
+      "accounting": {
+        "state": "FAILED",
+        "elapsed_seconds": 2157,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "1:0"
+      }
+    },
+    "2773195": {
+      "kind": "simulation",
+      "record": "cpu_combined_balanced2_attachment_20261104.json",
+      "accounting": {
+        "state": "FAILED",
+        "elapsed_seconds": 1815,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "1:0"
+      }
+    },
+    "2772817": {
+      "kind": "simulation",
+      "record": "cpu_combined_pair_radial320_perturbed48_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 12499,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2774854": {
+      "kind": "simulation",
+      "record": "cpu_corner_handle_pair_wall160_baseline48_20261104.json",
+      "accounting": {
+        "state": "RUNNING",
+        "elapsed_seconds": 645,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2773412": {
+      "kind": "simulation",
+      "record": "cpu_corner_handle_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 1455,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2772932": {
+      "kind": "simulation",
+      "record": "cpu_combined_mpi4_parity_job_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 492,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2774874": {
+      "kind": "simulation",
+      "record": "cpu_xpoint_handle_pair_divertor160_baseline48_20261104.json",
+      "accounting": {
+        "state": "RUNNING",
+        "elapsed_seconds": 440,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2773389": {
+      "kind": "simulation",
+      "record": "cpu_scaling8_pair_poloidal880_perturbed48_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 6587,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2774876": {
+      "kind": "simulation",
+      "record": "cpu_xpoint_handle_pair_divertor160_perturbed48_20261104.json",
+      "accounting": {
+        "state": "RUNNING",
+        "elapsed_seconds": 440,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2772893": {
+      "kind": "analysis",
+      "record": "cpu_combined_core_poloidal_analysis_job_20261104.json",
+      "accounting": {
+        "state": "CANCELLED by 34213",
+        "elapsed_seconds": 0,
+        "allocated_cpus": 0,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771430": {
+      "kind": "simulation",
+      "record": "cpu_exact_pair_core_poloidal440_perturbed48_20261103.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 7809,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771333": {
+      "kind": "simulation",
+      "record": "cpu_newton_damped_wall_20261103.json",
+      "accounting": {
+        "state": "CANCELLED by 34213",
+        "elapsed_seconds": 1112,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2774910": {
+      "kind": "simulation",
+      "record": "cpu_scaling8_capacity400_pair_poloidal880_perturbed48_20261104.json",
+      "accounting": {
+        "state": "RUNNING",
+        "elapsed_seconds": 9,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2773188": {
+      "kind": "analysis",
+      "record": "cpu_combined_wall_analysis_v2_job_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 128,
+        "allocated_cpus": 1,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2773222": {
+      "kind": "simulation",
+      "record": "cpu_scaling8_wall80_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 598,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2772939": {
+      "kind": "analysis",
+      "record": "cpu_combined_mpi16_compare_job_20261104.json",
+      "accounting": {
+        "state": "FAILED",
+        "elapsed_seconds": 3,
+        "allocated_cpus": 1,
+        "allocated_nodes": 1,
+        "exit_code": "1:0"
+      }
+    },
+    "2771526": {
+      "kind": "simulation",
+      "record": "cpu_mumps_refinement_20261103.json",
+      "accounting": {
+        "state": "FAILED",
+        "elapsed_seconds": 336,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "1:0"
+      }
+    },
+    "2771428": {
+      "kind": "simulation",
+      "record": "cpu_exact_pair_core_poloidal440_baseline48_20261103.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 8068,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2773441": {
+      "kind": "simulation",
+      "record": "cpu_scaling8_capacity400_20261104.json",
+      "accounting": {
+        "state": "RUNNING",
+        "elapsed_seconds": 5588,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2773005": {
+      "kind": "simulation",
+      "record": "cpu_combined_balanced2_mpi16_20261104.json",
+      "accounting": {
+        "state": "FAILED",
+        "elapsed_seconds": 1908,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "1:0"
+      }
+    },
+    "2772815": {
+      "kind": "simulation",
+      "record": "cpu_combined_pair_radial320_baseline48_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 9543,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2773385": {
+      "kind": "simulation",
+      "record": "cpu_scaling8_pair_poloidal440_perturbed48_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 3260,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771240": {
+      "kind": "simulation",
+      "record": "cpu_crossing_recovery_20261103.json",
+      "accounting": {
+        "state": "FAILED",
+        "elapsed_seconds": 124,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "1:0"
+      }
+    },
+    "2771387": {
+      "kind": "simulation",
+      "record": "cpu_exact_pair_radial80_perturbed48_20261103.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 3709,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2772998": {
+      "kind": "analysis",
+      "record": "cpu_combined_mpi16_compare_v2_job_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 65,
+        "allocated_cpus": 1,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771294": {
+      "kind": "simulation",
+      "record": "cpu_newton_anchored_equilibrium_20261103.json",
+      "accounting": {
+        "state": "CANCELLED by 34213",
+        "elapsed_seconds": 1524,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771546": {
+      "kind": "simulation",
+      "record": "cpu_mumps_repeat_v2_20261103.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 309,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771536": {
+      "kind": "simulation",
+      "record": "cpu_tight_exact_picard_reference_20261103.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 1155,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2773145": {
+      "kind": "simulation",
+      "record": "cpu_mumps_scaling8_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 1064,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2772844": {
+      "kind": "analysis",
+      "record": "cpu_spatial_error_diagnosis_job_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 235,
+        "allocated_cpus": 1,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2774878": {
+      "kind": "simulation",
+      "record": "cpu_scaling8_capacity400_radial640_20261104.json",
+      "accounting": {
+        "state": "RUNNING",
+        "elapsed_seconds": 440,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2773236": {
+      "kind": "simulation",
+      "record": "cpu_scaling8_mpi4_poloidal880_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 495,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771358": {
+      "kind": "simulation",
+      "record": "cpu_exact_pair_radial160_perturbed48_20261103.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 7135,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2774866": {
+      "kind": "simulation",
+      "record": "cpu_xpoint_handle_pair_divertor80_baseline48_20261104.json",
+      "accounting": {
+        "state": "RUNNING",
+        "elapsed_seconds": 601,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2772811": {
+      "kind": "simulation",
+      "record": "cpu_combined_pair_radial160_baseline48_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 6149,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2772891": {
+      "kind": "analysis",
+      "record": "cpu_combined_wall_analysis_job_20261104.json",
+      "accounting": {
+        "state": "CANCELLED by 34213",
+        "elapsed_seconds": 0,
+        "allocated_cpus": 0,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771342": {
+      "kind": "simulation",
+      "record": "cpu_exact_core_poloidal_crossing_20261103.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 2048,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771420": {
+      "kind": "simulation",
+      "record": "cpu_xpoint_continuation_20261103.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 935,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771439": {
+      "kind": "simulation",
+      "record": "cpu_wall80_newton_20261103.json",
+      "accounting": {
+        "state": "FAILED",
+        "elapsed_seconds": 220,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "1:0"
+      }
+    },
+    "2773224": {
+      "kind": "simulation",
+      "record": "cpu_scaling8_wall120_20261104.json",
+      "accounting": {
+        "state": "FAILED",
+        "elapsed_seconds": 262,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "1:0"
+      }
+    },
+    "2773383": {
+      "kind": "simulation",
+      "record": "cpu_scaling8_pair_poloidal440_baseline48_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 3258,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771182": {
+      "kind": "simulation",
+      "record": "cpu_native_export_recovery_20261103.json",
+      "accounting": {
+        "state": "CANCELLED by 34213",
+        "elapsed_seconds": 1692,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2774908": {
+      "kind": "simulation",
+      "record": "cpu_scaling8_capacity400_pair_poloidal880_baseline48_20261104.json",
+      "accounting": {
+        "state": "RUNNING",
+        "elapsed_seconds": 9,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771403": {
+      "kind": "analysis",
+      "record": "cpu_native_halo_validation_job_20261103.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 76,
+        "allocated_cpus": 1,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2772927": {
+      "kind": "simulation",
+      "record": "cpu_combined_exterior_flux2_20261104.json",
+      "accounting": {
+        "state": "FAILED",
+        "elapsed_seconds": 243,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "1:0"
+      }
+    },
+    "2771574": {
+      "kind": "analysis",
+      "record": "cpu_combined_refined_early_parity_job_20261103.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 21,
+        "allocated_cpus": 1,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771635": {
+      "kind": "simulation",
+      "record": "cpu_combined_radial320_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 1721,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2773436": {
+      "kind": "simulation",
+      "record": "cpu_corner_handle_wall120_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 765,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2772900": {
+      "kind": "analysis",
+      "record": "cpu_combined_core_poloidal_next_coverage_job_20261104.json",
+      "accounting": {
+        "state": "CANCELLED by 34213",
+        "elapsed_seconds": 0,
+        "allocated_cpus": 0,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771220": {
+      "kind": "simulation",
+      "record": "cpu_wall_equilibrium_relaxation_20261103.json",
+      "accounting": {
+        "state": "FAILED",
+        "elapsed_seconds": 2765,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "1:0"
+      }
+    },
+    "2772876": {
+      "kind": "simulation",
+      "record": "cpu_combined_pair_wall80_baseline48_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 5028,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771390": {
+      "kind": "analysis",
+      "record": "cpu_exact_radial_analysis_job_20261103.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 113,
+        "allocated_cpus": 1,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2773108": {
+      "kind": "simulation",
+      "record": "cpu_poloidal880_dt_half_20261104.json",
+      "accounting": {
+        "state": "FAILED",
+        "elapsed_seconds": 213,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "1:0"
+      }
+    },
+    "2771316": {
+      "kind": "simulation",
+      "record": "cpu_tight_picard_reference_20261103.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 1192,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771466": {
+      "kind": "simulation",
+      "record": "cpu_wall_tangent_newton_20261103.json",
+      "accounting": {
+        "state": "CANCELLED by 34213",
+        "elapsed_seconds": 748,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2773211": {
+      "kind": "simulation",
+      "record": "cpu_scaling8_poloidal440_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 944,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771434": {
+      "kind": "analysis",
+      "record": "cpu_xpoint_control_compare_job_20261103.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 16,
+        "allocated_cpus": 1,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771345": {
+      "kind": "analysis",
+      "record": "cpu_newton_tight_equilibrium_compare_job_20261103.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 17,
+        "allocated_cpus": 1,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771564": {
+      "kind": "simulation",
+      "record": "cpu_combined_refined_solver_20261103.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 3648,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771447": {
+      "kind": "simulation",
+      "record": "cpu_xpoint_cycle_20261103.json",
+      "accounting": {
+        "state": "CANCELLED by 34213",
+        "elapsed_seconds": 113,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2773490": {
+      "kind": "simulation",
+      "record": "cpu_corner_handle_pair_wall80_perturbed48_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 2403,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771356": {
+      "kind": "simulation",
+      "record": "cpu_exact_pair_radial160_baseline48_20261103.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 7296,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2774868": {
+      "kind": "simulation",
+      "record": "cpu_xpoint_handle_pair_divertor80_perturbed48_20261104.json",
+      "accounting": {
+        "state": "RUNNING",
+        "elapsed_seconds": 440,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771385": {
+      "kind": "simulation",
+      "record": "cpu_exact_pair_radial80_baseline48_20261103.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 3703,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2773110": {
+      "kind": "simulation",
+      "record": "cpu_poloidal880_dt_quarter_20261104.json",
+      "accounting": {
+        "state": "FAILED",
+        "elapsed_seconds": 211,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "1:0"
+      }
+    },
+    "2772923": {
+      "kind": "analysis",
+      "record": "cpu_combined_radial_order_job_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 279,
+        "allocated_cpus": 1,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771251": {
+      "kind": "simulation",
+      "record": "cpu_core_crossing_recovery_20261103.json",
+      "accounting": {
+        "state": "FAILED",
+        "elapsed_seconds": 390,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "1:0"
+      }
+    },
+    "2774880": {
+      "kind": "analysis",
+      "record": "cpu_corner_handle_wall_next_analysis_job_20261104.json",
+      "accounting": {
+        "state": "PENDING",
+        "elapsed_seconds": 0,
+        "allocated_cpus": 0,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2774856": {
+      "kind": "simulation",
+      "record": "cpu_corner_handle_pair_wall160_perturbed48_20261104.json",
+      "accounting": {
+        "state": "RUNNING",
+        "elapsed_seconds": 603,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771244": {
+      "kind": "simulation",
+      "record": "cpu_newton_equilibrium_20261103.json",
+      "accounting": {
+        "state": "FAILED",
+        "elapsed_seconds": 473,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "1:0"
+      }
+    },
+    "2773393": {
+      "kind": "analysis",
+      "record": "cpu_scaling8_poloidal_next_analysis_job_20261104.json",
+      "accounting": {
+        "state": "RUNNING",
+        "elapsed_seconds": 90,
+        "allocated_cpus": 1,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771516": {
+      "kind": "analysis",
+      "record": "cpu_native_increment_balance_job_20261103.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 30,
+        "allocated_cpus": 1,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2773463": {
+      "kind": "simulation",
+      "record": "cpu_xpoint_handle_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 2076,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2773438": {
+      "kind": "simulation",
+      "record": "cpu_corner_handle_wall160_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 904,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2772841": {
+      "kind": "simulation",
+      "record": "cpu_combined_core_poloidal880_20261104.json",
+      "accounting": {
+        "state": "CANCELLED by 34213",
+        "elapsed_seconds": 3518,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2772813": {
+      "kind": "simulation",
+      "record": "cpu_combined_pair_radial160_perturbed48_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 6181,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2774883": {
+      "kind": "analysis",
+      "record": "cpu_xpoint_handle_divertor_next_analysis_job_20261104.json",
+      "accounting": {
+        "state": "PENDING",
+        "elapsed_seconds": 0,
+        "allocated_cpus": 0,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771172": {
+      "kind": "simulation",
+      "record": "cpu_native_export_20261103.json",
+      "accounting": {
+        "state": "FAILED",
+        "elapsed_seconds": 20,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "1:0"
+      }
+    },
+    "2774872": {
+      "kind": "simulation",
+      "record": "cpu_scaling8_capacity400_radial320_20261104.json",
+      "accounting": {
+        "state": "RUNNING",
+        "elapsed_seconds": 440,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2772909": {
+      "kind": "simulation",
+      "record": "cpu_combined_divertor160_20261104.json",
+      "accounting": {
+        "state": "FAILED",
+        "elapsed_seconds": 692,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "1:0"
+      }
+    },
+    "2773445": {
+      "kind": "analysis",
+      "record": "cpu_scaling8_poloidal1760_geometry_coverage_job_20261104.json",
+      "accounting": {
+        "state": "PENDING",
+        "elapsed_seconds": 0,
+        "allocated_cpus": 0,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771381": {
+      "kind": "analysis",
+      "record": "cpu_normalized_newton_compare_job_20261103.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 17,
+        "allocated_cpus": 1,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2772886": {
+      "kind": "simulation",
+      "record": "cpu_combined_pair_core_poloidal440_perturbed48_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 7009,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771529": {
+      "kind": "analysis",
+      "record": "cpu_wall_tangent_compare_job_20261103.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 17,
+        "allocated_cpus": 1,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2773488": {
+      "kind": "simulation",
+      "record": "cpu_corner_handle_pair_wall80_baseline48_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 2403,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771432": {
+      "kind": "analysis",
+      "record": "cpu_exact_core_poloidal_analysis_job_20261103.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 141,
+        "allocated_cpus": 1,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771306": {
+      "kind": "simulation",
+      "record": "cpu_exact_core_crossing_20261103.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 2636,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2772988": {
+      "kind": "simulation",
+      "record": "cpu_combined_balanced2_20261104.json",
+      "accounting": {
+        "state": "FAILED",
+        "elapsed_seconds": 536,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "1:0"
+      }
+    },
+    "2771534": {
+      "kind": "simulation",
+      "record": "cpu_combined_solver_20261103.json",
+      "accounting": {
+        "state": "CANCELLED by 34213",
+        "elapsed_seconds": 549,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771373": {
+      "kind": "simulation",
+      "record": "cpu_normalized_newton_20261103.json",
+      "accounting": {
+        "state": "CANCELLED by 34213",
+        "elapsed_seconds": 1562,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2772913": {
+      "kind": "simulation",
+      "record": "cpu_combined_wall160_20261104.json",
+      "accounting": {
+        "state": "FAILED",
+        "elapsed_seconds": 270,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "1:0"
+      }
+    },
+    "2771322": {
+      "kind": "simulation",
+      "record": "cpu_exact_poloidal_crossing_20261103.json",
+      "accounting": {
+        "state": "FAILED",
+        "elapsed_seconds": 553,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "1:0"
+      }
+    },
+    "2773387": {
+      "kind": "simulation",
+      "record": "cpu_scaling8_pair_poloidal880_baseline48_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 6555,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771461": {
+      "kind": "analysis",
+      "record": "cpu_xpoint_cycle_compare_job_20261103.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 17,
+        "allocated_cpus": 1,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2773190": {
+      "kind": "analysis",
+      "record": "cpu_combined_core_poloidal_analysis_v2_job_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 148,
+        "allocated_cpus": 1,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2773232": {
+      "kind": "analysis",
+      "record": "cpu_scaling8_poloidal_geometry_coverage_job_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 146,
+        "allocated_cpus": 1,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2772878": {
+      "kind": "simulation",
+      "record": "cpu_combined_pair_wall80_perturbed48_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 5012,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771540": {
+      "kind": "simulation",
+      "record": "cpu_mumps_repeat_20261103.json",
+      "accounting": {
+        "state": "FAILED",
+        "elapsed_seconds": 2,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "1:0"
+      }
+    },
+    "2771455": {
+      "kind": "simulation",
+      "record": "cpu_xpoint_cycle_mpi_20261103.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 1020,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2772872": {
+      "kind": "simulation",
+      "record": "cpu_combined_pair_control80_baseline48_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 3290,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2773276": {
+      "kind": "analysis",
+      "record": "cpu_scaling8_poloidal_missing_diagnosis_job_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 35,
+        "allocated_cpus": 1,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2772884": {
+      "kind": "simulation",
+      "record": "cpu_combined_pair_core_poloidal440_baseline48_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 7211,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2772846": {
+      "kind": "analysis",
+      "record": "cpu_combined_radial_analysis_job_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 217,
+        "allocated_cpus": 1,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2772930": {
+      "kind": "simulation",
+      "record": "cpu_combined_mpi16_parity_job_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 733,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2773213": {
+      "kind": "simulation",
+      "record": "cpu_scaling8_poloidal880_20261104.json",
+      "accounting": {
+        "state": "COMPLETED",
+        "elapsed_seconds": 2391,
+        "allocated_cpus": 16,
+        "allocated_nodes": 1,
+        "exit_code": "0:0"
+      }
+    },
+    "2771209": {
+      "kind": "simulation",
+      "record": "cpu_equilibrium_resolution_probe_20261103.json",
+      "accounting": {
+        "state": "FAILED",
+        "elapsed_seconds": 774,
+        "allocated_cpus": 4,
+        "allocated_nodes": 1,
+        "exit_code": "1:0"
+      }
+    }
+  },
+  "allocated_cpu_hours": 376.6511111111113,
+  "allocated_node_hours": 53.17111111111112,
+  "scope": "Additional top-level recorded solver allocations after 2770975; unique allocations, running elapsed usage provisional. Scientific acceptance remains separate."
+}

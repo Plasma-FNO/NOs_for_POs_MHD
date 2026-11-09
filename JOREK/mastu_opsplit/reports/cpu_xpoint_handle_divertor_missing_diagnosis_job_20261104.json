@@ -1,0 +1,16 @@
+{
+  "status": "submitted",
+  "kind": "analysis",
+  "native_attempt_started": false,
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/xpoint_handle_pair_divertor160_20261104",
+  "script_sha256": "3d7c900c55a6f670e7414474eb93cad6e204febc1335ce3d77a8b079dc6195e9",
+  "analysis_source_sha256": "2a4918cde296f385095b2e0116ec72562d4eda784f47606457cadc2170a36c74",
+  "budget": {
+    "mpi_ranks": 1,
+    "memory_GiB": 128,
+    "wall_hours_max": 2
+  },
+  "scheduler_preflight": "sbatch: Job 2775457 to start at 2026-11-04T17:58:19 a using 1 processors on nodes r355c05s11 in partition dcgp_fua_prod\n",
+  "scientific_gates_passed": [],
+  "job_id": "2775458"
+}

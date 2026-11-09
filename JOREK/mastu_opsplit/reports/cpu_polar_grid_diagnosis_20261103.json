@@ -1,0 +1,39 @@
+{
+  "status": "diagnosis_completed_expected_native_grid_rejection",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/polar_grid_diagnosis_20261103",
+  "budget": {
+    "authorization": "User requested numerical convergence and completion of the science plan.",
+    "scope": "One diagnostics-only build and zero-step reproduction of radial160 folds; export polar curves and intersections. Expected grid rejection; no scientific acceptance.",
+    "allocations_max": 1,
+    "attempts_each_max": 1,
+    "mpi_ranks": 4,
+    "threads": 1,
+    "memory_GiB": 256,
+    "wall_hours_max": 0.5,
+    "rank_CPU_hours_max": 2,
+    "node_hours_max": 0.5,
+    "conservative_resource_hours_max": 128,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+    "equilibrium_tolerance": 1e-10,
+    "physics_changed": false,
+    "spatial_targets_changed": false
+  },
+  "manifest_sha256": "ed3fce5e20d537d2132c8eba216b03828a4516bdde98c58573c232b0aacbce4c",
+  "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_polar_grid_diagnosis_20261103.sbatch",
+  "script_sha256": "2023df7d133936fbff27e797771c12bfa1ed4f6eeb093295a27c5bb57f569164",
+  "scheduler_preflight": "sbatch: Job 2771300 to start at 2026-11-03T21:38:40 a using 4 processors on nodes r354c01s10 in partition dcgp_fua_prod\n",
+  "scientific_gates_passed": [],
+  "job_id": "2771301",
+  "stage_results": {
+    "radial160": {
+      "stage": "radial160",
+      "status": "failed_validation",
+      "returncode": 1,
+      "process_wall_seconds": 387.1042857990833,
+      "binary_sha256": "6afe441aefa80c8fae28b9fb4fe376e69dd596bc4486ef623888780da1509bab",
+      "scientific_gates_passed": [],
+      "error": "exit_nonzero"
+    }
+  },
+  "conclusion": "Diagnostic-only build reproduces the four native folds. Trace identifies reversed exact FE flux between neighboring core levels."
+}

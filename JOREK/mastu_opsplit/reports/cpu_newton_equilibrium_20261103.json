@@ -1,0 +1,38 @@
+{
+  "status": "failed_validation",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/newton_equilibrium_20261103",
+  "budget": {
+    "authorization": "User request to get the numerical solver to converge and finish the science plan.",
+    "scope": "One allocation, two frozen native3-step proofs: matched native Newton original-wall control and wall1.5.",
+    "allocations_max": 1,
+    "attempts_each_max": 1,
+    "mpi_ranks": 4,
+    "threads": 1,
+    "memory_GiB": 256,
+    "wall_hours_max": 3,
+    "rank_CPU_hours_max": 12,
+    "node_hours_max": 3,
+    "conservative_resource_hours_max": 768,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+    "equilibrium_tolerance_changed": false,
+    "physics_changed": false
+  },
+  "manifest_sha256": "e20b907cbb235afc5be59d5a3f38a1b9ed279def7d64214c0936d355bf7b1414",
+  "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_newton_equilibrium_20261103.sbatch",
+  "script_sha256": "c442d2b2173098c90430e0563df691bcb86ac16bcc92683380ded5109f927c82",
+  "scheduler_preflight": "sbatch: Job 2771243 to start at 2026-11-03T20:56:20 a using 4 processors on nodes r354c01s10 in partition dcgp_fua_prod\n",
+  "scientific_gates_passed": [],
+  "job_id": "2771244",
+  "failure": "Stopped before Newton iterations: native solver requires delta_psi_GS. Superseded by measured-reference anchored test.",
+  "stage_results": {
+    "control3": {
+      "stage": "control3",
+      "status": "failed_validation",
+      "returncode": 3,
+      "process_wall_seconds": 470.44637065602,
+      "binary_sha256": "dd786f76a5c815976ad54bcd31b744ad2c3d6cafddfcc064dcae8e6761d8ccd6",
+      "scientific_gates_passed": [],
+      "error": "exit_nonzero"
+    }
+  }
+}

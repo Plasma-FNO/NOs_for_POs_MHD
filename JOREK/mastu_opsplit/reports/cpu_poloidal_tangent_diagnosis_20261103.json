@@ -1,0 +1,39 @@
+{
+  "before": {
+    "minimum": -2.8835121317089517e-05,
+    "invalid_elements": [
+      1486,
+      1596,
+      1706,
+      1816,
+      1926,
+      2036,
+      2146,
+      2256
+    ]
+  },
+  "centered_before_recomputing_chart_signs": {
+    "minimum": -5.6411372196567795e-05,
+    "invalid_elements": [
+      1486,
+      1596,
+      1706,
+      1816,
+      1926,
+      2036,
+      2146,
+      2256
+    ]
+  },
+  "dimensions": [
+    40,
+    111,
+    8
+  ],
+  "centered_with_recomputed_chart_signs": {
+    "minimum": 1.536646449962913e-06,
+    "invalid_elements": []
+  },
+  "status": "offline_geometry_diagnosis_only",
+  "limitation": "No native source or restart changed. Shared patch boundary nodes retained. The separate divertor fold remains unresolved."
+}

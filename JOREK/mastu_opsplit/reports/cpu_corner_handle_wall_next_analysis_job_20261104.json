@@ -1,0 +1,26 @@
+{
+  "status": "submitted",
+  "kind": "analysis",
+  "native_attempt_started": false,
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/corner_handle_pair_wall160_20261104",
+  "dependencies": [
+    "2773488",
+    "2773490",
+    "2774854",
+    "2774856"
+  ],
+  "active_dependencies": [
+    "2774854",
+    "2774856"
+  ],
+  "script_sha256": "0468d69c5d27f3da6393326f2e87b869619ff3bc7b356806eee70dcb5029f4bb",
+  "analysis_source_sha256": "68ae00cd4202168b2ed1b9ce0a5f24b55648a665aae5d97a4f8f63e103f21ec8",
+  "budget": {
+    "mpi_ranks": 1,
+    "memory_GiB": 128,
+    "wall_hours_max": 2
+  },
+  "scheduler_preflight": "sbatch: Job 2774879 to start at 2026-11-04T16:59:10 a using 1 processors on nodes r355c05s10 in partition dcgp_fua_prod\n",
+  "scientific_gates_passed": [],
+  "job_id": "2774880"
+}

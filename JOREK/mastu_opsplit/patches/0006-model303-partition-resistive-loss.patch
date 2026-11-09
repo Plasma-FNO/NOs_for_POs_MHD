@@ -1,0 +1,13 @@
+--- a/diagnostics/mod_integrals3D.f90
++++ b/diagnostics/mod_integrals3D.f90
+@@ -1206,6 +1206,10 @@
+         call resistivity(eta,       T_or_Te, T_or_Te_corr, T_max_eta,     T_or_Te_0, Z_eff, lnA, eta_T    )           
+ #endif
+         call resistivity(eta_ohmic, T_or_Te, T_or_Te_corr, T_max_eta_ohm, T_or_Te_0, Z_eff, lnA, eta_T_ohm)           
++#if JOREK_MODEL == 303
++        ! Keep inside/outside J2 integrals consistent with total magnetic resistive loss.
++        eta_T_ohm = eta_T
++#endif
+ 
+         ! --- Switch to use old viscosity model
+         if (visco_old_setup) then

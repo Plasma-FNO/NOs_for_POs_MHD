@@ -1,0 +1,292 @@
+{
+  "budget": {
+    "analysis_allocations_max": 8,
+    "analysis_hours_each_max": 1,
+    "analysis_memory_GiB": 64,
+    "attempts_each_max": 1,
+    "authorization": "User request to resolve Gates A/B/C; this is a prepared development pilot, not a production submission.",
+    "conservative_resource_hours_max": 32768,
+    "mpi_ranks": 4,
+    "node_hours_max": 128,
+    "rank_CPU_hours_max": 488,
+    "reserved_or_submitted": false,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+    "simulation_allocations_max": 20,
+    "simulation_hours_each_max": 6,
+    "simulation_memory_GiB": 256,
+    "storage_GiB_max": 100,
+    "threads": 1
+  },
+  "candidate_plan_hash": "d6cad4d8eb4a0fa90ab6559b23ce73037a25f2c55a518a43b56f3ae3ad73a478",
+  "case_count_per_mesh": 10,
+  "cases": [
+    {
+      "A_T": 0.0,
+      "A_rho": 0.0,
+      "baseline_id": "pilot-baseline-0",
+      "case_id": "pilot-baseline-0",
+      "center_m": [
+        0.95,
+        0.0
+      ],
+      "input_template": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/prepared_gate_c_pilot_20261103/pilot-baseline-0.input",
+      "input_template_sha256": "bfc32db037a7236bba61cf89c2a568e6099ded0adf3ff71aae229a99224372ec",
+      "parent_family_id": "pilot-baseline-0",
+      "psi_n_taper": [
+        0.55,
+        0.75
+      ],
+      "s_perp": 0.7,
+      "split": "development",
+      "status": "prepared_development_candidate",
+      "width_m": [
+        0.08,
+        0.16
+      ]
+    },
+    {
+      "A_T": 0.02,
+      "A_rho": 0.02,
+      "baseline_id": "pilot-baseline-0",
+      "case_id": "pilot-s0-rho0.02-T0.02",
+      "center_m": [
+        0.95,
+        0.0
+      ],
+      "input_template": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/prepared_gate_c_pilot_20261103/pilot-s0-rho0.02-T0.02.input",
+      "input_template_sha256": "970c784243b59a9c01a4fd3750fd2c3d371c9aae4953c3fede7e4449af4060de",
+      "parent_family_id": "pilot-s0-rho0.02-T0.02",
+      "psi_n_taper": [
+        0.55,
+        0.75
+      ],
+      "s_perp": 0.7,
+      "split": "development",
+      "status": "prepared_development_candidate",
+      "width_m": [
+        0.08,
+        0.16
+      ]
+    },
+    {
+      "A_T": 0.15,
+      "A_rho": 0.02,
+      "baseline_id": "pilot-baseline-0",
+      "case_id": "pilot-s0-rho0.02-T0.15",
+      "center_m": [
+        0.95,
+        0.0
+      ],
+      "input_template": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/prepared_gate_c_pilot_20261103/pilot-s0-rho0.02-T0.15.input",
+      "input_template_sha256": "6d8adba17253c63911e07a969145e9d3c99fb5678e657c75b29a70ccde8cfa2a",
+      "parent_family_id": "pilot-s0-rho0.02-T0.15",
+      "psi_n_taper": [
+        0.55,
+        0.75
+      ],
+      "s_perp": 0.7,
+      "split": "development",
+      "status": "prepared_development_candidate",
+      "width_m": [
+        0.08,
+        0.16
+      ]
+    },
+    {
+      "A_T": 0.02,
+      "A_rho": 0.15,
+      "baseline_id": "pilot-baseline-0",
+      "case_id": "pilot-s0-rho0.15-T0.02",
+      "center_m": [
+        0.95,
+        0.0
+      ],
+      "input_template": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/prepared_gate_c_pilot_20261103/pilot-s0-rho0.15-T0.02.input",
+      "input_template_sha256": "0f22858fd58f4b26447a497a316617a42bff34480171724fa14f0b93b19c6dfd",
+      "parent_family_id": "pilot-s0-rho0.15-T0.02",
+      "psi_n_taper": [
+        0.55,
+        0.75
+      ],
+      "s_perp": 0.7,
+      "split": "development",
+      "status": "prepared_development_candidate",
+      "width_m": [
+        0.08,
+        0.16
+      ]
+    },
+    {
+      "A_T": 0.15,
+      "A_rho": 0.15,
+      "baseline_id": "pilot-baseline-0",
+      "case_id": "pilot-s0-rho0.15-T0.15",
+      "center_m": [
+        0.95,
+        0.0
+      ],
+      "input_template": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/prepared_gate_c_pilot_20261103/pilot-s0-rho0.15-T0.15.input",
+      "input_template_sha256": "c1fd40be67ad09e7beb958f99a45f2aeb7818763122254cdba9e9a5eebc8607b",
+      "parent_family_id": "pilot-s0-rho0.15-T0.15",
+      "psi_n_taper": [
+        0.55,
+        0.75
+      ],
+      "s_perp": 0.7,
+      "split": "development",
+      "status": "prepared_development_candidate",
+      "width_m": [
+        0.08,
+        0.16
+      ]
+    },
+    {
+      "A_T": 0.0,
+      "A_rho": 0.0,
+      "baseline_id": "pilot-baseline-1",
+      "case_id": "pilot-baseline-1",
+      "center_m": [
+        0.95,
+        0.0
+      ],
+      "input_template": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/prepared_gate_c_pilot_20261103/pilot-baseline-1.input",
+      "input_template_sha256": "55912aa665f484776988c960923e161b398ea31e3809cfc17d33edb41b035be7",
+      "parent_family_id": "pilot-baseline-1",
+      "psi_n_taper": [
+        0.55,
+        0.75
+      ],
+      "s_perp": 1.4,
+      "split": "development",
+      "status": "prepared_development_candidate",
+      "width_m": [
+        0.08,
+        0.16
+      ]
+    },
+    {
+      "A_T": 0.02,
+      "A_rho": 0.02,
+      "baseline_id": "pilot-baseline-1",
+      "case_id": "pilot-s1-rho0.02-T0.02",
+      "center_m": [
+        0.95,
+        0.0
+      ],
+      "input_template": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/prepared_gate_c_pilot_20261103/pilot-s1-rho0.02-T0.02.input",
+      "input_template_sha256": "8003599678b64bf3065188dd4a973b4d6aefddb57dc345c38ab530788a8463bd",
+      "parent_family_id": "pilot-s1-rho0.02-T0.02",
+      "psi_n_taper": [
+        0.55,
+        0.75
+      ],
+      "s_perp": 1.4,
+      "split": "development",
+      "status": "prepared_development_candidate",
+      "width_m": [
+        0.08,
+        0.16
+      ]
+    },
+    {
+      "A_T": 0.15,
+      "A_rho": 0.02,
+      "baseline_id": "pilot-baseline-1",
+      "case_id": "pilot-s1-rho0.02-T0.15",
+      "center_m": [
+        0.95,
+        0.0
+      ],
+      "input_template": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/prepared_gate_c_pilot_20261103/pilot-s1-rho0.02-T0.15.input",
+      "input_template_sha256": "8cf76b4a89e3839ad43a616921779afc6d1935c57b5e44cc3ba1242688409a7b",
+      "parent_family_id": "pilot-s1-rho0.02-T0.15",
+      "psi_n_taper": [
+        0.55,
+        0.75
+      ],
+      "s_perp": 1.4,
+      "split": "development",
+      "status": "prepared_development_candidate",
+      "width_m": [
+        0.08,
+        0.16
+      ]
+    },
+    {
+      "A_T": 0.02,
+      "A_rho": 0.15,
+      "baseline_id": "pilot-baseline-1",
+      "case_id": "pilot-s1-rho0.15-T0.02",
+      "center_m": [
+        0.95,
+        0.0
+      ],
+      "input_template": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/prepared_gate_c_pilot_20261103/pilot-s1-rho0.15-T0.02.input",
+      "input_template_sha256": "81a9a48f2d2ad66201ab90c6e11889937f05a1fd708ac34a0de4fc429b554530",
+      "parent_family_id": "pilot-s1-rho0.15-T0.02",
+      "psi_n_taper": [
+        0.55,
+        0.75
+      ],
+      "s_perp": 1.4,
+      "split": "development",
+      "status": "prepared_development_candidate",
+      "width_m": [
+        0.08,
+        0.16
+      ]
+    },
+    {
+      "A_T": 0.15,
+      "A_rho": 0.15,
+      "baseline_id": "pilot-baseline-1",
+      "case_id": "pilot-s1-rho0.15-T0.15",
+      "center_m": [
+        0.95,
+        0.0
+      ],
+      "input_template": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/prepared_gate_c_pilot_20261103/pilot-s1-rho0.15-T0.15.input",
+      "input_template_sha256": "29a97415c3884baea6cc97594ecfa554725cce383e524115ed4cd459b96bf904",
+      "parent_family_id": "pilot-s1-rho0.15-T0.15",
+      "psi_n_taper": [
+        0.55,
+        0.75
+      ],
+      "s_perp": 1.4,
+      "split": "development",
+      "status": "prepared_development_candidate",
+      "width_m": [
+        0.08,
+        0.16
+      ]
+    }
+  ],
+  "field_relative_target": 0.01,
+  "final_time_s": 1.4059131112280784e-06,
+  "future_sampling_blockers": [
+    "The original strong-amplitude and held-out transport envelopes need separate pilots.",
+    "Varying centers/widths requires independent support and resolution validation.",
+    "The doubled test horizon has not been qualified by this short-horizon plan."
+  ],
+  "integral_relative_target": 0.02,
+  "qualified_coarse_geometry": null,
+  "qualified_fine_geometry": null,
+  "reference_geometry_status": "Healthy diagnostic radial80 mesh; not accepted at the 1% spatial target.",
+  "required_checks": [
+    "Positive finite q8 geometry/density/temperature, strict 1e-10 equilibrium, clean solver and exact final time.",
+    "Initializer unselected/boundary coefficients unchanged, amplitude bounds and element-level flux-support clearance.",
+    "All eight baseline, perturbed and matched baseline-subtracted fields pass the common-physical-query convergence target.",
+    "Native selected strong/weak labels and term strengths verified; physical balances and native constraints accounted.",
+    "Every refinement, timestep sibling and restart of a parent case remains in its development family.",
+    "Record every failure and actual resource/storage cost; freeze accepted mesh and protocol before production sampling."
+  ],
+  "sampling_config_sha256": "68cbff0c6ba00c62ece51dd9261d8383a3147d7a2568c4025873f89051afb65b",
+  "sampling_source_sha256": "9501e3d71d731d3e828368bd6f9fdcc94ee75912cc4523b47117d94295bc7923",
+  "scientific_gates_passed": [],
+  "scope": "Training interval only, fixed center/width and short horizon; no OOD accuracy claim.",
+  "status": "prepared_waiting_for_qualified_mesh_and_native_export",
+  "steps": 48,
+  "submission_allowed": false,
+  "template_sha256": "c36339b354b3dc1e1f10c33876c284c0d23839e3eaac094a71a4cbda200e3e8d",
+  "tstep_code_units": 0.0625
+}

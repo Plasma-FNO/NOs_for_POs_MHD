@@ -48,3 +48,11 @@ Data/
 .beads-credential-key
 .beads/proxieddb/
 *.gate.lock*
+
+# Keep the new study's checks; bulk artifacts stay outside source control.
+!JOREK/mastu_opsplit/tests/
+!JOREK/mastu_opsplit/tests/**
+JOREK/mastu_opsplit/.pytest_cache/
+JOREK/mastu_opsplit/runs/
+JOREK/mastu_opsplit/checkpoints/
+JOREK/mastu_opsplit/data/

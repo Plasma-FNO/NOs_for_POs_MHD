@@ -1,0 +1,13 @@
+{
+  "authorization": "Current explicit user request to diagnose remaining flow/current/vorticity discrepancies",
+  "scope": "One read-only native weak-constraint and quadrature diagnostic",
+  "attempts_max": 1,
+  "nodes_max": 1,
+  "cpus_max": 1,
+  "memory_GiB_max": 64,
+  "wall_seconds_max": 3600,
+  "conservative_resource_hours_max": 256,
+  "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+  "source_sha256": "0da97168abfdd6afd68f97c83bb0a9d6989231a464c386bf019740637c5897b7",
+  "job_id": "2770036"
+}

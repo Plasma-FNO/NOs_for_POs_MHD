@@ -1,0 +1,16 @@
+{
+  "authorization": "Current explicit diagnosis and next spatial refinement request",
+  "scope": "One corrected geometry-planning launcher retry; select.py renamed to avoid standard-library module collision. Prior failed allocation retained.",
+  "allocations_max": 1,
+  "candidate_evolutions": 0,
+  "nodes": 1,
+  "mpi_ranks": 4,
+  "threads": 1,
+  "memory_GiB": 64,
+  "wall_seconds": 7200,
+  "rank_CPU_hours_max": 8,
+  "node_hours_max": 2,
+  "conservative_resource_hours_max": 512,
+  "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+  "selection": "First candidate in [n_flux240,n_flux200] with <=155000 nodes and elements and positive q8 geometry; frozen targets unchanged."
+}

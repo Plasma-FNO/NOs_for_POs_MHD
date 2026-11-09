@@ -1,0 +1,78 @@
+{
+  "status": "combined_numerical_probes_verified",
+  "scientific_gates_passed": [],
+  "binary_sha256": "38d428235a842b7a6f8fb256f81ddfed2a1c12355c2d4e322f12e27ef6af1ec9",
+  "scope": "Combined Newton/core/wall geometry and MUMPS probe qualification; full spatial and physical acceptance remains separate.",
+  "max_solver_backward_error": 1e-12,
+  "stages": {
+    "control1": {
+      "equilibrium_iterations": 10,
+      "last_raw_update": 8.948e-13,
+      "steps": 1,
+      "cycle_fallback_activated": false,
+      "maximum_mumps_backward_error": 3.6045249430740864e-16,
+      "maximum_refinement_steps": 2,
+      "minimum_q8_jacobian_m2": 1.9233925177217095e-08,
+      "minimum_density": 0.009734661782198818,
+      "minimum_temperature": 9.914683431997399e-05,
+      "result_sha256": "394adaa4cbc19c038f82a024aa9d885c2f5c431f85ef5bdd7c163c7b5a02b728"
+    },
+    "control3": {
+      "equilibrium_iterations": 7,
+      "last_raw_update": 4.005e-11,
+      "steps": 3,
+      "cycle_fallback_activated": false,
+      "maximum_mumps_backward_error": 3.6045249430740864e-16,
+      "maximum_refinement_steps": 2,
+      "minimum_q8_jacobian_m2": 1.9233925177217095e-08,
+      "minimum_density": 0.008866882142739105,
+      "minimum_temperature": 9.742912396647377e-05,
+      "result_sha256": "dde6d2ccb385657f39fd21a9edd4db6bb1e56340f24bf24265f44c4caeed4db7"
+    },
+    "radial160": {
+      "equilibrium_iterations": 6,
+      "last_raw_update": 8.482e-11,
+      "steps": 3,
+      "cycle_fallback_activated": false,
+      "maximum_mumps_backward_error": 4.164992344919663e-16,
+      "maximum_refinement_steps": 2,
+      "minimum_q8_jacobian_m2": 4.791289631196117e-09,
+      "minimum_density": 0.008866882179725146,
+      "minimum_temperature": 9.742912482047558e-05,
+      "result_sha256": "f0781eca4e04597f5b2b10709e21fa66f88653565e5ba9eed3e40d221daa712d"
+    },
+    "wall80": {
+      "equilibrium_iterations": 11,
+      "last_raw_update": 2.533e-11,
+      "steps": 3,
+      "cycle_fallback_activated": true,
+      "maximum_mumps_backward_error": 4.819913076116052e-16,
+      "maximum_refinement_steps": 2,
+      "minimum_q8_jacobian_m2": 1.9233925177217095e-08,
+      "minimum_density": 0.008578932751195823,
+      "minimum_temperature": 9.741901654852642e-05,
+      "result_sha256": "75ab84e8ab70cdad31b76d194020afd2112031ec56d86a4b444beced80ed4e96"
+    },
+    "core_poloidal440": {
+      "equilibrium_iterations": 7,
+      "last_raw_update": 8.162e-11,
+      "steps": 3,
+      "cycle_fallback_activated": false,
+      "maximum_mumps_backward_error": 4.614524434813652e-16,
+      "maximum_refinement_steps": 2,
+      "minimum_q8_jacobian_m2": 9.591795047498284e-09,
+      "minimum_density": 0.008299020122266612,
+      "minimum_temperature": 9.714260012301838e-05,
+      "result_sha256": "0c6acd3089012fe032e749a94dec6ebceeb0b24321428713f33f003d1a66848b"
+    }
+  },
+  "manifest_sha256": "fd4a449c4fc37982be8ef64e8f1b3bc2fcbcfe34e11aaa0f322a91fc2cc1245f",
+  "script_sha256": "9a18266e0be5efedcff91a38bf44674745c330f29123c89263a45f530450b2d1",
+  "control_parity": true,
+  "parity_report_sha256": "7bd99921e25d2688b2b4385ce959e8af2a2b8dd94e27cc79de767b612d3b4ec9",
+  "limitations": [
+    "Full-horizon spatial/timestep convergence and physical energy/source/flux balance remain pending.",
+    "Root tracking is qualified on these fresh-start probes; restart persistence is not established.",
+    "MUMPS backward errors are native diagnostics. Independent interior balance/repeatability proofs remain separate from boundary/axis and autonomous-backend acceptance."
+  ]
+}

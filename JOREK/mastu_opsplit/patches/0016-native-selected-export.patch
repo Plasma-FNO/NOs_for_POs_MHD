@@ -1,0 +1,175 @@
+--- a/models/model303/mod_elt_matrix_fft.f90
++++ b/models/model303/mod_elt_matrix_fft.f90
+@@ -1,6 +1,7 @@
+ module mod_elt_matrix_fft
+ 
+   implicit none
++#include "opsplit_export_state.inc"
+ 
+ contains
+ 
+@@ -151,6 +152,8 @@
+ 
+ real*8, dimension(n_tor,n_plane) :: HHZ, HHZ_p, HHZ_pp
+ 
++#include "opsplit_export_declarations.inc"
++
+ ELM_p = 0.d0
+ ELM_n = 0.d0
+ ELM_k = 0.d0
+@@ -211,6 +214,8 @@
+   enddo
+ endif
+   
++#include "opsplit_export_begin.inc"
++
+ rhs_ij_1   = 0.d0 ; rhs_ij_2   = 0.d0 ; rhs_ij_3   = 0.d0 ; rhs_ij_4   = 0.d0 ; rhs_ij_5   = 0.d0 ; rhs_ij_6   = 0.d0 ; rhs_ij_7   = 0.d0
+ rhs_ij_1_k = 0.d0 ; rhs_ij_2_k = 0.d0 ; rhs_ij_3_k = 0.d0 ; rhs_ij_4_k = 0.d0 ; rhs_ij_5_k = 0.d0 ; rhs_ij_6_k = 0.d0 ; rhs_ij_7_k = 0.d0
+ rhs_stab_1 = 0.d0 ; rhs_stab_2 = 0.d0 ; rhs_stab_3 = 0.d0 ; rhs_stab_4 = 0.d0 ; rhs_stab_5 = 0.d0 ; rhs_stab_6 = 0.d0 ; rhs_stab_7 = 0.d0
+@@ -1023,6 +1028,8 @@
+             !###################################################################################################
+             !#  RHS equations end                                                                                  #
+             !###################################################################################################
++
++#include "opsplit_export_point.inc"
+ 
+             if (use_fft) then
+ 
+@@ -2220,6 +2227,8 @@
+   enddo ! j loop n_degrees
+ enddo ! i loop (n_vertex)
+ 
++#include "opsplit_export_finish.inc"
++
+ if (.NOT. use_fft) return
+ 
+ ELM = 0.5d0 * ELM
+--- /dev/null
++++ b/models/model303/opsplit_export_state.inc
+@@ -0,0 +1,6 @@
++! Diagnostic-only model303 export. This does not implement the native backend.
++integer, save :: opsplit_export_element_id = 0
++integer, save :: opsplit_export_unit = 0
++logical, save :: opsplit_export_initialized = .false.
++logical, save :: opsplit_export_enabled = .false.
++logical, allocatable, save :: opsplit_export_seen(:)
+--- /dev/null
++++ b/models/model303/opsplit_export_declarations.inc
+@@ -0,0 +1,7 @@
++logical :: opsplit_export_active
++integer :: opsplit_local, opsplit_rank, opsplit_status, opsplit_i, opsplit_j
++character(len=64) :: opsplit_switch, opsplit_rank_text, opsplit_filename
++real*8 :: opsplit_points(2,n_gauss,n_gauss), opsplit_weights(n_gauss,n_gauss)
++real*8 :: opsplit_values(7,n_gauss,n_gauss), opsplit_grad(2,7,n_gauss,n_gauss)
++real*8 :: opsplit_basis(16,n_gauss,n_gauss), opsplit_basis_grad(2,16,n_gauss,n_gauss)
++real*8 :: opsplit_selected(2,n_gauss,n_gauss), opsplit_weak(2,16)
+--- /dev/null
++++ b/models/model303/opsplit_export_begin.inc
+@@ -0,0 +1,40 @@
++! One immutable pre-update frame per rank; no native coefficient is changed.
++if (.not. opsplit_export_initialized) then
++  call get_environment_variable('MASTU_NATIVE_EXPORT', opsplit_switch, status=opsplit_status)
++  opsplit_export_enabled = opsplit_status == 0 .and. trim(opsplit_switch) == '1'
++  opsplit_export_initialized = .true.
++  if (opsplit_export_enabled) then
++    if (n_tor /= 1 .or. n_plane /= 1 .or. n_degrees /= 4 .or. n_var /= 7) &
++      error stop 'OpsSplit native export requires n=0 bicubic model303'
++    call get_environment_variable('OMP_NUM_THREADS', opsplit_switch, status=opsplit_status)
++    if (opsplit_status /= 0 .or. trim(opsplit_switch) /= '1') &
++      error stop 'OpsSplit native export requires one OpenMP thread'
++    allocate(opsplit_export_seen(n_elements_max))
++    opsplit_export_seen = .false.
++    call get_environment_variable('OMPI_COMM_WORLD_RANK', opsplit_rank_text, status=opsplit_status)
++    if (opsplit_status /= 0) error stop 'OpsSplit native export needs explicit MPI rank'
++    read(opsplit_rank_text,*) opsplit_rank
++    write(opsplit_filename,'(A,I6.6,A)') 'opsplit-native-rank-',opsplit_rank,'.bin'
++    open(newunit=opsplit_export_unit,file=trim(opsplit_filename),access='stream', &
++         form='unformatted',status='new',action='write')
++    write(opsplit_export_unit) 3031601, n_gauss, n_var, 16, 4, 8, 1, opsplit_rank
++  endif
++endif
++opsplit_export_active = .false.
++if (opsplit_export_enabled .and. index_now == 1) then
++  if (opsplit_export_element_id < 1 .or. opsplit_export_element_id > n_elements_max) &
++    error stop 'OpsSplit native export invalid element identity'
++  opsplit_export_active = .not. opsplit_export_seen(opsplit_export_element_id)
++  if (opsplit_export_active) then
++    if (tid /= 1 .or. use_fft .or. i_tor_min /= 1 .or. i_tor_max /= 1) &
++      error stop 'OpsSplit native export unsupported assembly branch'
++    ! RHS/dt is a spatial quantity only when history and dt-dependent TG vanish.
++    if (zeta /= 0.d0 .or. any(TGNUM /= 0.d0) .or. tstep <= 0.d0) &
++      error stop 'OpsSplit native export needs zero history and zero Taylor-Galerkin'
++    if (any(HHZ_p /= 0.d0) .or. HHZ(1,1) /= 1.d0) &
++      error stop 'OpsSplit native export toroidal normalization is not supported'
++    if (any([(nodes(opsplit_i)%constrained,opsplit_i=1,n_vertex_max)])) &
++      error stop 'OpsSplit native export needs native constraint elimination'
++    opsplit_weak = 0.d0
++  endif
++endif
+--- /dev/null
++++ b/models/model303/opsplit_export_point.inc
+@@ -0,0 +1,29 @@
++if (opsplit_export_active) then
++  if (xjac <= 0.d0) error stop 'OpsSplit native export folded geometry'
++  opsplit_local = n_degrees*(i-1)+j
++  opsplit_basis(opsplit_local,ms,mt) = v
++  opsplit_basis_grad(:,opsplit_local,ms,mt) = [v_x,v_y]
++  if (i == 1 .and. j == 1) then
++    opsplit_points(:,ms,mt) = [BigR,y_g(ms,mt)]
++    opsplit_weights(ms,mt) = xjac*wst
++    opsplit_values(:,ms,mt) = [ps0,u0,zj0,w0,r0,T0,Vpar0]
++    opsplit_grad(:,:,ms,mt) = reshape([ps0_x,ps0_y,u0_x,u0_y,zj0_x,zj0_y, &
++      w0_x,w0_y,r0_x,r0_y,T0_x,T0_y,Vpar0_x,Vpar0_y],[2,7])
++    opsplit_selected(1,ms,mt) = BigR*(r0_s*u0_t-r0_t*u0_s)/xjac + 2.d0*r0*u0_y &
++      - Vpar0*(r0_s*ps0_t-r0_t*ps0_s)/(BigR*xjac) &
++      - r0*(Vpar0_s*ps0_t-Vpar0_t*ps0_s)/(BigR*xjac)
++    opsplit_selected(2,ms,mt) = BigR*(r0*(T0_s*u0_t-T0_t*u0_s) &
++      + T0*(r0_s*u0_t-r0_t*u0_s))/xjac + 2.d0*GAMMA*r0*T0*u0_y &
++      - Vpar0*(r0*(T0_s*ps0_t-T0_t*ps0_s)+T0*(r0_s*ps0_t-r0_t*ps0_s))/(BigR*xjac) &
++      - GAMMA*r0*T0*(Vpar0_s*ps0_t-Vpar0_t*ps0_s)/(BigR*xjac)
++  endif
++  ! Independently retain the original source-coordinate selected weak terms.
++  opsplit_weak(1,opsplit_local) = opsplit_weak(1,opsplit_local) + wst*( &
++      v*BigR**2*(r0_s*u0_t-r0_t*u0_s) + v*2.d0*BigR*r0*u0_y*xjac &
++      - v*Vpar0*(r0_s*ps0_t-r0_t*ps0_s) - v*r0*(Vpar0_s*ps0_t-Vpar0_t*ps0_s))
++  opsplit_weak(2,opsplit_local) = opsplit_weak(2,opsplit_local) + wst*( &
++      v*r0*BigR**2*(T0_s*u0_t-T0_t*u0_s) + v*T0*BigR**2*(r0_s*u0_t-r0_t*u0_s) &
++      + v*r0*T0*2.d0*GAMMA*BigR*u0_y*xjac &
++      - v*r0*Vpar0*(T0_s*ps0_t-T0_t*ps0_s) - v*T0*Vpar0*(r0_s*ps0_t-r0_t*ps0_s) &
++      - v*r0*T0*GAMMA*(Vpar0_s*ps0_t-Vpar0_t*ps0_s))
++endif
+--- /dev/null
++++ b/models/model303/opsplit_export_finish.inc
+@@ -0,0 +1,12 @@
++if (opsplit_export_active) then
++  write(opsplit_export_unit) opsplit_export_element_id, element%vertex, &
++    ((nodes(opsplit_i)%index(opsplit_j),opsplit_j=1,4),opsplit_i=1,4), &
++    (nodes(opsplit_i)%boundary,opsplit_i=1,4), &
++    (merge(1,0,nodes(opsplit_i)%axis_node),opsplit_i=1,4), &
++    (merge(1,0,nodes(opsplit_i)%constrained),opsplit_i=1,4)
++  write(opsplit_export_unit) t_now, tstep, theta, zeta, GAMMA, HHZ(1,1)
++  write(opsplit_export_unit) opsplit_points, opsplit_weights, opsplit_values, opsplit_grad, &
++    opsplit_basis, opsplit_basis_grad, opsplit_selected, opsplit_weak, RHS, ELM
++  flush(opsplit_export_unit)
++  opsplit_export_seen(opsplit_export_element_id) = .true.
++endif
+--- a/matrix/construct_matrix_mod.f90
++++ b/matrix/construct_matrix_mod.f90
+@@ -20,7 +20,7 @@
+     USE data_structure,           only : type_element, type_node, type_node_list, thread_struct, make_deep_copy_node, init_node
+     use mod_boundary_matrix_open, only : boundary_matrix_open
+     use mod_elt_matrix,           only : element_matrix
+-    use mod_elt_matrix_fft,       only : element_matrix_fft
++    use mod_elt_matrix_fft,       only : element_matrix_fft, opsplit_export_element_id
+     use mpi_mod
+ 	
+     ! --- Routine parameters
+@@ -57,6 +57,8 @@
+     call MPI_COMM_RANK(MPI_COMM_WORLD, rank, ierr)
+     my_id = rank
+ #endif
++
++    opsplit_export_element_id = ielm
+ 
+     ! --- Call element_matrix
+     if ( ( (i_tor_min .eq. 1) .and. (i_tor_max .eq. n_tor) .and. (n_tor .ge. n_tor_fft_thresh) )   &

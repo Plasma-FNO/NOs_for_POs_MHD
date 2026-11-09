@@ -1,0 +1,42 @@
+{
+  "comparisons": [
+    {
+      "coarse": "baseline3",
+      "density_pressure_volume_integral_relative_differences": {
+        "density": 2.3364264808679838e-05,
+        "pressure": 4.530268588114418e-05
+      },
+      "fine": "baseline6",
+      "relative_l2_field_differences": {
+        "T": 0.0013936125350693259,
+        "Vpar": 0.04782261738057522,
+        "psi": 3.118523620013296e-05,
+        "rho": 0.0001351341305402576,
+        "u": 0.19286912964870778,
+        "w": 0.2202877209211029,
+        "zj": 0.0007934656327643187
+      }
+    },
+    {
+      "coarse": "baseline6",
+      "density_pressure_volume_integral_relative_differences": {
+        "density": 1.1696922442491887e-05,
+        "pressure": 2.2381247104942812e-05
+      },
+      "fine": "baseline12",
+      "relative_l2_field_differences": {
+        "T": 0.000677582886116053,
+        "Vpar": 0.014107284564228714,
+        "psi": 1.097499555759754e-05,
+        "rho": 4.2704794182695705e-05,
+        "u": 0.06282149972552552,
+        "w": 0.05328523476083784,
+        "zj": 0.0002406629542961439
+      }
+    }
+  ],
+  "gate_A_passed": false,
+  "quadrature_order": 8,
+  "scope": "Short unperturbed baseline timestep comparison only; no mesh/perturbation/label validation",
+  "time_seconds": 1.4059131112280784e-06
+}

@@ -1,0 +1,43 @@
+{
+  "created_utc": "2026-11-03T11:41:54.715922+00:00",
+  "authorization": "Explicit current user request: diagnose remaining discrepancies and run next refinement toward 1% spatial convergence",
+  "scope": "One capacity-build/regression/probe allocation, two conditional matched-horizon simulations, one dependent analysis",
+  "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+  "remaining_resource_hours": 26481732,
+  "monthly_remaining_resource_hours": 2531290,
+  "account": "fupa2_fauna",
+  "partition": "dcgp_fua_prod",
+  "probe": {
+    "allocations_max": 1,
+    "nodes": 1,
+    "mpi_ranks": 4,
+    "threads": 1,
+    "memory_GiB": 256,
+    "wall_seconds": 7200
+  },
+  "simulations": {
+    "allocations_max": 2,
+    "concurrent_max": 2,
+    "nodes_each": 1,
+    "mpi_ranks_each": 4,
+    "threads": 1,
+    "memory_GiB_each": 256,
+    "wall_seconds_each": 21600,
+    "process_timeout_seconds_each": 20400
+  },
+  "analysis": {
+    "allocations_max": 1,
+    "nodes": 1,
+    "cpus": 1,
+    "memory_GiB": 64,
+    "wall_seconds": 3600
+  },
+  "attempts_per_allocation": 1,
+  "compiler_processes_max": 2,
+  "cpu_core_hours_max": 57,
+  "node_hours_max": 15,
+  "conservative_local_resource_hours_max": 4096,
+  "billing_note": "Memory-weighted site resource-hours differ from allocated rank CPU-hours.",
+  "scientific_training_enabled": false,
+  "production_ensemble_enabled": false
+}

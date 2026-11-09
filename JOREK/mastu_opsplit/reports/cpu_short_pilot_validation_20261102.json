@@ -1,0 +1,187 @@
+{
+  "created_utc": "2026-11-02T20:19:52.054938+00:00",
+  "source_sha256": "3de4f5490906514ec081768179672ec18b287f6e023d2d852ad1a3273b7a696f",
+  "scope": "Short 1.406 microsecond paired pilot diagnostics; no accepted training trajectories",
+  "runs": {
+    "cpu_fine_mpi4_baseline96": {
+      "job_id": "2768143",
+      "historical_status": "completed",
+      "current_log_classification": "hdf5_error",
+      "health": {
+        "steps": 96,
+        "final_time_s": 1.4059131112280784e-06,
+        "restart_sha256": "95c50f6d65a8cdf64f35acc6d18620ba793b45d6cd7452db01bd4875ee17f49b"
+      },
+      "readable_finite_datasets": 131,
+      "stderr_sha256": "f144e6bf486a1843a98b64ae02ae6167d407bdc75754bfeeaa234d3084706fde",
+      "balances": {
+        "scope": "Native printed diagnostics, source communication/live_data.f90 and diagnostics/mod_integrals3D.f90; not independent weak residuals",
+        "energy_samples": 95,
+        "energy_relative_l2_mismatch": 0.9898705561507222,
+        "energy_max_absolute_mismatch_W": 299133873.565,
+        "particle_samples": 95,
+        "particle_relative_l2_mismatch": 0.003989576254463844,
+        "particle_max_absolute_mismatch_per_s": 9.685735599999833e+20,
+        "particle_formula": "dN/dt = total source - sum(outward boundary particle fluxes)",
+        "independent_balance_acceptance": false
+      }
+    },
+    "cpu_fine_perturbed96": {
+      "job_id": "2768153",
+      "historical_status": "completed",
+      "current_log_classification": "hdf5_error",
+      "health": {
+        "steps": 96,
+        "final_time_s": 1.4059131112280784e-06,
+        "restart_sha256": "6f156fe76643923e323f94ef33cf17cc25e6b255720673a96b47976d8b8b2411"
+      },
+      "readable_finite_datasets": 131,
+      "stderr_sha256": "ef0d98982922a4fb6b35a3071cdd8623f25883ea963dfa4aa6268be36195e351",
+      "balances": {
+        "scope": "Native printed diagnostics, source communication/live_data.f90 and diagnostics/mod_integrals3D.f90; not independent weak residuals",
+        "energy_samples": 95,
+        "energy_relative_l2_mismatch": 0.9901635161840467,
+        "energy_max_absolute_mismatch_W": 297853046.187,
+        "particle_samples": 95,
+        "particle_relative_l2_mismatch": 0.0039657903602694404,
+        "particle_max_absolute_mismatch_per_s": 9.680214569999904e+20,
+        "particle_formula": "dN/dt = total source - sum(outward boundary particle fluxes)",
+        "independent_balance_acceptance": false
+      }
+    }
+  },
+  "gate_A_passed": false,
+  "constraints_checked": false,
+  "mesh_convergence_checked": false,
+  "states": {
+    "baseline_initial": {
+      "restart_sha256": "0d172e8decfad130258735c2910bf8c5ab542c2b009e6351c4a0bf84a270b63f",
+      "metadata": {
+        "time_seconds": 0.0,
+        "steps": 0,
+        "quadrature_order": 8,
+        "mapping_status": "diagnostic_restart_only",
+        "expanded_nodal_dofs": 46324,
+        "canonical_native_dofs": 46203,
+        "native_dof_aliases_verified": true,
+        "minimum_signed_jacobian_m2": 6.314530488518828e-07,
+        "negative_jacobian_samples": 0,
+        "patch_ids_available": false,
+        "native_constraints_available": false
+      },
+      "sampled_min_density_temperature": [
+        0.009999999999804544,
+        9.999999999965152e-05
+      ],
+      "selected_density_pressure_rms_code_time_units": [
+        0.0,
+        0.0
+      ],
+      "selected_block_scope": "Source-derived local algebra diagnostic only; not validated native labels or advection/diffusion ratio"
+    },
+    "perturbed_initial": {
+      "restart_sha256": "73562cf08b49a391e29c902a82b40e9444597cdf3c4669b5bb75efdbc128e76a",
+      "metadata": {
+        "time_seconds": 0.0,
+        "steps": 0,
+        "quadrature_order": 8,
+        "mapping_status": "diagnostic_restart_only",
+        "expanded_nodal_dofs": 46324,
+        "canonical_native_dofs": 46203,
+        "native_dof_aliases_verified": true,
+        "minimum_signed_jacobian_m2": 6.314530488518828e-07,
+        "negative_jacobian_samples": 0,
+        "patch_ids_available": false,
+        "native_constraints_available": false
+      },
+      "sampled_min_density_temperature": [
+        0.009999999999804544,
+        9.999999999965152e-05
+      ],
+      "selected_density_pressure_rms_code_time_units": [
+        0.0,
+        0.0
+      ],
+      "selected_block_scope": "Source-derived local algebra diagnostic only; not validated native labels or advection/diffusion ratio"
+    },
+    "baseline_final": {
+      "restart_sha256": "95c50f6d65a8cdf64f35acc6d18620ba793b45d6cd7452db01bd4875ee17f49b",
+      "metadata": {
+        "time_seconds": 1.4059131112280784e-06,
+        "steps": 96,
+        "quadrature_order": 8,
+        "mapping_status": "diagnostic_restart_only",
+        "expanded_nodal_dofs": 46324,
+        "canonical_native_dofs": 46203,
+        "native_dof_aliases_verified": true,
+        "minimum_signed_jacobian_m2": 6.314530488518828e-07,
+        "negative_jacobian_samples": 0,
+        "patch_ids_available": false,
+        "native_constraints_available": false
+      },
+      "sampled_min_density_temperature": [
+        0.004365237968401823,
+        8.956931993377914e-05
+      ],
+      "selected_density_pressure_rms_code_time_units": [
+        0.00024699548751466364,
+        8.488076348192886e-07
+      ],
+      "selected_block_scope": "Source-derived local algebra diagnostic only; not validated native labels or advection/diffusion ratio"
+    },
+    "perturbed_final": {
+      "restart_sha256": "6f156fe76643923e323f94ef33cf17cc25e6b255720673a96b47976d8b8b2411",
+      "metadata": {
+        "time_seconds": 1.4059131112280784e-06,
+        "steps": 96,
+        "quadrature_order": 8,
+        "mapping_status": "diagnostic_restart_only",
+        "expanded_nodal_dofs": 46324,
+        "canonical_native_dofs": 46203,
+        "native_dof_aliases_verified": true,
+        "minimum_signed_jacobian_m2": 6.314530488518828e-07,
+        "negative_jacobian_samples": 0,
+        "patch_ids_available": false,
+        "native_constraints_available": false
+      },
+      "sampled_min_density_temperature": [
+        0.004358139964409339,
+        8.956760114704473e-05
+      ],
+      "selected_density_pressure_rms_code_time_units": [
+        0.0004544177750289055,
+        8.62645274723157e-06
+      ],
+      "selected_block_scope": "Source-derived local algebra diagnostic only; not validated native labels or advection/diffusion ratio"
+    }
+  },
+  "perturbation": {
+    "density": {
+      "initial_rms": 0.005186998298307533,
+      "final_rms": 0.004600120171990206,
+      "final_initial_rms_ratio": 0.8868559246474363,
+      "relative_l2_change_from_seed": 0.3182755867328429,
+      "baseline_relative_l2_drift": 0.02241736530667036,
+      "initial_peak": 0.04954025011466223,
+      "final_peak": 0.04080446811306093
+    },
+    "temperature": {
+      "initial_rms": 9.041625803591563e-05,
+      "final_rms": 6.89331457672075e-05,
+      "final_initial_rms_ratio": 0.7623976844941481,
+      "relative_l2_change_from_seed": 0.5088650865485603,
+      "baseline_relative_l2_drift": 0.026264558488880044,
+      "initial_peak": 0.000884729410841778,
+      "final_peak": 0.00047981046606977024
+    },
+    "pressure": {
+      "initial_rms": 0.00018140151883416734,
+      "final_rms": 0.0001395793872478608,
+      "final_initial_rms_ratio": 0.7694499370507517,
+      "relative_l2_change_from_seed": 0.3153147812400515,
+      "baseline_relative_l2_drift": 0.0059993603527376295,
+      "initial_peak": 0.0018021397458890531,
+      "final_peak": 0.0011779245447454852
+    }
+  }
+}

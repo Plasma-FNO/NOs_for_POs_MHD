@@ -1,0 +1,29 @@
+{
+  "as_of_utc": "2026-11-02T17:46:22.417686+00:00",
+  "integrated_tests": {
+    "passed": 62,
+    "skipped": 0,
+    "wall_seconds": 17.676,
+    "xml": "reports/cpu_continuation_native_tests.xml",
+    "python": "/pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/bin/python",
+    "command": "PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/bin/python -m pytest -q --junitxml=reports/cpu_continuation_native_tests.xml",
+    "failures": 0
+  },
+  "upstream_selected_tests": {
+    "deselected": 57,
+    "passed": 23,
+    "wall_seconds": 55.96
+  },
+  "upstream_tests_evidence": "reports/validation_final.json; source unchanged, not rerun in this continuation",
+  "scientific_gates_passed": [],
+  "cpu_continuation_record": "reports/cpu_continuation_20261102.json",
+  "validation_scope": "Software tests; not physical acceptance or a scientific training result",
+  "one_page_report_tests": {
+    "passed": 7,
+    "failed": 0,
+    "wall_seconds": 2.36,
+    "xml": "reports/cpu_continuation_paper_tests.xml",
+    "command": "PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 PYTHONDONTWRITEBYTECODE=1 MPLCONFIGDIR=/tmp/opsplit-paper-matplotlib OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/bin/python -m pytest -q Paper/results_one_page/test_build.py",
+    "scope": "Report overflow/source protection and current JOREK evidence; not scientific acceptance"
+  }
+}

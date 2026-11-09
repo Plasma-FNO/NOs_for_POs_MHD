@@ -1,0 +1,72 @@
+{
+  "scope": "Offline interior-vertex handle trials; no native state or acceptance is changed.",
+  "mesh": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/scaling8_capacity400_20261104/probe3/jorek_grid.h5",
+  "mesh_sha256": "79f9bd6916472317c957a09448c538c21d1d25c4a3456a73ac141510971aabd4",
+  "source_sha256": "da7f4f9f1c371329eb077d0e0f4322c2af4841b9a64d4bdc8d7ae8c9d19178b6",
+  "original_q8_fold_count": 3,
+  "original_q8_fold_elements": [
+    174177,
+    257387,
+    257391
+  ],
+  "eligible_interior_nodes": 30,
+  "affected_cells": 52,
+  "trials": [
+    {
+      "factor": 1.0,
+      "minimum_affected_q16_jacobian_m2": -5.314884932170727e-06,
+      "remaining_affected_q16_folds": 3
+    },
+    {
+      "factor": 0.8,
+      "minimum_affected_q16_jacobian_m2": -3.7733135793898124e-06,
+      "remaining_affected_q16_folds": 4
+    },
+    {
+      "factor": 0.6400000000000001,
+      "minimum_affected_q16_jacobian_m2": -6.403732713319644e-06,
+      "remaining_affected_q16_folds": 4
+    },
+    {
+      "factor": 0.5120000000000001,
+      "minimum_affected_q16_jacobian_m2": -9.038437161794632e-06,
+      "remaining_affected_q16_folds": 5
+    },
+    {
+      "factor": 0.4096000000000001,
+      "minimum_affected_q16_jacobian_m2": -1.1148149314539559e-05,
+      "remaining_affected_q16_folds": 5
+    },
+    {
+      "factor": 0.3276800000000001,
+      "minimum_affected_q16_jacobian_m2": -1.2837166136867287e-05,
+      "remaining_affected_q16_folds": 5
+    },
+    {
+      "factor": 0.2621440000000001,
+      "minimum_affected_q16_jacobian_m2": -1.4189177738821664e-05,
+      "remaining_affected_q16_folds": 5
+    },
+    {
+      "factor": 0.20971520000000007,
+      "minimum_affected_q16_jacobian_m2": -1.5271297832599542e-05,
+      "remaining_affected_q16_folds": 5
+    },
+    {
+      "factor": 0.1677721600000001,
+      "minimum_affected_q16_jacobian_m2": -1.6137320827444172e-05,
+      "remaining_affected_q16_folds": 5
+    },
+    {
+      "factor": 0.13421772800000006,
+      "minimum_affected_q16_jacobian_m2": -1.6830348451995217e-05,
+      "remaining_affected_q16_folds": 6
+    },
+    {
+      "factor": 0.10737418240000006,
+      "minimum_affected_q16_jacobian_m2": -1.738490445799988e-05,
+      "remaining_affected_q16_folds": 6
+    }
+  ],
+  "scientific_gates_passed": []
+}

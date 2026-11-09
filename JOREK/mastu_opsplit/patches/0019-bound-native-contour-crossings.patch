@@ -1,0 +1,45 @@
+--- a/grids/grid_utils/find_crossing_on_surface_piece.f90
++++ b/grids/grid_utils/find_crossing_on_surface_piece.f90
+@@ -189,12 +189,15 @@
+       !if (i .eq. ntrial) write(*,'(A,i3,4e16.8)') ' newton   : ',i,errf,errx,x
+ 
+       if (errf .le. tolf) then
++        ! A root of the extrapolated cubic is not a crossing of these pieces.
++        if (any(abs(x) > 1.d0 + 1.d-10)) exit
+   
+         t_flux = x(1)
+         t_tht  = x(2)
+   
+         call CUB1D(rr1, drr1, rr2, drr2, t_flux, r_flux, dr_flux)
+         call CUB1D(ss1, dss1, ss2, dss2, t_flux, s_flux, ds_flux)
++        if (min(r_flux,s_flux) < -1.d-10 .or. max(r_flux,s_flux) > 1.d0+1.d-10) exit
+   
+         R_out     = 0.5d0*(RR_tht + RR_flux)
+         Z_out     = 0.5d0*(ZZ_tht + ZZ_flux)
+@@ -229,23 +232,9 @@
+       x_previous(2) = x(2)
+   
+   
+-      if (errx .le. tolx) then
+-
+-        t_flux = x(1)
+-        t_tht  = x(2)
+-  
+-        call CUB1D(rr1, drr1, rr2, drr2, t_flux, r_flux, dr_flux)
+-        call CUB1D(ss1, dss1, ss2, dss2, t_flux, s_flux, ds_flux)
+-  
+-        R_out     = 0.5d0*(RR_tht + RR_flux)
+-        Z_out     = 0.5d0*(ZZ_tht + ZZ_flux)
+-  
+-        !write(*,'(A,i3,4e16.8)') ' newton (2) : ',i,errf,errx,x
+-  
+-        ifail = 0
+-        return
+-      endif
+-      
++      ! A small Newton step alone does not establish a small crossing residual.
++      ! Evaluate the updated point at the next iteration before accepting it.
++
+       if (gofast) then
+         if ( (i .gt. 5) .and. (errx .gt. tol_far) ) exit
+       endif

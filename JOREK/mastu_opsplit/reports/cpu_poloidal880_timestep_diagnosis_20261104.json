@@ -1,0 +1,311 @@
+{
+  "scope": "One-step restart diagnosis only; no spatial or restart-continuation qualification.",
+  "manifest_sha256": "8fa71fe476b1d71526e2a71cbf6e8d8eedd5722ac19844c60708d0d630ffd1eb",
+  "cases": {
+    "dt1": {
+      "dt": 0.0625,
+      "status": "failed_validation",
+      "error": "nonfinite fields or nonpositive sampled density/temperature",
+      "binary_sha256": "38d428235a842b7a6f8fb256f81ddfed2a1c12355c2d4e322f12e27ef6af1ec9",
+      "initial_sha256": "3dd06e24d97f65a55a225dd835761343a4aa435680dc5e1aa8469cd92a37ced4",
+      "final_sha256": "8d2f8b6e41deaaf2315747616a96124a2906441fd450a6222e4b5471eb524ec0",
+      "linear_errors": [
+        {
+          "refinements": 0,
+          "omega1": 2.2090570480717173e-15,
+          "omega2": 2.995824293871311e-21
+        }
+      ],
+      "printed_minima": {
+        "rho": -0.1088736,
+        "T": -0.1799899
+      },
+      "largest_nodal_parallel_velocities": [
+        {
+          "node": 128903,
+          "RZ": [
+            1.5551043,
+            -0.12137861362489295
+          ],
+          "boundary": 15,
+          "Vpar": 12.056235184437035,
+          "initial_psi_t": -0.12664450962485413
+        },
+        {
+          "node": 128905,
+          "RZ": [
+            1.5551043000000002,
+            -0.1139920823564651
+          ],
+          "boundary": 15,
+          "Vpar": 8.577728318941617,
+          "initial_psi_t": -0.11848570672893445
+        },
+        {
+          "node": 128902,
+          "RZ": [
+            1.5551043,
+            -0.1250818516720085
+          ],
+          "boundary": 15,
+          "Vpar": 4.739741735115078,
+          "initial_psi_t": -0.1310578683309419
+        },
+        {
+          "node": 128906,
+          "RZ": [
+            1.5551043,
+            -0.11030812303268563
+          ],
+          "boundary": 15,
+          "Vpar": 3.5454896115393724,
+          "initial_psi_t": -0.11462643195013351
+        },
+        {
+          "node": 128577,
+          "RZ": [
+            1.5478726984432352,
+            -0.11793520715453593
+          ],
+          "boundary": 0,
+          "Vpar": 3.4010869063308813,
+          "initial_psi_t": -0.11744747442845525
+        },
+        {
+          "node": 128576,
+          "RZ": [
+            1.547840704409394,
+            -0.12163901963197098
+          ],
+          "boundary": 0,
+          "Vpar": 3.164775568564837,
+          "initial_psi_t": -0.12139465348219533
+        },
+        {
+          "node": 128578,
+          "RZ": [
+            1.547904082925851,
+            -0.11423777024109696
+          ],
+          "boundary": 0,
+          "Vpar": 2.9259196081300485,
+          "initial_psi_t": -0.11356130230998285
+        },
+        {
+          "node": 128575,
+          "RZ": [
+            1.5478083886419605,
+            -0.12534954637337056
+          ],
+          "boundary": 0,
+          "Vpar": 2.312293269798889,
+          "initial_psi_t": -0.12537684521938824
+        }
+      ]
+    },
+    "dt_half": {
+      "dt": 0.03125,
+      "status": "failed_validation",
+      "error": "nonfinite fields or nonpositive sampled density/temperature",
+      "binary_sha256": "38d428235a842b7a6f8fb256f81ddfed2a1c12355c2d4e322f12e27ef6af1ec9",
+      "initial_sha256": "3dd06e24d97f65a55a225dd835761343a4aa435680dc5e1aa8469cd92a37ced4",
+      "final_sha256": "b0bd07cb6881a6be09375cf906a6993bc05c5409bc00f6cd8bf124fa6dcead43",
+      "linear_errors": [
+        {
+          "refinements": 0,
+          "omega1": 1.4850792543399057e-14,
+          "omega2": 6.033478905003766e-21
+        }
+      ],
+      "printed_minima": {
+        "rho": -0.2518099,
+        "T": -0.1392878
+      },
+      "largest_nodal_parallel_velocities": [
+        {
+          "node": 128903,
+          "RZ": [
+            1.5551043,
+            -0.12137861362489295
+          ],
+          "boundary": 15,
+          "Vpar": -23.958006242822556,
+          "initial_psi_t": -0.12664450962485413
+        },
+        {
+          "node": 128905,
+          "RZ": [
+            1.5551043000000002,
+            -0.1139920823564651
+          ],
+          "boundary": 15,
+          "Vpar": -21.927224483912948,
+          "initial_psi_t": -0.11848570672893445
+        },
+        {
+          "node": 128577,
+          "RZ": [
+            1.5478726984432352,
+            -0.11793520715453593
+          ],
+          "boundary": 0,
+          "Vpar": -11.608195005120255,
+          "initial_psi_t": -0.11744747442845525
+        },
+        {
+          "node": 128576,
+          "RZ": [
+            1.547840704409394,
+            -0.12163901963197098
+          ],
+          "boundary": 0,
+          "Vpar": -8.298676043906022,
+          "initial_psi_t": -0.12139465348219533
+        },
+        {
+          "node": 128578,
+          "RZ": [
+            1.547904082925851,
+            -0.11423777024109696
+          ],
+          "boundary": 0,
+          "Vpar": -8.193103444192268,
+          "initial_psi_t": -0.11356130230998285
+        },
+        {
+          "node": 128902,
+          "RZ": [
+            1.5551043,
+            -0.1250818516720085
+          ],
+          "boundary": 15,
+          "Vpar": -8.108650027209547,
+          "initial_psi_t": -0.1310578683309419
+        },
+        {
+          "node": 128906,
+          "RZ": [
+            1.5551043,
+            -0.11030812303268563
+          ],
+          "boundary": 15,
+          "Vpar": -7.24451775989928,
+          "initial_psi_t": -0.11462643195013351
+        },
+        {
+          "node": 128575,
+          "RZ": [
+            1.5478083886419605,
+            -0.12534954637337056
+          ],
+          "boundary": 0,
+          "Vpar": -5.263829663362952,
+          "initial_psi_t": -0.12537684521938824
+        }
+      ]
+    },
+    "dt_quarter": {
+      "dt": 0.015625,
+      "status": "failed_validation",
+      "error": "nonfinite fields or nonpositive sampled density/temperature",
+      "binary_sha256": "38d428235a842b7a6f8fb256f81ddfed2a1c12355c2d4e322f12e27ef6af1ec9",
+      "initial_sha256": "3dd06e24d97f65a55a225dd835761343a4aa435680dc5e1aa8469cd92a37ced4",
+      "final_sha256": "6d974c66cab6dc1b44802bfb6f88d1d8702df5ad72e150416f60aac627ec992e",
+      "linear_errors": [
+        {
+          "refinements": 0,
+          "omega1": 4.732018704950311e-13,
+          "omega2": 1.1092728290558043e-19
+        }
+      ],
+      "printed_minima": {
+        "rho": -1.291246,
+        "T": -6.403378
+      },
+      "largest_nodal_parallel_velocities": [
+        {
+          "node": 128903,
+          "RZ": [
+            1.5551043,
+            -0.12137861362489295
+          ],
+          "boundary": 15,
+          "Vpar": 253.90334988836582,
+          "initial_psi_t": -0.12664450962485413
+        },
+        {
+          "node": 128905,
+          "RZ": [
+            1.5551043000000002,
+            -0.1139920823564651
+          ],
+          "boundary": 15,
+          "Vpar": 205.71304510049208,
+          "initial_psi_t": -0.11848570672893445
+        },
+        {
+          "node": 128902,
+          "RZ": [
+            1.5551043,
+            -0.1250818516720085
+          ],
+          "boundary": 15,
+          "Vpar": 54.28963314691549,
+          "initial_psi_t": -0.1310578683309419
+        },
+        {
+          "node": 128906,
+          "RZ": [
+            1.5551043,
+            -0.11030812303268563
+          ],
+          "boundary": 15,
+          "Vpar": 43.757544269823356,
+          "initial_psi_t": -0.11462643195013351
+        },
+        {
+          "node": 128576,
+          "RZ": [
+            1.547840704409394,
+            -0.12163901963197098
+          ],
+          "boundary": 0,
+          "Vpar": 41.27873020565373,
+          "initial_psi_t": -0.12139465348219533
+        },
+        {
+          "node": 128578,
+          "RZ": [
+            1.547904082925851,
+            -0.11423777024109696
+          ],
+          "boundary": 0,
+          "Vpar": 38.46465942494537,
+          "initial_psi_t": -0.11356130230998285
+        },
+        {
+          "node": 128577,
+          "RZ": [
+            1.5478726984432352,
+            -0.11793520715453593
+          ],
+          "boundary": 0,
+          "Vpar": 36.74121714378598,
+          "initial_psi_t": -0.11744747442845525
+        },
+        {
+          "node": 128575,
+          "RZ": [
+            1.5478083886419605,
+            -0.12534954637337056
+          ],
+          "boundary": 0,
+          "Vpar": 24.817142710070303,
+          "initial_psi_t": -0.12537684521938824
+        }
+      ]
+    }
+  },
+  "scientific_gates_passed": [],
+  "conclusion": "All three timesteps lose density/temperature positivity on step one. Reducing dt is not a remedy in these diagnostics. Largest Vpar is near the straight outer wall R=1.5551043, Z=-0.12; initial tangential flux derivative there is not near zero. Stronger linear scaling is being tested separately."
+}

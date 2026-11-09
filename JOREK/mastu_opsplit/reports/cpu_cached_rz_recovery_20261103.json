@@ -1,0 +1,234 @@
+{
+  "created_utc": "2026-11-02T23:13:38.531572+00:00",
+  "status": "failed_validation",
+  "scope": "Exactly one recovery allocation: build patch 0010, ordinary and cached eight-step parity, then guarded three-step refined probe",
+  "budget_record": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_cached_rz_recovery_authorization_20261103.json",
+  "budget_record_sha256": "3aeafcee0242a0c50f24d13c07f9bdc778c43478bdf79373c86dcde8b581ab77",
+  "parent_source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/contour_capacity_fix_20261102/source",
+  "parent_binary_sha256": "dc6b8e983b64a85329323d856589a0518df1e276d606bbae926f61f07646f909",
+  "patch": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/patches/0010-initialize-cached-rz-boundary-mode.patch",
+  "patch_sha256": "85c7baf61bdfae276a3275ae311d830a9236f1c0a36a432679fa1de0ba023fa0",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/cached_rz_recovery_20261103",
+  "source_directory": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/cached_rz_recovery_20261103/source",
+  "worker_sha256": "152624e4df1e061ad797f62eb582cd426bfa7edc85882b59fb2140885d051e7e",
+  "preparation_source_sha256": "7e4c3577d78460e7e183a9ec4a3f1cbcc967263ae8843a0791621ea369de9989",
+  "input_hashes": {
+    "ordinary8/input": "9fb7cf931e463601ab46d45658895bab8301951222627051995aedd6d17a7d65",
+    "ordinary8/eqdsk.dat": "ac787dd266a9b4b93ccdadf9883c9d97a115e7dd9bb5bd3f724321576883bf4e",
+    "cached8/input": "8f1ba8ab863c2bc7630989c32103d1fb242fde98daf78587a710fdfd3fe510ce",
+    "cached8/jorek_equil_rz.h5": "e59091e6ef0e893a89f9f1d11a097b01ddc6ce306708ef5c1eb7cfba6ed35627",
+    "cached8/eqdsk.dat": "ac787dd266a9b4b93ccdadf9883c9d97a115e7dd9bb5bd3f724321576883bf4e",
+    "refined3/jorek_equil_rz.h5": "e59091e6ef0e893a89f9f1d11a097b01ddc6ce306708ef5c1eb7cfba6ed35627",
+    "refined3/input": "8d9986bb889e7dcec1018d177de57218e962395fa7755e6729278d1113a6f957",
+    "refined3/eqdsk.dat": "ac787dd266a9b4b93ccdadf9883c9d97a115e7dd9bb5bd3f724321576883bf4e",
+    "worker.py": "152624e4df1e061ad797f62eb582cd426bfa7edc85882b59fb2140885d051e7e",
+    "reference8.h5": "d0b799c39a138ffb8ba28d79af36b30556671337f6241c14b0e1fffdc63a7e9d",
+    "parity_protocol.json": "ea1ab92f1fc1c4ffa1e9fd0f60cd691c661800e11a88ccd17596c4d9c048f92b",
+    "jorek-env.sh": "73cbfa45446945116a6829eee662fb099ed98a8008dc18a8ee6f5e6965422bab",
+    "source/jorek2_main.f90": "05d733f7b1d62d4974eb88b7919fbf375fbd0e75034dcc7193e66bed6274ce1d"
+  },
+  "requested_cpu_core_hours": 8,
+  "requested_node_hours": 2,
+  "scientific_gates_passed": [],
+  "stage_limits_s": {
+    "build": 300,
+    "ordinary8": 600,
+    "cached8": 600,
+    "refined3": 5400
+  },
+  "ordinary_parity": "Exact fields, geometry, indices, times and energies",
+  "cached_parity": "Frozen q8 field/gradient protocol; exact geometry, time and steps",
+  "patch_application_stdout": "patching file jorek2_main.f90\n",
+  "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_cached_rz_recovery_20261103.sbatch",
+  "script_sha256": "50e4a13d305e79b8155a4974109567b7cda790f605677bb8be48ac6cbb74d96e",
+  "scheduler_preflight": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "sbatch: Job 2768488 to start at 2026-11-03T00:22:07 a using 4 processors on nodes r350c05s10 in partition dcgp_fua_prod\n"
+  },
+  "submission": {
+    "command": [
+      "sbatch",
+      "--parsable",
+      "--chdir",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/cached_rz_recovery_20261103",
+      "--output",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/cached_rz_recovery_20261103/batch-%j.out",
+      "--error",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/cached_rz_recovery_20261103/batch-%j.err",
+      "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_cached_rz_recovery_20261103.sbatch"
+    ],
+    "returncode": 0,
+    "stdout": "2768489\n",
+    "stderr": ""
+  },
+  "job_id": "2768489",
+  "submitted_utc": "2026-11-02T23:14:07.967298+00:00",
+  "ledger_before_recovery": {
+    "actual_hpc_cpu_core_hours": 6.862222222222222,
+    "actual_hpc_node_hours": 2.02,
+    "simulation_jobs_submitted": 38,
+    "scientific_jobs_submitted": 38,
+    "development_jobs_with_accounting": 47
+  },
+  "accounting": {
+    "state": "FAILED",
+    "elapsed_seconds": 613,
+    "allocated_cpus": 4,
+    "allocated_nodes": 1,
+    "exit_code": "1:0",
+    "alloc_tres": "billing=4,cpu=4,mem=128G,node=1",
+    "partition": "dcgp_fua_prod"
+  },
+  "scheduler_state": "FAILED",
+  "as_of_utc": "2026-11-03T09:00:43.819473+00:00",
+  "build_status": "compiled_and_linked",
+  "binary_sha256": "cf7e1c9965d14e8bf6a45e15dfd2257cac25c983b00f22ea2232d8d7c027bc52",
+  "result": {
+    "status": "failed_validation",
+    "stages": [
+      {
+        "stage": "ordinary8",
+        "returncode": 0,
+        "status": "completed",
+        "wall_seconds": 159.73752844810952,
+        "binary_sha256": "cf7e1c9965d14e8bf6a45e15dfd2257cac25c983b00f22ea2232d8d7c027bc52",
+        "scientific_gates_passed": [],
+        "health": {
+          "steps": 8,
+          "final_time_s": 2.343188518713464e-07,
+          "restart_sha256": "f283482f668ad95192a0d5742a44a5c860805dc4d6a3886b56636b5bde712c4e"
+        },
+        "parity": {
+          "exact_reference_arrays": {
+            "x": true,
+            "values": true,
+            "vertex": true,
+            "size": true,
+            "boundary": true,
+            "constrained": true,
+            "n_sons": true,
+            "xtime": true,
+            "energies": true
+          },
+          "passed": true
+        }
+      },
+      {
+        "stage": "cached8",
+        "returncode": 0,
+        "status": "completed",
+        "wall_seconds": 119.95264752698131,
+        "binary_sha256": "cf7e1c9965d14e8bf6a45e15dfd2257cac25c983b00f22ea2232d8d7c027bc52",
+        "scientific_gates_passed": [],
+        "health": {
+          "steps": 8,
+          "final_time_s": 2.343188518713464e-07,
+          "restart_sha256": "c11b3ddf1f89154b55e1659ee996eb305f1fce83360fe30a470024aef44da857"
+        },
+        "parity": {
+          "exact_reference_arrays": {
+            "x": true,
+            "values": true,
+            "vertex": true,
+            "size": true,
+            "boundary": true,
+            "constrained": true,
+            "n_sons": true,
+            "xtime": true,
+            "energies": true
+          },
+          "passed": true,
+          "metrics": {
+            "field": {
+              "absolute_rms_errors": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "reference_rms": [
+                0.04383493098866354,
+                1.0992853389236824e-05,
+                0.4665273725802755,
+                0.002147163683620754,
+                0.5470197115336213,
+                0.006166760035207791,
+                0.006530480841968516
+              ],
+              "tolerances": [
+                4.383593098866354e-08,
+                1.1992853389236824e-11,
+                4.6652837258027544e-07,
+                2.1481636836207536e-09,
+                5.470207115336213e-07,
+                6.167760035207791e-09,
+                6.531480841968516e-09
+              ],
+              "passed": [
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+              ]
+            },
+            "gradient": {
+              "absolute_rms_errors": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "reference_rms": [
+                0.20703282931596165,
+                0.00013695367486794794,
+                12.823139154431388,
+                0.05037335556535655,
+                5.24712734913534,
+                0.02622573783224263,
+                0.14959942462971165
+              ],
+              "tolerances": [
+                2.0703382931596165e-07,
+                1.3795367486794794e-10,
+                1.2823140154431386e-05,
+                5.0374355565356544e-08,
+                5.24712834913534e-06,
+                2.622673783224263e-08,
+                1.4960042462971166e-07
+              ],
+              "passed": [
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+              ]
+            }
+          }
+        }
+      },
+      {
+        "stage": "refined3",
+        "returncode": 139,
+        "status": "failed_validation",
+        "wall_seconds": 310.17600335297175,
+        "binary_sha256": "cf7e1c9965d14e8bf6a45e15dfd2257cac25c983b00f22ea2232d8d7c027bc52",
+        "scientific_gates_passed": [],
+        "error": "exit_nonzero"
+      }
+    ],
+    "scientific_gates_passed": []
+  }
+}

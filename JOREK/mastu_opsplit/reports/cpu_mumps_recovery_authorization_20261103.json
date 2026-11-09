@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-11-03T09:01:39.044519+00:00",
+  "approval_source": "Explicit user: Can you diagnose and fix the MUMPS crash, then rerun the refined three-step probe?",
+  "scope": "One MUMPS recovery allocation: build patch 0011, ordinary/cached eight-step parity, then guarded refined three-step probe",
+  "slurm_account": "fupa2_fauna",
+  "partition": "dcgp_fua_prod",
+  "budget_account": "FUPA2_FAUNA",
+  "command": [
+    "saldo",
+    "-b",
+    "--dcgp",
+    "-n"
+  ],
+  "selected_raw_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+  "remaining_local_resource_hours": 26481732,
+  "monthly_remaining_local_resource_hours": 2531290,
+  "billing_note": "Shared project resource-hours include memory; requested rank CPU-hours differ from final site billing.",
+  "job_submissions_max": 1,
+  "nodes": 1,
+  "mpi_ranks": 4,
+  "omp_threads": 1,
+  "memory_GiB": 128,
+  "wall_seconds": 7200,
+  "attempts_per_stage": 1,
+  "requested_cpu_core_hours_max": 8,
+  "requested_node_hours_max": 2,
+  "conservative_local_resource_hours_max": 512,
+  "compiler_processes_max": 2,
+  "scientific_training_enabled": false,
+  "production_ensemble_enabled": false,
+  "previous_phase_preserved": "reports/cpu_refinement_continuation_20261102.json",
+  "previous_recovery_preserved": "reports/cpu_cached_rz_recovery_20261103.json"
+}

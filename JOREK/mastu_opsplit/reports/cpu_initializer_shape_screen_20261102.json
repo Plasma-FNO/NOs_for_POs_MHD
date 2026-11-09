@@ -1,0 +1,184 @@
+{
+  "scope": "Preliminary shape screening using rounded native flux values; not enabled native runtime validation or physical acceptance",
+  "initializer_patch_sha256": "0a7b0c157f01eea52d05b3088016fa356bc6a7b8b56a9c256443cae2a4676df3",
+  "script_sha256": "8c278d316ddf31f7b2de5f3b38bf06d1291bc07a621c4c60a38cdb5e49360e59",
+  "flux_axis_screening": -0.10331,
+  "flux_boundary_screening": -0.01228,
+  "normalization_limitation": "Native stdout values rounded to 5 decimals; use conservative support margin and verify actual enabled runtime",
+  "candidates": [
+    {
+      "mesh": "axis_order_equilibrium",
+      "restart_sha256": "92548aea2966e2167048806afbfcdd76cb4053919d2f70cee21a4af5ae52a71e",
+      "center_m": [
+        0.95,
+        0.0
+      ],
+      "width_m": [
+        0.04,
+        0.08
+      ],
+      "amplitudes": [
+        0.05,
+        0.05
+      ],
+      "psin_taper": [
+        0.55,
+        0.75
+      ],
+      "relative_perturbation_interpolation_l2": [
+        0.17015281261931492,
+        0.1747567052898527
+      ],
+      "affected_elements": 84,
+      "affected_elements_psi_n_control_hull_max": 0.3609465836250489,
+      "affected_boundary_vertices": 0,
+      "rho_min_sampled": 0.006232397363124541,
+      "temperature_min_sampled": 8.847847940441061e-05
+    },
+    {
+      "mesh": "axis_order_equilibrium",
+      "restart_sha256": "92548aea2966e2167048806afbfcdd76cb4053919d2f70cee21a4af5ae52a71e",
+      "center_m": [
+        0.95,
+        0.0
+      ],
+      "width_m": [
+        0.08,
+        0.16
+      ],
+      "amplitudes": [
+        0.05,
+        0.05
+      ],
+      "psin_taper": [
+        0.55,
+        0.75
+      ],
+      "relative_perturbation_interpolation_l2": [
+        0.02472326660365582,
+        0.028075504748705845
+      ],
+      "affected_elements": 148,
+      "affected_elements_psi_n_control_hull_max": 0.8096845695058039,
+      "affected_boundary_vertices": 0,
+      "rho_min_sampled": 0.006232397363124541,
+      "temperature_min_sampled": 8.847847940441061e-05
+    },
+    {
+      "mesh": "axis_order_equilibrium",
+      "restart_sha256": "92548aea2966e2167048806afbfcdd76cb4053919d2f70cee21a4af5ae52a71e",
+      "center_m": [
+        0.95,
+        0.0
+      ],
+      "width_m": [
+        0.12,
+        0.24
+      ],
+      "amplitudes": [
+        0.05,
+        0.05
+      ],
+      "psin_taper": [
+        0.55,
+        0.75
+      ],
+      "relative_perturbation_interpolation_l2": [
+        0.026089606095444178,
+        0.012608127610906293
+      ],
+      "affected_elements": 162,
+      "affected_elements_psi_n_control_hull_max": 0.8096845695058039,
+      "affected_boundary_vertices": 0,
+      "rho_min_sampled": 0.006232397363124541,
+      "temperature_min_sampled": 8.847847940441061e-05
+    },
+    {
+      "mesh": "mesh2_axis_order_equilibrium",
+      "restart_sha256": "3089280584d6f871926c417cd594145a6e95ab97f0eccab142f4dbcdc46624b7",
+      "center_m": [
+        0.95,
+        0.0
+      ],
+      "width_m": [
+        0.04,
+        0.08
+      ],
+      "amplitudes": [
+        0.05,
+        0.05
+      ],
+      "psin_taper": [
+        0.55,
+        0.75
+      ],
+      "relative_perturbation_interpolation_l2": [
+        0.01995018645718403,
+        0.020053084071221375
+      ],
+      "affected_elements": 316,
+      "affected_elements_psi_n_control_hull_max": 0.36077251742094085,
+      "affected_boundary_vertices": 0,
+      "rho_min_sampled": 0.009999999999804544,
+      "temperature_min_sampled": 9.999999999965152e-05
+    },
+    {
+      "mesh": "mesh2_axis_order_equilibrium",
+      "restart_sha256": "3089280584d6f871926c417cd594145a6e95ab97f0eccab142f4dbcdc46624b7",
+      "center_m": [
+        0.95,
+        0.0
+      ],
+      "width_m": [
+        0.08,
+        0.16
+      ],
+      "amplitudes": [
+        0.05,
+        0.05
+      ],
+      "psin_taper": [
+        0.55,
+        0.75
+      ],
+      "relative_perturbation_interpolation_l2": [
+        0.0026483883920877145,
+        0.0018337617463139643
+      ],
+      "affected_elements": 560,
+      "affected_elements_psi_n_control_hull_max": 0.8087873638318123,
+      "affected_boundary_vertices": 0,
+      "rho_min_sampled": 0.009999999999804544,
+      "temperature_min_sampled": 9.999999999965152e-05
+    },
+    {
+      "mesh": "mesh2_axis_order_equilibrium",
+      "restart_sha256": "3089280584d6f871926c417cd594145a6e95ab97f0eccab142f4dbcdc46624b7",
+      "center_m": [
+        0.95,
+        0.0
+      ],
+      "width_m": [
+        0.12,
+        0.24
+      ],
+      "amplitudes": [
+        0.05,
+        0.05
+      ],
+      "psin_taper": [
+        0.55,
+        0.75
+      ],
+      "relative_perturbation_interpolation_l2": [
+        0.0250227169885032,
+        0.014054009735514576
+      ],
+      "affected_elements": 648,
+      "affected_elements_psi_n_control_hull_max": 0.8087873638318123,
+      "affected_boundary_vertices": 0,
+      "rho_min_sampled": 0.009999999999804544,
+      "temperature_min_sampled": 9.999999999965152e-05
+    }
+  ]
+}

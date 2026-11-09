@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="0.585" timestamp="2026-11-03T20:26:09.090882+01:00" hostname="login05"><testcase classname="tests.test_native_patches" name="test_patch_membership_requires_exact_every_element_identity" time="0.061" /></testsuite></testsuites>

@@ -1,0 +1,43 @@
+{
+  "created_utc": "2026-11-02T20:19:35.425955+00:00",
+  "purpose": "Single-writer serial R/Z equilibrium restart; remove observed MPI HDF5 file-lock race",
+  "parent_report": "cpu_mesh_axis_order_build_20261102.json",
+  "patch": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/patches/0004-equilibrium-restart-single-writer.patch",
+  "patch_sha256": "9b510eb09a368f15d51ce49807e761fd52358330eb172c53cdb9941deeec59ba",
+  "source_directory": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source",
+  "binary_path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/jorek_model303",
+  "production_source_modified": false,
+  "maximum_compiler_processes": 2,
+  "wall_minutes": 10,
+  "memory_gb": 8,
+  "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_single_writer_build_20261102.sbatch",
+  "script_sha256": "73a302723cdafc8ba2df1beacb65e06cf3ab417196ed6b0a936213f4c17bb483",
+  "status": "compiled_and_linked",
+  "scheduler_preflight": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "sbatch: Job 2768288 to start at 2026-11-02T21:20:11 a using 2 processors on nodes r331c01s01 in partition dcgp_fua_dbg\n"
+  },
+  "submission": {
+    "command": [
+      "sbatch",
+      "--parsable",
+      "--chdir",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source",
+      "--output",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/build-%j.out",
+      "--error",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/build-%j.err",
+      "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_single_writer_build_20261102.sbatch"
+    ],
+    "returncode": 0,
+    "stdout": "2768289\n",
+    "stderr": "",
+    "utc": "2026-11-02T20:20:11.774788+00:00"
+  },
+  "job_id": "2768289",
+  "completed_utc": "2026-11-02T20:22:12.452270+00:00",
+  "binary_sha256": "98d4348bc6e56d16168e1fc7ed82094036e13f33073ea5ddb18d1366026a4425",
+  "main_sha256": "ff416d280bade66eb11cb6291d461814dd7991202e46641e840f2d142bf11393",
+  "accounting": "2768289|COMPLETED|19|2|0:0"
+}

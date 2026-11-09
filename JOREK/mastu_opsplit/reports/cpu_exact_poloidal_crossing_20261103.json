@@ -1,0 +1,39 @@
+{
+  "status": "failed_validation",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/exact_poloidal_crossing_20261103",
+  "budget": {
+    "authorization": "User requested numerical convergence and completion of the science plan.",
+    "scope": "One three-step poloidal440 proof using the already built exact-flux crossing binary; doubled poloidal and divertor-leg counts. No production acceptance.",
+    "allocations_max": 1,
+    "attempts_each_max": 1,
+    "mpi_ranks": 4,
+    "threads": 1,
+    "memory_GiB": 256,
+    "wall_hours_max": 3,
+    "rank_CPU_hours_max": 12,
+    "node_hours_max": 3,
+    "conservative_resource_hours_max": 768,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+    "equilibrium_tolerance": 1e-10,
+    "physics_changed": false,
+    "spatial_targets_changed": false
+  },
+  "manifest_sha256": "e31e78996d51de7f5906dd3debf3b2ac4aa630f55d276558c76933655e6b0493",
+  "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_exact_poloidal_crossing_20261103.sbatch",
+  "script_sha256": "0eaad5b0b3495264be591bccb58914f6eb95fe0c97a15e73fc525ccb1d33e247",
+  "scheduler_preflight": "sbatch: Job 2771321 to start at 2026-11-03T21:54:00 a using 4 processors on nodes r354c01s10 in partition dcgp_fua_prod\n",
+  "scientific_gates_passed": [],
+  "job_id": "2771322",
+  "conclusion": "Closed-core contour folds removed, but doubled divertor-leg grid still has eight native-reported wall folds and a ninth divertor fold at q8.",
+  "stage_results": {
+    "poloidal440": {
+      "stage": "poloidal440",
+      "status": "failed_validation",
+      "returncode": 1,
+      "process_wall_seconds": 551.461535714916,
+      "binary_sha256": "c67571ee579eaf8f5190d9038796affcbd5de7c3d030c5d765b93b8799d166ff",
+      "scientific_gates_passed": [],
+      "error": "exit_nonzero"
+    }
+  }
+}

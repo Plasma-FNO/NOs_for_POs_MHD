@@ -1,0 +1,131 @@
+case_id: mastu-model303-mesh2_capacity_equilibrium
+parent_family_id: mastu-equilibrium-baseline
+mode: equilibrium_regression
+jorek:
+  source: /pitagora_work/FUPB2_UKAEA_ML/vgopakum/src/jorek/src
+  executable: /pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mesh_capacity_build_20261102/source/jorek_model303
+  input_directory: /pitagora_work/FUPB2_UKAEA_ML/vgopakum/src/jorek/runs/j1-check/grid_with_patches_mastu_303
+  runtime_environment: /pitagora_work/FUPB2_UKAEA_ML/vgopakum/src/jorek/jorek-env.sh
+  pinned_commit: 01a52be37576f79c785f1f7a80dee296dda5c9c8
+  executable_sha256: 72fefbac087d9198db40dabbc27f35d26e6f06ce356a8fba554c72bca26c197b
+  build_config: model=303 n_tor=1 n_coord_tor=1 l_pol_domm=0 n_plane=1 n_period=1
+    n_coord_period=1 n_boundary_max=4001
+  toolkit_runner_revision: 14fcecb664cbb084b86051370bc415d8446e1637
+  derivative_build:
+    report: /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_mesh_capacity_build_20261102.json
+    report_sha256: 66b85e2c9d97c8c90061ed6f0820fb1561c9f13d9d178c83411b26f43c7d06f0
+    base_commit: 01a52be37576f79c785f1f7a80dee296dda5c9c8
+    initializer_patch_sha256: 0a7b0c157f01eea52d05b3088016fa356bc6a7b8b56a9c256443cae2a4676df3
+    n_boundary_max: 4001
+evolution:
+  nstep_n: 0
+  tstep_n: 1.0
+  nout: 1
+input_defaults:
+  central_mass: 2.01410177811
+  time_evol_scheme: Crank-Nicholson
+  eta: 1.0e-05
+  visco: 1.0e-05
+  visco_par: 1.0e-05
+  eta_T_dependent: true
+  visco_T_dependent: true
+  ZKpar_T_dependent: true
+  ZK_par: 1.0
+  ZK_par_max: 1.0e+20
+  D_par: 0.0
+  D_perp(1): 1.0e-05
+  D_perp(2): 0.0
+  D_perp(3): 0.0
+  D_perp(4): 99.0
+  D_perp(5): 99.0
+  ZK_perp(1): 1.0e-05
+  ZK_perp(2): 0.0
+  ZK_perp(3): 0.0
+  ZK_perp(4): 99.0
+  ZK_perp(5): 99.0
+  eta_num: 0.0
+  visco_num: 0.0
+  visco_par_num: 0.0
+  D_perp_num: 0.0
+  ZK_perp_num: 0.0
+  particlesource: 1.0e-05
+  particlesource_psin: 100.0
+  particlesource_sig: 0.1
+  heatsource: 1.0e-07
+  heatsource_psin: 1.0
+  heatsource_sig: 0.1
+  edgeparticlesource: 0.0
+  T_min: 1.0e-20
+  rho_min: 1.0e-20
+  T_min_neg: -1000000000000.0
+  rho_min_neg: -1000000000000.0
+  tauIC: 0.0
+  no_mach1_bc: false
+  bc_natural_open: false
+  freeboundary: false
+  freeboundary_equil: false
+  use_mumps: true
+  use_strumpack: false
+  keep_current_prof: true
+  keep_n0_const: false
+  linear_run: false
+  n_R: 90
+  n_Z: 260
+  n_flux: 20
+  n_tht: 110
+  n_open: 2
+  n_outer: 16
+  n_inner: 4
+  n_leg: 6
+  n_leg_out: 40
+  n_private: 4
+  n_up_leg: 6
+  n_up_leg_out: 40
+  n_up_priv: 4
+  n_ext_block(1): 20
+  n_ext_block(2): 20
+  n_ext_block(3): 38
+  n_ext_block(4): 20
+  n_ext_block(5): 20
+  n_ext_block(6): 20
+  n_ext_block(7): 20
+  n_ext_block(8): 20
+  n_ext_block(9): 20
+  n_ext_block(10): 20
+  n_ext_block(11): 20
+perturbation:
+  enabled: false
+execution:
+  mpi_ranks: 1
+  omp_threads: 1
+  timeout_s: 1740
+  max_attempts: 1
+  launcher:
+  - mpirun
+  - --bind-to
+  - none
+  - -n
+  require_slurm: true
+acceptance:
+  required_files:
+  - jorek_restart.h5
+  final_time_s: 0.0
+slurm:
+  account: fupa2_fauna
+  partition: dcgp_fua_dbg
+  nodes: 1
+  walltime: 00:30:00
+  memory: 16G
+  python: /pitagora_work/FUPB2_UKAEA_ML/vgopakum/envs/cfo/bin/python
+resource_authorization:
+  status: approved_cpu_study_continuation
+  submission_allowed: true
+  scope: CPU runtime validation of the isolated boundary-capacity build; unchanged
+    physical equations and zero perturbation amplitudes
+  requested_cpu_core_hours: 0.5
+  requested_node_hours: 0.5
+  billable_usage: scheduler/accounting dependent; not inferred from process core-hours
+  max_submissions: 1
+  approval_date: '2026-11-02'
+  approval_source: 'Explicit user reply: Continue the study on CPU'
+  total_authorized_runs: 11

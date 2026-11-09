@@ -1,0 +1,34 @@
+{
+  "budget": {
+    "authorization": "Current explicit diagnosis and next spatial refinement request",
+    "scope": "One geometry-only directional mesh planning allocation, at most two candidates; no candidate fields accepted for science. The higher-capacity build is used only for safe mesh counting.",
+    "allocations_max": 1,
+    "candidate_evolutions": 0,
+    "nodes": 1,
+    "mpi_ranks": 4,
+    "threads": 1,
+    "memory_GiB": 64,
+    "wall_seconds": 7200,
+    "rank_CPU_hours_max": 8,
+    "node_hours_max": 2,
+    "conservative_resource_hours_max": 512,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+    "selection": "First candidate in [n_flux240,n_flux200] with <=155000 nodes and elements and positive q8 geometry; frozen targets unchanged."
+  },
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_directional_plan_20261103",
+  "manifest_sha256": "9b95208c89d45fa49f05f9cb800849be32a5bfee2b2ea677d336b51288173853",
+  "controller_sha256": "079d494cbdc3ad3f7b45f73e81da52175da8282efd58736b78b70a8d3c9a6720",
+  "script_sha256": "63686a9c06f06057794108929d6803ce2636eb7c9cbfb7c78df9c0d63c18981f",
+  "science_fields_accepted": false,
+  "job_id": "2770116",
+  "previous_attempts": [
+    {
+      "job_id": "2770112",
+      "state": "FAILED",
+      "elapsed_seconds": 3,
+      "reason": "Controller filename select.py shadowed Python standard select module; failed before native code launch."
+    }
+  ],
+  "controller_path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_directional_plan_20261103/mesh_choice.py",
+  "retry_budget_record": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_spatial_directional_plan_retry_authorization_20261103.json"
+}

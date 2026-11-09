@@ -1,0 +1,66 @@
+{
+  "scope": "Numerical equilibrium stopping sensitivity, not spatial convergence; same complete physical mesh/time.",
+  "equil_accuracy_before": 1e-06,
+  "equil_accuracy_after": 1e-10,
+  "quadrature_order": 8,
+  "source_sha256": "8ef70886e09566c0b41284bcbacf10331c83b2d493cb41a4c874247dc40f1a91",
+  "restart_sha256": {
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_pair_20261103/baseline48/jorek_restart.h5": "ffcc0ee8852f1474ddaced7a067de264111de2b487a05d6753d50d6e77d37ada",
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_pair_20261103/perturbed48/jorek_restart.h5": "787df3d00fe7cddd8c4ac60474978fe3150de4802dc6484f204fdbecc85d6895",
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/equilibrium_tolerance_20261103/jorek_restart.h5": "57e14c6fb720bb938d6bd945cfb8120d488a25434264c7aa7c92e2a63ca5fb1b",
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/equilibrium_tolerance_perturbed_20261103/jorek_restart.h5": "1ca6835f13db70bfe9d9bc8079053e81cad559df2e75ecbdc4d1b69148bbf57b"
+  },
+  "final_time_s": 1.4059131112280784e-06,
+  "full_volume_m3": 21.657403786623668,
+  "paired_response_changes": {
+    "psi": {
+      "relative_l2_difference": 0.00010661388440296452,
+      "absolute_rms_difference": 8.083179387609939e-09,
+      "reference_rms": 7.5817323727351e-05,
+      "target_met": true
+    },
+    "u": {
+      "relative_l2_difference": 0.00023031099169135169,
+      "absolute_rms_difference": 1.0843381871606312e-08,
+      "reference_rms": 4.7081477926758836e-05,
+      "target_met": true
+    },
+    "zj": {
+      "relative_l2_difference": 0.0032035582933805694,
+      "absolute_rms_difference": 2.003853240071184e-05,
+      "reference_rms": 0.006255085928080955,
+      "target_met": true
+    },
+    "w": {
+      "relative_l2_difference": 0.0012557802948063024,
+      "absolute_rms_difference": 1.5733029126358297e-06,
+      "reference_rms": 0.001252848861494919,
+      "target_met": true
+    },
+    "rho": {
+      "relative_l2_difference": 0.0003293448950474452,
+      "absolute_rms_difference": 1.514947897161037e-06,
+      "reference_rms": 0.004599882736736498,
+      "target_met": true
+    },
+    "T": {
+      "relative_l2_difference": 0.00020461104453701554,
+      "absolute_rms_difference": 1.4095835537651129e-08,
+      "reference_rms": 6.889088303882392e-05,
+      "target_met": true
+    },
+    "Vpar": {
+      "relative_l2_difference": 0.00047307803014516163,
+      "absolute_rms_difference": 1.3552755021992316e-07,
+      "reference_rms": 0.0002864803300595828,
+      "target_met": true
+    },
+    "pressure": {
+      "relative_l2_difference": 0.00014039834692292227,
+      "absolute_rms_difference": 1.9585341195375954e-08,
+      "reference_rms": 0.0001394983746220899,
+      "target_met": true
+    }
+  },
+  "scientific_gates_passed": []
+}

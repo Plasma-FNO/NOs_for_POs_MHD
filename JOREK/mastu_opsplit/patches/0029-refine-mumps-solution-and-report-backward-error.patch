@@ -1,0 +1,33 @@
+--- a/solvers/mod_mumps.f90
++++ b/solvers/mod_mumps.f90
+@@ -55,6 +55,10 @@
+     endif
+     !mmss%mumps_par%icntl(15) = 0                       ! memory balance only, 1: flops      
+   
++    ! Bound refinement and retain MUMPS' rollback on a deteriorating residual.
++    mmss%mumps_par%icntl(10) = 5
++    mmss%mumps_par%cntl(2) = 1.d-16
++    mmss%mumps_par%icntl(11) = 2
+     mmss%initialized = .true.
+     
+   end subroutine mumps_initialize
+@@ -161,7 +165,7 @@
+     type(type_MUMPS_SOLVER) :: mmss
+     type(type_RHS)          :: rhs_vec
+     integer(kind=int_all)   :: k
+-    integer                 :: ierr
++    integer                 :: ierr, my_id
+     
+     mmss%mumps_par%rhs => rhs_vec%val
+     
+@@ -169,6 +173,10 @@
+ 
+     call DMUMPS(mmss%mumps_par)
+     call mumps_check(mmss, "solve")
++    call MPI_COMM_RANK(mmss%comm,my_id,ierr)
++    if (my_id == 0) write(*,*) 'MUMPS refinement steps and backward errors:', &
++      mmss%mumps_par%infog(15),mmss%mumps_par%rinfog(7:8)
++
+     
+     call MPI_Bcast(mmss%mumps_par%rhs,mmss%mumps_par%n,MPI_DOUBLE_PRECISION,0,mmss%mumps_par%comm,ierr)    
+     

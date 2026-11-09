@@ -1,0 +1,34 @@
+--- a/communication/mod_import_restart.f90
++++ b/communication/mod_import_restart.f90
+@@ -95,7 +95,7 @@
+   logical, optional,             intent(in)              :: no_perturbations ! don't initialize new harmonics
+   logical, optional,             intent(in)              :: use_3D_rtree ! use 3D rtree for stellarator model
+   ! --- Local variables
+-  integer              :: i, j, m, k, n_tor_tmp, i_p, i_inj, p_begin
++  integer              :: i, j, m, k, n_tor_tmp, i_p, i_inj, p_begin, n_nodes_tmp
+   real*8               :: growth_mag, growth_kin, amplitude
+   integer, allocatable :: mode_tmp(:)
+   real*8,  allocatable :: values_tmp(:,:,:), deltas_tmp(:,:,:), aux_values_tmp(:,:,:)
+@@ -192,7 +192,10 @@
+   read(21) node_list%n_nodes,element_list%n_elements
+   read(21) node_list%n_dof
+ 
+-  call init_node_list(node_list, node_list%n_nodes, node_list%n_dof, n_var)
++  ! Regridding may create more nodes than the saved equilibrium contains.
++  n_nodes_tmp = node_list%n_nodes
++  call init_node_list(node_list, max(n_nodes_max, n_nodes_tmp), node_list%n_dof, n_var)
++  node_list%n_nodes = n_nodes_tmp
+ 
+   do i=1,node_list%n_nodes
+     read(21) node_list%node(i)%x
+@@ -1215,7 +1218,9 @@
+   call HDF5_integer_reading(file_id,element_list%n_elements,"n_elements")
+ 
+   ! initialise and allocate node_list
+-  call init_node_list(node_list, n_nodes_tmp, n_dof_tmp, n_var)
++  ! Keep grid capacity separate from the number of nodes read from the file.
++  call init_node_list(node_list, max(n_nodes_max, n_nodes_tmp), n_dof_tmp, n_var)
++  node_list%n_nodes = n_nodes_tmp
+ 
+ 
+   aux_values_read = .false.

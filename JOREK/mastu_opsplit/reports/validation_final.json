@@ -1,0 +1,134 @@
+{
+  "as_of": "2026-11-02",
+  "checks": [
+    {
+      "argv": [
+        "/pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/bin/python",
+        "scripts/preflight.py",
+        "--config",
+        "configs/case.yaml",
+        "--model-config",
+        "configs/lsplinefno.yaml",
+        "--output",
+        "reports/preflight_final.json"
+      ],
+      "expected": 0,
+      "name": "final_preflight",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "/pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/bin/python",
+        "scripts/run_case.py",
+        "--config",
+        "configs/equilibrium_request.yaml",
+        "--prepared",
+        "runs/prepared_equilibrium_20261102_v3",
+        "--output",
+        "/scratch_local/mastu-final-cli-5w_7nzah/run",
+        "--dry-run"
+      ],
+      "expected": 0,
+      "name": "v3_dry_run",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"prepared\": \"/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/prepared_equilibrium_20261102_v3\",\n  \"output\": \"/scratch_local/mastu-final-cli-5w_7nzah/run\",\n  \"command\": [\n    \"mpirun\",\n    \"--bind-to\",\n    \"none\",\n    \"-n\",\n    \"1\",\n    \"/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/prepared_equilibrium_20261102_v3/jorek.exe\"\n  ],\n  \"execution\": {\n    \"mpi_ranks\": 1,\n    \"omp_threads\": 1,\n    \"timeout_s\": 540,\n    \"max_attempts\": 1,\n    \"launcher\": [\n      \"mpirun\",\n      \"--bind-to\",\n      \"none\",\n      \"-n\"\n    ],\n    \"require_slurm\": true\n  },\n  \"acceptance\": {\n    \"required_files\": [\n      \"jorek_restart.h5\"\n    ],\n    \"final_time_s\": 0.0,\n    \"equilibrium_regression\": {\n      \"dataset\": \"values\",\n      \"absolute_tolerance\": 0.0001\n    }\n  },\n  \"config_hash\": \"9ed30ca0672f774e8daa0b88e50f5fab22db7122e8fe2f02d47808be9d9c8d15\"\n}\n"
+    },
+    {
+      "argv": [
+        "/pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/bin/python",
+        "scripts/run_case.py",
+        "--config",
+        "configs/equilibrium_request.yaml",
+        "--prepared",
+        "runs/prepared_equilibrium_20261102_v3",
+        "--output",
+        "/scratch_local/mastu-final-cli-5w_7nzah/run"
+      ],
+      "expected": 1,
+      "name": "v3_unauthorized_rejected",
+      "returncode": 1,
+      "stderr": "run_case: this concrete resource request is proposed, not authorized\n",
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "/pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/bin/python",
+        "scripts/train.py",
+        "--config",
+        "configs/train.yaml",
+        "--model-config",
+        "configs/lsplinefno.yaml",
+        "--output",
+        "runs/synthetic_smoke_final_20261102",
+        "--smoke"
+      ],
+      "expected": 0,
+      "name": "final_synthetic_training",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"synthetic\": true, \"scientific_gate_evidence\": false, \"initial_loss\": 0.21913614869117737, \"final_loss\": 0.0796082615852356}\n"
+    },
+    {
+      "argv": [
+        "bash",
+        "-n",
+        "reports/equilibrium_request.sbatch"
+      ],
+      "expected": 0,
+      "name": "final_request_shell_syntax",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "sbatch",
+        "--test-only",
+        "reports/equilibrium_request.sbatch"
+      ],
+      "expected": 0,
+      "name": "final_request_scheduler_preview",
+      "returncode": 0,
+      "stderr": "sbatch: no gres/tmpfs specified, using default: gres/tmpfs:10g\nsbatch: Job 2767292 to start at 2026-11-02T13:38:24 a using 1 processors on nodes r315c06s02 in partition boost_fua_dbg\n",
+      "stdout": ""
+    }
+  ],
+  "initial_cli_validation": "reports/validation.json",
+  "initializer_build": {
+    "binary_sha256": "0a8547092540244f967096b169e9bc78a95e21767be2931c2d3fc397f33ccaf3",
+    "elapsed_seconds": 88.16819067695178,
+    "status": "compiled_and_linked"
+  },
+  "integrated_tests": {
+    "passed": 50,
+    "python": "/pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/bin/python",
+    "wall_seconds": 17.66,
+    "xml": "reports/integrated_tests.xml"
+  },
+  "request_sha256": "0832f24653ae8ad85cfdafe521f5b8311e79456099a603771b1ee6223684d69a",
+  "scientific_gates_passed": [],
+  "scientific_jobs_submitted": 0,
+  "synthetic_training": {
+    "final_loss": 0.0796082615852356,
+    "initial_loss": 0.21913614869117737,
+    "path": "runs/synthetic_smoke_final_20261102/smoke.json",
+    "study_source_sha256": {
+      "scripts/train.py": "a5b6c6961a43c8caa26e584c62a5e8ad1d43e183cb626c3ba956fa7770164557",
+      "src/mastu_opsplit/common.py": "fd31887b3f2532cf5d5f47bf05e96aa955ed7378290e28971a11b05d45d6277f",
+      "src/mastu_opsplit/data.py": "e3e6aae9e848e634455d95287a0cffcd50f34026ae85e8dd69ebe0858e119892",
+      "src/mastu_opsplit/evaluation.py": "e8f5e4477dc10552d079bbe09864c27f5beed6744cd7d5a462c181be07bd70d6",
+      "src/mastu_opsplit/learning.py": "ab90ae7fd71e86d19467d419fd6737b74f4369ec3381b5aa4ca91c1e73c9854f",
+      "src/mastu_opsplit/numerical.py": "428966a04df46534ec4c1d855f8b44d9cbfd07633dda56aed7d44b1a4beb4ff9",
+      "src/mastu_opsplit/sampling.py": "258761e3faf46abca7f951f86da7c42edfece0e6b4842850dfe14a1dce47ac21",
+      "src/mastu_opsplit/training.py": "6cdbda2f182362f96ab056509410999dc1fdab9f31145e6c8c7e150031ca19b6"
+    }
+  },
+  "upstream_selected_tests": {
+    "deselected": 57,
+    "passed": 23,
+    "wall_seconds": 55.96
+  }
+}

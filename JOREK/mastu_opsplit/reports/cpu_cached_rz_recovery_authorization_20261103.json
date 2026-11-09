@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-11-02T23:13:38.531572+00:00",
+  "approval_source": "Explicit user: you have my permission to approve the next job",
+  "scope": "Exactly one recovery allocation: build patch 0010, ordinary and cached eight-step parity, then guarded three-step refined probe",
+  "slurm_account": "fupa2_fauna",
+  "partition": "dcgp_fua_prod",
+  "budget_account": "FUPA2_FAUNA",
+  "command": [
+    "saldo",
+    "-b",
+    "--dcgp",
+    "-n"
+  ],
+  "selected_raw_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238126       4238126            13.8       2531868                437",
+  "remaining_local_resource_hours": 26481874,
+  "monthly_remaining_local_resource_hours": 2531431,
+  "billing_note": "Shared project resource-hours include memory; requested rank CPU-hours differ from final site billing.",
+  "job_submissions_max": 1,
+  "nodes": 1,
+  "mpi_ranks": 4,
+  "omp_threads": 1,
+  "memory_GiB": 128,
+  "wall_seconds": 7200,
+  "attempts_per_stage": 1,
+  "requested_cpu_core_hours_max": 8,
+  "requested_node_hours_max": 2,
+  "conservative_local_resource_hours_max": 512,
+  "compiler_processes_max": 2,
+  "scientific_training_enabled": false,
+  "production_ensemble_enabled": false,
+  "previous_phase_preserved": "reports/cpu_refinement_continuation_20261102.json"
+}

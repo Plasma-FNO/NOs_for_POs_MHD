@@ -1,0 +1,67 @@
+{
+  "as_of_utc": "2026-11-02T20:41:22.399974+00:00",
+  "integrated_tests": {
+    "passed": 64,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "wall_seconds": 15.599,
+    "xml": "reports/cpu_io_and_constraints_tests.xml",
+    "python": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/envs/cfo/bin/python",
+    "command": "PYTHONPATH=JOREK/mastu_opsplit/src OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 /pitagora_work/FUPB2_UKAEA_ML/vgopakum/envs/cfo/bin/python -m pytest -q JOREK/mastu_opsplit/tests --junitxml=JOREK/mastu_opsplit/reports/cpu_io_and_constraints_tests.xml"
+  },
+  "upstream_selected_tests": {
+    "deselected": 57,
+    "passed": 23,
+    "wall_seconds": 55.96
+  },
+  "upstream_tests_evidence": "reports/validation_final.json; historical upstream suite, not rerun in this continuation",
+  "scientific_gates_passed": [],
+  "cpu_continuation_record": "reports/cpu_io_continuation_20261102.json",
+  "validation_scope": "Software and diagnostic checks only; no physical acceptance, accepted dataset, or scientific training result",
+  "source_sha256": {
+    "src/mastu_opsplit/runner.py": "1b02c0fb9a1bbf7620f8bc292503acf197cd570fcad9196eb376e86aa0fee398",
+    "src/mastu_opsplit/numerical.py": "3c903bbfd3cf4d72bdac1978f706300d45ef6e293e7a3f3e4f53a030b40f90f3",
+    "src/mastu_opsplit/restart.py": "830671db304963210d913ec14e202579f8252331bbedee1b6c4c4f5ec059c795",
+    "patches/0004-equilibrium-restart-single-writer.patch": "9b510eb09a368f15d51ce49807e761fd52358330eb172c53cdb9941deeec59ba"
+  },
+  "diagnostic_reports": {
+    "cpu_short_pilot_validation_20261102.json": "7aa3f7945ded9d3ab9128af0893599cc90bfd495611d55ebc4f6a5111ad006ad",
+    "cpu_energy_diagnostic_audit_20261102.json": "5f73728d92ff949ad5640196a54a6d3ea2d4257351681f0908254c18762c3a0c",
+    "cpu_constraint_diagnostics_20261102.json": "d33c96935642176f6ae478ad32f0c28b4ab2cc8af85509fd6ecfb5557e4e10d0",
+    "cpu_fine_baseline_timestep48_96_20261102.json": "68fb37831926119d49c3e0c02a06c52e61c71c1ba365bd6117f94eeaa9afa61f",
+    "cpu_fine_timestep_validation_20261102.json": "a85199bd556921f5f5a22d708cfa3e6f59427edd0a23e1ebb113d0be5934b1a7",
+    "cpu_dynamic_mesh_moments_20261102.json": "32d8dcf97cb526b96e175221eec9a9f69d0dab75d5ce52c120321aec2f0d2970",
+    "cpu_io_continuation_20261102.json": "4931da10b646ce3a16b6757e4e92b67c95c65ec0277f11d2517cbba257359446"
+  },
+  "current_completed_jobs": [
+    {
+      "job_id": "2768291",
+      "state": "COMPLETED",
+      "output_audit": {
+        "readable_finite_datasets": 61,
+        "stderr_bytes": 0,
+        "current_log_classification": "completed"
+      }
+    },
+    {
+      "job_id": "2768294",
+      "state": "COMPLETED",
+      "output_audit": {
+        "readable_finite_datasets": 131,
+        "stderr_bytes": 0,
+        "current_log_classification": "completed"
+      }
+    },
+    {
+      "job_id": "2768296",
+      "state": "COMPLETED",
+      "output_audit": {
+        "readable_finite_datasets": 131,
+        "stderr_bytes": 0,
+        "current_log_classification": "completed"
+      }
+    }
+  ],
+  "new_cpu_core_hours": 1.1294444444444445
+}

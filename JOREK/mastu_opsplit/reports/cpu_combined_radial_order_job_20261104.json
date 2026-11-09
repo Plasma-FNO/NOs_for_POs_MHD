@@ -1,0 +1,15 @@
+{
+  "status": "submitted",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/combined_radial_order_20261104",
+  "dependencies": [
+    "2772846",
+    "2772872",
+    "2772874"
+  ],
+  "script_sha256": "e0241da56545e2503da4286ee44b9e1542cf46b0f130e14338ca8c09e3153390",
+  "analysis_source_sha256": "8000b2279780b1159f6bf7d35859919bf8607e23f45c154534360de7c143357b",
+  "scientific_gates_passed": [],
+  "job_id": "2772923",
+  "kind": "analysis",
+  "native_attempt_started": false
+}

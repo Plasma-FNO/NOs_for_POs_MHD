@@ -1,0 +1,9 @@
+# Synthetic fixture settings only; scientific training remains gated.
+seed: 0
+steps: 12
+learning_rate: 0.01
+family: whole_rhs
+gates_file: reports/gates.json
+seeds: [0, 1, 2]
+rollout_intervals: 5
+production_enabled: false

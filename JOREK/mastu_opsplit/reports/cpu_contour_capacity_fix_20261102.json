@@ -1,0 +1,71 @@
+{
+  "label": "contour_capacity_fix",
+  "status": "old_mesh_parity_passed_refined_geometry_rejected",
+  "scope": "Capacity-only source build, exact 8-step existing-mesh regression, then cached-RZ nested 3-step probe; sequential and guarded in one allocation",
+  "source_directory": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/contour_capacity_fix_20261102/source",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/contour_capacity_fix_20261102",
+  "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_contour_capacity_fix_20261102.sbatch",
+  "script_sha256": "0bb8c9a43282a6bdd3f03edecde7c87429136dc8be7daa1885859c4222a45841",
+  "worker": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_contour_fix_worker_source_20261102.py",
+  "worker_sha256": "3e30c4370458ccf76e4c4809d81d4e41c31f2ec1576772daabcbf82c4b6dff2a",
+  "patch": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/patches/0009-refined-flux-contour-capacity.patch",
+  "patch_sha256": "3d7d32b1058c3e2df77f189b029b3034b910f2294d4cab9cd8fa71bafc3f01a4",
+  "requested_cpu_core_hours": 8,
+  "requested_node_hours": 2,
+  "mpi_ranks": 4,
+  "omp_threads": 1,
+  "memory_GiB": 128,
+  "wall_seconds": 7200,
+  "maximum_simultaneous_compilers": 2,
+  "n_contour_max": 40000,
+  "equations_modified": false,
+  "startup_hashes": {
+    "parity8/input": "9fb7cf931e463601ab46d45658895bab8301951222627051995aedd6d17a7d65",
+    "parity8/eqdsk.dat": "ac787dd266a9b4b93ccdadf9883c9d97a115e7dd9bb5bd3f724321576883bf4e",
+    "quad_probe3/jorek_equil_rz.h5": "9e535e9cf09fd0af5e7c7e6b521457647df6f0a8297d19c550cbe432607f56a4",
+    "quad_probe3/input": "02907938d9e7c17e57a054b49a0a80ee73b7ef2e5acfe874414f8ad174fa2ced",
+    "quad_probe3/eqdsk.dat": "ac787dd266a9b4b93ccdadf9883c9d97a115e7dd9bb5bd3f724321576883bf4e"
+  },
+  "diagnosis_log_sha256": "fbdff88037f5b937dc2269d898977ff6e2515e9e353a343fda56e3cea80031b3",
+  "scientific_gates_passed": [],
+  "job_id": "2768425",
+  "submitted_utc": "2026-11-02T22:42:15.126236+00:00",
+  "build_status": "compiled_and_linked",
+  "binary_sha256": "dc6b8e983b64a85329323d856589a0518df1e276d606bbae926f61f07646f909",
+  "parity8_result": {
+    "label": "parity8",
+    "returncode": 0,
+    "status": "completed",
+    "wall_seconds": 157.42368731601164,
+    "binary_sha256": "dc6b8e983b64a85329323d856589a0518df1e276d606bbae926f61f07646f909",
+    "scientific_gates_passed": [],
+    "health": {
+      "steps": 8,
+      "final_time_s": 2.343188518713464e-07,
+      "restart_sha256": "bd79ef76ee8eb6679b13f40a61859524ddf4c515849ac8af48dcc0481dbff5a2"
+    },
+    "exact_reference_arrays": {
+      "x": true,
+      "values": true,
+      "vertex": true,
+      "size": true,
+      "boundary": true,
+      "constrained": true,
+      "n_sons": true,
+      "xtime": true,
+      "energies": true
+    }
+  },
+  "parity8_result_sha256": "4d03662b06452faf8f956836c63ee178aeeecb0f41bf8d3d78c0a1f03b83e3aa",
+  "stage": "completed",
+  "quad_probe3_result": {
+    "label": "quad_probe3",
+    "returncode": 1,
+    "status": "failed_validation",
+    "wall_seconds": 27.820244791917503,
+    "binary_sha256": "dc6b8e983b64a85329323d856589a0518df1e276d606bbae926f61f07646f909",
+    "scientific_gates_passed": [],
+    "error": "exit_nonzero"
+  },
+  "failure_site": "Native strategic-point guard: 6 strikes found instead of 4 on doubled intermediate R/Z equilibrium"
+}

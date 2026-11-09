@@ -1,0 +1,15 @@
+--- a/models/mod_settings.f90
++++ b/models/mod_settings.f90
+@@ -9,9 +9,9 @@
+ integer, parameter :: n_coord_period    = 1      !< periodicity of the device in toroidal direction: equivalent to number of field periods
+ integer, parameter :: n_plane           = 1      !< number of toroidal angles
+ integer, parameter :: n_order           = 3      !< order of the polynomial basis
+-integer, parameter :: n_nodes_max       = 160001  !< maximum number of nodes
+-integer, parameter :: n_elements_max    = 160001  !< maximum number of elements
+-integer, parameter :: n_boundary_max    = 4001   !< maximum number of boundary elements
++integer, parameter :: n_nodes_max       = 400001  !< maximum number of nodes
++integer, parameter :: n_elements_max    = 400001  !< maximum number of elements
++integer, parameter :: n_boundary_max    = 8001   !< maximum number of boundary elements
+ integer, parameter :: n_pieces_max      = 6001   !< maximum number of line pieces describing a flux surface
+ 
+ ! ##################################################################################################

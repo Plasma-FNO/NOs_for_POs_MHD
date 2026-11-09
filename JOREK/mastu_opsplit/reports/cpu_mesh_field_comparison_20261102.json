@@ -1,0 +1,305 @@
+{
+  "created_utc": "2026-11-02T21:06:05.655167+00:00",
+  "script_sha256": "787c276a1679a6fed9269bc6037e723123ce0cbf148593e4e5079e8abceb3bef",
+  "query_source_sha256": "b2e24b4422b94677819ed6ed642888b2451b5655d2790d3b1c3b60abb5f3b9bc",
+  "scope": "Unperturbed coarse/fine native fields on fine q4 physical volume queries; uncovered points are reported, not extrapolated. Historical 96-step IO errors remain diagnostic only.",
+  "quadrature_order": 4,
+  "gate_A_passed": false,
+  "perturbed_mesh_convergence_checked": false,
+  "comparisons": {
+    "initial": {
+      "coarse_restart_sha256": "92548aea2966e2167048806afbfcdd76cb4053919d2f70cee21a4af5ae52a71e",
+      "fine_restart_sha256": "0d172e8decfad130258735c2910bf8c5ab542c2b009e6351c4a0bf84a270b63f",
+      "metadata": {
+        "time_seconds": 0.0,
+        "steps": 0,
+        "quadrature_order": 4,
+        "mapping_status": "diagnostic_restart_only",
+        "expanded_nodal_dofs": 46324,
+        "canonical_native_dofs": 46203,
+        "native_dof_aliases_verified": true,
+        "minimum_signed_jacobian_m2": 2.4428501087284193e-06,
+        "negative_jacobian_samples": 0,
+        "patch_ids_available": false,
+        "native_constraints_available": false
+      },
+      "total_queries": 180112,
+      "covered_queries": 179754,
+      "covered_fine_volume_fraction": 0.9995089923061896,
+      "uncovered_fine_volume_m3": 0.010631244251112733,
+      "uncovered_examples_m": [
+        [
+          1.5571585923734392,
+          -1.5707951655050296
+        ],
+        [
+          1.5636178542900931,
+          -1.573055574800039
+        ],
+        [
+          1.5579932391557572,
+          -1.5694391694718346
+        ],
+        [
+          1.55295911657172,
+          -1.5707855215336717
+        ],
+        [
+          1.5464077010105095,
+          -1.569527230172522
+        ],
+        [
+          1.5540634043708175,
+          -1.5689837895212373
+        ],
+        [
+          1.5475197738661675,
+          -1.5677095762949582
+        ],
+        [
+          1.538196597088453,
+          -1.568727830019829
+        ],
+        [
+          1.531004849182023,
+          -1.5696643522579417
+        ],
+        [
+          1.554907344017796,
+          -1.5676083213929617
+        ],
+        [
+          1.5483652682945472,
+          -1.5663320367391267
+        ],
+        [
+          1.5390257111998424,
+          -1.567390186486506
+        ],
+        [
+          1.5318206412736932,
+          -1.5683590001680359
+        ],
+        [
+          1.527991476379007,
+          -1.5684290597267847
+        ],
+        [
+          1.520612787688949,
+          -1.5686319669512268
+        ],
+        [
+          0.8776029146675365,
+          -1.585425175393859
+        ],
+        [
+          0.8286389753047717,
+          -1.532581482391712
+        ],
+        [
+          0.8335157403980324,
+          -1.5417145199671438
+        ],
+        [
+          0.828946405603495,
+          -1.5325916799184045
+        ],
+        [
+          0.8182539452649964,
+          -1.4776693971785506
+        ]
+      ],
+      "maximum_inverse_coordinate_error_m": 9.999352672446725e-11,
+      "fallback_points": 462,
+      "fields_on_covered_volume": {
+        "psi": {
+          "relative_l2_difference": 0.0017471668719213043,
+          "absolute_rms_difference": 7.659625840786037e-05
+        },
+        "u": {
+          "relative_l2_difference": null,
+          "absolute_rms_difference": 0.0
+        },
+        "zj": {
+          "relative_l2_difference": 0.007761758236299015,
+          "absolute_rms_difference": 0.003621870925435552
+        },
+        "w": {
+          "relative_l2_difference": null,
+          "absolute_rms_difference": 0.0
+        },
+        "rho": {
+          "relative_l2_difference": 0.003146767635386154,
+          "absolute_rms_difference": 0.0017225945593701015
+        },
+        "T": {
+          "relative_l2_difference": 0.0015764288605703207,
+          "absolute_rms_difference": 9.723419345148119e-06
+        },
+        "Vpar": {
+          "relative_l2_difference": null,
+          "absolute_rms_difference": 0.0
+        },
+        "pressure": {
+          "relative_l2_difference": 0.0016154691386637843,
+          "absolute_rms_difference": 9.559914000971643e-06
+        }
+      },
+      "full_wall_coverage": false
+    },
+    "final": {
+      "coarse_restart_sha256": "0e052e32be24839cb3249f77802c7112d6231fe77b4e320be2b9e9737b794432",
+      "fine_restart_sha256": "95c50f6d65a8cdf64f35acc6d18620ba793b45d6cd7452db01bd4875ee17f49b",
+      "metadata": {
+        "time_seconds": 1.4059131112280784e-06,
+        "steps": 96,
+        "quadrature_order": 4,
+        "mapping_status": "diagnostic_restart_only",
+        "expanded_nodal_dofs": 46324,
+        "canonical_native_dofs": 46203,
+        "native_dof_aliases_verified": true,
+        "minimum_signed_jacobian_m2": 2.4428501087284193e-06,
+        "negative_jacobian_samples": 0,
+        "patch_ids_available": false,
+        "native_constraints_available": false
+      },
+      "total_queries": 180112,
+      "covered_queries": 179754,
+      "covered_fine_volume_fraction": 0.9995089923061896,
+      "uncovered_fine_volume_m3": 0.010631244251112733,
+      "uncovered_examples_m": [
+        [
+          1.5571585923734392,
+          -1.5707951655050296
+        ],
+        [
+          1.5636178542900931,
+          -1.573055574800039
+        ],
+        [
+          1.5579932391557572,
+          -1.5694391694718346
+        ],
+        [
+          1.55295911657172,
+          -1.5707855215336717
+        ],
+        [
+          1.5464077010105095,
+          -1.569527230172522
+        ],
+        [
+          1.5540634043708175,
+          -1.5689837895212373
+        ],
+        [
+          1.5475197738661675,
+          -1.5677095762949582
+        ],
+        [
+          1.538196597088453,
+          -1.568727830019829
+        ],
+        [
+          1.531004849182023,
+          -1.5696643522579417
+        ],
+        [
+          1.554907344017796,
+          -1.5676083213929617
+        ],
+        [
+          1.5483652682945472,
+          -1.5663320367391267
+        ],
+        [
+          1.5390257111998424,
+          -1.567390186486506
+        ],
+        [
+          1.5318206412736932,
+          -1.5683590001680359
+        ],
+        [
+          1.527991476379007,
+          -1.5684290597267847
+        ],
+        [
+          1.520612787688949,
+          -1.5686319669512268
+        ],
+        [
+          0.8776029146675365,
+          -1.585425175393859
+        ],
+        [
+          0.8286389753047717,
+          -1.532581482391712
+        ],
+        [
+          0.8335157403980324,
+          -1.5417145199671438
+        ],
+        [
+          0.828946405603495,
+          -1.5325916799184045
+        ],
+        [
+          0.8182539452649964,
+          -1.4776693971785506
+        ]
+      ],
+      "maximum_inverse_coordinate_error_m": 9.999352672446725e-11,
+      "fallback_points": 462,
+      "fields_on_covered_volume": {
+        "psi": {
+          "relative_l2_difference": 0.0017574571480979764,
+          "absolute_rms_difference": 7.704772667694901e-05
+        },
+        "u": {
+          "relative_l2_difference": 0.1956033393594691,
+          "absolute_rms_difference": 2.2271182768665884e-06
+        },
+        "zj": {
+          "relative_l2_difference": 0.007923174597446162,
+          "absolute_rms_difference": 0.0036968986380953145
+        },
+        "w": {
+          "relative_l2_difference": 0.06691900739002128,
+          "absolute_rms_difference": 0.00015469298577194026
+        },
+        "rho": {
+          "relative_l2_difference": 0.002677706420381288,
+          "absolute_rms_difference": 0.0014623309282862285
+        },
+        "T": {
+          "relative_l2_difference": 0.001324120194404506,
+          "absolute_rms_difference": 8.169935264286472e-06
+        },
+        "Vpar": {
+          "relative_l2_difference": 0.16632682492236564,
+          "absolute_rms_difference": 0.0014316653833077936
+        },
+        "pressure": {
+          "relative_l2_difference": 0.00140185784222045,
+          "absolute_rms_difference": 8.291806931306546e-06
+        }
+      },
+      "full_wall_coverage": false
+    }
+  },
+  "real_native_self_query_check": {
+    "points": 1857,
+    "maximum_absolute_error_by_channel": [
+      5.481705367404999e-11,
+      8.211790707195405e-14,
+      1.9239008719473816e-09,
+      1.4869121559013543e-11,
+      9.967340286465287e-10,
+      2.7357578008535555e-12,
+      4.561546453063503e-11
+    ],
+    "maximum_coordinate_error_m": 9.989759018161551e-11,
+    "fallback_points": 5
+  }
+}

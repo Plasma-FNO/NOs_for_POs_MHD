@@ -1,0 +1,55 @@
+{
+  "axis": {
+    "element": 6,
+    "st": [
+      0.011475489960078564,
+      0.002669787147751272
+    ],
+    "gradient_st": [
+      0.0,
+      -2.168404344971009e-19
+    ],
+    "psi": -0.10326969513216665,
+    "rz": [
+      0.8699041628768839,
+      -0.0002624170591537588
+    ]
+  },
+  "xpoint1": {
+    "element": 21688,
+    "st": [
+      0.0024804788431246083,
+      0.9926113236146922
+    ],
+    "gradient_st": [
+      0.0,
+      -2.168404344971009e-19
+    ],
+    "psi": -0.012281411482492028,
+    "rz": [
+      0.4836052259386999,
+      -1.244357629219332
+    ]
+  },
+  "xpoint2": {
+    "element": 25729,
+    "st": [
+      0.00590580977581195,
+      0.9834709635550717
+    ],
+    "gradient_st": [
+      5.421010862427522e-20,
+      0.0
+    ],
+    "psi": -0.012278915777958314,
+    "rz": [
+      0.4834871942535225,
+      1.2446184485287315
+    ]
+  },
+  "active_xpoint": "xpoint1",
+  "delta_psi_GS": 0.09098828364967462,
+  "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/wall_equilibrium_relaxation_20261103/control3/jorek000000.h5",
+  "source_sha256": "0a5afe6224dc5ea0fe333bad348c8766d5635a395da64e78e779bf941da25762",
+  "limitation": "Newton fixes pressure derivative normalization using this reference flux span. A matched converged-Picard field comparison and achieved-span check are required before claiming the same equilibrium."
+}

@@ -1,0 +1,14 @@
+status: candidate_pre_pilot
+bootstrap_seed: 7411
+bootstrap_samples: 1000
+confidence: 0.95
+residual_rtol: 1.0e-8
+residual_atol: 1.0e-12
+refinement_field_relative_max: 0.01
+refinement_integral_relative_max: 0.02
+id_median_perturbation_relative_target: 0.05
+ood_median_perturbation_relative_target: 0.10
+completion_fraction_target: 0.95
+normalization: training_only
+test_horizon_multiple: 2
+parameter_seeds: [0, 1, 2]

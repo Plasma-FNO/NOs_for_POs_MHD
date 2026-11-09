@@ -1,0 +1,20 @@
+{
+  "status": "submitted",
+  "job_id": "2773393",
+  "kind": "analysis",
+  "native_attempt_started": false,
+  "dependencies": [
+    "2773383",
+    "2773385",
+    "2773387",
+    "2773389"
+  ],
+  "scientific_gates_passed": [],
+  "script_sha256": "6f2de488033ee4f82c1a5162e3cbdb6a69013399d907d4555c44e2ea0eba49ef",
+  "budget": {
+    "mpi_ranks": 1,
+    "memory_GiB": 128,
+    "wall_hours_max": 1
+  },
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/scaling8_pair_poloidal880_20261104"
+}

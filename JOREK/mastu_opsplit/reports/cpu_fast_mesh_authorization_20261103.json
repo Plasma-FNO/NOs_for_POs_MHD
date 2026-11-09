@@ -1,0 +1,22 @@
+{
+  "authorization": "Current explicit user diagnosis and next refinement request",
+  "scope": "One integer-only neighbor-search build/parity and balanced directional geometry allocation. No changed-capacity solver is accepted for evolution.",
+  "allocations_max": 1,
+  "attempts_max": 1,
+  "nodes": 1,
+  "mpi_ranks": 4,
+  "threads": 1,
+  "memory_GiB": 128,
+  "wall_seconds": 7200,
+  "compiler_processes_max": 2,
+  "rank_CPU_hours_max": 8,
+  "node_hours_max": 2,
+  "conservative_resource_hours_max": 512,
+  "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+  "spatial_field_target": 0.01,
+  "geometry_candidates": [
+    "balanced200",
+    "balanced160"
+  ],
+  "capacity_selection_limit": 155000
+}

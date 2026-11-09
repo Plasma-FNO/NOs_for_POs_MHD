@@ -1,0 +1,10 @@
+{
+  "grid": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/exact_core_poloidal_crossing_20261103/core_poloidal440/jorek_grid.h5",
+  "grid_sha256": "e9127378eee745e1e2e7a094c228895ababebb46b57e51f849c37a4472fc852c",
+  "quadrature_order": 8,
+  "elements": 89470,
+  "minimum_signed_jacobian_m2": 9.591795047280027e-09,
+  "positive_nonsingular_at_q8": true,
+  "invalid_elements": [],
+  "scientific_gates_passed": []
+}

@@ -1,0 +1,36 @@
+{
+  "acceptance": {
+    "equilibrium_regression": {
+      "absolute_tolerance": 0.0001,
+      "dataset": "values"
+    },
+    "final_time_s": 0.0,
+    "required_files": [
+      "jorek_restart.h5"
+    ]
+  },
+  "command": [
+    "mpirun",
+    "--bind-to",
+    "none",
+    "-n",
+    "1",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/prepared_equilibrium_authorized_20261102/jorek.exe"
+  ],
+  "config_hash": "39ba6e56d94f4a06defcd857bb1f51070b6c8cbcf9ca0ef6fa4c431a83574f3d",
+  "execution": {
+    "launcher": [
+      "mpirun",
+      "--bind-to",
+      "none",
+      "-n"
+    ],
+    "max_attempts": 1,
+    "mpi_ranks": 1,
+    "omp_threads": 1,
+    "require_slurm": true,
+    "timeout_s": 540
+  },
+  "output": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium_regression_20261102",
+  "prepared": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/prepared_equilibrium_authorized_20261102"
+}

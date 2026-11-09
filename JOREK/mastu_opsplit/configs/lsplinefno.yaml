@@ -1,0 +1,46 @@
+dependency:
+  path: /pitagora/home/userexternal/vgopakum/Conditional_Fusion_Operator
+  commit: a3ca59bba100ca56e535fc35c32967bdeb04d8d9
+  sha256:
+    Models/__init__.py: 1526e6026309d8ecd39275692adc3d4d0145570d00cb23d0106039a4adf6abb4
+    Models/base.py: e02bf1d8c50fe604645da4b51941030dfb2994b1b46def0b80496547511d3049
+    Models/conditioning/__init__.py: d6165afc6347eddc5643a01e7a82fe20223798123061a3f6643d741d946ebf75
+    Models/conditioning/adaptive_layer_norm_zero.py: 5f17798ea013ae351aff5c369f4f9bac170947a2cee85fe10979312e5e91fc28
+    Models/conditioning/base.py: 2057b3f421e6acf4dfcdee36f287298d68785747c09aa80d0ff6b3087aabc23c
+    Models/conditioning/bayesian_metalearning.py: 7ac78268a7026628b4d94c907e1821125e84d34c582b56c067d36349e29b8cdc
+    Models/conditioning/concatenation.py: c4c1f49fd841f6e72081aecdf37d842b7d613e853e4e2a1f887c99f2778ab418
+    Models/conditioning/cross_attention.py: 4c16f3ab57ca76c6e2348e61f582f981bea12f361639141924d1ddaf2fe3992b
+    Models/conditioning/film.py: b6cb65a6f7ca3ff78042a2d78b7ad50c2a4dc40b76d4917e15bc539280e06afd
+    Models/conditioning/latent_grid.py: b77d793602fe1b0e2eeed5749bc8843522469a38b6cbd803ad5f90a8e485764e
+    Models/conditioning/spectral_modulation.py: 2a6ccba6c071e16072371395f8dc42874dfadb7ba58541a0432ad271da08036e
+    Models/factory.py: 194619c43dfcf15c63e54a9bab1c8451fd2e37cd58a30ef9ca38b82179124f25
+    Models/fc_gram.py: f9b083b7eb08469ac1858eaeb23b910ff7f2971ff31d1c7572e7b3babbf1f22b
+    Models/geofno.py: 3a730c436eaf50080195141a87333294103ce0c4c2052f25269f65e7425397b9
+    Models/geometry_cache.py: 2106999c8fb5e760f749d3a76eebc5c6267e510fe7a7247bcc29c6d17f35d5be
+    Models/gino.py: 55c9cd61acd2c0fd530728018ff1983d4ef7d302d30ee246f3a86b5c609bedc1
+    Models/gno.py: b66528b0a2197e589ec2c4ca28401a0e84eb354ea2de65fb7069d98fbe282727
+    Models/learnable_spline_fno.py: 9de19eb33708dc7444837d9d9ea99a03d6436749886de873c6e45a8cf0349919
+    Models/model_builder.py: 835a18a5e6169575192f458c4e1aa85a4e1ff049d6e584829cb4acd516f501d1
+    Models/mspt.py: 56a039a8c3b4cc5259dc32a607f16f7cb81f3efea7aa5542a20a9d15ad6fa28d
+    Models/pointnet.py: b6b513aae447e777dc4632ba5f16d37f992e38dfec3cf77837aa264babf22927
+    Models/region_routing.py: 9cc10f2a51a1b7fbcb18921157effc22a91ab5a755d3fb2531a970b4d89c4fda
+    Models/spline_fno.py: 5898b58b57688d17e760dff3661ac31f3d568b6866eb99c4925b7aa6f5a171ed
+    Models/wrappers.py: 26d70a4963472bdb73a1ab7a097c98e77225cf5357c44a108da56b82ba70daa4
+architecture:
+  grid_shape:
+  - 64
+  - 64
+  modes: 12
+  width: 32
+  n_layers: 4
+  kernel_n_control: 9
+  kernel_control_width: 0.5
+  scatter_scales:
+  - 1
+  enforce_pou: true
+  density_channel: true
+  encode_refinement_steps: 0
+  density_eps: 1.0e-06
+  pou_floor: 0.001
+  density_floor_frac: 0.1
+  scatter_max_temp_mb: 128

@@ -1,0 +1,394 @@
+{
+  "wall80_newton_20261103/wall80": {
+    "1": {
+      "before": {
+        "minimum": 6.911634251894323e-07,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 6.911634251893423e-07,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    },
+    "2": {
+      "before": {
+        "minimum": 1.5166368638055017e-06,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 1.5166368638107753e-06,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    },
+    "3": {
+      "before": {
+        "minimum": 1.7130969404037783e-05,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 1.713096940403749e-05,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    },
+    "4": {
+      "before": {
+        "minimum": 1.3193433349216342e-06,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 1.3193433349205788e-06,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    },
+    "5": {
+      "before": {
+        "minimum": 3.7800485304779717e-07,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 3.7800485304745137e-07,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    },
+    "6": {
+      "before": {
+        "minimum": 6.205338781816131e-07,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 6.205338781818927e-07,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    },
+    "7": {
+      "before": {
+        "minimum": 3.6906220741033216e-06,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 3.6906220741034186e-06,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    },
+    "8": {
+      "before": {
+        "minimum": 2.6440905803734494e-07,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 2.6440905803734515e-07,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    },
+    "9": {
+      "before": {
+        "minimum": 6.206398390857187e-07,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 6.206398390873075e-07,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    },
+    "10": {
+      "before": {
+        "minimum": -0.0004284493739866766,
+        "invalid_elements": [
+          2343,
+          2406,
+          2469,
+          2532,
+          2595,
+          2658,
+          2721,
+          2784,
+          2847,
+          2910
+        ]
+      },
+      "after": {
+        "minimum": -4.137369527663987e-05,
+        "invalid_elements": [
+          2343,
+          2909
+        ]
+      },
+      "changed_tangents": 9
+    },
+    "11": {
+      "before": {
+        "minimum": 4.60348635707944e-07,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 4.603486357078767e-07,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    }
+  },
+  "exact_poloidal_crossing_20261103/poloidal440": {
+    "1": {
+      "before": {
+        "minimum": -2.8835121317089517e-05,
+        "invalid_elements": [
+          1486,
+          1596,
+          1706,
+          1816,
+          1926,
+          2036,
+          2146,
+          2256
+        ]
+      },
+      "after": {
+        "minimum": 1.5366438134962277e-06,
+        "invalid_elements": []
+      },
+      "changed_tangents": 7
+    },
+    "2": {
+      "before": {
+        "minimum": 2.176463432443279e-06,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 2.176463432443171e-06,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    },
+    "3": {
+      "before": {
+        "minimum": 8.606833902908508e-06,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 8.606833902908555e-06,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    },
+    "4": {
+      "before": {
+        "minimum": 1.2564246717866875e-06,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 1.2564246717862704e-06,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    },
+    "5": {
+      "before": {
+        "minimum": 7.194055896255706e-07,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 7.194055896259114e-07,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    },
+    "6": {
+      "before": {
+        "minimum": 6.341125951352044e-07,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 6.341125951334516e-07,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    },
+    "7": {
+      "before": {
+        "minimum": 7.098050027259781e-06,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 7.098050027259751e-06,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    },
+    "8": {
+      "before": {
+        "minimum": 2.5520945623612103e-07,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 2.552094562361302e-07,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    },
+    "9": {
+      "before": {
+        "minimum": 6.15778098612743e-07,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 6.157780986127078e-07,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    },
+    "10": {
+      "before": {
+        "minimum": 2.8367918378414743e-07,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 2.8367918378415844e-07,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    },
+    "11": {
+      "before": {
+        "minimum": 5.399978358704275e-07,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 5.399978358704104e-07,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    }
+  },
+  "normalized_newton_20261103/control1": {
+    "1": {
+      "before": {
+        "minimum": 2.8935411630155992e-06,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 2.8935411630154912e-06,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    },
+    "2": {
+      "before": {
+        "minimum": 4.519018310187831e-06,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 4.519018310194628e-06,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    },
+    "3": {
+      "before": {
+        "minimum": 1.713284326784679e-05,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 1.7132843267846723e-05,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    },
+    "4": {
+      "before": {
+        "minimum": 3.084951829288047e-06,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 3.084951829288001e-06,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    },
+    "5": {
+      "before": {
+        "minimum": 8.971721221985498e-07,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 8.971721221995859e-07,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    },
+    "6": {
+      "before": {
+        "minimum": 1.2574525737953295e-06,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 1.2574525737987576e-06,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    },
+    "7": {
+      "before": {
+        "minimum": 1.3872927357518558e-05,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 1.3872927357518686e-05,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    },
+    "8": {
+      "before": {
+        "minimum": 5.392506559552243e-07,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 5.392506559552352e-07,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    },
+    "9": {
+      "before": {
+        "minimum": 1.2576665695483804e-06,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 1.2576665695478412e-06,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    },
+    "10": {
+      "before": {
+        "minimum": 5.860753157377959e-07,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 5.860753157378445e-07,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    },
+    "11": {
+      "before": {
+        "minimum": 1.0950366373582337e-06,
+        "invalid_elements": []
+      },
+      "after": {
+        "minimum": 1.0950366373582076e-06,
+        "invalid_elements": []
+      },
+      "changed_tangents": 0
+    }
+  }
+}

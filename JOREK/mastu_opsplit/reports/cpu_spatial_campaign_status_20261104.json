@@ -1,0 +1,1445 @@
+{
+  "updated_utc": "2026-11-04T16:49:44.775469+00:00",
+  "jobs": {
+    "2772988": {
+      "record": "cpu_combined_balanced2_20261104.json",
+      "scheduler": [
+        "FAILED",
+        "00:08:56",
+        "1:0"
+      ],
+      "native": {
+        "control3": {
+          "last_newton": [
+            "7",
+            "4.005E-11"
+          ],
+          "last_started_step": 3,
+          "minimum_rho": 0.009042862,
+          "minimum_T": 9.752237e-05,
+          "maximum_backward_error": 3.6045249430740864e-16,
+          "status": "failed_validation",
+          "error": "\"Unable to synchronously open object (object 'xtime' doesn't exist)\""
+        }
+      }
+    },
+    "2773195": {
+      "record": "cpu_combined_balanced2_attachment_20261104.json",
+      "scheduler": [
+        "FAILED",
+        "00:30:15",
+        "1:0"
+      ],
+      "native": {
+        "probe3": {
+          "last_newton": null,
+          "last_started_step": null,
+          "status": "failed_validation",
+          "error": "exit_nonzero"
+        }
+      }
+    },
+    "2773005": {
+      "record": "cpu_combined_balanced2_mpi16_20261104.json",
+      "scheduler": [
+        "FAILED",
+        "00:31:48",
+        "1:0"
+      ],
+      "native": {
+        "control3": {
+          "last_newton": [
+            "7",
+            "4.005E-11"
+          ],
+          "last_started_step": 3,
+          "minimum_rho": 0.009042862,
+          "minimum_T": 9.752237e-05,
+          "maximum_backward_error": 3.6045249430740864e-16,
+          "status": "completed",
+          "error": null
+        },
+        "probe3": {
+          "last_newton": null,
+          "last_started_step": null,
+          "status": "failed_validation",
+          "error": "exit_nonzero"
+        }
+      }
+    },
+    "2772841": {
+      "record": "cpu_combined_core_poloidal880_20261104.json",
+      "scheduler": [
+        "CANCELLED by 34213",
+        "00:58:38",
+        "0:0"
+      ],
+      "native": {
+        "probe3": {
+          "last_newton": [
+            "7",
+            "2.406E-11"
+          ],
+          "last_started_step": 3,
+          "minimum_rho": -42296180000.0,
+          "minimum_T": -27912560000.0,
+          "maximum_backward_error": 7.471836804837429e-13
+        }
+      }
+    },
+    "2772893": {
+      "record": "cpu_combined_core_poloidal_analysis_job_20261104.json",
+      "scheduler": [
+        "CANCELLED by 34213",
+        "00:00:00",
+        "0:0"
+      ],
+      "native": {}
+    },
+    "2773190": {
+      "record": "cpu_combined_core_poloidal_analysis_v2_job_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:02:28",
+        "0:0"
+      ],
+      "native": {}
+    },
+    "2772900": {
+      "record": "cpu_combined_core_poloidal_next_coverage_job_20261104.json",
+      "scheduler": [
+        "CANCELLED by 34213",
+        "00:00:00",
+        "0:0"
+      ],
+      "native": {}
+    },
+    "2772909": {
+      "record": "cpu_combined_divertor160_20261104.json",
+      "scheduler": [
+        "FAILED",
+        "00:11:32",
+        "1:0"
+      ],
+      "native": {
+        "probe3": {
+          "last_newton": [
+            "8",
+            "2.640E-11"
+          ],
+          "last_started_step": 3,
+          "minimum_rho": 0.009012168,
+          "minimum_T": 9.752236e-05,
+          "maximum_backward_error": 5.316666024238118e-16,
+          "status": "failed_validation",
+          "error": "singular or folded native geometry"
+        }
+      }
+    },
+    "2772927": {
+      "record": "cpu_combined_exterior_flux2_20261104.json",
+      "scheduler": [
+        "FAILED",
+        "00:04:03",
+        "1:0"
+      ],
+      "native": {
+        "probe3": {
+          "last_newton": null,
+          "last_started_step": null,
+          "status": "failed_validation",
+          "error": "exit_nonzero"
+        }
+      }
+    },
+    "2772939": {
+      "record": "cpu_combined_mpi16_compare_job_20261104.json",
+      "scheduler": [
+        "FAILED",
+        "00:00:03",
+        "1:0"
+      ],
+      "native": {}
+    },
+    "2772998": {
+      "record": "cpu_combined_mpi16_compare_v2_job_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:01:05",
+        "0:0"
+      ],
+      "native": {}
+    },
+    "2772930": {
+      "record": "cpu_combined_mpi16_parity_job_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:12:13",
+        "0:0"
+      ],
+      "native": {
+        "baseline16": {
+          "last_newton": [
+            "7",
+            "4.005E-11"
+          ],
+          "last_started_step": 3,
+          "minimum_rho": 0.009042862,
+          "minimum_T": 9.752237e-05,
+          "maximum_backward_error": 3.6045249430740864e-16,
+          "status": "completed",
+          "error": null
+        },
+        "perturbed16": {
+          "last_newton": [
+            "7",
+            "4.005E-11"
+          ],
+          "last_started_step": 3,
+          "minimum_rho": 0.009042814,
+          "minimum_T": 9.752231e-05,
+          "maximum_backward_error": 3.6045249430740864e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2772932": {
+      "record": "cpu_combined_mpi4_parity_job_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:08:12",
+        "0:0"
+      ],
+      "native": {
+        "perturbed4": {
+          "last_newton": [
+            "7",
+            "4.005E-11"
+          ],
+          "last_started_step": 3,
+          "minimum_rho": 0.009042814,
+          "minimum_T": 9.752231e-05,
+          "maximum_backward_error": 3.6045249430740864e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2772872": {
+      "record": "cpu_combined_pair_control80_baseline48_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:54:50",
+        "0:0"
+      ],
+      "native": {
+        "baseline48": {
+          "last_newton": [
+            "7",
+            "4.005E-11"
+          ],
+          "last_started_step": 48,
+          "minimum_rho": 0.00313282,
+          "minimum_T": 8.874541e-05,
+          "maximum_backward_error": 3.6045249430740864e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2772874": {
+      "record": "cpu_combined_pair_control80_perturbed48_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "01:01:59",
+        "0:0"
+      ],
+      "native": {
+        "perturbed48": {
+          "last_newton": [
+            "7",
+            "4.005E-11"
+          ],
+          "last_started_step": 48,
+          "minimum_rho": 0.0031071,
+          "minimum_T": 8.875205e-05,
+          "maximum_backward_error": 3.6045249430740864e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2772884": {
+      "record": "cpu_combined_pair_core_poloidal440_baseline48_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "02:00:11",
+        "0:0"
+      ],
+      "native": {
+        "baseline48": {
+          "last_newton": [
+            "7",
+            "8.162E-11"
+          ],
+          "last_started_step": 48,
+          "minimum_rho": 0.002808793,
+          "minimum_T": 8.832558e-05,
+          "maximum_backward_error": 4.614524434813652e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2772886": {
+      "record": "cpu_combined_pair_core_poloidal440_perturbed48_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "01:56:49",
+        "0:0"
+      ],
+      "native": {
+        "perturbed48": {
+          "last_newton": [
+            "7",
+            "8.162E-11"
+          ],
+          "last_started_step": 48,
+          "minimum_rho": 0.002809532,
+          "minimum_T": 8.833393e-05,
+          "maximum_backward_error": 4.614524434813652e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2772811": {
+      "record": "cpu_combined_pair_radial160_baseline48_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "01:42:29",
+        "0:0"
+      ],
+      "native": {
+        "baseline48": {
+          "last_newton": [
+            "6",
+            "8.482E-11"
+          ],
+          "last_started_step": 48,
+          "minimum_rho": 0.003132822,
+          "minimum_T": 8.874541e-05,
+          "maximum_backward_error": 4.164992344919663e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2772813": {
+      "record": "cpu_combined_pair_radial160_perturbed48_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "01:43:01",
+        "0:0"
+      ],
+      "native": {
+        "perturbed48": {
+          "last_newton": [
+            "6",
+            "8.482E-11"
+          ],
+          "last_started_step": 48,
+          "minimum_rho": 0.003107102,
+          "minimum_T": 8.875205e-05,
+          "maximum_backward_error": 4.164992344919663e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2772815": {
+      "record": "cpu_combined_pair_radial320_baseline48_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "02:39:03",
+        "0:0"
+      ],
+      "native": {
+        "baseline48": {
+          "last_newton": [
+            "8",
+            "8.891E-11"
+          ],
+          "last_started_step": 48,
+          "minimum_rho": 0.003132824,
+          "minimum_T": 8.874542e-05,
+          "maximum_backward_error": 4.1077983871341684e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2772817": {
+      "record": "cpu_combined_pair_radial320_perturbed48_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "03:28:19",
+        "0:0"
+      ],
+      "native": {
+        "perturbed48": {
+          "last_newton": [
+            "8",
+            "8.891E-11"
+          ],
+          "last_started_step": 48,
+          "minimum_rho": 0.003107104,
+          "minimum_T": 8.875205e-05,
+          "maximum_backward_error": 4.1077983871341684e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2772876": {
+      "record": "cpu_combined_pair_wall80_baseline48_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "01:23:48",
+        "0:0"
+      ],
+      "native": {
+        "baseline48": {
+          "last_newton": [
+            "11",
+            "2.533E-11"
+          ],
+          "last_started_step": 48,
+          "minimum_rho": 0.003001687,
+          "minimum_T": 8.860862e-05,
+          "maximum_backward_error": 4.819913076116052e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2772878": {
+      "record": "cpu_combined_pair_wall80_perturbed48_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "01:23:32",
+        "0:0"
+      ],
+      "native": {
+        "perturbed48": {
+          "last_newton": [
+            "11",
+            "2.533E-11"
+          ],
+          "last_started_step": 48,
+          "minimum_rho": 0.002975348,
+          "minimum_T": 8.861533e-05,
+          "maximum_backward_error": 4.819913076116052e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2771635": {
+      "record": "cpu_combined_radial320_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:28:41",
+        "0:0"
+      ],
+      "native": {
+        "probe3": {
+          "last_newton": [
+            "8",
+            "8.891E-11"
+          ],
+          "last_started_step": 3,
+          "minimum_rho": 0.009042862,
+          "minimum_T": 9.752237e-05,
+          "maximum_backward_error": 4.1077983871341684e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2772846": {
+      "record": "cpu_combined_radial_analysis_job_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:03:37",
+        "0:0"
+      ],
+      "native": {}
+    },
+    "2772923": {
+      "record": "cpu_combined_radial_order_job_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:04:39",
+        "0:0"
+      ],
+      "native": {}
+    },
+    "2772913": {
+      "record": "cpu_combined_wall160_20261104.json",
+      "scheduler": [
+        "FAILED",
+        "00:04:30",
+        "1:0"
+      ],
+      "native": {
+        "probe3": {
+          "last_newton": null,
+          "last_started_step": null,
+          "status": "failed_validation",
+          "error": "exit_nonzero"
+        }
+      }
+    },
+    "2772891": {
+      "record": "cpu_combined_wall_analysis_job_20261104.json",
+      "scheduler": [
+        "CANCELLED by 34213",
+        "00:00:00",
+        "0:0"
+      ],
+      "native": {}
+    },
+    "2773188": {
+      "record": "cpu_combined_wall_analysis_v2_job_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:02:08",
+        "0:0"
+      ],
+      "native": {}
+    },
+    "2772898": {
+      "record": "cpu_combined_wall_coverage_job_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:01:26",
+        "0:0"
+      ],
+      "native": {}
+    },
+    "2773412": {
+      "record": "cpu_corner_handle_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:24:15",
+        "0:0"
+      ],
+      "native": {
+        "control3": {
+          "last_newton": [
+            "7",
+            "4.005E-11"
+          ],
+          "last_started_step": 3,
+          "minimum_rho": 0.009042862,
+          "minimum_T": 9.752237e-05,
+          "maximum_backward_error": 4.1251402138079076e-16,
+          "status": "completed",
+          "error": null
+        },
+        "perturbed3": {
+          "last_newton": [
+            "7",
+            "4.005E-11"
+          ],
+          "last_started_step": 3,
+          "minimum_rho": 0.009042814,
+          "minimum_T": 9.752231e-05,
+          "maximum_backward_error": 4.1251402138079076e-16,
+          "status": "completed",
+          "error": null
+        },
+        "wall80": {
+          "last_newton": [
+            "11",
+            "2.533E-11"
+          ],
+          "last_started_step": 3,
+          "minimum_rho": 0.00885794,
+          "minimum_T": 9.749204e-05,
+          "maximum_backward_error": 4.798877470239516e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2774854": {
+      "record": "cpu_corner_handle_pair_wall160_baseline48_20261104.json",
+      "scheduler": [
+        "RUNNING",
+        "00:54:21",
+        "0:0"
+      ],
+      "native": {
+        "baseline48": {
+          "last_newton": [
+            "13",
+            "1.675E-11"
+          ],
+          "last_started_step": 34,
+          "minimum_rho": 0.003838904,
+          "minimum_T": 8.990017e-05,
+          "maximum_backward_error": 4.37998397251875e-16
+        }
+      }
+    },
+    "2774856": {
+      "record": "cpu_corner_handle_pair_wall160_perturbed48_20261104.json",
+      "scheduler": [
+        "RUNNING",
+        "00:53:39",
+        "0:0"
+      ],
+      "native": {
+        "perturbed48": {
+          "last_newton": [
+            "13",
+            "1.675E-11"
+          ],
+          "last_started_step": 33,
+          "minimum_rho": 0.003904699,
+          "minimum_T": 9.002753e-05,
+          "maximum_backward_error": 4.7698211420941374e-15
+        }
+      }
+    },
+    "2773488": {
+      "record": "cpu_corner_handle_pair_wall80_baseline48_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:40:03",
+        "0:0"
+      ],
+      "native": {
+        "baseline48": {
+          "last_newton": [
+            "11",
+            "2.533E-11"
+          ],
+          "last_started_step": 48,
+          "minimum_rho": 0.003001687,
+          "minimum_T": 8.860862e-05,
+          "maximum_backward_error": 4.798877470239516e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2773490": {
+      "record": "cpu_corner_handle_pair_wall80_perturbed48_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:40:03",
+        "0:0"
+      ],
+      "native": {
+        "perturbed48": {
+          "last_newton": [
+            "11",
+            "2.533E-11"
+          ],
+          "last_started_step": 48,
+          "minimum_rho": 0.002975348,
+          "minimum_T": 8.861533e-05,
+          "maximum_backward_error": 4.798877470239516e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2773436": {
+      "record": "cpu_corner_handle_wall120_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:12:45",
+        "0:0"
+      ],
+      "native": {
+        "probe3": {
+          "last_newton": [
+            "13",
+            "1.712E-11"
+          ],
+          "last_started_step": 3,
+          "minimum_rho": 0.008827414,
+          "minimum_T": 9.748624e-05,
+          "maximum_backward_error": 4.861993001615947e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2773438": {
+      "record": "cpu_corner_handle_wall160_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:15:04",
+        "0:0"
+      ],
+      "native": {
+        "probe3": {
+          "last_newton": [
+            "13",
+            "1.675E-11"
+          ],
+          "last_started_step": 3,
+          "minimum_rho": 0.008883244,
+          "minimum_T": 9.748131e-05,
+          "maximum_backward_error": 4.37998397251875e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2774880": {
+      "record": "cpu_corner_handle_wall_next_analysis_job_20261104.json",
+      "scheduler": [
+        "PENDING",
+        "00:00:00",
+        "0:0"
+      ],
+      "native": {}
+    },
+    "2773145": {
+      "record": "cpu_mumps_scaling8_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:17:44",
+        "0:0"
+      ],
+      "native": {
+        "control3": {
+          "last_newton": [
+            "7",
+            "4.005E-11"
+          ],
+          "last_started_step": 3,
+          "minimum_rho": 0.009042862,
+          "minimum_T": 9.752237e-05,
+          "maximum_backward_error": 4.1251402138079076e-16,
+          "status": "completed",
+          "error": null
+        },
+        "perturbed3": {
+          "last_newton": [
+            "7",
+            "4.005E-11"
+          ],
+          "last_started_step": 3,
+          "minimum_rho": 0.009042814,
+          "minimum_T": 9.752231e-05,
+          "maximum_backward_error": 4.1251402138079076e-16,
+          "status": "completed",
+          "error": null
+        },
+        "poloidal880_step1": {
+          "last_newton": null,
+          "last_started_step": 1,
+          "minimum_rho": 0.009383363,
+          "minimum_T": 9.900587e-05,
+          "maximum_backward_error": 1.108105090114678e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2773106": {
+      "record": "cpu_poloidal880_dt1_20261104.json",
+      "scheduler": [
+        "FAILED",
+        "00:03:37",
+        "1:0"
+      ],
+      "native": {
+        "dt1": {
+          "last_newton": null,
+          "last_started_step": 1,
+          "minimum_rho": -0.1088736,
+          "minimum_T": -0.1799899,
+          "maximum_backward_error": 2.2090600438960113e-15,
+          "status": "failed_validation",
+          "error": "nonfinite fields or nonpositive sampled density/temperature"
+        }
+      }
+    },
+    "2773108": {
+      "record": "cpu_poloidal880_dt_half_20261104.json",
+      "scheduler": [
+        "FAILED",
+        "00:03:33",
+        "1:0"
+      ],
+      "native": {
+        "dt_half": {
+          "last_newton": null,
+          "last_started_step": 1,
+          "minimum_rho": -0.2518099,
+          "minimum_T": -0.1392878,
+          "maximum_backward_error": 1.4850798576877962e-14,
+          "status": "failed_validation",
+          "error": "nonfinite fields or nonpositive sampled density/temperature"
+        }
+      }
+    },
+    "2773110": {
+      "record": "cpu_poloidal880_dt_quarter_20261104.json",
+      "scheduler": [
+        "FAILED",
+        "00:03:31",
+        "1:0"
+      ],
+      "native": {
+        "dt_quarter": {
+          "last_newton": null,
+          "last_started_step": 1,
+          "minimum_rho": -1.291246,
+          "minimum_T": -6.403378,
+          "maximum_backward_error": 4.732019814223141e-13,
+          "status": "failed_validation",
+          "error": "nonfinite fields or nonpositive sampled density/temperature"
+        }
+      }
+    },
+    "2775165": {
+      "record": "cpu_reversed_crossing_20261104.json",
+      "scheduler": [
+        "FAILED",
+        "00:00:52",
+        "1:0"
+      ],
+      "native": {
+        "control3": {
+          "last_newton": null,
+          "last_started_step": null,
+          "status": "failed_validation",
+          "error": "exit_nonzero"
+        }
+      }
+    },
+    "2775323": {
+      "record": "cpu_reversed_crossing_v2_20261104.json",
+      "scheduler": [
+        "FAILED",
+        "00:01:06",
+        "1:0"
+      ],
+      "native": {
+        "control3": {
+          "last_newton": null,
+          "last_started_step": null,
+          "status": "failed_validation",
+          "error": "exit_nonzero"
+        }
+      }
+    },
+    "2775359": {
+      "record": "cpu_reversed_crossing_v3_20261104.json",
+      "scheduler": [
+        "RUNNING",
+        "00:18:40",
+        "0:0"
+      ],
+      "native": {
+        "control3": {
+          "last_newton": [
+            "7",
+            "4.005E-11"
+          ],
+          "last_started_step": 3,
+          "minimum_rho": 0.009042862,
+          "minimum_T": 9.752237e-05,
+          "maximum_backward_error": 4.1251402138079076e-16,
+          "status": "completed",
+          "error": null
+        },
+        "perturbed3": {
+          "last_newton": [
+            "7",
+            "4.005E-11"
+          ],
+          "last_started_step": 3,
+          "minimum_rho": 0.009042814,
+          "minimum_T": 9.752231e-05,
+          "maximum_backward_error": 4.1251402138079076e-16,
+          "status": "completed",
+          "error": null
+        },
+        "wall80": {
+          "last_newton": [
+            "11",
+            "2.533E-11"
+          ],
+          "last_started_step": 3,
+          "minimum_rho": 0.00885794,
+          "minimum_T": 9.749204e-05,
+          "maximum_backward_error": 4.798877470239516e-16
+        }
+      }
+    },
+    "2773441": {
+      "record": "cpu_scaling8_capacity400_20261104.json",
+      "scheduler": [
+        "RUNNING",
+        "02:16:44",
+        "0:0"
+      ],
+      "native": {
+        "control3": {
+          "last_newton": [
+            "7",
+            "4.005E-11"
+          ],
+          "last_started_step": 3,
+          "minimum_rho": 0.009042862,
+          "minimum_T": 9.752237e-05,
+          "maximum_backward_error": 4.1251402138079076e-16,
+          "status": "completed",
+          "error": null
+        },
+        "perturbed3": {
+          "last_newton": [
+            "7",
+            "4.005E-11"
+          ],
+          "last_started_step": 3,
+          "minimum_rho": 0.009042814,
+          "minimum_T": 9.752231e-05,
+          "maximum_backward_error": 4.1251402138079076e-16,
+          "status": "completed",
+          "error": null
+        },
+        "poloidal880": {
+          "last_newton": [
+            "7",
+            "2.406E-11"
+          ],
+          "last_started_step": 3,
+          "minimum_rho": 0.007749972,
+          "minimum_T": 9.705068e-05,
+          "maximum_backward_error": 6.152751333307017e-16,
+          "status": "completed",
+          "error": null
+        },
+        "probe3": {
+          "last_newton": null,
+          "last_started_step": null
+        }
+      }
+    },
+    "2774908": {
+      "record": "cpu_scaling8_capacity400_pair_poloidal880_baseline48_20261104.json",
+      "scheduler": [
+        "RUNNING",
+        "00:43:45",
+        "0:0"
+      ],
+      "native": {
+        "baseline48": {
+          "last_newton": [
+            "7",
+            "2.406E-11"
+          ],
+          "last_started_step": 9,
+          "minimum_rho": 0.005626231,
+          "minimum_T": 9.486925e-05,
+          "maximum_backward_error": 6.152751333307017e-16
+        }
+      }
+    },
+    "2774910": {
+      "record": "cpu_scaling8_capacity400_pair_poloidal880_perturbed48_20261104.json",
+      "scheduler": [
+        "RUNNING",
+        "00:43:45",
+        "0:0"
+      ],
+      "native": {
+        "perturbed48": {
+          "last_newton": [
+            "7",
+            "2.406E-11"
+          ],
+          "last_started_step": 10,
+          "minimum_rho": 0.005357229,
+          "minimum_T": 9.452551e-05,
+          "maximum_backward_error": 6.152751333307017e-16
+        }
+      }
+    },
+    "2775352": {
+      "record": "cpu_scaling8_capacity400_pair_radial320_baseline48_20261104.json",
+      "scheduler": [
+        "RUNNING",
+        "00:21:36",
+        "0:0"
+      ],
+      "native": {
+        "baseline48": {
+          "last_newton": [
+            "8",
+            "8.891E-11"
+          ],
+          "last_started_step": 1,
+          "maximum_backward_error": 4.027774789598297e-16
+        }
+      }
+    },
+    "2775354": {
+      "record": "cpu_scaling8_capacity400_pair_radial320_perturbed48_20261104.json",
+      "scheduler": [
+        "RUNNING",
+        "00:21:36",
+        "0:0"
+      ],
+      "native": {
+        "perturbed48": {
+          "last_newton": [
+            "8",
+            "8.891E-11"
+          ],
+          "last_started_step": 1,
+          "maximum_backward_error": 4.027774789598297e-16
+        }
+      }
+    },
+    "2774872": {
+      "record": "cpu_scaling8_capacity400_radial320_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:28:20",
+        "0:0"
+      ],
+      "native": {
+        "probe3": {
+          "last_newton": [
+            "8",
+            "8.891E-11"
+          ],
+          "last_started_step": 3,
+          "minimum_rho": 0.009042862,
+          "minimum_T": 9.752237e-05,
+          "maximum_backward_error": 4.027774789598297e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2774878": {
+      "record": "cpu_scaling8_capacity400_radial640_20261104.json",
+      "scheduler": [
+        "RUNNING",
+        "00:50:56",
+        "0:0"
+      ],
+      "native": {
+        "probe3": {
+          "last_newton": null,
+          "last_started_step": null
+        }
+      }
+    },
+    "2773236": {
+      "record": "cpu_scaling8_mpi4_poloidal880_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:08:15",
+        "0:0"
+      ],
+      "native": {
+        "replay1": {
+          "last_newton": null,
+          "last_started_step": 1,
+          "minimum_rho": 0.009383363,
+          "minimum_T": 9.900587e-05,
+          "maximum_backward_error": 1.1379061125266431e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2773383": {
+      "record": "cpu_scaling8_pair_poloidal440_baseline48_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:54:18",
+        "0:0"
+      ],
+      "native": {
+        "baseline48": {
+          "last_newton": [
+            "7",
+            "8.162E-11"
+          ],
+          "last_started_step": 48,
+          "minimum_rho": 0.002808793,
+          "minimum_T": 8.832558e-05,
+          "maximum_backward_error": 5.034591636321857e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2773385": {
+      "record": "cpu_scaling8_pair_poloidal440_perturbed48_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:54:20",
+        "0:0"
+      ],
+      "native": {
+        "perturbed48": {
+          "last_newton": [
+            "7",
+            "8.162E-11"
+          ],
+          "last_started_step": 48,
+          "minimum_rho": 0.002809532,
+          "minimum_T": 8.833393e-05,
+          "maximum_backward_error": 5.034591636321857e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2773387": {
+      "record": "cpu_scaling8_pair_poloidal880_baseline48_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "01:49:15",
+        "0:0"
+      ],
+      "native": {
+        "baseline48": {
+          "last_newton": [
+            "7",
+            "2.406E-11"
+          ],
+          "last_started_step": 48,
+          "minimum_rho": 0.002020527,
+          "minimum_T": 8.79553e-05,
+          "maximum_backward_error": 3.760354684907395e-15,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2773389": {
+      "record": "cpu_scaling8_pair_poloidal880_perturbed48_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "01:49:47",
+        "0:0"
+      ],
+      "native": {
+        "perturbed48": {
+          "last_newton": [
+            "7",
+            "2.406E-11"
+          ],
+          "last_started_step": 48,
+          "minimum_rho": 0.002020641,
+          "minimum_T": 8.79634e-05,
+          "maximum_backward_error": 8.474908353232394e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2773445": {
+      "record": "cpu_scaling8_poloidal1760_geometry_coverage_job_20261104.json",
+      "scheduler": [
+        "PENDING",
+        "00:00:00",
+        "0:0"
+      ],
+      "native": {}
+    },
+    "2773211": {
+      "record": "cpu_scaling8_poloidal440_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:15:44",
+        "0:0"
+      ],
+      "native": {
+        "probe3": {
+          "last_newton": [
+            "7",
+            "8.162E-11"
+          ],
+          "last_started_step": 3,
+          "minimum_rho": 0.008449386,
+          "minimum_T": 9.72357e-05,
+          "maximum_backward_error": 5.034591636321857e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2773213": {
+      "record": "cpu_scaling8_poloidal880_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:39:51",
+        "0:0"
+      ],
+      "native": {
+        "probe3": {
+          "last_newton": [
+            "7",
+            "2.406E-11"
+          ],
+          "last_started_step": 3,
+          "minimum_rho": 0.007749972,
+          "minimum_T": 9.705068e-05,
+          "maximum_backward_error": 6.152751333307017e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2775326": {
+      "record": "cpu_scaling8_poloidal880_error_diagnosis_job_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:03:15",
+        "0:0"
+      ],
+      "native": {}
+    },
+    "2773232": {
+      "record": "cpu_scaling8_poloidal_geometry_coverage_job_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:02:26",
+        "0:0"
+      ],
+      "native": {}
+    },
+    "2773276": {
+      "record": "cpu_scaling8_poloidal_missing_diagnosis_job_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:00:35",
+        "0:0"
+      ],
+      "native": {}
+    },
+    "2773393": {
+      "record": "cpu_scaling8_poloidal_next_analysis_job_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:03:45",
+        "0:0"
+      ],
+      "native": {}
+    },
+    "2773224": {
+      "record": "cpu_scaling8_wall120_20261104.json",
+      "scheduler": [
+        "FAILED",
+        "00:04:22",
+        "1:0"
+      ],
+      "native": {
+        "probe3": {
+          "last_newton": null,
+          "last_started_step": null,
+          "status": "failed_validation",
+          "error": "exit_nonzero"
+        }
+      }
+    },
+    "2773222": {
+      "record": "cpu_scaling8_wall80_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:09:58",
+        "0:0"
+      ],
+      "native": {
+        "probe3": {
+          "last_newton": [
+            "11",
+            "2.533E-11"
+          ],
+          "last_started_step": 3,
+          "minimum_rho": 0.00885794,
+          "minimum_T": 9.749204e-05,
+          "maximum_backward_error": 4.798877470239516e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2773463": {
+      "record": "cpu_xpoint_handle_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:34:36",
+        "0:0"
+      ],
+      "native": {
+        "control3": {
+          "last_newton": [
+            "7",
+            "4.005E-11"
+          ],
+          "last_started_step": 3,
+          "minimum_rho": 0.009042862,
+          "minimum_T": 9.752237e-05,
+          "maximum_backward_error": 4.1251402138079076e-16,
+          "status": "completed",
+          "error": null
+        },
+        "perturbed3": {
+          "last_newton": [
+            "7",
+            "4.005E-11"
+          ],
+          "last_started_step": 3,
+          "minimum_rho": 0.009042814,
+          "minimum_T": 9.752231e-05,
+          "maximum_backward_error": 4.1251402138079076e-16,
+          "status": "completed",
+          "error": null
+        },
+        "wall80": {
+          "last_newton": [
+            "11",
+            "2.533E-11"
+          ],
+          "last_started_step": 3,
+          "minimum_rho": 0.00885794,
+          "minimum_T": 9.749204e-05,
+          "maximum_backward_error": 4.798877470239516e-16,
+          "status": "completed",
+          "error": null
+        },
+        "probe3": {
+          "last_newton": [
+            "12",
+            "9.306E-11"
+          ],
+          "last_started_step": 3,
+          "minimum_rho": 0.009012167,
+          "minimum_T": 9.752236e-05,
+          "maximum_backward_error": 5.342133870877179e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2774883": {
+      "record": "cpu_xpoint_handle_divertor_next_analysis_job_20261104.json",
+      "scheduler": [
+        "RUNNING",
+        "00:01:34",
+        "0:0"
+      ],
+      "native": {}
+    },
+    "2774874": {
+      "record": "cpu_xpoint_handle_pair_divertor160_baseline48_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:49:22",
+        "0:0"
+      ],
+      "native": {
+        "baseline48": {
+          "last_newton": [
+            "12",
+            "9.306E-11"
+          ],
+          "last_started_step": 48,
+          "minimum_rho": 0.003132823,
+          "minimum_T": 8.87454e-05,
+          "maximum_backward_error": 5.342133870877179e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2774876": {
+      "record": "cpu_xpoint_handle_pair_divertor160_perturbed48_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:46:19",
+        "0:0"
+      ],
+      "native": {
+        "perturbed48": {
+          "last_newton": [
+            "12",
+            "9.306E-11"
+          ],
+          "last_started_step": 48,
+          "minimum_rho": 0.003107105,
+          "minimum_T": 8.875204e-05,
+          "maximum_backward_error": 5.342133870877179e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2774866": {
+      "record": "cpu_xpoint_handle_pair_divertor80_baseline48_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:31:22",
+        "0:0"
+      ],
+      "native": {
+        "baseline48": {
+          "last_newton": [
+            "7",
+            "4.005E-11"
+          ],
+          "last_started_step": 48,
+          "minimum_rho": 0.00313282,
+          "minimum_T": 8.874541e-05,
+          "maximum_backward_error": 4.1251402138079076e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    },
+    "2774868": {
+      "record": "cpu_xpoint_handle_pair_divertor80_perturbed48_20261104.json",
+      "scheduler": [
+        "COMPLETED",
+        "00:32:14",
+        "0:0"
+      ],
+      "native": {
+        "perturbed48": {
+          "last_newton": [
+            "7",
+            "4.005E-11"
+          ],
+          "last_started_step": 48,
+          "minimum_rho": 0.0031071,
+          "minimum_T": 8.875205e-05,
+          "maximum_backward_error": 4.1251402138079076e-16,
+          "status": "completed",
+          "error": null
+        }
+      }
+    }
+  },
+  "scope": "Live progress only. Completed native steps do not establish full spatial convergence.",
+  "scientific_gates_passed": []
+}

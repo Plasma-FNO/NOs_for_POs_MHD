@@ -1,0 +1,20 @@
+{
+  "coarse_job_id": "2767853",
+  "coarse_steps": 48,
+  "fine_job_id": "2767868",
+  "fine_steps": 96,
+  "gate_A_passed": false,
+  "maximum_field_difference": 0.00763179413835903,
+  "one_percent_all_field_target_met": true,
+  "relative_l2_field_differences": {
+    "T": 7.856080237629797e-05,
+    "Vpar": 0.0011810479797764678,
+    "psi": 1.03016458695971e-06,
+    "rho": 3.938091483909087e-06,
+    "u": 0.00763179413835903,
+    "w": 0.002092342322882514,
+    "zj": 2.3095949322800103e-05
+  },
+  "scope": "Short-horizon unperturbed timestep check only; not mesh/perturbation convergence",
+  "time_seconds": 1.4059131112280784e-06
+}

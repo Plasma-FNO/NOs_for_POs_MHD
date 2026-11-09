@@ -1,0 +1,18 @@
+# Test-only extension; release is usable only after completion.json is written.
+manifest: /pitagora_scratch/userexternal/vgopakum/mastu_coefficient_ood10_20261106/manifest.json
+completion_record: /pitagora_scratch/userexternal/vgopakum/mastu_coefficient_ood10_20261106/completion.json
+loader: mastu_opsplit.coefficient_ood.CoefficientOODDataset
+model_class: mastu_opsplit.coefficient_ood.DensityDiffusionEulerModel
+baseline_training_config: ensemble_density_diffusion.yaml
+split_counts: {train: 0, validation: 0, test: 10}
+coefficient: D_perp(1)
+baseline_coefficient: 1.0e-5
+parameter_input: D_perp(1) / 1.0e-5
+multiplier_range: [2.0, 10.0]
+explicit_split_term: D_perp(1) * (rho_RR + rho_R/R + rho_ZZ)
+nonlinear_residual_conditioning: same scalar multiplier for all families
+normalization: reuse the evaluated training checkpoint normalization; never fit OOD
+normalization_default: original 60-case training normalization
+normalization_for_80_case_training: pass training_normalization and training_normalization_sha256 to the loader
+initial_states: ten distinct original test trajectories, paired with baseline-coefficient references
+reference_solver: native JOREK model303; Euler is the surrogate update

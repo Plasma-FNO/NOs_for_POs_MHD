@@ -1,0 +1,22 @@
+{
+  "created_utc": "2026-11-03T10:50:08.641990+00:00",
+  "approval_source": "Existing explicit user request to run the refined pair and check spatial convergence; replacement analysis is necessary after a launcher path failure.",
+  "scope": "Exactly one replacement spatial-analysis allocation; no additional simulation.",
+  "previous_failed_job_id": "2769740",
+  "reason": "Relative analysis script path resolved against the batch work directory.",
+  "slurm_account": "fupa2_fauna",
+  "partition": "dcgp_fua_prod",
+  "nodes": 1,
+  "cpus": 1,
+  "threads": 1,
+  "memory_GiB": 64,
+  "wall_seconds": 3600,
+  "attempts": 1,
+  "requested_cpu_core_hours_max": 1,
+  "requested_node_hours_max": 1,
+  "conservative_local_resource_hours_max": 256,
+  "remaining_local_resource_hours": 26481732,
+  "monthly_remaining_local_resource_hours": 2531290,
+  "selected_raw_credit_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+  "scientific_gates_passed": []
+}

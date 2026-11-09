@@ -1,0 +1,187 @@
+{
+  "status": "stopped_for_stagnant_damped_newton_cycle",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/newton_damped_wall_20261103",
+  "budget": {
+    "authorization": "User request to get the numerical solver to converge and finish the science plan.",
+    "scope": "One three-step wall1.5 proof using damped native Newton to suppress the upper/lower X-point cycle.",
+    "allocations_max": 1,
+    "attempts_each_max": 1,
+    "mpi_ranks": 4,
+    "threads": 1,
+    "memory_GiB": 256,
+    "wall_hours_max": 3,
+    "rank_CPU_hours_max": 12,
+    "node_hours_max": 3,
+    "conservative_resource_hours_max": 768,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+    "equilibrium_tolerance_changed": false,
+    "physical_equivalence_requires_validation": true,
+    "delta_psi_GS": 0.09098828364967462
+  },
+  "manifest_sha256": "5a5b10e0b30869355317f25f635d94390b25cb7228c9a77b081e94f93b569e70",
+  "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_newton_damped_wall_20261103.sbatch",
+  "script_sha256": "e8c39b6980022c297d5005e9fe27552c9176fc9ae9984f2acdf19fc33b29d03d",
+  "scheduler_preflight": "sbatch: Job 2771332 to start at 2026-11-03T22:01:21 a using 4 processors on nodes r354c01s10 in partition dcgp_fua_prod\n",
+  "scientific_gates_passed": [],
+  "job_id": "2771333",
+  "wall_failure": {
+    "last_updates": [
+      [
+        14,
+        5.431e-07
+      ],
+      [
+        15,
+        3.72e-07
+      ],
+      [
+        16,
+        1.526e-07
+      ],
+      [
+        17,
+        2.689e-07
+      ],
+      [
+        18,
+        1.83e-07
+      ],
+      [
+        19,
+        1.131e-07
+      ],
+      [
+        20,
+        2.762e-07
+      ],
+      [
+        21,
+        6.04e-07
+      ],
+      [
+        22,
+        5.696e-07
+      ],
+      [
+        23,
+        3.657e-07
+      ],
+      [
+        24,
+        1.503e-07
+      ],
+      [
+        25,
+        2.908e-07
+      ],
+      [
+        26,
+        3.071e-07
+      ],
+      [
+        27,
+        6.263e-07
+      ],
+      [
+        28,
+        4.284e-07
+      ],
+      [
+        29,
+        1.382e-07
+      ],
+      [
+        30,
+        3.532e-07
+      ],
+      [
+        31,
+        3.083e-07
+      ],
+      [
+        32,
+        6.218e-07
+      ],
+      [
+        33,
+        5.375e-07
+      ],
+      [
+        34,
+        3.721e-07
+      ],
+      [
+        35,
+        1.533e-07
+      ],
+      [
+        36,
+        2.689e-07
+      ],
+      [
+        37,
+        1.831e-07
+      ],
+      [
+        38,
+        1.131e-07
+      ],
+      [
+        39,
+        2.762e-07
+      ],
+      [
+        40,
+        6.04e-07
+      ],
+      [
+        41,
+        5.696e-07
+      ],
+      [
+        42,
+        3.656e-07
+      ],
+      [
+        43,
+        1.504e-07
+      ],
+      [
+        44,
+        2.908e-07
+      ],
+      [
+        45,
+        3.071e-07
+      ],
+      [
+        46,
+        6.263e-07
+      ],
+      [
+        47,
+        4.284e-07
+      ],
+      [
+        48,
+        1.382e-07
+      ],
+      [
+        49,
+        3.532e-07
+      ],
+      [
+        50,
+        3.083e-07
+      ],
+      [
+        51,
+        6.218e-07
+      ]
+    ],
+    "cycle_length": 19,
+    "relative_repeatability": 0.010311176578898908,
+    "reason": "Damped anchored Newton repeats a cycle far above 1e-10. Superseded by normalized-profile Newton with corrected span columns and stronger damping.",
+    "replacement_job_id": "2771373"
+  }
+}

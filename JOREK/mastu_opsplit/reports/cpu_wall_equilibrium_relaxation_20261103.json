@@ -1,0 +1,105 @@
+{
+  "status": "failed_validation",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/wall_equilibrium_relaxation_20261103",
+  "budget": {
+    "authorization": "User request to resolve remaining scientific training gates.",
+    "scope": "One allocation, two frozen native3-step proofs: matched amix0.6 original-wall control and wall1.5.",
+    "allocations_max": 1,
+    "attempts_each_max": 1,
+    "mpi_ranks": 4,
+    "threads": 1,
+    "memory_GiB": 256,
+    "wall_hours_max": 3,
+    "rank_CPU_hours_max": 12,
+    "node_hours_max": 3,
+    "conservative_resource_hours_max": 768,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+    "equilibrium_tolerance_changed": false,
+    "physics_changed": false
+  },
+  "manifest_sha256": "abeba7a315883d24badc67547754645cbdd5adc6342981e00ab6d87e1f3fe2ec",
+  "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_wall_equilibrium_relaxation_20261103.sbatch",
+  "script_sha256": "2b84482cc95c87cacc3648e5e34ca0a435f8d610abb0c1d731926b6e3fef0465",
+  "scheduler_preflight": "sbatch: Job 2771219 to start at 2026-11-03T20:35:47 a using 4 processors on nodes r350c01s08 in partition dcgp_fua_prod\n",
+  "scientific_gates_passed": [],
+  "job_id": "2771220",
+  "failure": "Original-wall control passes strict equilibrium and three steps. Refined-wall Picard iteration still cycles above tolerance: iteration 200 raw update 2.627e-8.",
+  "stage_results": {
+    "probe3": {
+      "stage": "probe3",
+      "status": "failed_validation",
+      "returncode": 0,
+      "process_wall_seconds": 1579.9876246060012,
+      "binary_sha256": "dd786f76a5c815976ad54bcd31b744ad2c3d6cafddfcc064dcae8e6761d8ccd6",
+      "scientific_gates_passed": [],
+      "error": "native equilibrium did not reach the requested stopping tolerance",
+      "equilibrium_summary": {
+        "iterations": 200,
+        "last_raw_update": 2.627e-08,
+        "converged": false
+      }
+    },
+    "control3": {
+      "stage": "control3",
+      "status": "completed",
+      "returncode": 0,
+      "process_wall_seconds": 1175.354088032036,
+      "binary_sha256": "dd786f76a5c815976ad54bcd31b744ad2c3d6cafddfcc064dcae8e6761d8ccd6",
+      "scientific_gates_passed": [],
+      "initial": {
+        "health": {
+          "steps": 0,
+          "final_time_s": 0.0,
+          "restart_sha256": "0a5afe6224dc5ea0fe333bad348c8766d5635a395da64e78e779bf941da25762"
+        },
+        "metadata": {
+          "time_seconds": 0.0,
+          "steps": 0,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 223148,
+          "canonical_native_dofs": 222917,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 1.9235618605202478e-08,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 61,
+        "minimum_density": 0.00999999999999999,
+        "minimum_temperature": 9.999999999999996e-05,
+        "restart_sha256": "0a5afe6224dc5ea0fe333bad348c8766d5635a395da64e78e779bf941da25762"
+      },
+      "final": {
+        "health": {
+          "steps": 3,
+          "final_time_s": 8.78695694517549e-08,
+          "restart_sha256": "08f27b98a482b232f05c99673feb771465cf94be02bd5d7703e0746d68a7d1b8"
+        },
+        "metadata": {
+          "time_seconds": 8.78695694517549e-08,
+          "steps": 3,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 223148,
+          "canonical_native_dofs": 222917,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 1.9235618605202478e-08,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 131,
+        "minimum_density": 0.008866882142885236,
+        "minimum_temperature": 9.712761464218445e-05,
+        "restart_sha256": "08f27b98a482b232f05c99673feb771465cf94be02bd5d7703e0746d68a7d1b8"
+      },
+      "workspace_retries": 0,
+      "equilibrium_summary": {
+        "iterations": 159,
+        "last_raw_update": 9.842e-11,
+        "converged": true
+      }
+    }
+  }
+}

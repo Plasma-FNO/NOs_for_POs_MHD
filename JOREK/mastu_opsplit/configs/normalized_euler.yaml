@@ -1,0 +1,59 @@
+# Formulation contract; configs/euler_pilot.yaml runs the chronological diagnostic.
+status: implemented_chronological_pilot
+formulation: normalized_field_euler_opsplit
+reference_implementations:
+  time_update: Utils/explicit_time.py::euler
+  incompressible_rhs: Expts/operator_splitting.py::NS_spectral_OS_rhs
+  compressible_rhs: Expts/operator_splitting.py::Euler_FV_OS_rhs
+  rollout_training: Utils/explicit_time.py::Train_Setup.one_epoch
+  saved_frame_time_example: JOREK/zenodo_opsplit/model.py::SplitFNO.forward
+state:
+  channels: [psi, u, zj, w, rho, T, Vpar]
+  representation: normalized_native_fields
+  hidden_feature_time_integration: false
+  normalization_fit: training_trajectories_only
+time:
+  method: euler
+  coordinate: saved_frame_index
+  interval: 1.0
+  physical_time_metadata_required: true
+  validation_substeps: [1, 2, 4]
+  refinement_uses_same_weights_and_same_total_interval: true
+linear_branch:
+  derivatives: analytic_lsplinefno_normalized_cubic_synthesis_in_physical_RZ
+  operator: learned_raw_field_scatter_then_dRR_plus_dZZ_then_native_projection
+  shares_scatter_kernels_with_nonlinear_branch: true
+  bypasses_fno_lift_film_and_output_mlp: true
+  coefficients: learned_positive_per_channel_in_saved_frame_time
+  physical_model303_transport_coefficients: false
+  boundary_treatment: upstream_truncated_normalized_spline_basis_not_physical_wall_conditions
+  coefficient_scale: latent_grid_spacing_heuristic_not_a_proven_stability_bound
+  full_linearized_mhd_operator: false
+  algebraic_model303_constraints_enforced: false
+  cartesian_finite_differences: false
+  required_before_training:
+    - normalized_state_to_native_coefficient_mapping
+    - derivative_and_time_scale_chain_rules
+    - linear_branch_output_in_same_state_space_as_nonlinear_branch
+    - analytic_derivative_parity_and_backpropagation_checks
+  required_after_training:
+    - fixed_weight_euler_refinement_and_physical_validity_audit
+nonlinear_branch:
+  architecture: L-SplineFNO
+  implementation: coupled_seven_channel_operator
+  inputs: current_predicted_state_geometry_parameters
+  outputs: normalized_field_tendencies
+  exact_physical_term_interpretation: not_established_by_trajectory_loss
+training:
+  supervision: reference_field_rollouts
+  physical_nonlinear_term_labels_required: false
+  native_sbdf2_split_pass_required: false
+  reference_jorek_convergence_required: true
+  independent_parent_trajectory_splits_required_for_benchmark: true
+  pilot: disjoint_time_blocks_of_shared_parent_trajectories
+  future_reference_fields_as_inputs: false
+  scientific_training_ready: false
+comparison:
+  methods: [autoregressive, euler_node, euler_opsplit]
+  shared: [reference_trajectories, normalization, observation_intervals, geometry, rollout_horizons]
+  report: [parameter_counts, compute, decoded_field_errors, positivity, constraint_residuals, long_rollout_stability]

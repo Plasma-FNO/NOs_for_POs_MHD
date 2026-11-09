@@ -1,0 +1,53 @@
+{
+  "job_id": "2784732",
+  "slurm_state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed": "00:08:24",
+  "tests_passed": 22,
+  "source_snapshot_verified": true,
+  "formulation": "normalized-field Euler, L-SplineFNO learned raw-field scatter plus analytic cubic dRR+dZZ synthesis and nonlinear FNO branch",
+  "full_linearized_mhd_operator": false,
+  "independent_trajectory_test": false,
+  "normalized_volume_mse": {
+    "ar": 6.729768939777389,
+    "node": 1.1533896083539812,
+    "opsplit": 1.3101416139800388
+  },
+  "opsplit_error_increase_vs_node_percent": 13.590551231839232,
+  "q8_positive_by_case": {
+    "ar": [
+      true,
+      true
+    ],
+    "node": [
+      false,
+      false
+    ],
+    "opsplit": [
+      true,
+      false
+    ]
+  },
+  "linear_over_neural_rms_range": [
+    0.05235566720343757,
+    0.8412221201219685
+  ],
+  "opsplit_substep_squared_difference_ratios": [
+    3.8643041864801746,
+    3.738243021073163
+  ],
+  "reference_files": {
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/Expts/operator_splitting.py": "66ab62909c0da1e5b437f396874b95c0d83516a52c845446925782e4919361a8",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/Utils/explicit_time.py": "529f1c1515440ba546ce55f6f56da05d51569fb313bce907a9972c8668d16746"
+  },
+  "scientific_validation_pass": false,
+  "limitations": [
+    "Same-parent chronological holdout, one seed, 30 updates",
+    "Control density negative",
+    "Current/vorticity constraints violated",
+    "Diffusion coefficient scaling is not a stability proof"
+  ],
+  "audit": "pilot/audit.json",
+  "metrics": "pilot/results.json",
+  "plot": "pilot/comparison.png"
+}

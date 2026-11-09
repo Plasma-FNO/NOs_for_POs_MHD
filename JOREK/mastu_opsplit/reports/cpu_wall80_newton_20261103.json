@@ -1,0 +1,38 @@
+{
+  "status": "failed_native_wall_mesh_geometry",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/wall80_newton_20261103",
+  "budget": {
+    "authorization": "User requested numerical convergence and completion of the science plan.",
+    "scope": "Three-step doubled wall-resolution proof using the qualified original-profile Newton binary and global X-point search. This changes only the directional wall refinement; no root tracking or tolerance relaxation.",
+    "allocations_max": 1,
+    "attempts_each_max": 1,
+    "mpi_ranks": 4,
+    "threads": 1,
+    "memory_GiB": 256,
+    "wall_hours_max": 3,
+    "rank_CPU_hours_max": 12,
+    "node_hours_max": 3,
+    "conservative_resource_hours_max": 768,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+    "equilibrium_tolerance": 1e-10,
+    "physics_changed": false,
+    "spatial_targets_changed": false
+  },
+  "manifest_sha256": "baa709bfe8e95787b75d15fb195e8b379bf64e95ebab0d545323d5788225f7e6",
+  "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_wall80_newton_20261103.sbatch",
+  "script_sha256": "fbf1f09802d204a59a73f4243b8e62b7ddfae1541ca08c79427d0eade00c902f",
+  "scheduler_preflight": "sbatch: Job 2771438 to start at 2026-11-03T22:51:32 a using 4 processors on nodes r351c05s11 in partition dcgp_fua_prod\n",
+  "scientific_gates_passed": [],
+  "job_id": "2771439",
+  "stage_results": {
+    "wall80": {
+      "stage": "wall80",
+      "status": "failed_validation",
+      "returncode": 1,
+      "process_wall_seconds": 217.86287650000304,
+      "binary_sha256": "88582b9f8046166e12123483ba354027e9fa2cc9d055dfd4f107a658524f88d6",
+      "scientific_gates_passed": [],
+      "error": "exit_nonzero"
+    }
+  }
+}

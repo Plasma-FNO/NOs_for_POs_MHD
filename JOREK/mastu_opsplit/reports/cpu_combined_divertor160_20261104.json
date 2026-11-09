@@ -1,0 +1,37 @@
+{
+  "status": "failed_validation",
+  "kind": "simulation",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/combined_divertor160_20261104",
+  "budget": {
+    "authorization": "User requested continued solver convergence and science-plan progress.",
+    "scope": "One three-step divertor160 probe with the unchanged combined Newton/MUMPS executable; no physical or acceptance changes.",
+    "mpi_ranks": 4,
+    "memory_GiB": 256,
+    "wall_hours_max": 3,
+    "rank_CPU_hours_max": 12,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4240119       4240119            13.8       2531868               2430"
+  },
+  "binary_sha256": "38d428235a842b7a6f8fb256f81ddfed2a1c12355c2d4e322f12e27ef6af1ec9",
+  "manifest_sha256": "9f0ee5b907d8f56cdadd13c548b40ef7dfe3b00a4d2f408749ee3365fddf0e0c",
+  "script_sha256": "e98d3e34010cc6d490b231133662818b4a52f7f0fd35d633adea9a0a3c870e06",
+  "scheduler_preflight": "sbatch: Job 2772908 to start at 2026-11-04T13:09:03 a using 4 processors on nodes r355c05s09 in partition dcgp_fua_prod\n",
+  "scientific_gates_passed": [],
+  "job_id": "2772909",
+  "failure_evidence": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/combined_divertor160_20261104/probe3/result.json",
+  "stage_results": {
+    "probe3": {
+      "stage": "probe3",
+      "status": "failed_validation",
+      "returncode": 0,
+      "process_wall_seconds": 686.0933096649824,
+      "binary_sha256": "38d428235a842b7a6f8fb256f81ddfed2a1c12355c2d4e322f12e27ef6af1ec9",
+      "scientific_gates_passed": [],
+      "error": "singular or folded native geometry",
+      "equilibrium_summary": {
+        "iterations": 8,
+        "last_raw_update": 2.64e-11,
+        "converged": true
+      }
+    }
+  }
+}

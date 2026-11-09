@@ -1,0 +1,11 @@
+{
+  "status": "submitted",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/combined_wall_coverage_20261104",
+  "dependencies": [],
+  "script_sha256": "194ee6b5c486e7c6ac203b9ea79a33edd868991c10d652ab043e6f0ee0881126",
+  "analysis_source_sha256": "51d37a67d22c5a5c271112ff473f04ef109ed6ecf2dbb1c9fab62903dbf9b1c2",
+  "scientific_gates_passed": [],
+  "job_id": "2772898",
+  "kind": "analysis",
+  "native_attempt_started": false
+}

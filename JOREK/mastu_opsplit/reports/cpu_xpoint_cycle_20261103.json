@@ -1,0 +1,28 @@
+{
+  "status": "stopped_for_missing_mpi_flag_broadcast",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/xpoint_cycle_20261103",
+  "budget": {
+    "authorization": "User requested numerical convergence and completion of the science plan.",
+    "scope": "One isolated normalized-pressure Newton build activating safeguarded saddle continuation only after a stagnant two-cycle: one-step control at 1e-12, then wall1.5 three-step proof at 1e-10 with full updates. Global root search retained as fallback.",
+    "allocations_max": 1,
+    "attempts_each_max": 1,
+    "mpi_ranks": 4,
+    "threads": 1,
+    "memory_GiB": 256,
+    "wall_hours_max": 3,
+    "rank_CPU_hours_max": 12,
+    "node_hours_max": 3,
+    "conservative_resource_hours_max": 768,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+    "equilibrium_tolerance": 1e-10,
+    "physics_changed": false,
+    "spatial_targets_changed": false
+  },
+  "manifest_sha256": "2a6f9a24e571c474208650d88e4a9e4086496a02e75466988f8ab2879da94a19",
+  "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_xpoint_cycle_20261103.sbatch",
+  "script_sha256": "6cbb810efb42995cf2e99f99b51433c90bc141e3d03985f5041a6c9c4c029131",
+  "scheduler_preflight": "sbatch: Job 2771446 to start at 2026-11-03T22:54:39 a using 4 processors on nodes r351c05s11 in partition dcgp_fua_prod\n",
+  "scientific_gates_passed": [],
+  "job_id": "2771447",
+  "conclusion": "Source review found the new continuation flag must be broadcast with the existing equilibrium state before evolution. Preserve this build; replace with patch0027 before qualification."
+}

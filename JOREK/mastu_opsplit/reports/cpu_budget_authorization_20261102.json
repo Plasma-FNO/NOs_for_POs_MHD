@@ -1,0 +1,42 @@
+{
+  "created_utc": "2026-11-02T21:46:13.751528+00:00",
+  "approval_source": "Explicit user: we can increase caps if we have cpu budgets",
+  "condition": "CPU-specific project credit checked with saldo --dcgp",
+  "slurm_account": "fupa2_fauna",
+  "budget_account": "FUPA2_FAUNA",
+  "command": [
+    "saldo",
+    "-b",
+    "--dcgp",
+    "-n"
+  ],
+  "selected_raw_row": "FUPA2_FAUNA 20260301 20270228 30720000 4238126 4238126 13.8 2531868 437",
+  "valid_from": "20260301",
+  "valid_until": "20270228",
+  "total_local_resource_hours": 30720000,
+  "consumed_local_resource_hours": 4238126,
+  "remaining_local_resource_hours": 26481874,
+  "monthly_total_local_resource_hours": 2531868,
+  "monthly_consumed_local_resource_hours": 437,
+  "monthly_remaining_local_resource_hours": 2531431,
+  "billing_note": "saldo local resource-hours account for requested cores and memory; requested rank CPU-hours are recorded separately. Project credit is shared and this is a read-only snapshot.",
+  "resource_profile": "cpu_refinement_20261102",
+  "per_job": {
+    "nodes": 1,
+    "mpi_ranks_max": 16,
+    "omp_threads_max": 1,
+    "memory_GiB_max": 128,
+    "wall_seconds_max": 7200,
+    "attempts_max": 1
+  },
+  "phase": {
+    "requested_cpu_core_hours_max": 128,
+    "requested_node_hours_max": 8,
+    "simulation_submissions_max": 6,
+    "concurrency_max": 1,
+    "conservative_local_resource_hour_envelope": 2048,
+    "node_core_assumption_for_envelope": 256
+  },
+  "scientific_training_enabled": false,
+  "production_ensemble_enabled": false
+}

@@ -1,0 +1,15 @@
+{
+  "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/combined_core_poloidal880_20261104/probe3/jorek000000.h5",
+  "sha256": "3dd06e24d97f65a55a225dd835761343a4aa435680dc5e1aa8469cd92a37ced4",
+  "quadrature": {
+    "8": {
+      "minimum_jacobian": 4.782998760726072e-09,
+      "folds": []
+    },
+    "16": {
+      "minimum_jacobian": 3.554898208025414e-10,
+      "folds": []
+    }
+  },
+  "scientific_gates_passed": []
+}

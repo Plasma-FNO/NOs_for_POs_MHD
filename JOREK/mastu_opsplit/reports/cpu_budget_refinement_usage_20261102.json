@@ -1,0 +1,95 @@
+{
+  "as_of_utc": "2026-11-02T23:05:24.921288+00:00",
+  "base_before_budget_refinement": {
+    "allocated_cpu_core_hours": 5.0072222222222225,
+    "allocated_node_hours": 1.64,
+    "simulation_jobs": 31,
+    "build_jobs": 7
+  },
+  "additional_unique_jobs": {
+    "2768359": {
+      "state": "FAILED",
+      "elapsed_seconds": 75,
+      "allocated_cpus": 4,
+      "allocated_nodes": 1,
+      "exit_code": "1:0",
+      "alloc_tres": "billing=4,cpu=4,mem=16G,node=1",
+      "partition": "dcgp_fua_dbg"
+    },
+    "2768362": {
+      "state": "COMPLETED",
+      "elapsed_seconds": 59,
+      "allocated_cpus": 2,
+      "allocated_nodes": 1,
+      "exit_code": "0:0",
+      "alloc_tres": "billing=2,cpu=2,mem=8G,node=1",
+      "partition": "dcgp_fua_prod"
+    },
+    "2768381": {
+      "state": "FAILED",
+      "elapsed_seconds": 120,
+      "allocated_cpus": 16,
+      "allocated_nodes": 1,
+      "exit_code": "1:0",
+      "alloc_tres": "billing=16,cpu=16,mem=64G,node=1",
+      "partition": "dcgp_fua_prod"
+    },
+    "2768389": {
+      "state": "COMPLETED",
+      "elapsed_seconds": 58,
+      "allocated_cpus": 2,
+      "allocated_nodes": 1,
+      "exit_code": "0:0",
+      "alloc_tres": "billing=2,cpu=2,mem=8G,node=1",
+      "partition": "dcgp_fua_prod"
+    },
+    "2768394": {
+      "state": "COMPLETED",
+      "elapsed_seconds": 156,
+      "allocated_cpus": 4,
+      "allocated_nodes": 1,
+      "exit_code": "0:0",
+      "alloc_tres": "billing=4,cpu=4,mem=64G,node=1",
+      "partition": "dcgp_fua_prod"
+    },
+    "2768404": {
+      "state": "FAILED",
+      "elapsed_seconds": 331,
+      "allocated_cpus": 4,
+      "allocated_nodes": 1,
+      "exit_code": "1:0",
+      "alloc_tres": "billing=4,cpu=4,mem=128G,node=1",
+      "partition": "dcgp_fua_prod"
+    },
+    "2768423": {
+      "state": "FAILED",
+      "elapsed_seconds": 46,
+      "allocated_cpus": 4,
+      "allocated_nodes": 1,
+      "exit_code": "2:0",
+      "alloc_tres": "billing=4,cpu=4,mem=128G,node=1",
+      "partition": "dcgp_fua_prod"
+    },
+    "2768425": {
+      "state": "FAILED",
+      "elapsed_seconds": 213,
+      "allocated_cpus": 4,
+      "allocated_nodes": 1,
+      "exit_code": "1:0",
+      "alloc_tres": "billing=4,cpu=4,mem=128G,node=1",
+      "partition": "dcgp_fua_prod"
+    },
+    "2768438": {
+      "state": "FAILED",
+      "elapsed_seconds": 310,
+      "allocated_cpus": 4,
+      "allocated_nodes": 1,
+      "exit_code": "1:0",
+      "alloc_tres": "billing=4,cpu=4,mem=128G,node=1",
+      "partition": "dcgp_fua_prod"
+    }
+  },
+  "additional_allocated_cpu_core_hours": 1.855,
+  "additional_allocated_node_hours": 0.38,
+  "scope": "Unique scheduler allocations, including failed jobs; running-job elapsed usage is provisional. Memory-weighted final billing is separate. Unrelated jobs excluded."
+}

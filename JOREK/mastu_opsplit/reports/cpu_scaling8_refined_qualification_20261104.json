@@ -1,0 +1,66 @@
+{
+  "created_utc": "2026-11-04T14:24:51.669939+00:00",
+  "status": "fresh_refined_probes_and_mpi_replay_verified",
+  "scope": "Fresh three-step health plus strict physical parity where a healthy reference exists. MPI4/16 one-step replay agrees. Full spatial convergence remains unproved.",
+  "evidence": {
+    "poloidal440": {
+      "status": "completed",
+      "newton": [
+        "7",
+        "8.162E-11"
+      ],
+      "minimum_density": 0.008299020122266612,
+      "minimum_temperature": 9.714260012301838e-05,
+      "parity": {
+        "initial_parity": true,
+        "parity": true
+      }
+    },
+    "poloidal880": {
+      "status": "completed",
+      "newton": [
+        "7",
+        "2.406E-11"
+      ],
+      "minimum_density": 0.007407810579253847,
+      "minimum_temperature": 9.698364656409023e-05,
+      "parity": {
+        "initial_parity": true
+      }
+    },
+    "wall80": {
+      "status": "completed",
+      "newton": [
+        "11",
+        "2.533E-11"
+      ],
+      "minimum_density": 0.008578932751195825,
+      "minimum_temperature": 9.741901654852641e-05,
+      "parity": {
+        "initial_parity": true,
+        "parity": true
+      }
+    },
+    "mpi4_poloidal880": {
+      "status": "completed",
+      "newton": null,
+      "minimum_density": 0.00928064361670429,
+      "minimum_temperature": 9.896697554942385e-05,
+      "parity": {
+        "initial_parity": true,
+        "parity": true
+      }
+    }
+  },
+  "input_hashes": {
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/scaling8_poloidal440_20261104/probe3/result.json": "e6a0a27dc09709e11b605baee86150cc6f422696a35260c5652bab88f245867b",
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/scaling8_poloidal440_20261104/manifest.json": "868fd650cf6961346824c133deeac80a41eb0e05f3f6363d10e063eba3d79523",
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/scaling8_poloidal880_20261104/probe3/result.json": "12d20011ed55b491bfc16e6c96ab5d38a66c48dbd346e5cd3e1aefb8d61a6ce6",
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/scaling8_poloidal880_20261104/manifest.json": "441e48cbe8ff29ecc21656e9d89011915dec2ad900809c592953e87f70e80a0c",
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/scaling8_wall80_20261104/probe3/result.json": "e0f208737053733040c4e35bb410005b2fc6ff2c32835f8bec6abc80b6948c6f",
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/scaling8_wall80_20261104/manifest.json": "fd3552a091de8bf1e024ba71550c134875c73c437f5051c50b5605f3418a61c2",
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/scaling8_mpi4_poloidal880_20261104/replay1/result.json": "314a4ae695364ba514e1adbff5c32d8e32a78b1a9a6c74f927ffae9c3dd9b6a2",
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/scaling8_mpi4_poloidal880_20261104/manifest.json": "f777d22efbac496c30dcecf0ba2903627fc2d586e294dc654b1d0e1d95a20629"
+  },
+  "scientific_gates_passed": []
+}

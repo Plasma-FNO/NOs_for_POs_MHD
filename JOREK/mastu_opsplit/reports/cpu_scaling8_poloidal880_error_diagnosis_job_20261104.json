@@ -1,0 +1,15 @@
+{
+  "status": "submitted",
+  "kind": "analysis",
+  "native_attempt_started": false,
+  "bulk_output": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports",
+  "script_sha256": "9d0a255134f76d78b2d9f011bb2d1973518db6f4eb4e559d9b96e178328dc050",
+  "source_sha256": "21dbd8f5df325cb32a5301d78ee9f47fbd4d9110cdc090992ad200c0d267c5a2",
+  "budget": {
+    "mpi_ranks": 1,
+    "memory_GiB": 128,
+    "wall_hours_max": 1
+  },
+  "scientific_gates_passed": [],
+  "job_id": "2775326"
+}

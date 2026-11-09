@@ -1,0 +1,3223 @@
+{
+  "prepared_utc": "2026-11-02T16:13:26.926392+00:00",
+  "status": "prepared_pending_explicit_storage_approval",
+  "automatic_approval_rejection": "Move/removal of original raw outputs rejected because shared-storage retention/ownership had not been verified and broad relocation was not explicitly authorized. No transfer was executed.",
+  "base_directory": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum",
+  "base_owner_uid": 34213,
+  "base_owner_name": "vgopakum",
+  "current_uid": 34213,
+  "base_owned_by_current_user": true,
+  "shared_free_bytes": 514269913088,
+  "retention_confirmed": false,
+  "target_root": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102",
+  "transfers": [
+    {
+      "job_id": "2767763",
+      "state": "COMPLETED",
+      "source": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/cpu_baseline3_20261102",
+      "destination": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/cpu_baseline3_20261102",
+      "files": {
+        "result.json": {
+          "sha256": "19d5e995619387b8a9243cd5a90eeeb4d33b25a3fffaf88b2adbe731084bed9c",
+          "bytes": 1797
+        },
+        "plan.json": {
+          "sha256": "0cafe77ca822b42eb844373924a1d954a7b2e701669d339885730b370107b29c",
+          "bytes": 881
+        },
+        "attempt_1/attempt.json": {
+          "sha256": "4f84b72d87adb43bb958805e000a263fb4fc34ed5de0646fbc64c236ca8d20ac",
+          "bytes": 300
+        },
+        "attempt_1/stdout.log": {
+          "sha256": "a9cc6432af82ba150dbc5b258c104ce868a468ac313a06db1ea0761e29e0028b",
+          "bytes": 187120
+        },
+        "attempt_1/stderr.log": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "attempt_1/work/plot_extension_6.py": {
+          "sha256": "20f8f25b25b2cf17a000c9ffcc5629c1d6648b68190870b49f8f54926af60745",
+          "bytes": 21226
+        },
+        "attempt_1/work/jorek000000.h5": {
+          "sha256": "912bc7d1d5d32ed00d2ae354c95377ea18fb51dd4aa6b06af9a616666dbfa2fb",
+          "bytes": 2228780
+        },
+        "attempt_1/work/plot_leg_elements1.py": {
+          "sha256": "471d1ee84c386035275b864275a030f9474eed2b17f22187b042478db70c04e0",
+          "bytes": 4009
+        },
+        "attempt_1/work/boundary.txt": {
+          "sha256": "161f31b4993e51fb5f25de358753d47c8f1a4473a93d8b54c2e61d7d2bc7a45e",
+          "bytes": 62708
+        },
+        "attempt_1/work/grid_patch5.h5": {
+          "sha256": "8ad0fe1b9ca806cefb943af3ec925203fff6a10d95f676758fedf87c58027152",
+          "bytes": 166240
+        },
+        "attempt_1/work/plot_extension_11.py": {
+          "sha256": "13c306d7e493d7466fe976e16a9ddad634acdddba4dbca33e993db7f516f16ed",
+          "bytes": 108922
+        },
+        "attempt_1/work/grid_patch2.h5": {
+          "sha256": "585b70de84a0ef0d7511dd225bdc59c8168b217a6dd5510f209f8ff5d826e138",
+          "bytes": 126642
+        },
+        "attempt_1/work/fort.10": {
+          "sha256": "22ea0306b636a158c73f9ad4f196f192519632f7f2759fabcebd083fc07780ad",
+          "bytes": 174
+        },
+        "attempt_1/work/plot_elements.py": {
+          "sha256": "da9a96f6f52f497c85323ce323ecaa487e74e6aa0cc7442b98f640da0644068e",
+          "bytes": 1260106
+        },
+        "attempt_1/work/grid_patch8.h5": {
+          "sha256": "5742d3da90a786e26636f7d682caf1317d567afa847aebf4489884260a6c78ca",
+          "bytes": 94632
+        },
+        "attempt_1/work/jorek_equil_rz.h5": {
+          "sha256": "cf51cd94947c0398aef31bc446a0753881bb3fbb923afd8b9f90d08b7133f4b6",
+          "bytes": 6499402
+        },
+        "attempt_1/work/grid_initial.h5": {
+          "sha256": "178877fc24bf1a9d61716340c4e5b31346366966a21edfaf02d125097ae91118",
+          "bytes": 6499402
+        },
+        "attempt_1/work/plot_leg_surf.py": {
+          "sha256": "7d4fa577779b25fad5fa2e55cd06bae7e6850eccee7b20496c5123a101e39ca3",
+          "bytes": 764438
+        },
+        "attempt_1/work/jorek2.ps": {
+          "sha256": "4aa430f3ae1f09c3341cac80ee1c0e194bd864cfd2819a7de9a4b706c45e4a8a",
+          "bytes": 76081201
+        },
+        "attempt_1/work/plot_extension_7.py": {
+          "sha256": "d071363d5cab6e92ec476ea5440a815aedaccaa40ee35dcce951f1958cec2357",
+          "bytes": 29578
+        },
+        "attempt_1/work/plot_extension_2.py": {
+          "sha256": "870b6d2aeefe44ba5a593721bc0794dc8eb3bccf4933b34e5943ee933427e16b",
+          "bytes": 50458
+        },
+        "attempt_1/work/grid_no_patch.h5": {
+          "sha256": "c93cf23550161fa187c456c29c4ce945d24cce62dbc971eed21c0e4017af367a",
+          "bytes": 1055251
+        },
+        "attempt_1/work/plot_grid_inside_wall.py": {
+          "sha256": "82fe2d692b87e7982e696afac336a5188fc3f51271eff9b199c69e3366d83364",
+          "bytes": 3735546
+        },
+        "attempt_1/work/input": {
+          "sha256": "c4036d1690b6d46eec3ab64fbd884c6dec5daf6de0430fc8f33a6475ebe410e8",
+          "bytes": 14729
+        },
+        "attempt_1/work/jorek_restart.h5": {
+          "sha256": "f34f717703cb56edee8f228dfc660cbc0ecc66627bdd2985bc824fefaf224de0",
+          "bytes": 2256460
+        },
+        "attempt_1/work/plot_extension_4.py": {
+          "sha256": "54e6b54ed9081df313e232e6c30066453d005cd910780645b9ed06d715c12ce9",
+          "bytes": 67162
+        },
+        "attempt_1/work/eqdsk.dat": {
+          "sha256": "ac787dd266a9b4b93ccdadf9883c9d97a115e7dd9bb5bd3f724321576883bf4e",
+          "bytes": 4102749
+        },
+        "attempt_1/work/plot_extension_8.py": {
+          "sha256": "713de18596b69d3ac5c2758fbbe0754042fe6ac7c5913f59fa06bfb420ffe11f",
+          "bytes": 33754
+        },
+        "attempt_1/work/plot_leg_elements2.py": {
+          "sha256": "733618ed7dd49072e90bbc4601641943d1ba57bb1f411f11411a3414649dca46",
+          "bytes": 88457
+        },
+        "attempt_1/work/plot_leg.py": {
+          "sha256": "529d122b268a4809a8ff42cbdbf184289fb99dc8fdc954b730ef017de1649450",
+          "bytes": 13914
+        },
+        "attempt_1/work/plot_extension_1.py": {
+          "sha256": "785bb89bac5beda80b6162e2a0b4ecda5388444d89d4426bc279f522b24ebbd7",
+          "bytes": 54634
+        },
+        "attempt_1/work/jorek000001.h5": {
+          "sha256": "a5edacdf9b581a497f54d0004964c59e0e95b2e93fc487b868107f4013b35c66",
+          "bytes": 2254412
+        },
+        "attempt_1/work/qprofile.dat": {
+          "sha256": "55635d5f4bdfb9dff675ae1942c9451b77afa045924e10b610fb53f842bb4b99",
+          "bytes": 3871
+        },
+        "attempt_1/work/plot_ext_nodes.py": {
+          "sha256": "5637ff06a1fa47dae75f508ab00fb20bc8fb943407e50fa82efb0aed83029808",
+          "bytes": 16298
+        },
+        "attempt_1/work/grid_patch11.h5": {
+          "sha256": "847bb73592bc414319f296fb517e2afea18fddb2e78cd1f7fb978c79ba9bcb88",
+          "bytes": 230848
+        },
+        "attempt_1/work/plot_extension_10.py": {
+          "sha256": "f0c3f0b0863fbb2ba05fa150464861561822d0fbafb1181eae3596aa8181677d",
+          "bytes": 62986
+        },
+        "attempt_1/work/grid_patch10.h5": {
+          "sha256": "26159fc69b9736c1a7c33225407cbd973e37c985229a5a2b4e472b89f66a4470",
+          "bytes": 147412
+        },
+        "attempt_1/work/plot_extension_5.py": {
+          "sha256": "a61dd56803d2d407f6a0607a3690591be00496166080e9582d7d5d2130dc5bc1",
+          "bytes": 72730
+        },
+        "attempt_1/work/jorek000002.h5": {
+          "sha256": "8be11c33e8da416aa5ac2c2e40f6ccac289cce08b645b125fd14c6a06546a173",
+          "bytes": 2254412
+        },
+        "attempt_1/work/plot_leg_elements3.py": {
+          "sha256": "0e23517f8ea807d9d6fd5ad399b4ba2fa647efc8dbe7330b19aaa1976366b66f",
+          "bytes": 4009
+        },
+        "attempt_1/work/jorek000003.h5": {
+          "sha256": "f34f717703cb56edee8f228dfc660cbc0ecc66627bdd2985bc824fefaf224de0",
+          "bytes": 2256460
+        },
+        "attempt_1/work/grid_patch7.h5": {
+          "sha256": "5a38c538f70d84949196f6fe934bb62b768200f8ede7dfa15106b7f0d449a490",
+          "bytes": 88748
+        },
+        "attempt_1/work/equilibrium.txt": {
+          "sha256": "ed354193dcca9d6fa7f3d318afcae224bbb68aedef8a73a642466db8532fd318",
+          "bytes": 21878
+        },
+        "attempt_1/work/grid_xpoint.dat": {
+          "sha256": "4acb890af225415ae3840320c8aa22292cbfd930529dfbd938250ee5664d7c9b",
+          "bytes": 3963900
+        },
+        "attempt_1/work/plot_unordered_flux_surfaces.py": {
+          "sha256": "4eb4610ddfb32fe6d8f09bba49cf318bae0c4c87f7ee670510444f5d89984a08",
+          "bytes": 1542059
+        },
+        "attempt_1/work/plot_leg_elements4.py": {
+          "sha256": "03bc096ba7c236f46932a036794f643ff675b943cf6ecf744343813e7229d9b7",
+          "bytes": 88457
+        },
+        "attempt_1/work/plot_extension_3.py": {
+          "sha256": "f052e92408d5df305b8a3e2791ff46551060aee84020643110c2f293adeed8d4",
+          "bytes": 167386
+        },
+        "attempt_1/work/special_equilibrium_points.dat": {
+          "sha256": "45da7456e6dce6d45312d4a2cc35207be4f5522067e24787c1a4572af2f3307b",
+          "bytes": 873
+        },
+        "attempt_1/work/RZ_grid_inside_wall.txt": {
+          "sha256": "af1975cdf94c6ec3105c353ba957f2575e4ac545d688b4feab156000ef10bf7a",
+          "bytes": 1094800
+        },
+        "attempt_1/work/plot_extension_9.py": {
+          "sha256": "78c279bea8144b042b0c2a8cfde1b75dcb8ce7374a3ac87d318a6ccd59c454d7",
+          "bytes": 21226
+        },
+        "attempt_1/work/macroscopic_vars.dat": {
+          "sha256": "11d4d690f5cc9ee9b7d56ef89244423d182e3c705b66a2b9cec37d99c4bfa69d",
+          "bytes": 53156
+        },
+        "attempt_1/work/plot_ext_sides.py": {
+          "sha256": "aacea59f41850e7528940ef80f08ff4a39b63c78edf9af6912f3bc4f9ebfb527",
+          "bytes": 5033
+        },
+        "attempt_1/work/plot_ext_points.py": {
+          "sha256": "14a55d16c915f5fd7213e76765956cdbc40958ae9d76144ab1b958d1e421c357",
+          "bytes": 33871
+        },
+        "attempt_1/work/plot_leg_nodes.py": {
+          "sha256": "3701a557f3168fdf521ee680fd119c243490bfa4194d0c4c32f7e0ea30f43df5",
+          "bytes": 14409
+        },
+        "attempt_1/work/grid_patch9.h5": {
+          "sha256": "f02a4c4d39a4c1d5660f6807ec864067b49ca847528cea33d0a7910ce6501c4e",
+          "bytes": 71788
+        },
+        "attempt_1/work/plot_new_patch.py": {
+          "sha256": "59e2ecf8c70e6292732b35aa7b72a2141acde0c6f4715fa3b3b18922c23536f1",
+          "bytes": 1260057
+        },
+        "attempt_1/work/T_rho_profiles.dat": {
+          "sha256": "c9d9b615e325766032902ebd6b02f3176c3b6b672a1b022bdd3673516ba53944",
+          "bytes": 1323
+        },
+        "attempt_1/work/grid_patch1.h5": {
+          "sha256": "7030c7d824b62eea870cc1f889faee8a5d152f611c05cc24a920ba33a08e6e09",
+          "bytes": 132476
+        },
+        "attempt_1/work/plot_ordered_flux_surfaces.py": {
+          "sha256": "085401965a116c2944783cb94372ab99c4cf67184efa7ecbbc6f965a2726b3ea",
+          "bytes": 1234880
+        },
+        "attempt_1/work/grid_patch4.h5": {
+          "sha256": "37e7bfaf5e7235381f308abaaf200f40aa732486a911098182e9989e09f57697",
+          "bytes": 156372
+        },
+        "attempt_1/work/jorek_grid.h5": {
+          "sha256": "9e97f5827222ecf9a6cee3aa7911c24f115790a47f0fb7538af5403835981751",
+          "bytes": 2228780
+        },
+        "attempt_1/work/plot_closed_contours.py": {
+          "sha256": "8adc9836e24b35d7418b853059ac64a5a8ecb58daec608013dcb32d7ee74e82a",
+          "bytes": 488567
+        },
+        "attempt_1/work/grid_patch3.h5": {
+          "sha256": "28ae8a2d311e77a43ac3663c9d5a99a4e9c807d2d96d5bce87dcdc9a8d04875d",
+          "bytes": 330438
+        },
+        "attempt_1/work/plot_central_grid_elements.py": {
+          "sha256": "fce00d26199f62c859abc1b5b9b4064f4cd0946f0bd99d3dbe0a83bcfa548da1",
+          "bytes": 390057
+        },
+        "attempt_1/work/grid_initial.dat": {
+          "sha256": "50c83514de91ff362f743ac998259313945cf590a681d7fc33a0b99e95b30ffd",
+          "bytes": 11753000
+        },
+        "attempt_1/work/grid_patch6.h5": {
+          "sha256": "cbb6cb3f816e605855a9b0fae4137067bfc1c0ff97647b536489ee8da5a69a21",
+          "bytes": 71788
+        },
+        "attempt_1/work/plot_cleaned_flux_surfaces.py": {
+          "sha256": "20bc18bef81b9d3e334a56cd2c21837a7d1ec82519baeb78f22e192132385ad3",
+          "bytes": 1980344
+        },
+        "attempt_1/work/trace0000.out": {
+          "sha256": "57eaefc2da08ceb1edbe84ba2a41521a2b93dd86cd68659bb8d0e1775c0d3538",
+          "bytes": 6667
+        }
+      },
+      "bytes": 140116443
+    },
+    {
+      "job_id": "2767771",
+      "state": "COMPLETED",
+      "source": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/cpu_initializer_default_20261102",
+      "destination": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/cpu_initializer_default_20261102",
+      "files": {
+        "plan.json": {
+          "sha256": "83f6b488121833064c509037026e3aebdc790789b5e1eab2c64327a6936078e1",
+          "bytes": 993
+        },
+        "result.json": {
+          "sha256": "7175c5a279e04d8c1e94710c61ac65675adc2be80f0bc50f1487e49677b926d5",
+          "bytes": 2069
+        },
+        "attempt_1/attempt.json": {
+          "sha256": "f8b59c8399d3c43fd1bb6ec942c425f753e3884a0987faa519bf27eaf9e9d98f",
+          "bytes": 537
+        },
+        "attempt_1/stdout.log": {
+          "sha256": "52e930cac9b5fbf0f7dd0f69fc23ccf659316b0b98dc8fa8556eb92cae3acf2f",
+          "bytes": 170641
+        },
+        "attempt_1/stderr.log": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "attempt_1/work/plot_elements.py": {
+          "sha256": "da9a96f6f52f497c85323ce323ecaa487e74e6aa0cc7442b98f640da0644068e",
+          "bytes": 1260106
+        },
+        "attempt_1/work/grid_patch3.h5": {
+          "sha256": "acb0565193fda5d5437c301df32f485b1a14f3833869bc10224979743f9096be",
+          "bytes": 330438
+        },
+        "attempt_1/work/plot_leg_elements4.py": {
+          "sha256": "03bc096ba7c236f46932a036794f643ff675b943cf6ecf744343813e7229d9b7",
+          "bytes": 88457
+        },
+        "attempt_1/work/plot_leg_elements3.py": {
+          "sha256": "0e23517f8ea807d9d6fd5ad399b4ba2fa647efc8dbe7330b19aaa1976366b66f",
+          "bytes": 4009
+        },
+        "attempt_1/work/equilibrium.txt": {
+          "sha256": "dddfa9be86302167302b32e0e07b416f004c7dd7b0cf6850cd902732b3e6178b",
+          "bytes": 21878
+        },
+        "attempt_1/work/plot_extension_2.py": {
+          "sha256": "870b6d2aeefe44ba5a593721bc0794dc8eb3bccf4933b34e5943ee933427e16b",
+          "bytes": 50458
+        },
+        "attempt_1/work/plot_extension_7.py": {
+          "sha256": "d071363d5cab6e92ec476ea5440a815aedaccaa40ee35dcce951f1958cec2357",
+          "bytes": 29578
+        },
+        "attempt_1/work/plot_leg_surf.py": {
+          "sha256": "7d4fa577779b25fad5fa2e55cd06bae7e6850eccee7b20496c5123a101e39ca3",
+          "bytes": 764438
+        },
+        "attempt_1/work/grid_xpoint.dat": {
+          "sha256": "4acb890af225415ae3840320c8aa22292cbfd930529dfbd938250ee5664d7c9b",
+          "bytes": 3963900
+        },
+        "attempt_1/work/RZ_grid_inside_wall.txt": {
+          "sha256": "af1975cdf94c6ec3105c353ba957f2575e4ac545d688b4feab156000ef10bf7a",
+          "bytes": 1094800
+        },
+        "attempt_1/work/plot_central_grid_elements.py": {
+          "sha256": "fce00d26199f62c859abc1b5b9b4064f4cd0946f0bd99d3dbe0a83bcfa548da1",
+          "bytes": 390057
+        },
+        "attempt_1/work/input": {
+          "sha256": "2099036d12431762113c74f411a3a3bb41a506424c87bfb1744aefb07311b9a0",
+          "bytes": 14729
+        },
+        "attempt_1/work/plot_leg_elements2.py": {
+          "sha256": "733618ed7dd49072e90bbc4601641943d1ba57bb1f411f11411a3414649dca46",
+          "bytes": 88457
+        },
+        "attempt_1/work/plot_leg_nodes.py": {
+          "sha256": "3701a557f3168fdf521ee680fd119c243490bfa4194d0c4c32f7e0ea30f43df5",
+          "bytes": 14409
+        },
+        "attempt_1/work/plot_closed_contours.py": {
+          "sha256": "8adc9836e24b35d7418b853059ac64a5a8ecb58daec608013dcb32d7ee74e82a",
+          "bytes": 488567
+        },
+        "attempt_1/work/grid_patch1.h5": {
+          "sha256": "cc5aa924f322a0d04480f0f253db3796619e100668fcfea4fb98071e89531e63",
+          "bytes": 132476
+        },
+        "attempt_1/work/plot_cleaned_flux_surfaces.py": {
+          "sha256": "20bc18bef81b9d3e334a56cd2c21837a7d1ec82519baeb78f22e192132385ad3",
+          "bytes": 1980344
+        },
+        "attempt_1/work/grid_patch7.h5": {
+          "sha256": "b4df129f7144542648ee44a84dceb7da677eb5e05f41b9faaffa174547d1d7b5",
+          "bytes": 88748
+        },
+        "attempt_1/work/plot_extension_11.py": {
+          "sha256": "13c306d7e493d7466fe976e16a9ddad634acdddba4dbca33e993db7f516f16ed",
+          "bytes": 108922
+        },
+        "attempt_1/work/jorek_restart.h5": {
+          "sha256": "c3cd48d34259d702b2f2916a3bb7c2ba42c3a048c94534fb63df698124a0c4bd",
+          "bytes": 2228780
+        },
+        "attempt_1/work/plot_extension_9.py": {
+          "sha256": "78c279bea8144b042b0c2a8cfde1b75dcb8ce7374a3ac87d318a6ccd59c454d7",
+          "bytes": 21226
+        },
+        "attempt_1/work/jorek2.ps": {
+          "sha256": "dd9fe8af022a12e750cfa09e0a2956436998ed988182de75526af396eaa67d4d",
+          "bytes": 56226537
+        },
+        "attempt_1/work/plot_extension_3.py": {
+          "sha256": "f052e92408d5df305b8a3e2791ff46551060aee84020643110c2f293adeed8d4",
+          "bytes": 167386
+        },
+        "attempt_1/work/trace0000.out": {
+          "sha256": "21d41090a06369d09d8f0039ee07954cfa8f86296f60651f92dfaefb677212e8",
+          "bytes": 3445
+        },
+        "attempt_1/work/plot_extension_6.py": {
+          "sha256": "20f8f25b25b2cf17a000c9ffcc5629c1d6648b68190870b49f8f54926af60745",
+          "bytes": 21226
+        },
+        "attempt_1/work/fort.10": {
+          "sha256": "22ea0306b636a158c73f9ad4f196f192519632f7f2759fabcebd083fc07780ad",
+          "bytes": 174
+        },
+        "attempt_1/work/plot_ext_nodes.py": {
+          "sha256": "5637ff06a1fa47dae75f508ab00fb20bc8fb943407e50fa82efb0aed83029808",
+          "bytes": 16298
+        },
+        "attempt_1/work/grid_patch8.h5": {
+          "sha256": "901b76471da83d787372ea5db01cc4fe8b9b8bb71fb680874127fcc478babb0e",
+          "bytes": 94632
+        },
+        "attempt_1/work/jorek_equil_rz.h5": {
+          "sha256": "7716900eedaa5aa4eb0bcef1e57de78737a19641324718dfdc914986dc8c360d",
+          "bytes": 6499402
+        },
+        "attempt_1/work/special_equilibrium_points.dat": {
+          "sha256": "45da7456e6dce6d45312d4a2cc35207be4f5522067e24787c1a4572af2f3307b",
+          "bytes": 873
+        },
+        "attempt_1/work/plot_extension_4.py": {
+          "sha256": "54e6b54ed9081df313e232e6c30066453d005cd910780645b9ed06d715c12ce9",
+          "bytes": 67162
+        },
+        "attempt_1/work/grid_patch4.h5": {
+          "sha256": "3c7820120e729ed6caba08befeee81a762a8f85c024f16d09008fd2eb35de58e",
+          "bytes": 156372
+        },
+        "attempt_1/work/plot_ordered_flux_surfaces.py": {
+          "sha256": "085401965a116c2944783cb94372ab99c4cf67184efa7ecbbc6f965a2726b3ea",
+          "bytes": 1234880
+        },
+        "attempt_1/work/qprofile.dat": {
+          "sha256": "55635d5f4bdfb9dff675ae1942c9451b77afa045924e10b610fb53f842bb4b99",
+          "bytes": 3871
+        },
+        "attempt_1/work/plot_grid_inside_wall.py": {
+          "sha256": "82fe2d692b87e7982e696afac336a5188fc3f51271eff9b199c69e3366d83364",
+          "bytes": 3735546
+        },
+        "attempt_1/work/plot_unordered_flux_surfaces.py": {
+          "sha256": "4eb4610ddfb32fe6d8f09bba49cf318bae0c4c87f7ee670510444f5d89984a08",
+          "bytes": 1542059
+        },
+        "attempt_1/work/jorek_grid.h5": {
+          "sha256": "38e78a23a4b805d1c3360dd0de795d7cb3626e9291ad6a4ca853526d5bad695a",
+          "bytes": 2228780
+        },
+        "attempt_1/work/grid_patch9.h5": {
+          "sha256": "8957af379906b254a4b1e78563484d0a28010636cb0fc4abf307adfc3a3e36b0",
+          "bytes": 71788
+        },
+        "attempt_1/work/grid_no_patch.h5": {
+          "sha256": "2b02e76cb420984482f7a949dbae79cc0b2dfcf7a89b30c508d878b0fd677dc4",
+          "bytes": 1055251
+        },
+        "attempt_1/work/grid_patch2.h5": {
+          "sha256": "7bdeb6c2f486a190f1be06cca2069cb73a178d8a3a6fbbc4f9b49c0a41559ed9",
+          "bytes": 126642
+        },
+        "attempt_1/work/grid_patch10.h5": {
+          "sha256": "309457c6ab8bb32c3d67a39554297cfd209810f2b9198f024a9ac2ba9f8b59b9",
+          "bytes": 147412
+        },
+        "attempt_1/work/plot_ext_sides.py": {
+          "sha256": "aacea59f41850e7528940ef80f08ff4a39b63c78edf9af6912f3bc4f9ebfb527",
+          "bytes": 5033
+        },
+        "attempt_1/work/plot_extension_8.py": {
+          "sha256": "713de18596b69d3ac5c2758fbbe0754042fe6ac7c5913f59fa06bfb420ffe11f",
+          "bytes": 33754
+        },
+        "attempt_1/work/grid_patch6.h5": {
+          "sha256": "2824eb6cdc1c4c0051e29355967dfb807016cc9d4dd67cb870109fc7109e32fe",
+          "bytes": 71788
+        },
+        "attempt_1/work/plot_ext_points.py": {
+          "sha256": "14a55d16c915f5fd7213e76765956cdbc40958ae9d76144ab1b958d1e421c357",
+          "bytes": 33871
+        },
+        "attempt_1/work/plot_new_patch.py": {
+          "sha256": "59e2ecf8c70e6292732b35aa7b72a2141acde0c6f4715fa3b3b18922c23536f1",
+          "bytes": 1260057
+        },
+        "attempt_1/work/plot_leg_elements1.py": {
+          "sha256": "471d1ee84c386035275b864275a030f9474eed2b17f22187b042478db70c04e0",
+          "bytes": 4009
+        },
+        "attempt_1/work/plot_extension_1.py": {
+          "sha256": "785bb89bac5beda80b6162e2a0b4ecda5388444d89d4426bc279f522b24ebbd7",
+          "bytes": 54634
+        },
+        "attempt_1/work/boundary.txt": {
+          "sha256": "161f31b4993e51fb5f25de358753d47c8f1a4473a93d8b54c2e61d7d2bc7a45e",
+          "bytes": 62708
+        },
+        "attempt_1/work/grid_initial.dat": {
+          "sha256": "50c83514de91ff362f743ac998259313945cf590a681d7fc33a0b99e95b30ffd",
+          "bytes": 11753000
+        },
+        "attempt_1/work/grid_patch11.h5": {
+          "sha256": "6a4f5c112d328f6b255bbdfaa5e2349f7247db262e36808f7d61c7a0c1262a84",
+          "bytes": 230848
+        },
+        "attempt_1/work/eqdsk.dat": {
+          "sha256": "ac787dd266a9b4b93ccdadf9883c9d97a115e7dd9bb5bd3f724321576883bf4e",
+          "bytes": 4102749
+        },
+        "attempt_1/work/T_rho_profiles.dat": {
+          "sha256": "c9d9b615e325766032902ebd6b02f3176c3b6b672a1b022bdd3673516ba53944",
+          "bytes": 1323
+        },
+        "attempt_1/work/plot_extension_10.py": {
+          "sha256": "f0c3f0b0863fbb2ba05fa150464861561822d0fbafb1181eae3596aa8181677d",
+          "bytes": 62986
+        },
+        "attempt_1/work/grid_patch5.h5": {
+          "sha256": "a02f26ae1121beb6da767089e8465f9cfbd9a36233813608626fe41fb8009f3b",
+          "bytes": 166240
+        },
+        "attempt_1/work/macroscopic_vars.dat": {
+          "sha256": "822c39a7b352f19630299b02c2d23d79ff567988560394456415d204e632eea0",
+          "bytes": 45641
+        },
+        "attempt_1/work/plot_leg.py": {
+          "sha256": "529d122b268a4809a8ff42cbdbf184289fb99dc8fdc954b730ef017de1649450",
+          "bytes": 13914
+        },
+        "attempt_1/work/grid_initial.h5": {
+          "sha256": "a9e915f42bea9dca141554b18ea03ae34ffa01cde00a0850bf02f9665471e8ca",
+          "bytes": 6499402
+        },
+        "attempt_1/work/jorek000000.h5": {
+          "sha256": "c3cd48d34259d702b2f2916a3bb7c2ba42c3a048c94534fb63df698124a0c4bd",
+          "bytes": 2228780
+        },
+        "attempt_1/work/plot_extension_5.py": {
+          "sha256": "a61dd56803d2d407f6a0607a3690591be00496166080e9582d7d5d2130dc5bc1",
+          "bytes": 72730
+        }
+      },
+      "bytes": 113442220
+    },
+    {
+      "job_id": "2767836",
+      "state": "COMPLETED",
+      "source": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/cpu_baseline6_20261102",
+      "destination": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/cpu_baseline6_20261102",
+      "files": {
+        "plan.json": {
+          "sha256": "17c566d26f23cd50ec40d91866192637456e70c62ae06ddd737100f9e3bf4beb",
+          "bytes": 881
+        },
+        "result.json": {
+          "sha256": "db01451d03d31d7df8d0675e45df4c8ce44acb681a72d4c23855197dd8dedfac",
+          "bytes": 1793
+        },
+        "attempt_1/stderr.log": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "attempt_1/attempt.json": {
+          "sha256": "13800621375bb92724efa2f8c1a48a797c5be5b6a988c2220eafcb760bee789a",
+          "bytes": 299
+        },
+        "attempt_1/stdout.log": {
+          "sha256": "6ffa3f64b937de65e64d9d99f693fdbe5bc3fc187979179f80363506a75b493d",
+          "bytes": 203182
+        },
+        "attempt_1/work/plot_extension_8.py": {
+          "sha256": "713de18596b69d3ac5c2758fbbe0754042fe6ac7c5913f59fa06bfb420ffe11f",
+          "bytes": 33754
+        },
+        "attempt_1/work/plot_closed_contours.py": {
+          "sha256": "8adc9836e24b35d7418b853059ac64a5a8ecb58daec608013dcb32d7ee74e82a",
+          "bytes": 488567
+        },
+        "attempt_1/work/plot_leg_elements3.py": {
+          "sha256": "0e23517f8ea807d9d6fd5ad399b4ba2fa647efc8dbe7330b19aaa1976366b66f",
+          "bytes": 4009
+        },
+        "attempt_1/work/plot_leg_elements4.py": {
+          "sha256": "03bc096ba7c236f46932a036794f643ff675b943cf6ecf744343813e7229d9b7",
+          "bytes": 88457
+        },
+        "attempt_1/work/plot_unordered_flux_surfaces.py": {
+          "sha256": "4eb4610ddfb32fe6d8f09bba49cf318bae0c4c87f7ee670510444f5d89984a08",
+          "bytes": 1542059
+        },
+        "attempt_1/work/special_equilibrium_points.dat": {
+          "sha256": "45da7456e6dce6d45312d4a2cc35207be4f5522067e24787c1a4572af2f3307b",
+          "bytes": 873
+        },
+        "attempt_1/work/equilibrium.txt": {
+          "sha256": "1b2ada9a3c7ccab10433c55f10d111bbf7a037d8225385e5ba5fd33c6071a0fb",
+          "bytes": 21878
+        },
+        "attempt_1/work/trace0000.out": {
+          "sha256": "fc6198c792074de1daa0b3b0894748ff8afef28836b1411f1879319df3e8b68c",
+          "bytes": 9889
+        },
+        "attempt_1/work/plot_extension_9.py": {
+          "sha256": "78c279bea8144b042b0c2a8cfde1b75dcb8ce7374a3ac87d318a6ccd59c454d7",
+          "bytes": 21226
+        },
+        "attempt_1/work/jorek_equil_rz.h5": {
+          "sha256": "87e4ce34a89537b64d72fa56a86a8d5830b2e802dadf9e717ffe0b026e77d092",
+          "bytes": 6499402
+        },
+        "attempt_1/work/T_rho_profiles.dat": {
+          "sha256": "c9d9b615e325766032902ebd6b02f3176c3b6b672a1b022bdd3673516ba53944",
+          "bytes": 1323
+        },
+        "attempt_1/work/input": {
+          "sha256": "3a0da84c2d94e9e3053740109751f211c3bd4e78f24e8c0359f1a414ab317559",
+          "bytes": 14729
+        },
+        "attempt_1/work/grid_initial.h5": {
+          "sha256": "6258d57956e9856f7eeb72509e63340e69708dcf594ac56135c6f49df2e845cb",
+          "bytes": 6499402
+        },
+        "attempt_1/work/plot_extension_11.py": {
+          "sha256": "13c306d7e493d7466fe976e16a9ddad634acdddba4dbca33e993db7f516f16ed",
+          "bytes": 108922
+        },
+        "attempt_1/work/grid_patch9.h5": {
+          "sha256": "945885d7095f924e1dccbc6df6876ebe910865608982a56b6ad48f7088958e75",
+          "bytes": 71788
+        },
+        "attempt_1/work/grid_patch3.h5": {
+          "sha256": "8449a745fc0c3812f08305298b43e36cd2590111866a4466e6c3226bc96e9ed2",
+          "bytes": 330438
+        },
+        "attempt_1/work/fort.10": {
+          "sha256": "22ea0306b636a158c73f9ad4f196f192519632f7f2759fabcebd083fc07780ad",
+          "bytes": 174
+        },
+        "attempt_1/work/jorek000001.h5": {
+          "sha256": "fde03b75c4ca01c8d1cc225620bfd7a59d647da5527f544951854e13db0f3695",
+          "bytes": 2254412
+        },
+        "attempt_1/work/grid_patch11.h5": {
+          "sha256": "4d931dd85f4d1a24c6b9395e95d40810b8840712ce079ded1b01eeace4f1c489",
+          "bytes": 230848
+        },
+        "attempt_1/work/jorek2.ps": {
+          "sha256": "f3a4793fc1f5c433ecf45309a72c824aa7ce80b2228673b8b0f0b653247d1efb",
+          "bytes": 76081564
+        },
+        "attempt_1/work/boundary.txt": {
+          "sha256": "161f31b4993e51fb5f25de358753d47c8f1a4473a93d8b54c2e61d7d2bc7a45e",
+          "bytes": 62708
+        },
+        "attempt_1/work/jorek000006.h5": {
+          "sha256": "184335f0562722c0f3f02b6fe361bddbc8cd0cbd2e1c32c978e666c339c58043",
+          "bytes": 2256460
+        },
+        "attempt_1/work/eqdsk.dat": {
+          "sha256": "ac787dd266a9b4b93ccdadf9883c9d97a115e7dd9bb5bd3f724321576883bf4e",
+          "bytes": 4102749
+        },
+        "attempt_1/work/grid_patch10.h5": {
+          "sha256": "9b4d1ce4a99b82893da5b068536ab34470bc0f7599a5a7656e56f9d996bc5a61",
+          "bytes": 147412
+        },
+        "attempt_1/work/plot_ext_points.py": {
+          "sha256": "14a55d16c915f5fd7213e76765956cdbc40958ae9d76144ab1b958d1e421c357",
+          "bytes": 33871
+        },
+        "attempt_1/work/plot_extension_7.py": {
+          "sha256": "d071363d5cab6e92ec476ea5440a815aedaccaa40ee35dcce951f1958cec2357",
+          "bytes": 29578
+        },
+        "attempt_1/work/plot_leg_elements1.py": {
+          "sha256": "471d1ee84c386035275b864275a030f9474eed2b17f22187b042478db70c04e0",
+          "bytes": 4009
+        },
+        "attempt_1/work/plot_extension_1.py": {
+          "sha256": "785bb89bac5beda80b6162e2a0b4ecda5388444d89d4426bc279f522b24ebbd7",
+          "bytes": 54634
+        },
+        "attempt_1/work/grid_patch2.h5": {
+          "sha256": "8f99988663002488c3377f42bcc1a35116f6abf6ef4d5ec33ede40ff36c5555f",
+          "bytes": 126642
+        },
+        "attempt_1/work/plot_cleaned_flux_surfaces.py": {
+          "sha256": "20bc18bef81b9d3e334a56cd2c21837a7d1ec82519baeb78f22e192132385ad3",
+          "bytes": 1980344
+        },
+        "attempt_1/work/grid_patch1.h5": {
+          "sha256": "64456eeb4c456645b9fe4f7a852fe75c56ca15a8de79737dcfd20727bd1f2b0a",
+          "bytes": 132476
+        },
+        "attempt_1/work/grid_xpoint.dat": {
+          "sha256": "4acb890af225415ae3840320c8aa22292cbfd930529dfbd938250ee5664d7c9b",
+          "bytes": 3963900
+        },
+        "attempt_1/work/plot_ext_nodes.py": {
+          "sha256": "5637ff06a1fa47dae75f508ab00fb20bc8fb943407e50fa82efb0aed83029808",
+          "bytes": 16298
+        },
+        "attempt_1/work/grid_initial.dat": {
+          "sha256": "50c83514de91ff362f743ac998259313945cf590a681d7fc33a0b99e95b30ffd",
+          "bytes": 11753000
+        },
+        "attempt_1/work/plot_central_grid_elements.py": {
+          "sha256": "fce00d26199f62c859abc1b5b9b4064f4cd0946f0bd99d3dbe0a83bcfa548da1",
+          "bytes": 390057
+        },
+        "attempt_1/work/jorek_grid.h5": {
+          "sha256": "3d1a7d8804134301ccab824d6ba52b46a1865fee34e06db3efaa37d578199400",
+          "bytes": 2228780
+        },
+        "attempt_1/work/grid_patch7.h5": {
+          "sha256": "11111f2db5858a1ffa1e758a871641f1834161498feebcc689723054f16eb287",
+          "bytes": 88748
+        },
+        "attempt_1/work/plot_ext_sides.py": {
+          "sha256": "aacea59f41850e7528940ef80f08ff4a39b63c78edf9af6912f3bc4f9ebfb527",
+          "bytes": 5033
+        },
+        "attempt_1/work/plot_extension_6.py": {
+          "sha256": "20f8f25b25b2cf17a000c9ffcc5629c1d6648b68190870b49f8f54926af60745",
+          "bytes": 21226
+        },
+        "attempt_1/work/RZ_grid_inside_wall.txt": {
+          "sha256": "af1975cdf94c6ec3105c353ba957f2575e4ac545d688b4feab156000ef10bf7a",
+          "bytes": 1094800
+        },
+        "attempt_1/work/plot_leg_nodes.py": {
+          "sha256": "3701a557f3168fdf521ee680fd119c243490bfa4194d0c4c32f7e0ea30f43df5",
+          "bytes": 14409
+        },
+        "attempt_1/work/grid_patch4.h5": {
+          "sha256": "3b63720e2154676eafbe9b2b24fa0c28b8aaf8770c24972113a9892a1d3867ce",
+          "bytes": 156372
+        },
+        "attempt_1/work/jorek000004.h5": {
+          "sha256": "e361bbe71398266cca997b60a0c5aa917f17ed52985632267eca11e636198040",
+          "bytes": 2256460
+        },
+        "attempt_1/work/plot_elements.py": {
+          "sha256": "da9a96f6f52f497c85323ce323ecaa487e74e6aa0cc7442b98f640da0644068e",
+          "bytes": 1260106
+        },
+        "attempt_1/work/grid_patch6.h5": {
+          "sha256": "e2631830c329f1e21a79d36d01d717038e375b61ff4ef847494403efa23502fd",
+          "bytes": 71788
+        },
+        "attempt_1/work/plot_extension_4.py": {
+          "sha256": "54e6b54ed9081df313e232e6c30066453d005cd910780645b9ed06d715c12ce9",
+          "bytes": 67162
+        },
+        "attempt_1/work/macroscopic_vars.dat": {
+          "sha256": "5e6bfd888ab42e49e7fc0f1a87c55fea4c096a33ad76f3c054b20b035d0beecf",
+          "bytes": 60821
+        },
+        "attempt_1/work/grid_patch8.h5": {
+          "sha256": "9ea240ec1905650fa19519396a56f085841d29855aa04bb9b355dfc1cc425183",
+          "bytes": 94632
+        },
+        "attempt_1/work/plot_new_patch.py": {
+          "sha256": "59e2ecf8c70e6292732b35aa7b72a2141acde0c6f4715fa3b3b18922c23536f1",
+          "bytes": 1260057
+        },
+        "attempt_1/work/plot_extension_5.py": {
+          "sha256": "a61dd56803d2d407f6a0607a3690591be00496166080e9582d7d5d2130dc5bc1",
+          "bytes": 72730
+        },
+        "attempt_1/work/jorek_restart.h5": {
+          "sha256": "184335f0562722c0f3f02b6fe361bddbc8cd0cbd2e1c32c978e666c339c58043",
+          "bytes": 2256460
+        },
+        "attempt_1/work/jorek000002.h5": {
+          "sha256": "db87824d3f108a39686fbab152c0c9ff71628bf6b418525440f4294686b99bd6",
+          "bytes": 2254412
+        },
+        "attempt_1/work/grid_patch5.h5": {
+          "sha256": "b37ce59bf135c340825fd9c2b5a0fcdee51e3314f529db5a69a35b1e384ec7a3",
+          "bytes": 166240
+        },
+        "attempt_1/work/plot_leg.py": {
+          "sha256": "529d122b268a4809a8ff42cbdbf184289fb99dc8fdc954b730ef017de1649450",
+          "bytes": 13914
+        },
+        "attempt_1/work/plot_extension_3.py": {
+          "sha256": "f052e92408d5df305b8a3e2791ff46551060aee84020643110c2f293adeed8d4",
+          "bytes": 167386
+        },
+        "attempt_1/work/grid_no_patch.h5": {
+          "sha256": "b5db4c6726ba5627efb31fed648c686bfd36aceeae0d69ce802cc66af0867946",
+          "bytes": 1055251
+        },
+        "attempt_1/work/plot_leg_surf.py": {
+          "sha256": "7d4fa577779b25fad5fa2e55cd06bae7e6850eccee7b20496c5123a101e39ca3",
+          "bytes": 764438
+        },
+        "attempt_1/work/qprofile.dat": {
+          "sha256": "55635d5f4bdfb9dff675ae1942c9451b77afa045924e10b610fb53f842bb4b99",
+          "bytes": 3871
+        },
+        "attempt_1/work/jorek000003.h5": {
+          "sha256": "d4dc5d4d5992097833c872434a4d6229d55303075069ef76554aa463fe0f3a38",
+          "bytes": 2256460
+        },
+        "attempt_1/work/plot_extension_10.py": {
+          "sha256": "f0c3f0b0863fbb2ba05fa150464861561822d0fbafb1181eae3596aa8181677d",
+          "bytes": 62986
+        },
+        "attempt_1/work/plot_extension_2.py": {
+          "sha256": "870b6d2aeefe44ba5a593721bc0794dc8eb3bccf4933b34e5943ee933427e16b",
+          "bytes": 50458
+        },
+        "attempt_1/work/plot_leg_elements2.py": {
+          "sha256": "733618ed7dd49072e90bbc4601641943d1ba57bb1f411f11411a3414649dca46",
+          "bytes": 88457
+        },
+        "attempt_1/work/plot_ordered_flux_surfaces.py": {
+          "sha256": "085401965a116c2944783cb94372ab99c4cf67184efa7ecbbc6f965a2726b3ea",
+          "bytes": 1234880
+        },
+        "attempt_1/work/jorek000000.h5": {
+          "sha256": "614f64bcf86f683cbac59f771b345b0ce23efb4fd314618b124c3e3cfa28ec92",
+          "bytes": 2228780
+        },
+        "attempt_1/work/jorek000005.h5": {
+          "sha256": "77bcf2574e8267a8b6ac1d6b70da9ffdc8142d276bd713fcdc96b4f1daaa429c",
+          "bytes": 2256460
+        },
+        "attempt_1/work/plot_grid_inside_wall.py": {
+          "sha256": "82fe2d692b87e7982e696afac336a5188fc3f51271eff9b199c69e3366d83364",
+          "bytes": 3735546
+        }
+      },
+      "bytes": 146913130
+    },
+    {
+      "job_id": "2767838",
+      "state": "COMPLETED",
+      "source": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/cpu_baseline12_20261102",
+      "destination": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/cpu_baseline12_20261102",
+      "files": {
+        "result.json": {
+          "sha256": "5991077cd622fd12bb982f30c0dc902e8a4be39cc1e5ada3c834f5a86606ea13",
+          "bytes": 1800
+        },
+        "plan.json": {
+          "sha256": "39263b9761a7c7be1399df00ae1ff7ec2403a2b0f009fb486a539b0e7b37639c",
+          "bytes": 884
+        },
+        "attempt_1/stdout.log": {
+          "sha256": "66d1826ef3d848716f152128dfaa3d4fdc6a7e0b818053b35f623500b69ccc2c",
+          "bytes": 235238
+        },
+        "attempt_1/stderr.log": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "attempt_1/attempt.json": {
+          "sha256": "e5eb6a579a1af4c3ac756dba46c0efdcf15f34eb086e042b4f94c1f483df9614",
+          "bytes": 302
+        },
+        "attempt_1/work/plot_extension_2.py": {
+          "sha256": "870b6d2aeefe44ba5a593721bc0794dc8eb3bccf4933b34e5943ee933427e16b",
+          "bytes": 50458
+        },
+        "attempt_1/work/plot_central_grid_elements.py": {
+          "sha256": "fce00d26199f62c859abc1b5b9b4064f4cd0946f0bd99d3dbe0a83bcfa548da1",
+          "bytes": 390057
+        },
+        "attempt_1/work/plot_unordered_flux_surfaces.py": {
+          "sha256": "4eb4610ddfb32fe6d8f09bba49cf318bae0c4c87f7ee670510444f5d89984a08",
+          "bytes": 1542059
+        },
+        "attempt_1/work/plot_elements.py": {
+          "sha256": "da9a96f6f52f497c85323ce323ecaa487e74e6aa0cc7442b98f640da0644068e",
+          "bytes": 1260106
+        },
+        "attempt_1/work/plot_extension_10.py": {
+          "sha256": "f0c3f0b0863fbb2ba05fa150464861561822d0fbafb1181eae3596aa8181677d",
+          "bytes": 62986
+        },
+        "attempt_1/work/jorek000001.h5": {
+          "sha256": "e332b02bfff55daf091d85ea32d53bad2a39ef4e1f248c6905d5c72353b2f7dc",
+          "bytes": 2254412
+        },
+        "attempt_1/work/grid_patch1.h5": {
+          "sha256": "1e825f6cb4ac435f4b4ea2c187df5a4bec53fd296f5ed73ca850aa190f54d4f0",
+          "bytes": 132476
+        },
+        "attempt_1/work/jorek000006.h5": {
+          "sha256": "01653a1b59ddaa54247549d809ad540a67979c1febd76ada970327654d1d3a66",
+          "bytes": 2256460
+        },
+        "attempt_1/work/grid_patch4.h5": {
+          "sha256": "8f88f5c5daa184bc84356ecfcdefe879ed27e7463d98f6fd0f224e2e00e71bdf",
+          "bytes": 156372
+        },
+        "attempt_1/work/jorek000009.h5": {
+          "sha256": "180661c9502a95e56ca3adfda9030755d51319f8a0493ab52ed1d3bf055765f5",
+          "bytes": 2258508
+        },
+        "attempt_1/work/plot_cleaned_flux_surfaces.py": {
+          "sha256": "20bc18bef81b9d3e334a56cd2c21837a7d1ec82519baeb78f22e192132385ad3",
+          "bytes": 1980344
+        },
+        "attempt_1/work/plot_grid_inside_wall.py": {
+          "sha256": "82fe2d692b87e7982e696afac336a5188fc3f51271eff9b199c69e3366d83364",
+          "bytes": 3735546
+        },
+        "attempt_1/work/jorek000012.h5": {
+          "sha256": "700db2ffdafaea9da180b17e9d9b190ebb40e71f68275b7d94a9c8873a9cc213",
+          "bytes": 2260556
+        },
+        "attempt_1/work/RZ_grid_inside_wall.txt": {
+          "sha256": "af1975cdf94c6ec3105c353ba957f2575e4ac545d688b4feab156000ef10bf7a",
+          "bytes": 1094800
+        },
+        "attempt_1/work/plot_extension_5.py": {
+          "sha256": "a61dd56803d2d407f6a0607a3690591be00496166080e9582d7d5d2130dc5bc1",
+          "bytes": 72730
+        },
+        "attempt_1/work/jorek_grid.h5": {
+          "sha256": "da4af192ef435ddd7f651a0494737f30ea3d9eb2a56cfb5b2ce4f2e5f54d5f5e",
+          "bytes": 2228780
+        },
+        "attempt_1/work/plot_extension_4.py": {
+          "sha256": "54e6b54ed9081df313e232e6c30066453d005cd910780645b9ed06d715c12ce9",
+          "bytes": 67162
+        },
+        "attempt_1/work/plot_extension_6.py": {
+          "sha256": "20f8f25b25b2cf17a000c9ffcc5629c1d6648b68190870b49f8f54926af60745",
+          "bytes": 21226
+        },
+        "attempt_1/work/plot_leg_elements4.py": {
+          "sha256": "03bc096ba7c236f46932a036794f643ff675b943cf6ecf744343813e7229d9b7",
+          "bytes": 88457
+        },
+        "attempt_1/work/grid_patch9.h5": {
+          "sha256": "3e4ad7069f57bdcf0dde5e0f214d648830d01a48491f99d25d9bc0a6ff1c0636",
+          "bytes": 71788
+        },
+        "attempt_1/work/jorek_restart.h5": {
+          "sha256": "700db2ffdafaea9da180b17e9d9b190ebb40e71f68275b7d94a9c8873a9cc213",
+          "bytes": 2260556
+        },
+        "attempt_1/work/grid_initial.dat": {
+          "sha256": "50c83514de91ff362f743ac998259313945cf590a681d7fc33a0b99e95b30ffd",
+          "bytes": 11753000
+        },
+        "attempt_1/work/jorek000010.h5": {
+          "sha256": "24819a6347629dbcbe8fd039b757d28c75e5263f246477c5e5ec4c2ed9ae70d6",
+          "bytes": 2260556
+        },
+        "attempt_1/work/trace0000.out": {
+          "sha256": "c447f1da2e0086fa29b98870eb19261ab5d43b725b905f85a92ab2724ecda632",
+          "bytes": 16333
+        },
+        "attempt_1/work/grid_patch6.h5": {
+          "sha256": "99fcb0dd31aaef95066119700d3123448c843c0a5c3228debf39e6779a0c90c8",
+          "bytes": 71788
+        },
+        "attempt_1/work/equilibrium.txt": {
+          "sha256": "24e975a4059725cf4471dfa4431db56984d19b293a80a175a948b14b401395a4",
+          "bytes": 21878
+        },
+        "attempt_1/work/grid_patch8.h5": {
+          "sha256": "1701e683494968b529216044d4c179b8c03879f8a17be511d2aa74061a655d2c",
+          "bytes": 94632
+        },
+        "attempt_1/work/special_equilibrium_points.dat": {
+          "sha256": "45da7456e6dce6d45312d4a2cc35207be4f5522067e24787c1a4572af2f3307b",
+          "bytes": 873
+        },
+        "attempt_1/work/jorek000005.h5": {
+          "sha256": "c0e3423fc28c105e0ac2dec6a787b1fc8c6c2b0a08331a26ac9340a841496035",
+          "bytes": 2256460
+        },
+        "attempt_1/work/jorek000003.h5": {
+          "sha256": "4dd76c455ca1a9c6dc7c6d477b5acb42943d5d048644da9f9584ec7ce4396df1",
+          "bytes": 2256460
+        },
+        "attempt_1/work/plot_closed_contours.py": {
+          "sha256": "8adc9836e24b35d7418b853059ac64a5a8ecb58daec608013dcb32d7ee74e82a",
+          "bytes": 488567
+        },
+        "attempt_1/work/plot_ext_points.py": {
+          "sha256": "14a55d16c915f5fd7213e76765956cdbc40958ae9d76144ab1b958d1e421c357",
+          "bytes": 33871
+        },
+        "attempt_1/work/plot_ordered_flux_surfaces.py": {
+          "sha256": "085401965a116c2944783cb94372ab99c4cf67184efa7ecbbc6f965a2726b3ea",
+          "bytes": 1234880
+        },
+        "attempt_1/work/plot_extension_9.py": {
+          "sha256": "78c279bea8144b042b0c2a8cfde1b75dcb8ce7374a3ac87d318a6ccd59c454d7",
+          "bytes": 21226
+        },
+        "attempt_1/work/plot_leg_surf.py": {
+          "sha256": "7d4fa577779b25fad5fa2e55cd06bae7e6850eccee7b20496c5123a101e39ca3",
+          "bytes": 764438
+        },
+        "attempt_1/work/grid_patch10.h5": {
+          "sha256": "5babf2c0fc544ebc7eed096c970b8f388c960b513e92b0268df6e0b79b9d5293",
+          "bytes": 147412
+        },
+        "attempt_1/work/grid_patch7.h5": {
+          "sha256": "2a397079da07baad1cf8204c845b688a4f96c26657e19e382c816fa7ed9a987e",
+          "bytes": 88748
+        },
+        "attempt_1/work/plot_extension_3.py": {
+          "sha256": "f052e92408d5df305b8a3e2791ff46551060aee84020643110c2f293adeed8d4",
+          "bytes": 167386
+        },
+        "attempt_1/work/plot_extension_1.py": {
+          "sha256": "785bb89bac5beda80b6162e2a0b4ecda5388444d89d4426bc279f522b24ebbd7",
+          "bytes": 54634
+        },
+        "attempt_1/work/plot_leg_nodes.py": {
+          "sha256": "3701a557f3168fdf521ee680fd119c243490bfa4194d0c4c32f7e0ea30f43df5",
+          "bytes": 14409
+        },
+        "attempt_1/work/jorek_equil_rz.h5": {
+          "sha256": "9e93aa8b9bef05f50a806eadd1586cd417c1774097a92e576dd3b8f3d8445c49",
+          "bytes": 6499402
+        },
+        "attempt_1/work/plot_leg_elements1.py": {
+          "sha256": "471d1ee84c386035275b864275a030f9474eed2b17f22187b042478db70c04e0",
+          "bytes": 4009
+        },
+        "attempt_1/work/jorek000002.h5": {
+          "sha256": "decb4c353244e13cbd696f42992bcd23727b65a1471f43e1e64d5aaa0c2c7bab",
+          "bytes": 2254412
+        },
+        "attempt_1/work/plot_leg_elements3.py": {
+          "sha256": "0e23517f8ea807d9d6fd5ad399b4ba2fa647efc8dbe7330b19aaa1976366b66f",
+          "bytes": 4009
+        },
+        "attempt_1/work/qprofile.dat": {
+          "sha256": "55635d5f4bdfb9dff675ae1942c9451b77afa045924e10b610fb53f842bb4b99",
+          "bytes": 3871
+        },
+        "attempt_1/work/plot_extension_7.py": {
+          "sha256": "d071363d5cab6e92ec476ea5440a815aedaccaa40ee35dcce951f1958cec2357",
+          "bytes": 29578
+        },
+        "attempt_1/work/input": {
+          "sha256": "88f21e9fd6cbc0018339499d2324a6314bedbbbf1e327a87baf549a8cc6e9568",
+          "bytes": 14731
+        },
+        "attempt_1/work/plot_extension_8.py": {
+          "sha256": "713de18596b69d3ac5c2758fbbe0754042fe6ac7c5913f59fa06bfb420ffe11f",
+          "bytes": 33754
+        },
+        "attempt_1/work/grid_patch3.h5": {
+          "sha256": "c7fa34b4d966f993e27273d0c0567f43df42a7b3f49e8a060f71577934b8fc67",
+          "bytes": 330438
+        },
+        "attempt_1/work/plot_ext_nodes.py": {
+          "sha256": "5637ff06a1fa47dae75f508ab00fb20bc8fb943407e50fa82efb0aed83029808",
+          "bytes": 16298
+        },
+        "attempt_1/work/plot_leg.py": {
+          "sha256": "529d122b268a4809a8ff42cbdbf184289fb99dc8fdc954b730ef017de1649450",
+          "bytes": 13914
+        },
+        "attempt_1/work/boundary.txt": {
+          "sha256": "161f31b4993e51fb5f25de358753d47c8f1a4473a93d8b54c2e61d7d2bc7a45e",
+          "bytes": 62708
+        },
+        "attempt_1/work/jorek000008.h5": {
+          "sha256": "7fec76a2d0e5828ef3ebeeb383f6adefd4b3ef749e7731fee2538f07f3f36ab4",
+          "bytes": 2258508
+        },
+        "attempt_1/work/macroscopic_vars.dat": {
+          "sha256": "dccb3d5a2a24779de615f2b143823fd89bc98e8acfdf51cc8d748a2b48482f30",
+          "bytes": 76151
+        },
+        "attempt_1/work/plot_ext_sides.py": {
+          "sha256": "aacea59f41850e7528940ef80f08ff4a39b63c78edf9af6912f3bc4f9ebfb527",
+          "bytes": 5033
+        },
+        "attempt_1/work/grid_initial.h5": {
+          "sha256": "ccab743972331d43c17be8d906d4c61af627f7e47c6d68d35130047230d6467d",
+          "bytes": 6499402
+        },
+        "attempt_1/work/fort.10": {
+          "sha256": "22ea0306b636a158c73f9ad4f196f192519632f7f2759fabcebd083fc07780ad",
+          "bytes": 174
+        },
+        "attempt_1/work/jorek000007.h5": {
+          "sha256": "6b2928530172b3cd068f27650f1c6fec3918d220c60ad7b4f258f4c0a2fa353a",
+          "bytes": 2258508
+        },
+        "attempt_1/work/grid_no_patch.h5": {
+          "sha256": "185be419ecdeb821272748c2cb7f037907216402df3d22e3d2fe174d7f51ff45",
+          "bytes": 1055251
+        },
+        "attempt_1/work/grid_patch5.h5": {
+          "sha256": "7d73a7eff01fc5223d52f76e4bf8b074e79f8523e682911fdd0b9d831da51b36",
+          "bytes": 166240
+        },
+        "attempt_1/work/jorek000000.h5": {
+          "sha256": "452f7e2758072ca132ad16499c50e2c93abada9963c730b6c98fd85c53d70e4b",
+          "bytes": 2228780
+        },
+        "attempt_1/work/plot_extension_11.py": {
+          "sha256": "13c306d7e493d7466fe976e16a9ddad634acdddba4dbca33e993db7f516f16ed",
+          "bytes": 108922
+        },
+        "attempt_1/work/eqdsk.dat": {
+          "sha256": "ac787dd266a9b4b93ccdadf9883c9d97a115e7dd9bb5bd3f724321576883bf4e",
+          "bytes": 4102749
+        },
+        "attempt_1/work/grid_xpoint.dat": {
+          "sha256": "4acb890af225415ae3840320c8aa22292cbfd930529dfbd938250ee5664d7c9b",
+          "bytes": 3963900
+        },
+        "attempt_1/work/grid_patch2.h5": {
+          "sha256": "740176c59d465a8f49391394ad100c5f299621583ca498b9e7df984a66f30ae2",
+          "bytes": 126642
+        },
+        "attempt_1/work/jorek2.ps": {
+          "sha256": "a281fb60b4dbf5bf80082ad1d77f73a24545ed3004d540a8773d63bbdf1e108d",
+          "bytes": 76081801
+        },
+        "attempt_1/work/grid_patch11.h5": {
+          "sha256": "f5912554bdef70bef4909b9a39d3831162e57353c12b61e7e3633a2712e91e24",
+          "bytes": 230848
+        },
+        "attempt_1/work/plot_new_patch.py": {
+          "sha256": "59e2ecf8c70e6292732b35aa7b72a2141acde0c6f4715fa3b3b18922c23536f1",
+          "bytes": 1260057
+        },
+        "attempt_1/work/T_rho_profiles.dat": {
+          "sha256": "c9d9b615e325766032902ebd6b02f3176c3b6b672a1b022bdd3673516ba53944",
+          "bytes": 1323
+        },
+        "attempt_1/work/plot_leg_elements2.py": {
+          "sha256": "733618ed7dd49072e90bbc4601641943d1ba57bb1f411f11411a3414649dca46",
+          "bytes": 88457
+        },
+        "attempt_1/work/jorek000011.h5": {
+          "sha256": "bc9c3338f7097d8b1bf27999017e7853040ad46538f6824f96b15e16a28490f3",
+          "bytes": 2260556
+        },
+        "attempt_1/work/jorek000004.h5": {
+          "sha256": "c89dadb496429b38d242dceaaedb7f26c3beb2c49025d38e7ecaae1d5d122f42",
+          "bytes": 2256460
+        }
+      },
+      "bytes": 160528500
+    },
+    {
+      "job_id": "2767851",
+      "state": "FAILED",
+      "source": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/cpu_baseline24_20261102",
+      "destination": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/cpu_baseline24_20261102",
+      "files": {
+        "plan.json": {
+          "sha256": "53e2ada2a361bd0fa2fe9e725755599c938529890e5d70cf5f41468b618fe4fe",
+          "bytes": 884
+        },
+        "result.json": {
+          "sha256": "cdec04971bbbfdc147a34acd4b8f70e5ea5e00fb81fa548d3db0394d20e5b0fd",
+          "bytes": 1647
+        },
+        "attempt_1/attempt.json": {
+          "sha256": "078dabda50a8e2fa581705ba0dd6cbf0eda34d692fd2a45fb7a2e3a85643c7fc",
+          "bytes": 159
+        },
+        "attempt_1/stdout.log": {
+          "sha256": "5160ecb7b98fa7665a8028bfe6dcceb292dee7e6803d6bb0997891b8b68a7888",
+          "bytes": 126814
+        },
+        "attempt_1/stderr.log": {
+          "sha256": "1c3f7b2baa6159ced64b2e726551c16b7e27bfa7f163366c98f2cf948dcddb39",
+          "bytes": 1588
+        },
+        "attempt_1/work/plot_extension_6.py": {
+          "sha256": "20f8f25b25b2cf17a000c9ffcc5629c1d6648b68190870b49f8f54926af60745",
+          "bytes": 21226
+        },
+        "attempt_1/work/plot_leg_elements1.py": {
+          "sha256": "471d1ee84c386035275b864275a030f9474eed2b17f22187b042478db70c04e0",
+          "bytes": 4009
+        },
+        "attempt_1/work/grid_patch5.h5": {
+          "sha256": "3f5435f198bcbf9599500a2f0acd2f233628a9208ba374a2149173b3d6c4e8a4",
+          "bytes": 166240
+        },
+        "attempt_1/work/plot_extension_11.py": {
+          "sha256": "13c306d7e493d7466fe976e16a9ddad634acdddba4dbca33e993db7f516f16ed",
+          "bytes": 108922
+        },
+        "attempt_1/work/grid_patch2.h5": {
+          "sha256": "4f9fc19a8e895e4d622ee897a56d9031b89f73a66b30fdb5d00c48193acd9b0c",
+          "bytes": 126642
+        },
+        "attempt_1/work/fort.10": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "attempt_1/work/grid_patch8.h5": {
+          "sha256": "56594a64698794be73d67897e593d8eec6630714eaaf1dc791b122af25123e5b",
+          "bytes": 94632
+        },
+        "attempt_1/work/jorek_equil_rz.h5": {
+          "sha256": "bbe554d37d774f8896a9d0db6d46daf7a8ef16a7a8bca58abb07d8a0df518c91",
+          "bytes": 6499402
+        },
+        "attempt_1/work/grid_initial.h5": {
+          "sha256": "1e536baf0f1aaa0f39ae4593263faefb67bef6a7fb3ace6e9e0601d4eb32af32",
+          "bytes": 6499402
+        },
+        "attempt_1/work/plot_leg_surf.py": {
+          "sha256": "7d4fa577779b25fad5fa2e55cd06bae7e6850eccee7b20496c5123a101e39ca3",
+          "bytes": 764438
+        },
+        "attempt_1/work/jorek2.ps": {
+          "sha256": "7b17b06436816d2569aa9990c799ecf781fb4c9ef1423ae3dde8652fbbc062db",
+          "bytes": 22371879
+        },
+        "attempt_1/work/plot_extension_7.py": {
+          "sha256": "d071363d5cab6e92ec476ea5440a815aedaccaa40ee35dcce951f1958cec2357",
+          "bytes": 29578
+        },
+        "attempt_1/work/plot_extension_2.py": {
+          "sha256": "870b6d2aeefe44ba5a593721bc0794dc8eb3bccf4933b34e5943ee933427e16b",
+          "bytes": 50458
+        },
+        "attempt_1/work/grid_no_patch.h5": {
+          "sha256": "4971007fd72778214e88d2afe778034098f4d9912ac33e03fdc3848e99908a9b",
+          "bytes": 1055251
+        },
+        "attempt_1/work/plot_grid_inside_wall.py": {
+          "sha256": "82fe2d692b87e7982e696afac336a5188fc3f51271eff9b199c69e3366d83364",
+          "bytes": 3735546
+        },
+        "attempt_1/work/input": {
+          "sha256": "2e700131d0a1bd8219921b9400ce193dc201eb549fd81b753cb791178245d439",
+          "bytes": 14732
+        },
+        "attempt_1/work/plot_extension_4.py": {
+          "sha256": "54e6b54ed9081df313e232e6c30066453d005cd910780645b9ed06d715c12ce9",
+          "bytes": 67162
+        },
+        "attempt_1/work/eqdsk.dat": {
+          "sha256": "ac787dd266a9b4b93ccdadf9883c9d97a115e7dd9bb5bd3f724321576883bf4e",
+          "bytes": 4102749
+        },
+        "attempt_1/work/plot_extension_8.py": {
+          "sha256": "713de18596b69d3ac5c2758fbbe0754042fe6ac7c5913f59fa06bfb420ffe11f",
+          "bytes": 33754
+        },
+        "attempt_1/work/plot_leg_elements2.py": {
+          "sha256": "733618ed7dd49072e90bbc4601641943d1ba57bb1f411f11411a3414649dca46",
+          "bytes": 88457
+        },
+        "attempt_1/work/plot_leg.py": {
+          "sha256": "529d122b268a4809a8ff42cbdbf184289fb99dc8fdc954b730ef017de1649450",
+          "bytes": 13914
+        },
+        "attempt_1/work/plot_extension_1.py": {
+          "sha256": "785bb89bac5beda80b6162e2a0b4ecda5388444d89d4426bc279f522b24ebbd7",
+          "bytes": 54634
+        },
+        "attempt_1/work/qprofile.dat": {
+          "sha256": "55635d5f4bdfb9dff675ae1942c9451b77afa045924e10b610fb53f842bb4b99",
+          "bytes": 3871
+        },
+        "attempt_1/work/plot_ext_nodes.py": {
+          "sha256": "5637ff06a1fa47dae75f508ab00fb20bc8fb943407e50fa82efb0aed83029808",
+          "bytes": 16298
+        },
+        "attempt_1/work/grid_patch11.h5": {
+          "sha256": "35fbf959f01285e529f14f7c7823be2f69d99bec5df8ab48570213f9df0c8d67",
+          "bytes": 230848
+        },
+        "attempt_1/work/plot_extension_10.py": {
+          "sha256": "f0c3f0b0863fbb2ba05fa150464861561822d0fbafb1181eae3596aa8181677d",
+          "bytes": 62986
+        },
+        "attempt_1/work/grid_patch10.h5": {
+          "sha256": "d9f0104b461eb84af6cb58d651985a6e71b7d8ab28c7e51bca74c990024ef002",
+          "bytes": 147412
+        },
+        "attempt_1/work/plot_extension_5.py": {
+          "sha256": "a61dd56803d2d407f6a0607a3690591be00496166080e9582d7d5d2130dc5bc1",
+          "bytes": 72730
+        },
+        "attempt_1/work/plot_leg_elements3.py": {
+          "sha256": "0e23517f8ea807d9d6fd5ad399b4ba2fa647efc8dbe7330b19aaa1976366b66f",
+          "bytes": 4009
+        },
+        "attempt_1/work/grid_patch7.h5": {
+          "sha256": "e134cca1794b73b77544af4a5dfbad81511379effdb0fee0a67accab6e1a1846",
+          "bytes": 88748
+        },
+        "attempt_1/work/plot_unordered_flux_surfaces.py": {
+          "sha256": "4eb4610ddfb32fe6d8f09bba49cf318bae0c4c87f7ee670510444f5d89984a08",
+          "bytes": 1542059
+        },
+        "attempt_1/work/plot_leg_elements4.py": {
+          "sha256": "03bc096ba7c236f46932a036794f643ff675b943cf6ecf744343813e7229d9b7",
+          "bytes": 88457
+        },
+        "attempt_1/work/plot_extension_3.py": {
+          "sha256": "f052e92408d5df305b8a3e2791ff46551060aee84020643110c2f293adeed8d4",
+          "bytes": 167386
+        },
+        "attempt_1/work/RZ_grid_inside_wall.txt": {
+          "sha256": "af1975cdf94c6ec3105c353ba957f2575e4ac545d688b4feab156000ef10bf7a",
+          "bytes": 1094800
+        },
+        "attempt_1/work/plot_extension_9.py": {
+          "sha256": "78c279bea8144b042b0c2a8cfde1b75dcb8ce7374a3ac87d318a6ccd59c454d7",
+          "bytes": 21226
+        },
+        "attempt_1/work/macroscopic_vars.dat": {
+          "sha256": "e4530743a024ee655a723c4384cee6efbabc5172aee7c6d1dbabaf956b626f27",
+          "bytes": 45671
+        },
+        "attempt_1/work/plot_ext_sides.py": {
+          "sha256": "aacea59f41850e7528940ef80f08ff4a39b63c78edf9af6912f3bc4f9ebfb527",
+          "bytes": 5033
+        },
+        "attempt_1/work/plot_ext_points.py": {
+          "sha256": "14a55d16c915f5fd7213e76765956cdbc40958ae9d76144ab1b958d1e421c357",
+          "bytes": 33871
+        },
+        "attempt_1/work/plot_leg_nodes.py": {
+          "sha256": "3701a557f3168fdf521ee680fd119c243490bfa4194d0c4c32f7e0ea30f43df5",
+          "bytes": 14409
+        },
+        "attempt_1/work/grid_patch9.h5": {
+          "sha256": "8414c7ea72e9b0bbbf08672a0a09231bf4a956482f55ef66562d0f4dc2f7c39a",
+          "bytes": 71788
+        },
+        "attempt_1/work/plot_new_patch.py": {
+          "sha256": "59e2ecf8c70e6292732b35aa7b72a2141acde0c6f4715fa3b3b18922c23536f1",
+          "bytes": 1260057
+        },
+        "attempt_1/work/T_rho_profiles.dat": {
+          "sha256": "2fb8d03004217f6bd77259d9c725c8f5b3194c29f06281dc68838f0e6bac0f17",
+          "bytes": 1323
+        },
+        "attempt_1/work/grid_patch1.h5": {
+          "sha256": "2b8c8dc5336be160369ef29876e9722e98bc204474678bb14644f91d0bfa8838",
+          "bytes": 132476
+        },
+        "attempt_1/work/plot_ordered_flux_surfaces.py": {
+          "sha256": "085401965a116c2944783cb94372ab99c4cf67184efa7ecbbc6f965a2726b3ea",
+          "bytes": 1234880
+        },
+        "attempt_1/work/grid_patch4.h5": {
+          "sha256": "89bc5ed6c73945d49a9f72ff79d5f9d95d985811e35188c7be05c1cd25fe35f0",
+          "bytes": 156372
+        },
+        "attempt_1/work/plot_closed_contours.py": {
+          "sha256": "8adc9836e24b35d7418b853059ac64a5a8ecb58daec608013dcb32d7ee74e82a",
+          "bytes": 488567
+        },
+        "attempt_1/work/grid_patch3.h5": {
+          "sha256": "2cab25cb9a182216b2fe619b3c5ed7b98fdfcb6ea46348ddd96579c8fe4c9b11",
+          "bytes": 330438
+        },
+        "attempt_1/work/plot_central_grid_elements.py": {
+          "sha256": "fce00d26199f62c859abc1b5b9b4064f4cd0946f0bd99d3dbe0a83bcfa548da1",
+          "bytes": 390057
+        },
+        "attempt_1/work/grid_initial.dat": {
+          "sha256": "50c83514de91ff362f743ac998259313945cf590a681d7fc33a0b99e95b30ffd",
+          "bytes": 11753000
+        },
+        "attempt_1/work/grid_patch6.h5": {
+          "sha256": "75450f0f6791a365728b2d66a5d46276f1737f8cbb5f6a78f907ea53ed02eb9c",
+          "bytes": 71788
+        },
+        "attempt_1/work/plot_cleaned_flux_surfaces.py": {
+          "sha256": "20bc18bef81b9d3e334a56cd2c21837a7d1ec82519baeb78f22e192132385ad3",
+          "bytes": 1980344
+        },
+        "attempt_1/work/trace0000.out": {
+          "sha256": "359a5fd6d474636e939ee1651125bcdc4e89d541bdc57f6f19b98f6603d9ad54",
+          "bytes": 1789
+        }
+      },
+      "bytes": 67546812
+    },
+    {
+      "job_id": "2767853",
+      "state": "COMPLETED",
+      "source": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/cpu_baseline48_20261102",
+      "destination": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/cpu_baseline48_20261102",
+      "files": {
+        "plan.json": {
+          "sha256": "c725b0e7584cd212282fe074f29043b92ebd830b2432061373a606bc5c226dea",
+          "bytes": 884
+        },
+        "result.json": {
+          "sha256": "91a767eabec63f45c673d5941f26356c2b57e52e41816d00eb2d15c614f46a5b",
+          "bytes": 1798
+        },
+        "attempt_1/stderr.log": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "attempt_1/attempt.json": {
+          "sha256": "0cdbb32e4c1c1a3ef7debf35e0194e318faa0b50c8db058f789675c9bb91f9b4",
+          "bytes": 303
+        },
+        "attempt_1/stdout.log": {
+          "sha256": "9bc3b399cdc80eaa7e12d44a2ce3d2590836813f87c3da59285d0193bc39fac2",
+          "bytes": 426878
+        },
+        "attempt_1/work/plot_extension_8.py": {
+          "sha256": "713de18596b69d3ac5c2758fbbe0754042fe6ac7c5913f59fa06bfb420ffe11f",
+          "bytes": 33754
+        },
+        "attempt_1/work/plot_closed_contours.py": {
+          "sha256": "8adc9836e24b35d7418b853059ac64a5a8ecb58daec608013dcb32d7ee74e82a",
+          "bytes": 488567
+        },
+        "attempt_1/work/jorek000008.h5": {
+          "sha256": "fb5d86fde7c79cfb8f25422d738533026c1b5bc497a1af2fde8c290a1bcc7597",
+          "bytes": 2258508
+        },
+        "attempt_1/work/plot_leg_elements3.py": {
+          "sha256": "0e23517f8ea807d9d6fd5ad399b4ba2fa647efc8dbe7330b19aaa1976366b66f",
+          "bytes": 4009
+        },
+        "attempt_1/work/plot_leg_elements4.py": {
+          "sha256": "03bc096ba7c236f46932a036794f643ff675b943cf6ecf744343813e7229d9b7",
+          "bytes": 88457
+        },
+        "attempt_1/work/jorek000043.h5": {
+          "sha256": "5368aaa32f28a6951e86553b7133bd254a50382451dc31a7cb91494cff98363d",
+          "bytes": 2281900
+        },
+        "attempt_1/work/plot_unordered_flux_surfaces.py": {
+          "sha256": "4eb4610ddfb32fe6d8f09bba49cf318bae0c4c87f7ee670510444f5d89984a08",
+          "bytes": 1542059
+        },
+        "attempt_1/work/jorek000014.h5": {
+          "sha256": "7705ec81aa470d094f38f991f6bf52203d8fff5de9d230b951ada939bfccc320",
+          "bytes": 2262604
+        },
+        "attempt_1/work/special_equilibrium_points.dat": {
+          "sha256": "45da7456e6dce6d45312d4a2cc35207be4f5522067e24787c1a4572af2f3307b",
+          "bytes": 873
+        },
+        "attempt_1/work/equilibrium.txt": {
+          "sha256": "fddfeaf57dc19675fc7c228bdd21b8c117014732f197bbbf730fee679032265c",
+          "bytes": 21878
+        },
+        "attempt_1/work/trace0000.out": {
+          "sha256": "0153d0b3d9985378499da6e0f1a8d0dee60a2d1aeb6ea7a5dafe3819f1c5aeed",
+          "bytes": 54997
+        },
+        "attempt_1/work/plot_extension_9.py": {
+          "sha256": "78c279bea8144b042b0c2a8cfde1b75dcb8ce7374a3ac87d318a6ccd59c454d7",
+          "bytes": 21226
+        },
+        "attempt_1/work/jorek_equil_rz.h5": {
+          "sha256": "c98361fe2dc29e0822e81e0867a362836495aea3a16c3916a2e74055bb8bdb3b",
+          "bytes": 6499402
+        },
+        "attempt_1/work/jorek000012.h5": {
+          "sha256": "b2448b7619ed661d3f76d683d62e8b6a2a84b7e70f6603854467e0624e104728",
+          "bytes": 2260556
+        },
+        "attempt_1/work/jorek000037.h5": {
+          "sha256": "e50b91107fd8cf9780373d8125558eff8d8ae46cb35b487ff81c814ca098a33c",
+          "bytes": 2279700
+        },
+        "attempt_1/work/T_rho_profiles.dat": {
+          "sha256": "c9d9b615e325766032902ebd6b02f3176c3b6b672a1b022bdd3673516ba53944",
+          "bytes": 1323
+        },
+        "attempt_1/work/input": {
+          "sha256": "4177a68b0911c3cd552878bb7740c3fe1ca573bf365bc6cc72d3fd0b660ca47d",
+          "bytes": 14733
+        },
+        "attempt_1/work/jorek000035.h5": {
+          "sha256": "1614ac41396feb1970be6960f4cfbb7c89ac1b1a59d7363745a6eabdc718c373",
+          "bytes": 2275100
+        },
+        "attempt_1/work/jorek000024.h5": {
+          "sha256": "01658ef74407af3698f6d9dd0ab8ab5619e9b101d629b21129bef9efd0f08f08",
+          "bytes": 2268748
+        },
+        "attempt_1/work/grid_initial.h5": {
+          "sha256": "70b9262a93274e8d8cc13aeb8fb438ae42137244b23c6a8ff98504821631a143",
+          "bytes": 6499402
+        },
+        "attempt_1/work/plot_extension_11.py": {
+          "sha256": "13c306d7e493d7466fe976e16a9ddad634acdddba4dbca33e993db7f516f16ed",
+          "bytes": 108922
+        },
+        "attempt_1/work/grid_patch9.h5": {
+          "sha256": "2bbb523a4d49618262e40532089c42d32d3978c7dca82cd08db489325912dedf",
+          "bytes": 71788
+        },
+        "attempt_1/work/grid_patch3.h5": {
+          "sha256": "1b2ea450e9fc88316f108fc11d8f23d7ac7a77101df73e1cd4086376ea4f3c94",
+          "bytes": 330438
+        },
+        "attempt_1/work/fort.10": {
+          "sha256": "22ea0306b636a158c73f9ad4f196f192519632f7f2759fabcebd083fc07780ad",
+          "bytes": 174
+        },
+        "attempt_1/work/jorek000001.h5": {
+          "sha256": "abf0a51103fa4a85c61bc90247a1033d8a7a468dd2e8c7ecf42396a0c94bd720",
+          "bytes": 2254412
+        },
+        "attempt_1/work/grid_patch11.h5": {
+          "sha256": "c9adbcd01fee066c7e4a78b02831780bcbabf91d31ecc50d15bdfb62f37a7f63",
+          "bytes": 230848
+        },
+        "attempt_1/work/jorek2.ps": {
+          "sha256": "dcc6cb2c98cc380a885f4da87889245cc6746d03f8e7c825c361e45fe51b9fa1",
+          "bytes": 76085521
+        },
+        "attempt_1/work/boundary.txt": {
+          "sha256": "161f31b4993e51fb5f25de358753d47c8f1a4473a93d8b54c2e61d7d2bc7a45e",
+          "bytes": 62708
+        },
+        "attempt_1/work/jorek000006.h5": {
+          "sha256": "caea46495c3ecf5ee912e338650bc75a986083e6a7a9d6f056be06c8f9dda413",
+          "bytes": 2256460
+        },
+        "attempt_1/work/jorek000038.h5": {
+          "sha256": "36db4e5349f799c5a57433fde2868a2f34a20b38ee54afa5fa7ba234b229ce40",
+          "bytes": 2279700
+        },
+        "attempt_1/work/eqdsk.dat": {
+          "sha256": "ac787dd266a9b4b93ccdadf9883c9d97a115e7dd9bb5bd3f724321576883bf4e",
+          "bytes": 4102749
+        },
+        "attempt_1/work/jorek000029.h5": {
+          "sha256": "d319cb6131d8db30bf17bf53371b54d2565059db98293849476a2bb8204aadfa",
+          "bytes": 2273020
+        },
+        "attempt_1/work/jorek000019.h5": {
+          "sha256": "22df1c2a27d8f1c68695f8ded288c9153b74bedd5d8868ae1fb3ccd922ab43ac",
+          "bytes": 2264652
+        },
+        "attempt_1/work/jorek000047.h5": {
+          "sha256": "085ea7e8b20de09900a1c159fd2ab1f8a19f4dbd41be33d965957a71f047fb30",
+          "bytes": 2282876
+        },
+        "attempt_1/work/grid_patch10.h5": {
+          "sha256": "32102f27458e509e3ec9cae6f9262a3dafeacd070fdae6e3a8d6188f85f59458",
+          "bytes": 147412
+        },
+        "attempt_1/work/plot_ext_points.py": {
+          "sha256": "14a55d16c915f5fd7213e76765956cdbc40958ae9d76144ab1b958d1e421c357",
+          "bytes": 33871
+        },
+        "attempt_1/work/plot_extension_7.py": {
+          "sha256": "d071363d5cab6e92ec476ea5440a815aedaccaa40ee35dcce951f1958cec2357",
+          "bytes": 29578
+        },
+        "attempt_1/work/jorek000026.h5": {
+          "sha256": "3fdacc4dbdd4fdabc04a695c935c145474423c52de0f1727838486d7a5634496",
+          "bytes": 2270796
+        },
+        "attempt_1/work/jorek000041.h5": {
+          "sha256": "69d4ee4ac3a7b8e3fe71c05c719c840088216856f1cfd73a9c2c204240907b9b",
+          "bytes": 2279700
+        },
+        "attempt_1/work/jorek000021.h5": {
+          "sha256": "4b6d892a55a011f0e10a74c5a2cbfe32abc5d4b998bf263fba023a0afd06c0de",
+          "bytes": 2266700
+        },
+        "attempt_1/work/plot_leg_elements1.py": {
+          "sha256": "471d1ee84c386035275b864275a030f9474eed2b17f22187b042478db70c04e0",
+          "bytes": 4009
+        },
+        "attempt_1/work/jorek000034.h5": {
+          "sha256": "f1953f41d02492d89640a57d92b14d851c3a7787d9e66d2c20e820728d6568ce",
+          "bytes": 2275100
+        },
+        "attempt_1/work/plot_extension_1.py": {
+          "sha256": "785bb89bac5beda80b6162e2a0b4ecda5388444d89d4426bc279f522b24ebbd7",
+          "bytes": 54634
+        },
+        "attempt_1/work/jorek000027.h5": {
+          "sha256": "4338b3cafd4610a8d72ded7879864ec428a5eece54d8396de86fd1665ab35b4a",
+          "bytes": 2270796
+        },
+        "attempt_1/work/jorek000048.h5": {
+          "sha256": "2db30fe1a4b76f216848652fb5b70f838eea161b8850e9913402a0e53ec53caa",
+          "bytes": 2283116
+        },
+        "attempt_1/work/grid_patch2.h5": {
+          "sha256": "be3429fdd46d2ae475261c0a09d020544634a822882c7a4b64ba7bf9d5c375e5",
+          "bytes": 126642
+        },
+        "attempt_1/work/jorek000033.h5": {
+          "sha256": "76bbe494276bb5c60c1e93bd7032078e9c155005346595189233c67e66563136",
+          "bytes": 2275100
+        },
+        "attempt_1/work/plot_cleaned_flux_surfaces.py": {
+          "sha256": "20bc18bef81b9d3e334a56cd2c21837a7d1ec82519baeb78f22e192132385ad3",
+          "bytes": 1980344
+        },
+        "attempt_1/work/grid_patch1.h5": {
+          "sha256": "9d57156f20cefa7baa60926c8bcd426dbc3d14911f6db45aa20779abe4a931ec",
+          "bytes": 132476
+        },
+        "attempt_1/work/jorek000018.h5": {
+          "sha256": "2e1d5f8912f7d76fdd9ed77e0cf94afe8332ba5d0d1dee6fe2676057ad8be9ef",
+          "bytes": 2264652
+        },
+        "attempt_1/work/jorek000023.h5": {
+          "sha256": "44730108e936588f29d817a1b8fe09aa2b876c67b0e27334a34eddeaff47282e",
+          "bytes": 2266700
+        },
+        "attempt_1/work/jorek000020.h5": {
+          "sha256": "5744e9ab85ed6add1f9052bb8dc845ddd088fdcb810e9eacb5618db2335e71eb",
+          "bytes": 2266700
+        },
+        "attempt_1/work/grid_xpoint.dat": {
+          "sha256": "4acb890af225415ae3840320c8aa22292cbfd930529dfbd938250ee5664d7c9b",
+          "bytes": 3963900
+        },
+        "attempt_1/work/plot_ext_nodes.py": {
+          "sha256": "5637ff06a1fa47dae75f508ab00fb20bc8fb943407e50fa82efb0aed83029808",
+          "bytes": 16298
+        },
+        "attempt_1/work/grid_initial.dat": {
+          "sha256": "50c83514de91ff362f743ac998259313945cf590a681d7fc33a0b99e95b30ffd",
+          "bytes": 11753000
+        },
+        "attempt_1/work/plot_central_grid_elements.py": {
+          "sha256": "fce00d26199f62c859abc1b5b9b4064f4cd0946f0bd99d3dbe0a83bcfa548da1",
+          "bytes": 390057
+        },
+        "attempt_1/work/jorek_grid.h5": {
+          "sha256": "81c124e7037515c6e89a16834534c40f4baca8079cccba0e2e085fb71ffd0892",
+          "bytes": 2228780
+        },
+        "attempt_1/work/jorek000013.h5": {
+          "sha256": "a8f4a133754b3d26c2ab21214dd47eadb29f3c55cf00d34a6446cb63b6845be7",
+          "bytes": 2260556
+        },
+        "attempt_1/work/grid_patch7.h5": {
+          "sha256": "5f579a9695d6373a928094586523fe07acda40db2c6d3ec8ae0cb1237eab191d",
+          "bytes": 88748
+        },
+        "attempt_1/work/plot_ext_sides.py": {
+          "sha256": "aacea59f41850e7528940ef80f08ff4a39b63c78edf9af6912f3bc4f9ebfb527",
+          "bytes": 5033
+        },
+        "attempt_1/work/jorek000009.h5": {
+          "sha256": "63f578e31b72b8762f5b7831b6f7818645b6143225fab13e4d21db9595bb16d4",
+          "bytes": 2258508
+        },
+        "attempt_1/work/plot_extension_6.py": {
+          "sha256": "20f8f25b25b2cf17a000c9ffcc5629c1d6648b68190870b49f8f54926af60745",
+          "bytes": 21226
+        },
+        "attempt_1/work/RZ_grid_inside_wall.txt": {
+          "sha256": "af1975cdf94c6ec3105c353ba957f2575e4ac545d688b4feab156000ef10bf7a",
+          "bytes": 1094800
+        },
+        "attempt_1/work/plot_leg_nodes.py": {
+          "sha256": "3701a557f3168fdf521ee680fd119c243490bfa4194d0c4c32f7e0ea30f43df5",
+          "bytes": 14409
+        },
+        "attempt_1/work/jorek000046.h5": {
+          "sha256": "af9b6b240e25680126990385dc05a2c2e98f0559e5314e809c467a2a80ae04b1",
+          "bytes": 2282636
+        },
+        "attempt_1/work/jorek000022.h5": {
+          "sha256": "f19724367353500f4926eb32a2f2c46d0e83eb1ffa10e869d823308a77aa7702",
+          "bytes": 2266700
+        },
+        "attempt_1/work/grid_patch4.h5": {
+          "sha256": "e2f0af7347ddc1b3b8e5edb6deb6a27752a784cd099e7ccb93771d50fe861e88",
+          "bytes": 156372
+        },
+        "attempt_1/work/jorek000004.h5": {
+          "sha256": "6333439049288e775cbd6e7bb4902d1b5032ad1cfa5f3f5ec619e64af66b61af",
+          "bytes": 2256460
+        },
+        "attempt_1/work/plot_elements.py": {
+          "sha256": "da9a96f6f52f497c85323ce323ecaa487e74e6aa0cc7442b98f640da0644068e",
+          "bytes": 1260106
+        },
+        "attempt_1/work/jorek000045.h5": {
+          "sha256": "667538e3672cdf720119508f0c792d4cc1bede2bfc088b43c394747d7b7d2952",
+          "bytes": 2282284
+        },
+        "attempt_1/work/jorek000016.h5": {
+          "sha256": "711c6276130960c4fb124da500d69292befc2290c70ad008648052536cd33af6",
+          "bytes": 2262604
+        },
+        "attempt_1/work/grid_patch6.h5": {
+          "sha256": "4ab991b6b5a5ddf2d8507d29cc62f19a76bf2a20b2cf9c255f0c30762becbdc1",
+          "bytes": 71788
+        },
+        "attempt_1/work/plot_extension_4.py": {
+          "sha256": "54e6b54ed9081df313e232e6c30066453d005cd910780645b9ed06d715c12ce9",
+          "bytes": 67162
+        },
+        "attempt_1/work/jorek000007.h5": {
+          "sha256": "dc00ff9b86d4fb3bc3a7eb3222652b3ababc92d841befb3904837241c220efd7",
+          "bytes": 2258508
+        },
+        "attempt_1/work/macroscopic_vars.dat": {
+          "sha256": "7af3d7a40ad4b4b06a23d6d01f08df43ce6c7e3cec2dae3c5728ae2431cd5e63",
+          "bytes": 168131
+        },
+        "attempt_1/work/grid_patch8.h5": {
+          "sha256": "984e69e422cda00f2dd017754302ef0d41f0944b83d390ed6182e8ca8d814cbe",
+          "bytes": 94632
+        },
+        "attempt_1/work/jorek000010.h5": {
+          "sha256": "895d0da86182a79f3f7faea9089c9e6936f70f3c8f7daef4821863255e42951b",
+          "bytes": 2260556
+        },
+        "attempt_1/work/plot_new_patch.py": {
+          "sha256": "59e2ecf8c70e6292732b35aa7b72a2141acde0c6f4715fa3b3b18922c23536f1",
+          "bytes": 1260057
+        },
+        "attempt_1/work/plot_extension_5.py": {
+          "sha256": "a61dd56803d2d407f6a0607a3690591be00496166080e9582d7d5d2130dc5bc1",
+          "bytes": 72730
+        },
+        "attempt_1/work/jorek000017.h5": {
+          "sha256": "f48749da4975cea55cd4ab9a190dd084eea4fd9e92d2c0f7b6285461f257d594",
+          "bytes": 2264652
+        },
+        "attempt_1/work/jorek_restart.h5": {
+          "sha256": "2db30fe1a4b76f216848652fb5b70f838eea161b8850e9913402a0e53ec53caa",
+          "bytes": 2283116
+        },
+        "attempt_1/work/jorek000002.h5": {
+          "sha256": "9b6e406123ed27b9b548b8a5e55918df05a8b3b5c605e0cac53f7a3f8eebcf78",
+          "bytes": 2254412
+        },
+        "attempt_1/work/jorek000030.h5": {
+          "sha256": "7225ed8cf2682c6ef778902ff2331b2aa35c43c1b34e29c121fad39229ebeb21",
+          "bytes": 2273020
+        },
+        "attempt_1/work/grid_patch5.h5": {
+          "sha256": "6a721353faaf620868d2e9f28516d0eb1bbe9699f90e8b47c53c40202d782dc3",
+          "bytes": 166240
+        },
+        "attempt_1/work/plot_leg.py": {
+          "sha256": "529d122b268a4809a8ff42cbdbf184289fb99dc8fdc954b730ef017de1649450",
+          "bytes": 13914
+        },
+        "attempt_1/work/plot_extension_3.py": {
+          "sha256": "f052e92408d5df305b8a3e2791ff46551060aee84020643110c2f293adeed8d4",
+          "bytes": 167386
+        },
+        "attempt_1/work/jorek000036.h5": {
+          "sha256": "32fb27362aa865ecb4ad9b0c05a6c1bd2545c615d0bd31db5a0bf0eaaf36e614",
+          "bytes": 2275100
+        },
+        "attempt_1/work/jorek000040.h5": {
+          "sha256": "327f75dec5f04cce7c6a54e5d51b9f6106d5720596135d57e77f3abcc472a107",
+          "bytes": 2279700
+        },
+        "attempt_1/work/grid_no_patch.h5": {
+          "sha256": "4d3962240332a8be575c64dd6a99bfe52fea22bc4a2dea6dee547fe8fe531ec5",
+          "bytes": 1055251
+        },
+        "attempt_1/work/plot_leg_surf.py": {
+          "sha256": "7d4fa577779b25fad5fa2e55cd06bae7e6850eccee7b20496c5123a101e39ca3",
+          "bytes": 764438
+        },
+        "attempt_1/work/jorek000044.h5": {
+          "sha256": "5b8361c9de34ca7a4ffe3fbfc8f8f668056873e43a512903c0c8e61b4b6523eb",
+          "bytes": 2282092
+        },
+        "attempt_1/work/qprofile.dat": {
+          "sha256": "55635d5f4bdfb9dff675ae1942c9451b77afa045924e10b610fb53f842bb4b99",
+          "bytes": 3871
+        },
+        "attempt_1/work/jorek000003.h5": {
+          "sha256": "edd30e74b3a5708c4a9300e29cf75ecdde033c8dc54fa535fdb485e8ab000b9a",
+          "bytes": 2256460
+        },
+        "attempt_1/work/jorek000025.h5": {
+          "sha256": "b5a4ad868d9ad802ff291b72110b649835fc0808360de5e99c625a0df89cbb7f",
+          "bytes": 2268748
+        },
+        "attempt_1/work/plot_extension_10.py": {
+          "sha256": "f0c3f0b0863fbb2ba05fa150464861561822d0fbafb1181eae3596aa8181677d",
+          "bytes": 62986
+        },
+        "attempt_1/work/jorek000028.h5": {
+          "sha256": "94bbcfb42adb0ff070819a1d11074c94a562fabd53fd12ff440d374bc0576f8c",
+          "bytes": 2270796
+        },
+        "attempt_1/work/jorek000015.h5": {
+          "sha256": "18d0205ab202352a67fce0c0643338bd2174deea31ac0ecec35ca2ff7b0dcbfa",
+          "bytes": 2262604
+        },
+        "attempt_1/work/plot_extension_2.py": {
+          "sha256": "870b6d2aeefe44ba5a593721bc0794dc8eb3bccf4933b34e5943ee933427e16b",
+          "bytes": 50458
+        },
+        "attempt_1/work/plot_leg_elements2.py": {
+          "sha256": "733618ed7dd49072e90bbc4601641943d1ba57bb1f411f11411a3414649dca46",
+          "bytes": 88457
+        },
+        "attempt_1/work/plot_ordered_flux_surfaces.py": {
+          "sha256": "085401965a116c2944783cb94372ab99c4cf67184efa7ecbbc6f965a2726b3ea",
+          "bytes": 1234880
+        },
+        "attempt_1/work/jorek000000.h5": {
+          "sha256": "14e63a2ca4a76176a80a70df4c01c52192dc4f45bffcc21e909ec031c56a86a0",
+          "bytes": 2228780
+        },
+        "attempt_1/work/jorek000011.h5": {
+          "sha256": "c2f65ca0b572d6b3e353de7c2823b61476c247d6f60925117a7320d192454898",
+          "bytes": 2260556
+        },
+        "attempt_1/work/jorek000005.h5": {
+          "sha256": "fba861922673715faf7800fe18bb91806c1d18fdadf93dc9acebe7717a756f3c",
+          "bytes": 2256460
+        },
+        "attempt_1/work/plot_grid_inside_wall.py": {
+          "sha256": "82fe2d692b87e7982e696afac336a5188fc3f51271eff9b199c69e3366d83364",
+          "bytes": 3735546
+        },
+        "attempt_1/work/jorek000032.h5": {
+          "sha256": "3bfc3ad44c6e1bb73fe56f88cee92b2dc433266f5bbe46922bfd271eb12cacc2",
+          "bytes": 2273020
+        },
+        "attempt_1/work/jorek000031.h5": {
+          "sha256": "9f5bb6ada761da1d40810693651b5bf62d7b05f6fd4ed2250c47dfb832b77f17",
+          "bytes": 2273020
+        },
+        "attempt_1/work/jorek000039.h5": {
+          "sha256": "5013bce94f550fa7029fedebab738fea686146bcf9b9c4782cccbd675603d8ab",
+          "bytes": 2279700
+        },
+        "attempt_1/work/jorek000042.h5": {
+          "sha256": "3075b517ba791bee52a3cdd156a248b68577667cc89252ec53f48e437978d743",
+          "bytes": 2279700
+        }
+      },
+      "bytes": 242701657
+    },
+    {
+      "job_id": "2767860",
+      "state": "COMPLETED",
+      "source": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/cpu_baseline24_retry1_20261102",
+      "destination": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/cpu_baseline24_retry1_20261102",
+      "files": {
+        "result.json": {
+          "sha256": "02ea1eed04b67ee29dbc607b7e487c9726495164f38468fb7f5ea86397e3ed54",
+          "bytes": 1800
+        },
+        "plan.json": {
+          "sha256": "1948d4de376d65f0848b1916c138db07726986f4d09b5addb256d4213b3586c7",
+          "bytes": 905
+        },
+        "attempt_1/attempt.json": {
+          "sha256": "92267a89c62912b80326e1b37ce08f464a46ddb1fe8779f820e5730b8cd87e8f",
+          "bytes": 302
+        },
+        "attempt_1/stderr.log": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "attempt_1/stdout.log": {
+          "sha256": "e886b06480660e7b548e00c0f7b785b1d953731603df12ef8d8c5ba67fbf3543",
+          "bytes": 298938
+        },
+        "attempt_1/work/jorek000020.h5": {
+          "sha256": "ca3db97dd0c8c092be925f567c87cdf8be007bf31011da796602800686f77948",
+          "bytes": 2266700
+        },
+        "attempt_1/work/jorek000022.h5": {
+          "sha256": "eb307afe2a21a8529819443726f218419f22bee1942937409c1f3517470b32ae",
+          "bytes": 2266700
+        },
+        "attempt_1/work/plot_extension_6.py": {
+          "sha256": "20f8f25b25b2cf17a000c9ffcc5629c1d6648b68190870b49f8f54926af60745",
+          "bytes": 21226
+        },
+        "attempt_1/work/jorek000000.h5": {
+          "sha256": "bb6fc389a80c4039322928ffbccbf6b3bb7dc50fab713d8ab9fa9c7d16d9f1e5",
+          "bytes": 2228780
+        },
+        "attempt_1/work/plot_leg_elements1.py": {
+          "sha256": "471d1ee84c386035275b864275a030f9474eed2b17f22187b042478db70c04e0",
+          "bytes": 4009
+        },
+        "attempt_1/work/boundary.txt": {
+          "sha256": "161f31b4993e51fb5f25de358753d47c8f1a4473a93d8b54c2e61d7d2bc7a45e",
+          "bytes": 62708
+        },
+        "attempt_1/work/grid_patch5.h5": {
+          "sha256": "211e3b4f3d3ab72b6a51dc463eb41726ec35f4ec1793f49b01b3eb4cfb66098c",
+          "bytes": 166240
+        },
+        "attempt_1/work/plot_extension_11.py": {
+          "sha256": "13c306d7e493d7466fe976e16a9ddad634acdddba4dbca33e993db7f516f16ed",
+          "bytes": 108922
+        },
+        "attempt_1/work/grid_patch2.h5": {
+          "sha256": "d2bedf68ae6cf59a4a1dc676d08a231417b5e8f78617a25b39853fadfbb66bf6",
+          "bytes": 126642
+        },
+        "attempt_1/work/fort.10": {
+          "sha256": "22ea0306b636a158c73f9ad4f196f192519632f7f2759fabcebd083fc07780ad",
+          "bytes": 174
+        },
+        "attempt_1/work/plot_elements.py": {
+          "sha256": "da9a96f6f52f497c85323ce323ecaa487e74e6aa0cc7442b98f640da0644068e",
+          "bytes": 1260106
+        },
+        "attempt_1/work/grid_patch8.h5": {
+          "sha256": "9d98cf7ea3a9d4a9c83ddfcaf9516035ff5074994242d03cc6b1b6407e52ab9d",
+          "bytes": 94632
+        },
+        "attempt_1/work/jorek_equil_rz.h5": {
+          "sha256": "983ec1e274e800252338407106b86fac27f4b72f58875bfa66dcc596f9eeeda6",
+          "bytes": 6499402
+        },
+        "attempt_1/work/jorek000023.h5": {
+          "sha256": "2b8ffe966d0051996b16e23ca9b52c1314b8d7590603e917703c21c5971b9d4d",
+          "bytes": 2266700
+        },
+        "attempt_1/work/grid_initial.h5": {
+          "sha256": "a57843796f33aee9ce0a375cd8a9d0f4af57edda2bf7e3cce18ba44a0e8ecdcb",
+          "bytes": 6499402
+        },
+        "attempt_1/work/plot_leg_surf.py": {
+          "sha256": "7d4fa577779b25fad5fa2e55cd06bae7e6850eccee7b20496c5123a101e39ca3",
+          "bytes": 764438
+        },
+        "attempt_1/work/jorek2.ps": {
+          "sha256": "d30064fb393bc52d5d3bbc64de383abf14506259a5ad72ee96e5e15bcb46da57",
+          "bytes": 76082764
+        },
+        "attempt_1/work/jorek000005.h5": {
+          "sha256": "4dc6e5acd27c09742af5d95b845ac24936619effef8dafd9229954380bebb3e4",
+          "bytes": 2256460
+        },
+        "attempt_1/work/jorek000013.h5": {
+          "sha256": "5b35eb06718d127646931422cf24cb45fc41bf81d263ea345d35418e12ffa48e",
+          "bytes": 2260556
+        },
+        "attempt_1/work/plot_extension_7.py": {
+          "sha256": "d071363d5cab6e92ec476ea5440a815aedaccaa40ee35dcce951f1958cec2357",
+          "bytes": 29578
+        },
+        "attempt_1/work/plot_extension_2.py": {
+          "sha256": "870b6d2aeefe44ba5a593721bc0794dc8eb3bccf4933b34e5943ee933427e16b",
+          "bytes": 50458
+        },
+        "attempt_1/work/grid_no_patch.h5": {
+          "sha256": "0ea7c3f91c6066370f70f9fb4d1c6e5e5ec7c078644521ca07771a7b03649155",
+          "bytes": 1055251
+        },
+        "attempt_1/work/plot_grid_inside_wall.py": {
+          "sha256": "82fe2d692b87e7982e696afac336a5188fc3f51271eff9b199c69e3366d83364",
+          "bytes": 3735546
+        },
+        "attempt_1/work/input": {
+          "sha256": "2e700131d0a1bd8219921b9400ce193dc201eb549fd81b753cb791178245d439",
+          "bytes": 14732
+        },
+        "attempt_1/work/jorek_restart.h5": {
+          "sha256": "698020b7cd51e5d4cd8b733a2672dd02889be9b785d03be9baf887660d600225",
+          "bytes": 2268748
+        },
+        "attempt_1/work/plot_extension_4.py": {
+          "sha256": "54e6b54ed9081df313e232e6c30066453d005cd910780645b9ed06d715c12ce9",
+          "bytes": 67162
+        },
+        "attempt_1/work/jorek000019.h5": {
+          "sha256": "d6c5f0b29070328dbd1c23dd6a854cc0d02d4d89b8bdd7bf61b62efe61c32da2",
+          "bytes": 2264652
+        },
+        "attempt_1/work/jorek000009.h5": {
+          "sha256": "c4c13eca278fd123e78f9eb5b2eba0a65ff6796f37cfe4bae71da730d4c74415",
+          "bytes": 2258508
+        },
+        "attempt_1/work/jorek000006.h5": {
+          "sha256": "8c68ba8db3772d2abd9c0dc77205cf6c0fe4c31bdd640f3c781a5b8c877eb1e0",
+          "bytes": 2256460
+        },
+        "attempt_1/work/eqdsk.dat": {
+          "sha256": "ac787dd266a9b4b93ccdadf9883c9d97a115e7dd9bb5bd3f724321576883bf4e",
+          "bytes": 4102749
+        },
+        "attempt_1/work/jorek000024.h5": {
+          "sha256": "698020b7cd51e5d4cd8b733a2672dd02889be9b785d03be9baf887660d600225",
+          "bytes": 2268748
+        },
+        "attempt_1/work/jorek000011.h5": {
+          "sha256": "c7090a4bc7052f94917b65dcfa290e4916764ba813862f03f8e7aa4b0bcd46c8",
+          "bytes": 2260556
+        },
+        "attempt_1/work/plot_extension_8.py": {
+          "sha256": "713de18596b69d3ac5c2758fbbe0754042fe6ac7c5913f59fa06bfb420ffe11f",
+          "bytes": 33754
+        },
+        "attempt_1/work/jorek000021.h5": {
+          "sha256": "2173d7be19c377935d99f19b4463f2923065aefd7fb5861d5a5bb962448ab1b3",
+          "bytes": 2266700
+        },
+        "attempt_1/work/jorek000017.h5": {
+          "sha256": "2ee11895715b90af180e4ef31b98206aa42f13e1396a5d2629d3a5b3d141a36f",
+          "bytes": 2264652
+        },
+        "attempt_1/work/plot_leg_elements2.py": {
+          "sha256": "733618ed7dd49072e90bbc4601641943d1ba57bb1f411f11411a3414649dca46",
+          "bytes": 88457
+        },
+        "attempt_1/work/plot_leg.py": {
+          "sha256": "529d122b268a4809a8ff42cbdbf184289fb99dc8fdc954b730ef017de1649450",
+          "bytes": 13914
+        },
+        "attempt_1/work/plot_extension_1.py": {
+          "sha256": "785bb89bac5beda80b6162e2a0b4ecda5388444d89d4426bc279f522b24ebbd7",
+          "bytes": 54634
+        },
+        "attempt_1/work/jorek000001.h5": {
+          "sha256": "70bfe82ebddf11d52c63d4d0ca94b29bd4986ec7dd2c4ee39d66b51c46c0d6d4",
+          "bytes": 2254412
+        },
+        "attempt_1/work/qprofile.dat": {
+          "sha256": "55635d5f4bdfb9dff675ae1942c9451b77afa045924e10b610fb53f842bb4b99",
+          "bytes": 3871
+        },
+        "attempt_1/work/plot_ext_nodes.py": {
+          "sha256": "5637ff06a1fa47dae75f508ab00fb20bc8fb943407e50fa82efb0aed83029808",
+          "bytes": 16298
+        },
+        "attempt_1/work/grid_patch11.h5": {
+          "sha256": "703754d1a7466993a4600ff4db7b4cd4c60411b10d9096dfce9b962434f6bc83",
+          "bytes": 230848
+        },
+        "attempt_1/work/plot_extension_10.py": {
+          "sha256": "f0c3f0b0863fbb2ba05fa150464861561822d0fbafb1181eae3596aa8181677d",
+          "bytes": 62986
+        },
+        "attempt_1/work/jorek000007.h5": {
+          "sha256": "f0a03089caa947cfced9965ef51865fbf3c5ffed93afff56668e3c8ad494a647",
+          "bytes": 2258508
+        },
+        "attempt_1/work/grid_patch10.h5": {
+          "sha256": "3e77f143c5e81afd46538a4fa829a70a4bb240c578294d2b3a67cd084c7e726f",
+          "bytes": 147412
+        },
+        "attempt_1/work/plot_extension_5.py": {
+          "sha256": "a61dd56803d2d407f6a0607a3690591be00496166080e9582d7d5d2130dc5bc1",
+          "bytes": 72730
+        },
+        "attempt_1/work/jorek000002.h5": {
+          "sha256": "87a972acfa653a3c6c54cb646ae88782a616fcb31bc2cb0ce8d9eca557eced3a",
+          "bytes": 2254412
+        },
+        "attempt_1/work/plot_leg_elements3.py": {
+          "sha256": "0e23517f8ea807d9d6fd5ad399b4ba2fa647efc8dbe7330b19aaa1976366b66f",
+          "bytes": 4009
+        },
+        "attempt_1/work/jorek000003.h5": {
+          "sha256": "06911602c1d1a16ab08b5a8755e27ab894b309cbddbffc3e9a2abf4031b3eb67",
+          "bytes": 2256460
+        },
+        "attempt_1/work/jorek000015.h5": {
+          "sha256": "8dbecf3865ec3ef3646c4376be2238346f3316e18dfe8fdfa25f9a190f77317f",
+          "bytes": 2262604
+        },
+        "attempt_1/work/grid_patch7.h5": {
+          "sha256": "33cbecf7a1a927b5b98d56419d6d15606970c04733de8b125a261c6e5259b958",
+          "bytes": 88748
+        },
+        "attempt_1/work/equilibrium.txt": {
+          "sha256": "de9de9cd276bd5b9f98ca7b059fdb6982fb989dd44a7c8c31f50a0ad3a0fe229",
+          "bytes": 21878
+        },
+        "attempt_1/work/grid_xpoint.dat": {
+          "sha256": "4acb890af225415ae3840320c8aa22292cbfd930529dfbd938250ee5664d7c9b",
+          "bytes": 3963900
+        },
+        "attempt_1/work/plot_unordered_flux_surfaces.py": {
+          "sha256": "4eb4610ddfb32fe6d8f09bba49cf318bae0c4c87f7ee670510444f5d89984a08",
+          "bytes": 1542059
+        },
+        "attempt_1/work/plot_leg_elements4.py": {
+          "sha256": "03bc096ba7c236f46932a036794f643ff675b943cf6ecf744343813e7229d9b7",
+          "bytes": 88457
+        },
+        "attempt_1/work/jorek000018.h5": {
+          "sha256": "431caecbf00a67563435343e16685010f47050a15714942c34de1985accf5142",
+          "bytes": 2264652
+        },
+        "attempt_1/work/plot_extension_3.py": {
+          "sha256": "f052e92408d5df305b8a3e2791ff46551060aee84020643110c2f293adeed8d4",
+          "bytes": 167386
+        },
+        "attempt_1/work/special_equilibrium_points.dat": {
+          "sha256": "45da7456e6dce6d45312d4a2cc35207be4f5522067e24787c1a4572af2f3307b",
+          "bytes": 873
+        },
+        "attempt_1/work/RZ_grid_inside_wall.txt": {
+          "sha256": "af1975cdf94c6ec3105c353ba957f2575e4ac545d688b4feab156000ef10bf7a",
+          "bytes": 1094800
+        },
+        "attempt_1/work/plot_extension_9.py": {
+          "sha256": "78c279bea8144b042b0c2a8cfde1b75dcb8ce7374a3ac87d318a6ccd59c454d7",
+          "bytes": 21226
+        },
+        "attempt_1/work/jorek000008.h5": {
+          "sha256": "d4b97a099be87985b5b34bd9dbbd08c906c5b6f489e376fd7c657c5cff6145ff",
+          "bytes": 2258508
+        },
+        "attempt_1/work/macroscopic_vars.dat": {
+          "sha256": "a435e2195667f59cf507c99261b7bf4f2deda578f24a5368ac783323e08992e4",
+          "bytes": 106811
+        },
+        "attempt_1/work/plot_ext_sides.py": {
+          "sha256": "aacea59f41850e7528940ef80f08ff4a39b63c78edf9af6912f3bc4f9ebfb527",
+          "bytes": 5033
+        },
+        "attempt_1/work/plot_ext_points.py": {
+          "sha256": "14a55d16c915f5fd7213e76765956cdbc40958ae9d76144ab1b958d1e421c357",
+          "bytes": 33871
+        },
+        "attempt_1/work/plot_leg_nodes.py": {
+          "sha256": "3701a557f3168fdf521ee680fd119c243490bfa4194d0c4c32f7e0ea30f43df5",
+          "bytes": 14409
+        },
+        "attempt_1/work/grid_patch9.h5": {
+          "sha256": "f215e6c2cea463f1c9148ea76b47a4f65f149d4bd46a5086f9ad49af11e70f7c",
+          "bytes": 71788
+        },
+        "attempt_1/work/plot_new_patch.py": {
+          "sha256": "59e2ecf8c70e6292732b35aa7b72a2141acde0c6f4715fa3b3b18922c23536f1",
+          "bytes": 1260057
+        },
+        "attempt_1/work/T_rho_profiles.dat": {
+          "sha256": "c9d9b615e325766032902ebd6b02f3176c3b6b672a1b022bdd3673516ba53944",
+          "bytes": 1323
+        },
+        "attempt_1/work/grid_patch1.h5": {
+          "sha256": "cedcbf909bf88cbdd2b5c1bf574fae3e770254c7d519b6602fc910fcbbfe4abb",
+          "bytes": 132476
+        },
+        "attempt_1/work/plot_ordered_flux_surfaces.py": {
+          "sha256": "085401965a116c2944783cb94372ab99c4cf67184efa7ecbbc6f965a2726b3ea",
+          "bytes": 1234880
+        },
+        "attempt_1/work/jorek000010.h5": {
+          "sha256": "e27c6b28769b16ec4873639704ec3eb023bcb28180c636ee1b7164e610cbf7e3",
+          "bytes": 2260556
+        },
+        "attempt_1/work/grid_patch4.h5": {
+          "sha256": "9d2bdd20a909cf91a6850c14d7337e1452de81cb4d7bbd299c0c147c490ac99e",
+          "bytes": 156372
+        },
+        "attempt_1/work/jorek_grid.h5": {
+          "sha256": "3475b3bc5ec3e8724288257e2f442bf69ffae604f4aa45df46b7f65c98882d87",
+          "bytes": 2228780
+        },
+        "attempt_1/work/plot_closed_contours.py": {
+          "sha256": "8adc9836e24b35d7418b853059ac64a5a8ecb58daec608013dcb32d7ee74e82a",
+          "bytes": 488567
+        },
+        "attempt_1/work/jorek000014.h5": {
+          "sha256": "1895279fec538dd93682f52d276fb663dec564284bdfca2808f30c6b54567a2d",
+          "bytes": 2262604
+        },
+        "attempt_1/work/grid_patch3.h5": {
+          "sha256": "59f05a545773b773c132b20ce37a75bac0fe0c85246ebf938339341df0b1adf2",
+          "bytes": 330438
+        },
+        "attempt_1/work/plot_central_grid_elements.py": {
+          "sha256": "fce00d26199f62c859abc1b5b9b4064f4cd0946f0bd99d3dbe0a83bcfa548da1",
+          "bytes": 390057
+        },
+        "attempt_1/work/grid_initial.dat": {
+          "sha256": "50c83514de91ff362f743ac998259313945cf590a681d7fc33a0b99e95b30ffd",
+          "bytes": 11753000
+        },
+        "attempt_1/work/jorek000004.h5": {
+          "sha256": "e31310422252ff06a3a947ae95148217c180774a0dcd430f6fab3cb0803d0b74",
+          "bytes": 2256460
+        },
+        "attempt_1/work/grid_patch6.h5": {
+          "sha256": "6516d38aa229838e3f19ca758ff3b3b7ba5bcf9e81337741026f9d01f7ec946c",
+          "bytes": 71788
+        },
+        "attempt_1/work/jorek000016.h5": {
+          "sha256": "efcca660515ffdb8c3654d7845d72317928b5893390544dbbec5c5a067bab268",
+          "bytes": 2262604
+        },
+        "attempt_1/work/jorek000012.h5": {
+          "sha256": "d4d2981a3e64a514a721f924f8cf5be626f4536c60812793ca5fe204d7cd9a94",
+          "bytes": 2260556
+        },
+        "attempt_1/work/plot_cleaned_flux_surfaces.py": {
+          "sha256": "20bc18bef81b9d3e334a56cd2c21837a7d1ec82519baeb78f22e192132385ad3",
+          "bytes": 1980344
+        },
+        "attempt_1/work/trace0000.out": {
+          "sha256": "dc265419ba5e9c1ea65ac9dfe5c20289ac403e0a788f0119b1ca32e6ea7c5853",
+          "bytes": 29221
+        }
+      },
+      "bytes": 187822797
+    },
+    {
+      "job_id": "2767868",
+      "state": "COMPLETED",
+      "source": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/cpu_baseline96_20261102",
+      "destination": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/cpu_baseline96_20261102",
+      "files": {
+        "result.json": {
+          "sha256": "d6d0e42a0a3b0f63cc4ce119eb5a65b038c375e246e100e13b8133d97ada2a6c",
+          "bytes": 1798
+        },
+        "plan.json": {
+          "sha256": "a33a3a9fce71727c2f289b33a70fdc33a444f13f085f7fe1a66ea50cd45bec59",
+          "bytes": 885
+        },
+        "attempt_1/attempt.json": {
+          "sha256": "a47c43aa1876fe80206a999a491af182b392c63635820189f230231bbd9131ba",
+          "bytes": 302
+        },
+        "attempt_1/stderr.log": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "attempt_1/stdout.log": {
+          "sha256": "68a5cc9255426dde6403999b9f41e0d976275e34fa8d91ab2f420c6e39072eba",
+          "bytes": 682698
+        },
+        "attempt_1/work/jorek000020.h5": {
+          "sha256": "9338fb0b659c14e9a3511df428aacf741d1fb888d90f1afcc3c7e2a2568d9404",
+          "bytes": 2266700
+        },
+        "attempt_1/work/jorek000094.h5": {
+          "sha256": "4d35fd829a4696e3a76716c20d50e3beb7ced6dfc44b3433aacc351f86f8493d",
+          "bytes": 2310860
+        },
+        "attempt_1/work/jorek000022.h5": {
+          "sha256": "252d9375e94bf7af7c84e5503c892deadaaf4925c33f655a7d363dce9853d9db",
+          "bytes": 2266700
+        },
+        "attempt_1/work/jorek000091.h5": {
+          "sha256": "80d1aa63a00a34f3aa637718a2a41a9602af461f3986293d634911b8f874fac7",
+          "bytes": 2309180
+        },
+        "attempt_1/work/plot_extension_6.py": {
+          "sha256": "20f8f25b25b2cf17a000c9ffcc5629c1d6648b68190870b49f8f54926af60745",
+          "bytes": 21226
+        },
+        "attempt_1/work/jorek000066.h5": {
+          "sha256": "94799a3d190893cb70f8aff7de35ac9d2ded405c1425ade02e7c6dcf5362a9cf",
+          "bytes": 2294124
+        },
+        "attempt_1/work/jorek000000.h5": {
+          "sha256": "81f7a119b3a262dcd0184b36334096362b21fcf7b6cba154b677b6f74701858a",
+          "bytes": 2228780
+        },
+        "attempt_1/work/jorek000083.h5": {
+          "sha256": "0449f707a44952198cb8aee29a308f02fcc6b018bf3de950cb63ac6e2dd43dcb",
+          "bytes": 2304036
+        },
+        "attempt_1/work/jorek000087.h5": {
+          "sha256": "f7f39c497d524cda14bc4e9d84fc3ad6b27e6b11c8cfbe1321bf1f2fb6cd3296",
+          "bytes": 2306940
+        },
+        "attempt_1/work/plot_leg_elements1.py": {
+          "sha256": "471d1ee84c386035275b864275a030f9474eed2b17f22187b042478db70c04e0",
+          "bytes": 4009
+        },
+        "attempt_1/work/jorek000078.h5": {
+          "sha256": "05aa49ac34fb52474bd1220ee9022fb2762da1e8ac6a85b60b7f70f45dc4f64a",
+          "bytes": 2301276
+        },
+        "attempt_1/work/boundary.txt": {
+          "sha256": "161f31b4993e51fb5f25de358753d47c8f1a4473a93d8b54c2e61d7d2bc7a45e",
+          "bytes": 62708
+        },
+        "attempt_1/work/jorek000040.h5": {
+          "sha256": "d75e6e4994608bacb70e49f66680ae03dad3e620029502650a03e493acecce57",
+          "bytes": 2279700
+        },
+        "attempt_1/work/grid_patch5.h5": {
+          "sha256": "ef589219dde8daa5e9514cbefeef6a55027d727dee5a1f8c2fd1116ad3866e57",
+          "bytes": 166240
+        },
+        "attempt_1/work/jorek000038.h5": {
+          "sha256": "22848b56fc89bd5470f72ae0b1183e985512b6bb6f63650b2951c299a381933b",
+          "bytes": 2279700
+        },
+        "attempt_1/work/plot_extension_11.py": {
+          "sha256": "13c306d7e493d7466fe976e16a9ddad634acdddba4dbca33e993db7f516f16ed",
+          "bytes": 108922
+        },
+        "attempt_1/work/grid_patch2.h5": {
+          "sha256": "72f110ce8703dc7891d94e802c8490f94598fcea4bbc58ff7785aa675ff48a2a",
+          "bytes": 126642
+        },
+        "attempt_1/work/jorek000036.h5": {
+          "sha256": "dbac0e423b81d3916bb9b5fdd34f302833d164cc5014c4bafb36d564492d0dca",
+          "bytes": 2275100
+        },
+        "attempt_1/work/fort.10": {
+          "sha256": "22ea0306b636a158c73f9ad4f196f192519632f7f2759fabcebd083fc07780ad",
+          "bytes": 174
+        },
+        "attempt_1/work/plot_elements.py": {
+          "sha256": "da9a96f6f52f497c85323ce323ecaa487e74e6aa0cc7442b98f640da0644068e",
+          "bytes": 1260106
+        },
+        "attempt_1/work/jorek000071.h5": {
+          "sha256": "a13ed963ac98f728b6bc9ac367804bec652a4747fc912020e4400bcf64e91fd4",
+          "bytes": 2296844
+        },
+        "attempt_1/work/grid_patch8.h5": {
+          "sha256": "4b892887a8095128c86e75f05d3e40c0c6ea9540e6a74cfae558f3783fc4aac3",
+          "bytes": 94632
+        },
+        "attempt_1/work/jorek_equil_rz.h5": {
+          "sha256": "e4f3c07b64b1b4c683c03d4c45bae32ffb703a7cfe05632df8535881b252c326",
+          "bytes": 6499402
+        },
+        "attempt_1/work/jorek000023.h5": {
+          "sha256": "2038a47db6b65c144140859dbcc4b75aa2275e62d68051c0e0e501ac0f7503ef",
+          "bytes": 2266700
+        },
+        "attempt_1/work/jorek000096.h5": {
+          "sha256": "0e052e32be24839cb3249f77802c7112d6231fe77b4e320be2b9e9737b794432",
+          "bytes": 2311980
+        },
+        "attempt_1/work/grid_initial.h5": {
+          "sha256": "0f7758880802f9c6772bab4691575b844d02a32c250433e92a8790fefbab021c",
+          "bytes": 6499402
+        },
+        "attempt_1/work/plot_leg_surf.py": {
+          "sha256": "7d4fa577779b25fad5fa2e55cd06bae7e6850eccee7b20496c5123a101e39ca3",
+          "bytes": 764438
+        },
+        "attempt_1/work/jorek2.ps": {
+          "sha256": "ff59ce8701cd766c68188c7f51423d53614d388165bd9eb7e818191fe130176c",
+          "bytes": 76089370
+        },
+        "attempt_1/work/jorek000052.h5": {
+          "sha256": "8b4475407fd38fd6a97d93b23be41bca38cef86333046a411e207be5673166ae",
+          "bytes": 2285100
+        },
+        "attempt_1/work/jorek000005.h5": {
+          "sha256": "37d3dea9f5f4e6e743ef356965175a12eb003aa7ff1da604f1abc5f4778944f0",
+          "bytes": 2256460
+        },
+        "attempt_1/work/jorek000093.h5": {
+          "sha256": "fce5830f4c7112020db127004cfd615b2208826b5fe3311412f5598d24d6859f",
+          "bytes": 2310300
+        },
+        "attempt_1/work/jorek000013.h5": {
+          "sha256": "ba661e3f3c98754b78ed580348d63fec4d6854f156806ab1aa64ae33ae0f2a75",
+          "bytes": 2260556
+        },
+        "attempt_1/work/plot_extension_7.py": {
+          "sha256": "d071363d5cab6e92ec476ea5440a815aedaccaa40ee35dcce951f1958cec2357",
+          "bytes": 29578
+        },
+        "attempt_1/work/plot_extension_2.py": {
+          "sha256": "870b6d2aeefe44ba5a593721bc0794dc8eb3bccf4933b34e5943ee933427e16b",
+          "bytes": 50458
+        },
+        "attempt_1/work/jorek000069.h5": {
+          "sha256": "7459780567b5793a9537a21946cf155d0badd66904e2c70ed7b6896f75366073",
+          "bytes": 2295756
+        },
+        "attempt_1/work/jorek000027.h5": {
+          "sha256": "df966a1a730e35d47859efd4d677199a94b3d79004d2974b429b981637303f17",
+          "bytes": 2270796
+        },
+        "attempt_1/work/jorek000075.h5": {
+          "sha256": "8c878fe54cc3244d15eb780492be97a662e72ef463da832119a0408fffedc841",
+          "bytes": 2299020
+        },
+        "attempt_1/work/jorek000035.h5": {
+          "sha256": "6b5a1166fe146cbc72fe560ac8cd6f99cb75bf166b1a89eca9044e11c0341bcf",
+          "bytes": 2275100
+        },
+        "attempt_1/work/grid_no_patch.h5": {
+          "sha256": "55950e183c423077caa757c654904e5ba453f158103678c0d12f855dc51e32a5",
+          "bytes": 1055251
+        },
+        "attempt_1/work/jorek000043.h5": {
+          "sha256": "6847eefc6937b3726a3ac50697470d286a9a63a6de662a78ddac6a533083cb95",
+          "bytes": 2281900
+        },
+        "attempt_1/work/plot_grid_inside_wall.py": {
+          "sha256": "82fe2d692b87e7982e696afac336a5188fc3f51271eff9b199c69e3366d83364",
+          "bytes": 3735546
+        },
+        "attempt_1/work/jorek000032.h5": {
+          "sha256": "04a87b79411b6e2ca4f2e755d1080e01d5c7443f6bb1386bd19a60f7004503cf",
+          "bytes": 2273020
+        },
+        "attempt_1/work/input": {
+          "sha256": "09113d75692e5faff84c9398557d44edbee0edcf0127b3c231b1e154cbcc8655",
+          "bytes": 14734
+        },
+        "attempt_1/work/jorek_restart.h5": {
+          "sha256": "0e052e32be24839cb3249f77802c7112d6231fe77b4e320be2b9e9737b794432",
+          "bytes": 2311980
+        },
+        "attempt_1/work/plot_extension_4.py": {
+          "sha256": "54e6b54ed9081df313e232e6c30066453d005cd910780645b9ed06d715c12ce9",
+          "bytes": 67162
+        },
+        "attempt_1/work/jorek000019.h5": {
+          "sha256": "5252c395258ba4d4ef7c5f1014af63bd59797c858b93781647c6e339a9d8128a",
+          "bytes": 2264652
+        },
+        "attempt_1/work/jorek000086.h5": {
+          "sha256": "f80ddccc8c47279a499eacec698a19a64384c8f9c09a8b0c724b4250c5d64b97",
+          "bytes": 2306380
+        },
+        "attempt_1/work/jorek000009.h5": {
+          "sha256": "022ff835900356bf5399527ef1208285f7d0c3c5c126b5ae93cc988e6788b637",
+          "bytes": 2258508
+        },
+        "attempt_1/work/jorek000067.h5": {
+          "sha256": "fadebec7cb45a709c26a0fabbc535c81bbd1fd53f9da58b6faf05863824f7975",
+          "bytes": 2294668
+        },
+        "attempt_1/work/jorek000006.h5": {
+          "sha256": "d9c17ebe657eba500a841b718c5b6b68b2885fc901252e9d7fe0e08ff8e4c7d1",
+          "bytes": 2256460
+        },
+        "attempt_1/work/eqdsk.dat": {
+          "sha256": "ac787dd266a9b4b93ccdadf9883c9d97a115e7dd9bb5bd3f724321576883bf4e",
+          "bytes": 4102749
+        },
+        "attempt_1/work/jorek000024.h5": {
+          "sha256": "4113fc40d09c84f77405d1924311294ef4ec9a9b0d8a87a8ee1be91507b27ccb",
+          "bytes": 2268748
+        },
+        "attempt_1/work/jorek000011.h5": {
+          "sha256": "3384eb83e6dfcc0ad5e773b7274d4978f0283dd5632e7be2cdd8180326fd791a",
+          "bytes": 2260556
+        },
+        "attempt_1/work/plot_extension_8.py": {
+          "sha256": "713de18596b69d3ac5c2758fbbe0754042fe6ac7c5913f59fa06bfb420ffe11f",
+          "bytes": 33754
+        },
+        "attempt_1/work/jorek000062.h5": {
+          "sha256": "9fc42316f74c20fda88e5465cf2eaf0813a9fa678da99c054eab4ec7ead819a1",
+          "bytes": 2291516
+        },
+        "attempt_1/work/jorek000021.h5": {
+          "sha256": "674d02b78f50826f9f018d335fe353158821ede119a05c4eb160f07f61c319ef",
+          "bytes": 2266700
+        },
+        "attempt_1/work/jorek000017.h5": {
+          "sha256": "901540dd82ce6c536f06255d08f579a8d789e9802ffc49ff03b99cb853f2dcb0",
+          "bytes": 2264652
+        },
+        "attempt_1/work/plot_leg_elements2.py": {
+          "sha256": "733618ed7dd49072e90bbc4601641943d1ba57bb1f411f11411a3414649dca46",
+          "bytes": 88457
+        },
+        "attempt_1/work/jorek000092.h5": {
+          "sha256": "44d7a3f9ec7993ed4c9f6c628dec655ebf8150d4bbff57cb58400e88a944f3a5",
+          "bytes": 2309740
+        },
+        "attempt_1/work/jorek000085.h5": {
+          "sha256": "0878bd73419eb953b79e571b1fb7e51d9ed153d3719357cfa3b36fffe6910047",
+          "bytes": 2305140
+        },
+        "attempt_1/work/jorek000025.h5": {
+          "sha256": "bf1fcf9cf65ffcb6e38eef014da4d324335cc53aea40185e997d21b94c80b63c",
+          "bytes": 2268748
+        },
+        "attempt_1/work/plot_leg.py": {
+          "sha256": "529d122b268a4809a8ff42cbdbf184289fb99dc8fdc954b730ef017de1649450",
+          "bytes": 13914
+        },
+        "attempt_1/work/plot_extension_1.py": {
+          "sha256": "785bb89bac5beda80b6162e2a0b4ecda5388444d89d4426bc279f522b24ebbd7",
+          "bytes": 54634
+        },
+        "attempt_1/work/jorek000048.h5": {
+          "sha256": "93d6478cbc2943fd4985e32ceb960cd9d3684dc680ece48f94c82bc96c7de149",
+          "bytes": 2283116
+        },
+        "attempt_1/work/jorek000001.h5": {
+          "sha256": "3dab0112dd4f509cfdc157ce548fb69cb680387984973f9ab442fdc8c4eb0789",
+          "bytes": 2254412
+        },
+        "attempt_1/work/qprofile.dat": {
+          "sha256": "55635d5f4bdfb9dff675ae1942c9451b77afa045924e10b610fb53f842bb4b99",
+          "bytes": 3871
+        },
+        "attempt_1/work/jorek000049.h5": {
+          "sha256": "be835c64bee82dbe71166aacbb12ea820f21e04e2cface8e671c15e77a7d5fe3",
+          "bytes": 2283356
+        },
+        "attempt_1/work/plot_ext_nodes.py": {
+          "sha256": "5637ff06a1fa47dae75f508ab00fb20bc8fb943407e50fa82efb0aed83029808",
+          "bytes": 16298
+        },
+        "attempt_1/work/jorek000073.h5": {
+          "sha256": "80be41651e5b7f8cf9ee229a58206927d7cb3284b2bc19a061cf9eeb9d5b1268",
+          "bytes": 2297932
+        },
+        "attempt_1/work/grid_patch11.h5": {
+          "sha256": "95fc0c24e8a7816e90d579992b271571d730bfd6e6e9b1ef0eb0060c6b0c5478",
+          "bytes": 230848
+        },
+        "attempt_1/work/jorek000057.h5": {
+          "sha256": "8d1697c26999901a0048a07b869a929aba31f202e4175a1a15ad3aeaee73fa6c",
+          "bytes": 2288996
+        },
+        "attempt_1/work/jorek000072.h5": {
+          "sha256": "62e69c27111a3a8dd110e2b902ddcdd77bf0d8926bcdbe7567dcb472bf86f646",
+          "bytes": 2297388
+        },
+        "attempt_1/work/plot_extension_10.py": {
+          "sha256": "f0c3f0b0863fbb2ba05fa150464861561822d0fbafb1181eae3596aa8181677d",
+          "bytes": 62986
+        },
+        "attempt_1/work/jorek000007.h5": {
+          "sha256": "5b3d143b41ed6ce23b11cdd654569b0371019b36e0ccd627a623c4ab0cdb3085",
+          "bytes": 2258508
+        },
+        "attempt_1/work/jorek000061.h5": {
+          "sha256": "8595e1a7932f7b7c5b622905e727b57107557c00b632e717c5226674203ae45d",
+          "bytes": 2291012
+        },
+        "attempt_1/work/jorek000068.h5": {
+          "sha256": "018caed234776d5871925da584c4cd6dce911e977bd1d3a7bb11e11eb5cbad92",
+          "bytes": 2295212
+        },
+        "attempt_1/work/grid_patch10.h5": {
+          "sha256": "adef893a98b18773c5b2575ee34368957cfb6894f36b474c23e1ee62b5244288",
+          "bytes": 147412
+        },
+        "attempt_1/work/plot_extension_5.py": {
+          "sha256": "a61dd56803d2d407f6a0607a3690591be00496166080e9582d7d5d2130dc5bc1",
+          "bytes": 72730
+        },
+        "attempt_1/work/jorek000070.h5": {
+          "sha256": "46ed9a89d48b184719606c15115e8617b8a4561b54b0deea5f7529825e9fafe2",
+          "bytes": 2296300
+        },
+        "attempt_1/work/jorek000002.h5": {
+          "sha256": "1e762814b21aa2715e359851ee79e78614d979d3b6e61d7089a0301ebe1a3f4e",
+          "bytes": 2254412
+        },
+        "attempt_1/work/plot_leg_elements3.py": {
+          "sha256": "0e23517f8ea807d9d6fd5ad399b4ba2fa647efc8dbe7330b19aaa1976366b66f",
+          "bytes": 4009
+        },
+        "attempt_1/work/jorek000003.h5": {
+          "sha256": "6243ef0d6f68f6c78c133fe2b67256ac73f12d2123fffec69d9cc47a5f5bcc41",
+          "bytes": 2256460
+        },
+        "attempt_1/work/jorek000077.h5": {
+          "sha256": "747c40bc38eb6e5327c90359d064c7e3083a1c40e97f7b309eb0b74aa04f2dad",
+          "bytes": 2300724
+        },
+        "attempt_1/work/jorek000015.h5": {
+          "sha256": "74d34010aa9927727f940abee1ef69f971d8fd33bff4b28dcd6e4da449a0f3ab",
+          "bytes": 2262604
+        },
+        "attempt_1/work/grid_patch7.h5": {
+          "sha256": "d1dd1aa571a11194ede5c2f7cb1f8b82a81b780da83a5706edda2cf14a2c8afe",
+          "bytes": 88748
+        },
+        "attempt_1/work/equilibrium.txt": {
+          "sha256": "fb0cf4a63dbffeffc0d7eb7eef353dafdc3daeca2ef7c452f2472891a579852b",
+          "bytes": 21878
+        },
+        "attempt_1/work/grid_xpoint.dat": {
+          "sha256": "4acb890af225415ae3840320c8aa22292cbfd930529dfbd938250ee5664d7c9b",
+          "bytes": 3963900
+        },
+        "attempt_1/work/plot_unordered_flux_surfaces.py": {
+          "sha256": "4eb4610ddfb32fe6d8f09bba49cf318bae0c4c87f7ee670510444f5d89984a08",
+          "bytes": 1542059
+        },
+        "attempt_1/work/plot_leg_elements4.py": {
+          "sha256": "03bc096ba7c236f46932a036794f643ff675b943cf6ecf744343813e7229d9b7",
+          "bytes": 88457
+        },
+        "attempt_1/work/jorek000018.h5": {
+          "sha256": "bf55856e2f7369e330487c3fcace36e8b88e3a285fa03ea9a5f6fe91f5315c80",
+          "bytes": 2264652
+        },
+        "attempt_1/work/jorek000033.h5": {
+          "sha256": "3f08a9be71076f7b8872565fb55779126d76c42b7d4f8b655edde75824f8727e",
+          "bytes": 2275100
+        },
+        "attempt_1/work/plot_extension_3.py": {
+          "sha256": "f052e92408d5df305b8a3e2791ff46551060aee84020643110c2f293adeed8d4",
+          "bytes": 167386
+        },
+        "attempt_1/work/special_equilibrium_points.dat": {
+          "sha256": "45da7456e6dce6d45312d4a2cc35207be4f5522067e24787c1a4572af2f3307b",
+          "bytes": 873
+        },
+        "attempt_1/work/jorek000082.h5": {
+          "sha256": "d0931bb970c1fcdfc38e37d5e94eb9be942228d41a8c38932108596ed74b20f9",
+          "bytes": 2303484
+        },
+        "attempt_1/work/jorek000050.h5": {
+          "sha256": "c77c1aaa3dc4f87789f85d4db9601f76d126639a6a6f6345fcd81bec570408a8",
+          "bytes": 2283596
+        },
+        "attempt_1/work/RZ_grid_inside_wall.txt": {
+          "sha256": "af1975cdf94c6ec3105c353ba957f2575e4ac545d688b4feab156000ef10bf7a",
+          "bytes": 1094800
+        },
+        "attempt_1/work/jorek000034.h5": {
+          "sha256": "80c18c532599b786d197da284c733b507b70174905c0403f4d6ae74cb9034f8b",
+          "bytes": 2275100
+        },
+        "attempt_1/work/jorek000047.h5": {
+          "sha256": "f495292b5f663a6b3b5cb1c483bb43d0925b27478d8d973a679036fbe0964388",
+          "bytes": 2282876
+        },
+        "attempt_1/work/jorek000037.h5": {
+          "sha256": "c0cd9f8d48505c0d732cfdf6f2efccb343fece5fc75e652ca717096edeba14f9",
+          "bytes": 2279700
+        },
+        "attempt_1/work/plot_extension_9.py": {
+          "sha256": "78c279bea8144b042b0c2a8cfde1b75dcb8ce7374a3ac87d318a6ccd59c454d7",
+          "bytes": 21226
+        },
+        "attempt_1/work/jorek000008.h5": {
+          "sha256": "07688fb0abbc7a5b5b8d2ff0bc9e9cdb3ef7b860aa0dc233cb6476fe2eec8ef6",
+          "bytes": 2258508
+        },
+        "attempt_1/work/macroscopic_vars.dat": {
+          "sha256": "1c487f8b3d9e6750cd74dbd0b17ecf3acff688d0f09d0cf064cce6fa3deb1f51",
+          "bytes": 290771
+        },
+        "attempt_1/work/plot_ext_sides.py": {
+          "sha256": "aacea59f41850e7528940ef80f08ff4a39b63c78edf9af6912f3bc4f9ebfb527",
+          "bytes": 5033
+        },
+        "attempt_1/work/jorek000080.h5": {
+          "sha256": "1f766d3b41f76e887f4863586ba01440593bb386dd25962cb74ab5e2f4dae211",
+          "bytes": 2302380
+        },
+        "attempt_1/work/plot_ext_points.py": {
+          "sha256": "14a55d16c915f5fd7213e76765956cdbc40958ae9d76144ab1b958d1e421c357",
+          "bytes": 33871
+        },
+        "attempt_1/work/jorek000031.h5": {
+          "sha256": "7c614071728692865c2b03260af1de3a857fa61862cae47de3d33c08efa02cf1",
+          "bytes": 2273020
+        },
+        "attempt_1/work/jorek000042.h5": {
+          "sha256": "dcbf2df5008a192d35b9f739678a67f8ab2e51c3fc1b72fb372510e6a98d4a5d",
+          "bytes": 2279700
+        },
+        "attempt_1/work/jorek000046.h5": {
+          "sha256": "319f03e7a008ab91ae360c689d8efaad315cb747fcce836178bc9aef232c8fab",
+          "bytes": 2282636
+        },
+        "attempt_1/work/jorek000060.h5": {
+          "sha256": "6b4a8f6b7e43f71368f071e5b30a9d6d9b1fca21855c1204187f7fc95a9b714f",
+          "bytes": 2290508
+        },
+        "attempt_1/work/plot_leg_nodes.py": {
+          "sha256": "3701a557f3168fdf521ee680fd119c243490bfa4194d0c4c32f7e0ea30f43df5",
+          "bytes": 14409
+        },
+        "attempt_1/work/jorek000065.h5": {
+          "sha256": "45b09e6a864c9d7639e23042efbb9ddf41af7f77eafebdc5e56c297544bc56e3",
+          "bytes": 2293580
+        },
+        "attempt_1/work/jorek000064.h5": {
+          "sha256": "cef8f17224d220d02c8041199e0e1bb2831f56f48742e4723d521399c0f7c083",
+          "bytes": 2292524
+        },
+        "attempt_1/work/grid_patch9.h5": {
+          "sha256": "405b55c329c8eb0d8398817f218f32e6ee5169ac2c32725c47f9d97cf50d7d84",
+          "bytes": 71788
+        },
+        "attempt_1/work/jorek000045.h5": {
+          "sha256": "aa769a149951a9e9d70cd6cb0915eccd357d634e48b667ee5080952f6386630d",
+          "bytes": 2282284
+        },
+        "attempt_1/work/jorek000029.h5": {
+          "sha256": "59261d1d07ec20254cf5f19130935961f039700ab5135c903df11d155e6e39e5",
+          "bytes": 2273020
+        },
+        "attempt_1/work/jorek000041.h5": {
+          "sha256": "dbed3f8d1858f1d52c86c3940e1c17ebc9fa5e862ffddeb773810347a8ed18b9",
+          "bytes": 2279700
+        },
+        "attempt_1/work/plot_new_patch.py": {
+          "sha256": "59e2ecf8c70e6292732b35aa7b72a2141acde0c6f4715fa3b3b18922c23536f1",
+          "bytes": 1260057
+        },
+        "attempt_1/work/jorek000095.h5": {
+          "sha256": "5f47f7298e3aa984f7cd7cfafe941fcd0223a609760b7acc55406a2611263bcb",
+          "bytes": 2311420
+        },
+        "attempt_1/work/T_rho_profiles.dat": {
+          "sha256": "c9d9b615e325766032902ebd6b02f3176c3b6b672a1b022bdd3673516ba53944",
+          "bytes": 1323
+        },
+        "attempt_1/work/jorek000039.h5": {
+          "sha256": "d3c43c9effacf6c8f7f856398d0252a33ed716cae4e12ac71eb9a3144371b4ba",
+          "bytes": 2279700
+        },
+        "attempt_1/work/grid_patch1.h5": {
+          "sha256": "d1577397577a18cd985702510d044a9247bbcb44d96889cceda7be680831b14e",
+          "bytes": 132476
+        },
+        "attempt_1/work/jorek000063.h5": {
+          "sha256": "d7a405f2188d9328515940a938b4f01b7b188632b00d62212bd4b32523abbb2a",
+          "bytes": 2292020
+        },
+        "attempt_1/work/jorek000081.h5": {
+          "sha256": "e2645c10671bf8287ff00e981bbf84ef02a80f8b20ee77e989e0e0ab0b15ea09",
+          "bytes": 2302932
+        },
+        "attempt_1/work/jorek000079.h5": {
+          "sha256": "80224e55358ed5cc09f5124ff036c42186e98b14f0c3eb506ed065fd4997ed5b",
+          "bytes": 2301828
+        },
+        "attempt_1/work/jorek000026.h5": {
+          "sha256": "a7d242500ea0103d3c2f6c010433d5bac8c2f48c39f8d540932e6e9c7900cc7a",
+          "bytes": 2270796
+        },
+        "attempt_1/work/plot_ordered_flux_surfaces.py": {
+          "sha256": "085401965a116c2944783cb94372ab99c4cf67184efa7ecbbc6f965a2726b3ea",
+          "bytes": 1234880
+        },
+        "attempt_1/work/jorek000010.h5": {
+          "sha256": "06bb595d2aafbf7c6353d6a50fb1e4254dc5c3d708a80fae630a6b6c6b4bffb5",
+          "bytes": 2260556
+        },
+        "attempt_1/work/jorek000028.h5": {
+          "sha256": "dee1fd4bac919896bcb66eb8833ba9cb6a3644e798786b032b23f8b9356e06dd",
+          "bytes": 2270796
+        },
+        "attempt_1/work/jorek000055.h5": {
+          "sha256": "ec9da7265ae89f2e9333d319540f3c4075cfbf7da5a72c831019dd9c9ed8261b",
+          "bytes": 2286588
+        },
+        "attempt_1/work/grid_patch4.h5": {
+          "sha256": "652883ca84a37576f954b1a393442286bf6805def66f85ad38e353d93a77f71d",
+          "bytes": 156372
+        },
+        "attempt_1/work/jorek_grid.h5": {
+          "sha256": "6a15e37be66d33cc051f4090ddaa85b08e5ecf685f2a6badbd3d00c3b390d7be",
+          "bytes": 2228780
+        },
+        "attempt_1/work/plot_closed_contours.py": {
+          "sha256": "8adc9836e24b35d7418b853059ac64a5a8ecb58daec608013dcb32d7ee74e82a",
+          "bytes": 488567
+        },
+        "attempt_1/work/jorek000053.h5": {
+          "sha256": "db878e7132968f8ad26d6fc4dab860e83f14c0a2773d9aa547252ff05f64ee11",
+          "bytes": 2285596
+        },
+        "attempt_1/work/jorek000014.h5": {
+          "sha256": "c62382ebe8828c0397c12101080112346dfd3403139692fdcb6d8993195eaa0a",
+          "bytes": 2262604
+        },
+        "attempt_1/work/grid_patch3.h5": {
+          "sha256": "e12b3d81105a0da3c805be2cfaaa30e769fde7c55873902d7ab3b8b39b1e3ea3",
+          "bytes": 330438
+        },
+        "attempt_1/work/plot_central_grid_elements.py": {
+          "sha256": "fce00d26199f62c859abc1b5b9b4064f4cd0946f0bd99d3dbe0a83bcfa548da1",
+          "bytes": 390057
+        },
+        "attempt_1/work/jorek000074.h5": {
+          "sha256": "a64c333624c0a1495af222c3d4f886adde9da0c0264e6f36d864b0e28e2bf497",
+          "bytes": 2298476
+        },
+        "attempt_1/work/jorek000088.h5": {
+          "sha256": "5d52eef2ecf4ede06ee187953c0b9160ec0888bdb1150c9310488658636f1c3a",
+          "bytes": 2307500
+        },
+        "attempt_1/work/grid_initial.dat": {
+          "sha256": "50c83514de91ff362f743ac998259313945cf590a681d7fc33a0b99e95b30ffd",
+          "bytes": 11753000
+        },
+        "attempt_1/work/jorek000090.h5": {
+          "sha256": "560bacf49f4fe9651665d7961ac1aa5465420e608e38c58ebffc6e1b130f9a82",
+          "bytes": 2308620
+        },
+        "attempt_1/work/jorek000004.h5": {
+          "sha256": "a4ffd0ccdbb159c00fcd15bcc68a596bc6ec4351e1563151d3b45460ab06b8b7",
+          "bytes": 2256460
+        },
+        "attempt_1/work/jorek000059.h5": {
+          "sha256": "6e79dbcb54b53b05cfb0df77f10aeaa18ed44c937f4fbfdf61cd1ab300b7958a",
+          "bytes": 2290004
+        },
+        "attempt_1/work/jorek000030.h5": {
+          "sha256": "031a900210fd29a02795c4d7d3c53b8a8477d4b631152f6df96bd20b81efc748",
+          "bytes": 2273020
+        },
+        "attempt_1/work/jorek000084.h5": {
+          "sha256": "a4224df046b7e50b4bda638abd4a0cedb078fb0aa625964d930bdccdbf0e4533",
+          "bytes": 2304588
+        },
+        "attempt_1/work/jorek000051.h5": {
+          "sha256": "4872d296378126d679e9842a10600e906bb917125dc2a3a6f1019c22f7554d65",
+          "bytes": 2283836
+        },
+        "attempt_1/work/jorek000058.h5": {
+          "sha256": "3d1c4577ac46519d718c32ff74b6c6ba4ea70a9369e5f8efc370a283ead0eaa7",
+          "bytes": 2289500
+        },
+        "attempt_1/work/grid_patch6.h5": {
+          "sha256": "d12c94db86846abf8e60028e6721787cccc95b8c093bc7b00038e7e634e7bdf3",
+          "bytes": 71788
+        },
+        "attempt_1/work/jorek000089.h5": {
+          "sha256": "15a5db86c559ec12344c45e47e571179eccfa01fbd58edc1b5cf5a9c78fd2928",
+          "bytes": 2308060
+        },
+        "attempt_1/work/jorek000056.h5": {
+          "sha256": "976e44be153964132087a529ebcb1b3474434b57e8cc5ce7035b6b01d06dfc47",
+          "bytes": 2287084
+        },
+        "attempt_1/work/jorek000016.h5": {
+          "sha256": "4594c7cdb4ef24a65af81c9009cc2e9da8b5877a8a1ef6109160ae663c9e6fc7",
+          "bytes": 2262604
+        },
+        "attempt_1/work/jorek000012.h5": {
+          "sha256": "c4771b50309c91f665c3afe7183df0290d78d9a9511e9bd253461199be44b779",
+          "bytes": 2260556
+        },
+        "attempt_1/work/plot_cleaned_flux_surfaces.py": {
+          "sha256": "20bc18bef81b9d3e334a56cd2c21837a7d1ec82519baeb78f22e192132385ad3",
+          "bytes": 1980344
+        },
+        "attempt_1/work/jorek000076.h5": {
+          "sha256": "3c667f24831f819f1165be9f1581514213871ee33c6a7ce4a74b62d3634cfe01",
+          "bytes": 2300172
+        },
+        "attempt_1/work/jorek000054.h5": {
+          "sha256": "30fb2dad2a36740a092b88bfc89af03bb19a075eafd0c0f8efac0b0da296f1bf",
+          "bytes": 2286092
+        },
+        "attempt_1/work/jorek000044.h5": {
+          "sha256": "1a446a224846a03aa3ece50520826bde977adec5a7b33a5557f69e07e49f0e4e",
+          "bytes": 2282092
+        },
+        "attempt_1/work/trace0000.out": {
+          "sha256": "76a9956fe529f7f7041567c370dca43f5ea63c26f4a326d838870c5f5705e6e6",
+          "bytes": 106549
+        }
+      },
+      "bytes": 353458551
+    },
+    {
+      "job_id": "2767989",
+      "state": "FAILED",
+      "source": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/cpu_mesh2_equilibrium_20261102",
+      "destination": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/cpu_mesh2_equilibrium_20261102",
+      "files": {
+        "plan.json": {
+          "sha256": "f3436c01aadcb55168910d6161f0e2bb159cc2004e585707449736cd5a677991",
+          "bytes": 887
+        },
+        "result.json": {
+          "sha256": "8344aaeea273d7f4b9f5f15d796ef015bef193b56c0c227f18e79115b5983dbd",
+          "bytes": 1648
+        },
+        "attempt_1/attempt.json": {
+          "sha256": "3a6bdf6c8ecd5035125cd749815f38dd90ed0106ac9181a40fdfc821610d3e44",
+          "bytes": 154
+        },
+        "attempt_1/stderr.log": {
+          "sha256": "a48c5738b57f253ab7e95fcb6540202bad05171ce5a4a5375ebdc9087a5968ea",
+          "bytes": 1314
+        },
+        "attempt_1/stdout.log": {
+          "sha256": "595ef12acae6bd5a15a76f750ab88b1eec03cfbebb6610c0cf4ef7f7cd39099a",
+          "bytes": 58944
+        },
+        "attempt_1/work/grid_initial.h5": {
+          "sha256": "5cc5bdde0b10d7dbfeaf5db495cd20587084c573f81eda1c66e347e684da7f94",
+          "bytes": 25412224
+        },
+        "attempt_1/work/jorek2.ps": {
+          "sha256": "7d6f901021ede7c6b2aa8bfe75b44478090c81c04a39a7051ee19cc18bececc6",
+          "bytes": 25016
+        },
+        "attempt_1/work/plot_grid_inside_wall.py": {
+          "sha256": "56a56dae7eb17866a8e24d855015f8edad3935e268e884bc34a709fd6393f375",
+          "bytes": 14891962
+        },
+        "attempt_1/work/input": {
+          "sha256": "a95dd9bb9b72737f4c0fba81a4bd7772ee176484dede5afc88a20b52bbe961cb",
+          "bytes": 14569
+        },
+        "attempt_1/work/eqdsk.dat": {
+          "sha256": "ac787dd266a9b4b93ccdadf9883c9d97a115e7dd9bb5bd3f724321576883bf4e",
+          "bytes": 4102749
+        },
+        "attempt_1/work/RZ_grid_inside_wall.txt": {
+          "sha256": "c0b66f021e95a3189de2e346e15c047ed621c6f66caae04de24fcac7e8bd4382",
+          "bytes": 4364784
+        },
+        "attempt_1/work/macroscopic_vars.dat": {
+          "sha256": "e4530743a024ee655a723c4384cee6efbabc5172aee7c6d1dbabaf956b626f27",
+          "bytes": 45671
+        },
+        "attempt_1/work/trace0000.out": {
+          "sha256": "1bc773b144a4dceac441541c8f2e247d9cbc52eab57c61340cdd114bb9ab32d4",
+          "bytes": 18
+        }
+      },
+      "bytes": 48919940
+    },
+    {
+      "job_id": "2767720",
+      "state": "COMPLETED",
+      "source": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium_regression_dcgp_20261102",
+      "destination": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/equilibrium_regression_dcgp_20261102",
+      "files": {
+        "result.json": {
+          "sha256": "213012030b31db08c55f87af725dd2a5c01655e0d7e42722cec6cc92ab4b04e0",
+          "bytes": 2061
+        },
+        "plan.json": {
+          "sha256": "29b2023fe16cb75100745b227b1bcebaaa00d75956fee65ceb07b251b1011ca1",
+          "bytes": 1005
+        },
+        "attempt_1/stdout.log": {
+          "sha256": "e5d91482fe887d9572547cc258a547c4e5db1930d66926131cb8c3b55e69128c",
+          "bytes": 170841
+        },
+        "attempt_1/stderr.log": {
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "attempt_1/attempt.json": {
+          "sha256": "a9b35899efef376d0d67172dc592b68c9d3597700521aa6106fd7e51826aab7c",
+          "bytes": 537
+        },
+        "attempt_1/work/plot_extension_2.py": {
+          "sha256": "870b6d2aeefe44ba5a593721bc0794dc8eb3bccf4933b34e5943ee933427e16b",
+          "bytes": 50458
+        },
+        "attempt_1/work/plot_central_grid_elements.py": {
+          "sha256": "fce00d26199f62c859abc1b5b9b4064f4cd0946f0bd99d3dbe0a83bcfa548da1",
+          "bytes": 390057
+        },
+        "attempt_1/work/plot_unordered_flux_surfaces.py": {
+          "sha256": "4eb4610ddfb32fe6d8f09bba49cf318bae0c4c87f7ee670510444f5d89984a08",
+          "bytes": 1542059
+        },
+        "attempt_1/work/plot_elements.py": {
+          "sha256": "da9a96f6f52f497c85323ce323ecaa487e74e6aa0cc7442b98f640da0644068e",
+          "bytes": 1260106
+        },
+        "attempt_1/work/plot_extension_10.py": {
+          "sha256": "f0c3f0b0863fbb2ba05fa150464861561822d0fbafb1181eae3596aa8181677d",
+          "bytes": 62986
+        },
+        "attempt_1/work/grid_patch1.h5": {
+          "sha256": "7f974b972d2960fa92062014ca9acf3b409954cf48fd60a5c68b5e8a3243215e",
+          "bytes": 132476
+        },
+        "attempt_1/work/grid_patch4.h5": {
+          "sha256": "620b6f5218f5f569c205685d8d405fecdfd84ea242a9d8bf5ae3cdf97919334c",
+          "bytes": 156372
+        },
+        "attempt_1/work/plot_cleaned_flux_surfaces.py": {
+          "sha256": "20bc18bef81b9d3e334a56cd2c21837a7d1ec82519baeb78f22e192132385ad3",
+          "bytes": 1980344
+        },
+        "attempt_1/work/plot_grid_inside_wall.py": {
+          "sha256": "82fe2d692b87e7982e696afac336a5188fc3f51271eff9b199c69e3366d83364",
+          "bytes": 3735546
+        },
+        "attempt_1/work/RZ_grid_inside_wall.txt": {
+          "sha256": "af1975cdf94c6ec3105c353ba957f2575e4ac545d688b4feab156000ef10bf7a",
+          "bytes": 1094800
+        },
+        "attempt_1/work/plot_extension_5.py": {
+          "sha256": "a61dd56803d2d407f6a0607a3690591be00496166080e9582d7d5d2130dc5bc1",
+          "bytes": 72730
+        },
+        "attempt_1/work/jorek_grid.h5": {
+          "sha256": "a5000e8c28ebb30d276da49cbcface56c257ec8e0ee3117b3a20d0bb281df692",
+          "bytes": 2228780
+        },
+        "attempt_1/work/plot_extension_4.py": {
+          "sha256": "54e6b54ed9081df313e232e6c30066453d005cd910780645b9ed06d715c12ce9",
+          "bytes": 67162
+        },
+        "attempt_1/work/plot_extension_6.py": {
+          "sha256": "20f8f25b25b2cf17a000c9ffcc5629c1d6648b68190870b49f8f54926af60745",
+          "bytes": 21226
+        },
+        "attempt_1/work/plot_leg_elements4.py": {
+          "sha256": "03bc096ba7c236f46932a036794f643ff675b943cf6ecf744343813e7229d9b7",
+          "bytes": 88457
+        },
+        "attempt_1/work/grid_patch9.h5": {
+          "sha256": "20bbdcecaaab7f60e008848949b1f4eaf84f5b3fa53ca05513a27b52a3ee6554",
+          "bytes": 71788
+        },
+        "attempt_1/work/jorek_restart.h5": {
+          "sha256": "2d066b56bc0f1aa4d6b1e8eff22aa3a008a1917825ea9d218a9bc1f78e517224",
+          "bytes": 2228780
+        },
+        "attempt_1/work/grid_initial.dat": {
+          "sha256": "50c83514de91ff362f743ac998259313945cf590a681d7fc33a0b99e95b30ffd",
+          "bytes": 11753000
+        },
+        "attempt_1/work/trace0000.out": {
+          "sha256": "591c377afcc03f874f44fb0fa453d302dbd9e93fdd688830168db84a2f020ba0",
+          "bytes": 3445
+        },
+        "attempt_1/work/grid_patch6.h5": {
+          "sha256": "894821d29b6eab5c16f9aa3fd45ade95206975f8ad57d90fa7d66ab112d77483",
+          "bytes": 71788
+        },
+        "attempt_1/work/equilibrium.txt": {
+          "sha256": "dddfa9be86302167302b32e0e07b416f004c7dd7b0cf6850cd902732b3e6178b",
+          "bytes": 21878
+        },
+        "attempt_1/work/grid_patch8.h5": {
+          "sha256": "bbbcaab0f4312e4ffcff41f056bfb28c1f687fba92a43bfbf8cf3c08f683cad8",
+          "bytes": 94632
+        },
+        "attempt_1/work/special_equilibrium_points.dat": {
+          "sha256": "45da7456e6dce6d45312d4a2cc35207be4f5522067e24787c1a4572af2f3307b",
+          "bytes": 873
+        },
+        "attempt_1/work/plot_closed_contours.py": {
+          "sha256": "8adc9836e24b35d7418b853059ac64a5a8ecb58daec608013dcb32d7ee74e82a",
+          "bytes": 488567
+        },
+        "attempt_1/work/plot_ext_points.py": {
+          "sha256": "14a55d16c915f5fd7213e76765956cdbc40958ae9d76144ab1b958d1e421c357",
+          "bytes": 33871
+        },
+        "attempt_1/work/plot_ordered_flux_surfaces.py": {
+          "sha256": "085401965a116c2944783cb94372ab99c4cf67184efa7ecbbc6f965a2726b3ea",
+          "bytes": 1234880
+        },
+        "attempt_1/work/plot_extension_9.py": {
+          "sha256": "78c279bea8144b042b0c2a8cfde1b75dcb8ce7374a3ac87d318a6ccd59c454d7",
+          "bytes": 21226
+        },
+        "attempt_1/work/plot_leg_surf.py": {
+          "sha256": "7d4fa577779b25fad5fa2e55cd06bae7e6850eccee7b20496c5123a101e39ca3",
+          "bytes": 764438
+        },
+        "attempt_1/work/grid_patch10.h5": {
+          "sha256": "3faa5ef19d75c0184594487941d041fb3eb2907255ffed9c6e66bbf170234615",
+          "bytes": 147412
+        },
+        "attempt_1/work/grid_patch7.h5": {
+          "sha256": "32b3199ebc48e144083593717deee0bd317fa660188e3f0e137d35043939aecf",
+          "bytes": 88748
+        },
+        "attempt_1/work/plot_extension_3.py": {
+          "sha256": "f052e92408d5df305b8a3e2791ff46551060aee84020643110c2f293adeed8d4",
+          "bytes": 167386
+        },
+        "attempt_1/work/plot_extension_1.py": {
+          "sha256": "785bb89bac5beda80b6162e2a0b4ecda5388444d89d4426bc279f522b24ebbd7",
+          "bytes": 54634
+        },
+        "attempt_1/work/plot_leg_nodes.py": {
+          "sha256": "3701a557f3168fdf521ee680fd119c243490bfa4194d0c4c32f7e0ea30f43df5",
+          "bytes": 14409
+        },
+        "attempt_1/work/jorek_equil_rz.h5": {
+          "sha256": "0b91308434d9c57506920fae0c49ffbfc3492183ac3ea7c3bd17e4db29c36275",
+          "bytes": 6499402
+        },
+        "attempt_1/work/plot_leg_elements1.py": {
+          "sha256": "471d1ee84c386035275b864275a030f9474eed2b17f22187b042478db70c04e0",
+          "bytes": 4009
+        },
+        "attempt_1/work/plot_leg_elements3.py": {
+          "sha256": "0e23517f8ea807d9d6fd5ad399b4ba2fa647efc8dbe7330b19aaa1976366b66f",
+          "bytes": 4009
+        },
+        "attempt_1/work/qprofile.dat": {
+          "sha256": "55635d5f4bdfb9dff675ae1942c9451b77afa045924e10b610fb53f842bb4b99",
+          "bytes": 3871
+        },
+        "attempt_1/work/plot_extension_7.py": {
+          "sha256": "d071363d5cab6e92ec476ea5440a815aedaccaa40ee35dcce951f1958cec2357",
+          "bytes": 29578
+        },
+        "attempt_1/work/input": {
+          "sha256": "2099036d12431762113c74f411a3a3bb41a506424c87bfb1744aefb07311b9a0",
+          "bytes": 14729
+        },
+        "attempt_1/work/plot_extension_8.py": {
+          "sha256": "713de18596b69d3ac5c2758fbbe0754042fe6ac7c5913f59fa06bfb420ffe11f",
+          "bytes": 33754
+        },
+        "attempt_1/work/grid_patch3.h5": {
+          "sha256": "461c25213378726c265b1b1f107393d59041aa24221ca28eec699738a39d5fcb",
+          "bytes": 330438
+        },
+        "attempt_1/work/plot_ext_nodes.py": {
+          "sha256": "5637ff06a1fa47dae75f508ab00fb20bc8fb943407e50fa82efb0aed83029808",
+          "bytes": 16298
+        },
+        "attempt_1/work/plot_leg.py": {
+          "sha256": "529d122b268a4809a8ff42cbdbf184289fb99dc8fdc954b730ef017de1649450",
+          "bytes": 13914
+        },
+        "attempt_1/work/boundary.txt": {
+          "sha256": "161f31b4993e51fb5f25de358753d47c8f1a4473a93d8b54c2e61d7d2bc7a45e",
+          "bytes": 62708
+        },
+        "attempt_1/work/macroscopic_vars.dat": {
+          "sha256": "e4530743a024ee655a723c4384cee6efbabc5172aee7c6d1dbabaf956b626f27",
+          "bytes": 45671
+        },
+        "attempt_1/work/plot_ext_sides.py": {
+          "sha256": "aacea59f41850e7528940ef80f08ff4a39b63c78edf9af6912f3bc4f9ebfb527",
+          "bytes": 5033
+        },
+        "attempt_1/work/grid_initial.h5": {
+          "sha256": "23d513b72055e4180b5f083afe2c019abaf05f4f3ae80d7a5a2183e3fcfeb776",
+          "bytes": 6499402
+        },
+        "attempt_1/work/fort.10": {
+          "sha256": "22ea0306b636a158c73f9ad4f196f192519632f7f2759fabcebd083fc07780ad",
+          "bytes": 174
+        },
+        "attempt_1/work/grid_no_patch.h5": {
+          "sha256": "c5ca80827721289685dbcd3765e6770474bd6b549961e74d031a520408b8e99a",
+          "bytes": 1055251
+        },
+        "attempt_1/work/grid_patch5.h5": {
+          "sha256": "19ec23b3d3bf58db12431c921cac4c3b3440bebd7bbb512490b27975c5d385de",
+          "bytes": 166240
+        },
+        "attempt_1/work/jorek000000.h5": {
+          "sha256": "2d066b56bc0f1aa4d6b1e8eff22aa3a008a1917825ea9d218a9bc1f78e517224",
+          "bytes": 2228780
+        },
+        "attempt_1/work/plot_extension_11.py": {
+          "sha256": "13c306d7e493d7466fe976e16a9ddad634acdddba4dbca33e993db7f516f16ed",
+          "bytes": 108922
+        },
+        "attempt_1/work/eqdsk.dat": {
+          "sha256": "ac787dd266a9b4b93ccdadf9883c9d97a115e7dd9bb5bd3f724321576883bf4e",
+          "bytes": 4102749
+        },
+        "attempt_1/work/grid_xpoint.dat": {
+          "sha256": "4acb890af225415ae3840320c8aa22292cbfd930529dfbd938250ee5664d7c9b",
+          "bytes": 3963900
+        },
+        "attempt_1/work/grid_patch2.h5": {
+          "sha256": "00b5e4b73cf1cc372ad4ed114e72155a4a175d2881d2f4abbf91576adb12d7fb",
+          "bytes": 126642
+        },
+        "attempt_1/work/jorek2.ps": {
+          "sha256": "dd9fe8af022a12e750cfa09e0a2956436998ed988182de75526af396eaa67d4d",
+          "bytes": 56226537
+        },
+        "attempt_1/work/grid_patch11.h5": {
+          "sha256": "87994197105327a110200b49a5f2726d306f04f6f4642bc8c7fdc26e015a0a9a",
+          "bytes": 230848
+        },
+        "attempt_1/work/plot_new_patch.py": {
+          "sha256": "59e2ecf8c70e6292732b35aa7b72a2141acde0c6f4715fa3b3b18922c23536f1",
+          "bytes": 1260057
+        },
+        "attempt_1/work/T_rho_profiles.dat": {
+          "sha256": "c9d9b615e325766032902ebd6b02f3176c3b6b672a1b022bdd3673516ba53944",
+          "bytes": 1323
+        },
+        "attempt_1/work/plot_leg_elements2.py": {
+          "sha256": "733618ed7dd49072e90bbc4601641943d1ba57bb1f411f11411a3414649dca46",
+          "bytes": 88457
+        }
+      },
+      "bytes": 113442454
+    }
+  ],
+  "total_bytes": 1574892504,
+  "method": "Copy into a fresh shared-work directory, verify every file against this manifest, replace original directory with a symlink, then remove only the checksum-verified duplicate. Preserve all failures and accepted outputs."
+}

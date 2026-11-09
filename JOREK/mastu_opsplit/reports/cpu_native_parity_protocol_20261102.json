@@ -1,0 +1,13 @@
+{
+  "created_utc": "2026-11-02T22:08:33.064140+00:00",
+  "scope": "Pilot MPI/capacity parity protocol frozen before independent four-rank 160k validation; no final ML test data",
+  "reference": "Existing validated same-mesh state at the same physical time",
+  "required_geometry": "Exactly matching physical geometry, indices, basis, weights and boundary labels",
+  "quadrature_order": 8,
+  "relative_field_l2_tolerance": 1e-06,
+  "relative_gradient_l2_tolerance": 1e-06,
+  "absolute_rms_tolerance_code_units": 1e-12,
+  "reason": "Native value/s/t/st coefficients use chart-dependent scaling. Absolute unscaled derivative-DOF equality is not a physical norm. These field/gradient targets are 10000 times smaller than the proposed 1% spatial field target.",
+  "historical_raw_comparison": "2768381 failed 1e-10 coefficient tolerance; preserve that failed result. Any physical-norm assessment is separate and does not rewrite it.",
+  "scientific_gate_promotion": false
+}

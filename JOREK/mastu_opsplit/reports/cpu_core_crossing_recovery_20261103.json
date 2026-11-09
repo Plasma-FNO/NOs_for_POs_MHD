@@ -1,0 +1,39 @@
+{
+  "status": "failed_validation",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/core_crossing_recovery_20261103",
+  "budget": {
+    "authorization": "User requested numerical convergence and completion of the science plan.",
+    "scope": "One isolated crossing build and two three-step probes; radial160 must pass before control80 runs. No production acceptance.",
+    "allocations_max": 1,
+    "attempts_each_max": 1,
+    "mpi_ranks": 4,
+    "threads": 1,
+    "memory_GiB": 256,
+    "wall_hours_max": 3,
+    "rank_CPU_hours_max": 12,
+    "node_hours_max": 3,
+    "conservative_resource_hours_max": 768,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+    "equilibrium_tolerance": 1e-10,
+    "physics_changed": false,
+    "spatial_targets_changed": false
+  },
+  "manifest_sha256": "ae25e02280d427f2d50b562652aabdb4035fa2aa0a5b84c7a21fe020422aabb4",
+  "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_core_crossing_recovery_20261103.sbatch",
+  "script_sha256": "0c3caaf333d32b839617470fa61a4ae80c481159808e9d809f7361b1a4cb78be",
+  "scheduler_preflight": "sbatch: Job 2771250 to start at 2026-11-03T20:59:45 a using 4 processors on nodes r353c01s05 in partition dcgp_fua_prod\n",
+  "scientific_gates_passed": [],
+  "job_id": "2771251",
+  "failure": "Four native sign-changing Jacobians remain at elements 19424, 19425, 28363, 28364. The bounded-core hypothesis does not fix the folds.",
+  "stage_results": {
+    "radial160": {
+      "stage": "radial160",
+      "status": "failed_validation",
+      "returncode": 1,
+      "process_wall_seconds": 374.6177740440471,
+      "binary_sha256": "335ba7f2488ff3698f3210a8f7d9a7895991e46cae14d75581032bb25694435a",
+      "scientific_gates_passed": [],
+      "error": "exit_nonzero"
+    }
+  }
+}

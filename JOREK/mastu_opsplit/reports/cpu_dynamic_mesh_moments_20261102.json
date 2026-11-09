@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-11-02T20:38:15.871771+00:00",
+  "scope": "Same-time unperturbed coarse/fine integrated moments only. Fine values are the 96-step reference moments in the timestep report; known historical intermediate-file IO errors remain diagnostic only.",
+  "sources_sha256": {
+    "reports/cpu_baseline96_native_q8_20261102.json": "813df9ccc334009f23237881fbee443213bf4c94bffef1dbe3a7d067bfe6496e",
+    "reports/cpu_fine_baseline_timestep48_96_20261102.json": "68fb37831926119d49c3e0c02a06c52e61c71c1ba365bd6117f94eeaa9afa61f"
+  },
+  "time_s": 1.4059131112280784e-06,
+  "moments_code_units": {
+    "density": {
+      "coarse_integral": 7.226673924615349,
+      "fine_integral": 7.222026556906946,
+      "relative_difference": 0.000643499116457564
+    },
+    "pressure": {
+      "coarse_integral": 0.06622005538252362,
+      "fine_integral": 0.06617143731865541,
+      "relative_difference": 0.0007347288473437749
+    }
+  },
+  "coarse_full_wall_volume_m3": 21.66354552616525,
+  "fine_full_wall_volume_m3": 21.651889338636714,
+  "two_percent_integrated_target_met": true,
+  "full_field_mesh_convergence_checked": false,
+  "perturbed_mesh_convergence_checked": false,
+  "gate_A_passed": false
+}

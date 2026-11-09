@@ -1,0 +1,39 @@
+{
+  "medium": {
+    "scope": "Corner-chord length diagnostic on flux-aligned core elements within 2 perturbation widths; not curved-Jacobian or field convergence metric",
+    "elements": 304,
+    "radial_chord_length_m_quantiles_10_50_90": [
+      0.06280806857441229,
+      0.08439117539176896,
+      0.10468877227438408
+    ],
+    "poloidal_chord_length_m_quantiles_10_50_90": [
+      0.0,
+      0.00460058816941172,
+      0.015176068240694342
+    ],
+    "median_radial_length_over_R_width": 1.054889692397112,
+    "median_poloidal_length_over_Z_width": 0.02875367605882325
+  },
+  "refined": {
+    "scope": "Corner-chord length diagnostic on flux-aligned core elements within 2 perturbation widths; not curved-Jacobian or field convergence metric",
+    "elements": 1266,
+    "radial_chord_length_m_quantiles_10_50_90": [
+      0.03140817161299572,
+      0.0413018960858995,
+      0.052517414599140166
+    ],
+    "poloidal_chord_length_m_quantiles_10_50_90": [
+      0.0,
+      0.002465077186133987,
+      0.008716329678313785
+    ],
+    "median_radial_length_over_R_width": 0.5162737010737437,
+    "median_poloidal_length_over_Z_width": 0.01540673241333742,
+    "w_error_energy_weighted_radial_length_quantiles_m": [
+      0.03119633680623618,
+      0.0358833394824153,
+      0.04948917138929033
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "scope": "Cached-R/Z fixed-boundary startup diagnosis; patch prepared, not yet compiled/runtime-validated",
+  "failing_job": "2768438",
+  "source_file": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/contour_capacity_fix_20261102/source/jorek2_main.f90",
+  "source_sha256": "ff416d280bade66eb11cb6291d461814dd7991202e46641e840f2d142bf11393",
+  "input_boundary_switches": {
+    "freeboundary": false,
+    "freeboundary_equil": false
+  },
+  "finding": "freeb_equil2 has no assignment on the regrid_from_rz branch before it is tested to enable equilibrium vacuum response. The ordinary startup initializes it inside the skipped branch.",
+  "patch": "JOREK/mastu_opsplit/patches/0010-initialize-cached-rz-boundary-mode.patch",
+  "patch_sha256": "85c7baf61bdfae276a3275ae311d830a9236f1c0a36a432679fa1de0ba023fa0",
+  "change": "Initialize freeb_equil2 from requested freeboundary_equil before either startup branch. The ordinary-path assignments and STARWALL guard remain intact.",
+  "native_validation_required": [
+    "Fresh eight-step ordinary startup equals pinned fields/geometry/times/energies",
+    "Cached-R/Z eight-step existing-mesh run matches the same reference under frozen field/gradient parity protocol",
+    "Fixed-R/Z refined three-step probe completes with finite positive sampled fields and valid geometry, without STARWALL loading for this fixed-boundary case"
+  ],
+  "scientific_gates_passed": []
+}

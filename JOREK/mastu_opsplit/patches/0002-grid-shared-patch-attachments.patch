@@ -1,0 +1,63 @@
+--- a/grids/grid_utils/define_extension_patch.f90
++++ b/grids/grid_utils/define_extension_patch.f90
+@@ -86,6 +86,7 @@
+ logical             :: attached, attached_side
+ logical             :: found_elm, found_smaller
+ integer             :: element_direction, i_elm, i_elm_save
++real*8              :: attachment_left(2), attachment_right(2)
+ 
+ 
+ write(*,*) '*****************************************'
+@@ -170,10 +171,32 @@
+     i_bnd_end = i_node
+   endif
+ enddo
++! Preserve the input aliases before snapping this patch to the existing boundary.
++attachment_left  = [R_block_points_left(i_ext,1), Z_block_points_left(i_ext,1)]
++attachment_right = [R_block_points_right(i_ext,1), Z_block_points_right(i_ext,1)]
+ R_block_points_left (i_ext,1) = node_list%node(i_bnd_beg)%x(1,1,1)
+ Z_block_points_left (i_ext,1) = node_list%node(i_bnd_beg)%x(1,1,2)
+ R_block_points_right(i_ext,1) = node_list%node(i_bnd_end)%x(1,1,1)
+ Z_block_points_right(i_ext,1) = node_list%node(i_bnd_end)%x(1,1,2)
++
++! Reuse the snapped point for later patches sharing the same interior attachment.
++call opsplit_share_patch_attachment(attachment_left(1), attachment_left(2), &
++     R_block_points_left(i_ext,1), Z_block_points_left(i_ext,1), n_wall_blocks-i_ext, &
++     n_block_points_left(i_ext+1:n_wall_blocks), &
++     R_block_points_left(i_ext+1:n_wall_blocks,1), Z_block_points_left(i_ext+1:n_wall_blocks,1))
++call opsplit_share_patch_attachment(attachment_left(1), attachment_left(2), &
++     R_block_points_left(i_ext,1), Z_block_points_left(i_ext,1), n_wall_blocks-i_ext, &
++     n_block_points_right(i_ext+1:n_wall_blocks), &
++     R_block_points_right(i_ext+1:n_wall_blocks,1), Z_block_points_right(i_ext+1:n_wall_blocks,1))
++call opsplit_share_patch_attachment(attachment_right(1), attachment_right(2), &
++     R_block_points_right(i_ext,1), Z_block_points_right(i_ext,1), n_wall_blocks-i_ext, &
++     n_block_points_left(i_ext+1:n_wall_blocks), &
++     R_block_points_left(i_ext+1:n_wall_blocks,1), Z_block_points_left(i_ext+1:n_wall_blocks,1))
++call opsplit_share_patch_attachment(attachment_right(1), attachment_right(2), &
++     R_block_points_right(i_ext,1), Z_block_points_right(i_ext,1), n_wall_blocks-i_ext, &
++     n_block_points_right(i_ext+1:n_wall_blocks), &
++     R_block_points_right(i_ext+1:n_wall_blocks,1), Z_block_points_right(i_ext+1:n_wall_blocks,1))
++
+ 
+ ! --- Now step along boundary between these two nodes
+ call find_next_bnd_node(node_list,element_list,i_bnd_beg,-1,i_node_prev)
+@@ -1915,3 +1938,19 @@
+ 
+ 
+ 
++
++! MAST-U OpsSplit addition; this JOREK derivative remains LGPL-3.0-or-later.
++pure subroutine opsplit_share_patch_attachment(old_r, old_z, new_r, new_z, n, counts, r, z)
++  implicit none
++  integer, intent(in) :: n, counts(n)
++  real*8, intent(in) :: old_r, old_z, new_r, new_z
++  real*8, intent(inout) :: r(n), z(n)
++  integer :: i
++  do i=1,n
++    ! Only identical interior aliases are shared; single-point wall endpoints stay fixed.
++    if (counts(i) > 1 .and. r(i) == old_r .and. z(i) == old_z) then
++      r(i) = new_r
++      z(i) = new_z
++    endif
++  enddo
++end subroutine opsplit_share_patch_attachment

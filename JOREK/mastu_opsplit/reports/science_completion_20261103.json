@@ -1,0 +1,509 @@
+{
+  "status": "in_progress_no_scientific_gates_passed",
+  "objective": "Converge the full coupled native simulation and complete the prerequisites for validated training data.",
+  "frozen_acceptance": {
+    "equilibrium_raw_update": 1e-10,
+    "spatial_relative_fields": 0.01,
+    "spatial_relative_integrals": 0.02,
+    "full_domain_coverage_required": true,
+    "physics_unchanged": true
+  },
+  "completed_evidence": [
+    {
+      "check": "software_suite",
+      "passed": 259,
+      "report": "cpu_concave_crossing_suite_20261104.xml"
+    },
+    {
+      "check": "native_parent_element_crossing_regression",
+      "passed": 7,
+      "report": "cpu_crossing_parent_tests_20261103.xml"
+    },
+    {
+      "check": "closed_core_neighbor_selection_regression",
+      "passed": 5,
+      "report": "cpu_core_crossing_tests_20261103.xml"
+    },
+    {
+      "check": "original_wall_amix_0.6_three_step_control",
+      "status": "completed",
+      "equilibrium_iterations": 159,
+      "last_raw_update": 9.842e-11,
+      "steps": 3,
+      "final_time_s": 8.78695694517549e-08,
+      "job_id": "2771220"
+    },
+    {
+      "check": "native_newton_original_wall_control",
+      "status": "completed",
+      "equilibrium_iterations": 7,
+      "last_raw_update": 4.456e-11,
+      "steps": 3,
+      "job_id": "2771294",
+      "qualification": "All fields and gradients pass against tighter Picard reference; anchored pressure differs slightly. Original-profile normalized Newton is independently qualified.",
+      "report": "cpu_newton_tight_equilibrium_comparison_20261103.json"
+    },
+    {
+      "check": "normalized_pressure_newton_control",
+      "status": "completed",
+      "equilibrium_iterations": 10,
+      "last_raw_update": 8.948e-13,
+      "steps": 1,
+      "job_id": "2771373",
+      "all_fields_and_gradients_pass_parity": true,
+      "maximum_relative_gradient_difference": 9.030564791194987e-08,
+      "pressure_derivative_multiplier": 1.0,
+      "report": "cpu_normalized_newton_comparison_20261103.json"
+    },
+    {
+      "check": "exact_flux_radial160_control",
+      "status": "completed",
+      "equilibrium_iterations": 162,
+      "last_raw_update": 9.99e-11,
+      "steps": 3,
+      "job_id": "2771306",
+      "minimum_q8_jacobian_m2": 4.791289631196117e-09
+    },
+    {
+      "check": "core_poloidal440_three_step_control",
+      "status": "completed",
+      "minimum_q8_jacobian_m2": 9.591795047280027e-09,
+      "report": "cpu_exact_core_poloidal_crossing_20261103.json",
+      "equilibrium_iterations": 166,
+      "last_raw_update": 9.9e-11,
+      "steps": 3,
+      "job_id": "2771342"
+    },
+    {
+      "check": "native_selected_export",
+      "status": "verified",
+      "cases": [
+        "enabled8",
+        "perturbed8"
+      ],
+      "physical_elements_each": 55135,
+      "identical_cross_rank_halo_copies_each": 976,
+      "report": "cpu_native_halo_validation_20261103.json",
+      "limitation": "Legacy interior balance and gradient-repeatability failures are preserved. Later MUMPS-refined independent balance and repeatability pass; full Gate B remains pending."
+    },
+    {
+      "check": "cycle_triggered_wall_newton",
+      "status": "completed",
+      "equilibrium_iterations": 13,
+      "last_raw_update": 2.583e-11,
+      "steps": 3,
+      "job_id": "2771455",
+      "minimum_q8_jacobian_m2": 1.9235618605202478e-08,
+      "original_control_parity": true,
+      "maximum_control_relative_gradient_difference": 9.030564791194987e-08,
+      "report": "cpu_xpoint_cycle_mpi_20261103.json",
+      "limitation": "Single three-step wall probe; full spatial convergence, root behavior over long runs and restart persistence remain unqualified."
+    },
+    {
+      "check": "mumps_refined_linear_balance_and_repeatability",
+      "status": "verified",
+      "cases": [
+        "baseline",
+        "perturbed"
+      ],
+      "native_selected_export": "verified",
+      "interior_linearized_balance": "verified",
+      "independent_field_gradient_repeatability": "passed",
+      "jobs": [
+        "2771526",
+        "2771546"
+      ],
+      "limitation": "Single-step proofs. Legacy temperature and parallel-flow gradient parity fails and is retained. Full trajectory/boundary/axis/physical-energy acceptance remains separate."
+    },
+    {
+      "check": "exact_core_radial80_matched_full_horizon",
+      "status": "completed",
+      "jobs": [
+        "2771385",
+        "2771387"
+      ],
+      "steps_each": 48,
+      "final_time_s": 1.4059131112280784e-06,
+      "limitation": "Healthy completion; spatial comparisons and MUMPS-refined trajectory qualification remain pending."
+    },
+    {
+      "check": "tight_exact_core_picard_reference",
+      "status": "completed",
+      "job_id": "2771536",
+      "equilibrium_iterations": 259,
+      "last_raw_update": 9.874e-13,
+      "steps": 1
+    },
+    {
+      "check": "combined_solver_tight_picard_equilibrium_parity",
+      "status": "passed",
+      "equilibrium_iterations": 10,
+      "last_raw_update": 8.948e-13,
+      "maximum_relative_gradient_difference": 9.030597646831608e-08,
+      "report": "cpu_combined_refined_early_parity_20261103.json",
+      "limitation": "Equilibrium parity on the original80 control; refined-mesh probes remain in progress."
+    },
+    {
+      "check": "exact_core_radial80_160_full_comparison",
+      "status": "spatial_targets_not_met",
+      "report": "cpu_exact_radial_convergence_20261103.json",
+      "full_domain_coverage": true,
+      "query_count": 1161200,
+      "failed_relative_errors": {
+        "perturbed_w": 0.013950795276989107,
+        "paired_zj": 0.013920248090418448,
+        "paired_w": 0.03016492254181992
+      },
+      "integrals_pass": true,
+      "limitation": "Legacy linear solver trajectories; next matched full pair must use the combined refined executable on both meshes."
+    },
+    {
+      "check": "combined_newton_geometry_mumps_qualification",
+      "status": "verified",
+      "jobs": [
+        "2771564",
+        "2771571"
+      ],
+      "report": "cpu_combined_refined_qualification_20261103.json",
+      "binary_sha256": "38d428235a842b7a6f8fb256f81ddfed2a1c12355c2d4e322f12e27ef6af1ec9",
+      "stages": {
+        "control1": {
+          "equilibrium_iterations": 10,
+          "last_raw_update": 8.948e-13,
+          "steps": 1,
+          "cycle_fallback_activated": false,
+          "maximum_mumps_backward_error": 3.6045249430740864e-16,
+          "maximum_refinement_steps": 2,
+          "minimum_q8_jacobian_m2": 1.9233925177217095e-08,
+          "minimum_density": 0.009734661782198818,
+          "minimum_temperature": 9.914683431997399e-05,
+          "result_sha256": "394adaa4cbc19c038f82a024aa9d885c2f5c431f85ef5bdd7c163c7b5a02b728"
+        },
+        "control3": {
+          "equilibrium_iterations": 7,
+          "last_raw_update": 4.005e-11,
+          "steps": 3,
+          "cycle_fallback_activated": false,
+          "maximum_mumps_backward_error": 3.6045249430740864e-16,
+          "maximum_refinement_steps": 2,
+          "minimum_q8_jacobian_m2": 1.9233925177217095e-08,
+          "minimum_density": 0.008866882142739105,
+          "minimum_temperature": 9.742912396647377e-05,
+          "result_sha256": "dde6d2ccb385657f39fd21a9edd4db6bb1e56340f24bf24265f44c4caeed4db7"
+        },
+        "radial160": {
+          "equilibrium_iterations": 6,
+          "last_raw_update": 8.482e-11,
+          "steps": 3,
+          "cycle_fallback_activated": false,
+          "maximum_mumps_backward_error": 4.164992344919663e-16,
+          "maximum_refinement_steps": 2,
+          "minimum_q8_jacobian_m2": 4.791289631196117e-09,
+          "minimum_density": 0.008866882179725146,
+          "minimum_temperature": 9.742912482047558e-05,
+          "result_sha256": "f0781eca4e04597f5b2b10709e21fa66f88653565e5ba9eed3e40d221daa712d"
+        },
+        "wall80": {
+          "equilibrium_iterations": 11,
+          "last_raw_update": 2.533e-11,
+          "steps": 3,
+          "cycle_fallback_activated": true,
+          "maximum_mumps_backward_error": 4.819913076116052e-16,
+          "maximum_refinement_steps": 2,
+          "minimum_q8_jacobian_m2": 1.9233925177217095e-08,
+          "minimum_density": 0.008578932751195823,
+          "minimum_temperature": 9.741901654852642e-05,
+          "result_sha256": "75ab84e8ab70cdad31b76d194020afd2112031ec56d86a4b444beced80ed4e96"
+        },
+        "core_poloidal440": {
+          "equilibrium_iterations": 7,
+          "last_raw_update": 8.162e-11,
+          "steps": 3,
+          "cycle_fallback_activated": false,
+          "maximum_mumps_backward_error": 4.614524434813652e-16,
+          "maximum_refinement_steps": 2,
+          "minimum_q8_jacobian_m2": 9.591795047498284e-09,
+          "minimum_density": 0.008299020122266612,
+          "minimum_temperature": 9.714260012301838e-05,
+          "result_sha256": "0c6acd3089012fe032e749a94dec6ebceeb0b24321428713f33f003d1a66848b"
+        }
+      },
+      "control_field_and_gradient_parity": true,
+      "limitations": [
+        "Full-horizon spatial/timestep convergence and physical energy/source/flux balance remain pending.",
+        "Root tracking is qualified on these fresh-start probes; restart persistence is not established.",
+        "MUMPS backward errors are native diagnostics. Independent interior balance/repeatability proofs remain separate from boundary/axis and autonomous-backend acceptance."
+      ]
+    },
+    {
+      "check": "combined_radial320_three_step_probe",
+      "status": "completed",
+      "job_id": "2771635",
+      "equilibrium_iterations": 8,
+      "last_raw_update": 8.891e-11,
+      "minimum_q8_jacobian_m2": 1.1957252468854746e-09,
+      "steps": 3,
+      "report": "cpu_combined_radial320_20261104.json"
+    },
+    {
+      "check": "legacy_core_poloidal220_440_full_comparison",
+      "status": "spatial_targets_not_met",
+      "job_id": "2771432",
+      "report": "cpu_exact_core_poloidal_convergence_20261103.json",
+      "uncovered_queries": 64,
+      "final_baseline_Vpar_relative_error": 0.048714361909,
+      "final_paired_w_relative_error": 0.030439188873,
+      "limitation": "Legacy linear solver; all original failures retained. Matched combined-solver trajectories are running."
+    },
+    {
+      "check": "legacy_spatial_error_localization",
+      "status": "completed",
+      "job_id": "2772844",
+      "report": "cpu_spatial_error_diagnosis_20261104.json",
+      "finding": "None of 64 missing poloidal queries recovered by bounded multistart inverse solves; 63 diagnosed outside coarse boundary. Parallel-flow discrepancy is outside core; paired vorticity discrepancy is predominantly inside core."
+    },
+    {
+      "check": "combined_mpi16_parity",
+      "report": "cpu_combined_mpi16_parity_20261104.json",
+      "status": "passed",
+      "maximum_relative_gradient_difference": 2.377e-09
+    },
+    {
+      "check": "combined_control_full_horizon",
+      "report": "cpu_combined_pair_control80_baseline48_20261104.json",
+      "status": "completed",
+      "steps_each": 48,
+      "jobs": [
+        "2772872",
+        "2772874"
+      ],
+      "limitation": "Healthy pair only; spatial acceptance remains pending."
+    },
+    {
+      "check": "rigorous_mumps_scaling_control_and_rescue",
+      "report": "cpu_mumps_scaling8_qualification_20261104.json",
+      "status": "passed_limited_proof"
+    },
+    {
+      "check": "combined_wall40_80_full_comparison",
+      "report": "cpu_combined_wall_convergence_20261104.json",
+      "status": "spatial_targets_not_met"
+    },
+    {
+      "check": "rigorous_scaling_fresh_refined_probes_and_mpi_parity",
+      "status": "completed",
+      "report": "cpu_scaling8_refined_qualification_20261104.json",
+      "scientific_gates_passed": []
+    }
+  ],
+  "active_experiments": [
+    {
+      "job_id": "2774854",
+      "record": "cpu_corner_handle_pair_wall160_baseline48_20261104.json",
+      "question": "Complete frozen numerical/mesh qualification and matched spatial comparisons; no gate accepted."
+    },
+    {
+      "job_id": "2774856",
+      "record": "cpu_corner_handle_pair_wall160_perturbed48_20261104.json",
+      "question": "Complete frozen numerical/mesh qualification and matched spatial comparisons; no gate accepted."
+    },
+    {
+      "job_id": "2774880",
+      "record": "cpu_corner_handle_wall_next_analysis_job_20261104.json",
+      "question": "Complete frozen numerical/mesh qualification and matched spatial comparisons; no gate accepted."
+    },
+    {
+      "job_id": "2773441",
+      "record": "cpu_scaling8_capacity400_20261104.json",
+      "question": "Complete frozen numerical/mesh qualification and matched spatial comparisons; no gate accepted."
+    },
+    {
+      "job_id": "2774908",
+      "record": "cpu_scaling8_capacity400_pair_poloidal880_baseline48_20261104.json",
+      "question": "Complete frozen numerical/mesh qualification and matched spatial comparisons; no gate accepted."
+    },
+    {
+      "job_id": "2774910",
+      "record": "cpu_scaling8_capacity400_pair_poloidal880_perturbed48_20261104.json",
+      "question": "Complete frozen numerical/mesh qualification and matched spatial comparisons; no gate accepted."
+    },
+    {
+      "job_id": "2774872",
+      "record": "cpu_scaling8_capacity400_radial320_20261104.json",
+      "question": "Complete frozen numerical/mesh qualification and matched spatial comparisons; no gate accepted."
+    },
+    {
+      "job_id": "2774878",
+      "record": "cpu_scaling8_capacity400_radial640_20261104.json",
+      "question": "Complete frozen numerical/mesh qualification and matched spatial comparisons; no gate accepted."
+    },
+    {
+      "job_id": "2773445",
+      "record": "cpu_scaling8_poloidal1760_geometry_coverage_job_20261104.json",
+      "question": "Complete frozen numerical/mesh qualification and matched spatial comparisons; no gate accepted."
+    },
+    {
+      "job_id": "2775326",
+      "record": "cpu_scaling8_poloidal880_error_diagnosis_job_20261104.json",
+      "question": "Complete frozen numerical/mesh qualification and matched spatial comparisons; no gate accepted."
+    },
+    {
+      "job_id": "2774883",
+      "record": "cpu_xpoint_handle_divertor_next_analysis_job_20261104.json",
+      "question": "Complete frozen numerical/mesh qualification and matched spatial comparisons; no gate accepted."
+    },
+    {
+      "job_id": "2774874",
+      "record": "cpu_xpoint_handle_pair_divertor160_baseline48_20261104.json",
+      "question": "Complete frozen numerical/mesh qualification and matched spatial comparisons; no gate accepted."
+    },
+    {
+      "job_id": "2774876",
+      "record": "cpu_xpoint_handle_pair_divertor160_perturbed48_20261104.json",
+      "question": "Complete frozen numerical/mesh qualification and matched spatial comparisons; no gate accepted."
+    },
+    {
+      "job_id": "2774866",
+      "record": "cpu_xpoint_handle_pair_divertor80_baseline48_20261104.json",
+      "question": "Complete frozen numerical/mesh qualification and matched spatial comparisons; no gate accepted."
+    },
+    {
+      "job_id": "2774868",
+      "record": "cpu_xpoint_handle_pair_divertor80_perturbed48_20261104.json",
+      "question": "Complete frozen numerical/mesh qualification and matched spatial comparisons; no gate accepted."
+    }
+  ],
+  "remaining_sequence": [
+    {
+      "step": 1,
+      "gate": "A",
+      "work": "Qualify positive geometry and strict equilibrium on radial, poloidal and wall refinements; retain every failed attempt."
+    },
+    {
+      "step": 2,
+      "gate": "A",
+      "work": "Run matched baseline and perturbed trajectories to 1.4059131112280784e-6 s on qualified meshes; compare all seven native fields, pressure and paired responses at identical physical queries. Repeat smaller timestep on the final candidate."
+    },
+    {
+      "step": 3,
+      "gate": "A",
+      "work": "Close source/flux/energy accounting with the legacy temporal operator, density corrections, boundary work and stabilization; measure the selected nonlinear term strength."
+    },
+    {
+      "step": 4,
+      "gate": "B",
+      "work": "Validate total/remainder identity, temporal coupling and full boundary/axis constraints. Extend the passing MUMPS-refined single-step interior balance and field/gradient repeatability proofs to the full trajectory."
+    },
+    {
+      "step": 5,
+      "gate": "B",
+      "work": "Provide an autonomous retained numerical evaluator and temporal/constraint stepper; verify all-numerical rollouts and solve gradients against the converged references."
+    },
+    {
+      "step": 6,
+      "gate": "C",
+      "work": "Run the prepared development envelope pilot only on qualified meshes; freeze supported parameter ranges, family splits, budget and retention."
+    },
+    {
+      "step": 7,
+      "work": "Generate and validate the dataset, then train and evaluate the three comparison families after A/B/C pass."
+    }
+  ],
+  "limitations": [
+    "Native step completion is not spatial convergence.",
+    "The first global crossing patch was rejected; it is retained only as failure evidence.",
+    "No accepted training data, trained scientific model or completed autonomous numerical backend is claimed."
+  ],
+  "latest_diagnosis": {
+    "core_crossing_bound_candidate": "rejected; same four folds",
+    "global_crossing_bound_candidate": "rejected; invalidates necessary exterior extrapolation",
+    "native_newton_without_delta_psi": "rejected before iteration; native prerequisite now supplied from converged reference",
+    "reference_delta_psi_GS": 0.09098828364967462,
+    "core_trace": "Exact original-FE-flux correction removes the diagnosed closed-core crossing reversals; strict radial160 and core-poloidal440 probes pass.",
+    "reference_field_parity": "Legacy replay fails T/Vpar gradient parity. Bounded MUMPS iterative refinement passes independent refined-reference field/gradient repeatability and interior balance for both cases; it does not pass gradient parity against the inaccurate legacy solve.",
+    "newton_control": "Final combined source passes tight corrected-mesh Picard parity on every field and gradient: 10 iterations, raw update8.948e-13, maximum relative gradient difference9.031e-8. Original normalized pressure profiles retained.",
+    "newton_wall": "Combined exact crossings, pressure Jacobian, cycle-triggered saddle continuation, guarded wall tangent repair and bounded MUMPS refinement pass all five native probes. Radial160 converges in6 iterations at8.482e-11, wall80 in11 at2.533e-11, core-poloidal440 in7 at8.162e-11, each followed by three healthy q8 steps. Only wall80 activates cycle continuation. Fresh-start qualification only; restart persistence remains open.",
+    "exact_core_crossing": "Radial320 passes strict Newton in 8 iterations at 8.891e-11 and three healthy steps with positive q8 geometry. Matched combined-solver radial160/320 full baseline/perturbed pairs are running.",
+    "poloidal_divertor": "Guarded tangent repair fixes the diagnosed wall-patch folds and qualifies wall80 with positive native q8 geometry. A separate fold in the fully doubled divertor-leg mesh remains unresolved; core-only poloidal440 qualifies.",
+    "native_labels": "Selected native labels verify on all 55135 physical elements after byte-identical cross-rank halo deduplication. Legacy linearized balance and gradient-repeatability failures remain preserved; MUMPS-refined independent balance and repeatability now pass.",
+    "native_linear_balance": "Bounded MUMPS iterative refinement passes baseline/perturbed independent interior balance (max absolute residual8.65e-14). Both independent repeats pass strict field/gradient parity and balance. Legacy T/Vpar gradient parity fails and is preserved; combined full-horizon qualification remains pending.",
+    "full_spatial": "Control80, radial160 and wall80 matched pairs completed healthy. Wall comparison still fails Vpar1.006813% and one uncovered query. Radial320 and core-poloidal440 full runs continue.",
+    "poloidal880": {
+      "status": "both_full_48_step_trajectories_healthy",
+      "binary_qualification": "cpu_mumps_scaling8_qualification_20261104.json",
+      "full_pair_jobs": [
+        "2773387",
+        "2773389"
+      ],
+      "field_analysis_job": "2773393",
+      "known_uncovered_queries": 57,
+      "total_queries": 2528320,
+      "accepted": false,
+      "field_report": "cpu_scaling8_poloidal_next_convergence_20261104.json",
+      "maximum_individual_relative_difference": 0.02769211837191498,
+      "maximum_paired_relative_difference": 0.008068821922259476,
+      "individual_fields_pass": false,
+      "paired_responses_pass": true,
+      "integrals_pass": true,
+      "error_localization": "cpu_scaling8_poloidal880_error_diagnosis_20261104.json"
+    },
+    "balanced_attachment": "Nearest-node snap passes the intended corner when exterior flux count doubles. Original and refined corner coordinates are exactly identical; corrected mesh-guide probe2773195 uses that original corner. No physical wall endpoints changed.",
+    "mpi16": "Both original-mesh baseline/perturbed initial and final field/gradient parity pass; capacity-only binary control also passes at16 ranks.",
+    "radial320": {
+      "report": "cpu_combined_radial_convergence_20261104.json",
+      "full_query_coverage": true,
+      "individual_fields_pass": true,
+      "integrals_pass": true,
+      "paired_vorticity_relative_difference": 0.012549513257858146,
+      "accepted": false,
+      "next": "Same-capacity-binary radial320/640 comparison; parity and healthy probes first."
+    },
+    "wall160": {
+      "probe_job": "2773438",
+      "status": "three_step_qualified",
+      "newton_raw_update": 1.675e-11,
+      "q16_positive": true,
+      "full_pair_jobs": [
+        "2774854",
+        "2774856"
+      ],
+      "analysis_job": "2774880",
+      "accepted": false
+    },
+    "divertor160": {
+      "probe_job": "2773463",
+      "status": "three_step_qualified_with_reference_parity",
+      "newton_raw_update": 9.306e-11,
+      "q16_positive": true,
+      "qualification": "cpu_xpoint_handle_qualification_20261104.json",
+      "full_pair_jobs": [
+        "2774866",
+        "2774868",
+        "2774874",
+        "2774876"
+      ],
+      "analysis_job": "2774883",
+      "accepted": false
+    },
+    "open_crossing_candidates": {
+      "rejected": [
+        {
+          "job": "2775165",
+          "cause": "Unqualified parameter-order guard triggers in healthy closed core, row49 column45."
+        },
+        {
+          "job": "2775323",
+          "cause": "Open-only parameter-order guard triggers at healthy endpoint, row82 column1."
+        }
+      ],
+      "active": {
+        "job": "2775359",
+        "patch": "0037-require-concavity-before-crossing-correction.patch",
+        "additional_guard": "Only pairs adjacent to concave corner polygons; excludes endpoints and closed core. Healthy native controls must retain strict parity."
+      },
+      "performance_patch": "0036-cache-distinct-boundary-node-incidence.patch",
+      "accepted": false
+    }
+  },
+  "updated_utc": "2026-11-04T16:34:20.996528+00:00"
+}

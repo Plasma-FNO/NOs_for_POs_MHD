@@ -1,0 +1,20 @@
+--- a/grids/grid_utils/finish_grid.f90
++++ b/grids/grid_utils/finish_grid.f90
+@@ -397,7 +397,6 @@
+   enddo
+ enddo
+ rtree_initialized = .false.
+-call populate_element_rtree(node_list, element_list)
+ 
+ !-------------------------------------------------------------------------------------------!
+ !------------------------------ Define nodes index in the matrix ---------------------------!
+@@ -559,6 +558,9 @@
+ endif
+ 
+ 
++
++! RTree extents read axis_node; initialize flags and finalize axis geometry first.
++call populate_element_rtree(node_list, element_list)
+ 
+ !----temporary, needs to be completed, neighbour and boundary information
+ call update_neighbours_basic(element_list,node_list)

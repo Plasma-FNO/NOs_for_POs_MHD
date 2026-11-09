@@ -1,0 +1,545 @@
+{
+  "run": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_continuity_pilot_20261105",
+  "job_id": 2785214,
+  "status": "completed_artifacts_verified",
+  "tests": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "31",
+    "time": "24.488",
+    "timestamp": "2026-11-05T23:52:18.398335+01:00",
+    "hostname": "r328c02s01"
+  },
+  "source_snapshot_and_working_source_hashes_match": true,
+  "baselines_bitwise_reproduced": true,
+  "budget": {
+    "updates_per_model": 120,
+    "seed": 17,
+    "training_horizon": 2,
+    "validation_horizon": 7,
+    "test_horizon": 16,
+    "same_data_normalization_initial_neural_weights_optimizer_schedule_and_guards": true
+  },
+  "mean_test_normalized_volume_mse": {
+    "ar": 5.6232044963334635,
+    "node": 0.7691943617650024,
+    "opsplit": 0.7546020737032988,
+    "previous_opsplit": 0.7916847427119701
+  },
+  "physical_opsplit_percent_difference_from_node": -1.89708723660168,
+  "physical_opsplit_percent_difference_from_previous_opsplit": -4.684019661872241,
+  "validation_mse": {
+    "ar": 2.327741109539243,
+    "node": 0.14454586470812292,
+    "opsplit": 0.1435798571474818
+  },
+  "parameters": {
+    "ar": {
+      "spline": 12,
+      "film": 5198,
+      "fno": 4240,
+      "other": 223,
+      "total": 9673
+    },
+    "node": {
+      "spline": 12,
+      "film": 5198,
+      "fno": 4240,
+      "other": 223,
+      "total": 9673
+    },
+    "opsplit": {
+      "spline": 12,
+      "film": 5198,
+      "fno": 4240,
+      "other": 223,
+      "total": 9673
+    }
+  },
+  "elapsed_seconds_by_model": {
+    "ar": 327.6060041850433,
+    "node": 359.3399932819884,
+    "opsplit": 587.1404065520037
+  },
+  "whole_cell_positive": true,
+  "independent_Q12_and_vertices_positive": true,
+  "maximum_constraint_defect": 5.243559668049433e-13,
+  "guard_statistics": {
+    "ar": [
+      {
+        "steps": 16,
+        "limited_field_steps": 6,
+        "minimum_alpha": 0.38609817254301737,
+        "worst_proposed_density_bound": -0.0007579191450704519,
+        "worst_proposed_temperature_bound": 4.5622071874138014e-05
+      },
+      {
+        "steps": 16,
+        "limited_field_steps": 9,
+        "minimum_alpha": 0.7448720089297234,
+        "worst_proposed_density_bound": -0.00017945747514877712,
+        "worst_proposed_temperature_bound": -3.300947995970989e-05
+      }
+    ],
+    "node": [
+      {
+        "steps": 16,
+        "limited_field_steps": 13,
+        "minimum_alpha": 0.9215669246901738,
+        "worst_proposed_density_bound": -6.663634443608777e-05,
+        "worst_proposed_temperature_bound": 6.259374536965834e-05
+      },
+      {
+        "steps": 16,
+        "limited_field_steps": 13,
+        "minimum_alpha": 0.8891642511421096,
+        "worst_proposed_density_bound": -5.513904853964675e-05,
+        "worst_proposed_temperature_bound": 8.716165618766471e-05
+      }
+    ],
+    "opsplit": [
+      {
+        "steps": 16,
+        "limited_field_steps": 13,
+        "minimum_alpha": 0.9252658349039867,
+        "worst_proposed_density_bound": -6.278253067563567e-05,
+        "worst_proposed_temperature_bound": 6.313612958767842e-05
+      },
+      {
+        "steps": 16,
+        "limited_field_steps": 13,
+        "minimum_alpha": 0.9108590710651531,
+        "worst_proposed_density_bound": -4.22450204207274e-05,
+        "worst_proposed_temperature_bound": 8.756884890541286e-05
+      }
+    ]
+  },
+  "physical_operator": {
+    "background": "training frames [0,24), both parents",
+    "code_interval": 0.062499999999999126,
+    "gamma": 1.6666666666666667,
+    "scope": "density and temperature advection/compression tangent only; other terms learned",
+    "amplitude": "fixed native code-time interval; no learned multiplier",
+    "gradient": "analytic L-SplineFNO perturbation gradients; native background gradients"
+  },
+  "fixed_weight_substeps": [
+    {
+      "one_vs_two_mse": 8.48264387490879e-07,
+      "two_vs_four_mse": 2.0318545880787093e-07,
+      "test_loss_by_substeps": {
+        "1": 0.08873750930885224,
+        "2": 0.08880943085813556,
+        "4": 0.08884850580192408
+      },
+      "positivity_by_substeps": {
+        "1": true,
+        "2": true,
+        "4": true
+      }
+    },
+    {
+      "one_vs_two_mse": 8.203991790594613e-07,
+      "two_vs_four_mse": 1.554879203536563e-07,
+      "test_loss_by_substeps": {
+        "1": 0.022380023269348365,
+        "2": 0.02234559415711524,
+        "4": 0.022333508938164364
+      },
+      "positivity_by_substeps": {
+        "1": true,
+        "2": true,
+        "4": true
+      }
+    }
+  ],
+  "previous_validation_diagnosis": {
+    "pilot": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_bernstein_guarded_pilot_20261105/pilot",
+    "window": [
+      24,
+      32
+    ],
+    "test_used": false,
+    "branches": [
+      {
+        "ablation": {
+          "1.0": {
+            "mse": 0.22184963156150833,
+            "per_field_mse": {
+              "psi": 0.2463770269380678,
+              "u": 0.11740570449829969,
+              "zj": 0.41397856237748965,
+              "w": 0.30548235198571655,
+              "rho": 0.02968382765367259,
+              "T": 0.01825360925330657,
+              "Vpar": 0.42176633822400833
+            },
+            "guard": {
+              "steps": 7,
+              "limited_field_steps": 0,
+              "minimum_alpha": 1.0,
+              "worst_proposed_density_bound": 0.000138475282291232,
+              "worst_proposed_temperature_bound": 8.472937379571459e-05
+            }
+          },
+          "0.0": {
+            "mse": 0.22843359322976994,
+            "per_field_mse": {
+              "psi": 0.30221877659618585,
+              "u": 0.11010867116998072,
+              "zj": 0.4453905955006717,
+              "w": 0.2947166899291537,
+              "rho": 0.029630652225936582,
+              "T": 0.017417920075659378,
+              "Vpar": 0.3995518471107876
+            },
+            "guard": {
+              "steps": 7,
+              "limited_field_steps": 0,
+              "minimum_alpha": 1.0,
+              "worst_proposed_density_bound": 0.00014657588978139957,
+              "worst_proposed_temperature_bound": 8.4659516465418e-05
+            }
+          },
+          "-1.0": {
+            "mse": 0.23922970781054104,
+            "per_field_mse": {
+              "psi": 0.3719156175701813,
+              "u": 0.1034658274360753,
+              "zj": 0.48718065976327984,
+              "w": 0.2869705360234991,
+              "rho": 0.02998087918043113,
+              "T": 0.01693135332337317,
+              "Vpar": 0.3781630813769127
+            },
+            "guard": {
+              "steps": 7,
+              "limited_field_steps": 0,
+              "minimum_alpha": 1.0,
+              "worst_proposed_density_bound": 0.00015436760172134585,
+              "worst_proposed_temperature_bound": 8.458945464023891e-05
+            }
+          }
+        },
+        "linear_rms": {
+          "psi": 0.005546369520424464,
+          "u": 0.0034100389504036787,
+          "zj": 0.017154262171722983,
+          "w": 0.00797330299740005,
+          "rho": 0.0031897003918825513,
+          "T": 0.003017520985316304,
+          "Vpar": 0.0051061263434563605
+        },
+        "guarded_linear_effect_rms": {
+          "psi": 0.01935662258749262,
+          "u": 0.0033567741937961864,
+          "zj": 0.017154262171722015,
+          "w": 0.007973302997400046,
+          "rho": 0.0031897003918821346,
+          "T": 0.003017520985316209,
+          "Vpar": 0.005106126343456426
+        },
+        "lspline_vs_native_gradient_relative_rms": {
+          "psi": 0.3967450987421728,
+          "u": 0.3703857931455047,
+          "zj": 0.9999642486396364,
+          "w": 0.9998100403641261,
+          "rho": 0.9780530739951013,
+          "T": 0.6890106007005529,
+          "Vpar": 0.7653054985038322
+        }
+      },
+      {
+        "ablation": {
+          "1.0": {
+            "mse": 0.06394176404139645,
+            "per_field_mse": {
+              "psi": 0.0043785579242374625,
+              "u": 0.005018621307586554,
+              "zj": 0.006731960114955606,
+              "w": 0.016165623030118828,
+              "rho": 0.04678536791305675,
+              "T": 0.020041287430324014,
+              "Vpar": 0.3484709305694944
+            },
+            "guard": {
+              "steps": 7,
+              "limited_field_steps": 3,
+              "minimum_alpha": 0.8914816399328866,
+              "worst_proposed_density_bound": -5.37318018046368e-05,
+              "worst_proposed_temperature_bound": 8.908322244846275e-05
+            }
+          },
+          "0.0": {
+            "mse": 0.06072800371614414,
+            "per_field_mse": {
+              "psi": 0.004373726701561855,
+              "u": 0.004539336109631467,
+              "zj": 0.006073476813718573,
+              "w": 0.01438149283024057,
+              "rho": 0.04495497311431091,
+              "T": 0.01830796025168916,
+              "Vpar": 0.332465060191862
+            },
+            "guard": {
+              "steps": 7,
+              "limited_field_steps": 2,
+              "minimum_alpha": 0.8958547757714888,
+              "worst_proposed_density_bound": -5.1096024611963556e-05,
+              "worst_proposed_temperature_bound": 8.895283125775233e-05
+            }
+          },
+          "-1.0": {
+            "mse": 0.05817425879358333,
+            "per_field_mse": {
+              "psi": 0.0053963295210677584,
+              "u": 0.004200963318068845,
+              "zj": 0.006379203238691464,
+              "w": 0.013359081245513113,
+              "rho": 0.043768791862959726,
+              "T": 0.017052520966065063,
+              "Vpar": 0.3170629214027213
+            },
+            "guard": {
+              "steps": 7,
+              "limited_field_steps": 2,
+              "minimum_alpha": 0.8999172579726168,
+              "worst_proposed_density_bound": -4.867043668600486e-05,
+              "worst_proposed_temperature_bound": 8.882068436837394e-05
+            }
+          }
+        },
+        "linear_rms": {
+          "psi": 0.001239627797333332,
+          "u": 0.0014369729436289106,
+          "zj": 0.004924901764951759,
+          "w": 0.004078540633975686,
+          "rho": 0.0029377377226188495,
+          "T": 0.003596340044452846,
+          "Vpar": 0.0042708236444877765
+        },
+        "guarded_linear_effect_rms": {
+          "psi": 0.0054613827747658225,
+          "u": 0.0016361308807852871,
+          "zj": 0.004924901764951191,
+          "w": 0.004078540633975683,
+          "rho": 0.0029377377226188707,
+          "T": 0.0035963400444529786,
+          "Vpar": 0.004270823644487762
+        },
+        "lspline_vs_native_gradient_relative_rms": {
+          "psi": 0.42270727851748763,
+          "u": 0.3983057475959937,
+          "zj": 0.9999938869774221,
+          "w": 0.9997940957469343,
+          "rho": 0.9758927022722697,
+          "T": 0.6707642937981623,
+          "Vpar": 0.7756933326397427
+        }
+      }
+    ]
+  },
+  "physical_validation_diagnosis": {
+    "pilot": "../pilot",
+    "window": [
+      24,
+      32
+    ],
+    "test_used": false,
+    "branches": [
+      {
+        "ablation": {
+          "1.0": {
+            "mse": 0.22792440573532663,
+            "per_field_mse": {
+              "psi": 0.29587591662694696,
+              "u": 0.1113535145845713,
+              "zj": 0.44428655407268125,
+              "w": 0.2962635583183627,
+              "rho": 0.027472541466259326,
+              "T": 0.0185580097554269,
+              "Vpar": 0.401660745323063
+            },
+            "guard": {
+              "steps": 7,
+              "limited_field_steps": 0,
+              "minimum_alpha": 1.0,
+              "worst_proposed_density_bound": 0.0001957801044868225,
+              "worst_proposed_temperature_bound": 8.459555062748993e-05
+            }
+          },
+          "0.0": {
+            "mse": 0.22800892136545803,
+            "per_field_mse": {
+              "psi": 0.29652831955323616,
+              "u": 0.11120069119074054,
+              "zj": 0.4442172085031931,
+              "w": 0.2961880483563366,
+              "rho": 0.029292506103570728,
+              "T": 0.016810432351158717,
+              "Vpar": 0.40182524349995374
+            },
+            "guard": {
+              "steps": 7,
+              "limited_field_steps": 0,
+              "minimum_alpha": 1.0,
+              "worst_proposed_density_bound": 0.00015962062032427515,
+              "worst_proposed_temperature_bound": 8.457418444751827e-05
+            }
+          },
+          "-1.0": {
+            "mse": 0.22884467350145318,
+            "per_field_mse": {
+              "psi": 0.29720176263662995,
+              "u": 0.11105733958065632,
+              "zj": 0.4441489656588605,
+              "w": 0.2961157735431614,
+              "rho": 0.035050813430833876,
+              "T": 0.016347023658018912,
+              "Vpar": 0.40199103600198943
+            },
+            "guard": {
+              "steps": 7,
+              "limited_field_steps": 0,
+              "minimum_alpha": 1.0,
+              "worst_proposed_density_bound": 0.00011242018378693777,
+              "worst_proposed_temperature_bound": 8.455306330596055e-05
+            }
+          }
+        },
+        "linear_rms": {
+          "psi": 0.0,
+          "u": 0.0,
+          "zj": 0.0,
+          "w": 0.0,
+          "rho": 0.009605986164191355,
+          "T": 0.005589907685718288,
+          "Vpar": 0.0
+        },
+        "guarded_linear_effect_rms": {
+          "psi": 0.0,
+          "u": 0.0,
+          "zj": 0.0,
+          "w": 0.0,
+          "rho": 0.009605986164191338,
+          "T": 0.0055899076857187065,
+          "Vpar": 0.0
+        },
+        "lspline_vs_native_gradient_relative_rms": {
+          "psi": 0.398456167430503,
+          "u": 0.3713227725703646,
+          "zj": 0.9999646214277333,
+          "w": 0.9998108216031607,
+          "rho": 0.9781494030433325,
+          "T": 0.6894863201585071,
+          "Vpar": 0.7659706617902364
+        }
+      },
+      {
+        "ablation": {
+          "1.0": {
+            "mse": 0.05923530855963698,
+            "per_field_mse": {
+              "psi": 0.0043506191016115985,
+              "u": 0.004483676258520671,
+              "zj": 0.006139657164028354,
+              "w": 0.014589943521281888,
+              "rho": 0.032713581820833504,
+              "T": 0.01904781129432592,
+              "Vpar": 0.33332187075685304
+            },
+            "guard": {
+              "steps": 7,
+              "limited_field_steps": 2,
+              "minimum_alpha": 0.9155342265920089,
+              "worst_proposed_density_bound": -3.954643583623376e-05,
+              "worst_proposed_temperature_bound": 8.880101088426046e-05
+            }
+          },
+          "0.0": {
+            "mse": 0.060768299957144396,
+            "per_field_mse": {
+              "psi": 0.004356655705311941,
+              "u": 0.004478910519157463,
+              "zj": 0.00614311744312423,
+              "w": 0.014584395849430516,
+              "rho": 0.044253195236083905,
+              "T": 0.018213618189543326,
+              "Vpar": 0.3333482067573729
+            },
+            "guard": {
+              "steps": 7,
+              "limited_field_steps": 2,
+              "minimum_alpha": 0.8962065470588098,
+              "worst_proposed_density_bound": -5.088512275326207e-05,
+              "worst_proposed_temperature_bound": 8.882399805802632e-05
+            }
+          },
+          "-1.0": {
+            "mse": 0.06336379036166029,
+            "per_field_mse": {
+              "psi": 0.004359726178944369,
+              "u": 0.004477291304169453,
+              "zj": 0.006145047495248133,
+              "w": 0.014573308492601316,
+              "rho": 0.06293758867339819,
+              "T": 0.017683261622386176,
+              "Vpar": 0.3333703087648664
+            },
+            "guard": {
+              "steps": 7,
+              "limited_field_steps": 3,
+              "minimum_alpha": 0.8775739073826988,
+              "worst_proposed_density_bound": -6.228888924399655e-05,
+              "worst_proposed_temperature_bound": 8.884515220989925e-05
+            }
+          }
+        },
+        "linear_rms": {
+          "psi": 0.0,
+          "u": 0.0,
+          "zj": 0.0,
+          "w": 0.0,
+          "rho": 0.005587105775167591,
+          "T": 0.0028956378897888285,
+          "Vpar": 0.0
+        },
+        "guarded_linear_effect_rms": {
+          "psi": 0.0,
+          "u": 0.0,
+          "zj": 0.0,
+          "w": 0.0,
+          "rho": 0.005587105775167846,
+          "T": 0.002895637889788693,
+          "Vpar": 0.0
+        },
+        "lspline_vs_native_gradient_relative_rms": {
+          "psi": 0.42420595281591145,
+          "u": 0.3993142415695827,
+          "zj": 0.9999939963082419,
+          "w": 0.9997952115659421,
+          "rho": 0.9760125987608826,
+          "T": 0.6717796955502523,
+          "Vpar": 0.7762864416032944
+        }
+      }
+    ]
+  },
+  "limitations": [
+    "one seed and two shared-parent chronological windows, not independent-trajectory generalization",
+    "partial density/temperature advection/compression tangent, not full MHD linear operator",
+    "analytic derivatives of a coarse learned representation; derivative accuracy remains limited",
+    "positivity and elliptic corrections are active and do not enforce full MHD conservation",
+    "matched update budget and parameter count, not matched runtime"
+  ],
+  "scheduler": {
+    "job_id": 2785214,
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed_seconds": 1505,
+    "max_rss_kib": 5414260,
+    "cpus_allocated": 4,
+    "partition": "dcgp_fua_dbg"
+  }
+}

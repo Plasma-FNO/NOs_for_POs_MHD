@@ -1,0 +1,11 @@
+--- a/grids/grid_xpoint_data.f90
++++ b/grids/grid_xpoint_data.f90
+@@ -15,7 +15,7 @@
+   real*8  :: R_wall(n_wall_max), Z_wall(n_wall_max)
+   
+   ! --- Contours
+-  integer, parameter  :: n_contour_max = 10000
++  integer, parameter  :: n_contour_max = 40000
+   integer :: n_separatrix_contour
+   real*8  :: R_separatrix_contour(n_contour_max), Z_separatrix_contour(n_contour_max)
+   integer :: n_separatrix2_contour

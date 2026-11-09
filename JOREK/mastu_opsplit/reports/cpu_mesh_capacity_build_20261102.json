@@ -1,0 +1,64 @@
+{
+  "prepared_utc": "2026-11-02T16:16:44.155235+00:00",
+  "approval_source": "Explicit user reply: Continue the study on CPU; shared work relocation explicitly approved",
+  "purpose": "Increase only compile-time boundary capacity from 1001 to 4001 for mesh verification; retain initializer patch and unchanged physical equations",
+  "source_commit": "01a52be37576f79c785f1f7a80dee296dda5c9c8",
+  "source_archive": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mesh_capacity_build_20261102/pinned-source.tar",
+  "source_archive_sha256": "c997cf634cb8359bae61fccee6fd43b35b54e154b8c4ffeee042f207b5f950f4",
+  "initializer_patch_sha256": "0a7b0c157f01eea52d05b3088016fa356bc6a7b8b56a9c256443cae2a4676df3",
+  "makefile_sha256": "69c1a84e5e2fd85ddb26ecd94c779f670f9c4f4166009303bd851b835d28a857",
+  "source_directory": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mesh_capacity_build_20261102/source",
+  "binary_path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mesh_capacity_build_20261102/source/jorek_model303",
+  "script": "reports/cpu_mesh_capacity_build_20261102.sbatch",
+  "script_sha256": "6805c907e243f051beb5630723c09b75f40165976b14cfc56668fdad3d824ed2",
+  "production_source_modified": false,
+  "cpu_request": 2,
+  "memory_gb": 8,
+  "wall_minutes": 10,
+  "compiler_processes_max": 2,
+  "scheduler_preflight": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "sbatch: Job 2768016 to start at 2026-11-02T17:16:44 a using 2 processors on nodes r331c01s01 in partition dcgp_fua_dbg\n"
+  },
+  "status": "compiled_and_linked",
+  "job_id": "2768017",
+  "submission": {
+    "command": [
+      "sbatch",
+      "--parsable",
+      "--chdir",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mesh_capacity_build_20261102/source",
+      "--output",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mesh_capacity_build_20261102/build-%j.out",
+      "--error",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mesh_capacity_build_20261102/build-%j.err",
+      "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_mesh_capacity_build_20261102.sbatch"
+    ],
+    "returncode": 0,
+    "stdout": "2768017\n",
+    "stderr": "",
+    "utc": "2026-11-02T16:16:44.294993+00:00"
+  },
+  "completed_utc": "2026-11-02T16:22:03.779276+00:00",
+  "binary_sha256": "72fefbac087d9198db40dabbc27f35d26e6f06ce356a8fba554c72bca26c197b",
+  "binary_bytes": 7630368,
+  "changed_fortran_files_from_validated_initializer_build": [
+    "models/mod_settings.f90"
+  ],
+  "only_boundary_capacity_changed": true,
+  "configured_file_hashes": {
+    "models/mod_settings.f90": "75437a482263ec64f58e0488a91b23f53486bb2b8bcb3dff92917e6411993382",
+    "models/model303/mod_model_settings.f90": "28dfbb0dd1cf0f8d715bfd223c751b4c0bc2941b72602053c4d9bfe7620d77f2",
+    "models/model303/initial_conditions.f90": "269d67326158ff2ca4bf12dc626a97c5cfea7d2361716e59db6cc191f32c244a",
+    "models/preset_parameters.f90": "b13d9d03ad0b7db077896c62875e43fd4ff0bd9413c8822b42fd646b0599921f"
+  },
+  "accounting": {
+    "elapsed_seconds": 84,
+    "allocated_cpus": 2,
+    "allocated_nodes": 1,
+    "alloc_tres": "billing=2,cpu=2,mem=8G,node=1",
+    "exit_code": "0:0"
+  },
+  "version_note": "Pinned git archive has no .git metadata; source/archive/patch hashes are authoritative, and missing embedded VCS banner is expected."
+}

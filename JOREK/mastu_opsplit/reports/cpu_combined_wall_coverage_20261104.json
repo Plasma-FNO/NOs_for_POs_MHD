@@ -1,0 +1,33 @@
+{
+  "scope": "Fine q4 physical query coverage only; no field-convergence approval.",
+  "source_sha256": "51d37a67d22c5a5c271112ff473f04ef109ed6ecf2dbb1c9fab62903dbf9b1c2",
+  "restart_hashes": {
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/combined_refined_solver_20261103/control3/jorek000000.h5": "5b0f524bc571ba40894e4cf56a845081300dceffe5d1276f1b2604bc90bf17a2",
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/combined_refined_solver_20261103/wall80/jorek000000.h5": "2a51b8e235eb77cf1e50e70a1025288a3f16bca7286b61a73c86d00f63b67cea"
+  },
+  "queries_source_sha256": "b2e24b4422b94677819ed6ed642888b2451b5655d2790d3b1c3b60abb5f3b9bc",
+  "fine_metadata": {
+    "time_seconds": 0.0,
+    "steps": 0,
+    "quadrature_order": 4,
+    "mapping_status": "diagnostic_restart_only",
+    "expanded_nodal_dofs": 325888,
+    "canonical_native_dofs": 325657,
+    "native_dof_aliases_verified": true,
+    "minimum_signed_jacobian_m2": 2.0308377884990384e-07,
+    "negative_jacobian_samples": 0,
+    "patch_ids_available": false,
+    "native_constraints_available": false
+  },
+  "total_queries": 1289984,
+  "covered_queries": 1289983,
+  "full_domain_coverage": false,
+  "uncovered_volume_m3": 5.4826684106545575e-05,
+  "uncovered_rz_m": [
+    [
+      1.2903584933425711,
+      0.8638891486913587
+    ]
+  ],
+  "scientific_gates_passed": []
+}

@@ -1,0 +1,32 @@
+{
+  "status": "failed_validation",
+  "kind": "simulation",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/combined_exterior_flux2_20261104",
+  "budget": {
+    "authorization": "User requested continued solver convergence and science-plan progress.",
+    "scope": "One three-step exterior_flux2 probe with the unchanged combined Newton/MUMPS executable; no physical or acceptance changes.",
+    "mpi_ranks": 4,
+    "memory_GiB": 256,
+    "wall_hours_max": 3,
+    "rank_CPU_hours_max": 12,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4240119       4240119            13.8       2531868               2430"
+  },
+  "binary_sha256": "38d428235a842b7a6f8fb256f81ddfed2a1c12355c2d4e322f12e27ef6af1ec9",
+  "manifest_sha256": "a5d8783394af2ba071765990e61cdca02c5c177e2768b7707ad6adfedf097b4b",
+  "script_sha256": "8466b3f564b08365d31bc05a98262a62adf668addbf1142acbcfbc46bdf5d2f4",
+  "scheduler_preflight": "sbatch: Job 2772926 to start at 2026-11-04T13:16:44 a using 4 processors on nodes r355c05s09 in partition dcgp_fua_prod\n",
+  "scientific_gates_passed": [],
+  "job_id": "2772927",
+  "failure_evidence": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/combined_exterior_flux2_20261104/probe3/result.json",
+  "stage_results": {
+    "probe3": {
+      "stage": "probe3",
+      "status": "failed_validation",
+      "returncode": 1,
+      "process_wall_seconds": 241.97786131198518,
+      "binary_sha256": "38d428235a842b7a6f8fb256f81ddfed2a1c12355c2d4e322f12e27ef6af1ec9",
+      "scientific_gates_passed": [],
+      "error": "exit_nonzero"
+    }
+  }
+}

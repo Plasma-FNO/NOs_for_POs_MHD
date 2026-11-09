@@ -1,0 +1,218 @@
+{
+  "status": "stopped_for_xpoint_continuation_diagnosis",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/normalized_newton_20261103",
+  "budget": {
+    "authorization": "User requested numerical convergence and completion of the science plan.",
+    "scope": "One isolated native Newton build: one-step control at 1e-12, then wall1.5 three-step proof at 1e-10 with 20% updates. Original normalized-pressure residual retained; no fixed flux-span anchor.",
+    "allocations_max": 1,
+    "attempts_each_max": 1,
+    "mpi_ranks": 4,
+    "threads": 1,
+    "memory_GiB": 256,
+    "wall_hours_max": 3,
+    "rank_CPU_hours_max": 12,
+    "node_hours_max": 3,
+    "conservative_resource_hours_max": 768,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+    "equilibrium_tolerance": 1e-10,
+    "physics_changed": false,
+    "spatial_targets_changed": false
+  },
+  "manifest_sha256": "358f8ada3298d5d3f2ca5b1d30b906bd265a1385313bd15e53e2bb272a045d03",
+  "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_normalized_newton_20261103.sbatch",
+  "script_sha256": "ba034306dea74444c245bb427adca2cbd828f21736457082fb28e921235c8be3",
+  "scheduler_preflight": "sbatch: Job 2771372 to start at 2026-11-03T22:16:37 a using 4 processors on nodes r354c01s10 in partition dcgp_fua_prod\n",
+  "scientific_gates_passed": [],
+  "job_id": "2771373",
+  "stage_results": {
+    "control1": {
+      "stage": "control1",
+      "status": "completed",
+      "returncode": 0,
+      "process_wall_seconds": 358.6587121099001,
+      "binary_sha256": "88582b9f8046166e12123483ba354027e9fa2cc9d055dfd4f107a658524f88d6",
+      "scientific_gates_passed": [],
+      "initial": {
+        "health": {
+          "steps": 0,
+          "final_time_s": 0.0,
+          "restart_sha256": "b1b2457f67d6b387a0a174eed03ada34578eb7b5a443757dd4be411846738013"
+        },
+        "metadata": {
+          "time_seconds": 0.0,
+          "steps": 0,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 223148,
+          "canonical_native_dofs": 222917,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 1.9235618605202478e-08,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 61,
+        "minimum_density": 0.00999999999999999,
+        "minimum_temperature": 9.999999999999996e-05,
+        "restart_sha256": "b1b2457f67d6b387a0a174eed03ada34578eb7b5a443757dd4be411846738013"
+      },
+      "final": {
+        "health": {
+          "steps": 1,
+          "final_time_s": 2.92898564839183e-08,
+          "restart_sha256": "d07c577998cea50d63406e9b8187a1dafb35b5f144f5c63293b8611a9a725542"
+        },
+        "metadata": {
+          "time_seconds": 2.92898564839183e-08,
+          "steps": 1,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 223148,
+          "canonical_native_dofs": 222917,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 1.9235618605202478e-08,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 131,
+        "minimum_density": 0.009734661782215598,
+        "minimum_temperature": 9.887318662068653e-05,
+        "restart_sha256": "d07c577998cea50d63406e9b8187a1dafb35b5f144f5c63293b8611a9a725542"
+      },
+      "workspace_retries": 0,
+      "equilibrium_summary": {
+        "iterations": 10,
+        "last_raw_update": 8.948e-13,
+        "converged": true
+      }
+    }
+  },
+  "wall_failure": {
+    "last_updates": [
+      [
+        85,
+        3.2e-07
+      ],
+      [
+        86,
+        2.612e-07
+      ],
+      [
+        87,
+        5.312e-07
+      ],
+      [
+        88,
+        2.396e-07
+      ],
+      [
+        89,
+        1.945e-07
+      ],
+      [
+        90,
+        4.158e-07
+      ],
+      [
+        91,
+        2.997e-07
+      ],
+      [
+        92,
+        2.45e-07
+      ],
+      [
+        93,
+        3.01e-07
+      ],
+      [
+        94,
+        3.366e-07
+      ],
+      [
+        95,
+        2.205e-07
+      ],
+      [
+        96,
+        5.789e-07
+      ],
+      [
+        97,
+        2.668e-07
+      ],
+      [
+        98,
+        2.149e-07
+      ],
+      [
+        99,
+        4.105e-07
+      ],
+      [
+        100,
+        1.745e-07
+      ],
+      [
+        101,
+        3.307e-07
+      ],
+      [
+        102,
+        1.72e-07
+      ],
+      [
+        103,
+        1.46e-07
+      ],
+      [
+        104,
+        3e-07
+      ],
+      [
+        105,
+        1.629e-07
+      ],
+      [
+        106,
+        1.391e-07
+      ],
+      [
+        107,
+        5.346e-07
+      ],
+      [
+        108,
+        3.976e-07
+      ],
+      [
+        109,
+        3.234e-07
+      ],
+      [
+        110,
+        4.8e-07
+      ],
+      [
+        111,
+        2.096e-07
+      ],
+      [
+        112,
+        1.719e-07
+      ],
+      [
+        113,
+        4.402e-07
+      ],
+      [
+        114,
+        3.2e-07
+      ]
+    ],
+    "reason": "Residual remains far above 1e-10 while the selected nearby saddles switch. Superseded by explicit root-continuation experiment; the 200-iteration cap was not exhausted.",
+    "replacement_job_id": "2771420",
+    "root_diagnosis": "cpu_wall_stationary_roots_20261103.json"
+  }
+}

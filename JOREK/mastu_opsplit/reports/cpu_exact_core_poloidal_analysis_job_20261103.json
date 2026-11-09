@@ -1,0 +1,232 @@
+{
+  "job_id": "2771432",
+  "kind": "analysis",
+  "status": "completed",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/exact_pair_core_poloidal440_20261103",
+  "dependencies": [
+    "2771385",
+    "2771387",
+    "2771428",
+    "2771430"
+  ],
+  "budget": {
+    "mpi_ranks": 1,
+    "memory_GiB": 128,
+    "wall_hours_max": 1
+  },
+  "source_hashes": {
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_exact_core_poloidal_analysis_20261103.py": "58a0d9ff719a8f19f3a803fc9c6e23791b9092c6ea32c31d003040718ca1f191",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_spatial_directions_analysis_20261103.py": "c9886f3d1885afbfb06af80e6a22d9cc78626fe0684e436884697f5a4c56971d"
+  },
+  "scientific_gates_passed": [],
+  "stage_results": {
+    "probe3": {
+      "stage": "core_poloidal440",
+      "status": "completed",
+      "returncode": 0,
+      "process_wall_seconds": 2034.9627814790001,
+      "binary_sha256": "c67571ee579eaf8f5190d9038796affcbd5de7c3d030c5d765b93b8799d166ff",
+      "scientific_gates_passed": [],
+      "initial": {
+        "health": {
+          "steps": 0,
+          "final_time_s": 0.0,
+          "restart_sha256": "1cd39fc161dfbdae5625a5dcfc301cac87cbf022811e96eb60f9f432d9f1a4a0"
+        },
+        "metadata": {
+          "time_seconds": 0.0,
+          "steps": 0,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 361368,
+          "canonical_native_dofs": 360917,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 9.591795047498284e-09,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 61,
+        "minimum_density": 0.009999999999999992,
+        "minimum_temperature": 9.999999999999996e-05,
+        "restart_sha256": "1cd39fc161dfbdae5625a5dcfc301cac87cbf022811e96eb60f9f432d9f1a4a0"
+      },
+      "final": {
+        "health": {
+          "steps": 3,
+          "final_time_s": 8.78695694517549e-08,
+          "restart_sha256": "c60db812b9166635d8231c7fbf7b67ff58e6cf98ecc4266eb593fbe52d53f266"
+        },
+        "metadata": {
+          "time_seconds": 8.78695694517549e-08,
+          "steps": 3,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 361368,
+          "canonical_native_dofs": 360917,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 9.591795047498284e-09,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 131,
+        "minimum_density": 0.008299020114823164,
+        "minimum_temperature": 9.714260012491993e-05,
+        "restart_sha256": "c60db812b9166635d8231c7fbf7b67ff58e6cf98ecc4266eb593fbe52d53f266"
+      },
+      "workspace_retries": 0,
+      "equilibrium_summary": {
+        "iterations": 166,
+        "last_raw_update": 9.9e-11,
+        "converged": true
+      }
+    },
+    "baseline48": {
+      "stage": "baseline48",
+      "status": "completed",
+      "returncode": 0,
+      "process_wall_seconds": 8055.43834762997,
+      "binary_sha256": "c67571ee579eaf8f5190d9038796affcbd5de7c3d030c5d765b93b8799d166ff",
+      "scientific_gates_passed": [],
+      "initial": {
+        "health": {
+          "steps": 0,
+          "final_time_s": 0.0,
+          "restart_sha256": "e0fc566f4f5e14c59e50b5ba4817870748237044e78d01b22382a09a9d105a39"
+        },
+        "metadata": {
+          "time_seconds": 0.0,
+          "steps": 0,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 361368,
+          "canonical_native_dofs": 360917,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 9.591795047498284e-09,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 61,
+        "minimum_density": 0.009999999999999992,
+        "minimum_temperature": 9.999999999999996e-05,
+        "restart_sha256": "e0fc566f4f5e14c59e50b5ba4817870748237044e78d01b22382a09a9d105a39"
+      },
+      "final": {
+        "health": {
+          "steps": 48,
+          "final_time_s": 1.4059131112280784e-06,
+          "restart_sha256": "d0ca31c9e69caff7922721cf44983a7a3b211de63388a7cd3270a89f4d6376f0"
+        },
+        "metadata": {
+          "time_seconds": 1.4059131112280784e-06,
+          "steps": 48,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 361368,
+          "canonical_native_dofs": 360917,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 9.591795047498284e-09,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 131,
+        "minimum_density": 0.0024793792489136534,
+        "minimum_temperature": 8.832544257537518e-05,
+        "restart_sha256": "d0ca31c9e69caff7922721cf44983a7a3b211de63388a7cd3270a89f4d6376f0"
+      },
+      "initializer": {
+        "unselected_fields_exact": true,
+        "boundary_coefficients_exact": true,
+        "affected_elements": 0,
+        "affected_elements_touch_boundary": false,
+        "maximum_psi_n_control_hull_with_rounding_interval": null,
+        "maximum_nodal_relative_perturbations": [
+          0.0,
+          0.0
+        ]
+      },
+      "workspace_retries": 0,
+      "equilibrium_summary": {
+        "iterations": 166,
+        "last_raw_update": 9.9e-11,
+        "converged": true
+      }
+    },
+    "perturbed48": {
+      "stage": "perturbed48",
+      "status": "completed",
+      "returncode": 0,
+      "process_wall_seconds": 7796.161609275034,
+      "binary_sha256": "c67571ee579eaf8f5190d9038796affcbd5de7c3d030c5d765b93b8799d166ff",
+      "scientific_gates_passed": [],
+      "initial": {
+        "health": {
+          "steps": 0,
+          "final_time_s": 0.0,
+          "restart_sha256": "b84b6b57e7fc2ef8c6f22f0d6ac7e40f44449979a3e6591f7961ddd0052308c1"
+        },
+        "metadata": {
+          "time_seconds": 0.0,
+          "steps": 0,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 361368,
+          "canonical_native_dofs": 360917,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 9.591795047498284e-09,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 61,
+        "minimum_density": 0.009999999999999992,
+        "minimum_temperature": 9.999999999999996e-05,
+        "restart_sha256": "b84b6b57e7fc2ef8c6f22f0d6ac7e40f44449979a3e6591f7961ddd0052308c1"
+      },
+      "final": {
+        "health": {
+          "steps": 48,
+          "final_time_s": 1.4059131112280784e-06,
+          "restart_sha256": "74cc52c7abba577c7d317b8dea9f6efabf8eb458c9a6c56be8fc514412614437"
+        },
+        "metadata": {
+          "time_seconds": 1.4059131112280784e-06,
+          "steps": 48,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 361368,
+          "canonical_native_dofs": 360917,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 9.591795047498284e-09,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 131,
+        "minimum_density": 0.002479971889883327,
+        "minimum_temperature": 8.833376981638808e-05,
+        "restart_sha256": "74cc52c7abba577c7d317b8dea9f6efabf8eb458c9a6c56be8fc514412614437"
+      },
+      "initializer": {
+        "unselected_fields_exact": true,
+        "boundary_coefficients_exact": true,
+        "affected_elements": 8704,
+        "affected_elements_touch_boundary": false,
+        "maximum_psi_n_control_hull_with_rounding_interval": 0.8097028516197308,
+        "maximum_nodal_relative_perturbations": [
+          0.04994552709592348,
+          0.04994552709592348
+        ]
+      },
+      "workspace_retries": 0,
+      "equilibrium_summary": {
+        "iterations": 166,
+        "last_raw_update": 9.9e-11,
+        "converged": true
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+#!/bin/bash
+#SBATCH --job-name=mastu-combined-early-parity
+#SBATCH --account=fupa2_fauna
+#SBATCH --partition=dcgp_fua_prod
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=64G
+#SBATCH --time=00:30:00
+set -euo pipefail
+export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1
+/pitagora_work/FUPB2_UKAEA_ML/vgopakum/envs/cfo/bin/python /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_newton_equilibrium_compare_20261103.py --normalized-profiles --reference /pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/tight_exact_picard_reference_20261103/picard1 --current /pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/combined_refined_solver_20261103/control1 --output /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_combined_refined_early_parity_20261103.json

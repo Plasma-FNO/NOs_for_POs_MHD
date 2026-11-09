@@ -1,0 +1,83 @@
+{
+  "created_utc": "2026-11-02T20:59:19.593870+00:00",
+  "purpose": "Model303-only magnetic resistive loss and source-law diagnostic correction; no evolution-equation changes",
+  "parent_report": "cpu_single_writer_build_20261102.json",
+  "parent_report_sha256": "057a9109a23da59daed406c98a7abc0722f7ca512ed3ea332c8cd92defe0259d",
+  "patch": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/patches/0005-model303-energy-diagnostics.patch",
+  "patch_sha256": "36e5ec61e02bc294d5f3479534030a47e53c5ad6a12c945b52505f4e02e2018f",
+  "source_directory": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/energy_diagnostics_build_20261102/source",
+  "binary_path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/energy_diagnostics_build_20261102/source/jorek_model303",
+  "changed_fortran_files": [
+    "diagnostics/mod_integrals3D.f90"
+  ],
+  "production_source_modified": false,
+  "physical_settings_modified": false,
+  "maximum_compiler_processes": 2,
+  "wall_minutes": 10,
+  "memory_gb": 8,
+  "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_energy_diagnostics_build_20261102.sbatch",
+  "script_sha256": "afab163045e769ccfd9d4d39c00875e705b9bc15d45cc2fdab7160d05b41a181",
+  "focused_tests": "cpu_energy_patch_tests.xml",
+  "focused_native_branch_comparisons": 96,
+  "status": "compiled_and_linked",
+  "scheduler_preflight": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "sbatch: Job 2768303 to start at 2026-11-02T21:59:19 a using 2 processors on nodes r331c01s01 in partition dcgp_fua_dbg\n"
+  },
+  "submission": {
+    "command": [
+      "sbatch",
+      "--parsable",
+      "--chdir",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/energy_diagnostics_build_20261102/source",
+      "--output",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/energy_diagnostics_build_20261102/build-%j.out",
+      "--error",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/energy_diagnostics_build_20261102/build-%j.err",
+      "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_energy_diagnostics_build_20261102.sbatch"
+    ],
+    "returncode": 0,
+    "stdout": "2768312\n",
+    "stderr": "",
+    "utc": "2026-11-02T21:03:08.508008+00:00"
+  },
+  "job_id": "2768312",
+  "build_attempts": [
+    {
+      "job_id": "2768304",
+      "state": "FAILED",
+      "elapsed_seconds": 14,
+      "allocated_cpus": 2,
+      "exit_code": "2:0",
+      "reason": "Diagnostic module uses global xpoint, not assembly argument xpoint2",
+      "patch_snapshot": "JOREK/mastu_opsplit/reports/cpu_energy_diagnostics_failed_build_2768304.patch",
+      "patch_sha256": "196234d68874f60b5b796e8f1865a7611fced76a484288b9e2905bb840c8f5ed"
+    },
+    {
+      "job_id": "2768312",
+      "state": "COMPLETED",
+      "elapsed_seconds": 17,
+      "allocated_cpus": 2,
+      "exit_code": "0:0",
+      "patch_sha256": "36e5ec61e02bc294d5f3479534030a47e53c5ad6a12c945b52505f4e02e2018f"
+    }
+  ],
+  "scheduler_partition_override": {
+    "command": [
+      "scontrol",
+      "update",
+      "JobId=2768312",
+      "Partition=dcgp_fua_dbg,dcgp_fua_prod"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Job is no longer pending execution for job 2768312\n",
+    "utc": "2026-11-02T21:04:58.097419+00:00",
+    "reason": "Same bounded job and FAUNA CPU account, either previously used CPU queue; no duplicate execution."
+  },
+  "completed_utc": "2026-11-02T21:07:15.368589+00:00",
+  "binary_sha256": "a2ca05225a52ed7aad7828820b55bf4ac754508381296764ae9758b4173faf9d",
+  "diagnostic_source_sha256": "779930dda555668feccdc5ca3adcb0117444e57e542342f6dfb09958af02da20",
+  "accounting": "2768312|COMPLETED|17|2|0:0"
+}

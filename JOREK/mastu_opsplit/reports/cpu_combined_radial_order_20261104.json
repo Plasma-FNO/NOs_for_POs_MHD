@@ -1,0 +1,177 @@
+{
+  "scope": "Three-level radial sensitivity on common radial320 q4 physical queries at fixed timestep.",
+  "limitation": "Other spatial counts are fixed. Observed order does not certify other directions or continuum error.",
+  "source_sha256": "8000b2279780b1159f6bf7d35859919bf8607e23f45c154534360de7c143357b",
+  "restart_hashes": {
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/combined_pair_control80_20261104/baseline48/jorek_restart.h5": "b99c4888e5e6a2a64dbc7dd0f1c0872e412a0d50d396c16304311778f4bf5d7f",
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/combined_pair_control80_20261104/perturbed48/jorek_restart.h5": "e08527905854bf29507599d64cb1c76aa80e0629e397d18cb1b3faafd56e3a77",
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/combined_pair_radial160_20261104/baseline48/jorek_restart.h5": "cb009fbb3657ff704e3aff13f97f5a5e91efd2e0fb8ec21cdf29b3042597f8c4",
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/combined_pair_radial160_20261104/perturbed48/jorek_restart.h5": "a4bf1f9b439d68f39c9eb11b19ea4e2fbf053ad23b70346f0aa894d90eb931a8",
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/combined_pair_radial320_20261104/baseline48/jorek_restart.h5": "fcfb01c43abd225738b527c3b1aeb91177c166edb2211979e8496a352d894f11",
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/combined_pair_radial320_20261104/perturbed48/jorek_restart.h5": "4fa9eb84a86e111c3a237458158e153dd8cd59106c15271f4ebec2ab4b475a41"
+  },
+  "coverage": {
+    "80": {
+      "total_queries": 1719280,
+      "covered_queries": 1719280
+    },
+    "160": {
+      "total_queries": 1719280,
+      "covered_queries": 1719280
+    }
+  },
+  "full_domain_coverage": true,
+  "metrics": {
+    "baseline48": {
+      "psi": {
+        "difference_80_160_relative_to_320": 2.6674312113207967e-06,
+        "difference_160_320_relative_to_320": 2.0276405448879196e-06,
+        "observed_order": 0.3956491491968266,
+        "difference_decreases": true
+      },
+      "u": {
+        "difference_80_160_relative_to_320": 0.0011020372310990025,
+        "difference_160_320_relative_to_320": 0.001450919555725525,
+        "observed_order": -0.39679456876898633,
+        "difference_decreases": false
+      },
+      "zj": {
+        "difference_80_160_relative_to_320": 2.5203657114285676e-05,
+        "difference_160_320_relative_to_320": 1.589237170447891e-05,
+        "observed_order": 0.6652986456800413,
+        "difference_decreases": true
+      },
+      "w": {
+        "difference_80_160_relative_to_320": 0.0009975775643901418,
+        "difference_160_320_relative_to_320": 0.0010100195618518108,
+        "observed_order": -0.017882310766626615,
+        "difference_decreases": false
+      },
+      "rho": {
+        "difference_80_160_relative_to_320": 1.993477923013009e-05,
+        "difference_160_320_relative_to_320": 1.6135826907085533e-05,
+        "observed_order": 0.3050201151331687,
+        "difference_decreases": true
+      },
+      "T": {
+        "difference_80_160_relative_to_320": 6.377608632894269e-06,
+        "difference_160_320_relative_to_320": 5.070465503004567e-06,
+        "observed_order": 0.33089736569504696,
+        "difference_decreases": true
+      },
+      "Vpar": {
+        "difference_80_160_relative_to_320": 6.0539932414261765e-06,
+        "difference_160_320_relative_to_320": 5.094532712493482e-06,
+        "observed_order": 0.24893724090058608,
+        "difference_decreases": true
+      },
+      "pressure": {
+        "difference_80_160_relative_to_320": 5.931285456086958e-06,
+        "difference_160_320_relative_to_320": 4.7145480516129624e-06,
+        "observed_order": 0.33122532914577746,
+        "difference_decreases": true
+      }
+    },
+    "perturbed48": {
+      "psi": {
+        "difference_80_160_relative_to_320": 2.6668329936877257e-06,
+        "difference_160_320_relative_to_320": 1.9948386880171817e-06,
+        "observed_order": 0.4188553930625744,
+        "difference_decreases": true
+      },
+      "u": {
+        "difference_80_160_relative_to_320": 0.0002742782432308049,
+        "difference_160_320_relative_to_320": 0.0004514620963696704,
+        "observed_order": -0.7189646809226399,
+        "difference_decreases": false
+      },
+      "zj": {
+        "difference_80_160_relative_to_320": 0.0001820503271080813,
+        "difference_160_320_relative_to_320": 9.555126136308706e-05,
+        "observed_order": 0.9299905096989324,
+        "difference_decreases": true
+      },
+      "w": {
+        "difference_80_160_relative_to_320": 0.013955029760528185,
+        "difference_160_320_relative_to_320": 0.005907485767975268,
+        "observed_order": 1.240169047456113,
+        "difference_decreases": true
+      },
+      "rho": {
+        "difference_80_160_relative_to_320": 1.9903927988207703e-05,
+        "difference_160_320_relative_to_320": 1.5994974953033172e-05,
+        "observed_order": 0.3154344376649101,
+        "difference_decreases": true
+      },
+      "T": {
+        "difference_80_160_relative_to_320": 6.346165978607421e-06,
+        "difference_160_320_relative_to_320": 5.012766898558949e-06,
+        "observed_order": 0.34027810609697345,
+        "difference_decreases": true
+      },
+      "Vpar": {
+        "difference_80_160_relative_to_320": 6.084430228402763e-06,
+        "difference_160_320_relative_to_320": 5.204220534174412e-06,
+        "observed_order": 0.2254400702114573,
+        "difference_decreases": true
+      },
+      "pressure": {
+        "difference_80_160_relative_to_320": 5.877122650668451e-06,
+        "difference_160_320_relative_to_320": 4.627474908904131e-06,
+        "observed_order": 0.3448848389525263,
+        "difference_decreases": true
+      }
+    },
+    "paired_response": {
+      "psi": {
+        "difference_80_160_relative_to_320": 3.767290005223669e-05,
+        "difference_160_320_relative_to_320": 8.960373139465288e-05,
+        "observed_order": -1.250031716176572,
+        "difference_decreases": false
+      },
+      "u": {
+        "difference_80_160_relative_to_320": 5.0654766844738256e-05,
+        "difference_160_320_relative_to_320": 0.00010313770760912926,
+        "observed_order": -1.0258019402212415,
+        "difference_decreases": false
+      },
+      "zj": {
+        "difference_80_160_relative_to_320": 0.013922138012276725,
+        "difference_160_320_relative_to_320": 0.007224216542327794,
+        "observed_order": 0.9464677391421907,
+        "difference_decreases": true
+      },
+      "w": {
+        "difference_80_160_relative_to_320": 0.030167079017261348,
+        "difference_160_320_relative_to_320": 0.012549513257858148,
+        "observed_order": 1.265343602386233,
+        "difference_decreases": true
+      },
+      "rho": {
+        "difference_80_160_relative_to_320": 2.292608990484931e-05,
+        "difference_160_320_relative_to_320": 2.741507008712518e-05,
+        "observed_order": -0.2579788408348035,
+        "difference_decreases": false
+      },
+      "T": {
+        "difference_80_160_relative_to_320": 1.534547867082691e-05,
+        "difference_160_320_relative_to_320": 1.3024725316150676e-05,
+        "observed_order": 0.23656070119903588,
+        "difference_decreases": true
+      },
+      "Vpar": {
+        "difference_80_160_relative_to_320": 2.5502317241346126e-05,
+        "difference_160_320_relative_to_320": 2.349580190305479e-05,
+        "observed_order": 0.11822533478495736,
+        "difference_decreases": true
+      },
+      "pressure": {
+        "difference_80_160_relative_to_320": 1.2482592103178707e-05,
+        "difference_160_320_relative_to_320": 4.672222628110896e-06,
+        "observed_order": 1.4177366273067817,
+        "difference_decreases": true
+      }
+    }
+  },
+  "scientific_gates_passed": []
+}

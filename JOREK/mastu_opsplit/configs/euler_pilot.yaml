@@ -1,0 +1,17 @@
+formulation: normalized_field_euler_opsplit
+linear_branch: lspline_analytic
+purpose: chronological_diagnostic
+seed: 17
+steps: 30
+validate_every: 10
+learning_rate: 0.001
+threads: 2
+architecture:
+  grid_shape: [16, 32]
+  modes: 4
+  width: 8
+  n_layers: 2
+reference_directories:
+  - /pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_full_opsplit_20261104/runs/reference_seed_dt128_full/work
+  - /pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_full_opsplit_20261104/runs/reference_control_dt128_full/work
+convergence_report: /pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_full_opsplit_20261104/full_window_fine_report.json

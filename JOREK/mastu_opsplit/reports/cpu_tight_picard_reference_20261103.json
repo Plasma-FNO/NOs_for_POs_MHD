@@ -1,0 +1,91 @@
+{
+  "status": "completed",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/tight_picard_reference_20261103",
+  "budget": {
+    "authorization": "User requested numerical convergence and completion of the science plan.",
+    "scope": "One isolated reference build and one one-step Picard control at 1e-12; increase only the fixed-boundary iteration cap from 200 to 400.",
+    "allocations_max": 1,
+    "attempts_each_max": 1,
+    "mpi_ranks": 4,
+    "threads": 1,
+    "memory_GiB": 256,
+    "wall_hours_max": 3,
+    "rank_CPU_hours_max": 12,
+    "node_hours_max": 3,
+    "conservative_resource_hours_max": 768,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+    "equilibrium_tolerance": 1e-12,
+    "physics_changed": false,
+    "spatial_targets_changed": false
+  },
+  "manifest_sha256": "e17e570f606e983a1e6df27107fa16359d8eaa90f8a48169edbe407a59a82dab",
+  "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_tight_picard_reference_20261103.sbatch",
+  "script_sha256": "12871321cabac189c1147fd076d612d45ef828d4fd9998198ad67e7b3ec4d12f",
+  "scheduler_preflight": "sbatch: Job 2771315 to start at 2026-11-03T21:52:31 a using 4 processors on nodes r351c05s11 in partition dcgp_fua_prod\n",
+  "scientific_gates_passed": [],
+  "job_id": "2771316",
+  "stage_results": {
+    "picard1": {
+      "stage": "picard1",
+      "status": "completed",
+      "returncode": 0,
+      "process_wall_seconds": 1169.0953521790216,
+      "binary_sha256": "3b87501dfed5c8dca137b960ab37dbd57b9cca954edb044e011d9365f957831f",
+      "scientific_gates_passed": [],
+      "initial": {
+        "health": {
+          "steps": 0,
+          "final_time_s": 0.0,
+          "restart_sha256": "10554a5b4250ef5b1bda4aa7692902c62875ee2e2cd8834ba9869e694a5d0fe8"
+        },
+        "metadata": {
+          "time_seconds": 0.0,
+          "steps": 0,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 223148,
+          "canonical_native_dofs": 222917,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 1.9235618605202478e-08,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 61,
+        "minimum_density": 0.00999999999999999,
+        "minimum_temperature": 9.999999999999996e-05,
+        "restart_sha256": "10554a5b4250ef5b1bda4aa7692902c62875ee2e2cd8834ba9869e694a5d0fe8"
+      },
+      "final": {
+        "health": {
+          "steps": 1,
+          "final_time_s": 2.92898564839183e-08,
+          "restart_sha256": "dbaa68c7583d7a38359e8c24f9feaf4de6a71f00cc0b65396c37fb52f57e5571"
+        },
+        "metadata": {
+          "time_seconds": 2.92898564839183e-08,
+          "steps": 1,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 223148,
+          "canonical_native_dofs": 222917,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 1.9235618605202478e-08,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 131,
+        "minimum_density": 0.009734661782065283,
+        "minimum_temperature": 9.910352116326493e-05,
+        "restart_sha256": "dbaa68c7583d7a38359e8c24f9feaf4de6a71f00cc0b65396c37fb52f57e5571"
+      },
+      "workspace_retries": 0,
+      "equilibrium_summary": {
+        "iterations": 259,
+        "last_raw_update": 9.874e-13,
+        "converged": true
+      }
+    }
+  }
+}

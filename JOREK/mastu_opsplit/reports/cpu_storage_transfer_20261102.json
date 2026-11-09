@@ -1,0 +1,80 @@
+{
+  "approval_source": "Explicit user reply: Approve the verified move",
+  "started_utc": "2026-11-02T16:15:06.014948+00:00",
+  "request": "reports/cpu_storage_transfer_request_20261102.json",
+  "retention_confirmed": false,
+  "transfers": [
+    {
+      "job_id": "2767763",
+      "source": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/cpu_baseline3_20261102",
+      "destination": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/cpu_baseline3_20261102",
+      "bytes": 140116443,
+      "status": "relocated_with_repository_symlink"
+    },
+    {
+      "job_id": "2767771",
+      "source": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/cpu_initializer_default_20261102",
+      "destination": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/cpu_initializer_default_20261102",
+      "bytes": 113442220,
+      "status": "relocated_with_repository_symlink"
+    },
+    {
+      "job_id": "2767836",
+      "source": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/cpu_baseline6_20261102",
+      "destination": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/cpu_baseline6_20261102",
+      "bytes": 146913130,
+      "status": "relocated_with_repository_symlink"
+    },
+    {
+      "job_id": "2767838",
+      "source": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/cpu_baseline12_20261102",
+      "destination": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/cpu_baseline12_20261102",
+      "bytes": 160528500,
+      "status": "relocated_with_repository_symlink"
+    },
+    {
+      "job_id": "2767851",
+      "source": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/cpu_baseline24_20261102",
+      "destination": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/cpu_baseline24_20261102",
+      "bytes": 67546812,
+      "status": "relocated_with_repository_symlink"
+    },
+    {
+      "job_id": "2767853",
+      "source": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/cpu_baseline48_20261102",
+      "destination": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/cpu_baseline48_20261102",
+      "bytes": 242701657,
+      "status": "relocated_with_repository_symlink"
+    },
+    {
+      "job_id": "2767860",
+      "source": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/cpu_baseline24_retry1_20261102",
+      "destination": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/cpu_baseline24_retry1_20261102",
+      "bytes": 187822797,
+      "status": "relocated_with_repository_symlink"
+    },
+    {
+      "job_id": "2767868",
+      "source": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/cpu_baseline96_20261102",
+      "destination": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/cpu_baseline96_20261102",
+      "bytes": 353458551,
+      "status": "relocated_with_repository_symlink"
+    },
+    {
+      "job_id": "2767989",
+      "source": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/cpu_mesh2_equilibrium_20261102",
+      "destination": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/cpu_mesh2_equilibrium_20261102",
+      "bytes": 48919940,
+      "status": "relocated_with_repository_symlink"
+    },
+    {
+      "job_id": "2767720",
+      "source": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium_regression_dcgp_20261102",
+      "destination": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/equilibrium_regression_dcgp_20261102",
+      "bytes": 113442454,
+      "status": "relocated_with_repository_symlink"
+    }
+  ],
+  "completed_utc": "2026-11-02T16:15:21.674477+00:00",
+  "total_bytes": 1574892504
+}

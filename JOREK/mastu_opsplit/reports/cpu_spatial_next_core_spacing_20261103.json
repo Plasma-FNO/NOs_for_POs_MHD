@@ -1,0 +1,34 @@
+{
+  "scope": "Corner chords in |R-.95|<.16m,|Z|<.32m; longer direction is a radial-spacing proxy, not a Jacobian or convergence metric.",
+  "reference": {
+    "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/equilibrium_damped_baseline48_20261103/jorek000000.h5",
+    "sha256": "ecabf768129eceb373976c3a941fad3fb738a555d8d3604bfd5338b979067189",
+    "elements": 1266,
+    "long_chord_quantiles_m": [
+      0.03139547378887358,
+      0.041313176480216096,
+      0.05248302191604551
+    ],
+    "short_chord_quantiles_m": [
+      0.0006400046048976227,
+      0.0030398745071366015,
+      0.009511410761467557
+    ]
+  },
+  "next": {
+    "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_radial_pair_20261103/probe3/jorek000000.h5",
+    "sha256": "078690c3f6c5ecd1d1d1a5f1cf7cae1a4a1465dbf3b56ad86a663824a33afc9f",
+    "elements": 2510,
+    "long_chord_quantiles_m": [
+      0.01569551987641338,
+      0.0208371039669316,
+      0.02628853181163601
+    ],
+    "short_chord_quantiles_m": [
+      0.0004668084351232568,
+      0.00305878868585947,
+      0.009520238507821114
+    ]
+  },
+  "median_long_chord_refinement_factor": 1.9826736261324962
+}

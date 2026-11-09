@@ -1,0 +1,17 @@
+{
+  "status": "submitted",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/xpoint_handle_divertor320_20261104",
+  "dependencies": [],
+  "binary_sha256": "57826fadf03fc19c62b305924de70db5ea569dfcf006b62d207ce2bc41fc5403",
+  "manifest_sha256": "48ded783b20ca38ea478ed5c152bbf4cdc55e1456d007e365da94238039950f7",
+  "script_sha256": "393a40a1a5d307ad590b962141dc8773f4d2f707ff9184bf9eca68ea4edbd3c3",
+  "budget": {
+    "mpi_ranks": 16,
+    "memory_GiB": 512,
+    "wall_hours_max": 4,
+    "rank_CPU_hours_max": 64,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4240119       4240119            13.8       2531868               2430"
+  },
+  "scientific_gates_passed": [],
+  "job_id": "2775445"
+}

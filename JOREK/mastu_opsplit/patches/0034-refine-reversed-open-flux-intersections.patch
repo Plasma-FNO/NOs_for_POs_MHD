@@ -1,0 +1,171 @@
+--- a/grids/grid_utils/find_crossing.f90
++++ b/grids/grid_utils/find_crossing.f90
+@@ -96,3 +96,33 @@
+     s=s+step(1)/scale; t=t+step(2)/scale; tau=tau+step(3)/scale
+   enddo
+ end subroutine opsplit_refine_core_crossing
++
++! Repair only reversed intersections of two flux surfaces with the same polar curve.
++! Keep both original intersections unless exact native roots restore their order.
++subroutine opsplit_refine_reversed_pair(node_list,element_list,ielm,target,rc,zc,s,t,tau,rr,zz,ifail)
++  use data_structure
++  use, intrinsic :: ieee_arithmetic, only: ieee_is_finite
++  implicit none
++  type(type_node_list), intent(in) :: node_list
++  type(type_element_list), intent(in) :: element_list
++  integer, intent(in) :: ielm(2)
++  real*8, intent(in) :: target(2),rc(4),zc(4)
++  real*8, intent(inout) :: s(2),t(2),tau(2),rr(2),zz(2)
++  integer, intent(out) :: ifail
++  real*8 :: ss(2),tt(2),uu(2),rnew(2),znew(2)
++  integer :: k,status
++  ifail=0
++  if (tau(2) >= tau(1)-1.d-12) return
++  ifail=99
++  if (target(1) == target(2)) return
++  ss=s; tt=t; uu=tau
++  do k=1,2
++    call opsplit_refine_core_crossing(node_list,element_list,ielm(k),target(k), &
++         rc,zc,ss(k),tt(k),uu(k),rnew(k),znew(k),status)
++    if (status /= 0) return
++  enddo
++  if (.not. all(ieee_is_finite([ss,tt,uu,rnew,znew]))) return
++  if (maxval(abs(uu)) > 1.d0+1.d-10 .or. uu(2) <= uu(1)+1.d-12) return
++  s=ss; t=tt; tau=uu; rr=rnew; zz=znew
++  ifail=0
++end subroutine opsplit_refine_reversed_pair
+--- a/grids/grid_utils/define_central_grid.f90
++++ b/grids/grid_utils/define_central_grid.f90
+@@ -42,6 +42,8 @@
+ integer             :: n_start_open, n_start_outer, n_start_inner
+ integer             :: n_start_private, n_start_up_priv
+ real*8              :: R_cub1d(4), Z_cub1d(4)
++real*8, allocatable :: crossing_R(:,:,:),crossing_Z(:,:,:)
++integer :: crossing_status,crossing_repairs
+ real*8              :: tht_x1, tht_x2
+ real*8              :: psi_norm, psi_bnd
+ real*8              :: RRg1,dRRg1_dr,dRRg1_ds,dRRg1_drs,dRRg1_drr,dRRg1_dss
+@@ -608,6 +610,9 @@
+ enddo
+ nwpts%k_cross(1,:) = 1
+ 
++allocate(crossing_R(4,n_flux+n_open+n_outer+n_inner+1,n_tht), &
++         crossing_Z(4,n_flux+n_open+n_outer+n_inner+1,n_tht))
++crossing_R=0.d0; crossing_Z=0.d0; crossing_repairs=0
+ !----------------------------------- The main part (without legs, outer and inner)
+ do i=1,n_flux+n_open+n_outer+n_inner
+   n_start = 1
+@@ -652,6 +657,25 @@
+       
+       if (ifail .eq. 0) then
+         nwpts%k_cross(i+1,j) = k
++        crossing_R(:,i+1,j)=R_cub1d; crossing_Z(:,i+1,j)=Z_cub1d
++        if (i > 1) then
++          if (nwpts%k_cross(i,j) == k .and. &
++              all(crossing_R(:,i,j) == R_cub1d) .and. &
++              all(crossing_Z(:,i,j) == Z_cub1d)) then
++            if (nwpts%t_tht(i+1,j) < nwpts%t_tht(i,j)-1.d-12) then
++              call opsplit_refine_reversed_pair(node_list,element_list,nwpts%ielm_flux(i:i+1,j), &
++                   flux_list%psi_values(i-1:i),R_cub1d,Z_cub1d, &
++                   nwpts%s_flux(i:i+1,j),nwpts%t_flux(i:i+1,j),nwpts%t_tht(i:i+1,j), &
++                   nwpts%RR_new(i:i+1,j),nwpts%ZZ_new(i:i+1,j),crossing_status)
++              if (crossing_status /= 0) then
++                write(*,*) 'Exact reversed central pair failed: ',i,j
++                error stop 'unresolved reversed flux intersections'
++              endif
++              crossing_repairs=crossing_repairs+1
++              write(*,*) 'Exact reversed central pair repaired: ',i,j
++            endif
++          endif
++        endif
+         exit
+       endif
+ 
+@@ -681,6 +705,7 @@
+ !************************************************************************************************************************!
+ !************************************************************************************************************************!
+ !------------------------------------------------------------------------------------------------------------------------!
++deallocate(crossing_R,crossing_Z)
+ write(*,*) '                 Defining new nodes'
+ 
+ 
+--- a/grids/grid_utils/define_leg_grid.f90
++++ b/grids/grid_utils/define_leg_grid.f90
+@@ -38,6 +38,8 @@
+ integer             :: n_xpoint_1, n_xpoint_2
+ integer             :: n_loop, n_tmp
+ real*8              :: R_cub1d(4), Z_cub1d(4)
++real*8, allocatable :: crossing_R(:,:,:),crossing_Z(:,:,:)
++integer :: crossing_status,crossing_repairs
+ real*8              :: length
+ real*8              :: R1,dR1_dr,dR1_ds,dR1_drs,dR1_drr,dR1_dss
+ real*8              :: Z1,dZ1_dr,dZ1_ds,dZ1_drs,dZ1_drr,dZ1_dss
+@@ -598,6 +600,8 @@
+ !--------------------------------------------------------------------------!
+ 
+ 
++allocate(crossing_R(4,n_surf_tot,n_seg),crossing_Z(4,n_surf_tot,n_seg))
++crossing_R=0.d0; crossing_Z=0.d0; crossing_repairs=0
+ !----------------------------------- The main part (without legs, outer and inner)
+ do i=1,n_surf_tot
+   i_surf_tmp = i_flux(i)
+@@ -630,6 +634,25 @@
+       
+       if (ifail .eq. 0) then
+         nwpts%k_cross(i,j) = k
++        crossing_R(:,i,j)=R_cub1d; crossing_Z(:,i,j)=Z_cub1d
++        if (i > 1) then
++          if (nwpts%k_cross(i-1,j) == k .and. &
++              all(crossing_R(:,i-1,j) == R_cub1d) .and. &
++              all(crossing_Z(:,i-1,j) == Z_cub1d)) then
++            if (nwpts%t_tht(i,j) < nwpts%t_tht(i-1,j)-1.d-12) then
++              call opsplit_refine_reversed_pair(node_list,element_list,nwpts%ielm_flux(i-1:i,j), &
++                   flux_list%psi_values(i_flux(i-1:i)),R_cub1d,Z_cub1d, &
++                   nwpts%s_flux(i-1:i,j),nwpts%t_flux(i-1:i,j),nwpts%t_tht(i-1:i,j), &
++                   nwpts%RR_new(i-1:i,j),nwpts%ZZ_new(i-1:i,j),crossing_status)
++              if (crossing_status /= 0) then
++                write(*,*) 'Exact reversed leg pair failed: ',i,j
++                error stop 'unresolved reversed flux intersections'
++              endif
++              crossing_repairs=crossing_repairs+1
++              write(*,*) 'Exact reversed leg pair repaired: ',i,j
++            endif
++          endif
++        endif
+         exit
+       endif
+ 
+@@ -663,6 +686,25 @@
+         
+         if (ifail .eq. 0) then
+           nwpts%k_cross(i,j) = k
++        crossing_R(:,i,j)=R_cub1d; crossing_Z(:,i,j)=Z_cub1d
++        if (i > 1) then
++          if (nwpts%k_cross(i-1,j) == k .and. &
++              all(crossing_R(:,i-1,j) == R_cub1d) .and. &
++              all(crossing_Z(:,i-1,j) == Z_cub1d)) then
++            if (nwpts%t_tht(i,j) < nwpts%t_tht(i-1,j)-1.d-12) then
++              call opsplit_refine_reversed_pair(node_list,element_list,nwpts%ielm_flux(i-1:i,j), &
++                   flux_list%psi_values(i_flux(i-1:i)),R_cub1d,Z_cub1d, &
++                   nwpts%s_flux(i-1:i,j),nwpts%t_flux(i-1:i,j),nwpts%t_tht(i-1:i,j), &
++                   nwpts%RR_new(i-1:i,j),nwpts%ZZ_new(i-1:i,j),crossing_status)
++              if (crossing_status /= 0) then
++                write(*,*) 'Exact reversed leg pair failed: ',i,j
++                error stop 'unresolved reversed flux intersections'
++              endif
++              crossing_repairs=crossing_repairs+1
++              write(*,*) 'Exact reversed leg pair repaired: ',i,j
++            endif
++          endif
++        endif
+           exit
+         endif
+ 
+@@ -717,6 +759,7 @@
+ !************************************************************************************************************************!
+ !************************************************************************************************************************!
+ !------------------------------------------------------------------------------------------------------------------------!
++deallocate(crossing_R,crossing_Z)
+ write(*,*) '                 Defining new nodes'
+ 
+ 

@@ -1,0 +1,118 @@
+{
+  "created_utc": "2026-11-03T09:03:23.302805+00:00",
+  "failed_job_id": "2768489",
+  "mumps_version": "5.7.3",
+  "first_error": {
+    "phase": "factorization",
+    "info_1": -9,
+    "info_2": 68150207,
+    "meaning": "Main real workarray S too small; INFO(2) is missing entries, not bytes.",
+    "missing_double_precision_bytes_at_failure": 545201656
+  },
+  "followup_error": {
+    "phase": "solve",
+    "info_1": -3,
+    "info_2": 3,
+    "meaning": "JOB=3 called after unsuccessful factorization."
+  },
+  "crash": {
+    "signal": 11,
+    "returncode": 139,
+    "frame": "__mod_poiss_MOD_poisson",
+    "cause": "Restart readers allocate only the saved 32,832-node extent; finish_grid copies a 47,067-node refined mesh into that storage, corrupting allocation descriptors. Poisson crashes when writing node deltas."
+  },
+  "reference": {
+    "url": "https://sources.debian.org/data/main/m/mumps/5.7.3-3/doc/userguide_5.7.3.pdf",
+    "local_manual": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/src/jorek/deps/MUMPS/doc/userguide_5.7.3.pdf",
+    "pages": [
+      45,
+      107
+    ],
+    "guidance": "Increase ICNTL(14) then repeat JOB=2 for workspace errors -8/-9."
+  },
+  "patch": "patches/0011-mumps-workspace-retry-and-errors.patch",
+  "patch_sha256": "4607bdcfb74f3bfbec8667ebd2ea4cc5686fd72885e805722865212e772a8f8c",
+  "fix": {
+    "factorization_retries_max": 3,
+    "retry_codes": [
+      -8,
+      -9
+    ],
+    "relaxation_policy": "Double max(1, ICNTL(14)) after each workspace failure; preserve the first attempt.",
+    "failure_policy": "Check INFOG(1) after initialization, analysis, factorization and both solve entrypoints; abort MPI_COMM_WORLD for fatal or exhausted errors.",
+    "physics_changes": false,
+    "matrix_or_rhs_changes": false,
+    "tolerance_changes": false,
+    "production_source_modified": false
+  },
+  "validation": {
+    "focused_compiled_failure_injection_tests": 18,
+    "related_suite_tests": 44,
+    "related_suite_report": "cpu_mumps_recovery_integrated_tests_20261103.xml",
+    "failure_injection_scope": "Patched full Fortran module with stub MUMPS/MPI; tests ordinary and multiple-RHS paths, successful recovery, exhausted retries, fatal analysis/factorization/solve failures and positive warnings.",
+    "native_runtime": "Job 2769623 completed build, exact ordinary/cached parity and the refined three-step probe; no MUMPS errors or workspace retries.",
+    "final_related_suite_tests": 60
+  },
+  "rerun_job_id": "2769623",
+  "rerun_record": "cpu_restart_capacity_recovery_20261103.json",
+  "scientific_gates_passed": [],
+  "first_native_fix_attempt": {
+    "job_id": "2769482",
+    "ordinary8_exact_parity": true,
+    "cached8_field_and_gradient_parity": true,
+    "factorization_relaxations_percent": [
+      50,
+      100,
+      200,
+      400
+    ],
+    "final_missing_entries": 10094973,
+    "final_missing_double_precision_bytes": 80759784,
+    "result": "Workspace retries exhausted; MPI_COMM_WORLD aborted cleanly with code 1; no JOB=3 or segmentation fault.",
+    "batch_peak_rss_KiB": 10016860,
+    "allocated_seconds": 589
+  },
+  "workspace_bound_extension": {
+    "patch": "patches/0012-extend-mumps-workspace-retry-budget.patch",
+    "factorization_retries_max": 5,
+    "ordinary_relaxation_ladder_percent": [
+      50,
+      100,
+      200,
+      400,
+      800,
+      1600
+    ],
+    "reason": "Measured remaining workspace shortage at the previous retry bound; same Slurm memory and walltime limits.",
+    "related_tests_passed": 48,
+    "compiled_failure_injection_tests_passed": 22,
+    "report": "cpu_mumps_workspace_recovery_tests_20261103.xml"
+  },
+  "updated_utc": "2026-11-03T09:51:45.813601+00:00",
+  "workspace_error_interpretation": "The -9 workspace error and ignored failure were real observations. The claim that they alone caused SIGSEGV is superseded by a second run crashing at the identical delta write without MUMPS errors. Corrupted storage can also affect matrix assembly; independent legitimate workspace demand remains guarded.",
+  "second_native_fix_attempt": {
+    "job_id": "2769505",
+    "ordinary8_exact_parity": true,
+    "cached8_field_and_gradient_parity": true,
+    "result": "SIGSEGV at Poisson delta write without any workspace retry or MUMPS error.",
+    "crash_pc": "0x60bc43",
+    "original_crash_pc": "0x60b8f3",
+    "instruction": "vmovsd %xmm0,0x0(%r13,%rax,8)",
+    "native_write": "node_list%node(i)%deltas(i_harm,k,ivar_out) = rhs_vec%val(index)"
+  },
+  "root_cause_fix": {
+    "patch": "patches/0013-preserve-restart-node-capacity.patch",
+    "patch_sha256": "fbc89f1229d7d9720047630b2054d9e6b172a221b84d41a7a8f545789f2a00f5",
+    "readers": [
+      "import_binary_restart",
+      "import_hdf5_restart"
+    ],
+    "allocation": "max(n_nodes_max, saved_node_count)",
+    "active_count": "Restored to saved count after allocation; file reads and fields unchanged.",
+    "tests": "12 compiled before/after allocation tests: original smaller imported extent fails with bounds error on refinement; patched binary/HDF5 paths pass, preserve counts, zero initialization and deep-copied values/deltas. Equal/larger saved extents also pass.",
+    "related_tests_passed": 60,
+    "report": "cpu_restart_capacity_recovery_tests_20261103.xml",
+    "native_runtime": "Job 2769623 completed build, exact ordinary/cached parity and the refined three-step probe; no MUMPS errors or workspace retries."
+  },
+  "final_validation": "validation_cpu_restart_capacity_recovery_20261103.json"
+}

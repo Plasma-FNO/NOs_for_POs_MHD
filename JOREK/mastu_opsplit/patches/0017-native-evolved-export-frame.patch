@@ -1,0 +1,11 @@
+--- a/models/model303/opsplit_export_begin.inc
++++ b/models/model303/opsplit_export_begin.inc
+@@ -21,7 +21,7 @@
+   endif
+ endif
+ opsplit_export_active = .false.
+-if (opsplit_export_enabled .and. index_now == 1) then
++if (opsplit_export_enabled .and. index_now == 9) then
+   if (opsplit_export_element_id < 1 .or. opsplit_export_element_id > n_elements_max) &
+     error stop 'OpsSplit native export invalid element identity'
+   opsplit_export_active = .not. opsplit_export_seen(opsplit_export_element_id)

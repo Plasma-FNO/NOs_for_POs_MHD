@@ -1,0 +1,833 @@
+{
+  "status": "submitted",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/xpoint_handle_20261104",
+  "manifest_sha256": "71e3563bef0b14dc578e267d89d04bec9ad4edaac98722f502ee3beb46517777",
+  "script_sha256": "39fd047105964ae281a9979246b37089a650b3418e61b2428f2c481e06857773",
+  "budget": {
+    "mpi_ranks": 16,
+    "memory_GiB": 512,
+    "wall_hours_max": 6,
+    "rank_CPU_hours_max": 96,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4240119       4240119            13.8       2531868               2430"
+  },
+  "scientific_gates_passed": [],
+  "job_id": "2773463",
+  "stage_results": {
+    "wall80": {
+      "stage": "wall80",
+      "status": "completed",
+      "returncode": 0,
+      "process_wall_seconds": 555.5421856580069,
+      "binary_sha256": "57826fadf03fc19c62b305924de70db5ea569dfcf006b62d207ce2bc41fc5403",
+      "scientific_gates_passed": [],
+      "initial": {
+        "health": {
+          "steps": 0,
+          "final_time_s": 0.0,
+          "restart_sha256": "6c797d2ec41032103b820877d5531a42b888ecaaca0a6ed825d27109e645daae"
+        },
+        "metadata": {
+          "time_seconds": 0.0,
+          "steps": 0,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 325888,
+          "canonical_native_dofs": 325657,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 1.9233925177217095e-08,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 61,
+        "minimum_density": 0.009999999999999992,
+        "minimum_temperature": 9.999999999999996e-05,
+        "restart_sha256": "6c797d2ec41032103b820877d5531a42b888ecaaca0a6ed825d27109e645daae"
+      },
+      "final": {
+        "health": {
+          "steps": 3,
+          "final_time_s": 8.78695694517549e-08,
+          "restart_sha256": "063d12b22fda42d793154ea1f09a9331d5ce89283ba5ee2ba5d4bcdf24f2c0a7"
+        },
+        "metadata": {
+          "time_seconds": 8.78695694517549e-08,
+          "steps": 3,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 325888,
+          "canonical_native_dofs": 325657,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 1.9233925177217095e-08,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 131,
+        "minimum_density": 0.008578932751195823,
+        "minimum_temperature": 9.741901654852641e-05,
+        "restart_sha256": "063d12b22fda42d793154ea1f09a9331d5ce89283ba5ee2ba5d4bcdf24f2c0a7"
+      },
+      "minimum_q16_jacobian_m2": 1.4295379237987228e-09,
+      "initial_parity": {
+        "exact_reference_arrays": {
+          "x": true,
+          "values": true,
+          "vertex": true,
+          "size": true,
+          "boundary": true,
+          "constrained": true,
+          "n_sons": true,
+          "t_now": true,
+          "index_now": true
+        },
+        "passed": true,
+        "metrics": {
+          "field": {
+            "absolute_rms_errors": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "reference_rms": [
+              0.04383330390177679,
+              0.0,
+              0.4663474705333797,
+              0.0,
+              0.5470837738268418,
+              0.006164029411265128,
+              0.0
+            ],
+            "tolerances": [
+              4.383430390177679e-08,
+              1e-12,
+              4.6634847053337966e-07,
+              1e-12,
+              5.470847738268419e-07,
+              6.165029411265128e-09,
+              1e-12
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "gradient": {
+            "absolute_rms_errors": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "reference_rms": [
+              0.20696991827030917,
+              0.0,
+              12.821574024208752,
+              0.0,
+              5.5850405768519815,
+              0.02781708542310178,
+              0.0
+            ],
+            "tolerances": [
+              2.0697091827030915e-07,
+              1e-12,
+              1.2821575024208751e-05,
+              1e-12,
+              5.585041576851981e-06,
+              2.781808542310178e-08,
+              1e-12
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          }
+        },
+        "snapshot_kind": "initial"
+      },
+      "parity": {
+        "exact_reference_arrays": {
+          "x": true,
+          "values": false,
+          "vertex": true,
+          "size": true,
+          "boundary": true,
+          "constrained": true,
+          "n_sons": true,
+          "t_now": true,
+          "index_now": true,
+          "xtime": true,
+          "energies": false
+        },
+        "passed": true,
+        "metrics": {
+          "field": {
+            "absolute_rms_errors": [
+              1.2056603646157324e-18,
+              8.068572971806739e-19,
+              1.9105268472502568e-14,
+              7.178047185778784e-15,
+              1.807650720603235e-17,
+              3.8805432965989034e-19,
+              1.0222004233659794e-17
+            ],
+            "reference_rms": [
+              0.0438332986475466,
+              6.590265829903191e-06,
+              0.46634754388061894,
+              0.0013426085212078919,
+              0.5469810756265047,
+              0.006164106140735443,
+              0.005232902561552683
+            ],
+            "tolerances": [
+              4.38342986475466e-08,
+              7.590265829903191e-12,
+              4.663485438806189e-07,
+              1.3436085212078918e-09,
+              5.469820756265046e-07,
+              6.165106140735443e-09,
+              5.2339025615526835e-09
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "gradient": {
+            "absolute_rms_errors": [
+              8.175319611907802e-16,
+              2.355169211448675e-17,
+              5.007640120230823e-11,
+              6.858106051046009e-12,
+              2.59318878961241e-14,
+              2.308605429140202e-16,
+              4.925773215456583e-15
+            ],
+            "reference_rms": [
+              0.20696977409753733,
+              8.278629624324677e-05,
+              12.821264635683649,
+              0.030646993152644044,
+              5.438506233626665,
+              0.027013087472538458,
+              0.18942571145270734
+            ],
+            "tolerances": [
+              2.0697077409753733e-07,
+              8.378629624324676e-11,
+              1.2821265635683647e-05,
+              3.0647993152644044e-08,
+              5.438507233626665e-06,
+              2.7014087472538457e-08,
+              1.8942671145270732e-07
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          }
+        },
+        "snapshot_kind": "evolved"
+      },
+      "workspace_retries": 0,
+      "equilibrium_summary": {
+        "iterations": 11,
+        "last_raw_update": 2.533e-11,
+        "converged": true
+      }
+    },
+    "perturbed3": {
+      "stage": "perturbed3",
+      "status": "completed",
+      "returncode": 0,
+      "process_wall_seconds": 375.59348096104804,
+      "binary_sha256": "57826fadf03fc19c62b305924de70db5ea569dfcf006b62d207ce2bc41fc5403",
+      "scientific_gates_passed": [],
+      "initial": {
+        "health": {
+          "steps": 0,
+          "final_time_s": 0.0,
+          "restart_sha256": "ab65361ba79a7ddd0bd119903fb31674abe1501290f2ea1a8e34969754ecd40c"
+        },
+        "metadata": {
+          "time_seconds": 0.0,
+          "steps": 0,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 223148,
+          "canonical_native_dofs": 222917,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 1.9233925177217095e-08,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 61,
+        "minimum_density": 0.00999999999999999,
+        "minimum_temperature": 9.999999999999996e-05,
+        "restart_sha256": "ab65361ba79a7ddd0bd119903fb31674abe1501290f2ea1a8e34969754ecd40c"
+      },
+      "final": {
+        "health": {
+          "steps": 3,
+          "final_time_s": 8.78695694517549e-08,
+          "restart_sha256": "dcca2f5eb5cac9d01700727b64e039e5af0c72d39e65d58cfd644902bb54b494"
+        },
+        "metadata": {
+          "time_seconds": 8.78695694517549e-08,
+          "steps": 3,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 223148,
+          "canonical_native_dofs": 222917,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 1.9233925177217095e-08,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 131,
+        "minimum_density": 0.008866888033074026,
+        "minimum_temperature": 9.742901416298584e-05,
+        "restart_sha256": "dcca2f5eb5cac9d01700727b64e039e5af0c72d39e65d58cfd644902bb54b494"
+      },
+      "minimum_q16_jacobian_m2": 1.4295379237987228e-09,
+      "initial_parity": {
+        "exact_reference_arrays": {
+          "x": true,
+          "values": true,
+          "vertex": true,
+          "size": true,
+          "boundary": true,
+          "constrained": true,
+          "n_sons": true,
+          "t_now": true,
+          "index_now": true
+        },
+        "passed": true,
+        "metrics": {
+          "field": {
+            "absolute_rms_errors": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "reference_rms": [
+              0.04383320014545138,
+              0.0,
+              0.46633036222530605,
+              0.0,
+              0.5490171800359542,
+              0.006213673663975621,
+              0.0
+            ],
+            "tolerances": [
+              4.3834200145451384e-08,
+              1e-12,
+              4.66331362225306e-07,
+              1e-12,
+              5.490181800359543e-07,
+              6.214673663975622e-09,
+              1e-12
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "gradient": {
+            "absolute_rms_errors": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "reference_rms": [
+              0.20696829724954707,
+              0.0,
+              12.821542783533548,
+              0.0,
+              5.585524406421251,
+              0.027983769901979462,
+              0.0
+            ],
+            "tolerances": [
+              2.0696929724954707e-07,
+              1e-12,
+              1.2821543783533547e-05,
+              1e-12,
+              5.585525406421251e-06,
+              2.7984769901979463e-08,
+              1e-12
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          }
+        },
+        "snapshot_kind": "initial"
+      },
+      "parity": {
+        "exact_reference_arrays": {
+          "x": true,
+          "values": false,
+          "vertex": true,
+          "size": true,
+          "boundary": true,
+          "constrained": true,
+          "n_sons": true,
+          "t_now": true,
+          "index_now": true,
+          "xtime": true,
+          "energies": false
+        },
+        "passed": true,
+        "metrics": {
+          "field": {
+            "absolute_rms_errors": [
+              1.7079094615169907e-18,
+              1.0592829117787929e-17,
+              8.396784246451397e-14,
+              6.065384544521613e-14,
+              2.874378502351064e-17,
+              8.456123743386654e-19,
+              3.527620731285516e-18
+            ],
+            "reference_rms": [
+              0.04383331001627416,
+              1.513345952697462e-05,
+              0.46633685220104615,
+              0.0014173374561091748,
+              0.5489131631199169,
+              0.006213746972254411,
+              0.005230133930560146
+            ],
+            "tolerances": [
+              4.3834310016274163e-08,
+              1.613345952697462e-11,
+              4.663378522010461e-07,
+              1.4183374561091748e-09,
+              5.489141631199169e-07,
+              6.214746972254411e-09,
+              5.231133930560146e-09
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "gradient": {
+            "absolute_rms_errors": [
+              7.619497216723754e-16,
+              7.712089921027005e-17,
+              4.3159585036550703e-10,
+              1.590777833340059e-10,
+              3.216144590674776e-14,
+              5.450113043571576e-16,
+              1.8567718798558842e-15
+            ],
+            "reference_rms": [
+              0.20696953792743442,
+              0.00010276502471141839,
+              12.824839495116803,
+              0.03235508468022396,
+              5.439002109733472,
+              0.027177705773081783,
+              0.18669517632804555
+            ],
+            "tolerances": [
+              2.069705379274344e-07,
+              1.0376502471141838e-10,
+              1.2824840495116803e-05,
+              3.235608468022396e-08,
+              5.439003109733472e-06,
+              2.7178705773081783e-08,
+              1.8669617632804553e-07
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          }
+        },
+        "snapshot_kind": "evolved"
+      },
+      "workspace_retries": 0,
+      "equilibrium_summary": {
+        "iterations": 7,
+        "last_raw_update": 4.005e-11,
+        "converged": true
+      }
+    },
+    "probe3": {
+      "stage": "probe3",
+      "status": "completed",
+      "returncode": 0,
+      "process_wall_seconds": 578.2148248479934,
+      "binary_sha256": "57826fadf03fc19c62b305924de70db5ea569dfcf006b62d207ce2bc41fc5403",
+      "scientific_gates_passed": [],
+      "initial": {
+        "health": {
+          "steps": 0,
+          "final_time_s": 0.0,
+          "restart_sha256": "0115158b4ec43d2d7706d284df1d61b5305dd18ec36be740e9e69f37513dcd2a"
+        },
+        "metadata": {
+          "time_seconds": 0.0,
+          "steps": 0,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 310076,
+          "canonical_native_dofs": 309845,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 1.9233925177217095e-08,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 61,
+        "minimum_density": 0.00999999999999999,
+        "minimum_temperature": 9.999999999999996e-05,
+        "restart_sha256": "0115158b4ec43d2d7706d284df1d61b5305dd18ec36be740e9e69f37513dcd2a"
+      },
+      "final": {
+        "health": {
+          "steps": 3,
+          "final_time_s": 8.78695694517549e-08,
+          "restart_sha256": "8203a1fe31750a79c42757feb86be9c98cfb0e33a53e04edd91e72e4ef37cf4c"
+        },
+        "metadata": {
+          "time_seconds": 8.78695694517549e-08,
+          "steps": 3,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 310076,
+          "canonical_native_dofs": 309845,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 1.9233925177217095e-08,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 131,
+        "minimum_density": 0.008866881996235565,
+        "minimum_temperature": 9.742911719663799e-05,
+        "restart_sha256": "8203a1fe31750a79c42757feb86be9c98cfb0e33a53e04edd91e72e4ef37cf4c"
+      },
+      "minimum_q16_jacobian_m2": 1.4295379237987228e-09,
+      "workspace_retries": 0,
+      "equilibrium_summary": {
+        "iterations": 12,
+        "last_raw_update": 9.306e-11,
+        "converged": true
+      }
+    },
+    "control3": {
+      "stage": "control3",
+      "status": "completed",
+      "returncode": 0,
+      "process_wall_seconds": 387.99848826695234,
+      "binary_sha256": "57826fadf03fc19c62b305924de70db5ea569dfcf006b62d207ce2bc41fc5403",
+      "scientific_gates_passed": [],
+      "initial": {
+        "health": {
+          "steps": 0,
+          "final_time_s": 0.0,
+          "restart_sha256": "9f0e868d628c22a112bb4f13dc26200ac893d9f779d7efbf26154aabfbbbe5b5"
+        },
+        "metadata": {
+          "time_seconds": 0.0,
+          "steps": 0,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 223148,
+          "canonical_native_dofs": 222917,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 1.9233925177217095e-08,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 61,
+        "minimum_density": 0.00999999999999999,
+        "minimum_temperature": 9.999999999999996e-05,
+        "restart_sha256": "9f0e868d628c22a112bb4f13dc26200ac893d9f779d7efbf26154aabfbbbe5b5"
+      },
+      "final": {
+        "health": {
+          "steps": 3,
+          "final_time_s": 8.78695694517549e-08,
+          "restart_sha256": "147f2dca0ea169c208acdceed59c9470f4ebb3e3d1cb9992e2ea67dcefa1d23a"
+        },
+        "metadata": {
+          "time_seconds": 8.78695694517549e-08,
+          "steps": 3,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 223148,
+          "canonical_native_dofs": 222917,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 1.9233925177217095e-08,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 131,
+        "minimum_density": 0.00886688214273911,
+        "minimum_temperature": 9.742912396647377e-05,
+        "restart_sha256": "147f2dca0ea169c208acdceed59c9470f4ebb3e3d1cb9992e2ea67dcefa1d23a"
+      },
+      "minimum_q16_jacobian_m2": 1.4295379237987228e-09,
+      "initial_parity": {
+        "exact_reference_arrays": {
+          "x": true,
+          "values": true,
+          "vertex": true,
+          "size": true,
+          "boundary": true,
+          "constrained": true,
+          "n_sons": true,
+          "t_now": true,
+          "index_now": true
+        },
+        "passed": true,
+        "metrics": {
+          "field": {
+            "absolute_rms_errors": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "reference_rms": [
+              0.04383320014545138,
+              0.0,
+              0.46633036222530605,
+              0.0,
+              0.5470619604001429,
+              0.006163768086297527,
+              0.0
+            ],
+            "tolerances": [
+              4.3834200145451384e-08,
+              1e-12,
+              4.66331362225306e-07,
+              1e-12,
+              5.470629604001428e-07,
+              6.164768086297527e-09,
+              1e-12
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "gradient": {
+            "absolute_rms_errors": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "reference_rms": [
+              0.20696829724954707,
+              0.0,
+              12.821542783533548,
+              0.0,
+              5.584940933655634,
+              0.027816512916270877,
+              0.0
+            ],
+            "tolerances": [
+              2.0696929724954707e-07,
+              1e-12,
+              1.2821543783533547e-05,
+              1e-12,
+              5.584941933655634e-06,
+              2.7817512916270877e-08,
+              1e-12
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          }
+        },
+        "snapshot_kind": "initial"
+      },
+      "parity": {
+        "exact_reference_arrays": {
+          "x": true,
+          "values": false,
+          "vertex": true,
+          "size": true,
+          "boundary": true,
+          "constrained": true,
+          "n_sons": true,
+          "t_now": true,
+          "index_now": true,
+          "xtime": true,
+          "energies": false
+        },
+        "passed": true,
+        "metrics": {
+          "field": {
+            "absolute_rms_errors": [
+              1.0273587193247066e-18,
+              9.121572348010155e-19,
+              1.8293492182538538e-14,
+              7.128216838808069e-15,
+              1.9414974844351302e-17,
+              3.5087914380472594e-19,
+              2.8209444417854063e-18
+            ],
+            "reference_rms": [
+              0.04383319490442031,
+              6.5743045545901085e-06,
+              0.4663304363820985,
+              0.001338923470563927,
+              0.546959262236139,
+              0.006163844817249559,
+              0.005230056092142175
+            ],
+            "tolerances": [
+              4.3834194904420306e-08,
+              7.574304554590109e-12,
+              4.6633143638209846e-07,
+              1.3399234705639269e-09,
+              5.46960262236139e-07,
+              6.164844817249559e-09,
+              5.231056092142175e-09
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "gradient": {
+            "absolute_rms_errors": [
+              5.750007043937415e-16,
+              2.890275621931394e-17,
+              4.4948865601202735e-11,
+              5.096619082347888e-12,
+              2.6258363061327257e-14,
+              1.9661170355424046e-16,
+              1.61633194022686e-15
+            ],
+            "reference_rms": [
+              0.20696815330716475,
+              8.25634976139243e-05,
+              12.82122825655124,
+              0.03055972948666687,
+              5.438405549803324,
+              0.027012511976131647,
+              0.18669465743503683
+            ],
+            "tolerances": [
+              2.0696915330716475e-07,
+              8.356349761392429e-11,
+              1.282122925655124e-05,
+              3.056072948666687e-08,
+              5.438406549803324e-06,
+              2.7013511976131647e-08,
+              1.8669565743503683e-07
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          }
+        },
+        "snapshot_kind": "evolved"
+      },
+      "workspace_retries": 0,
+      "equilibrium_summary": {
+        "iterations": 7,
+        "last_raw_update": 4.005e-11,
+        "converged": true
+      }
+    }
+  }
+}

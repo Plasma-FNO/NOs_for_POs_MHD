@@ -1,0 +1,15 @@
+--- a/solvers/mod_mumps.f90
++++ b/solvers/mod_mumps.f90
+@@ -133,11 +133,11 @@
+     mmss%mumps_par%JOB = 2                                   ! factorisation
+     ! MUMPS 5.7.3 permits JOB=2 again after enlarging workspace for -8/-9.
+-    do attempt = 0, 3
++    do attempt = 0, 5
+       call DMUMPS(mmss%mumps_par)
+       if (mmss%mumps_par%infog(1) >= 0) exit
+       if (mmss%mumps_par%infog(1) /= -8 .and. mmss%mumps_par%infog(1) /= -9) exit
+-      if (attempt == 3) exit
++      if (attempt == 5) exit
+       mmss%mumps_par%icntl(14) = 2 * max(1, mmss%mumps_par%icntl(14))
+       call MPI_COMM_RANK(mmss%comm, my_id, ierr)
+       if (my_id == 0) write(*,*) 'MUMPS workspace retry: INFOG(1:2), ICNTL(14)=', &

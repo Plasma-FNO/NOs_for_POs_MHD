@@ -1,0 +1,29 @@
+{
+  "status": "failed_validation",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/scaling8_wall120_20261104",
+  "binary_sha256": "80304f3243d2a803815435e87a124e779e354ab77cd7828c52c7eb888a787cb6",
+  "manifest_sha256": "895728ecffd175a68256beaa10b381a1914e7245eb51f0ae81cc2963a0d0693b",
+  "script_sha256": "7adc9f90f4342918753051708691db128131f468a06d18d578efa54ad3f330f7",
+  "scheduler_preflight": "sbatch: Job 2773223 to start at 2026-11-04T14:29:43 a using 16 processors on nodes r350c03s03 in partition dcgp_fua_prod\n",
+  "budget": {
+    "mpi_ranks": 16,
+    "memory_GiB": 512,
+    "wall_hours_max": 4,
+    "rank_CPU_hours_max": 64,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4240119       4240119            13.8       2531868               2430"
+  },
+  "scientific_gates_passed": [],
+  "job_id": "2773224",
+  "conclusion": "Native final-mesh Jacobian sign changes; no equilibrium or MHD trajectory accepted.",
+  "stage_results": {
+    "probe3": {
+      "stage": "probe3",
+      "status": "failed_validation",
+      "returncode": 1,
+      "process_wall_seconds": 258.6161955910502,
+      "binary_sha256": "80304f3243d2a803815435e87a124e779e354ab77cd7828c52c7eb888a787cb6",
+      "scientific_gates_passed": [],
+      "error": "exit_nonzero"
+    }
+  }
+}

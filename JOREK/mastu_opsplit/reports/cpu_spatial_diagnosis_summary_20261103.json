@@ -1,0 +1,485 @@
+{
+  "scope": "Evidence-based localization of medium/refined discrepancies; next mesh is a hypothesis test, not established convergence.",
+  "measured_facts": {
+    "baseline_current_error_fraction_in_separatrix_band": 0.9868930064250325,
+    "baseline_flow_potential_error_fraction_in_core": 0.8206916210210606,
+    "baseline_parallel_flow_error_fraction_in_divertor": 0.6170918135469347,
+    "paired_vorticity_error_fraction_in_core": 0.9998317117652519,
+    "paired_vorticity_error_fraction_in_perturbation_box": 0.8760828463287559,
+    "paired_current_rms_over_baseline_current_rms": 0.013413207554636852,
+    "paired_vorticity_rms_over_baseline_vorticity_rms": 0.547249206445262
+  },
+  "interpretation": [
+    "Current profile/mesh representation error is already present initially and remains concentrated near the separatrix.",
+    "Flow-potential error grows through time in the shared baseline; the much smaller paired flow-potential error indicates predominantly background mesh/equilibrium relaxation sensitivity.",
+    "Parallel-flow error is common to baseline and perturbed runs and concentrated in wall-extended/open-field and divertor regions. Native sheath-flow boundary forcing is a plausible contributor, not separately isolated.",
+    "The vorticity-response error is dynamically generated around the perturbation and is not solely a small-response denominator effect.",
+    "Native current and vorticity weak definitions involve derivatives of psi/u, so agreement of psi/u values alone does not certify current/vorticity resolution.",
+    "Core chord spacings show a strong radial resolution bottleneck: median refined radial chord ~4.13 cm versus 8 cm imposed radial width, while the median poloidal chord is ~0.247 cm. This supports radial under-resolution of derivative-sensitive perturbation dynamics; chord measurements alone do not establish a convergence order."
+  ],
+  "source_evidence": {
+    "native_weak_definitions": "models/model303/mod_elt_matrix_fft.f90:875-885",
+    "zero_flow_initialization_and_grid_to_wall_zero_boundary_start": "models/model303/initial_conditions.f90:139-290",
+    "sheath_flow_boundary_selection": "models/model303/mod_boundary_conditions.f90:221-248",
+    "equilibrium_stopping": "models/equilibrium.f90:175-193"
+  },
+  "next_refinement": {
+    "selection": "Direct validated-solver3-step probes: core80 original wall counts with equidistant wall spacing; core80 original native wall; core60 original native wall. First geometry/equilibrium/evolution-valid candidate selected before48-step errors.",
+    "reason": "Core radial resolution is the measured bottleneck for response derivatives. Native exterior refinement candidates folded; retain original attachment points while testing additional radial and wall-normal resolution.",
+    "preliminary_RZ": "Keep the validated cached n_R=90,n_Z=260 equilibrium and all geometric guards.",
+    "equations_timestep_physics": "Physical model and48dt=.0625 horizon unchanged; both meshes use1e-10 equilibrium stopping and native amix.5 after observed undamped Picard limit cycle. All field targets unchanged.",
+    "source_change": "Original validated160001-capacity executable for evolution. Enlarged-capacity and exact-neighbor builds both failed the frozen1e-6 field/gradient protocol and remain geometry-only planners; no physical equations or tolerance targets relaxed.",
+    "verification": "Positive finite q8 geometry planning, exact geometry reproduction and three-step native probe using the unchanged executable, then matched-horizon baseline/perturbed pair and all-field response comparison.",
+    "frozen_targets": {
+      "all_8_full_baseline_fields": 0.01,
+      "all_8_full_perturbed_fields": 0.01,
+      "all_8_paired_response_fields": 0.01,
+      "density_and_pressure_integrals": 0.02
+    },
+    "previous_geometry_only_candidate": {
+      "n_flux": 80,
+      "n_tht": 220,
+      "wall_normal_count_factor": 2,
+      "wall_equidistant": true,
+      "elements": 80315,
+      "nodes": 81163,
+      "geometry_job": "2770413",
+      "probe_job": "2770558",
+      "native_and_q8_geometry_passed": true,
+      "minimum_signed_jacobian_m2": 1.9235618605202478e-08
+    },
+    "wall_refinement_limitation": "Core radial count increased40->80; original poloidal and wall counts and native wall-placement algorithm retained. Global wall/poloidal convergence is not certified by this pair.",
+    "direct_probe_job": "2770618",
+    "parallel_fallback_job": "2770937",
+    "selected": {
+      "selected": "radial80wall1",
+      "nodes": 55787,
+      "elements": 55135,
+      "policy": "First healthy direct native3-step probe under frozen1e-10 equilibrium criterion."
+    },
+    "full_jobs": {
+      "baseline48": "2770971",
+      "perturbed48": "2770973",
+      "analysis": "2770975"
+    },
+    "validated_native_probe_original_work": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/radial_native_probe_20261103/radial80wall1",
+    "positive_q8_geometry": {
+      "time_seconds": 0.0,
+      "steps": 0,
+      "quadrature_order": 8,
+      "mapping_status": "diagnostic_restart_only",
+      "expanded_nodal_dofs": 223148,
+      "canonical_native_dofs": 222917,
+      "native_dof_aliases_verified": true,
+      "minimum_signed_jacobian_m2": 1.9235618605202478e-08,
+      "negative_jacobian_samples": 0,
+      "patch_ids_available": false,
+      "native_constraints_available": false
+    },
+    "status": "completed_and_compared"
+  },
+  "not_yet_isolated": [
+    "Refined-grid temporal sensitivity",
+    "Asymptotic spatial order",
+    "Native boundary/axis constraints and physical force-balance residuals (interior auxiliary weak consistency checked separately)"
+  ],
+  "spatial_target_met": false,
+  "analysis_coverage_fraction": 0.9996447092610835,
+  "full_domain_limitation": "Uncovered physical volume is excluded explicitly, with no extrapolation; cannot certify full-domain spatial convergence from covered-volume norms alone.",
+  "interior_weak_constraint_diagnostic": {
+    "report": "cpu_spatial_constraint_diagnosis_20261103.json",
+    "native_q4_max_relative_residual": 1.3532605138008756e-07,
+    "independent_q8_max_relative_residual": 0.00015554309197392125,
+    "interpretation": "No large violation on tested interior rows; native auxiliary-field relations are satisfied far more closely than the cross-mesh field discrepancies. Weak-vector norms do not bound field errors or certify boundary/axis rows."
+  },
+  "boundary_label_check": {
+    "scope": "Boundary label comparison only at coincident physical wall nodes, not field interpolation or a convergence metric",
+    "coincidence_tolerance_m": 1e-08,
+    "fine_wall_nodes": 1074,
+    "shared_physical_wall_nodes": 76,
+    "mismatching_labels_at_shared_nodes": 0,
+    "mismatch_coordinates_m": [],
+    "old_labels": [],
+    "fine_labels": [],
+    "nonshared_wall_nodes_not_classification_tested": 998
+  },
+  "core_spacing_diagnostic": {
+    "medium": {
+      "scope": "Corner-chord length diagnostic on flux-aligned core elements within 2 perturbation widths; not curved-Jacobian or field convergence metric",
+      "elements": 304,
+      "radial_chord_length_m_quantiles_10_50_90": [
+        0.06280806857441229,
+        0.08439117539176896,
+        0.10468877227438408
+      ],
+      "poloidal_chord_length_m_quantiles_10_50_90": [
+        0.0,
+        0.00460058816941172,
+        0.015176068240694342
+      ],
+      "median_radial_length_over_R_width": 1.054889692397112,
+      "median_poloidal_length_over_Z_width": 0.02875367605882325
+    },
+    "refined": {
+      "scope": "Corner-chord length diagnostic on flux-aligned core elements within 2 perturbation widths; not curved-Jacobian or field convergence metric",
+      "elements": 1266,
+      "radial_chord_length_m_quantiles_10_50_90": [
+        0.03140817161299572,
+        0.0413018960858995,
+        0.052517414599140166
+      ],
+      "poloidal_chord_length_m_quantiles_10_50_90": [
+        0.0,
+        0.002465077186133987,
+        0.008716329678313785
+      ],
+      "median_radial_length_over_R_width": 0.5162737010737437,
+      "median_poloidal_length_over_Z_width": 0.01540673241333742,
+      "w_error_energy_weighted_radial_length_quantiles_m": [
+        0.03119633680623618,
+        0.0358833394824153,
+        0.04948917138929033
+      ]
+    }
+  },
+  "rejected_capacity_build": {
+    "binary_sha256": "054e1d98bcfbea6bf660047a413882ff9ac51e8c96cabc7ec0e0582044d69616",
+    "failed_jobs": [
+      "2770030",
+      "2770050"
+    ],
+    "last_relative_temperature_gradient_difference": 8.425642257173813e-05,
+    "interpretation": "Cadence correction did not restore strict parity. No physical-model parameters or tolerance thresholds were relaxed; the enlarged build is not accepted for evolution."
+  },
+  "equilibrium_tolerance_diagnostic": {
+    "before": 1e-06,
+    "after": 1e-10,
+    "baseline_same_mesh_final_q8": {
+      "psi": {
+        "relative_l2_difference": 8.238852311308438e-05,
+        "absolute_rms_difference": 3.61133360539946e-06,
+        "reference_rms": 0.04383296931348843,
+        "target_met": true
+      },
+      "u": {
+        "relative_l2_difference": 0.08805083286530471,
+        "absolute_rms_difference": 9.73801244786202e-07,
+        "reference_rms": 1.1059534738028761e-05,
+        "target_met": false
+      },
+      "zj": {
+        "relative_l2_difference": 0.0005334210337392378,
+        "absolute_rms_difference": 0.0002487247509979981,
+        "reference_rms": 0.4662822334816044,
+        "target_met": true
+      },
+      "w": {
+        "relative_l2_difference": 0.010588879271325473,
+        "absolute_rms_difference": 2.422578578261141e-05,
+        "reference_rms": 0.0022878517321672062,
+        "target_met": false
+      },
+      "rho": {
+        "relative_l2_difference": 0.00025514763040046415,
+        "absolute_rms_difference": 0.0001392449143787777,
+        "reference_rms": 0.5457425340781231,
+        "target_met": true
+      },
+      "T": {
+        "relative_l2_difference": 0.0001118113254492976,
+        "absolute_rms_difference": 6.893983064305237e-07,
+        "reference_rms": 0.006165728772646926,
+        "target_met": true
+      },
+      "Vpar": {
+        "relative_l2_difference": 3.0870379167294e-05,
+        "absolute_rms_difference": 2.672776257538571e-07,
+        "reference_rms": 0.008658060994502706,
+        "target_met": true
+      },
+      "pressure": {
+        "relative_l2_difference": 0.0001247091682601091,
+        "absolute_rms_difference": 7.371008118701729e-07,
+        "reference_rms": 0.005910558318637672,
+        "target_met": true
+      }
+    },
+    "poloidal_velocity_relative_change_q8": 0.046692437011809015,
+    "interpretation": "Loose equilibrium stopping is a material contributor to weak baseline flow and vorticity. Parallel-flow discrepancy is insensitive to this tolerance. These sensitivities are not additive decompositions of cross-mesh errors.",
+    "required_next_action": "Strict1e-10 baseline and perturbed references completed; use both for the next matched spatial comparison.",
+    "paired_response_sensitivity_q8": {
+      "psi": {
+        "relative_l2_difference": 0.00010661388440296452,
+        "absolute_rms_difference": 8.083179387609939e-09,
+        "reference_rms": 7.5817323727351e-05,
+        "target_met": true
+      },
+      "u": {
+        "relative_l2_difference": 0.00023031099169135169,
+        "absolute_rms_difference": 1.0843381871606312e-08,
+        "reference_rms": 4.7081477926758836e-05,
+        "target_met": true
+      },
+      "zj": {
+        "relative_l2_difference": 0.0032035582933805694,
+        "absolute_rms_difference": 2.003853240071184e-05,
+        "reference_rms": 0.006255085928080955,
+        "target_met": true
+      },
+      "w": {
+        "relative_l2_difference": 0.0012557802948063024,
+        "absolute_rms_difference": 1.5733029126358297e-06,
+        "reference_rms": 0.001252848861494919,
+        "target_met": true
+      },
+      "rho": {
+        "relative_l2_difference": 0.0003293448950474452,
+        "absolute_rms_difference": 1.514947897161037e-06,
+        "reference_rms": 0.004599882736736498,
+        "target_met": true
+      },
+      "T": {
+        "relative_l2_difference": 0.00020461104453701554,
+        "absolute_rms_difference": 1.4095835537651129e-08,
+        "reference_rms": 6.889088303882392e-05,
+        "target_met": true
+      },
+      "Vpar": {
+        "relative_l2_difference": 0.00047307803014516163,
+        "absolute_rms_difference": 1.3552755021992316e-07,
+        "reference_rms": 0.0002864803300595828,
+        "target_met": true
+      },
+      "pressure": {
+        "relative_l2_difference": 0.00014039834692292227,
+        "absolute_rms_difference": 1.9585341195375954e-08,
+        "reference_rms": 0.0001394983746220899,
+        "target_met": true
+      }
+    }
+  },
+  "rejected_unbalanced_geometry": {
+    "job_id": "2770116",
+    "core_counts": [
+      240,
+      220
+    ],
+    "outside_factor": 1.5,
+    "wall_factor": 2,
+    "elements": 141537,
+    "nodes": 142505,
+    "fold_error_count": 99,
+    "reason": "Native Jacobian-sign guard rejected upper-divertor cells. No evolution was performed; exterior refinement changed to consistent1.5x counts."
+  },
+  "integer_neighbor_qualification": {
+    "solver160_accepted": false,
+    "geometry_and_neighbours_exact": {
+      "x": true,
+      "vertex": true,
+      "size": true,
+      "index": true,
+      "boundary": true,
+      "constrained": true,
+      "n_sons": true,
+      "neighbours": true
+    },
+    "scientific_objects_identical": {
+      "mod_elt_matrix_fft.o": "bcaa81930c2532bc3cbf93ab7065056581871dd5a8a824c831437e8a79e4964b",
+      "mod_mumps.o": "5c724b72febc605c946cb193bf36351f266d417d2910c587d771729e5b4d1697",
+      "initial_conditions.o": "95aec770136d7f9af4b72324c90b973b4853a35f461db0529defa5777a2842b3",
+      "mod_settings.o": "eb2a80c7e16a6708fb12e5503f1a1ae5283c41830428bfdfd2cf82df2ec380a3",
+      "jorek2_main.o": "a5d3256cd7a475fd1b7fee8c8952acafe27bf2f042dfa1c43b02ee4af58242d0"
+    },
+    "solver160_sha256": "07d7679f4c27e1f0513fac9de9859dbda4f2e747c331290e9af57d33c4af97ef",
+    "planner240_sha256": "a3a93a6319e4778d4972d156831eea99452893a44240b64fbdceb32b4e279d44",
+    "regression": {
+      "stage": "regression8",
+      "status": "failed_validation",
+      "returncode": 0,
+      "process_wall_seconds": 546.3298621110152,
+      "binary_sha256": "07d7679f4c27e1f0513fac9de9859dbda4f2e747c331290e9af57d33c4af97ef",
+      "scientific_gates_passed": [],
+      "initial": {
+        "health": {
+          "steps": 0,
+          "final_time_s": 0.0,
+          "restart_sha256": "e1f7c26544c49b93451b6e7a89c656a7eac6c0c897358305d77704b293cb35e4"
+        },
+        "metadata": {
+          "time_seconds": 0.0,
+          "steps": 0,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 188268,
+          "canonical_native_dofs": 188037,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 7.754036608537834e-08,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 61,
+        "minimum_density": 0.00999999999999999,
+        "minimum_temperature": 9.999999999999996e-05,
+        "restart_sha256": "e1f7c26544c49b93451b6e7a89c656a7eac6c0c897358305d77704b293cb35e4"
+      },
+      "final": {
+        "health": {
+          "steps": 8,
+          "final_time_s": 2.343188518713464e-07,
+          "restart_sha256": "1a04bdcc9ee605494e380d58e8619d212610116b51ba848264e5edf9827fae63"
+        },
+        "metadata": {
+          "time_seconds": 2.343188518713464e-07,
+          "steps": 8,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 188268,
+          "canonical_native_dofs": 188037,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 7.754036608537834e-08,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 131,
+        "minimum_density": 0.007455612046415056,
+        "minimum_temperature": 9.531696947528736e-05,
+        "restart_sha256": "1a04bdcc9ee605494e380d58e8619d212610116b51ba848264e5edf9827fae63"
+      },
+      "error": "cached-start physical parity failed: {'field': {'absolute_rms_errors': [2.3992330264875682e-12, 2.471046567679341e-11, 2.2987534151061163e-09, 2.3461945779114726e-09, 7.198487166831213e-11, 1.5960076803117488e-09, 8.919319547355887e-10], 'reference_rms': [0.043833809259777506, 1.0882450785937487e-05, 0.4663436874380732, 0.0021252826525434746, 0.5468052810841623, 0.006164117405744469, 0.006604950996673097], 'tolerances': [4.3834809259777504e-08, 1.1882450785937487e-11, 4.6634468743807315e-07, 2.1262826525434743e-09, 5.468062810841623e-07, 6.1651174057444686e-09, 6.605950996673098e-09], 'passed': [True, False, True, False, True, True, True]}, 'gradient': {'absolute_rms_errors': [3.67419258019285e-11, 1.9895445438964428e-10, 2.569004642118837e-06, 1.775860123241393e-07, 6.740757328501803e-09, 2.4597995669998526e-06, 1.4727746294823336e-07], 'reference_rms': [0.20697212245479624, 0.000135546250506824, 12.821842137650297, 0.04960431836913148, 5.245995368248376, 0.026220169360739107, 0.16146994396724765], 'tolerances': [2.0697312245479624e-07, 1.3654625050682398e-10, 1.2821843137650295e-05, 4.9605318369131474e-08, 5.245996368248376e-06, 2.6221169360739108e-08, 1.6147094396724763e-07], 'passed': [True, False, True, False, True, False, True]}}"
+    },
+    "field_gradient_tolerances_unchanged": {
+      "created_utc": "2026-11-02T22:08:33.064140+00:00",
+      "scope": "Pilot MPI/capacity parity protocol frozen before independent four-rank 160k validation; no final ML test data",
+      "reference": "Existing validated same-mesh state at the same physical time",
+      "required_geometry": "Exactly matching physical geometry, indices, basis, weights and boundary labels",
+      "quadrature_order": 8,
+      "relative_field_l2_tolerance": 1e-06,
+      "relative_gradient_l2_tolerance": 1e-06,
+      "absolute_rms_tolerance_code_units": 1e-12,
+      "reason": "Native value/s/t/st coefficients use chart-dependent scaling. Absolute unscaled derivative-DOF equality is not a physical norm. These field/gradient targets are 10000 times smaller than the proposed 1% spatial field target.",
+      "historical_raw_comparison": "2768381 failed 1e-10 coefficient tolerance; preserve that failed result. Any physical-norm assessment is separate and does not rewrite it.",
+      "scientific_gate_promotion": false
+    }
+  },
+  "mesh_quality_repair": {
+    "controls_are_geometry_only": true,
+    "reference_physics_and_time_controls_unchanged": true,
+    "quality200_native_fold_count": 9,
+    "baseline_nonuniform_balanced_fold_count": 105,
+    "selection_not_based_on_evolution_errors": true,
+    "quality200_fold_coordinates_m": [
+      [
+        0.8639,
+        0.0
+      ],
+      [
+        0.8988,
+        -0.8341
+      ],
+      [
+        0.9136,
+        -0.8198
+      ],
+      [
+        0.9616,
+        -0.8293
+      ],
+      [
+        0.9772,
+        -0.8106
+      ],
+      [
+        0.3684,
+        -1.3286
+      ],
+      [
+        0.3653,
+        -1.333
+      ],
+      [
+        0.3684,
+        -1.3286
+      ],
+      [
+        0.3647,
+        -1.3325
+      ]
+    ]
+  },
+  "rejected_quality_geometry": {
+    "job_id": "2770273",
+    "native_fold_counts": {
+      "quality200": 9,
+      "quality160": 9,
+      "quality60": 6
+    },
+    "evolution_performed": false
+  },
+  "rejected_radial240_geometry": {
+    "job_id": "2770374",
+    "status": "cancelled_remaining_wall_variants_after_core_failure",
+    "core_fold_count": 4,
+    "central_mesh_evidence": "cpu_radial240_geometry_diagnosis_20261103.json",
+    "evolution_performed": false
+  },
+  "refined_equilibrium_limit_cycle": {
+    "report": "cpu_equilibrium_limit_cycle_20261103.json",
+    "undamped_probe_job": "2770445",
+    "refinement_geometry_valid": true,
+    "damped_probe_job": "2770558",
+    "matched_reference_jobs": [
+      "2770560",
+      "2770562"
+    ],
+    "native_numerical_change": "amix0 -> amix.5 (half Picard correction)",
+    "raw_update_stopping_tolerance_unchanged": 1e-10,
+    "physical_coefficients_changed": false,
+    "validation_pending": false,
+    "outcome": "Half-update finer equilibrium also stagnated; stopped without accepting evolution.",
+    "additional_report": "cpu_damped_equilibrium_limit_cycle_20261103.json",
+    "matched_damped_reference_validation": {
+      "baseline48": {
+        "status": "completed",
+        "final_steps": 48,
+        "final_time_s": 1.4059131112280784e-06,
+        "maximum_relative_final_field_change_from_undamped_strict": 5.624810992254331e-06,
+        "poloidal_velocity_relative_change": 4.429976774723794e-06
+      },
+      "perturbed48": {
+        "status": "completed",
+        "final_steps": 48,
+        "final_time_s": 1.4059131112280784e-06,
+        "maximum_relative_final_field_change_from_undamped_strict": 1.7124261177756606e-06,
+        "poloidal_velocity_relative_change": 1.7157156239354123e-06
+      }
+    }
+  },
+  "rejected_native_wall_geometry": {
+    "job_id": "2770598",
+    "native_fold_count": 10,
+    "evolution_performed": false
+  },
+  "final_refinement_result": {
+    "status": "spatial_targets_not_met",
+    "report": "cpu_spatial_next_convergence_20261103.json",
+    "both_runs_completed_and_validated": true,
+    "steps": 48,
+    "final_time_s": 1.4059131112280784e-06,
+    "failing_relative_L2_metrics": {
+      "baseline48": {},
+      "perturbed48": {
+        "w": 0.030445808428728995
+      },
+      "paired_response": {
+        "zj": 0.027417640835032005,
+        "w": 0.0655449044501697
+      }
+    },
+    "covered_refined_volume_fraction": 1.0,
+    "maximum_integral_relative_difference": 5.1728130371533796e-05,
+    "full_domain_spatial_convergence_established": false,
+    "mesh_refinement_scope": "Core radial count refinement with original wall and poloidal counts; wall placement follows the selected frozen candidate. Poloidal and wall-count convergence is not established by this pair."
+  }
+}

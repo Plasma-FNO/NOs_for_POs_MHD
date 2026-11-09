@@ -1,0 +1,26 @@
+{
+  "source": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_spatial_error_diagnosis_20261104.py",
+  "coarse": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/combined_refined_solver_20261103/control3/jorek000000.h5",
+  "diagnosis": [
+    {
+      "rz_m": [
+        1.2903584933425711,
+        0.8638891486913587
+      ],
+      "recovered": false,
+      "best_error_m": 0.00016875789088207838,
+      "element": 41497,
+      "st": [
+        0.9999999999999999,
+        0.3339607891514294
+      ],
+      "outer_boundary": [
+        {
+          "edge": 1,
+          "outward_offset_m": 0.0001687578908820784
+        }
+      ]
+    }
+  ],
+  "scientific_gates_passed": []
+}

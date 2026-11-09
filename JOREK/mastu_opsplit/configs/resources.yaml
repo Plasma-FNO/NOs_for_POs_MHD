@@ -1,0 +1,64 @@
+status: cpu_development_authorized_campaign_gated
+account: fupa2_fauna
+partition: dcgp_fua_dbg
+bulk_root: /pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit
+retention_confirmed: false
+simulation:
+  nodes: 1
+  ntasks: 4
+  cpus_per_task: 1
+  memory_gb: 16
+  wall_minutes: 30
+  array_concurrency: 1
+  attempts_max: 2
+pilot:
+  trajectories: 16
+  reference_and_refinement_jobs_max: 8
+  cpu_core_hours_max: 96
+  gpu_hours_max: 0
+  storage_gb_max: 50
+  node_hours_max: 24
+  allocated_cpu_core_hours_if_exclusive_max: 1536
+  authorization: cpu_development_authorized_ensemble_budget_pending
+training:
+  enabled: false
+  seeds: 3
+  models: 3
+  gpu_hours_max: 0
+production:
+  enabled: false
+  trajectories_target: 280
+  cpu_core_hours_max: 0
+  gpu_hours_max: 0
+  storage_gb_max: 0
+cpu_development:
+  approval_source: 'Explicit user reply: Continue the study on CPU'
+  record: reports/cpu_continuation_20261102.json
+  submitted_jobs: 29
+  nodes_per_job: 1
+  cpus_per_job: 1 or 4 MPI ranks; at most 2 compiler processes per build
+  attempts_per_job: 1
+  maximum_node_hours_all_current_requests: 8.666666666666666
+  maximum_cpu_core_hours_all_current_requests: 20.166666666666668
+  ensemble_enabled: false
+  scientific_training_enabled: false
+  submitted_build_jobs: 7
+  additional_record: reports/cpu_io_continuation_20261102.json
+  energy_record: reports/cpu_energy_complete_continuation_20261102.json
+cpu_refinement:
+  status: authorized_after_cpu_budget_verification
+  record: reports/cpu_budget_authorization_20261102.json
+  account: fupa2_fauna
+  partition: dcgp_fua_prod
+  nodes_per_job: 1
+  mpi_ranks_max: 16
+  omp_threads: 1
+  memory_GiB_max: 128
+  wall_minutes_max: 120
+  attempts_per_job: 1
+  requested_cpu_core_hours_max: 128
+  requested_node_hours_max: 8
+  simulation_submissions_max: 6
+  concurrency_max: 1
+  training_enabled: false
+  production_enabled: false

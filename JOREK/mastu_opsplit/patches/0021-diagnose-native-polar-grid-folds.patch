@@ -1,0 +1,28 @@
+--- a/grids/grid_utils/define_central_grid.f90
++++ b/grids/grid_utils/define_central_grid.f90
+@@ -583,6 +583,14 @@
+   enddo
+ enddo
+ 
++open(unit=8123,file='opsplit_polar_lines.dat',status='replace')
++do j=1,n_tht
++  do i=1,5
++    write(8123,*) j,i,R_polar(i,:,j),Z_polar(i,:,j)
++  enddo
++enddo
++close(8123)
++
+ deallocate (R_beg ,Z_beg )
+ deallocate (delta1,delta2)
+ 
+@@ -660,6 +668,10 @@
+     if (ifail .ne. 0) then
+       write(*,'(A,I6,I6,I6,F20.10)') ' WARNING node not found for central grid (without legs) : ',ifail,i,j
+     endif
++    if (i == 1 .and. j == n_start) open(unit=8124,file='opsplit_core_points.dat',status='replace')
++    write(8124,*) i,j,nwpts%RR_new(i+1,j),nwpts%ZZ_new(i+1,j),nwpts%ielm_flux(i+1,j), &
++                   nwpts%s_flux(i+1,j),nwpts%t_flux(i+1,j),nwpts%k_cross(i+1,j),nwpts%t_tht(i+1,j)
++    if (i == n_flux+n_open+n_outer+n_inner .and. j == n_loop) close(8124)
+       
+   enddo
+ enddo

@@ -1,0 +1,131 @@
+--- a/grids/grid_utils/update_boundary_types.f90
++++ b/grids/grid_utils/update_boundary_types.f90
+@@ -36,6 +36,8 @@
+   logical, parameter :: debug2 = .false.
+   integer, parameter :: n_times = 3 ! assume maximum of 2 holes...
+   integer            :: i_times
++  integer, allocatable :: node_incidence(:)
++  integer :: incidence_node, incidence_vertex, incidence_element, max_node
+   
+   ! --- Some printouts?
+   if (debug) then
+@@ -54,6 +56,21 @@
+     n_xpoints = 0
+   endif
+   
++  ! Count distinct incident elements once; duplicate vertices count only once.
++  max_node=0
++  do incidence_element=1,element_list%n_elements
++    max_node=max(max_node,maxval(element_list%element(incidence_element)%vertex))
++  enddo
++  allocate(node_incidence(0:max_node))
++  node_incidence=0
++  do incidence_element=1,element_list%n_elements
++    do incidence_vertex=1,4
++      incidence_node=element_list%element(incidence_element)%vertex(incidence_vertex)
++      if (any(element_list%element(incidence_element)%vertex(1:incidence_vertex-1) == incidence_node)) cycle
++      node_incidence(incidence_node)=node_incidence(incidence_node)+1
++    enddo
++  enddo
++
+   ! --- Initialise first!
+   do i_node=1,node_list%n_nodes
+     node_list%node(i_node)%boundary = 0
+@@ -71,14 +88,14 @@
+         i_node = element_list%element(i_elm)%vertex(i_vertex)
+         if ( (i_node .le. 4) .and. (xcase .ne. DOUBLE_NULL) .and. (across_xpoint .gt. 0) ) cycle
+         if ( (i_node .le. 8) .and. (xcase .eq. DOUBLE_NULL) .and. (across_xpoint .gt. 0) ) cycle
+-        call adjacent_elements(element_list,node_list,i_elm,i_vertex,3,elm_sum)
++        call cached_adjacent_elements(i_elm,i_vertex,3,elm_sum)
+         ! --- We want a corner node to start with (note this also make it safer if we have axis nodes on our grid)
+         ! --- We want an inverted corner when looking for additional holes
+         if (     ( (elm_sum .eq. 0) .and. (i_times .eq. 1) ) &
+             .or. ( (elm_sum .eq. 2) .and. (i_times .gt. 1) ) ) then
+           ! --- Use one of the adjacent nodes to start from
+           i_vertex_next = mod(i_vertex+2,4) + 1
+-          call adjacent_elements(element_list,node_list,i_elm,i_vertex_next,3,elm_sum)
++          call cached_adjacent_elements(i_elm,i_vertex_next,3,elm_sum)
+           if (elm_sum .eq. 1) then
+             i_vertex_first = i_vertex_next
+             i_elm_first    = i_elm
+@@ -87,7 +104,7 @@
+           else
+             ! --- Try the other direction (this might be the xpoint when we have an individual leg alone)
+             i_vertex_next = mod(i_vertex,4) + 1
+-            call adjacent_elements(element_list,node_list,i_elm,i_vertex_next,3,elm_sum)
++            call cached_adjacent_elements(i_elm,i_vertex_next,3,elm_sum)
+             if (elm_sum .eq. 1) then
+               i_vertex_first = i_vertex_next
+               i_elm_first    = i_elm
+@@ -122,7 +139,7 @@
+       !write(*,*)'iter...',iter
+       
+       ! --- What type is this boundary?
+-      call adjacent_elements(element_list,node_list,i_elm_now,i_vertex_now,2,elm_sum)
++      call cached_adjacent_elements(i_elm_now,i_vertex_now,2,elm_sum)
+       if ( (elm_sum .eq. 0) .and. (i_elm_prev .eq. 0) ) then
+         write(*,*)'Impossible, we should always start on a non-corner node. Aborting...'
+         exit
+@@ -135,13 +152,13 @@
+       
+       ! --- Find the next boundary node on this element
+       i_vertex_next = mod(i_vertex_now,4) + 1 ! it should always be the same direction (ie. +1, not -1).
+-      call adjacent_elements(element_list,node_list,i_elm_now,i_vertex_next,3,elm_sum)
++      call cached_adjacent_elements(i_elm_now,i_vertex_next,3,elm_sum)
+       if (debug2) write(*,'(A,i6,2f10.3,i2)')'Trying next bnd node   :',element_list%element(i_elm_now)%vertex(i_vertex_next),&
+                                               node_list%node(element_list%element(i_elm_now)%vertex(i_vertex_next))%x(1,1,1:2),elm_sum
+       if (elm_sum .eq. 3) then
+         ! --- Something wrong: we went back inside grid. change direction...'
+         i_vertex_next = mod(i_vertex_now+2,4) + 1
+-        call adjacent_elements(element_list,node_list,i_elm_now,i_vertex_next,3,elm_sum)
++        call cached_adjacent_elements(i_elm_now,i_vertex_next,3,elm_sum)
+         if (debug2) write(*,'(A,i6,2f10.3,i2)')'Wrong direction, other :',element_list%element(i_elm_now)%vertex(i_vertex_next),&
+                                                 node_list%node(element_list%element(i_elm_now)%vertex(i_vertex_next))%x(1,1,1:2),elm_sum
+         if (elm_sum .eq. 3) then
+@@ -158,13 +175,13 @@
+       if ( (elm_sum .eq. 0) .and. (i_node .gt. n_xpoints) ) then
+         i_vertex_save = i_vertex_next
+         i_vertex_next = mod(i_vertex_next,4) + 1 ! it should always be the same direction (ie. +1, not -1)
+-        call adjacent_elements(element_list,node_list,i_elm_now,i_vertex_next,3,elm_sum)
++        call cached_adjacent_elements(i_elm_now,i_vertex_next,3,elm_sum)
+         if (debug2) write(*,'(A,i6,2f10.3,i2)')'On corner, next node is:',element_list%element(i_elm_now)%vertex(i_vertex_next),&
+                                                 node_list%node(element_list%element(i_elm_now)%vertex(i_vertex_next))%x(1,1,1:2),elm_sum
+         if ( (elm_sum .eq. 3) .or. (element_list%element(i_elm_now)%vertex(i_vertex_next) .eq. i_node_prev) ) then
+           ! --- Something wrong: we went back inside grid. change direction...'
+           i_vertex_next = mod(i_vertex_save+2,4) + 1
+-          call adjacent_elements(element_list,node_list,i_elm_now,i_vertex_next,3,elm_sum)
++          call cached_adjacent_elements(i_elm_now,i_vertex_next,3,elm_sum)
+           if (debug2) write(*,'(A,i6,2f10.3,i2)')'Wrong direction, other :',element_list%element(i_elm_now)%vertex(i_vertex_next),&
+                                                   node_list%node(element_list%element(i_elm_now)%vertex(i_vertex_next))%x(1,1,1:2),elm_sum
+           if (elm_sum .eq. 3) then
+@@ -211,7 +228,7 @@
+           if (i_node2 .eq. i_node) then
+             ! --- If this is one, check that the next node is also a boundary
+             i_vertex_next = mod(i_vertex2,4) + 1 ! it should always be the same direction (ie. +1, not -1)
+-            call adjacent_elements(element_list,node_list,i_elm2,i_vertex_next,3,elm_sum)
++            call cached_adjacent_elements(i_elm2,i_vertex_next,3,elm_sum)
+             if (elm_sum .le. 2) then
+               found_next   = .true.
+               i_elm_prev   = i_elm_now
+@@ -220,7 +237,7 @@
+             else
+               ! --- Something wrong: change direction...'
+               i_vertex_next = mod(i_vertex2+2,4) + 1
+-              call adjacent_elements(element_list,node_list,i_elm2,i_vertex_next,3,elm_sum)
++              call cached_adjacent_elements(i_elm2,i_vertex_next,3,elm_sum)
+               if (elm_sum .le. 2) then
+                 found_next   = .true.
+                 i_elm_prev   = i_elm_now
+@@ -299,6 +316,12 @@
+   
+   return
+   
++contains
++  subroutine cached_adjacent_elements(ielm,iv,side_max,elm_sum)
++    integer,intent(in) :: ielm,iv,side_max
++    integer,intent(out) :: elm_sum
++    elm_sum=min(side_max,node_incidence(element_list%element(ielm)%vertex(iv))-1)
++  end subroutine cached_adjacent_elements
+ end subroutine update_boundary_types
+ 
+ 

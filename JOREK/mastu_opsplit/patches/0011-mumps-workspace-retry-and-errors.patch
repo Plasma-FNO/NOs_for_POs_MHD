@@ -1,0 +1,88 @@
+--- a/solvers/mod_mumps.f90
++++ b/solvers/mod_mumps.f90
+@@ -42,6 +42,7 @@
+     mmss%mumps_par%icntl(13) = -1
+   
+     call  DMUMPS(mmss%mumps_par)                        ! Initialize an instance of mumps
++    call mumps_check(mmss, "initialization")
+     
+     mmss%mumps_par%icntl(2)  = -1                       ! Verbosity levels
+     mmss%mumps_par%icntl(3)  = -1
+@@ -104,6 +105,7 @@
+     endif
+     
+     call DMUMPS(mmss%mumps_par)
++    call mumps_check(mmss, "analysis")
+ 
+     mmss%analyzed = .true.
+   
+@@ -112,10 +114,12 @@
+   subroutine mumps_factorize(mmss,a_mat)
+   
+     use data_structure, only: type_SP_MATRIX
++    use mpi_mod
+     implicit none
+     
+     type(type_MUMPS_SOLVER) :: mmss
+     type(type_SP_MATRIX)    :: a_mat
++    integer :: attempt, my_id, ierr
+     
+     if (.not. mmss%projection) then
+       mmss%mumps_par%A_loc   => a_mat%val
+@@ -128,7 +132,18 @@
+     endif
+       
+     mmss%mumps_par%JOB = 2                                   ! factorisation
+-    call DMUMPS(mmss%mumps_par)
++    ! MUMPS 5.7.3 permits JOB=2 again after enlarging workspace for -8/-9.
++    do attempt = 0, 3
++      call DMUMPS(mmss%mumps_par)
++      if (mmss%mumps_par%infog(1) >= 0) exit
++      if (mmss%mumps_par%infog(1) /= -8 .and. mmss%mumps_par%infog(1) /= -9) exit
++      if (attempt == 3) exit
++      mmss%mumps_par%icntl(14) = 2 * max(1, mmss%mumps_par%icntl(14))
++      call MPI_COMM_RANK(mmss%comm, my_id, ierr)
++      if (my_id == 0) write(*,*) 'MUMPS workspace retry: INFOG(1:2), ICNTL(14)=', &
++        mmss%mumps_par%infog(1:2), mmss%mumps_par%icntl(14)
++    enddo
++    call mumps_check(mmss, "factorization")
+     
+     mmss%analyzed = .true.
+     
+@@ -153,6 +168,7 @@
+     mmss%mumps_par%JOB = 3                                   ! Solve
+ 
+     call DMUMPS(mmss%mumps_par)
++    call mumps_check(mmss, "solve")
+     
+     call MPI_Bcast(mmss%mumps_par%rhs,mmss%mumps_par%n,MPI_DOUBLE_PRECISION,0,mmss%mumps_par%comm,ierr)    
+     
+@@ -189,8 +205,28 @@
+     ! To allow running our code with -fpe0 we need to temporarily disable the
+     ! checks, otherwise it'll crash here.
+     call DMUMPS(mmss%mumps_par)
++    call mumps_check(mmss, "multiple solve")
+ 
+   end subroutine mumps_solve_multiple
++
++  subroutine mumps_check(mmss, phase)
++    use mpi_mod
++    use iso_fortran_env, only: error_unit
++    implicit none
++    type(type_MUMPS_SOLVER) :: mmss
++    character(len=*), intent(in) :: phase
++    integer :: my_id, ierr
++
++    if (mmss%mumps_par%infog(1) >= 0) return
++    call MPI_COMM_RANK(mmss%comm, my_id, ierr)
++    if (my_id == 0) then
++      write(error_unit,*) 'MUMPS failure during ', phase, ': INFOG(1:2)=', mmss%mumps_par%infog(1:2)
++      flush(error_unit)
++    endif
++    ! Equilibrium can use COMM_SELF while other world ranks wait for its result.
++    call MPI_ABORT(MPI_COMM_WORLD, 1, ierr)
++    error stop 1
++  end subroutine mumps_check
+ 
+   subroutine mumps_finalize(mmss)
+     implicit none

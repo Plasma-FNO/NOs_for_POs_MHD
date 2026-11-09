@@ -1,0 +1,52 @@
+--- a/models/element_matrix_GS_perturbation.f90
++++ b/models/element_matrix_GS_perturbation.f90
+@@ -27,7 +27,7 @@
+ 
+ real*8     :: xjac, wst
+ real*8     :: ps0_x, ps0_y, v, v_x, v_y, psi, psi_x, psi_y, rhs_ij
+-real*8     :: pprime_fact, fact_newton
++real*8     :: pprime_fact, fact_newton, pressure_span_derivative
+ integer    :: ms, mt, i, j, k, l, index_ij, index_kl, itype, ivar_in, ivar_out, i_harm, xcase2, nc, nj, ierr
+ logical    :: xpoint2, newton_method_GS
+ real*8     :: Z_xpoint(2),psi_axis,psi_bnd,dj_dpsi,dj_dz, psi_norm, fact_private
+@@ -51,14 +51,6 @@
+   pprime_fact = (psi_bnd - psi_axis)/delta_psi_GS  ! --- factor to impose total dp_dpsi instead of just dp_dpsinorm
+ else
+   pprime_fact = 1.d0
+-  if (newton_method_GS) then  !--- if newton iterations, oblige the user to specify target psi_bnd-psi_axis
+-    write(*,*) "*************************************************************"
+-    write(*,*) "*  Please specify delta_psi_GS = psi_bnd-psi_axis in the    *"
+-    write(*,*) "*  input file for Newton iterations for the GS equation     *"
+-    write(*,*) "*  If unknown, calculate it with newton_GS_fixbnd=.false.   *"
+-    write(*,*) "*************************************************************"
+-    call MPI_ABORT(MPI_COMM_WORLD,3,ierr) 
+-  endif
+ endif
+ 
+ !---------------------------------------------------- value of (x,y) and derivatives on Gaussian points
+@@ -141,6 +133,13 @@
+       endif
+     endif
+ 
++    ! For profiles specified in normalized flux, dp/dpsi also varies with
++    ! the axis-to-boundary span. Fixed delta_psi_GS cancels this dependence.
++    pressure_span_derivative = 0.d0
++    if (delta_psi_GS >= 10000.d0) then
++      pressure_span_derivative = (zn*dT_dpsi + dn_dpsi*zT)*x_g(ms,mt)/(psi_bnd-psi_axis)
++    endif
++
+     do i=1,n_vertex_max
+ 
+       do j=1,n_degrees
+@@ -202,6 +201,11 @@
+              +  ( dFFprime_dpsi/x_g(ms,mt) - pprime_fact*(zn*ddT_dpsi + ddn_dpsi*zT + 2.*dn_dpsi*dT_dpsi)*x_g(ms,mt) )   &
+              *fact_private * v * psi_bnd_kl(k,l)  *  psi_norm      * xjac * wst * fact_newton    
+ 
++            ELM_axis(index_ij,index_kl) = ELM_axis(index_ij,index_kl) &
++              + pressure_span_derivative*v*psi_axis_kl(k,l)*xjac*wst*fact_newton
++            ELM_bnd(index_ij,index_kl) = ELM_bnd(index_ij,index_kl) &
++              - pressure_span_derivative*v*psi_bnd_kl(k,l)*xjac*wst*fact_newton
++
+          enddo
+        enddo
+ 

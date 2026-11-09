@@ -1,0 +1,11 @@
+--- a/models/equilibrium.f90
++++ b/models/equilibrium.f90
+@@ -90,7 +90,7 @@
+ freeboundary_equil  = .false.
+ 
+ !------------------------------------ fixed boundary equilibrium
+-n_iter       = 200
++n_iter       = 400
+ psi_bnd      = 0.d0
+ ES%psi_bnd   = 0.d0
+ Z_xpoint(1)  = -99.d0

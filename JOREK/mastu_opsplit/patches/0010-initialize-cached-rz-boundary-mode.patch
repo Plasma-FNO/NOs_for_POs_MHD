@@ -1,0 +1,11 @@
+--- a/jorek2_main.f90
++++ b/jorek2_main.f90
+@@ -383,6 +383,8 @@
+       stop
+     end if
+ #else
++    ! Preserve the requested boundary mode also when reusing an R/Z equilibrium.
++    freeb_equil2 = freeboundary_equil
+     if_not_regrid_from_rz: if(.not. regrid_from_rz) then
+       
+       ! --- allocate values of nodes

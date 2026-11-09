@@ -1,0 +1,80 @@
+{
+  "approval": "one unchanged equilibrium regression in each debug partition; one attempt per run; no pilot or training",
+  "approved_config": "configs/equilibrium_dcgp_authorized_20261102.yaml",
+  "authorized_script": "reports/equilibrium_dcgp_authorized_20261102.sbatch",
+  "equilibrium_passed": true,
+  "gate_A_passed": false,
+  "job_id": "2767720",
+  "original_request": "reports/equilibrium_request.sbatch",
+  "output": "runs/equilibrium_regression_dcgp_20261102",
+  "pilot_authorized": true,
+  "prepared": "runs/prepared_equilibrium_dcgp_authorized_20261102",
+  "queue_reason": null,
+  "state": "COMPLETED",
+  "training_authorized": false,
+  "last_checked_utc": "2026-11-02T17:46:22.417686+00:00",
+  "scheduler_queue_snapshot": "2767720|COMPLETED|27|1|1|0:0|billing=1,cpu=1,mem=8G,node=1|fupa2_fauna|dcgp_fua_dbg|2026-11-02T16:07:57|2026-11-02T16:08:24",
+  "estimated_start": "2026-11-02T16:07:57",
+  "partition_qos_group_nodes_limit": 8,
+  "account": "fupa2_fauna",
+  "partition": "dcgp_fua_dbg",
+  "qos": "normal",
+  "queue_move_record": "reports/equilibrium_queue_move_20261102.json",
+  "approval_source": "Explicit user reply: Run it in both partitions",
+  "job_ids": [
+    "2767719",
+    "2767720"
+  ],
+  "all_partitions_passed": true,
+  "dual_partition_record": "reports/equilibrium_both_partitions_20261102.json",
+  "replaced_job_id": "2767445",
+  "runs": [
+    {
+      "label": "boost",
+      "job_id": "2767719",
+      "account": "fupb2_ukaea_ml",
+      "partition": "boost_fua_dbg",
+      "state": "COMPLETED",
+      "queue_reason": null,
+      "prepared": "runs/prepared_equilibrium_boost_authorized_20261102",
+      "output": "runs/equilibrium_regression_boost_20261102",
+      "equilibrium_passed": true,
+      "accounting": {
+        "elapsed_seconds": 25,
+        "allocated_cpus": 1,
+        "allocated_nodes": 1,
+        "exit_code": "0:0",
+        "alloc_tres": "billing=1,cpu=1,gres/tmpfs=10737418240,mem=8G,node=1"
+      }
+    },
+    {
+      "label": "dcgp",
+      "job_id": "2767720",
+      "account": "fupa2_fauna",
+      "partition": "dcgp_fua_dbg",
+      "state": "COMPLETED",
+      "queue_reason": null,
+      "prepared": "runs/prepared_equilibrium_dcgp_authorized_20261102",
+      "output": "runs/equilibrium_regression_dcgp_20261102",
+      "equilibrium_passed": true,
+      "accounting": {
+        "elapsed_seconds": 27,
+        "allocated_cpus": 1,
+        "allocated_nodes": 1,
+        "exit_code": "0:0",
+        "alloc_tres": "billing=1,cpu=1,mem=8G,node=1"
+      }
+    }
+  ],
+  "reference_comparison": {
+    "dataset": "values",
+    "maximum_absolute_difference": 8.432857492834955e-05,
+    "absolute_tolerance": 0.0001,
+    "reference_sha256": "30a3f81b44358720b02ec995dc6049e393d3321bfb173e3a075d1aedf6cf413e"
+  },
+  "result": "runs/equilibrium_regression_dcgp_20261102/result.json",
+  "cpu_continuation_record": "reports/cpu_continuation_20261102.json",
+  "pilot_authorization_scope": "CPU development continuation only; see per-run configs and staged caps",
+  "scientific_training_authorized": false,
+  "production_authorized": false
+}

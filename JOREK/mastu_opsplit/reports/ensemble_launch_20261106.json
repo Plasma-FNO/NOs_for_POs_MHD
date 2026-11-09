@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-06",
+  "array_job_id": "2790285",
+  "initial_monitor_job_id": "2790471",
+  "run_directory": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_ensemble80_comparison_20261106",
+  "split_counts": {"train": 80, "validation": 0, "test": 20},
+  "seeds": [17, 18, 19],
+  "families": ["ar", "node", "opsplit"],
+  "updates_per_model_seed": 2000,
+  "array": "0-8%3",
+  "training_resources": {"account": "fupa2_fauna", "partition": "dcgp_fua_prod", "cpus": 4, "memory": "24G", "time_limit": "24:00:00"},
+  "monitor_resources": {"partition": "ptgr_all_serial", "cpus": 1, "memory": "1G", "time_limit": "04:00:00"},
+  "monitor_interval_seconds": 300,
+  "monitor_renewal_seconds": 13800,
+  "monitor_status": "monitor_status.json",
+  "monitor_alert_history": "monitor_alerts.json",
+  "monitor_behavior": "Records scheduler failures, nonzero exit codes, Python tracebacks, numerical and physical audit failures, missing completion artifacts and monitor errors. Renews through Slurm until the array terminates. Runs matched comparison aggregation after successful completion. Does not modify or retry training jobs.",
+  "notifications": "Persistent files and Slurm logs; automatic chat notifications unavailable in this session.",
+  "source_snapshot_modified": false
+}

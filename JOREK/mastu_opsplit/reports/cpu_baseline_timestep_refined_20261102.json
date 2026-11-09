@@ -1,0 +1,38 @@
+{
+  "comparisons": [
+    {
+      "below_one_percent_all_fields": false,
+      "coarse_steps": 12,
+      "fine_steps": 24,
+      "maximum_field_difference": 0.03025817702166852,
+      "relative_l2_field_differences": {
+        "T": 0.00032358173528446437,
+        "Vpar": 0.005883209255067995,
+        "psi": 4.605609672708955e-06,
+        "rho": 1.7259380374254567e-05,
+        "u": 0.03025817702166852,
+        "w": 0.016196966761505185,
+        "zj": 0.00011498027152215734
+      }
+    },
+    {
+      "below_one_percent_all_fields": false,
+      "coarse_steps": 24,
+      "fine_steps": 48,
+      "maximum_field_difference": 0.015073506464695074,
+      "relative_l2_field_differences": {
+        "T": 0.00015864585447619464,
+        "Vpar": 0.0024674974801317208,
+        "psi": 2.1283994546608e-06,
+        "rho": 8.020587362681748e-06,
+        "u": 0.015073506464695074,
+        "w": 0.005223156233507864,
+        "zj": 5.1132632818521384e-05
+      }
+    }
+  ],
+  "gate_A_passed": false,
+  "quadrature_order": 8,
+  "scope": "Unperturbed short-horizon timestep comparison; not mesh or perturbation convergence",
+  "time_seconds": 1.4059131112280784e-06
+}

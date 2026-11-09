@@ -1,0 +1,11 @@
+manifest: /pitagora_scratch/userexternal/vgopakum/mastu_gamma_ood4_20261106/manifest.json
+loader: mastu_opsplit.coefficient_ood.CoefficientOODDataset
+model: mastu_opsplit.coefficient_ood.GammaEulerModel
+split_counts: {train: 0, validation: 0, test: 4}
+parameter_order: [density_diffusivity_multiplier, gamma]
+training_parameters: [1.0, 1.6666666666666667]
+ood_gamma: [1.2, 1.4, 1.8, 2.0]
+ood_density_diffusivity_multiplier: 1.0
+coefficient_split: density_diffusion_gamma
+normalization: parent_training_only
+acceptance: all_fields_state_control_response_and_energy_le_1_percent_and_Q8_rho_T_positive

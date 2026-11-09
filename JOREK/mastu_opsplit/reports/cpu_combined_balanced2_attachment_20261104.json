@@ -1,0 +1,39 @@
+{
+  "status": "failed_validation",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/combined_balanced2_attachment_20261104",
+  "budget": {
+    "authorization": "User requested numerical convergence and completion of the science plan.",
+    "scope": "Qualified capacity/MPI16 binary; balanced full-grid three-step probe with patch11 interior guide snapped to the exact original coarse topological corner. Physical wall endpoints and physics unchanged.",
+    "allocations_max": 1,
+    "attempts_each_max": 1,
+    "mpi_ranks": 16,
+    "threads": 1,
+    "memory_GiB": 512,
+    "wall_hours_max": 6,
+    "rank_CPU_hours_max": 96,
+    "node_hours_max": 6,
+    "conservative_resource_hours_max": 3072,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4240119       4240119            13.8       2531868               2430",
+    "equilibrium_tolerance": 1e-10,
+    "physics_changed": false,
+    "spatial_targets_changed": false
+  },
+  "manifest_sha256": "60b2f3647e28d88c937988f3bcc550427d30f9d38050eb365ab7d074ce78fb4b",
+  "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_combined_balanced2_attachment_20261104.sbatch",
+  "script_sha256": "25dc6e336543e3bbedd91bee394382d5f5a2540b2430d9ae95fd0971c9fd573e",
+  "scheduler_preflight": "sbatch: Job 2773194 to start at 2026-11-04T14:16:49 a using 16 processors on nodes r334c01s12 in partition dcgp_fua_prod\n",
+  "scientific_gates_passed": [],
+  "job_id": "2773195",
+  "conclusion": "Native final-mesh Jacobian sign changes; no equilibrium or MHD trajectory accepted.",
+  "stage_results": {
+    "probe3": {
+      "stage": "probe3",
+      "status": "failed_validation",
+      "returncode": 1,
+      "process_wall_seconds": 1809.923630255973,
+      "binary_sha256": "27a69e654689db18c95f6ed641cdd5e6f8c2dfef4f0bca0b43b5f98011dbffec",
+      "scientific_gates_passed": [],
+      "error": "exit_nonzero"
+    }
+  }
+}

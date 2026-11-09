@@ -1,0 +1,21 @@
+{
+  "budget": {
+    "authorization": "Current user request to diagnose flow discrepancies and run required next refinement",
+    "scope": "One same-mesh 48-step baseline changing equilibrium stopping tolerance only, including dependent in-allocation physical field and poloidal velocity comparison",
+    "allocations_max": 1,
+    "nodes": 1,
+    "mpi_ranks": 4,
+    "threads": 1,
+    "memory_GiB": 128,
+    "wall_seconds": 7200,
+    "attempts_max": 1,
+    "rank_CPU_hours_max": 8,
+    "node_hours_max": 2,
+    "conservative_resource_hours_max": 512,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578"
+  },
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/equilibrium_tolerance_20261103",
+  "manifest_sha256": "85b8a22d02116dff66b26296537c29cc0a7a6c8d02ffc35d3ed8a394fed0a453",
+  "script_sha256": "1b5429cdeebe3f38d7900f825fb1b9c22db4f215766765136516a4ef8e4e2fe8",
+  "job_id": "2770044"
+}

@@ -1,0 +1,17 @@
+{
+  "authorization": "Current explicit request to diagnose discrepancies and run next required spatial refinement",
+  "scope": "One directional three-step native probe with the unchanged validated executable; previous conditional full-pair/analysis reservations are reused, not duplicated.",
+  "allocations_max": 1,
+  "nodes": 1,
+  "mpi_ranks": 4,
+  "threads": 1,
+  "memory_GiB": 256,
+  "wall_seconds": 7200,
+  "process_timeout_seconds": 6600,
+  "attempts_max": 1,
+  "rank_CPU_hours_max": 8,
+  "node_hours_max": 2,
+  "conservative_resource_hours_max": 512,
+  "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+  "equilibrium_tolerance": 1e-10
+}

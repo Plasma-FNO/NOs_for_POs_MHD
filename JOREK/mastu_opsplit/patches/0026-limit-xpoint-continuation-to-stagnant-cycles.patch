@@ -1,0 +1,93 @@
+--- a/models/equil_info.f90
++++ b/models/equil_info.f90
+@@ -69,6 +69,7 @@
+     real*8           :: s_xpoint(2)              !< s coordinate of X-point within element.
+     real*8           :: t_xpoint(2)              !< t coordinate of X-point within element.
+     integer          :: ifail_xpoint             !< Error code for X-point determination.
++    logical          :: continue_xpoint = .false. !< Enabled only after a stalled GS saddle two-cycle.
+     logical          :: xpoint_init = .false.    !< Has the find_xpoint routine been called in update_equil_state?
+     logical          :: far_axis_xpoint(2)       !< Is the the X-point far enough from axis? 
+     
+@@ -191,7 +192,7 @@
+     ES%ifail_xpoint = 0
+     ES%far_axis_xpoint(:) = .false. 
+     if ( xpoint ) then 
+-      if (ES%xpoint_init) then
++      if (ES%xpoint_init .and. ES%continue_xpoint) then
+       call find_xpoint(my_id_fake, node_list, element_list, ES%psi_xpoint, ES%R_xpoint,     &
+         ES%Z_xpoint, ES%i_elm_xpoint, ES%s_xpoint, ES%t_xpoint, ES%xcase, ES%ifail_xpoint,ES%far_axis_xpoint, &
+         previous_xpoint=reshape([ES%R_xpoint(1),ES%Z_xpoint(1),ES%R_xpoint(2),ES%Z_xpoint(2)],[2,2]))
+@@ -579,7 +580,7 @@
+ 
+   ! Reuse the same nearby saddle when multiple discrete stationary roots coexist.
+   ! Invalid continuation falls back to the original global search below.
+-  if (present(previous_xpoint)) then
++  if (present(previous_xpoint) .and. ES%continue_xpoint) then
+     if (xcase /= UPPER_XPOINT) call opsplit_continue_xpoint(node_list,element_list,previous_xpoint(:,1), &
+       R_axis0,Z_axis0,r_margin,-1,i_elm_xpoint(1),s_xpoint(1),t_xpoint(1),found_lower)
+     if (xcase /= LOWER_XPOINT) call opsplit_continue_xpoint(node_list,element_list,previous_xpoint(:,2), &
+@@ -1373,4 +1374,24 @@
+  
+   end function is_LCFS_lost
+   
++! Trigger continuation only for a resolved, stagnant two-cycle in saddle positions.
++logical function opsplit_xpoint_cycle(points,updates,length_scale,accuracy) result(cycling)
++  use, intrinsic :: ieee_arithmetic, only: ieee_is_finite
++  implicit none
++  real*8, intent(in) :: points(2,2,4),updates(4),length_scale,accuracy
++  real*8 :: separation,repeat_error
++  cycling=.false.
++  if (.not. all(ieee_is_finite(points)) .or. .not. all(ieee_is_finite(updates))) return
++  if (.not. ieee_is_finite(length_scale) .or. .not. ieee_is_finite(accuracy)) return
++  if (length_scale <= 0.d0 .or. accuracy <= 0.d0 .or. any(updates <= accuracy)) return
++  if (updates(3) < .9d0*updates(1) .or. updates(4) < .9d0*updates(2)) return
++  separation=min(sqrt(sum((points(:,:,2)-points(:,:,1))**2)), &
++                 sqrt(sum((points(:,:,3)-points(:,:,2))**2)), &
++                 sqrt(sum((points(:,:,4)-points(:,:,3))**2)))
++  if (separation <= 1.d-8*length_scale .or. separation >= .015d0*length_scale) return
++  repeat_error=max(sqrt(sum((points(:,:,3)-points(:,:,1))**2)), &
++                   sqrt(sum((points(:,:,4)-points(:,:,2))**2)))
++  cycling=repeat_error < .1d0*separation
++end function opsplit_xpoint_cycle
++
+ end module equil_info 
+--- a/models/equilibrium.f90
++++ b/models/equilibrium.f90
+@@ -46,6 +46,7 @@
+ real*8     :: zjz, dj_dpsi, dj_dR, dj_dZ, dj_dR_dZ, dj_dR_DR, dj_dZ_dZ, dj_dpsi2, dj_dR_dpsi, dj_dZ_dpsi, psi_n
+ real*8     :: ps0_s, ps0_t, p_s, p_t, p_ss, p_st, p_tt 
+ real*8     :: zj0_s, zj0_t, equil_error, equil_value, ps0_x, ps0_y, Z_s, Z_t, xjac, direction, Btot
++real*8     :: xpoint_history(2,2,4),update_history(4)
+ real*8     :: current_tot, current_int, diff, R_xpoint2(2), Z_xpoint2(2)
+ real*8     :: sigmas(22), dZ_axis, dR_axis, Z_axis_int, Z_axis_old, R_axis_old, R_axis_int, area_ref
+ integer    :: n_grids(12)
+@@ -91,6 +92,9 @@
+ 
+ !------------------------------------ fixed boundary equilibrium
+ n_iter       = 200
++ES%continue_xpoint = .false.
++xpoint_history = 0.d0
++update_history = 0.d0
+ psi_bnd      = 0.d0
+ ES%psi_bnd   = 0.d0
+ Z_xpoint(1)  = -99.d0
+@@ -180,6 +184,19 @@
+       write(*,*)'Equilibrium diff is NaN - stop here'
+       stop
+     end if
++
++    ! Preserve the original global search unless it exhibits a stagnant two-cycle.
++    xpoint_history(:,:,1:3)=xpoint_history(:,:,2:4)
++    xpoint_history(:,:,4)=reshape([ES%R_xpoint(1),ES%Z_xpoint(1), &
++                                  ES%R_xpoint(2),ES%Z_xpoint(2)],[2,2])
++    update_history(1:3)=update_history(2:4)
++    update_history(4)=diff
++    if (newton_GS_fixbnd .and. xpoint2 .and. iter >= 4 .and. .not. ES%continue_xpoint) then
++      if (opsplit_xpoint_cycle(xpoint_history,update_history,R_geo,equil_accuracy)) then
++        ES%continue_xpoint=.true.
++        write(*,*) ' Stagnant X-point two-cycle: enabling safeguarded saddle continuation'
++      endif
++    endif
+ 
+     write(*,'(A,I4,A,ES10.3)') ' Iteration ', iter, ': diff=', diff
+     

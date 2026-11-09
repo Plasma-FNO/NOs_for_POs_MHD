@@ -1,0 +1,11 @@
+--- a/Makefile
++++ b/Makefile
+@@ -125,7 +125,7 @@
+ 	@echo "LIBS      = $(LIBS)"
+ 
+ $(OBJDIR)/mod_elt_matrix.o $(MODDIR)/mod_elt_matrix.mod: $(CGDEP)
+-$(OBJDIR)/mod_elt_matrix_fft.o $(MODDIR)/mod_elt_matrix_fft.mod: $(CGDEP)
++$(OBJDIR)/mod_elt_matrix_fft.o $(MODDIR)/mod_elt_matrix_fft.mod: $(CGDEP) $(wildcard models/$(MODEL)/opsplit_export_*.inc)
+ 
+ # For each source dir add an explicit rule with the template
+ $(foreach dir,$(DIRS),$(eval $(call O_TEMPLATE,$(dir)/)))

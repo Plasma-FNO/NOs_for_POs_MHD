@@ -1,0 +1,239 @@
+{
+  "created_utc": "2026-11-03T09:01:39.044519+00:00",
+  "status": "failed_validation",
+  "scope": "One MUMPS recovery allocation: build patch 0011, ordinary/cached eight-step parity, then guarded refined three-step probe",
+  "budget_record": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_mumps_recovery_authorization_20261103.json",
+  "budget_record_sha256": "2e99a70594c50f1f9360201c112bd6ecbfb2aebb840bb136b8c9c7afa1286ad5",
+  "parent_source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/cached_rz_recovery_20261103/source",
+  "parent_binary_sha256": "cf7e1c9965d14e8bf6a45e15dfd2257cac25c983b00f22ea2232d8d7c027bc52",
+  "patch": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/patches/0011-mumps-workspace-retry-and-errors.patch",
+  "patch_sha256": "4607bdcfb74f3bfbec8667ebd2ea4cc5686fd72885e805722865212e772a8f8c",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mumps_recovery_20261103",
+  "source_directory": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mumps_recovery_20261103/source",
+  "worker_sha256": "152624e4df1e061ad797f62eb582cd426bfa7edc85882b59fb2140885d051e7e",
+  "preparation_source_sha256": "8c0b80055848da3775c33b747273b3d50cc88dbc0f268db6f150f291aa9422c1",
+  "input_hashes": {
+    "ordinary8/input": "9fb7cf931e463601ab46d45658895bab8301951222627051995aedd6d17a7d65",
+    "ordinary8/eqdsk.dat": "ac787dd266a9b4b93ccdadf9883c9d97a115e7dd9bb5bd3f724321576883bf4e",
+    "cached8/jorek_equil_rz.h5": "e59091e6ef0e893a89f9f1d11a097b01ddc6ce306708ef5c1eb7cfba6ed35627",
+    "cached8/input": "8f1ba8ab863c2bc7630989c32103d1fb242fde98daf78587a710fdfd3fe510ce",
+    "cached8/eqdsk.dat": "ac787dd266a9b4b93ccdadf9883c9d97a115e7dd9bb5bd3f724321576883bf4e",
+    "refined3/jorek_equil_rz.h5": "e59091e6ef0e893a89f9f1d11a097b01ddc6ce306708ef5c1eb7cfba6ed35627",
+    "refined3/input": "8d9986bb889e7dcec1018d177de57218e962395fa7755e6729278d1113a6f957",
+    "refined3/eqdsk.dat": "ac787dd266a9b4b93ccdadf9883c9d97a115e7dd9bb5bd3f724321576883bf4e",
+    "worker.py": "152624e4df1e061ad797f62eb582cd426bfa7edc85882b59fb2140885d051e7e",
+    "reference8.h5": "d0b799c39a138ffb8ba28d79af36b30556671337f6241c14b0e1fffdc63a7e9d",
+    "parity_protocol.json": "ea1ab92f1fc1c4ffa1e9fd0f60cd691c661800e11a88ccd17596c4d9c048f92b",
+    "jorek-env.sh": "73cbfa45446945116a6829eee662fb099ed98a8008dc18a8ee6f5e6965422bab",
+    "source/solvers/mod_mumps.f90": "4eceaa38308259df86558293fe8b3b7c8c7138a0f275d17e02b1b1eab09c6b22"
+  },
+  "requested_cpu_core_hours": 8,
+  "requested_node_hours": 2,
+  "scientific_gates_passed": [],
+  "stage_limits_s": {
+    "build": 300,
+    "ordinary8": 600,
+    "cached8": 600,
+    "refined3": 5400
+  },
+  "ordinary_parity": "Exact fields, geometry, indices, times and energies",
+  "cached_parity": "Frozen q8 field/gradient protocol; exact geometry, time and steps",
+  "patch_application_stdout": "patching file solvers/mod_mumps.f90\n",
+  "focused_tests": {
+    "passed": 18,
+    "report": "cpu_mumps_recovery_tests_20261103.xml",
+    "sha256": "0b98b81ebfb82c9204a8dcaa661c099cdd82015b05d885b23a7e9d267b89ab54"
+  },
+  "ledger_before_recovery": {
+    "actual_hpc_cpu_core_hours": 7.543333333333333,
+    "actual_hpc_node_hours": 2.1902777777777778,
+    "simulation_jobs_submitted": 39,
+    "scientific_jobs_submitted": 39,
+    "development_jobs_with_accounting": 48
+  },
+  "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_mumps_recovery_20261103.sbatch",
+  "script_sha256": "08fadfd904c53580d6a06ed510ae5eb931955de9cfe827247606d8d0b14c1e1b",
+  "scheduler_preflight": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "sbatch: Job 2769481 to start at 2026-11-03T12:10:19 a using 4 processors on nodes r353c06s11 in partition dcgp_fua_prod\n"
+  },
+  "submission": {
+    "command": [
+      "sbatch",
+      "--parsable",
+      "--chdir",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mumps_recovery_20261103",
+      "--output",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mumps_recovery_20261103/batch-%j.out",
+      "--error",
+      "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mumps_recovery_20261103/batch-%j.err",
+      "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_mumps_recovery_20261103.sbatch"
+    ],
+    "returncode": 0,
+    "stdout": "2769482\n",
+    "stderr": ""
+  },
+  "job_id": "2769482",
+  "submitted_utc": "2026-11-03T09:02:19.851170+00:00",
+  "accounting": {
+    "state": "FAILED",
+    "elapsed_seconds": 589,
+    "allocated_cpus": 4,
+    "allocated_nodes": 1,
+    "exit_code": "1:0",
+    "alloc_tres": "billing=4,cpu=4,mem=128G,node=1",
+    "partition": "dcgp_fua_prod"
+  },
+  "scheduler_state": "FAILED",
+  "as_of_utc": "2026-11-03T09:15:11.078913+00:00",
+  "build_status": "compiled_and_linked",
+  "binary_sha256": "912c478ee2793fb7cdab43cdf7e80a3f4e3c6c734caf4cfdef01c7d25b94faca",
+  "result": {
+    "status": "failed_validation",
+    "stages": [
+      {
+        "stage": "ordinary8",
+        "returncode": 0,
+        "status": "completed",
+        "wall_seconds": 148.5464140160475,
+        "binary_sha256": "912c478ee2793fb7cdab43cdf7e80a3f4e3c6c734caf4cfdef01c7d25b94faca",
+        "scientific_gates_passed": [],
+        "health": {
+          "steps": 8,
+          "final_time_s": 2.343188518713464e-07,
+          "restart_sha256": "496d40b6f71f531e101f0c7140790947401d7183b71e71b69848092f46545891"
+        },
+        "parity": {
+          "exact_reference_arrays": {
+            "x": true,
+            "values": true,
+            "vertex": true,
+            "size": true,
+            "boundary": true,
+            "constrained": true,
+            "n_sons": true,
+            "xtime": true,
+            "energies": true
+          },
+          "passed": true
+        }
+      },
+      {
+        "stage": "cached8",
+        "returncode": 0,
+        "status": "completed",
+        "wall_seconds": 111.5852700410178,
+        "binary_sha256": "912c478ee2793fb7cdab43cdf7e80a3f4e3c6c734caf4cfdef01c7d25b94faca",
+        "scientific_gates_passed": [],
+        "health": {
+          "steps": 8,
+          "final_time_s": 2.343188518713464e-07,
+          "restart_sha256": "d03aa414cb609231468e591b0ca8650147d35d94400e0a001d475d46dd82dcc0"
+        },
+        "parity": {
+          "exact_reference_arrays": {
+            "x": true,
+            "values": true,
+            "vertex": true,
+            "size": true,
+            "boundary": true,
+            "constrained": true,
+            "n_sons": true,
+            "xtime": true,
+            "energies": true
+          },
+          "passed": true,
+          "metrics": {
+            "field": {
+              "absolute_rms_errors": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "reference_rms": [
+                0.04383493098866354,
+                1.0992853389236824e-05,
+                0.4665273725802755,
+                0.002147163683620754,
+                0.5470197115336213,
+                0.006166760035207791,
+                0.006530480841968516
+              ],
+              "tolerances": [
+                4.383593098866354e-08,
+                1.1992853389236824e-11,
+                4.6652837258027544e-07,
+                2.1481636836207536e-09,
+                5.470207115336213e-07,
+                6.167760035207791e-09,
+                6.531480841968516e-09
+              ],
+              "passed": [
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+              ]
+            },
+            "gradient": {
+              "absolute_rms_errors": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "reference_rms": [
+                0.20703282931596165,
+                0.00013695367486794794,
+                12.823139154431388,
+                0.05037335556535655,
+                5.24712734913534,
+                0.02622573783224263,
+                0.14959942462971165
+              ],
+              "tolerances": [
+                2.0703382931596165e-07,
+                1.3795367486794794e-10,
+                1.2823140154431386e-05,
+                5.0374355565356544e-08,
+                5.24712834913534e-06,
+                2.622673783224263e-08,
+                1.4960042462971166e-07
+              ],
+              "passed": [
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+              ]
+            }
+          }
+        }
+      },
+      {
+        "stage": "refined3",
+        "returncode": 1,
+        "status": "failed_validation",
+        "wall_seconds": 296.77358745294623,
+        "binary_sha256": "912c478ee2793fb7cdab43cdf7e80a3f4e3c6c734caf4cfdef01c7d25b94faca",
+        "scientific_gates_passed": [],
+        "error": "exit_nonzero"
+      }
+    ],
+    "scientific_gates_passed": []
+  }
+}

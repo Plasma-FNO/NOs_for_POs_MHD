@@ -1,0 +1,132 @@
+{
+  "cases": {
+    "radial160": {
+      "direction": "core radial",
+      "overrides": {
+        "n_flux": 160
+      },
+      "reference": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_radial_pair_20261103",
+      "jobs": {
+        "probe": {
+          "job_id": "2771105",
+          "script": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_directions_20261103/radial160/probe.sbatch",
+          "script_sha256": "5e8bd4e06f6c2cc093167f8f50f8f9972db2cf99ec10923dfb7ac54c6370b88e",
+          "scheduler_preflight": "sbatch: Job 2771104 to start at 2026-11-03T19:46:34 a using 4 processors on nodes r350c01s08 in partition dcgp_fua_prod\n"
+        }
+      },
+      "status": "prepared",
+      "manifest_sha256": "0b7863b6cd13d99f3c1cf99368a51b09fdbfc1304d347403d18a2dc7b1ae1fed"
+    },
+    "radial320": {
+      "direction": "core radial",
+      "overrides": {
+        "n_flux": 320
+      },
+      "reference": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_directions_20261103/radial160",
+      "jobs": {},
+      "status": "prepared",
+      "manifest_sha256": "2ef8015c467d2ee972eb616d122b88986a4883ad1f738b5fc200af25e230a8b1"
+    },
+    "wall60": {
+      "direction": "wall normal",
+      "overrides": {
+        "n_ext_block(1)": 60,
+        "n_ext_block(2)": 60,
+        "n_ext_block(3)": 114,
+        "n_ext_block(4)": 60,
+        "n_ext_block(5)": 60,
+        "n_ext_block(6)": 60,
+        "n_ext_block(7)": 60,
+        "n_ext_block(8)": 60,
+        "n_ext_block(9)": 60,
+        "n_ext_block(10)": 60,
+        "n_ext_block(11)": 60
+      },
+      "reference": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_radial_pair_20261103",
+      "jobs": {
+        "probe": {
+          "job_id": "2771107",
+          "script": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_directions_20261103/wall60/probe.sbatch",
+          "script_sha256": "68624a1464f67e4582a21c77901e9fcc4879547a551434dd95eca347397bd853",
+          "scheduler_preflight": "sbatch: Job 2771106 to start at 2026-11-03T19:46:34 a using 4 processors on nodes r350c01s08 in partition dcgp_fua_prod\n"
+        }
+      },
+      "status": "prepared",
+      "manifest_sha256": "9ee79a638b41f2cdffdbf6e202587b588e8f6820ca8522d8331b5f8d85ac3054"
+    },
+    "wall50": {
+      "direction": "wall normal",
+      "overrides": {
+        "n_ext_block(1)": 50,
+        "n_ext_block(2)": 50,
+        "n_ext_block(3)": 95,
+        "n_ext_block(4)": 50,
+        "n_ext_block(5)": 50,
+        "n_ext_block(6)": 50,
+        "n_ext_block(7)": 50,
+        "n_ext_block(8)": 50,
+        "n_ext_block(9)": 50,
+        "n_ext_block(10)": 50,
+        "n_ext_block(11)": 50
+      },
+      "reference": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_radial_pair_20261103",
+      "jobs": {},
+      "status": "prepared",
+      "manifest_sha256": "2c0fe286a2a87f3a55ad026f97b13ff67032dc3779120c9ca55f89d46440e7f1"
+    },
+    "poloidal440": {
+      "direction": "poloidal including divertor legs",
+      "overrides": {
+        "n_tht": 440,
+        "n_leg": 24,
+        "n_leg_out": 160,
+        "n_up_leg": 24,
+        "n_up_leg_out": 160
+      },
+      "reference": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_radial_pair_20261103",
+      "jobs": {
+        "probe": {
+          "job_id": "2771109",
+          "script": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_directions_20261103/poloidal440/probe.sbatch",
+          "script_sha256": "564a9c3ca0a15f99878e5fb6bc9375d06cc24968d46726442935368011405cad",
+          "scheduler_preflight": "sbatch: Job 2771108 to start at 2026-11-03T19:47:34 a using 4 processors on nodes r350c01s08 in partition dcgp_fua_prod\n"
+        }
+      },
+      "status": "prepared",
+      "manifest_sha256": "cdb1dbd3c1ffed44a2c272680ffeec9139c59eca549302c54ddd7dee98b4f5c0"
+    },
+    "poloidal330": {
+      "direction": "poloidal including divertor legs",
+      "overrides": {
+        "n_tht": 330,
+        "n_leg": 18,
+        "n_leg_out": 120,
+        "n_up_leg": 18,
+        "n_up_leg_out": 120
+      },
+      "reference": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/spatial_radial_pair_20261103",
+      "jobs": {},
+      "status": "prepared",
+      "manifest_sha256": "8dfe6361f2a0bbc4301bade969451b110aa40a28a6ed59786fac3c498bee4885"
+    }
+  },
+  "accounting": "2771105|RUNNING|0:0|65|4\n2771107|RUNNING|0:0|65|4\n2771109|RUNNING|0:0|63|4\n",
+  "budget": {
+    "authorization": "User requested next radial refinement to reach 1% and wall/poloidal convergence checks.",
+    "mpi_ranks": 4,
+    "threads": 1,
+    "memory_GiB_simulation": 256,
+    "probe_allocations_max": 6,
+    "probe_hours_each_max": 2,
+    "full_pair_count_max": 4,
+    "full_allocations_max": 8,
+    "full_hours_each_max": 6,
+    "analysis_allocations_max": 4,
+    "analysis_hours_each_max": 1,
+    "rank_CPU_hours_max": 244,
+    "node_hours_max": 64,
+    "conservative_resource_hours_max": 16384,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+    "policy": "Start radial160, wall60, poloidal440. Only failed wall/poloidal proofs enable wall50/poloidal330. Only healthy radial160 full pair failing the frozen field/integral/coverage targets enables radial320, compared against radial160. No retry of any candidate; no physics/tolerance/build changes."
+  }
+}

@@ -1,0 +1,283 @@
+{
+  "approval_source": "Explicit user reply: Run it in both partitions",
+  "prepared_utc": "2026-11-02T15:06:01.716732+00:00",
+  "scope": "one unchanged equilibrium regression in each debug partition; one attempt per run; no pilot or training",
+  "max_executions": 2,
+  "previous_job_id": "2767445",
+  "runs": [
+    {
+      "label": "boost",
+      "account": "fupb2_ukaea_ml",
+      "partition": "boost_fua_dbg",
+      "qos": "normal",
+      "config": "configs/equilibrium_boost_authorized_20261102.yaml",
+      "script": "reports/equilibrium_boost_authorized_20261102.sbatch",
+      "prepared": "runs/prepared_equilibrium_boost_authorized_20261102",
+      "output": "runs/equilibrium_regression_boost_20261102",
+      "config_sha256": "b00718a4db4bbbc73022640e5af7c2b6dfdc55713abe5efe704ce5afb770e027",
+      "script_sha256": "1ca5218ea5b0de08e1f14bfa58b1a48d9ee6c332c8d92a9431bbae1cd7fb161c",
+      "physical_snapshot_matches_original": true,
+      "dry_run": {
+        "prepared": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/prepared_equilibrium_boost_authorized_20261102",
+        "output": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium_regression_boost_20261102",
+        "command": [
+          "mpirun",
+          "--bind-to",
+          "none",
+          "-n",
+          "1",
+          "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/prepared_equilibrium_boost_authorized_20261102/jorek.exe"
+        ],
+        "execution": {
+          "mpi_ranks": 1,
+          "omp_threads": 1,
+          "timeout_s": 540,
+          "max_attempts": 1,
+          "launcher": [
+            "mpirun",
+            "--bind-to",
+            "none",
+            "-n"
+          ],
+          "require_slurm": true
+        },
+        "acceptance": {
+          "required_files": [
+            "jorek_restart.h5"
+          ],
+          "final_time_s": 0.0,
+          "equilibrium_regression": {
+            "dataset": "values",
+            "absolute_tolerance": 0.0001
+          }
+        },
+        "config_hash": "34ca01c1f783caae8f241d6c6012cfb1a546ff5ac95a1ab941ff4bbf67fc7226"
+      },
+      "scheduler_test": {
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "sbatch: no gres/tmpfs specified, using default: gres/tmpfs:10g\nsbatch: Job 2767716 to start at 2026-11-02T16:06:02 a using 1 processors on nodes r315c06s01 in partition boost_fua_dbg\n"
+      },
+      "job_id": "2767719",
+      "submission": {
+        "command": [
+          "sbatch",
+          "--parsable",
+          "--job-name=mastu-eq-boost",
+          "--chdir",
+          "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit",
+          "--output",
+          "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium-boost-%j.out",
+          "--error",
+          "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium-boost-%j.err",
+          "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/equilibrium_boost_authorized_20261102.sbatch"
+        ],
+        "utc": "2026-11-02T15:07:05.275226+00:00",
+        "returncode": 0,
+        "stdout": "2767719\n",
+        "stderr": "sbatch: no gres/tmpfs specified, using default: gres/tmpfs:10g\n"
+      },
+      "state": "COMPLETED",
+      "queue_reason": null,
+      "scheduler_queue_snapshot": "2767719|COMPLETED|25|1|1|0:0|billing=1,cpu=1,gres/tmpfs=10737418240,mem=8G,node=1|fupb2_ukaea_ml|boost_fua_dbg|2026-11-02T18:32:55|2026-11-02T18:33:20",
+      "last_checked_utc": "2026-11-02T17:46:22.417686+00:00",
+      "estimated_start": null,
+      "equilibrium_passed": true,
+      "accounting_snapshot": "2767719|COMPLETED|25|1|1|0:0|billing=1,cpu=1,gres/tmpfs=10737418240,mem=8G,node=1|fupb2_ukaea_ml|boost_fua_dbg|2026-11-02T18:32:55|2026-11-02T18:33:20",
+      "accounting": {
+        "elapsed_seconds": 25,
+        "allocated_cpus": 1,
+        "allocated_nodes": 1,
+        "exit_code": "0:0",
+        "alloc_tres": "billing=1,cpu=1,gres/tmpfs=10737418240,mem=8G,node=1"
+      },
+      "result": {
+        "allocated_cpus": "1",
+        "attempts": [
+          {
+            "attempt": 1,
+            "error": null,
+            "health": {
+              "equilibrium_regression": {
+                "absolute_tolerance": 0.0001,
+                "dataset": "values",
+                "maximum_absolute_difference": 8.432857492834955e-05,
+                "reference_sha256": "30a3f81b44358720b02ec995dc6049e393d3321bfb173e3a075d1aedf6cf413e"
+              },
+              "final_time_s": 0.0,
+              "restart_sha256": "a68676066a20045d3137454fc82d730c86e5635f557f2fc62c8277d6c4094e7c",
+              "steps": 0
+            },
+            "returncode": 0,
+            "status": "completed",
+            "steps_logged": 0,
+            "wall_s": 22.508657807018608
+          }
+        ],
+        "billable_usage": "pending scheduler accounting; process estimates exclude node allocation overhead",
+        "case_id": "mastu-model303-equilibrium",
+        "config_hash": "34ca01c1f783caae8f241d6c6012cfb1a546ff5ac95a1ab941ff4bbf67fc7226",
+        "cpu_core_hours": 0.006252404946394057,
+        "gate_A_passed": false,
+        "modules": "profile/base:glibc/2.34--gcc--12.3.0-mxblpvt:gcc-runtime/12.3.0--gcc--12.3.0-mnvqpq3:numactl/2.0.14--gcc--12.3.0-qqxb3gk:bzip2/1.0.8-e7jn2cy:libiconv/1.17-gcikf7e:xz/5.4.6-wlufe5o:zlib-ng/2.1.6:libxml2/2.10.3-c35ahqk:ncurses/6.5-7axh45q:pigz/2.8-bj6h655:zstd/1.5.6-xzgjcri:tar/1.34-6ux5da7:gettext/0.22.5-we4daa5:krb5/1.20.1-wdz5osr:libedit/3.1-20230828-yo5xkhl:libxcrypt/4.4.35-sw44epa:openssh/9.7p1-7rr2bql:openmpi/4.1.6--gcc--12.3.0-ucx1.20:gcc/12.3.0:openblas/0.3.26--gcc--12.3.0:netlib-scalapack/2.2.0--openmpi--4.1.6--gcc--12.3.0-ucx1.20:fftw/3.3.10--openmpi--4.1.6--gcc--12.3.0-ucx1.20:pkgconf/2.2.0-7etiapj:hdf5/1.14.3--openmpi--4.1.6--gcc--12.3.0-ucx1.20:metis/5.1.0--gcc--12.3.0:parmetis/4.0.3--openmpi--4.1.6--gcc--12.3.0-ucx1.20",
+        "parent_family_id": "mastu-equilibrium-baseline",
+        "physical_acceptance": false,
+        "process_core_hours_estimate": 0.006252404946394057,
+        "raw_bytes": 113440396,
+        "runner_sha256": "0c2120d0b8c0e27997d4be6ed816eaed032d8f4edccead62be12e3cc94c4b2bd",
+        "scheduler_job_id": "2767719",
+        "status": "completed",
+        "wall_s": 22.508657807018608
+      }
+    },
+    {
+      "label": "dcgp",
+      "account": "fupa2_fauna",
+      "partition": "dcgp_fua_dbg",
+      "qos": "normal",
+      "config": "configs/equilibrium_dcgp_authorized_20261102.yaml",
+      "script": "reports/equilibrium_dcgp_authorized_20261102.sbatch",
+      "prepared": "runs/prepared_equilibrium_dcgp_authorized_20261102",
+      "output": "runs/equilibrium_regression_dcgp_20261102",
+      "config_sha256": "ab5c73f4383fd0043c07aaea148e9307f6eb8d8c5ddb25fe1ffc6cde5b4ff1e7",
+      "script_sha256": "ddae1ae881c8e4949c3ca6636a1a98dc4e18bd41f57b8841ed935eda73a5899c",
+      "physical_snapshot_matches_original": true,
+      "dry_run": {
+        "prepared": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/prepared_equilibrium_dcgp_authorized_20261102",
+        "output": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium_regression_dcgp_20261102",
+        "command": [
+          "mpirun",
+          "--bind-to",
+          "none",
+          "-n",
+          "1",
+          "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/prepared_equilibrium_dcgp_authorized_20261102/jorek.exe"
+        ],
+        "execution": {
+          "mpi_ranks": 1,
+          "omp_threads": 1,
+          "timeout_s": 540,
+          "max_attempts": 1,
+          "launcher": [
+            "mpirun",
+            "--bind-to",
+            "none",
+            "-n"
+          ],
+          "require_slurm": true
+        },
+        "acceptance": {
+          "required_files": [
+            "jorek_restart.h5"
+          ],
+          "final_time_s": 0.0,
+          "equilibrium_regression": {
+            "dataset": "values",
+            "absolute_tolerance": 0.0001
+          }
+        },
+        "config_hash": "2121562ccf2f78898868fbbf45c54e197c9b5256ce82d954799cfc3abb63de32"
+      },
+      "scheduler_test": {
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "sbatch: Job 2767717 to start at 2026-11-02T16:06:02 a using 1 processors on nodes r355c06s12 in partition dcgp_fua_dbg\n"
+      },
+      "job_id": "2767720",
+      "submission": {
+        "command": [
+          "sbatch",
+          "--parsable",
+          "--job-name=mastu-eq-dcgp",
+          "--chdir",
+          "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit",
+          "--output",
+          "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium-dcgp-%j.out",
+          "--error",
+          "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/runs/equilibrium-dcgp-%j.err",
+          "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/equilibrium_dcgp_authorized_20261102.sbatch"
+        ],
+        "utc": "2026-11-02T15:07:05.294925+00:00",
+        "returncode": 0,
+        "stdout": "2767720\n",
+        "stderr": ""
+      },
+      "state": "COMPLETED",
+      "queue_reason": null,
+      "scheduler_queue_snapshot": "2767720|COMPLETED|27|1|1|0:0|billing=1,cpu=1,mem=8G,node=1|fupa2_fauna|dcgp_fua_dbg|2026-11-02T16:07:57|2026-11-02T16:08:24",
+      "last_checked_utc": "2026-11-02T17:46:22.417686+00:00",
+      "estimated_start": "2026-11-02T16:07:57",
+      "equilibrium_passed": true,
+      "accounting_snapshot": "2767720|COMPLETED|27|1|1|0:0|billing=1,cpu=1,mem=8G,node=1|fupa2_fauna|dcgp_fua_dbg|2026-11-02T16:07:57|2026-11-02T16:08:24",
+      "accounting": {
+        "elapsed_seconds": 27,
+        "allocated_cpus": 1,
+        "allocated_nodes": 1,
+        "exit_code": "0:0",
+        "alloc_tres": "billing=1,cpu=1,mem=8G,node=1"
+      },
+      "result": {
+        "allocated_cpus": "1",
+        "attempts": [
+          {
+            "attempt": 1,
+            "error": null,
+            "health": {
+              "equilibrium_regression": {
+                "absolute_tolerance": 0.0001,
+                "dataset": "values",
+                "maximum_absolute_difference": 8.432857492834955e-05,
+                "reference_sha256": "30a3f81b44358720b02ec995dc6049e393d3321bfb173e3a075d1aedf6cf413e"
+              },
+              "final_time_s": 0.0,
+              "restart_sha256": "2d066b56bc0f1aa4d6b1e8eff22aa3a008a1917825ea9d218a9bc1f78e517224",
+              "steps": 0
+            },
+            "returncode": 0,
+            "status": "completed",
+            "steps_logged": 0,
+            "wall_s": 25.697341616963968
+          }
+        ],
+        "billable_usage": "pending scheduler accounting; process estimates exclude node allocation overhead",
+        "case_id": "mastu-model303-equilibrium",
+        "config_hash": "2121562ccf2f78898868fbbf45c54e197c9b5256ce82d954799cfc3abb63de32",
+        "cpu_core_hours": 0.007138150449156657,
+        "gate_A_passed": false,
+        "modules": "profile/base:glibc/2.34--gcc--12.3.0-mxblpvt:gcc-runtime/12.3.0--gcc--12.3.0-mnvqpq3:numactl/2.0.14--gcc--12.3.0-qqxb3gk:bzip2/1.0.8-e7jn2cy:libiconv/1.17-gcikf7e:xz/5.4.6-wlufe5o:zlib-ng/2.1.6:libxml2/2.10.3-c35ahqk:ncurses/6.5-7axh45q:pigz/2.8-bj6h655:zstd/1.5.6-xzgjcri:tar/1.34-6ux5da7:gettext/0.22.5-we4daa5:krb5/1.20.1-wdz5osr:libedit/3.1-20230828-yo5xkhl:libxcrypt/4.4.35-sw44epa:openssh/9.7p1-7rr2bql:openmpi/4.1.6--gcc--12.3.0-ucx1.20:gcc/12.3.0:openblas/0.3.26--gcc--12.3.0:netlib-scalapack/2.2.0--openmpi--4.1.6--gcc--12.3.0-ucx1.20:fftw/3.3.10--openmpi--4.1.6--gcc--12.3.0-ucx1.20:pkgconf/2.2.0-7etiapj:hdf5/1.14.3--openmpi--4.1.6--gcc--12.3.0-ucx1.20:metis/5.1.0--gcc--12.3.0:parmetis/4.0.3--openmpi--4.1.6--gcc--12.3.0-ucx1.20",
+        "parent_family_id": "mastu-equilibrium-baseline",
+        "physical_acceptance": false,
+        "process_core_hours_estimate": 0.007138150449156657,
+        "raw_bytes": 113440393,
+        "runner_sha256": "0c2120d0b8c0e27997d4be6ed816eaed032d8f4edccead62be12e3cc94c4b2bd",
+        "scheduler_job_id": "2767720",
+        "status": "completed",
+        "wall_s": 25.697341616963968
+      },
+      "independent_reference_comparison": {
+        "dataset": "values",
+        "maximum_absolute_difference": 8.432857492834955e-05,
+        "absolute_tolerance": 0.0001,
+        "reference_sha256": "30a3f81b44358720b02ec995dc6049e393d3321bfb173e3a075d1aedf6cf413e"
+      },
+      "independent_restart_health": {
+        "steps": 0,
+        "final_time_s": 0.0,
+        "restart_sha256": "2d066b56bc0f1aa4d6b1e8eff22aa3a008a1917825ea9d218a9bc1f78e517224"
+      }
+    }
+  ],
+  "replaced_job": {
+    "job_id": "2767445",
+    "state_before_cancel": [
+      "PENDING"
+    ],
+    "reason": "Replace migrated pending request with clean per-partition requests; old ReqTRES retained BOOST tmpfs.",
+    "cancel_requested_utc": "2026-11-02T15:06:30.459039+00:00",
+    "state_after_cancel": "CANCELLED",
+    "zero_allocation_accounting": "2767445|CANCELLED by 34213|00:00:00|None|0|None assigned",
+    "note": "scontrol assigns cancellation time to StartTime for this never-started job; sacct confirms zero allocated CPUs and zero elapsed time."
+  },
+  "last_checked_utc": "2026-11-02T17:46:22.417686+00:00",
+  "all_partitions_passed": true
+}

@@ -1,0 +1,19 @@
+{
+  "budget": {
+    "authorization": "Current explicit request to diagnose remaining current/vorticity discrepancies",
+    "scope": "One read-only same-mesh paired-response equilibrium-tolerance diagnostic",
+    "allocations_max": 1,
+    "attempts_max": 1,
+    "nodes": 1,
+    "cpus": 1,
+    "memory_GiB": 16,
+    "wall_seconds": 600,
+    "rank_CPU_hours_max": 0.16666666666666666,
+    "node_hours_max": 0.16666666666666666,
+    "conservative_resource_hours_max": 64,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578"
+  },
+  "source_sha256": "8ef70886e09566c0b41284bcbacf10331c83b2d493cb41a4c874247dc40f1a91",
+  "script_sha256": "54a0d74b83d027bd4dc53b1799ae4438f6c33adc325c1df3e60932728a4d6e75",
+  "job_id": "2770201"
+}

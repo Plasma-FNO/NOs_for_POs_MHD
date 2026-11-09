@@ -1,0 +1,29 @@
+{
+  "budget": {
+    "authorization": "Current explicit diagnosis and next spatial refinement request",
+    "scope": "One zero-step native mesh-quality repair allocation, at most3 pre-frozen candidates; no invalid geometry or unqualified fields accepted.",
+    "allocations_max": 1,
+    "attempts_max": 1,
+    "nodes": 1,
+    "mpi_ranks": 4,
+    "threads": 1,
+    "memory_GiB": 128,
+    "wall_seconds": 7200,
+    "rank_CPU_hours_max": 8,
+    "node_hours_max": 2,
+    "conservative_resource_hours_max": 512,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+    "selection": "First positive native/q8 geometry <=155000: core240 with unchanged exterior attachment counts; wall2x equidistant, wall2x native, then original wall spacing. No evolution used for selection.",
+    "spatial_target": 0.01,
+    "physical_coefficients_changed": false
+  },
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/static_mesh_20261103",
+  "manifest_sha256": "8ac8ac98577b7e1ea5ae705a14423f95aa50fc3d2e652fd42598dae5055339d8",
+  "controller_sha256": "b7198a3a4f00a9285bb7ee4afe74a7af3c4a0ea7d3c088b73e15da363bde06dc",
+  "script_sha256": "97a8ded6601451c47e0888d42c1cfae376996f40158b93aa00bff65c137b0a75",
+  "job_id": "2770374",
+  "stopped_after_central_grid_diagnosis": {
+    "reason": "Four identical folded central cells occur before wall extensions; remaining wall-only variants cannot repair the core. Cancelled remaining work; preserve all files.",
+    "evidence": "cpu_radial240_geometry_diagnosis_20261103.json"
+  }
+}

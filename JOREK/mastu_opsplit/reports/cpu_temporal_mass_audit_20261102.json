@@ -1,0 +1,134 @@
+{
+  "created_utc": "2026-11-02T22:26:58.215008+00:00",
+  "script_sha256": "9fed6850405e788b45dfdce5272d4508b0fefca7ad59dd91028f243617aea7b6",
+  "native_source_sha256": {
+    "models/model303/mod_elt_matrix_fft.f90": "16928a171df02b23dc2ea2371897f4540f2966d18bbcc85882d61d0bc9b7f732",
+    "models/corr_neg_include.f90": "5be1a4cb976426438068aaddb4c4aec52eb2157ed775b6cd53f4514203270c73",
+    "diagnostics/mod_integrals3D.f90": "cd68995ec4f763fe02257b42f86672f29cab640a1757ed6bd506b6b500371f96"
+  },
+  "scope": "Instantaneous constitutive mass differences applied to centered physical-time derivatives on pilot states. These are partial contributions, not an exact discrete energy identity.",
+  "native_mass_facts": [
+    "Parallel diagonal time coefficient uses rho_corrected*F0^2/R, while generic kinetic energy uses rho*(F0^2+|grad(psi)|^2)/R^2.",
+    "Perpendicular gradient temporal mass and pressure-temperature diagonal use corrected density.",
+    "Negative rho_min_neg selects the rho_1-based smooth correction; positive raw densities below rho_1 can activate it."
+  ],
+  "unaccounted": "Discrete temporal/spatial linearization, stabilization, source work and modified native boundary rows still need native assembly evidence.",
+  "full_energy_acceptance": false,
+  "scientific_gates_passed": [],
+  "frames": [
+    {
+      "step": 2,
+      "time_s": 5.85797129678366e-08,
+      "restart_sha256": "32a257bf75dc0dc75d63f7185530bf38641eb17a62218c59f5bd516f9b075c9f",
+      "native_energy_minus_dE_dt_rhs_W": [
+        -8945706.257,
+        12319401.87
+      ],
+      "density_correction_branch_volume_fraction": 0.13207775336373323,
+      "nonroundoff_density_mass_change_volume_fraction": 0.13173099516911752,
+      "maximum_density_coefficient_correction": 1.1330500783402961e-05,
+      "parallel_poloidal_mass_difference_W": 553377.0073274486,
+      "parallel_density_correction_mass_difference_W": -128.9370110108288,
+      "pressure_density_correction_mass_difference_W": 7.956903049005014,
+      "perpendicular_density_correction_mass_difference_W": -0.0014692677000492115,
+      "sum_of_partial_mass_difference_powers_W": 553256.0257502191,
+      "independent_parallel_kinetic_J": 0.4869489843651494,
+      "native_parallel_kinetic_J": 0.4869489843651446
+    },
+    {
+      "step": 3,
+      "time_s": 8.78695694517549e-08,
+      "restart_sha256": "3d60f615ab8345b3d76e361cd41da7b8e87666e31073d64ed8c6b9f6fd9bce31",
+      "native_energy_minus_dE_dt_rhs_W": [
+        -5874950.287,
+        9488837.902
+      ],
+      "density_correction_branch_volume_fraction": 0.15243679745400265,
+      "nonroundoff_density_mass_change_volume_fraction": 0.15224897154873807,
+      "maximum_density_coefficient_correction": 2.76085763259281e-05,
+      "parallel_poloidal_mass_difference_W": 237449.69008638276,
+      "parallel_density_correction_mass_difference_W": -48.319968026925714,
+      "pressure_density_correction_mass_difference_W": 14.161811496293597,
+      "perpendicular_density_correction_mass_difference_W": -0.002520661885330639,
+      "sum_of_partial_mass_difference_powers_W": 237415.52940919026,
+      "independent_parallel_kinetic_J": 0.5477536025644992,
+      "native_parallel_kinetic_J": 0.5477536025644936
+    },
+    {
+      "step": 4,
+      "time_s": 1.171594259356732e-07,
+      "restart_sha256": "69d82f9e833b0aebacce3cc85734a2e930d19dee564f42d3521bcf65e93342b7",
+      "native_energy_minus_dE_dt_rhs_W": [
+        -5593671.326,
+        8365069.731
+      ],
+      "density_correction_branch_volume_fraction": 0.170248307950925,
+      "nonroundoff_density_mass_change_volume_fraction": 0.1701075796616891,
+      "maximum_density_coefficient_correction": 4.9709795293442424e-05,
+      "parallel_poloidal_mass_difference_W": 216441.7912829479,
+      "parallel_density_correction_mass_difference_W": -103.58330115858811,
+      "pressure_density_correction_mass_difference_W": 22.479727859206903,
+      "perpendicular_density_correction_mass_difference_W": -0.0032864680633378856,
+      "sum_of_partial_mass_difference_powers_W": 216360.68442318044,
+      "independent_parallel_kinetic_J": 0.6635236599675108,
+      "native_parallel_kinetic_J": 0.6635236599675054
+    },
+    {
+      "step": 5,
+      "time_s": 1.4644928241959152e-07,
+      "restart_sha256": "9f0cd346e238287d4f7d9d3314eefa7ec167ca9e07cd89ffb334cdee609e6bb5",
+      "native_energy_minus_dE_dt_rhs_W": [
+        -4757085.845,
+        7501251.686
+      ],
+      "density_correction_branch_volume_fraction": 0.18526923340774282,
+      "nonroundoff_density_mass_change_volume_fraction": 0.18512990171225682,
+      "maximum_density_coefficient_correction": 7.635082647941722e-05,
+      "parallel_poloidal_mass_difference_W": 157689.18960454385,
+      "parallel_density_correction_mass_difference_W": -68.74104047548812,
+      "pressure_density_correction_mass_difference_W": 31.724047335258984,
+      "perpendicular_density_correction_mass_difference_W": -0.0036858693883461175,
+      "sum_of_partial_mass_difference_powers_W": 157652.16892553424,
+      "independent_parallel_kinetic_J": 0.7175803360908334,
+      "native_parallel_kinetic_J": 0.717580336090828
+    },
+    {
+      "step": 6,
+      "time_s": 1.757391389035098e-07,
+      "restart_sha256": "f23c47526080d6e026124789c8ad4c6b3f5cf4ad1b5f764395e40ad0875b7ef7",
+      "native_energy_minus_dE_dt_rhs_W": [
+        -4478931.39,
+        7149842.14
+      ],
+      "density_correction_branch_volume_fraction": 0.19734685616272754,
+      "nonroundoff_density_mass_change_volume_fraction": 0.19726406295619592,
+      "maximum_density_coefficient_correction": 0.00010718328170916842,
+      "parallel_poloidal_mass_difference_W": 142291.54354517697,
+      "parallel_density_correction_mass_difference_W": -99.2869803599317,
+      "pressure_density_correction_mass_difference_W": 42.06561441243193,
+      "perpendicular_density_correction_mass_difference_W": -0.0039989523968632515,
+      "sum_of_partial_mass_difference_powers_W": 142234.31818027707,
+      "independent_parallel_kinetic_J": 0.79209825267095,
+      "native_parallel_kinetic_J": 0.7920982526709501
+    },
+    {
+      "step": 7,
+      "time_s": 2.050289953874281e-07,
+      "restart_sha256": "47a0d7e02d34c529e97fe0b22b478d774a92c56e6cbe1869c4322dc2bff319b7",
+      "native_energy_minus_dE_dt_rhs_W": [
+        -4065906.038,
+        6677183.674
+      ],
+      "density_correction_branch_volume_fraction": 0.20738986680888266,
+      "nonroundoff_density_mass_change_volume_fraction": 0.20736345064965536,
+      "maximum_density_coefficient_correction": 0.0001413565949207954,
+      "parallel_poloidal_mass_difference_W": 116322.36481867816,
+      "parallel_density_correction_mass_difference_W": -75.92561543206757,
+      "pressure_density_correction_mass_difference_W": 53.24748772958489,
+      "perpendicular_density_correction_mass_difference_W": -0.004007041071041598,
+      "sum_of_partial_mass_difference_powers_W": 116299.68268393462,
+      "independent_parallel_kinetic_J": 0.8362527250619126,
+      "native_parallel_kinetic_J": 0.8362527250619095
+    }
+  ]
+}

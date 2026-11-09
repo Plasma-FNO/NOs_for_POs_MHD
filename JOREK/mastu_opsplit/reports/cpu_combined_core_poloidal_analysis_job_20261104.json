@@ -1,0 +1,22 @@
+{
+  "status": "cancelled_before_analysis",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/combined_pair_core_poloidal440_20261104",
+  "dependencies": [
+    "2772872",
+    "2772874",
+    "2772884",
+    "2772886"
+  ],
+  "script_sha256": "a99e39901dd7947038bd391e68af2aecdb848916a2696bdf15dc58d09a55b447",
+  "analysis_source_sha256": "8a374b642f06682fcaebaac19cb0c68a9e9798739d11878e01dcb7bae8c38d28",
+  "scientific_gates_passed": [],
+  "budget": {
+    "mpi_ranks": 1,
+    "memory_GiB": 128,
+    "wall_hours_max": 1
+  },
+  "job_id": "2772893",
+  "native_attempt_started": false,
+  "reason": "Comparison label was shadowed by case loop; replacement v2 preserves distinct report names.",
+  "kind": "analysis"
+}

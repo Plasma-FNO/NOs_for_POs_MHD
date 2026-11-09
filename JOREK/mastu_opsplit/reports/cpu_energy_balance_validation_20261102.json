@@ -1,0 +1,137 @@
+{
+  "created_utc": "2026-11-02T21:32:31.523232+00:00",
+  "script_sha256": "eab9225a413c00e7c1b1190d0cf0f6b0517df167d842a01508b1648b0978c96f",
+  "scope": "Model303 magnetic diagnostic correction only; no physical gate promotion",
+  "gate_A_passed": false,
+  "full_energy_acceptance": false,
+  "runs": {
+    "baseline": {
+      "job_id": "2768319",
+      "restart_sha256": "32996162db1eab071870c68833484f2c865932b4ad28e52081ed7082b9b38f54",
+      "reference_sha256": "807422e4b1b6b844442348c597c4003ad514c97e1c1bc175103b6258c4e2ac71",
+      "native_arrays_exact": {
+        "values": true,
+        "x": true,
+        "vertex": true,
+        "size": true,
+        "index": true,
+        "boundary": true,
+        "xtime": true,
+        "energies": true
+      },
+      "metadata": {
+        "time_seconds": 1.4059131112280784e-06,
+        "steps": 48,
+        "quadrature_order": 8,
+        "mapping_status": "diagnostic_restart_only",
+        "expanded_nodal_dofs": 46324,
+        "canonical_native_dofs": 46203,
+        "native_dof_aliases_verified": true,
+        "minimum_signed_jacobian_m2": 6.314530488518828e-07,
+        "negative_jacobian_samples": 0,
+        "patch_ids_available": false,
+        "native_constraints_available": false
+      },
+      "positive_density_temperature_at_sampled_quadrature": true,
+      "native_final_resistive_loss_W": 317742404.642738,
+      "independent_q8_resistive_loss_W": 317742406.2237183,
+      "resistive_loss_relative_difference": 4.975666671920942e-09,
+      "previous_diagnostics": {
+        "scope": "Native printed diagnostics, source communication/live_data.f90 and diagnostics/mod_integrals3D.f90; not independent weak residuals",
+        "energy_samples": 47,
+        "energy_relative_l2_mismatch": 0.9893011730500013,
+        "energy_max_absolute_mismatch_W": 298597149.962,
+        "particle_samples": 47,
+        "particle_relative_l2_mismatch": 0.005326778461948553,
+        "particle_max_absolute_mismatch_per_s": 1.0156232850000031e+21,
+        "particle_formula": "dN/dt = total source - sum(outward boundary particle fluxes)",
+        "independent_balance_acceptance": false
+      },
+      "corrected_diagnostics": {
+        "samples": 47,
+        "energy_relative_l2_net_mismatch": 1.5397683772552806,
+        "energy_relative_l2_to_sum_of_component_norms": 0.015775050770665107,
+        "energy_max_absolute_mismatch_W": 36974218.980000004,
+        "magnetic_relative_l2_net_mismatch": 0.02197835976123684,
+        "magnetic_relative_l2_to_sum_of_component_norms": 4.439086879155584e-05,
+        "physical_balance_acceptance": false,
+        "scope": "Native printed diagnostics with reconstructed source/sink columns; component scaling does not replace net-balance reporting."
+      },
+      "corrected_particle_diagnostics": {
+        "scope": "Native printed diagnostics, source communication/live_data.f90 and diagnostics/mod_integrals3D.f90; not independent weak residuals",
+        "energy_samples": 47,
+        "energy_relative_l2_mismatch": 1.5397683772552806,
+        "energy_max_absolute_mismatch_W": 36974218.980000004,
+        "particle_samples": 47,
+        "particle_relative_l2_mismatch": 0.005326778461948553,
+        "particle_max_absolute_mismatch_per_s": 1.0156232850000031e+21,
+        "particle_formula": "dN/dt = total source - sum(outward boundary particle fluxes)",
+        "independent_balance_acceptance": false
+      }
+    },
+    "perturbed": {
+      "job_id": "2768320",
+      "restart_sha256": "8c90aa460c7463e2ba2c352c8f73435c2a56ac45f24cd7eda4b51f24cf3aad29",
+      "reference_sha256": "a2b95c86d78326fbe30e35cc573cd7a0a796ce323bc437ab644367292fec2510",
+      "native_arrays_exact": {
+        "values": true,
+        "x": true,
+        "vertex": true,
+        "size": true,
+        "index": true,
+        "boundary": true,
+        "xtime": true,
+        "energies": true
+      },
+      "metadata": {
+        "time_seconds": 1.4059131112280784e-06,
+        "steps": 48,
+        "quadrature_order": 8,
+        "mapping_status": "diagnostic_restart_only",
+        "expanded_nodal_dofs": 46324,
+        "canonical_native_dofs": 46203,
+        "native_dof_aliases_verified": true,
+        "minimum_signed_jacobian_m2": 6.314530488518828e-07,
+        "negative_jacobian_samples": 0,
+        "patch_ids_available": false,
+        "native_constraints_available": false
+      },
+      "positive_density_temperature_at_sampled_quadrature": true,
+      "native_final_resistive_loss_W": 316388007.29333854,
+      "independent_q8_resistive_loss_W": 316388008.8497433,
+      "resistive_loss_relative_difference": 4.9192912685884386e-09,
+      "previous_diagnostics": {
+        "scope": "Native printed diagnostics, source communication/live_data.f90 and diagnostics/mod_integrals3D.f90; not independent weak residuals",
+        "energy_samples": 47,
+        "energy_relative_l2_mismatch": 0.9895421042564612,
+        "energy_max_absolute_mismatch_W": 297295386.005,
+        "particle_samples": 47,
+        "particle_relative_l2_mismatch": 0.005308541164733399,
+        "particle_max_absolute_mismatch_per_s": 1.0146937940000102e+21,
+        "particle_formula": "dN/dt = total source - sum(outward boundary particle fluxes)",
+        "independent_balance_acceptance": false
+      },
+      "corrected_diagnostics": {
+        "samples": 47,
+        "energy_relative_l2_net_mismatch": 1.5222895196549946,
+        "energy_relative_l2_to_sum_of_component_norms": 0.015879051777587517,
+        "energy_max_absolute_mismatch_W": 36988783.11,
+        "magnetic_relative_l2_net_mismatch": 0.006026078347065269,
+        "magnetic_relative_l2_to_sum_of_component_norms": 0.00031222733125921336,
+        "physical_balance_acceptance": false,
+        "scope": "Native printed diagnostics with reconstructed source/sink columns; component scaling does not replace net-balance reporting."
+      },
+      "corrected_particle_diagnostics": {
+        "scope": "Native printed diagnostics, source communication/live_data.f90 and diagnostics/mod_integrals3D.f90; not independent weak residuals",
+        "energy_samples": 47,
+        "energy_relative_l2_mismatch": 1.5222895196549946,
+        "energy_max_absolute_mismatch_W": 36988783.11,
+        "particle_samples": 47,
+        "particle_relative_l2_mismatch": 0.005308541164733399,
+        "particle_max_absolute_mismatch_per_s": 1.0146937940000102e+21,
+        "particle_formula": "dN/dt = total source - sum(outward boundary particle fluxes)",
+        "independent_balance_acceptance": false
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "status": "submitted",
+  "job_id": "2773445",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/scaling8_capacity400_20261104",
+  "kind": "analysis",
+  "native_attempt_started": false,
+  "dependencies": [
+    "2773441"
+  ],
+  "script_sha256": "555da8a4f5f42663c00b621abfb03488c384f02118c7ef6888752be569214812",
+  "budget": {
+    "mpi_ranks": 1,
+    "memory_GiB": 128,
+    "wall_hours_max": 2
+  },
+  "scientific_gates_passed": []
+}

@@ -1,0 +1,187 @@
+{
+  "physical_parity_targets_met": false,
+  "metrics": {
+    "field": {
+      "psi": {
+        "absolute_rms_error": 1.5583321607028517e-09,
+        "reference_rms": 0.043833200103712354,
+        "relative_l2_error": 3.555141210351357e-08,
+        "passed": true
+      },
+      "u": {
+        "absolute_rms_error": 0.0,
+        "reference_rms": 0.0,
+        "relative_l2_error": null,
+        "passed": true
+      },
+      "zj": {
+        "absolute_rms_error": 1.0608686353021791e-07,
+        "reference_rms": 0.46633031768459454,
+        "relative_l2_error": 2.2749295833253208e-07,
+        "passed": true
+      },
+      "w": {
+        "absolute_rms_error": 0.0,
+        "reference_rms": 0.0,
+        "relative_l2_error": null,
+        "passed": true
+      },
+      "rho": {
+        "absolute_rms_error": 6.535332865356651e-08,
+        "reference_rms": 0.547061953204059,
+        "relative_l2_error": 1.1946239044920224e-07,
+        "passed": true
+      },
+      "T": {
+        "absolute_rms_error": 3.312891429502921e-10,
+        "reference_rms": 0.006163768075084046,
+        "relative_l2_error": 5.374782745143681e-08,
+        "passed": true
+      },
+      "Vpar": {
+        "absolute_rms_error": 0.0,
+        "reference_rms": 0.0,
+        "relative_l2_error": null,
+        "passed": true
+      }
+    },
+    "gradient": {
+      "psi": {
+        "absolute_rms_error": 6.127763018602432e-09,
+        "reference_rms": 0.20696829721929333,
+        "relative_l2_error": 2.9607254352147267e-08,
+        "passed": true
+      },
+      "u": {
+        "absolute_rms_error": 0.0,
+        "reference_rms": 0.0,
+        "relative_l2_error": null,
+        "passed": true
+      },
+      "zj": {
+        "absolute_rms_error": 2.5302376469467375e-05,
+        "reference_rms": 12.821529522601548,
+        "relative_l2_error": 1.9734288662569334e-06,
+        "passed": false
+      },
+      "w": {
+        "absolute_rms_error": 0.0,
+        "reference_rms": 0.0,
+        "relative_l2_error": null,
+        "passed": true
+      },
+      "rho": {
+        "absolute_rms_error": 5.274439616477392e-06,
+        "reference_rms": 5.58493811818453,
+        "relative_l2_error": 9.444043075972219e-07,
+        "passed": true
+      },
+      "T": {
+        "absolute_rms_error": 1.539505261309063e-08,
+        "reference_rms": 0.027816509883942533,
+        "relative_l2_error": 5.534501875800615e-07,
+        "passed": true
+      },
+      "Vpar": {
+        "absolute_rms_error": 0.0,
+        "reference_rms": 0.0,
+        "relative_l2_error": null,
+        "passed": true
+      }
+    }
+  },
+  "flux_spans": {
+    "picard": {
+      "points": {
+        "axis": {
+          "element": 6,
+          "st": [
+            0.011475489960078564,
+            0.002669787147751272
+          ],
+          "psi": -0.10326969513216665,
+          "rz": [
+            0.8699041628768839,
+            -0.0002624170591537588
+          ]
+        },
+        "xpoint1": {
+          "element": 21688,
+          "st": [
+            0.0024804788431246083,
+            0.9926113236146922
+          ],
+          "psi": -0.012281411482492028,
+          "rz": [
+            0.4836052259386999,
+            -1.244357629219332
+          ]
+        },
+        "xpoint2": {
+          "element": 25729,
+          "st": [
+            0.00590580977581195,
+            0.9834709635550717
+          ],
+          "psi": -0.012278915777958314,
+          "rz": [
+            0.4834871942535225,
+            1.2446184485287315
+          ]
+        }
+      },
+      "active_xpoint": "xpoint1",
+      "delta_psi_GS": 0.09098828364967462
+    },
+    "newton": {
+      "points": {
+        "axis": {
+          "element": 6,
+          "st": [
+            0.011476478104937559,
+            0.0026692066389986824
+          ],
+          "psi": -0.10326969424982844,
+          "rz": [
+            0.8699041570070506,
+            -0.00026244017557642364
+          ]
+        },
+        "xpoint1": {
+          "element": 21688,
+          "st": [
+            0.0024804952671568336,
+            0.9926114910294154
+          ],
+          "psi": -0.012281411636991134,
+          "rz": [
+            0.4836052276955569,
+            -1.244357631945541
+          ]
+        },
+        "xpoint2": {
+          "element": 25729,
+          "st": [
+            0.005908999016184371,
+            0.9834731735470825
+          ],
+          "psi": -0.012278914214942625,
+          "rz": [
+            0.48348716321159313,
+            1.244618414525995
+          ]
+        }
+      },
+      "active_xpoint": "xpoint1",
+      "delta_psi_GS": 0.09098828261283731
+    }
+  },
+  "newton_pressure_derivative_scale": 0.9999999886047163,
+  "source_hashes": {
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/wall_equilibrium_relaxation_20261103/control3/jorek000000.h5": "0a5afe6224dc5ea0fe333bad348c8766d5635a395da64e78e779bf941da25762",
+    "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/newton_anchored_equilibrium_20261103/control3/jorek000000.h5": "1be7df67e2ef372796cbb734e713622501eb44797652308bcf51c2754f44b566"
+  },
+  "protocol_sha256": "ea1ab92f1fc1c4ffa1e9fd0f60cd691c661800e11a88ccd17596c4d9c048f92b",
+  "script_sha256": "9a5bb8e68787399145e02f9e929ea061c32328e4222664e64a8dadc925ea8b4a",
+  "scientific_gates_passed": []
+}

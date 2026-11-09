@@ -1,0 +1,577 @@
+{
+  "status": "completed",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/mumps_scaling8_20261104",
+  "manifest_sha256": "c503a500ab29782d21d4545fae6f016bb68d1ce4be7c0fcb2785cfacca68bdfc",
+  "script_sha256": "dc433bc1cc8f47d47c8a3ea0c7a2fb70e33abffab0aee90a800210a9be979186",
+  "budget": {
+    "mpi_ranks": 16,
+    "memory_GiB": 512,
+    "wall_hours_max": 2,
+    "rank_CPU_hours_max": 32,
+    "conservative_resource_hours_max": 1024,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4240119       4240119            13.8       2531868               2430"
+  },
+  "scheduler_preflight": "sbatch: Job 2773144 to start at 2026-11-04T14:07:41 a using 16 processors on nodes r335c06s05 in partition dcgp_fua_prod\n",
+  "scientific_gates_passed": [],
+  "job_id": "2773145",
+  "stage_results": {
+    "perturbed3": {
+      "stage": "perturbed3",
+      "status": "completed",
+      "returncode": 0,
+      "process_wall_seconds": 374.29829802399036,
+      "binary_sha256": "80304f3243d2a803815435e87a124e779e354ab77cd7828c52c7eb888a787cb6",
+      "scientific_gates_passed": [],
+      "initial": {
+        "health": {
+          "steps": 0,
+          "final_time_s": 0.0,
+          "restart_sha256": "cb3a7132726dcda5236730feaa8bab9dc93ecfe92569f14467fb59c9e0a74271"
+        },
+        "metadata": {
+          "time_seconds": 0.0,
+          "steps": 0,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 223148,
+          "canonical_native_dofs": 222917,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 1.9233925177217095e-08,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 61,
+        "minimum_density": 0.00999999999999999,
+        "minimum_temperature": 9.999999999999996e-05,
+        "restart_sha256": "cb3a7132726dcda5236730feaa8bab9dc93ecfe92569f14467fb59c9e0a74271"
+      },
+      "final": {
+        "health": {
+          "steps": 3,
+          "final_time_s": 8.78695694517549e-08,
+          "restart_sha256": "dbc3fd3a699b70bb7303401657a7364f3fc3a3159323afc01fb39e636ef66f71"
+        },
+        "metadata": {
+          "time_seconds": 8.78695694517549e-08,
+          "steps": 3,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 223148,
+          "canonical_native_dofs": 222917,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 1.9233925177217095e-08,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 131,
+        "minimum_density": 0.008866888033074028,
+        "minimum_temperature": 9.742901416298584e-05,
+        "restart_sha256": "dbc3fd3a699b70bb7303401657a7364f3fc3a3159323afc01fb39e636ef66f71"
+      },
+      "initial_parity": {
+        "exact_reference_arrays": {
+          "x": true,
+          "values": false,
+          "vertex": true,
+          "size": true,
+          "boundary": true,
+          "constrained": true,
+          "n_sons": true,
+          "t_now": true,
+          "index_now": true
+        },
+        "passed": true,
+        "metrics": {
+          "field": {
+            "absolute_rms_errors": [
+              2.5398646756299108e-17,
+              0.0,
+              1.3792323597419534e-15,
+              0.0,
+              7.039470328953876e-16,
+              4.158949379068101e-18,
+              0.0
+            ],
+            "reference_rms": [
+              0.04383320014545139,
+              0.0,
+              0.4663303622253062,
+              0.0,
+              0.5490171800359542,
+              0.006213673663975624,
+              0.0
+            ],
+            "tolerances": [
+              4.383420014545139e-08,
+              1e-12,
+              4.663313622253062e-07,
+              1e-12,
+              5.490181800359543e-07,
+              6.214673663975624e-09,
+              1e-12
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "gradient": {
+            "absolute_rms_errors": [
+              2.816822621103246e-15,
+              0.0,
+              1.0459318127535906e-12,
+              0.0,
+              4.730009517900291e-13,
+              1.7174129031085041e-15,
+              0.0
+            ],
+            "reference_rms": [
+              0.20696829724954713,
+              0.0,
+              12.821542783533513,
+              0.0,
+              5.58552440642125,
+              0.02798376990197947,
+              0.0
+            ],
+            "tolerances": [
+              2.0696929724954713e-07,
+              1e-12,
+              1.2821543783533511e-05,
+              1e-12,
+              5.58552540642125e-06,
+              2.798476990197947e-08,
+              1e-12
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          }
+        },
+        "snapshot_kind": "initial"
+      },
+      "parity": {
+        "exact_reference_arrays": {
+          "x": true,
+          "values": false,
+          "vertex": true,
+          "size": true,
+          "boundary": true,
+          "constrained": true,
+          "n_sons": true,
+          "t_now": true,
+          "index_now": true,
+          "xtime": true,
+          "energies": false
+        },
+        "passed": true,
+        "metrics": {
+          "field": {
+            "absolute_rms_errors": [
+              2.5255595055676894e-17,
+              6.666632940453086e-18,
+              1.2390103643998664e-12,
+              6.400924465812715e-13,
+              6.724862656670286e-16,
+              8.399952054729118e-18,
+              5.815233467031116e-18
+            ],
+            "reference_rms": [
+              0.04383331001627417,
+              1.5133459526977304e-05,
+              0.46633685220104415,
+              0.001417337456109194,
+              0.5489131631199169,
+              0.006213746972254413,
+              0.005230133930560147
+            ],
+            "tolerances": [
+              4.383431001627417e-08,
+              1.6133459526977304e-11,
+              4.663378522010441e-07,
+              1.4183374561091942e-09,
+              5.489141631199169e-07,
+              6.2147469722544136e-09,
+              5.231133930560147e-09
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "gradient": {
+            "absolute_rms_errors": [
+              2.847502691955224e-15,
+              7.057774804779443e-16,
+              1.3224697495222414e-08,
+              1.5753752435038398e-09,
+              2.8406370930932656e-13,
+              3.165339654282637e-15,
+              2.6424938514389464e-15
+            ],
+            "reference_rms": [
+              0.20696953792743444,
+              0.00010276502471142576,
+              12.824839495114391,
+              0.032355084680758435,
+              5.439002109733485,
+              0.027177705773081772,
+              0.18669517632804555
+            ],
+            "tolerances": [
+              2.0697053792743445e-07,
+              1.0376502471142575e-10,
+              1.282484049511439e-05,
+              3.2356084680758436e-08,
+              5.439003109733485e-06,
+              2.7178705773081773e-08,
+              1.8669617632804553e-07
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          }
+        },
+        "snapshot_kind": "evolved"
+      },
+      "workspace_retries": 0,
+      "equilibrium_summary": {
+        "iterations": 7,
+        "last_raw_update": 4.005e-11,
+        "converged": true
+      }
+    },
+    "poloidal880_step1": {
+      "stage": "poloidal880_step1",
+      "status": "completed",
+      "returncode": 0,
+      "process_wall_seconds": 198.9955013989238,
+      "binary_sha256": "80304f3243d2a803815435e87a124e779e354ab77cd7828c52c7eb888a787cb6",
+      "scientific_gates_passed": [],
+      "initial": {
+        "health": {
+          "steps": 0,
+          "final_time_s": 0.0,
+          "restart_sha256": "3dd06e24d97f65a55a225dd835761343a4aa435680dc5e1aa8469cd92a37ced4"
+        },
+        "metadata": {
+          "time_seconds": 0.0,
+          "steps": 0,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 637328,
+          "canonical_native_dofs": 636437,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 4.782998760814461e-09,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 61,
+        "minimum_density": 0.00999999999999999,
+        "minimum_temperature": 9.999999999999996e-05,
+        "restart_sha256": "3dd06e24d97f65a55a225dd835761343a4aa435680dc5e1aa8469cd92a37ced4"
+      },
+      "final": {
+        "health": {
+          "steps": 1,
+          "final_time_s": 2.92898564839183e-08,
+          "restart_sha256": "b5d8c3d0a642146b8c4d7008f7bb5b8aee2405b0ae3d9c8d9f529328005cef52"
+        },
+        "metadata": {
+          "time_seconds": 2.92898564839183e-08,
+          "steps": 1,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 637328,
+          "canonical_native_dofs": 636437,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 4.782998760814461e-09,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 131,
+        "minimum_density": 0.009280643616704292,
+        "minimum_temperature": 9.896697554942385e-05,
+        "restart_sha256": "b5d8c3d0a642146b8c4d7008f7bb5b8aee2405b0ae3d9c8d9f529328005cef52"
+      },
+      "workspace_retries": 0
+    },
+    "control3": {
+      "stage": "control3",
+      "status": "completed",
+      "returncode": 0,
+      "process_wall_seconds": 375.9730605300283,
+      "binary_sha256": "80304f3243d2a803815435e87a124e779e354ab77cd7828c52c7eb888a787cb6",
+      "scientific_gates_passed": [],
+      "initial": {
+        "health": {
+          "steps": 0,
+          "final_time_s": 0.0,
+          "restart_sha256": "b167317b01562a3a31ceb2ec3195e50fbe95972f8b088b5554711b31ef79638f"
+        },
+        "metadata": {
+          "time_seconds": 0.0,
+          "steps": 0,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 223148,
+          "canonical_native_dofs": 222917,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 1.9233925177217095e-08,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 61,
+        "minimum_density": 0.00999999999999999,
+        "minimum_temperature": 9.999999999999996e-05,
+        "restart_sha256": "b167317b01562a3a31ceb2ec3195e50fbe95972f8b088b5554711b31ef79638f"
+      },
+      "final": {
+        "health": {
+          "steps": 3,
+          "final_time_s": 8.78695694517549e-08,
+          "restart_sha256": "e6a62c218b886d271a1cb448e66234fdc357bef9203cd476053305bf8690d49c"
+        },
+        "metadata": {
+          "time_seconds": 8.78695694517549e-08,
+          "steps": 3,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 223148,
+          "canonical_native_dofs": 222917,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 1.9233925177217095e-08,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 131,
+        "minimum_density": 0.008866882142739108,
+        "minimum_temperature": 9.742912396647377e-05,
+        "restart_sha256": "e6a62c218b886d271a1cb448e66234fdc357bef9203cd476053305bf8690d49c"
+      },
+      "initial_parity": {
+        "exact_reference_arrays": {
+          "x": true,
+          "values": false,
+          "vertex": true,
+          "size": true,
+          "boundary": true,
+          "constrained": true,
+          "n_sons": true,
+          "t_now": true,
+          "index_now": true
+        },
+        "passed": true,
+        "metrics": {
+          "field": {
+            "absolute_rms_errors": [
+              2.5398646756299108e-17,
+              0.0,
+              1.3792323597419534e-15,
+              0.0,
+              7.038603143698774e-16,
+              4.151204710897918e-18,
+              0.0
+            ],
+            "reference_rms": [
+              0.04383320014545139,
+              0.0,
+              0.4663303622253062,
+              0.0,
+              0.5470619604001429,
+              0.006163768086297527,
+              0.0
+            ],
+            "tolerances": [
+              4.383420014545139e-08,
+              1e-12,
+              4.663313622253062e-07,
+              1e-12,
+              5.470629604001428e-07,
+              6.164768086297527e-09,
+              1e-12
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "gradient": {
+            "absolute_rms_errors": [
+              2.816822621103246e-15,
+              0.0,
+              1.0459318127535906e-12,
+              0.0,
+              4.730627827015691e-13,
+              1.7146347399261973e-15,
+              0.0
+            ],
+            "reference_rms": [
+              0.20696829724954713,
+              0.0,
+              12.821542783533513,
+              0.0,
+              5.584940933655634,
+              0.027816512916270898,
+              0.0
+            ],
+            "tolerances": [
+              2.0696929724954713e-07,
+              1e-12,
+              1.2821543783533511e-05,
+              1e-12,
+              5.584941933655634e-06,
+              2.7817512916270897e-08,
+              1e-12
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          }
+        },
+        "snapshot_kind": "initial"
+      },
+      "parity": {
+        "exact_reference_arrays": {
+          "x": true,
+          "values": false,
+          "vertex": true,
+          "size": true,
+          "boundary": true,
+          "constrained": true,
+          "n_sons": true,
+          "t_now": true,
+          "index_now": true,
+          "xtime": true,
+          "energies": false
+        },
+        "passed": true,
+        "metrics": {
+          "field": {
+            "absolute_rms_errors": [
+              2.520200273353845e-17,
+              4.405295233335804e-18,
+              1.2210192591927071e-12,
+              6.314175948559082e-13,
+              6.688681777810686e-16,
+              4.3151748032216746e-18,
+              5.195188585809129e-18
+            ],
+            "reference_rms": [
+              0.043833194904420315,
+              6.574304554590505e-06,
+              0.466330436382099,
+              0.0013389234705639306,
+              0.546959262236139,
+              0.00616384481724956,
+              0.005230056092142175
+            ],
+            "tolerances": [
+              4.383419490442031e-08,
+              7.574304554590505e-12,
+              4.6633143638209893e-07,
+              1.3399234705639306e-09,
+              5.46960262236139e-07,
+              6.16484481724956e-09,
+              5.231056092142175e-09
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "gradient": {
+            "absolute_rms_errors": [
+              2.838219973987278e-15,
+              7.006810702289865e-16,
+              1.1191992443594138e-08,
+              1.524930875787655e-09,
+              2.8324922519245993e-13,
+              1.4716740188942122e-15,
+              2.250187516335073e-15
+            ],
+            "reference_rms": [
+              0.2069681533071649,
+              8.256349761392443e-05,
+              12.8212282565509,
+              0.030559729486668,
+              5.438405549803316,
+              0.027012511976131637,
+              0.18669465743503674
+            ],
+            "tolerances": [
+              2.0696915330716488e-07,
+              8.356349761392443e-11,
+              1.2821229256550899e-05,
+              3.0560729486667996e-08,
+              5.438406549803316e-06,
+              2.7013511976131637e-08,
+              1.8669565743503672e-07
+            ],
+            "passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          }
+        },
+        "snapshot_kind": "evolved"
+      },
+      "workspace_retries": 0,
+      "equilibrium_summary": {
+        "iterations": 7,
+        "last_raw_update": 4.005e-11,
+        "converged": true
+      }
+    }
+  },
+  "qualification": "cpu_mumps_scaling8_qualification_20261104.json"
+}

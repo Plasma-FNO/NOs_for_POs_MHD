@@ -1,0 +1,16 @@
+# Dataset input contract, not a command to launch scientific model training.
+manifest: /pitagora_scratch/userexternal/vgopakum/mastu_euler_ensemble100_20261105/manifest.json
+completion_record: /pitagora_scratch/userexternal/vgopakum/mastu_euler_ensemble100_20261105/completion.json
+loader: mastu_opsplit.euler_dataset.EulerDataset
+split_counts:
+  train: 60
+  validation: 20
+  test: 20
+fields: [psi, u, zj, w, rho, T, Vpar]
+observation_stride: 1
+example_training_horizon: 4
+normalization: training_trajectories_only
+methods: [opsplit, ar, node]
+time_basis: saved_frame_index
+nonlinear_term_labels_required: false
+scope: independent_perturbations_on_one_fixed_MASTU_equilibrium_and_native_mesh

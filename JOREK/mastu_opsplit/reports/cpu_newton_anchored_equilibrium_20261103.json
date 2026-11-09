@@ -1,0 +1,139 @@
+{
+  "status": "stopped_for_stagnant_newton_two_cycle",
+  "bulk_output": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/newton_anchored_equilibrium_20261103",
+  "budget": {
+    "authorization": "User request to get the numerical solver to converge and finish the science plan.",
+    "scope": "One allocation, two frozen native3-step proofs: matched native Newton original-wall control and wall1.5.",
+    "allocations_max": 1,
+    "attempts_each_max": 1,
+    "mpi_ranks": 4,
+    "threads": 1,
+    "memory_GiB": 256,
+    "wall_hours_max": 3,
+    "rank_CPU_hours_max": 12,
+    "node_hours_max": 3,
+    "conservative_resource_hours_max": 768,
+    "saldo_row": "FUPA2_FAUNA         20260301    20270228      30720000             4238268       4238268            13.8       2531868                578",
+    "equilibrium_tolerance_changed": false,
+    "physical_equivalence_requires_validation": true,
+    "delta_psi_GS": 0.09098828364967462
+  },
+  "manifest_sha256": "99f1856da8ccff0ed093f588f277ea705bc142cd6c70e59a3982bc0648ee944a",
+  "script": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/cpu_newton_anchored_equilibrium_20261103.sbatch",
+  "script_sha256": "98770156fa07ce340ea028b24c1256eaf800872eb6e5f8c00a897fe67187a5fa",
+  "scheduler_preflight": "sbatch: Job 2771293 to start at 2026-11-03T21:36:52 a using 4 processors on nodes r354c01s10 in partition dcgp_fua_prod\n",
+  "scientific_gates_passed": [],
+  "job_id": "2771294",
+  "stage_results": {
+    "control3": {
+      "stage": "control3",
+      "status": "completed",
+      "returncode": 0,
+      "process_wall_seconds": 742.5970200099982,
+      "binary_sha256": "dd786f76a5c815976ad54bcd31b744ad2c3d6cafddfcc064dcae8e6761d8ccd6",
+      "scientific_gates_passed": [],
+      "initial": {
+        "health": {
+          "steps": 0,
+          "final_time_s": 0.0,
+          "restart_sha256": "1be7df67e2ef372796cbb734e713622501eb44797652308bcf51c2754f44b566"
+        },
+        "metadata": {
+          "time_seconds": 0.0,
+          "steps": 0,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 223148,
+          "canonical_native_dofs": 222917,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 1.9235618605202478e-08,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 61,
+        "minimum_density": 0.00999999999999999,
+        "minimum_temperature": 9.999999999999996e-05,
+        "restart_sha256": "1be7df67e2ef372796cbb734e713622501eb44797652308bcf51c2754f44b566"
+      },
+      "final": {
+        "health": {
+          "steps": 3,
+          "final_time_s": 8.78695694517549e-08,
+          "restart_sha256": "9bfbac45dc8ed006abbd28b49c49cbb0a228d79756d12b8eb585f2c7e8d4919d"
+        },
+        "metadata": {
+          "time_seconds": 8.78695694517549e-08,
+          "steps": 3,
+          "quadrature_order": 8,
+          "mapping_status": "diagnostic_restart_only",
+          "expanded_nodal_dofs": 223148,
+          "canonical_native_dofs": 222917,
+          "native_dof_aliases_verified": true,
+          "minimum_signed_jacobian_m2": 1.9235618605202478e-08,
+          "negative_jacobian_samples": 0,
+          "patch_ids_available": false,
+          "native_constraints_available": false
+        },
+        "readable_finite_datasets": 131,
+        "minimum_density": 0.00886688214281537,
+        "minimum_temperature": 9.742912397392034e-05,
+        "restart_sha256": "9bfbac45dc8ed006abbd28b49c49cbb0a228d79756d12b8eb585f2c7e8d4919d"
+      },
+      "workspace_retries": 0,
+      "equilibrium_summary": {
+        "iterations": 7,
+        "last_raw_update": 4.456e-11,
+        "converged": true
+      }
+    }
+  },
+  "wall_failure": {
+    "last_updates": [
+      [
+        12,
+        7.075e-07
+      ],
+      [
+        13,
+        7.075e-07
+      ],
+      [
+        14,
+        7.075e-07
+      ],
+      [
+        15,
+        7.075e-07
+      ],
+      [
+        16,
+        7.075e-07
+      ],
+      [
+        17,
+        7.075e-07
+      ],
+      [
+        18,
+        7.075e-07
+      ],
+      [
+        19,
+        7.075e-07
+      ]
+    ],
+    "boundary_point_Z": [
+      1.2444,
+      -1.24437,
+      1.2444,
+      -1.24437,
+      1.2444,
+      -1.24437,
+      1.2444,
+      -1.24437
+    ],
+    "reason": "Full Newton updates stagnate in a two-cycle with alternating lower/upper boundary point; stopped before spending the remaining 200-iteration cap.",
+    "replacement_job_id": "2771333"
+  }
+}
