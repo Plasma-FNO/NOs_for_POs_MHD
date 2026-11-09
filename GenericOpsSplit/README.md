@@ -96,10 +96,11 @@ $PY summarize.py $ROOT                                   # -> $ROOT/summary/summ
 
 ## Results (9 November 2026; 210 runs = 14 variants x 3 seeds x 5 problems)
 
-Full tables: [results/summary.md](results/summary.md) (machine-readable: `results/summary.json`); figures
-[error vs horizon](results/fig_error_vs_horizon.png), [step transfer](results/fig_step_transfer.png),
-[operator recovery](results/fig_operator_recovery.png). Checkpoints, per-run JSON and generated data stay on
-scratch under `$ROOT` (runs/, data/; the transient-dominated first NS2D sweep is in archive/). Errors are test relative L2 (mean over trajectories, clipped at 2), mean over
+Full tables: [results/summary.md](results/summary.md) (machine-readable: `results/summary.json`). Figures
+(`fig_error_vs_horizon.png`, `fig_step_transfer.png`, `fig_operator_recovery.png`) are not tracked (the repo
+ignores `*.png`); they are in `$ROOT/summary/` and are regenerated with `python plots.py $ROOT`. Checkpoints,
+per-run JSON and generated data stay on scratch under `$ROOT` (runs/, data/; the transient-dominated first
+NS2D sweep is in archive/). Errors are test relative L2 (mean over trajectories, clipped at 2), mean over
 seeds, at the longest horizon (2x the training horizon) unless stated.
 
 **Main comparison (single training step h):**
