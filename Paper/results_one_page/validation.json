@@ -1,0 +1,11 @@
+{
+  "as_of_utc": "2026-11-02T22:44:56.391018+00:00",
+  "passed": 7,
+  "failed": 0,
+  "skipped": 0,
+  "wall_seconds": 2.52,
+  "pages": 1,
+  "pdf_sha256": "1a934acf79be91024a50fdd366a3392109a56e383b04bb5502fffef906eaceb9",
+  "scope": "Current CPU budget/refinement evidence, one-page/source protection; scientific gates remain pending",
+  "xml": "Paper/results_one_page/cpu_budget_refinement_tests.xml"
+}

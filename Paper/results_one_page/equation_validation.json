@@ -1,0 +1,11 @@
+{
+  "purpose": "Algebraic verification of displayed MHD targets; not physical-rollout validation",
+  "states": 128,
+  "seed": 12,
+  "source": "mastu_opsplit.numerical.model303_advection_blocks",
+  "compact_max_absolute_error": 7.105427357601002e-15,
+  "physical_max_absolute_error": 7.105427357601002e-15,
+  "rtol": 1e-12,
+  "atol": 1e-12,
+  "passed": true
+}
