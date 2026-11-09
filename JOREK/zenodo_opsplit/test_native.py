@@ -18,6 +18,46 @@ def coefficients(case='es'):
                                     tstep=.5, rho_0=.05, t_0=5e-6), case)
 
 
+@pytest.mark.parametrize('case', ['es', 'em'])
+@pytest.mark.parametrize('residual', [False, True])
+def test_rejected_neural_trials_fall_back_to_exact_analytic_step_and_adjoint(case, residual):
+    from native_rollout import NativeRollout
+
+    class RejectCorrection(torch.nn.Module):
+        is_residual = residual
+
+        def __init__(self):
+            super().__init__()
+            self.marker = torch.nn.Parameter(torch.tensor(0.))
+
+        def forward(self, state):
+            raise FloatingPointError('Manufactured rejected neural trial')
+
+    r, z, rr, zz = grid(15)
+    c = coefficients(case)
+    c.update(viscosity='old', conservative=False)
+    shape = torch.sin(math.pi*(rr-9.5))*torch.sin(math.pi*(zz+.5))
+    rho = c['rho_wall']+.01*shape
+    fields = [rho, rho*c['T_wall'], .1*shape*(1+.3*torch.cos(2*math.pi*zz))]
+    if case == 'em':
+        fields.append(.001*shape)
+    state = torch.stack(fields)[None]
+    reference = NativeReference(r, z, wall_trace(state, r, z, c), c)
+    analytic = NativeRollout(reference, state)
+    learned = NativeRollout(reference, state, RejectCorrection())
+    initial = state.clone().requires_grad_()
+    fallback_initial = state.clone().requires_grad_()
+    expected = analytic.step(initial, .02, substeps=1)
+    actual = learned.step(fallback_initial, .02, substeps=1)
+    torch.testing.assert_close(actual, expected, rtol=0, atol=0)
+    weights = torch.linspace(.1, 1., state.numel(), dtype=state.dtype).reshape_as(state)
+    expected_gradient, = torch.autograd.grad((expected*weights).sum(), initial)
+    actual_gradient, = torch.autograd.grad((actual*weights).sum(), fallback_initial)
+    torch.testing.assert_close(actual_gradient, expected_gradient, rtol=0, atol=0)
+    assert learned.limiter_stats['analytic_fallbacks'] == analytic.limiter_stats['substeps'] > 0
+    assert learned.limiter_stats['energy_limited'] == 0
+
+
 def test_native_conversion_round_trip():
     q = torch.randn(2, 4, 9, 9, dtype=torch.float64)
     q[:, :2] = q[:, :2].abs()+1

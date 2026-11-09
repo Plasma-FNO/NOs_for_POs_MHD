@@ -316,7 +316,7 @@ class NativeRollout(IMEXReference):
             Ka=self.stiffness_tensor((rho*self.R**3).reshape(self.shape))
             momentum_matrix=Ka+h*c['mu']*self.H+h*c['mu_hyper']*self.Hu
             momentum_rhs=mv(Ka,u)-h*self.V*load.flatten()
-            if self.operators is not None and self.blend:
+            if self.operators is not None and self.blend and correction_scale:
                 pressure=(-2*self.ref.r*self.ref.op.grad(extended[:,1])[1])[:,1:-1,1:-1]
                 force=pressure+terms['lorentz']+terms['conservative']
                 if getattr(self.operators,'is_residual',False):
