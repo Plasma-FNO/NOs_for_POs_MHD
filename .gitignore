@@ -56,3 +56,17 @@ JOREK/mastu_opsplit/.pytest_cache/
 JOREK/mastu_opsplit/runs/
 JOREK/mastu_opsplit/checkpoints/
 JOREK/mastu_opsplit/data/
+# Re-exclude bytecode under the un-ignored tests tree; runs is a symlink (no trailing slash).
+JOREK/mastu_opsplit/tests/__pycache__/
+JOREK/mastu_opsplit/runs
+
+# Fortran module files from compiler invocations
+*.mod
+
+# Tearing pilot: keep scripts, protocols and summary reports; the JOREK build
+# tree, executable and raw per-run outputs stay outside source control.
+JOREK/tearing_pilot/single_writer_build/
+JOREK/tearing_pilot/snapshot/jorek_model199
+JOREK/tearing_pilot/*/*/
+!JOREK/tearing_pilot/*/convergence/
+JOREK/tearing_pilot/run_*/analysis.stdout
