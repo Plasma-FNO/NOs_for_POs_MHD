@@ -1,0 +1,33 @@
+{
+  "window_seconds": [
+    0.015,
+    0.05
+  ],
+  "initialization": "Fresh start at t=0 for every dt; unchanged deterministic native perturbation. No warm start from an evolved coarse trajectory.",
+  "timesteps_native": [
+    3000,
+    1500,
+    750,
+    375
+  ],
+  "reference_regression_tolerance": 1e-12,
+  "acceptance": {
+    "solver": "Correct endpoint, finite arrays, no HDF5/solver errors; one readable equilibrium export",
+    "temporal": "Finest adjacent pair <=1% volume-time RMS field error relative to temporal variation in every field and <=1% n=1 field error; <=1% relative L2 error of n=1 magnetic and kinetic energy histories. Comparisons at matching physical times, no phase shifting.",
+    "scope": "Pilot temporal convergence only. No mesh or toroidal-resolution acceptance and no production dataset."
+  },
+  "additional_refinement": {
+    "timesteps_native": [
+      187.5,
+      93.75
+    ],
+    "reason": "First two refinement pairs reduce mode-energy discrepancy from ~79% to ~26%, consistent with convergence but far above 1%; two more halvings probe the predeclared threshold.",
+    "resources": "Two independent 2-rank CPU jobs, each capped at 16 minutes and 900 seconds per simulation; no GPU or training."
+  },
+  "confirmation_refinement": {
+    "timestep_native": 46.875,
+    "output_every_steps": 2,
+    "reason": "375 vs 187.5 still differs by 3.5% in magnetic energy and up to 4.2% relative to field temporal variation. One further level beyond 93.75 supplies a stringent final comparison; output cadence matches dt93.75 exactly.",
+    "resources": "Two CPU ranks, 8 GB, 22-minute job cap, 1200-second simulation cap."
+  }
+}

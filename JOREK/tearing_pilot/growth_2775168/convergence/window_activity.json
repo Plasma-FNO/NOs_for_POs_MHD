@@ -1,0 +1,41 @@
+{
+  "endpoint_times_seconds": [
+    0.015011995078351673,
+    0.049958947183826215
+  ],
+  "fields": {
+    "psi": {
+      "n1_rms_start": 1.440114059837655e-10,
+      "n1_rms_end": 9.039092662665452e-05,
+      "endpoint_change_over_initial_full_field": 0.0008803676386550625
+    },
+    "u": {
+      "n1_rms_start": 9.896567124706651e-13,
+      "n1_rms_end": 1.0736543229887919e-07,
+      "endpoint_change_over_initial_full_field": 6041.091155837837
+    },
+    "j": {
+      "n1_rms_start": 2.4681535100333827e-09,
+      "n1_rms_end": 0.01175915566268536,
+      "endpoint_change_over_initial_full_field": 0.02254402065187819
+    },
+    "omega": {
+      "n1_rms_start": 2.945423987062411e-11,
+      "n1_rms_end": 0.00014062193724331506,
+      "endpoint_change_over_initial_full_field": 16924.077465801474
+    },
+    "rho": {
+      "n1_rms_start": 9.581117862771926e-10,
+      "n1_rms_end": 0.014029931913134326,
+      "endpoint_change_over_initial_full_field": 0.017828713679323916
+    },
+    "T": {
+      "n1_rms_start": 1.3198280829797258e-15,
+      "n1_rms_end": 1.4458095419370874e-08,
+      "endpoint_change_over_initial_full_field": 0.040132669310554626
+    }
+  },
+  "late_magnetic_log_growth_per_second": 51.91885791612352,
+  "late_kinetic_log_growth_per_second": 35.24681603217607,
+  "interpretation": "Growth and nonlinear saturation onset; energy is still evolving at 52.51 ms. Not a settled saturated state."
+}

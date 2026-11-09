@@ -1,0 +1,45 @@
+{
+  "job_id": "2775360",
+  "binary": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/tearing_pilot/single_writer_build/jorek_model199",
+  "binary_sha256": "29469591cdaa8aed06cef0d2ede66be433494a383c6e502bb4410b49b7f43ea8",
+  "runner_sha256": "ed661163df0907befa6f372021107a51a465989118127fd14d9391f7c50da173",
+  "patch_sha256": "9b510eb09a368f15d51ce49807e761fd52358330eb172c53cdb9941deeec59ba",
+  "mpi_ranks": 2,
+  "omp_threads": 1,
+  "cases": {
+    "regression": {
+      "returncode": 0,
+      "wall_seconds": 3.9315270639490336,
+      "dt_native": 3000.0,
+      "requested_steps": 1,
+      "restart": true,
+      "nout": 1,
+      "timeout_seconds": 1200,
+      "error_lines": [],
+      "final_step": 31,
+      "final_time_native": 93000.0,
+      "finite": true,
+      "horizon_complete": true,
+      "reference_max_abs_error": 4.057170441875015e-13,
+      "reference_pass": true,
+      "healthy_completion": true
+    },
+    "dt46.875": {
+      "returncode": 0,
+      "wall_seconds": 944.564850538969,
+      "dt_native": 46.875,
+      "requested_steps": 1728,
+      "restart": false,
+      "nout": 2,
+      "timeout_seconds": 1200,
+      "error_lines": [],
+      "final_step": 1728,
+      "final_time_native": 81000.0,
+      "finite": true,
+      "horizon_complete": true,
+      "healthy_completion": true,
+      "equilibrium_export_readable": true,
+      "equilibrium_export_count": 1
+    }
+  }
+}

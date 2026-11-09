@@ -1,0 +1,71 @@
+tear_circ_199: HDF5 repair and fresh-start growth-window timestep convergence
+
+RESULT: PASS the predeclared 1% pilot temporal criteria. Production dataset not generated.
+
+HDF5 repair: guard the serial equilibrium restart export with my_id == 0.
+Applied in isolated single_writer_build; original installation unchanged.
+All seven fresh-start runs completed with zero detected HDF5/solver errors, finite fields,
+one readable equilibrium export, and bit-identical initial states.
+Upstream one-step restart regression maximum coefficient error: 4.057170441875015e-13 (tolerance 1e-12).
+Patched vs original fresh startup at step 31: exactly identical coefficients.
+
+Geometry: circular toroidal tokamak, R0=10 m, a=1 m; model199;
+476 bicubic elements, 490 nodes, toroidal n=0 and n=1 only.
+Every trajectory starts independently at t=0. Fine runs reach 52.511594 ms.
+Analysis window: 15-50 ms; finest pair has 576 matched times, 15.011995-49.958947 ms.
+Volume-weighted bicubic fields; exact Fourier mean-square integration; no phase shifting.
+Field dynamic error: volume-time RMS difference divided by temporal standard deviation.
+These are integrated trajectory criteria, not a pointwise-in-time error bound.
+
+Adjacent native timesteps | magnetic energy % | kinetic energy % | worst dynamic field % | pass
+3000_vs_1500              78.516972  85.753182 108.615122 False
+1500_vs_750               24.025353  24.474140  31.485725 False
+750_vs_375                 9.464544   8.875985  11.397415 False
+375_vs_187.5               3.497516   3.236025   4.214053 False
+187.5_vs_93.75             1.319992   1.214386   1.599144 False
+93.75_vs_46.875            0.302498   0.276634   0.363056 True
+
+Finest pair by field: field | dynamic error % | n=1 relative L2 error %
+psi      0.250114 0.221596
+u        0.240314 0.212570
+j        0.264267 0.216506
+omega    0.363056 0.325902
+rho      0.308395 0.248517
+T        0.253565 0.253203
+
+Recommended timestep for subsequent qualification: native dt=46.875 = 30.388654 microseconds.
+Pilot output cadence: every 2 steps = 60.777308 microseconds; 865 saved frames including t=0.
+Do not use the upstream dt=3000 (1.944874 ms) as temporally converged training truth.
+
+Fixed magnetic-energy threshold crossing (ms):
+dt=3000.0: 41.812281
+dt=1500.0: 45.491308
+dt=750.0: 46.540303
+dt=375.0: 46.909362
+dt=187.5: 47.047012
+dt=93.75: 47.098945
+dt=46.875: 47.110783
+
+Growth and nonlinear saturation onset; energy is still evolving at 52.51 ms. Not a settled saturated state.
+The 15-50 ms window contains substantial tearing growth and a nonlinear transition around 45-50 ms.
+Density and temperature remain positive at the sampled poloidal quadrature points, with exact toroidal extrema.
+A 4-vs-8 point quadrature spot check changed n=1 RMS by less than 9.87e-7 relative.
+Four analysis tests passed: field reconstruction/norms, nodal basis, physical coordinate matching,
+and detection of evolving-field error hidden by a large equilibrium background.
+
+Limits before production OpsSplit/AR/NODE data:
+- Temporal check is for this mesh and n=0,1 truncation. Mesh and higher toroidal mode convergence remain.
+- Native model199 operators/constraints need an OpsSplit audit; model199 uses temperature, not an assumed ES pressure equation.
+- Independent initial-condition/parameter families and trajectory-level splits remain; one deterministic run is not a benchmark.
+- No AR, NODE, or OpsSplit models were trained; no superiority claim is established.
+- Extend the time horizon if the benchmark needs a fully settled saturated regime.
+
+Resources: all four allocations COMPLETED, two CPU ranks each, no GPUs.
+Total allocated CPU time 69 min 58 sec; finest job 15 min 50 sec wall time.
+Raw pilot output is about 2.9 GB. See slurm_accounting.txt for detailed accounting.
+
+Reproduce analysis from repository root:
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/bin/python JOREK/tearing_pilot/analyze_growth.py JOREK/tearing_pilot/growth_2775168 JOREK/tearing_pilot/growth_2775335 JOREK/tearing_pilot/growth_2775334 JOREK/tearing_pilot/growth_2775360
+
+Run scripts: growth.sbatch, growth_fine.sbatch, growth_confirmation.sbatch.
+Machine-readable diagnostics: report.json, window_activity.json, provenance.json.

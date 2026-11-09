@@ -1,0 +1,27 @@
+REFERENCE SIMULATION CROSS-CHECK
+
+Verdict: the pilot reproduces the bundled upstream tearing regression and closely follows its independently generated startup history. This validates reproduction of this test case, not time/space convergence or machine-learning performance.
+
+Reference identity
+The cached archive checksum matches its sidecar, and the pilot begin/end files are byte-identical to archive members. The archive contains full fields only at steps 30 (90000 native time, 58.3462 ms) and 31 (93000, 60.2911 ms), plus scalar and energy histories through step 31.
+Reference file version: v2.25.12.0-87-ga64a26998-dirty.
+Pilot version: v2.26.09.0-16-g01a52be37-dirty.
+There is no independent bundled full-field reference for the continuation through 116.6924 ms.
+
+One-step restart reproduction
+Both the regression and the first baseline continuation step reproduce the reference end snapshot. Maximum coefficient error is 4.0572e-13, below the upstream absolute 1e-12 tolerance. The largest relative volume-L2 field error is approximately 3.36e-13. Geometry is identical.
+
+Independent fresh startup
+The separately initialized pilot agrees at steps 30 and 31, with the largest relative volume-L2 field error approximately 2.75e-5 (0.00275%). Its mesh differs by up to 1.8032e-7 m at the original quadrature positions. Fields were therefore evaluated at matched physical coordinates using element inversion; the remaining point mismatch is below 1.65e-14 m.
+This is supplementary evidence, not a claim that startup passes the 1e-12 restart tolerance. The startup emitted two HDF5 errors during equilibrium export and remains excluded from accepted dataset output.
+Across the first 31 steps, n=1 magnetic-energy history relative L2 error is 9.4446e-6 (0.000944%); kinetic-energy history error is 1.9801e-5 (0.001980%). The independently generated density, volume, thermal and current histories agree closely too. Inherited histories in restarted runs are not counted as independent evidence.
+
+Implication for the benchmark
+The reference energy curves show rapid growth followed by saturation, roughly over 15–50 ms. Our restart pilot began at 58.35 ms, after much of the growth. Include the growth-to-saturation phase in a future dataset instead of relying entirely on the later relaxation window. This is a candidate interval to validate, not a convergence-approved data-selection rule.
+The reference uses dt=3000 native units. Reproducing it does not resolve the sensitivity seen when reducing timestep to 1500 and 750. That sensitivity still needs investigation, particularly for stream function and current, and spatial/toroidal convergence remains unchecked.
+
+Artifacts
+comparison.json contains checksums, individual field errors, matched-point residuals, and independent diagnostic-history comparisons.
+reference_energy_comparison.png overlays the upstream history, independent startup, and only the newly computed continuation portion.
+check_reference.py performs the comparison. The diagnostic test suite passes 3 tests, including a translated-mesh physical-coordinate matching test.
+No new simulations or training jobs were submitted for this check.

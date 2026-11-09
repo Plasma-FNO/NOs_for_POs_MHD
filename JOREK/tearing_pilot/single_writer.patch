@@ -1,0 +1,12 @@
+diff --git a/jorek2_main.f90 b/jorek2_main.f90
+--- a/jorek2_main.f90
++++ b/jorek2_main.f90
+@@ -423,6 +423,7 @@
+         endif
+         if (my_id == 0) call update_equil_state(my_id,node_list, element_list, bnd_elm_list, xpoint, xcase)
+-        if (.not. freeboundary) then
++        ! Serial restart output must have one writer, as for the timestep restarts.
++        if ((my_id == 0) .and. (.not. freeboundary)) then
+           fileout = 'jorek_equil_rz'
+           call export_restart(node_list, element_list, fileout)
+         end if

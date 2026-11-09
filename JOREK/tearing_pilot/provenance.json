@@ -1,0 +1,22 @@
+{
+  "sources": {
+    "jorek_model199": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/src/jorek/builds/tear_circ_199_n3/jorek_model199",
+    "input": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/src/jorek/runs/j1-check/tear_circ_199/input",
+    "begin.h5": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/src/jorek/runs/j1-check/tear_circ_199/ref/begin.h5",
+    "end.h5": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/src/jorek/runs/j1-check/tear_circ_199/ref/end.h5",
+    "jorek-env.sh": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/src/jorek/jorek-env.sh",
+    "mod_settings.f90": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/src/jorek/builds/tear_circ_199_n3/models/mod_settings.f90",
+    "mod_model_settings.f90": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/src/jorek/src/models/model199/mod_model_settings.f90"
+  },
+  "source_commit": "01a52be37576f79c785f1f7a80dee296dda5c9c8",
+  "scope": "Five bounded model199 runs: reference regression, startup, continued tearing, timestep comparison, resistivity sensitivity. No training or production dataset.",
+  "hashes": {
+    "jorek_model199": "28d67d842eaacc5f4396bad24cda1bb95b3ede141cac9b83cbdc7e1113374aff",
+    "input": "50bd23b66a456a68c71399c8372128cb19e7826b15adaa681cb9eca85166ee72",
+    "begin.h5": "848f02fa418eb0a8c28673e5d6a163025b52e9ebf383eb3250fcb8d86352dacb",
+    "end.h5": "21fa0532aa6035f0c615bba69b0fc4a7679ae0cbcdf9fa8d5dbbe36146b12713",
+    "jorek-env.sh": "73cbfa45446945116a6829eee662fb099ed98a8008dc18a8ee6f5e6965422bab",
+    "mod_settings.f90": "1971ffd810a476e38fa0d1642bcf703c8906f9d7fbcd5eaee8309a51ec2a7552",
+    "mod_model_settings.f90": "38fad1f88e5fbbf0431fbca8bb86956c95494336cffd84b56d69bc7f1dd1c37c"
+  }
+}

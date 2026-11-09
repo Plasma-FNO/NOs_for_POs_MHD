@@ -1,0 +1,92 @@
+{
+  "job_id": "2773515",
+  "cases": {
+    "regression": {
+      "returncode": 0,
+      "wall_seconds": 3.689173780963756,
+      "requested_steps": 1,
+      "dt_native": 3000.0,
+      "restart": true,
+      "eta": 1e-06,
+      "error_lines": [],
+      "final_step": 31,
+      "final_time_native": 93000.0,
+      "finite": true,
+      "completed_horizon": true,
+      "reference_max_abs_error": 4.057170441875015e-13,
+      "reference_pass_1e_12": true,
+      "healthy_completion": true
+    },
+    "startup": {
+      "returncode": 0,
+      "wall_seconds": 59.7347882790491,
+      "requested_steps": 40,
+      "dt_native": 3000.0,
+      "restart": false,
+      "eta": 1e-06,
+      "error_lines": [
+        "HDF5-DIAG: Error detected in HDF5 (1.14.3) MPI-process 1:",
+        "HDF5-DIAG: Error detected in HDF5 (1.14.3) MPI-process 1:"
+      ],
+      "final_step": 40,
+      "final_time_native": 120000.0,
+      "finite": true,
+      "completed_horizon": true,
+      "healthy_completion": false
+    },
+    "baseline": {
+      "returncode": 0,
+      "wall_seconds": 73.87738055491354,
+      "requested_steps": 30,
+      "dt_native": 3000.0,
+      "restart": true,
+      "eta": 1e-06,
+      "error_lines": [],
+      "final_step": 60,
+      "final_time_native": 180000.0,
+      "finite": true,
+      "completed_horizon": true,
+      "healthy_completion": true
+    },
+    "half_dt": {
+      "returncode": 0,
+      "wall_seconds": 129.73191731306724,
+      "requested_steps": 60,
+      "dt_native": 1500.0,
+      "restart": true,
+      "eta": 1e-06,
+      "error_lines": [],
+      "final_step": 90,
+      "final_time_native": 180000.0,
+      "finite": true,
+      "completed_horizon": true,
+      "healthy_completion": true
+    },
+    "eta_x2": {
+      "returncode": 0,
+      "wall_seconds": 90.71041136910208,
+      "requested_steps": 30,
+      "dt_native": 3000.0,
+      "restart": true,
+      "eta": 2e-06,
+      "error_lines": [],
+      "final_step": 60,
+      "final_time_native": 180000.0,
+      "finite": true,
+      "completed_horizon": true,
+      "healthy_completion": true
+    }
+  },
+  "mpi_ranks": 2,
+  "omp_threads": 1,
+  "per_case_timeout_seconds": 170,
+  "snapshot_hashes": {
+    "mod_settings.f90": "1971ffd810a476e38fa0d1642bcf703c8906f9d7fbcd5eaee8309a51ec2a7552",
+    "input": "50bd23b66a456a68c71399c8372128cb19e7826b15adaa681cb9eca85166ee72",
+    "end.h5": "21fa0532aa6035f0c615bba69b0fc4a7679ae0cbcdf9fa8d5dbbe36146b12713",
+    "mod_model_settings.f90": "38fad1f88e5fbbf0431fbca8bb86956c95494336cffd84b56d69bc7f1dd1c37c",
+    "jorek-env.sh": "73cbfa45446945116a6829eee662fb099ed98a8008dc18a8ee6f5e6965422bab",
+    "begin.h5": "848f02fa418eb0a8c28673e5d6a163025b52e9ebf383eb3250fcb8d86352dacb",
+    "jorek_model199": "28d67d842eaacc5f4396bad24cda1bb95b3ede141cac9b83cbdc7e1113374aff"
+  }
+}

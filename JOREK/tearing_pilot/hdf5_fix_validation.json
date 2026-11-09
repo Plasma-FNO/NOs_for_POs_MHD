@@ -1,0 +1,135 @@
+{
+  "status": "validated_for_model199_two_rank_startup",
+  "root_cause": "All MPI ranks entered the serial jorek_equil_rz restart writer before the guard was added.",
+  "patch": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/tearing_pilot/single_writer.patch",
+  "corrected_binary": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/tearing_pilot/single_writer_build/jorek_model199",
+  "corrected_binary_sha256": "29469591cdaa8aed06cef0d2ede66be433494a383c6e502bb4410b49b7f43ea8",
+  "original_installation_unchanged": true,
+  "changed_fortran_sources": [
+    "jorek2_main.f90"
+  ],
+  "regression": {
+    "returncode": 0,
+    "wall_seconds": 5.32553375698626,
+    "dt_native": 3000.0,
+    "requested_steps": 1,
+    "restart": true,
+    "error_lines": [],
+    "final_step": 31,
+    "final_time_native": 93000.0,
+    "finite": true,
+    "horizon_complete": true,
+    "reference_max_abs_error": 4.057170441875015e-13,
+    "reference_pass": true,
+    "healthy_completion": true
+  },
+  "fresh_start_export_checks": {
+    "dt3000": {
+      "error_lines": [],
+      "equilibrium_export_readable": true,
+      "equilibrium_export_count": 1
+    },
+    "dt1500": {
+      "error_lines": [],
+      "equilibrium_export_readable": true,
+      "equilibrium_export_count": 1
+    },
+    "dt750": {
+      "error_lines": [],
+      "equilibrium_export_readable": true,
+      "equilibrium_export_count": 1
+    },
+    "dt375": {
+      "error_lines": [],
+      "equilibrium_export_readable": true,
+      "equilibrium_export_count": 1
+    }
+  },
+  "patched_vs_original_startup": {
+    "reference": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/tearing_pilot/run_2773515/startup/jorek000031.h5",
+    "candidate": "JOREK/tearing_pilot/growth_2775168/dt3000/jorek000031.h5",
+    "time_native": 93000.0,
+    "exact_same_geometry": true,
+    "max_query_shift_before_mapping_m": 0.0,
+    "max_query_residual_after_mapping_m": 0.0,
+    "coefficient_max_abs_error": 0.0,
+    "upstream_values_tolerance_pass": true,
+    "fields": {
+      "psi": {
+        "relative_volume_l2_error": 1.5564547628472793e-16,
+        "absolute_volume_rms_error": 1.6377529445156853e-17
+      },
+      "u": {
+        "relative_volume_l2_error": 1.5930210109964408e-16,
+        "absolute_volume_rms_error": 1.8040759744388466e-23
+      },
+      "j": {
+        "relative_volume_l2_error": 1.5756583901608606e-16,
+        "absolute_volume_rms_error": 9.605418323960707e-17
+      },
+      "omega": {
+        "relative_volume_l2_error": 1.9066960852777347e-16,
+        "absolute_volume_rms_error": 4.116420838523222e-20
+      },
+      "rho": {
+        "relative_volume_l2_error": 1.5972931044746851e-16,
+        "absolute_volume_rms_error": 1.5981679083418857e-16
+      },
+      "T": {
+        "relative_volume_l2_error": 1.4491103359150752e-16,
+        "absolute_volume_rms_error": 8.302605501933963e-23
+      }
+    }
+  },
+  "upstream_reference_step31": {
+    "reference": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/tearing_pilot/snapshot/end.h5",
+    "candidate": "JOREK/tearing_pilot/growth_2775168/dt3000/jorek000031.h5",
+    "time_native": 93000.0,
+    "exact_same_geometry": false,
+    "max_query_shift_before_mapping_m": 1.8032033580159388e-07,
+    "max_query_residual_after_mapping_m": 1.6431300764452317e-14,
+    "coefficient_max_abs_error": 1.907519459942719e-06,
+    "upstream_values_tolerance_pass": false,
+    "fields": {
+      "psi": {
+        "relative_volume_l2_error": 2.5406313081327332e-08,
+        "absolute_volume_rms_error": 2.6733359082037793e-09
+      },
+      "u": {
+        "relative_volume_l2_error": 2.686116740131513e-05,
+        "absolute_volume_rms_error": 3.041981708338953e-12
+      },
+      "j": {
+        "relative_volume_l2_error": 5.881042164245025e-07,
+        "absolute_volume_rms_error": 3.585159736692176e-07
+      },
+      "omega": {
+        "relative_volume_l2_error": 2.656697584014403e-05,
+        "absolute_volume_rms_error": 5.7356235955610204e-09
+      },
+      "rho": {
+        "relative_volume_l2_error": 4.3997629984763214e-07,
+        "absolute_volume_rms_error": 4.402172661372696e-07
+      },
+      "T": {
+        "relative_volume_l2_error": 6.963935431961717e-07,
+        "absolute_volume_rms_error": 3.989952069291641e-13
+      }
+    }
+  },
+  "quadrature_spot_check": {
+    "run": "growth_2775335/dt187.5",
+    "steps": [
+      160,
+      240,
+      320,
+      400
+    ],
+    "q4_q8_max_relative_n1_rms_differences": [
+      2.643666406898504e-07,
+      2.6233693883881415e-07,
+      2.5789867741377037e-07,
+      9.864754104693674e-07
+    ]
+  }
+}

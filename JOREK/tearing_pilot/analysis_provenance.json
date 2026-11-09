@@ -1,0 +1,21 @@
+{
+  "files": {
+    "JOREK/tearing_pilot/analyze.py": "6edb828e92dd92caea1623c66adb53d52637c2750a3fee533dd51f93685d1afd",
+    "JOREK/tearing_pilot/test_analysis.py": "50b02d87f0ec1c3fea6defa2923b3dd42ef45661478b7b226ef8dbaa59143caa",
+    "JOREK/tearing_pilot/run_pilot.py": "dd7b733259b708f11bec6c7e7c36c254550e4d012c0f343ad9fffaf25ef45dcd",
+    "JOREK/mastu_opsplit/src/mastu_opsplit/restart.py": "830671db304963210d913ec14e202579f8252331bbedee1b6c4c4f5ec059c795"
+  },
+  "tests": "2 passed; analytic field interpolation and exact Fourier mean-square norm",
+  "jobs": {
+    "2773515": {
+      "state": "COMPLETED",
+      "elapsed_s": 359,
+      "allocated_cpus": 2
+    },
+    "2774269": {
+      "state": "COMPLETED",
+      "elapsed_s": 282,
+      "allocated_cpus": 2
+    }
+  }
+}

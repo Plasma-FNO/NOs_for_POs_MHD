@@ -1,0 +1,30 @@
+{
+  "source_build": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/src/jorek/builds/tear_circ_199_n3",
+  "isolated_build": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/tearing_pilot/single_writer_build",
+  "patch": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/tearing_pilot/single_writer.patch",
+  "patch_sha256": "9b510eb09a368f15d51ce49807e761fd52358330eb172c53cdb9941deeec59ba",
+  "original_main_sha256": "dd36b0218fb52249d8e66f0f28ac344c0c8280df2cb52fbab32bd8e0a351acf5",
+  "patched_main_sha256": "ff416d280bade66eb11cb6291d461814dd7991202e46641e840f2d142bf11393",
+  "original_binary_sha256": "28d67d842eaacc5f4396bad24cda1bb95b3ede141cac9b83cbdc7e1113374aff",
+  "method": "Copy existing build with object/module timestamps; rebuild changed main and make-selected dependent objects, then relink. Only jorek2_main.f90 source differs. Parent build remains unchanged. Retained version header is supplemented by patch/binary hashes.",
+  "changed_fortran_sources": [
+    "jorek2_main.f90"
+  ],
+  "patched_binary_sha256": "29469591cdaa8aed06cef0d2ede66be433494a383c6e502bb4410b49b7f43ea8",
+  "original_binary_still_matches": true,
+  "build_log_sha256": "84c1a725a693c0dbdb4d8c89ddf985130756379f10a3f50c5f75d92591b4a20d",
+  "recompiled_sources": [
+    "particles/initialisers/initialisers_RE.f90",
+    "diagnostics/mod_integrals3D.f90",
+    "models/mod_F_profile.f90",
+    "particles/initialisers/mod_initialise_particles.f90",
+    "models/element_matrix_projection.f90",
+    "models/equilibrium.f90",
+    "particles/particle_tracer.f90",
+    "models/ffprime.f90",
+    "models/read_num_profiles.f90",
+    "models/mod_log_params.f90",
+    "jorek2_main.f90",
+    "diagnostics/jorek2help.f90"
+  ]
+}

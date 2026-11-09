@@ -1,0 +1,202 @@
+{
+  "archive": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/src/jorek/downloads/regdata/tear_circ_199_fc6888ec058558231043eba734fc70ef.tgz",
+  "archive_sha256": "ab8d8b624a03f48db620a6b6e84d11a002aab483330d9b81daba3ec09327b98c",
+  "archive_checksum_verified": true,
+  "reference_members_sha256": {
+    "begin.h5": "848f02fa418eb0a8c28673e5d6a163025b52e9ebf383eb3250fcb8d86352dacb",
+    "end.h5": "21fa0532aa6035f0c615bba69b0fc4a7679ae0cbcdf9fa8d5dbbe36146b12713"
+  },
+  "reference_info": "date: Fri Jul 10 01:10:32 PM CEST 2026\nhostname: login04.pitagora.local\nbranch: feature/gmres_merge\nuser: nschwarz\n",
+  "versions": {
+    "reference": "v2.25.12.0-87-ga64a26998-dirty",
+    "pilot": "v2.26.09.0-16-g01a52be37-dirty"
+  },
+  "reference_scope": "Full fields at steps 30/31 only; scalar and mode-energy histories through step31. No independent reference beyond t=93000.",
+  "comparisons": {
+    "restart_regression": {
+      "reference": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/tearing_pilot/snapshot/end.h5",
+      "candidate": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/tearing_pilot/run_2773515/regression/jorek_restart.h5",
+      "time_native": 93000.0,
+      "exact_same_geometry": true,
+      "max_query_shift_before_mapping_m": 0.0,
+      "max_query_residual_after_mapping_m": 0.0,
+      "coefficient_max_abs_error": 4.057170441875015e-13,
+      "upstream_values_tolerance_pass": true,
+      "fields": {
+        "psi": {
+          "relative_volume_l2_error": 6.925185374181388e-16,
+          "absolute_volume_rms_error": 7.286908050178022e-17
+        },
+        "u": {
+          "relative_volume_l2_error": 3.3585880307846116e-13,
+          "absolute_volume_rms_error": 3.8035440540803587e-20
+        },
+        "j": {
+          "relative_volume_l2_error": 4.947633824946276e-15,
+          "absolute_volume_rms_error": 3.0161418819500687e-15
+        },
+        "omega": {
+          "relative_volume_l2_error": 3.305324409065261e-13,
+          "absolute_volume_rms_error": 7.13596338013447e-17
+        },
+        "rho": {
+          "relative_volume_l2_error": 5.063082708526352e-16,
+          "absolute_volume_rms_error": 5.065855658466665e-16
+        },
+        "T": {
+          "relative_volume_l2_error": 3.468146140821166e-14,
+          "absolute_volume_rms_error": 1.9870570321007684e-20
+        }
+      }
+    },
+    "continuation_first_step": {
+      "reference": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/tearing_pilot/snapshot/end.h5",
+      "candidate": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/tearing_pilot/run_2773515/baseline/jorek000031.h5",
+      "time_native": 93000.0,
+      "exact_same_geometry": true,
+      "max_query_shift_before_mapping_m": 0.0,
+      "max_query_residual_after_mapping_m": 0.0,
+      "coefficient_max_abs_error": 4.057170441875015e-13,
+      "upstream_values_tolerance_pass": true,
+      "fields": {
+        "psi": {
+          "relative_volume_l2_error": 6.925185374181388e-16,
+          "absolute_volume_rms_error": 7.286908050178022e-17
+        },
+        "u": {
+          "relative_volume_l2_error": 3.3585880307846116e-13,
+          "absolute_volume_rms_error": 3.8035440540803587e-20
+        },
+        "j": {
+          "relative_volume_l2_error": 4.947633824946276e-15,
+          "absolute_volume_rms_error": 3.0161418819500687e-15
+        },
+        "omega": {
+          "relative_volume_l2_error": 3.305324409065261e-13,
+          "absolute_volume_rms_error": 7.13596338013447e-17
+        },
+        "rho": {
+          "relative_volume_l2_error": 5.063082708526352e-16,
+          "absolute_volume_rms_error": 5.065855658466665e-16
+        },
+        "T": {
+          "relative_volume_l2_error": 3.468146140821166e-14,
+          "absolute_volume_rms_error": 1.9870570321007684e-20
+        }
+      }
+    },
+    "independent_startup_step30": {
+      "reference": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/tearing_pilot/snapshot/begin.h5",
+      "candidate": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/tearing_pilot/run_2773515/startup/jorek000030.h5",
+      "time_native": 90000.0,
+      "exact_same_geometry": false,
+      "max_query_shift_before_mapping_m": 1.8032033580159388e-07,
+      "max_query_residual_after_mapping_m": 1.6431300764452317e-14,
+      "coefficient_max_abs_error": 2.0256510326298327e-06,
+      "upstream_values_tolerance_pass": false,
+      "fields": {
+        "psi": {
+          "relative_volume_l2_error": 2.532139523814103e-08,
+          "absolute_volume_rms_error": 2.6643850958472334e-09
+        },
+        "u": {
+          "relative_volume_l2_error": 2.7431562822073857e-05,
+          "absolute_volume_rms_error": 2.9960146804117707e-12
+        },
+        "j": {
+          "relative_volume_l2_error": 5.82549547533341e-07,
+          "absolute_volume_rms_error": 3.551254314568992e-07
+        },
+        "omega": {
+          "relative_volume_l2_error": 2.656188345377525e-05,
+          "absolute_volume_rms_error": 5.631440511462247e-09
+        },
+        "rho": {
+          "relative_volume_l2_error": 4.471710910265352e-07,
+          "absolute_volume_rms_error": 4.4740399437865547e-07
+        },
+        "T": {
+          "relative_volume_l2_error": 7.207246339716944e-07,
+          "absolute_volume_rms_error": 4.1352781166278927e-13
+        }
+      }
+    },
+    "independent_startup_step31": {
+      "reference": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/tearing_pilot/snapshot/end.h5",
+      "candidate": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/tearing_pilot/run_2773515/startup/jorek000031.h5",
+      "time_native": 93000.0,
+      "exact_same_geometry": false,
+      "max_query_shift_before_mapping_m": 1.8032033580159388e-07,
+      "max_query_residual_after_mapping_m": 1.6431300764452317e-14,
+      "coefficient_max_abs_error": 1.907519459942719e-06,
+      "upstream_values_tolerance_pass": false,
+      "fields": {
+        "psi": {
+          "relative_volume_l2_error": 2.5406313081327332e-08,
+          "absolute_volume_rms_error": 2.6733359082037793e-09
+        },
+        "u": {
+          "relative_volume_l2_error": 2.686116740131513e-05,
+          "absolute_volume_rms_error": 3.041981708338953e-12
+        },
+        "j": {
+          "relative_volume_l2_error": 5.881042164245025e-07,
+          "absolute_volume_rms_error": 3.585159736692176e-07
+        },
+        "omega": {
+          "relative_volume_l2_error": 2.656697584014403e-05,
+          "absolute_volume_rms_error": 5.7356235955610204e-09
+        },
+        "rho": {
+          "relative_volume_l2_error": 4.3997629984763214e-07,
+          "absolute_volume_rms_error": 4.402172661372696e-07
+        },
+        "T": {
+          "relative_volume_l2_error": 6.963935431961717e-07,
+          "absolute_volume_rms_error": 3.989952069291641e-13
+        }
+      }
+    }
+  },
+  "independent_startup_energy_history": {
+    "n1_magnetic": {
+      "relative_l2_error": 9.444637779254378e-06,
+      "max_abs_error_over_reference_peak": 2.0652443179615718e-05,
+      "max_pointwise_relative_error_above_floor": 0.00011427484484345259,
+      "reference_first": 2.307072582685404e-23,
+      "reference_last": 2.607899959512231e-07,
+      "reference_peak": 2.672917161264242e-07,
+      "reference_peak_time_seconds": 0.052511594120226095
+    },
+    "n1_kinetic": {
+      "relative_l2_error": 1.9801040119947785e-05,
+      "max_abs_error_over_reference_peak": 4.576139663906027e-05,
+      "max_pointwise_relative_error_above_floor": 0.00011427239420682572,
+      "reference_first": 1.2470169834949282e-19,
+      "reference_last": 2.9035098815659558e-08,
+      "reference_peak": 2.9035098815659558e-08,
+      "reference_peak_time_seconds": 0.06029108954544477
+    }
+  },
+  "independent_startup_scalar_history": {
+    "volume_t": {
+      "relative_l2_error": 7.065476392718358e-12
+    },
+    "density_tot_t": {
+      "relative_l2_error": 2.141529300195442e-11
+    },
+    "thermal_tot_t": {
+      "relative_l2_error": 5.743255430943542e-10
+    },
+    "current_t": {
+      "relative_l2_error": 1.6369198239180204e-09
+    }
+  },
+  "caveats": [
+    "Fresh-start pilot emitted HDF5 equilibrium-export errors and remains excluded from accepted data.",
+    "Restart history before step31 was inherited; it is not counted as independent evidence.",
+    "The fresh-start comparison is supplementary: upstream tolerance applies to the one-step restart test.",
+    "Fine-timestep runs are convergence probes, not independent upstream references.",
+    "Agreement at upstream dt=3000 does not establish temporal or mesh convergence."
+  ]
+}

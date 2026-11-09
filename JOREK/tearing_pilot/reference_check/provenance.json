@@ -1,0 +1,10 @@
+{
+  "source_hashes": {
+    "JOREK/tearing_pilot/check_reference.py": "175a87d119e60d4a3a0f6085135935ef68dd1a0b77f4d63177cdab55ec881414",
+    "JOREK/tearing_pilot/analyze.py": "6edb828e92dd92caea1623c66adb53d52637c2750a3fee533dd51f93685d1afd",
+    "JOREK/tearing_pilot/test_analysis.py": "2604c1be8bb960ec142befda01ef4e36d7516c67fb17d767ec2bf3790bea1ffd"
+  },
+  "tests_passed": 3,
+  "new_simulation_jobs": 0,
+  "reference_archive_sha256": "ab8d8b624a03f48db620a6b6e84d11a002aab483330d9b81daba3ec09327b98c"
+}

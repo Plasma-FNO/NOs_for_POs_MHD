@@ -1,0 +1,60 @@
+TOROIDAL TEARING PILOT — MODEL199
+Conclusion: enough physical field activity to justify further benchmark preparation; not an accepted six-field training dataset.
+No AR, NODE, or OpsSplit training was performed. This pilot does not demonstrate comparative superiority.
+
+RUNS AND COST
+Jobs 2773515 and 2774269 completed. Two CPU ranks and one OpenMP thread per rank; no GPUs.
+Combined allocated elapsed time: 10 min 41 s. Allocated CPU time: 21 min 22 s (0.3561 CPU-hours).
+Original job capped at 15 min; necessary timestep follow-up capped at 6 min. Peak batch RSS was about 2 GiB.
+Upstream one-step regression passed: maximum absolute values error 4.0572e-13, tolerance 1e-12.
+Baseline: 30 steps at dt=3000; half timestep: 60 at dt=1500; quarter timestep: 120 at dt=750.
+Resistivity sensitivity: 30 steps at dt=3000, eta changed from 1e-6 to 2e-6 at the reference restart.
+All four continuation runs completed cleanly. Every step was saved. All use one shared reference state.
+Fresh-start 40-step run reached its horizon but emitted two HDF5 errors in equilibrium export. It is excluded.
+
+FIELD ACTIVITY
+Time interval: 58.3462 to 116.6924 ms. Fields include n=0 and both real n=1 Fourier components.
+Metric: ||q_final-q_initial||_volume / ||q_initial||_volume, using the finest timestep.
+Native bicubic reconstruction; exact toroidal mean-square integration; physical cylindrical volume weighting.
+Field                   Endpoint change     Half/quarter endpoint discrepancy / evolution
+rho                         2.5215%                  0.0071%
+T                           4.8429%                  0.0031%
+u                          13.2469%                  2.4028%
+omega                      17.0528%                  3.7332%
+psi                         0.0211%                  0.3524%
+j                           0.2002%                  3.0261%
+
+Density and temperature remain positive at all sampled poloidal quadrature points and every toroidal angle.
+The toroidal extrema are evaluated analytically for n=0+1; this does not prove positivity between poloidal quadrature points.
+In the original baseline, n=1 density amplitude falls by 11.5% and temperature amplitude falls by 33.8%.
+This continuation is mostly relaxation/redistribution of an already developed perturbation, not demonstrated exponential tearing growth.
+Doubling eta gives endpoint changes of 4.14% in density, 5.78% in temperature, 106.8% in u, and 71.6% in omega.
+The eta branch is a parameter-switch experiment from the same reference; it is not an independently equilibrated family.
+
+NUMERICAL LIMITS
+Endpoint agreement alone is insufficient. Half/quarter trajectory RMS differences, normalized by the finest-run temporal standard deviation:
+rho=0.11%, T=0.23%, psi=4.62%, u=60.34%, j=109.30%, omega=6.74%.
+Therefore u and j transients remain sensitive to timestep despite much better final-state agreement.
+No mesh refinement, higher toroidal-mode convergence, energy balance, or native constraint residual validation was performed.
+Crank-Nicholson integration and the stored restart history warrant investigation before interpreting fast fluctuations as learnable physics.
+Quadrature q4/q8 RMS differences are below 1.4e-5 relative. Reconstructed volume and density integral match native diagnostics to ~1e-12 and ~2e-13.
+Two analytic interpolation/norm checks pass. Source and binary snapshots and input hashes are preserved.
+
+IMPLICATIONS FOR OPSSPLIT VERSUS AR/NODE
+Use long-rollout accuracy, stability, and sample efficiency as primary hypotheses; do not assume OpsSplit wins.
+One-step scalar prediction is easy here: baseline linear extrapolation errors are 2.06% (rho) and 1.55% (T) of temporal standard deviation.
+At ten saved steps (~19.45 ms), those errors rise to 77.8% and 36.0%. Persistence errors exceed 100% for both.
+First resolve u/current transient convergence and check spatial resolution. Audit model199 terms and time discretization before composing operators.
+Then generate independent initial-condition families and modest transport-coefficient variations, with sufficient field activity.
+All current branches share one parent state: do not put them in different train/test splits.
+Use per-field and perturbation-aware scaling so static flux/current backgrounds cannot dominate the score.
+Give AR, NODE, and OpsSplit identical observed states, coefficient inputs, splits, training budgets, and rollout horizons; include capacity-matched controls.
+Keep simple persistence/extrapolation baselines. Report failures, physical constraints and perturbation errors alongside full-field errors.
+
+FILES
+analysis.json: detailed field metrics, matched-cadence controls and convergence comparisons.
+field_evolution.png: non-axisymmetric amplitudes for all accepted trajectories.
+field_changes.png: baseline endpoint change at phi=0, shown at native quadrature sample positions.
+run_report.json and ../run_2774269/run_report.json: solver status, horizons, timings and snapshot hashes.
+../provenance.json: source locations, pinned revision and hashes.
+../run_pilot.py, ../analyze.py, ../test_analysis.py: reproducible run and diagnostic code.

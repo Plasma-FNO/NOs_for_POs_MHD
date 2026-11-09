@@ -1,0 +1,929 @@
+{
+  "window_seconds": [
+    0.015,
+    0.05
+  ],
+  "comparison_times_seconds": [
+    0.015558990850437361,
+    0.01750386470674203,
+    0.019448738563046703,
+    0.021393612419351372,
+    0.02333848627565604,
+    0.02528336013196071,
+    0.027228233988265384,
+    0.029173107844570053,
+    0.031117981700874722,
+    0.033062855557179395,
+    0.03500772941348406,
+    0.036952603269788734,
+    0.038897477126093406,
+    0.04084235098239807,
+    0.042787224838702745,
+    0.04473209869500741,
+    0.04667697255131208,
+    0.048621846407616756
+  ],
+  "scope": "Fixed mesh and n=0,1; fresh-start timestep convergence. No production dataset.",
+  "criteria": {
+    "solver": "Correct endpoint, finite arrays, no HDF5/solver errors; one readable equilibrium export",
+    "temporal": "Finest adjacent pair <=1% volume-time RMS field error relative to temporal variation in every field and <=1% n=1 field error; <=1% relative L2 error of n=1 magnetic and kinetic energy histories. Comparisons at matching physical times, no phase shifting.",
+    "scope": "Pilot temporal convergence only. No mesh or toroidal-resolution acceptance and no production dataset."
+  },
+  "cases": {
+    "3000.0": {
+      "returncode": 0,
+      "wall_seconds": 47.36689971399028,
+      "dt_native": 3000.0,
+      "requested_steps": 31,
+      "restart": false,
+      "error_lines": [],
+      "final_step": 31,
+      "final_time_native": 93000.0,
+      "finite": true,
+      "horizon_complete": true,
+      "healthy_completion": true,
+      "equilibrium_export_readable": true,
+      "equilibrium_export_count": 1,
+      "frames": 32,
+      "minima": [
+        -0.20263733891740712,
+        -7.482879534017229e-07,
+        0.0050757291372986795,
+        -0.001592322497677588,
+        0.8868255418352675,
+        2.1097157759676705e-07
+      ],
+      "maxima": [
+        -0.0008262100234306322,
+        7.483078020501808e-07,
+        1.1761670796122985,
+        0.0015923600863783664,
+        1.1286226206506194,
+        9.999519629659572e-07
+      ],
+      "positive_density_temperature": true,
+      "physical_mapping_residual_m": 0.0,
+      "directory": "JOREK/tearing_pilot/growth_2775168/dt3000"
+    },
+    "1500.0": {
+      "returncode": 0,
+      "wall_seconds": 70.19212207500823,
+      "dt_native": 1500.0,
+      "requested_steps": 54,
+      "restart": false,
+      "error_lines": [],
+      "final_step": 54,
+      "final_time_native": 81000.0,
+      "finite": true,
+      "horizon_complete": true,
+      "healthy_completion": true,
+      "equilibrium_export_readable": true,
+      "equilibrium_export_count": 1,
+      "frames": 55,
+      "minima": [
+        -0.2026373395604692,
+        -6.951609523265578e-07,
+        0.0050801330466632745,
+        -0.0014228891532636757,
+        0.8900047383626503,
+        2.1097302436455303e-07
+      ],
+      "maxima": [
+        -0.0008262232136350916,
+        6.951718438560027e-07,
+        1.1759528872351597,
+        0.001422921824122306,
+        1.1242667668267567,
+        9.999519629659572e-07
+      ],
+      "positive_density_temperature": true,
+      "physical_mapping_residual_m": 0.0,
+      "directory": "JOREK/tearing_pilot/growth_2775168/dt1500"
+    },
+    "750.0": {
+      "returncode": 0,
+      "wall_seconds": 93.96701525698882,
+      "dt_native": 750.0,
+      "requested_steps": 108,
+      "restart": false,
+      "error_lines": [],
+      "final_step": 108,
+      "final_time_native": 81000.0,
+      "finite": true,
+      "horizon_complete": true,
+      "healthy_completion": true,
+      "equilibrium_export_readable": true,
+      "equilibrium_export_count": 1,
+      "frames": 109,
+      "minima": [
+        -0.20263734151772694,
+        -6.868999984141809e-07,
+        0.005082074822412999,
+        -0.001390113184460296,
+        0.890135723784692,
+        2.10975733024389e-07
+      ],
+      "maxima": [
+        -0.0008262272096718331,
+        6.869930692144173e-07,
+        1.1757978504620012,
+        0.001390143348631903,
+        1.1238067126625206,
+        9.999519629659572e-07
+      ],
+      "positive_density_temperature": true,
+      "physical_mapping_residual_m": 0.0,
+      "directory": "JOREK/tearing_pilot/growth_2775168/dt750"
+    },
+    "375.0": {
+      "returncode": 0,
+      "wall_seconds": 178.58315718197264,
+      "dt_native": 375.0,
+      "requested_steps": 216,
+      "restart": false,
+      "error_lines": [],
+      "final_step": 216,
+      "final_time_native": 81000.0,
+      "finite": true,
+      "horizon_complete": true,
+      "healthy_completion": true,
+      "equilibrium_export_readable": true,
+      "equilibrium_export_count": 1,
+      "frames": 217,
+      "minima": [
+        -0.2026373407075102,
+        -6.844416120332725e-07,
+        0.005082833144488963,
+        -0.00137606284302485,
+        0.8901622981551089,
+        2.1097688083681303e-07
+      ],
+      "maxima": [
+        -0.0008262280718293358,
+        6.845177426711734e-07,
+        1.1757310621050805,
+        0.0013760935452332276,
+        1.123448325792299,
+        9.999519629659572e-07
+      ],
+      "positive_density_temperature": true,
+      "physical_mapping_residual_m": 0.0,
+      "directory": "JOREK/tearing_pilot/growth_2775168/dt375"
+    },
+    "187.5": {
+      "returncode": 0,
+      "wall_seconds": 247.99021328799427,
+      "dt_native": 187.5,
+      "requested_steps": 432,
+      "restart": false,
+      "error_lines": [],
+      "final_step": 432,
+      "final_time_native": 81000.0,
+      "finite": true,
+      "horizon_complete": true,
+      "healthy_completion": true,
+      "equilibrium_export_readable": true,
+      "equilibrium_export_count": 1,
+      "frames": 433,
+      "minima": [
+        -0.20263734077116496,
+        -6.839302647845269e-07,
+        0.005083120744745879,
+        -0.0013721010479760779,
+        0.8901679727246391,
+        2.1097732863564507e-07
+      ],
+      "maxima": [
+        -0.0008262285744616271,
+        6.839786323350848e-07,
+        1.17570483900283,
+        0.0013721319426791116,
+        1.1232878549266248,
+        9.999519629659572e-07
+      ],
+      "positive_density_temperature": true,
+      "physical_mapping_residual_m": 0.0,
+      "directory": "JOREK/tearing_pilot/growth_2775335/dt187.5"
+    },
+    "93.75": {
+      "returncode": 0,
+      "wall_seconds": 485.02088039997034,
+      "dt_native": 93.75,
+      "requested_steps": 864,
+      "restart": false,
+      "error_lines": [],
+      "final_step": 864,
+      "final_time_native": 81000.0,
+      "finite": true,
+      "horizon_complete": true,
+      "healthy_completion": true,
+      "equilibrium_export_readable": true,
+      "equilibrium_export_count": 1,
+      "frames": 865,
+      "minima": [
+        -0.20263734111654066,
+        -6.837468139719523e-07,
+        0.005083240713024619,
+        -0.0013712063523101492,
+        0.8901702008156024,
+        2.109775017120537e-07
+      ],
+      "maxima": [
+        -0.000826228762320769,
+        6.83788540988783e-07,
+        1.1756947471649066,
+        0.001371237315366936,
+        1.123223583212789,
+        9.999519629659572e-07
+      ],
+      "positive_density_temperature": true,
+      "physical_mapping_residual_m": 0.0,
+      "directory": "JOREK/tearing_pilot/growth_2775334/dt93.75"
+    },
+    "46.875": {
+      "returncode": 0,
+      "wall_seconds": 944.564850538969,
+      "dt_native": 46.875,
+      "requested_steps": 1728,
+      "restart": false,
+      "nout": 2,
+      "timeout_seconds": 1200,
+      "error_lines": [],
+      "final_step": 1728,
+      "final_time_native": 81000.0,
+      "finite": true,
+      "horizon_complete": true,
+      "healthy_completion": true,
+      "equilibrium_export_readable": true,
+      "equilibrium_export_count": 1,
+      "frames": 865,
+      "minima": [
+        -0.20263734114284754,
+        -6.837049844850566e-07,
+        0.005083270075999859,
+        -0.0013708773800474394,
+        0.8901707380201247,
+        2.1097754141209649e-07
+      ],
+      "maxima": [
+        -0.0008262288490061846,
+        6.83750268625505e-07,
+        1.1756925308996458,
+        0.0013709084158781777,
+        1.123208419524008,
+        9.999519629659572e-07
+      ],
+      "positive_density_temperature": true,
+      "physical_mapping_residual_m": 0.0,
+      "directory": "JOREK/tearing_pilot/growth_2775360/dt46.875"
+    }
+  },
+  "pairs": {
+    "3000_vs_1500": {
+      "fields": {
+        "psi": {
+          "error_over_temporal_std": 0.6810318749395257,
+          "n1_relative_l2_error": 0.5884559598681366,
+          "full_field_relative_l2_error": 0.0001916703533044278
+        },
+        "u": {
+          "error_over_temporal_std": 0.699540506470575,
+          "n1_relative_l2_error": 0.6077995155616833,
+          "full_field_relative_l2_error": 0.607918715123955
+        },
+        "j": {
+          "error_over_temporal_std": 0.7639682891850508,
+          "n1_relative_l2_error": 0.5889685350689705,
+          "full_field_relative_l2_error": 0.005725152580465622
+        },
+        "omega": {
+          "error_over_temporal_std": 1.0861512236476385,
+          "n1_relative_l2_error": 0.9657916542687293,
+          "full_field_relative_l2_error": 0.965954514411455
+        },
+        "rho": {
+          "error_over_temporal_std": 0.9001392973323812,
+          "n1_relative_l2_error": 0.7015897404598814,
+          "full_field_relative_l2_error": 0.00491188779466569
+        },
+        "T": {
+          "error_over_temporal_std": 0.762108164661519,
+          "n1_relative_l2_error": 0.7236006113350372,
+          "full_field_relative_l2_error": 0.009506507692048156
+        }
+      },
+      "common_coarsest_cadence_fields": {
+        "psi": {
+          "error_over_temporal_std": 0.6810318749395257,
+          "n1_relative_l2_error": 0.5884559598681366,
+          "full_field_relative_l2_error": 0.0001916703533044278
+        },
+        "u": {
+          "error_over_temporal_std": 0.699540506470575,
+          "n1_relative_l2_error": 0.6077995155616833,
+          "full_field_relative_l2_error": 0.607918715123955
+        },
+        "j": {
+          "error_over_temporal_std": 0.7639682891850508,
+          "n1_relative_l2_error": 0.5889685350689705,
+          "full_field_relative_l2_error": 0.005725152580465622
+        },
+        "omega": {
+          "error_over_temporal_std": 1.0861512236476385,
+          "n1_relative_l2_error": 0.9657916542687293,
+          "full_field_relative_l2_error": 0.965954514411455
+        },
+        "rho": {
+          "error_over_temporal_std": 0.9001392973323812,
+          "n1_relative_l2_error": 0.7015897404598814,
+          "full_field_relative_l2_error": 0.00491188779466569
+        },
+        "T": {
+          "error_over_temporal_std": 0.762108164661519,
+          "n1_relative_l2_error": 0.7236006113350372,
+          "full_field_relative_l2_error": 0.009506507692048156
+        }
+      },
+      "matched_samples": 18,
+      "matched_window_seconds": [
+        0.015558990850437361,
+        0.048621846407616756
+      ],
+      "n1_magnetic_energy_relative_l2_error": 0.7851697210661498,
+      "n1_kinetic_energy_relative_l2_error": 0.8575318197881447,
+      "meets_pilot_temporal_target": false
+    },
+    "1500_vs_750": {
+      "fields": {
+        "psi": {
+          "error_over_temporal_std": 0.2019248357987755,
+          "n1_relative_l2_error": 0.17658476706504297,
+          "full_field_relative_l2_error": 5.345799752614225e-05
+        },
+        "u": {
+          "error_over_temporal_std": 0.2028014238801262,
+          "n1_relative_l2_error": 0.17750756900483997,
+          "full_field_relative_l2_error": 0.17753188324638292
+        },
+        "j": {
+          "error_over_temporal_std": 0.2172946226873087,
+          "n1_relative_l2_error": 0.17463004515206776,
+          "full_field_relative_l2_error": 0.0015382006199184286
+        },
+        "omega": {
+          "error_over_temporal_std": 0.3148572534125088,
+          "n1_relative_l2_error": 0.2808432394650396,
+          "full_field_relative_l2_error": 0.28086738725813454
+        },
+        "rho": {
+          "error_over_temporal_std": 0.2554831505086516,
+          "n1_relative_l2_error": 0.20368684840269505,
+          "full_field_relative_l2_error": 0.001291966472997647
+        },
+        "T": {
+          "error_over_temporal_std": 0.2154061898931434,
+          "n1_relative_l2_error": 0.2091519129981027,
+          "full_field_relative_l2_error": 0.0025510292997610556
+        }
+      },
+      "common_coarsest_cadence_fields": {
+        "psi": {
+          "error_over_temporal_std": 0.21452420044819934,
+          "n1_relative_l2_error": 0.18900767836775328,
+          "full_field_relative_l2_error": 5.3336909185715625e-05
+        },
+        "u": {
+          "error_over_temporal_std": 0.2101224258445199,
+          "n1_relative_l2_error": 0.1854263942851271,
+          "full_field_relative_l2_error": 0.18544948829138896
+        },
+        "j": {
+          "error_over_temporal_std": 0.23083047444987137,
+          "n1_relative_l2_error": 0.18580933155698906,
+          "full_field_relative_l2_error": 0.001546365594122057
+        },
+        "omega": {
+          "error_over_temporal_std": 0.3218197904395611,
+          "n1_relative_l2_error": 0.2885313328150631,
+          "full_field_relative_l2_error": 0.2885622885705362
+        },
+        "rho": {
+          "error_over_temporal_std": 0.2707561147333089,
+          "n1_relative_l2_error": 0.215512096852402,
+          "full_field_relative_l2_error": 0.0012602561389959343
+        },
+        "T": {
+          "error_over_temporal_std": 0.22324581845665203,
+          "n1_relative_l2_error": 0.22005073991205484,
+          "full_field_relative_l2_error": 0.002510721121897592
+        }
+      },
+      "matched_samples": 36,
+      "matched_window_seconds": [
+        0.015558990850437361,
+        0.04959428333576909
+      ],
+      "n1_magnetic_energy_relative_l2_error": 0.24025352619021897,
+      "n1_kinetic_energy_relative_l2_error": 0.24474139858991256,
+      "meets_pilot_temporal_target": false
+    },
+    "750_vs_375": {
+      "fields": {
+        "psi": {
+          "error_over_temporal_std": 0.0776615211350065,
+          "n1_relative_l2_error": 0.06862050993636698,
+          "full_field_relative_l2_error": 1.9025199741601397e-05
+        },
+        "u": {
+          "error_over_temporal_std": 0.07510899028216148,
+          "n1_relative_l2_error": 0.06639126616721265,
+          "full_field_relative_l2_error": 0.06640244564318262
+        },
+        "j": {
+          "error_over_temporal_std": 0.08236940284545412,
+          "n1_relative_l2_error": 0.06718085041649288,
+          "full_field_relative_l2_error": 0.0005439106584224298
+        },
+        "omega": {
+          "error_over_temporal_std": 0.11397415156553353,
+          "n1_relative_l2_error": 0.10228040673932347,
+          "full_field_relative_l2_error": 0.1022903013094074
+        },
+        "rho": {
+          "error_over_temporal_std": 0.09645583110975549,
+          "n1_relative_l2_error": 0.07745512699052554,
+          "full_field_relative_l2_error": 0.0004422947472373528
+        },
+        "T": {
+          "error_over_temporal_std": 0.0793254821943635,
+          "n1_relative_l2_error": 0.07894372805574239,
+          "full_field_relative_l2_error": 0.0008831557452196487
+        }
+      },
+      "common_coarsest_cadence_fields": {
+        "psi": {
+          "error_over_temporal_std": 0.08018755021387315,
+          "n1_relative_l2_error": 0.07108277593919458,
+          "full_field_relative_l2_error": 1.8937368423540616e-05
+        },
+        "u": {
+          "error_over_temporal_std": 0.07763329427784514,
+          "n1_relative_l2_error": 0.06889440772234491,
+          "full_field_relative_l2_error": 0.06890509713045136
+        },
+        "j": {
+          "error_over_temporal_std": 0.08471711850429761,
+          "n1_relative_l2_error": 0.06938393298269692,
+          "full_field_relative_l2_error": 0.0005419362482731859
+        },
+        "omega": {
+          "error_over_temporal_std": 0.11618194484854358,
+          "n1_relative_l2_error": 0.10449848172782329,
+          "full_field_relative_l2_error": 0.1045093507565735
+        },
+        "rho": {
+          "error_over_temporal_std": 0.09981191981123708,
+          "n1_relative_l2_error": 0.07996109148625447,
+          "full_field_relative_l2_error": 0.000435782892713207
+        },
+        "T": {
+          "error_over_temporal_std": 0.08086939961443186,
+          "n1_relative_l2_error": 0.08120904288362518,
+          "full_field_relative_l2_error": 0.0008743912313594632
+        }
+      },
+      "matched_samples": 72,
+      "matched_window_seconds": [
+        0.015072772386361193,
+        0.04959428333576909
+      ],
+      "n1_magnetic_energy_relative_l2_error": 0.09464544439242675,
+      "n1_kinetic_energy_relative_l2_error": 0.08875985101939113,
+      "meets_pilot_temporal_target": false
+    },
+    "375_vs_187.5": {
+      "fields": {
+        "psi": {
+          "error_over_temporal_std": 0.028904027748890223,
+          "n1_relative_l2_error": 0.02555384499092981,
+          "full_field_relative_l2_error": 7.067223586856303e-06
+        },
+        "u": {
+          "error_over_temporal_std": 0.027839155677051523,
+          "n1_relative_l2_error": 0.024610267512780316,
+          "full_field_relative_l2_error": 0.02461507781156164
+        },
+        "j": {
+          "error_over_temporal_std": 0.03059178993551242,
+          "n1_relative_l2_error": 0.02498836445197244,
+          "full_field_relative_l2_error": 0.000201616563626405
+        },
+        "omega": {
+          "error_over_temporal_std": 0.042140529245496126,
+          "n1_relative_l2_error": 0.0378164885071227,
+          "full_field_relative_l2_error": 0.037820246356056256
+        },
+        "rho": {
+          "error_over_temporal_std": 0.035759508957271,
+          "n1_relative_l2_error": 0.02877043531705512,
+          "full_field_relative_l2_error": 0.0001636341591133442
+        },
+        "T": {
+          "error_over_temporal_std": 0.02942021960777116,
+          "n1_relative_l2_error": 0.029313089667304334,
+          "full_field_relative_l2_error": 0.00032707073919125893
+        }
+      },
+      "common_coarsest_cadence_fields": {
+        "psi": {
+          "error_over_temporal_std": 0.03032370924350298,
+          "n1_relative_l2_error": 0.02694010625319335,
+          "full_field_relative_l2_error": 7.01806994222021e-06
+        },
+        "u": {
+          "error_over_temporal_std": 0.028908552007703155,
+          "n1_relative_l2_error": 0.025708991208233445,
+          "full_field_relative_l2_error": 0.02571315753677376
+        },
+        "j": {
+          "error_over_temporal_std": 0.031845772203688526,
+          "n1_relative_l2_error": 0.02619996127187548,
+          "full_field_relative_l2_error": 0.00020006553246127462
+        },
+        "omega": {
+          "error_over_temporal_std": 0.04334616793452103,
+          "n1_relative_l2_error": 0.03903681445704397,
+          "full_field_relative_l2_error": 0.03904104366230818
+        },
+        "rho": {
+          "error_over_temporal_std": 0.03753010501893322,
+          "n1_relative_l2_error": 0.030127423695755346,
+          "full_field_relative_l2_error": 0.0001598382159794334
+        },
+        "T": {
+          "error_over_temporal_std": 0.030212797516069364,
+          "n1_relative_l2_error": 0.03058819272537473,
+          "full_field_relative_l2_error": 0.0003218519183264641
+        }
+      },
+      "matched_samples": 144,
+      "matched_window_seconds": [
+        0.015072772386361193,
+        0.04983739256780717
+      ],
+      "n1_magnetic_energy_relative_l2_error": 0.034975160769967054,
+      "n1_kinetic_energy_relative_l2_error": 0.0323602494339101,
+      "meets_pilot_temporal_target": false
+    },
+    "187.5_vs_93.75": {
+      "fields": {
+        "psi": {
+          "error_over_temporal_std": 0.010968802048221662,
+          "n1_relative_l2_error": 0.009698401747346066,
+          "full_field_relative_l2_error": 2.6853737182445836e-06
+        },
+        "u": {
+          "error_over_temporal_std": 0.010552631661278972,
+          "n1_relative_l2_error": 0.00932768116971709,
+          "full_field_relative_l2_error": 0.009328795233824788
+        },
+        "j": {
+          "error_over_temporal_std": 0.011604604435996197,
+          "n1_relative_l2_error": 0.009479719071390861,
+          "full_field_relative_l2_error": 7.656296685673838e-05
+        },
+        "omega": {
+          "error_over_temporal_std": 0.015991439722205285,
+          "n1_relative_l2_error": 0.014348454492733304,
+          "full_field_relative_l2_error": 0.01434991270775955
+        },
+        "rho": {
+          "error_over_temporal_std": 0.0135629694960281,
+          "n1_relative_l2_error": 0.010916519913622478,
+          "full_field_relative_l2_error": 6.216924775087326e-05
+        },
+        "T": {
+          "error_over_temporal_std": 0.011170894110412707,
+          "n1_relative_l2_error": 0.011126880009323326,
+          "full_field_relative_l2_error": 0.0001243116813226146
+        }
+      },
+      "common_coarsest_cadence_fields": {
+        "psi": {
+          "error_over_temporal_std": 0.011603347867708926,
+          "n1_relative_l2_error": 0.010318305835970149,
+          "full_field_relative_l2_error": 2.6645146970338766e-06
+        },
+        "u": {
+          "error_over_temporal_std": 0.010985005906535422,
+          "n1_relative_l2_error": 0.009777691507181734,
+          "full_field_relative_l2_error": 0.009778789222697856
+        },
+        "j": {
+          "error_over_temporal_std": 0.012165350869553782,
+          "n1_relative_l2_error": 0.010018568995487287,
+          "full_field_relative_l2_error": 7.589410093838003e-05
+        },
+        "omega": {
+          "error_over_temporal_std": 0.0165077157361016,
+          "n1_relative_l2_error": 0.01487404377008392,
+          "full_field_relative_l2_error": 0.014875710155954309
+        },
+        "rho": {
+          "error_over_temporal_std": 0.014334568277600965,
+          "n1_relative_l2_error": 0.011514042422024232,
+          "full_field_relative_l2_error": 6.046790776277454e-05
+        },
+        "T": {
+          "error_over_temporal_std": 0.011514077469156577,
+          "n1_relative_l2_error": 0.011691782584630396,
+          "full_field_relative_l2_error": 0.00012196463145257951
+        }
+      },
+      "matched_samples": 288,
+      "matched_window_seconds": [
+        0.015072772386361193,
+        0.049958947183826215
+      ],
+      "n1_magnetic_energy_relative_l2_error": 0.013199917324364199,
+      "n1_kinetic_energy_relative_l2_error": 0.012143856130676124,
+      "meets_pilot_temporal_target": false
+    },
+    "93.75_vs_46.875": {
+      "fields": {
+        "psi": {
+          "error_over_temporal_std": 0.0025011414190711776,
+          "n1_relative_l2_error": 0.0022159645418307157,
+          "full_field_relative_l2_error": 6.088072615838351e-07
+        },
+        "u": {
+          "error_over_temporal_std": 0.002403144757906261,
+          "n1_relative_l2_error": 0.0021257035433176158,
+          "full_field_relative_l2_error": 0.0021259148798451213
+        },
+        "j": {
+          "error_over_temporal_std": 0.0026426683187114226,
+          "n1_relative_l2_error": 0.002165056492735498,
+          "full_field_relative_l2_error": 1.7346001352852386e-05
+        },
+        "omega": {
+          "error_over_temporal_std": 0.0036305582722268494,
+          "n1_relative_l2_error": 0.0032590227378599354,
+          "full_field_relative_l2_error": 0.003259346548900586
+        },
+        "rho": {
+          "error_over_temporal_std": 0.003083953445854735,
+          "n1_relative_l2_error": 0.002485174919387431,
+          "full_field_relative_l2_error": 1.403464030490969e-05
+        },
+        "T": {
+          "error_over_temporal_std": 0.00253565006434852,
+          "n1_relative_l2_error": 0.002532025497479213,
+          "full_field_relative_l2_error": 2.8093186932902897e-05
+        }
+      },
+      "common_coarsest_cadence_fields": {
+        "psi": {
+          "error_over_temporal_std": 0.0026361734658647815,
+          "n1_relative_l2_error": 0.0023475057421327877,
+          "full_field_relative_l2_error": 6.04267583049387e-07
+        },
+        "u": {
+          "error_over_temporal_std": 0.0024917870377853244,
+          "n1_relative_l2_error": 0.0022183842997322355,
+          "full_field_relative_l2_error": 0.002218583128519589
+        },
+        "j": {
+          "error_over_temporal_std": 0.002760374040989155,
+          "n1_relative_l2_error": 0.002278855231425154,
+          "full_field_relative_l2_error": 1.7193090081728277e-05
+        },
+        "omega": {
+          "error_over_temporal_std": 0.003740638910862645,
+          "n1_relative_l2_error": 0.003370841197831392,
+          "full_field_relative_l2_error": 0.0033712089128622624
+        },
+        "rho": {
+          "error_over_temporal_std": 0.0032482953902992777,
+          "n1_relative_l2_error": 0.002611751883349138,
+          "full_field_relative_l2_error": 1.3672446021999034e-05
+        },
+        "T": {
+          "error_over_temporal_std": 0.0026081662381283706,
+          "n1_relative_l2_error": 0.002652125705960131,
+          "full_field_relative_l2_error": 2.7591789810888675e-05
+        }
+      },
+      "matched_samples": 576,
+      "matched_window_seconds": [
+        0.015011995078351673,
+        0.049958947183826215
+      ],
+      "n1_magnetic_energy_relative_l2_error": 0.003024975736777285,
+      "n1_kinetic_energy_relative_l2_error": 0.0027663359023096783,
+      "meets_pilot_temporal_target": true
+    }
+  },
+  "growth_timing": {
+    "3000.0": {
+      "fixed_magnetic_energy_threshold": 1.3039499797561156e-07,
+      "threshold_crossing_seconds": 0.041812280996820404,
+      "fitted_magnetic_energy_log_growth_per_second": 1162.673015478771,
+      "fit_r_squared": 0.9999999339636516,
+      "fit_window_seconds": [
+        0.031117981700874722,
+        0.036952603269788734
+      ]
+    },
+    "1500.0": {
+      "fixed_magnetic_energy_threshold": 1.3039499797561156e-07,
+      "threshold_crossing_seconds": 0.045491307840358305,
+      "fitted_magnetic_energy_log_growth_per_second": 1078.0436982707852,
+      "fit_r_squared": 0.9999999416391876,
+      "fit_window_seconds": [
+        0.033062855557179395,
+        0.03986991405424574
+      ]
+    },
+    "750.0": {
+      "fixed_magnetic_energy_threshold": 1.3039499797561156e-07,
+      "threshold_crossing_seconds": 0.04654030349916802,
+      "fitted_magnetic_energy_log_growth_per_second": 1060.001336776392,
+      "fit_r_squared": 0.9999998351459491,
+      "fit_window_seconds": [
+        0.033062855557179395,
+        0.04132856944647424
+      ]
+    },
+    "375.0": {
+      "fixed_magnetic_energy_threshold": 1.3039499797561156e-07,
+      "threshold_crossing_seconds": 0.0469093618785196,
+      "fitted_magnetic_energy_log_growth_per_second": 1055.736314733182,
+      "fit_r_squared": 0.9999997898501107,
+      "fit_window_seconds": [
+        0.03354907402125556,
+        0.04181478791055041
+      ]
+    },
+    "187.5": {
+      "fixed_magnetic_energy_threshold": 1.3039499797561156e-07,
+      "threshold_crossing_seconds": 0.047047012415315066,
+      "fitted_magnetic_energy_log_growth_per_second": 1054.5998155854866,
+      "fit_r_squared": 0.9999996714634576,
+      "fit_window_seconds": [
+        0.03354907402125556,
+        0.04217945175860753
+      ]
+    },
+    "93.75": {
+      "fixed_magnetic_energy_threshold": 1.3039499797561156e-07,
+      "threshold_crossing_seconds": 0.047098945464680575,
+      "fitted_magnetic_energy_log_growth_per_second": 1054.392833799756,
+      "fit_r_squared": 0.9999997326373764,
+      "fit_window_seconds": [
+        0.03354907402125556,
+        0.04217945175860753
+      ]
+    },
+    "46.875": {
+      "fixed_magnetic_energy_threshold": 1.3039499797561156e-07,
+      "threshold_crossing_seconds": 0.04711078305761082,
+      "fitted_magnetic_energy_log_growth_per_second": 1054.3096796456514,
+      "fit_r_squared": 0.9999997102985855,
+      "fit_window_seconds": [
+        0.0335186853672508,
+        0.042240229066617056
+      ]
+    }
+  },
+  "finest_pair_passes": true,
+  "dataset_ready": false,
+  "remaining_checks": [
+    "Mesh and higher-toroidal-mode convergence",
+    "Independent initial-condition families and benchmark split",
+    "Native model199 operator/constraint audit"
+  ],
+  "reference_step31": {
+    "reference": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/tearing_pilot/snapshot/end.h5",
+    "candidate": "JOREK/tearing_pilot/growth_2775168/dt3000/jorek000031.h5",
+    "time_native": 93000.0,
+    "exact_same_geometry": false,
+    "max_query_shift_before_mapping_m": 1.8032033580159388e-07,
+    "max_query_residual_after_mapping_m": 1.6431300764452317e-14,
+    "coefficient_max_abs_error": 1.907519459942719e-06,
+    "upstream_values_tolerance_pass": false,
+    "fields": {
+      "psi": {
+        "relative_volume_l2_error": 2.5406313081327332e-08,
+        "absolute_volume_rms_error": 2.6733359082037793e-09
+      },
+      "u": {
+        "relative_volume_l2_error": 2.686116740131513e-05,
+        "absolute_volume_rms_error": 3.041981708338953e-12
+      },
+      "j": {
+        "relative_volume_l2_error": 5.881042164245025e-07,
+        "absolute_volume_rms_error": 3.585159736692176e-07
+      },
+      "omega": {
+        "relative_volume_l2_error": 2.656697584014403e-05,
+        "absolute_volume_rms_error": 5.7356235955610204e-09
+      },
+      "rho": {
+        "relative_volume_l2_error": 4.3997629984763214e-07,
+        "absolute_volume_rms_error": 4.402172661372696e-07
+      },
+      "T": {
+        "relative_volume_l2_error": 6.963935431961717e-07,
+        "absolute_volume_rms_error": 3.989952069291641e-13
+      }
+    }
+  },
+  "patch_vs_old_startup_step31": {
+    "reference": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/tearing_pilot/run_2773515/startup/jorek000031.h5",
+    "candidate": "JOREK/tearing_pilot/growth_2775168/dt3000/jorek000031.h5",
+    "time_native": 93000.0,
+    "exact_same_geometry": true,
+    "max_query_shift_before_mapping_m": 0.0,
+    "max_query_residual_after_mapping_m": 0.0,
+    "coefficient_max_abs_error": 0.0,
+    "upstream_values_tolerance_pass": true,
+    "fields": {
+      "psi": {
+        "relative_volume_l2_error": 1.5564547628472793e-16,
+        "absolute_volume_rms_error": 1.6377529445156853e-17
+      },
+      "u": {
+        "relative_volume_l2_error": 1.5930210109964408e-16,
+        "absolute_volume_rms_error": 1.8040759744388466e-23
+      },
+      "j": {
+        "relative_volume_l2_error": 1.5756583901608606e-16,
+        "absolute_volume_rms_error": 9.605418323960707e-17
+      },
+      "omega": {
+        "relative_volume_l2_error": 1.9066960852777347e-16,
+        "absolute_volume_rms_error": 4.116420838523222e-20
+      },
+      "rho": {
+        "relative_volume_l2_error": 1.5972931044746851e-16,
+        "absolute_volume_rms_error": 1.5981679083418857e-16
+      },
+      "T": {
+        "relative_volume_l2_error": 1.4491103359150752e-16,
+        "absolute_volume_rms_error": 8.302605501933963e-23
+      }
+    }
+  },
+  "initial_state_max_abs_difference": {
+    "3000.0": {
+      "x": 0.0,
+      "size": 0.0,
+      "vertex": 0.0,
+      "values": 0.0,
+      "deltas": 0.0
+    },
+    "1500.0": {
+      "x": 0.0,
+      "size": 0.0,
+      "vertex": 0.0,
+      "values": 0.0,
+      "deltas": 0.0
+    },
+    "750.0": {
+      "x": 0.0,
+      "size": 0.0,
+      "vertex": 0.0,
+      "values": 0.0,
+      "deltas": 0.0
+    },
+    "375.0": {
+      "x": 0.0,
+      "size": 0.0,
+      "vertex": 0.0,
+      "values": 0.0,
+      "deltas": 0.0
+    },
+    "187.5": {
+      "x": 0.0,
+      "size": 0.0,
+      "vertex": 0.0,
+      "values": 0.0,
+      "deltas": 0.0
+    },
+    "93.75": {
+      "x": 0.0,
+      "size": 0.0,
+      "vertex": 0.0,
+      "values": 0.0,
+      "deltas": 0.0
+    },
+    "46.875": {
+      "x": 0.0,
+      "size": 0.0,
+      "vertex": 0.0,
+      "values": 0.0,
+      "deltas": 0.0
+    }
+  }
+}
