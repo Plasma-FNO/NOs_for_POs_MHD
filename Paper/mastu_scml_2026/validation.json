@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "archive": {
+    "path": "MASTU_SCML_2026_presentation_assets.zip",
+    "sha256": "93d9440fd580b5a6feca1e662b5b9f7abdf6f58d9338cb233ad07ba6a2f0a91c",
+    "bytes": 27728096,
+    "members": 63
+  },
+  "original_pdf": {
+    "path": "SCML_2026_NOs4POs.pdf",
+    "sha256": "52358943597c1c64d13fae5862760a781a6260431369138481380361fa4ac436"
+  },
+  "updated_pdf_sha256": "448c54724262b81a90e902553ebb0c52b12289006ea1d3d8dc080139697fd39d",
+  "insert_pdf_sha256": "1f5dab6d742e3ed881ce7885a1f1deba0b4799d50366d5a925236affa9d3eff3",
+  "original_pages_preserved": 23,
+  "updated_pages": 30,
+  "video_count": 7,
+  "archive_crc_and_all_member_hashes_verified": true,
+  "video_metric_parity": "passed",
+  "summary_sha256": "fd093c1c219272623d81a0fb50336675044c1dd5cae431446ddd403c32fc8cd0"
+}

@@ -1,0 +1,5 @@
+artifacts
+__pycache__/
+
+# Preserve the source presentation despite the repository-wide PDF ignore.
+!SCML_2026_NOs4POs.pdf

@@ -1,0 +1,271 @@
+{
+  "status": "passed",
+  "purpose": "Independent baseline and native runtime provenance audit for method videos",
+  "gpu_used": false,
+  "methods": [
+    {
+      "method": "ar",
+      "checkpoint_path": "/pitagora_scratch/userexternal/vgopakum/mastu_gpu_onestep_20261109/seed17_ar/ar/selected.pt",
+      "checkpoint_sha256": "3776bd377563e7139f00f9984f14af4d0c51f9dc6fbbc71451c7e906eaf3bbec",
+      "provenance_path": "/pitagora_scratch/userexternal/vgopakum/mastu_gpu_onestep_20261109/seed17_ar/provenance.json",
+      "provenance_sha256": "7edf15b25e6025a005f1dbbb1dd3eeb08d8fa7257add204db8bf8b60e4788304",
+      "canonical_provenance_hash": "3085e076302f9d84cf664de113231cacf64d2382418ec2f6fcc575f2831f48f3",
+      "checkpoint_selection": "final fixed-budget update",
+      "training_updates": 2000,
+      "training_horizon": 4,
+      "training_update_seconds": 699.464655065909,
+      "training_update_seconds_range": [
+        0.34056947799399495,
+        3.301312363008037
+      ],
+      "history_path": "/pitagora_scratch/userexternal/vgopakum/mastu_gpu_onestep_20261109/seed17_ar/ar/history.json",
+      "history_sha256": "f4b96fc1ae330963cf77d76130d5311a99011277ceb82e11ae955c26b92fa43e",
+      "normalization_matches_implicit_exactly": true,
+      "seed": 17,
+      "manifest_sha256": "f0f0f56c611c9f9d48081d4a611bfa44a0709e5cf4b691fc219c69396c81b87c"
+    },
+    {
+      "method": "node",
+      "checkpoint_path": "/pitagora_scratch/userexternal/vgopakum/mastu_gpu_onestep_20261109/seed17_node/node/selected.pt",
+      "checkpoint_sha256": "f96b666f6b38a74d6eab9bd0c59352ec8c28fe7b89085c3224d59b11a6c42b90",
+      "provenance_path": "/pitagora_scratch/userexternal/vgopakum/mastu_gpu_onestep_20261109/seed17_node/provenance.json",
+      "provenance_sha256": "7edf15b25e6025a005f1dbbb1dd3eeb08d8fa7257add204db8bf8b60e4788304",
+      "canonical_provenance_hash": "3085e076302f9d84cf664de113231cacf64d2382418ec2f6fcc575f2831f48f3",
+      "checkpoint_selection": "final fixed-budget update",
+      "training_updates": 2000,
+      "training_horizon": 4,
+      "training_update_seconds": 690.98415874294,
+      "training_update_seconds_range": [
+        0.3405508049763739,
+        3.3312111399136484
+      ],
+      "history_path": "/pitagora_scratch/userexternal/vgopakum/mastu_gpu_onestep_20261109/seed17_node/node/history.json",
+      "history_sha256": "75e6f14d0ecd5cfa0cd79b3fe7f35a026232bb232ae3708e19f93616745be2a8",
+      "normalization_matches_implicit_exactly": true,
+      "seed": 17,
+      "manifest_sha256": "f0f0f56c611c9f9d48081d4a611bfa44a0709e5cf4b691fc219c69396c81b87c"
+    },
+    {
+      "method": "implicit",
+      "checkpoint_path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/pilot64_learned/implicit_rollout/rollout/selected.pt",
+      "checkpoint_sha256": "cc5dccd2d63c8720309d29fc009c4ee1ed62a535cbe89f03c3baa7430b0f1612",
+      "provenance_path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/pilot64_learned/provenance.json",
+      "provenance_sha256": "7026b113e1ce2fd8292d958411c82b53cb48d45ab0a63a17abb4652994443012",
+      "canonical_provenance_hash": "362319a013135edb41efa754b3e37bf42fb39e2b19b0d7ccb6c663620d88b389",
+      "checkpoint_selection": "final fixed-budget update",
+      "training_updates": 64,
+      "training_horizon": 4,
+      "training_update_seconds": 335.3688629750686,
+      "training_update_seconds_range": [
+        3.258893332997104,
+        23.30413576400315
+      ],
+      "history_path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/pilot64_learned/implicit_rollout/rollout/history.json",
+      "history_sha256": "797de325b87342612b4b4cb271b98a3d4d772ce394684e31164b8f9a2cd43be1",
+      "normalization_matches_implicit_exactly": true,
+      "seed": 17,
+      "manifest_sha256": "f0f0f56c611c9f9d48081d4a611bfa44a0709e5cf4b691fc219c69396c81b87c"
+    }
+  ],
+  "native_ground_truth": [
+    {
+      "case_id": "mastu_004",
+      "wall_seconds": 4294.569143182132,
+      "iteration_wall_seconds": 4291.660609300004,
+      "iteration_count": 384,
+      "native_steps": 384,
+      "saved_intervals": 96,
+      "physical_duration_seconds": 1.4059131112280782e-06,
+      "mpi_ranks": 4,
+      "omp_threads_per_rank": 1,
+      "selected_reference_rate": "fine",
+      "includes_setup_diagnostics_and_io": true,
+      "result_path": "/pitagora_scratch/userexternal/vgopakum/mastu_euler_ensemble100_20261105/runs/mastu_004_fine/result.json",
+      "result_sha256": "3e4cef4ca4bb5955e3edb827484069a072dd65fe5f22eaf9205c3cfc660de7e1",
+      "provenance_path": "/pitagora_scratch/userexternal/vgopakum/mastu_euler_ensemble100_20261105/runs/mastu_004_fine/provenance.json",
+      "provenance_sha256": "c8e6b37235f64c4138b7dc60776dc9c538bf0903acf14ae718e3fbf82acac0d2",
+      "stdout_sha256": "f7d3f3736e923c764982e18982cd5885b6d18f800c3a41ab064eb5497efe0c76",
+      "resource_scope": "4 MPI ranks; at most 768 steps, 14000 seconds per invocation; diagnostic refinement only",
+      "timing_scope": "Historical accepted native solve on four CPU MPI ranks. Wall time includes setup, diagnostics and output. Iteration sum also includes diagnostics/IO inside native iteration. Not hardware-matched to GPU inference."
+    },
+    {
+      "case_id": "mastu_010",
+      "wall_seconds": 4261.680326333968,
+      "iteration_wall_seconds": 4258.601079200001,
+      "iteration_count": 384,
+      "native_steps": 384,
+      "saved_intervals": 96,
+      "physical_duration_seconds": 1.4059131112280782e-06,
+      "mpi_ranks": 4,
+      "omp_threads_per_rank": 1,
+      "selected_reference_rate": "fine",
+      "includes_setup_diagnostics_and_io": true,
+      "result_path": "/pitagora_scratch/userexternal/vgopakum/mastu_euler_ensemble100_20261105/runs/mastu_010_fine/result.json",
+      "result_sha256": "e08bb329441ff3ddbedffd59af3905355611eee4fba9812f4c5b82d235c6572b",
+      "provenance_path": "/pitagora_scratch/userexternal/vgopakum/mastu_euler_ensemble100_20261105/runs/mastu_010_fine/provenance.json",
+      "provenance_sha256": "3b50abf9ae64741edafe81f9c1311e0b60959f14f19e2252ab478c392ec4d2c7",
+      "stdout_sha256": "527eaada4af2fa943488dfc943ddd8f7c6349cc3920de13db8a336600001392b",
+      "resource_scope": "4 MPI ranks; at most 768 steps, 14000 seconds per invocation; diagnostic refinement only",
+      "timing_scope": "Historical accepted native solve on four CPU MPI ranks. Wall time includes setup, diagnostics and output. Iteration sum also includes diagnostics/IO inside native iteration. Not hardware-matched to GPU inference."
+    }
+  ],
+  "baseline_runtime_source": [
+    {
+      "file": "euler.py",
+      "frozen_sha256": "c0888515d62e2713491fc93f1ffc21ccdeeeff7ac5d75dfa18383ee205623533",
+      "current_sha256": "c0888515d62e2713491fc93f1ffc21ccdeeeff7ac5d75dfa18383ee205623533",
+      "exact_match": true
+    },
+    {
+      "file": "physical_guard.py",
+      "frozen_sha256": "4f29a813ac0853579b56b8120f4a681c4c44ec4fa81ee1570dfb43f8d278706c",
+      "current_sha256": "4f29a813ac0853579b56b8120f4a681c4c44ec4fa81ee1570dfb43f8d278706c",
+      "exact_match": true
+    },
+    {
+      "file": "learning.py",
+      "frozen_sha256": "d2972ce404d7e77012942f713a0b656200ce3c7439670a443dd961549cdab0b9",
+      "current_sha256": "d2972ce404d7e77012942f713a0b656200ce3c7439670a443dd961549cdab0b9",
+      "exact_match": true
+    },
+    {
+      "file": "gpu_native.py",
+      "frozen_sha256": "23824b11457cd29a62bca3dfe69a5ab1296c02338051f3c29b96d87226d1b06a",
+      "current_sha256": "23824b11457cd29a62bca3dfe69a5ab1296c02338051f3c29b96d87226d1b06a",
+      "exact_match": true
+    },
+    {
+      "file": "restart.py",
+      "frozen_sha256": "830671db304963210d913ec14e202579f8252331bbedee1b6c4c4f5ec059c795",
+      "current_sha256": "830671db304963210d913ec14e202579f8252331bbedee1b6c4c4f5ec059c795",
+      "exact_match": true
+    },
+    {
+      "file": "spline_derivatives.py",
+      "frozen_sha256": "4b0695dcefe1748fa77426a4d34d62a3474ce122a14597c1e9fd4a81d822204e",
+      "current_sha256": "4b0695dcefe1748fa77426a4d34d62a3474ce122a14597c1e9fd4a81d822204e",
+      "exact_match": true
+    },
+    {
+      "file": "continuity.py",
+      "frozen_sha256": "989bdc4f7343c09c3288939c592158bea020e2458e79edaf21e6cc5136e18cdd",
+      "current_sha256": "989bdc4f7343c09c3288939c592158bea020e2458e79edaf21e6cc5136e18cdd",
+      "exact_match": true
+    }
+  ],
+  "historical_comparison": [
+    {
+      "case_id": "mastu_004",
+      "method": "ar",
+      "horizon": 16,
+      "historical_mse": 0.3419258215945686,
+      "fresh_mse": 0.3419258215945686,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "case_id": "mastu_004",
+      "method": "ar",
+      "horizon": 32,
+      "historical_mse": 0.47110497962005965,
+      "fresh_mse": 0.47110497962005965,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "case_id": "mastu_004",
+      "method": "ar",
+      "horizon": 96,
+      "historical_mse": 13.3851884749737,
+      "fresh_mse": 13.385188474973699,
+      "absolute_difference": -1.7763568394002505e-15,
+      "passed": true
+    },
+    {
+      "case_id": "mastu_004",
+      "method": "node",
+      "horizon": 16,
+      "historical_mse": 0.022134155528917877,
+      "fresh_mse": 0.022134155528917877,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "case_id": "mastu_004",
+      "method": "node",
+      "horizon": 32,
+      "historical_mse": 0.07170737213722025,
+      "fresh_mse": 0.07170737213722027,
+      "absolute_difference": 1.3877787807814457e-17,
+      "passed": true
+    },
+    {
+      "case_id": "mastu_004",
+      "method": "node",
+      "horizon": 96,
+      "historical_mse": 0.735151244975161,
+      "fresh_mse": 0.7351512449751609,
+      "absolute_difference": -1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "case_id": "mastu_010",
+      "method": "ar",
+      "horizon": 16,
+      "historical_mse": 0.6782253380834693,
+      "fresh_mse": 0.6782253380834693,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "case_id": "mastu_010",
+      "method": "ar",
+      "horizon": 32,
+      "historical_mse": 1.362949696333576,
+      "fresh_mse": 1.362949696333576,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "case_id": "mastu_010",
+      "method": "ar",
+      "horizon": 96,
+      "historical_mse": 36.94203795817179,
+      "fresh_mse": 36.94203795817179,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "case_id": "mastu_010",
+      "method": "node",
+      "horizon": 16,
+      "historical_mse": 0.15441467342122953,
+      "fresh_mse": 0.1544146734212295,
+      "absolute_difference": -2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "case_id": "mastu_010",
+      "method": "node",
+      "horizon": 32,
+      "historical_mse": 0.40067269735471545,
+      "fresh_mse": 0.40067269735471545,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "case_id": "mastu_010",
+      "method": "node",
+      "horizon": 96,
+      "historical_mse": 2.1566148076357146,
+      "fresh_mse": 2.1566148076357137,
+      "absolute_difference": -8.881784197001252e-16,
+      "passed": true
+    }
+  ],
+  "caveats": [
+    "Historical training times sum only recorded optimizer-update wall durations; checkpoint IO/setup/evaluation excluded and concurrent jobs may differ. Not a matched training-compute comparison.",
+    "Baselines trained 2000updates; latest learned implicit correction trained64updates and transferred to audited source-axis corrected physics.",
+    "Native ground truth CPUwall and new warm GPUrollout wall have differenthardware and IO scope."
+  ]
+}

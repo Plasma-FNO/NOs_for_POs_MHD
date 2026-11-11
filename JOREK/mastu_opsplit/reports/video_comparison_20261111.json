@@ -1,0 +1,2352 @@
+{
+  "cases": [
+    {
+      "case_id": "mastu_004",
+      "metadata_path": "/pitagora_scratch/userexternal/vgopakum/mastu_comparison_videos_20261111/cases/mastu_004/metadata.json",
+      "trajectory_path": "/pitagora_scratch/userexternal/vgopakum/mastu_comparison_videos_20261111/cases/mastu_004/trajectory.npz",
+      "methods": [
+        {
+          "method": "ar",
+          "label": "Autoregressive",
+          "case_id": "mastu_004",
+          "horizon": 96,
+          "microsteps": 1,
+          "status": "complete",
+          "complete": true,
+          "audits_passed": true,
+          "rollout_seconds": 6.375742233998608,
+          "timing_samples": [
+            6.375742233998608,
+            6.662659045003238,
+            6.3140351719921455
+          ],
+          "completed_intervals": [
+            96,
+            96,
+            96
+          ],
+          "training_updates": 2000,
+          "normalized_volume_mse": 13.385188474973699,
+          "per_field_normalized_mse": {
+            "psi": 15.711892818287035,
+            "u": 20.60949626104598,
+            "zj": 5.588137623261061,
+            "w": 30.862980190243842,
+            "rho": 1.0193227760778243,
+            "T": 1.313170927911761,
+            "Vpar": 18.591318727988384
+          },
+          "horizons": {
+            "4": {
+              "normalized_volume_mse": 0.21332501513010554,
+              "per_field_normalized_mse": {
+                "psi": 0.03250181911552817,
+                "u": 0.04822073284722399,
+                "zj": 0.06506782416751954,
+                "w": 0.16191221947955953,
+                "rho": 0.5100673549012087,
+                "T": 0.2711824196246896,
+                "Vpar": 0.4043227357750092
+              },
+              "audit_passed": true
+            },
+            "16": {
+              "normalized_volume_mse": 0.3419258215945686,
+              "per_field_normalized_mse": {
+                "psi": 0.063188215804325,
+                "u": 0.09644510722152104,
+                "zj": 0.06822840568851914,
+                "w": 0.17092236546043885,
+                "rho": 0.6780695723002431,
+                "T": 0.650793005272486,
+                "Vpar": 0.665834079414447
+              },
+              "audit_passed": true
+            },
+            "32": {
+              "normalized_volume_mse": 0.47110497962005965,
+              "per_field_normalized_mse": {
+                "psi": 0.15262965133199094,
+                "u": 0.1956553661719357,
+                "zj": 0.10973688144246435,
+                "w": 0.3386982861775457,
+                "rho": 0.8764491440322588,
+                "T": 0.8392993965104178,
+                "Vpar": 0.7852661316738043
+              },
+              "audit_passed": true
+            },
+            "64": {
+              "normalized_volume_mse": 0.8775549206886915,
+              "per_field_normalized_mse": {
+                "psi": 0.5795016245988261,
+                "u": 0.5845342828269025,
+                "zj": 0.2866137906947748,
+                "w": 1.012551764192393,
+                "rho": 0.9497103102882573,
+                "T": 1.1538357788378235,
+                "Vpar": 1.5761368933818627
+              },
+              "audit_passed": true
+            },
+            "96": {
+              "normalized_volume_mse": 13.385188474973699,
+              "per_field_normalized_mse": {
+                "psi": 15.711892818287035,
+                "u": 20.60949626104598,
+                "zj": 5.588137623261061,
+                "w": 30.862980190243842,
+                "rho": 1.0193227760778243,
+                "T": 1.313170927911761,
+                "Vpar": 18.591318727988384
+              },
+              "audit_passed": true
+            }
+          },
+          "failure": [],
+          "guard_statistics": [
+            {
+              "steps": 96,
+              "limited_field_steps": 170,
+              "minimum_alpha": 0.009499525834044713,
+              "worst_proposed_density_bound": -0.03666196501417621,
+              "worst_proposed_temperature_bound": -0.0003068930552040206
+            },
+            {
+              "steps": 96,
+              "limited_field_steps": 170,
+              "minimum_alpha": 0.009499525834044713,
+              "worst_proposed_density_bound": -0.03666196501417621,
+              "worst_proposed_temperature_bound": -0.0003068930552040206
+            },
+            {
+              "steps": 96,
+              "limited_field_steps": 170,
+              "minimum_alpha": 0.009499525834044713,
+              "worst_proposed_density_bound": -0.03666196501417621,
+              "worst_proposed_temperature_bound": -0.0003068930552040206
+            }
+          ],
+          "stage_statistics": [
+            null,
+            null,
+            null
+          ],
+          "reference_frames": 97,
+          "ground_truth_validated_through": 96,
+          "long_horizon_scope": "Ground truth available throughout",
+          "setup_seconds": 15.891689962998498,
+          "cold_first_frame_seconds": 3.3595244030002505,
+          "timing_scope": "Synchronized wall time of autonomous CUDA inference with deployed guards; no plotting, scoring, file IO or device-to-host frame export. CPU orchestration and synchronizations inside model included. One warmup frame; cached factorizations. Batch one. GPU trials run sequentially."
+        },
+        {
+          "method": "node",
+          "label": "Neural ODE",
+          "case_id": "mastu_004",
+          "horizon": 96,
+          "microsteps": 1,
+          "status": "complete",
+          "complete": true,
+          "audits_passed": true,
+          "rollout_seconds": 6.185929318002309,
+          "timing_samples": [
+            6.185929318002309,
+            5.810392996005248,
+            6.204915598995285
+          ],
+          "completed_intervals": [
+            96,
+            96,
+            96
+          ],
+          "training_updates": 2000,
+          "normalized_volume_mse": 0.7351512449751609,
+          "per_field_normalized_mse": {
+            "psi": 0.4466327537627894,
+            "u": 0.8904190664254877,
+            "zj": 0.13213596212964704,
+            "w": 0.8247322624240573,
+            "rho": 0.635774279073217,
+            "T": 0.4362260261103446,
+            "Vpar": 1.7801383649005833
+          },
+          "horizons": {
+            "4": {
+              "normalized_volume_mse": 0.0023368408450495336,
+              "per_field_normalized_mse": {
+                "psi": 0.00023843815203640598,
+                "u": 0.00042688671055909346,
+                "zj": 0.00030540124886031713,
+                "w": 0.0007875210676742958,
+                "rho": 0.0017527994542847485,
+                "T": 0.008908500401196735,
+                "Vpar": 0.00393833888073514
+              },
+              "audit_passed": true
+            },
+            "16": {
+              "normalized_volume_mse": 0.022134155528917877,
+              "per_field_normalized_mse": {
+                "psi": 0.002461202107495582,
+                "u": 0.003349227446973704,
+                "zj": 0.003190853946104781,
+                "w": 0.01111294601480978,
+                "rho": 0.02143974762712722,
+                "T": 0.06359425832130582,
+                "Vpar": 0.04979085323860827
+              },
+              "audit_passed": true
+            },
+            "32": {
+              "normalized_volume_mse": 0.07170737213722027,
+              "per_field_normalized_mse": {
+                "psi": 0.009317838488920831,
+                "u": 0.009746841390069582,
+                "zj": 0.01208388107489937,
+                "w": 0.049631676288470435,
+                "rho": 0.07999016503949435,
+                "T": 0.14794520186870835,
+                "Vpar": 0.19323600080997894
+              },
+              "audit_passed": true
+            },
+            "64": {
+              "normalized_volume_mse": 0.26056416927779263,
+              "per_field_normalized_mse": {
+                "psi": 0.06679807806206854,
+                "u": 0.0893805373588583,
+                "zj": 0.052105605109111296,
+                "w": 0.241747695489489,
+                "rho": 0.29807734191870033,
+                "T": 0.30227269296248843,
+                "Vpar": 0.7735672340438323
+              },
+              "audit_passed": true
+            },
+            "96": {
+              "normalized_volume_mse": 0.7351512449751609,
+              "per_field_normalized_mse": {
+                "psi": 0.4466327537627894,
+                "u": 0.8904190664254877,
+                "zj": 0.13213596212964704,
+                "w": 0.8247322624240573,
+                "rho": 0.635774279073217,
+                "T": 0.4362260261103446,
+                "Vpar": 1.7801383649005833
+              },
+              "audit_passed": true
+            }
+          },
+          "failure": [],
+          "guard_statistics": [
+            {
+              "steps": 96,
+              "limited_field_steps": 0,
+              "minimum_alpha": 1.0,
+              "worst_proposed_density_bound": 0.000700860416908674,
+              "worst_proposed_temperature_bound": 2.860965478197833e-05
+            },
+            {
+              "steps": 96,
+              "limited_field_steps": 0,
+              "minimum_alpha": 1.0,
+              "worst_proposed_density_bound": 0.000700860416908674,
+              "worst_proposed_temperature_bound": 2.860965478197833e-05
+            },
+            {
+              "steps": 96,
+              "limited_field_steps": 0,
+              "minimum_alpha": 1.0,
+              "worst_proposed_density_bound": 0.000700860416908674,
+              "worst_proposed_temperature_bound": 2.860965478197833e-05
+            }
+          ],
+          "stage_statistics": [
+            null,
+            null,
+            null
+          ],
+          "reference_frames": 97,
+          "ground_truth_validated_through": 96,
+          "long_horizon_scope": "Ground truth available throughout",
+          "setup_seconds": 14.472442930011312,
+          "cold_first_frame_seconds": 3.2447957069962285,
+          "timing_scope": "Synchronized wall time of autonomous CUDA inference with deployed guards; no plotting, scoring, file IO or device-to-host frame export. CPU orchestration and synchronizations inside model included. One warmup frame; cached factorizations. Batch one. GPU trials run sequentially."
+        },
+        {
+          "method": "implicit",
+          "label": "Implicit Neural OpsSplit",
+          "case_id": "mastu_004",
+          "horizon": 96,
+          "microsteps": 2,
+          "status": "complete",
+          "complete": true,
+          "audits_passed": true,
+          "rollout_seconds": 48.94172022800194,
+          "timing_samples": [
+            48.89376938500209,
+            48.94172022800194,
+            49.24664488900453
+          ],
+          "completed_intervals": [
+            96,
+            96,
+            96
+          ],
+          "training_updates": 64,
+          "normalized_volume_mse": 0.0015551021003655816,
+          "per_field_normalized_mse": {
+            "psi": 1.0847725451738176e-05,
+            "u": 0.00015818218009130662,
+            "zj": 2.5719525560227586e-05,
+            "w": 0.00023646393254484412,
+            "rho": 0.004606315336246028,
+            "T": 0.002025663057266988,
+            "Vpar": 0.0038225229453979393
+          },
+          "horizons": {
+            "4": {
+              "normalized_volume_mse": 2.8760771711227907e-06,
+              "per_field_normalized_mse": {
+                "psi": 9.239573725128765e-10,
+                "u": 4.585072060938971e-08,
+                "zj": 9.091869975047847e-07,
+                "w": 6.527117569244373e-07,
+                "rho": 7.22278874446104e-10,
+                "T": 2.193755058247707e-06,
+                "Vpar": 1.6329389428326255e-05
+              },
+              "audit_passed": true
+            },
+            "16": {
+              "normalized_volume_mse": 6.727568316558338e-06,
+              "per_field_normalized_mse": {
+                "psi": 1.204760174230727e-07,
+                "u": 6.842218188550329e-07,
+                "zj": 1.8434660471908058e-06,
+                "w": 3.645243952742784e-06,
+                "rho": 1.1912567430446205e-08,
+                "T": 1.1587990402024235e-05,
+                "Vpar": 2.9199667410241994e-05
+              },
+              "audit_passed": true
+            },
+            "32": {
+              "normalized_volume_mse": 2.159733452889743e-05,
+              "per_field_normalized_mse": {
+                "psi": 1.060411357741704e-06,
+                "u": 3.7444783167279427e-06,
+                "zj": 4.203591431929249e-06,
+                "w": 1.001207837784945e-05,
+                "rho": 6.558902486080382e-08,
+                "T": 5.491994973132347e-05,
+                "Vpar": 7.717524346184936e-05
+              },
+              "audit_passed": true
+            },
+            "64": {
+              "normalized_volume_mse": 0.00019643776728644777,
+              "per_field_normalized_mse": {
+                "psi": 5.831278173441068e-06,
+                "u": 1.2742284978473087e-05,
+                "zj": 1.2037592530496253e-05,
+                "w": 4.373865993872468e-05,
+                "rho": 3.8811798615707343e-07,
+                "T": 0.000505381194076586,
+                "Vpar": 0.0007949452433212563
+              },
+              "audit_passed": true
+            },
+            "96": {
+              "normalized_volume_mse": 0.0015551021003655816,
+              "per_field_normalized_mse": {
+                "psi": 1.0847725451738176e-05,
+                "u": 0.00015818218009130662,
+                "zj": 2.5719525560227586e-05,
+                "w": 0.00023646393254484412,
+                "rho": 0.004606315336246028,
+                "T": 0.002025663057266988,
+                "Vpar": 0.0038225229453979393
+              },
+              "audit_passed": true
+            }
+          },
+          "failure": [],
+          "guard_statistics": [
+            {
+              "steps": 192,
+              "limited_field_steps": 24,
+              "minimum_alpha": 0.9788328273061465,
+              "worst_proposed_density_bound": -5.973535261684855e-06,
+              "worst_proposed_temperature_bound": 8.708165842613011e-05
+            },
+            {
+              "steps": 192,
+              "limited_field_steps": 24,
+              "minimum_alpha": 0.9788328273061465,
+              "worst_proposed_density_bound": -5.973535261684855e-06,
+              "worst_proposed_temperature_bound": 8.708165842613011e-05
+            },
+            {
+              "steps": 192,
+              "limited_field_steps": 24,
+              "minimum_alpha": 0.9788328273061465,
+              "worst_proposed_density_bound": -5.973535261684855e-06,
+              "worst_proposed_temperature_bound": 8.708165842613011e-05
+            }
+          ],
+          "stage_statistics": [
+            {
+              "stages": 192,
+              "boundary_iterations": 715,
+              "maximum_boundary_iterations": 4,
+              "maximum_boundary_residual": 9.683751930452108e-11,
+              "guarded_stages": 192,
+              "maximum_guard_change": 196.90221403893156,
+              "maximum_held_dof_change": 5.684341886080802e-14,
+              "physical_rhs_evaluations": 192,
+              "linear_rhs_evaluations": 0,
+              "learned_network_evaluations": 384
+            },
+            {
+              "stages": 192,
+              "boundary_iterations": 715,
+              "maximum_boundary_iterations": 4,
+              "maximum_boundary_residual": 9.683751930452108e-11,
+              "guarded_stages": 192,
+              "maximum_guard_change": 196.90221403893156,
+              "maximum_held_dof_change": 5.684341886080802e-14,
+              "physical_rhs_evaluations": 192,
+              "linear_rhs_evaluations": 0,
+              "learned_network_evaluations": 384
+            },
+            {
+              "stages": 192,
+              "boundary_iterations": 715,
+              "maximum_boundary_iterations": 4,
+              "maximum_boundary_residual": 9.683751930452108e-11,
+              "guarded_stages": 192,
+              "maximum_guard_change": 196.90221403893156,
+              "maximum_held_dof_change": 5.684341886080802e-14,
+              "physical_rhs_evaluations": 192,
+              "linear_rhs_evaluations": 0,
+              "learned_network_evaluations": 384
+            }
+          ],
+          "reference_frames": 97,
+          "ground_truth_validated_through": 96,
+          "long_horizon_scope": "Ground truth available throughout",
+          "setup_seconds": 28.450995799998054,
+          "cold_first_frame_seconds": 12.89939763500297,
+          "timing_scope": "Synchronized wall time of autonomous CUDA inference with deployed guards; no plotting, scoring, file IO or device-to-host frame export. CPU orchestration and synchronizations inside model included. One warmup frame; cached factorizations. Batch one. GPU trials run sequentially."
+        }
+      ]
+    },
+    {
+      "case_id": "mastu_010",
+      "metadata_path": "/pitagora_scratch/userexternal/vgopakum/mastu_comparison_videos_20261111/cases/mastu_010/metadata.json",
+      "trajectory_path": "/pitagora_scratch/userexternal/vgopakum/mastu_comparison_videos_20261111/cases/mastu_010/trajectory.npz",
+      "methods": [
+        {
+          "method": "ar",
+          "label": "Autoregressive",
+          "case_id": "mastu_010",
+          "horizon": 96,
+          "microsteps": 1,
+          "status": "complete",
+          "complete": true,
+          "audits_passed": true,
+          "rollout_seconds": 6.050797539995983,
+          "timing_samples": [
+            5.9396378379897214,
+            6.050797539995983,
+            6.187616785988212
+          ],
+          "completed_intervals": [
+            96,
+            96,
+            96
+          ],
+          "training_updates": 2000,
+          "normalized_volume_mse": 36.94203795817179,
+          "per_field_normalized_mse": {
+            "psi": 67.50018552189199,
+            "u": 20.318526840607955,
+            "zj": 26.594956176278,
+            "w": 99.03619430913568,
+            "rho": 1.244006008273513,
+            "T": 2.010977099994315,
+            "Vpar": 41.889419751021066
+          },
+          "horizons": {
+            "4": {
+              "normalized_volume_mse": 0.3916977351504176,
+              "per_field_normalized_mse": {
+                "psi": 0.3603406239636465,
+                "u": 0.07924998104639114,
+                "zj": 0.13449266329721646,
+                "w": 0.257511770423981,
+                "rho": 1.0303617270312788,
+                "T": 0.42917700677434084,
+                "Vpar": 0.45075037351606867
+              },
+              "audit_passed": true
+            },
+            "16": {
+              "normalized_volume_mse": 0.6782253380834693,
+              "per_field_normalized_mse": {
+                "psi": 0.18553027479198705,
+                "u": 0.36738862666424144,
+                "zj": 0.17749651960409824,
+                "w": 0.5886786263903356,
+                "rho": 1.157813292192609,
+                "T": 1.4032802587614515,
+                "Vpar": 0.8673897681795624
+              },
+              "audit_passed": true
+            },
+            "32": {
+              "normalized_volume_mse": 1.362949696333576,
+              "per_field_normalized_mse": {
+                "psi": 0.4141812384449667,
+                "u": 2.555740993371239,
+                "zj": 0.526366038879971,
+                "w": 1.557501240680505,
+                "rho": 1.3321159833911236,
+                "T": 1.9571653312249833,
+                "Vpar": 1.197577048342244
+              },
+              "audit_passed": true
+            },
+            "64": {
+              "normalized_volume_mse": 2.3761787827790557,
+              "per_field_normalized_mse": {
+                "psi": 1.4295487976299552,
+                "u": 4.105247201394446,
+                "zj": 2.3285026059552867,
+                "w": 3.3148152382867693,
+                "rho": 1.271412478798633,
+                "T": 1.9957729327401137,
+                "Vpar": 2.1879522246481855
+              },
+              "audit_passed": true
+            },
+            "96": {
+              "normalized_volume_mse": 36.94203795817179,
+              "per_field_normalized_mse": {
+                "psi": 67.50018552189199,
+                "u": 20.318526840607955,
+                "zj": 26.594956176278,
+                "w": 99.03619430913568,
+                "rho": 1.244006008273513,
+                "T": 2.010977099994315,
+                "Vpar": 41.889419751021066
+              },
+              "audit_passed": true
+            }
+          },
+          "failure": [],
+          "guard_statistics": [
+            {
+              "steps": 96,
+              "limited_field_steps": 179,
+              "minimum_alpha": 0.00602229220999968,
+              "worst_proposed_density_bound": -0.14746375471069784,
+              "worst_proposed_temperature_bound": -0.0011479146393582466
+            },
+            {
+              "steps": 96,
+              "limited_field_steps": 179,
+              "minimum_alpha": 0.00602229220999968,
+              "worst_proposed_density_bound": -0.14746375471069784,
+              "worst_proposed_temperature_bound": -0.0011479146393582466
+            },
+            {
+              "steps": 96,
+              "limited_field_steps": 179,
+              "minimum_alpha": 0.00602229220999968,
+              "worst_proposed_density_bound": -0.14746375471069784,
+              "worst_proposed_temperature_bound": -0.0011479146393582466
+            }
+          ],
+          "stage_statistics": [
+            null,
+            null,
+            null
+          ],
+          "reference_frames": 97,
+          "ground_truth_validated_through": 96,
+          "long_horizon_scope": "Ground truth available throughout",
+          "setup_seconds": 14.380000240998925,
+          "cold_first_frame_seconds": 3.417305940994993,
+          "timing_scope": "Synchronized wall time of autonomous CUDA inference with deployed guards; no plotting, scoring, file IO or device-to-host frame export. CPU orchestration and synchronizations inside model included. One warmup frame; cached factorizations. Batch one. GPU trials run sequentially."
+        },
+        {
+          "method": "node",
+          "label": "Neural ODE",
+          "case_id": "mastu_010",
+          "horizon": 96,
+          "microsteps": 1,
+          "status": "complete",
+          "complete": true,
+          "audits_passed": true,
+          "rollout_seconds": 6.227110211999388,
+          "timing_samples": [
+            6.28876883200428,
+            6.020229002999258,
+            6.227110211999388
+          ],
+          "completed_intervals": [
+            96,
+            96,
+            96
+          ],
+          "training_updates": 2000,
+          "normalized_volume_mse": 2.1566148076357137,
+          "per_field_normalized_mse": {
+            "psi": 1.0095674427904944,
+            "u": 2.6975340361626343,
+            "zj": 2.869695841427621,
+            "w": 4.5732474479230945,
+            "rho": 0.7219234262438832,
+            "T": 0.7167309790491987,
+            "Vpar": 2.5076044798530712
+          },
+          "horizons": {
+            "4": {
+              "normalized_volume_mse": 0.02186418140120946,
+              "per_field_normalized_mse": {
+                "psi": 0.0008497744723403606,
+                "u": 0.03148257968758223,
+                "zj": 0.0016714779372462001,
+                "w": 0.0577107619068094,
+                "rho": 0.0018512909062150377,
+                "T": 0.05091014795189966,
+                "Vpar": 0.008573236946373354
+              },
+              "audit_passed": true
+            },
+            "16": {
+              "normalized_volume_mse": 0.1544146734212295,
+              "per_field_normalized_mse": {
+                "psi": 0.00789245840169055,
+                "u": 0.2588028020643879,
+                "zj": 0.0416678131389734,
+                "w": 0.4281633753794779,
+                "rho": 0.02282190180417009,
+                "T": 0.2283456326283601,
+                "Vpar": 0.09320873053154652
+              },
+              "audit_passed": true
+            },
+            "32": {
+              "normalized_volume_mse": 0.40067269735471545,
+              "per_field_normalized_mse": {
+                "psi": 0.06702569247030957,
+                "u": 0.5805586142634533,
+                "zj": 0.3057575969085308,
+                "w": 1.0467290468254635,
+                "rho": 0.08678774926997272,
+                "T": 0.39352899533362284,
+                "Vpar": 0.32432118641165514
+              },
+              "audit_passed": true
+            },
+            "64": {
+              "normalized_volume_mse": 0.9961674776931801,
+              "per_field_normalized_mse": {
+                "psi": 0.3916909864592407,
+                "u": 0.7485481304455551,
+                "zj": 1.677961764798412,
+                "w": 2.086941861233183,
+                "rho": 0.3323980598138293,
+                "T": 0.5846223961892296,
+                "Vpar": 1.151009144912812
+              },
+              "audit_passed": true
+            },
+            "96": {
+              "normalized_volume_mse": 2.1566148076357137,
+              "per_field_normalized_mse": {
+                "psi": 1.0095674427904944,
+                "u": 2.6975340361626343,
+                "zj": 2.869695841427621,
+                "w": 4.5732474479230945,
+                "rho": 0.7219234262438832,
+                "T": 0.7167309790491987,
+                "Vpar": 2.5076044798530712
+              },
+              "audit_passed": true
+            }
+          },
+          "failure": [],
+          "guard_statistics": [
+            {
+              "steps": 96,
+              "limited_field_steps": 0,
+              "minimum_alpha": 1.0,
+              "worst_proposed_density_bound": 0.0003216193649481581,
+              "worst_proposed_temperature_bound": 3.336022505842004e-06
+            },
+            {
+              "steps": 96,
+              "limited_field_steps": 0,
+              "minimum_alpha": 1.0,
+              "worst_proposed_density_bound": 0.0003216193649481581,
+              "worst_proposed_temperature_bound": 3.336022505842004e-06
+            },
+            {
+              "steps": 96,
+              "limited_field_steps": 0,
+              "minimum_alpha": 1.0,
+              "worst_proposed_density_bound": 0.0003216193649481581,
+              "worst_proposed_temperature_bound": 3.336022505842004e-06
+            }
+          ],
+          "stage_statistics": [
+            null,
+            null,
+            null
+          ],
+          "reference_frames": 97,
+          "ground_truth_validated_through": 96,
+          "long_horizon_scope": "Ground truth available throughout",
+          "setup_seconds": 14.254585563990986,
+          "cold_first_frame_seconds": 3.081618807002087,
+          "timing_scope": "Synchronized wall time of autonomous CUDA inference with deployed guards; no plotting, scoring, file IO or device-to-host frame export. CPU orchestration and synchronizations inside model included. One warmup frame; cached factorizations. Batch one. GPU trials run sequentially."
+        },
+        {
+          "method": "implicit",
+          "label": "Implicit Neural OpsSplit",
+          "case_id": "mastu_010",
+          "horizon": 96,
+          "microsteps": 2,
+          "status": "complete",
+          "complete": true,
+          "audits_passed": true,
+          "rollout_seconds": 46.41581326100277,
+          "timing_samples": [
+            46.41581326100277,
+            49.96346409599937,
+            45.56388963799691
+          ],
+          "completed_intervals": [
+            96,
+            96,
+            96
+          ],
+          "training_updates": 64,
+          "normalized_volume_mse": 0.002197180089570259,
+          "per_field_normalized_mse": {
+            "psi": 0.000370604400724255,
+            "u": 0.001039917766734735,
+            "zj": 0.0008810816047388069,
+            "w": 0.002175811229817455,
+            "rho": 0.004339819058112619,
+            "T": 0.0028964734333247967,
+            "Vpar": 0.003676553133539147
+          },
+          "horizons": {
+            "4": {
+              "normalized_volume_mse": 1.442273651204952e-05,
+              "per_field_normalized_mse": {
+                "psi": 3.720449298715336e-06,
+                "u": 2.966843733702188e-06,
+                "zj": 5.486878365088824e-06,
+                "w": 4.90043282250073e-05,
+                "rho": 5.780118331572653e-08,
+                "T": 2.3194862425139544e-05,
+                "Vpar": 1.652799235337772e-05
+              },
+              "audit_passed": true
+            },
+            "16": {
+              "normalized_volume_mse": 4.1760071901237195e-05,
+              "per_field_normalized_mse": {
+                "psi": 3.4971906329491174e-05,
+                "u": 9.710841775982633e-06,
+                "zj": 2.6315044887282952e-05,
+                "w": 0.00012526836873679112,
+                "rho": 6.012969278617392e-07,
+                "T": 6.295242474378085e-05,
+                "Vpar": 3.250061990746982e-05
+              },
+              "audit_passed": true
+            },
+            "32": {
+              "normalized_volume_mse": 9.80921738284335e-05,
+              "per_field_normalized_mse": {
+                "psi": 7.145248836005641e-05,
+                "u": 3.806278439246959e-05,
+                "zj": 7.611945233842959e-05,
+                "w": 0.00026716692650757855,
+                "rho": 1.5549267709165325e-06,
+                "T": 0.00014858064214591743,
+                "Vpar": 8.370799628366641e-05
+              },
+              "audit_passed": true
+            },
+            "64": {
+              "normalized_volume_mse": 0.0004721909038166838,
+              "per_field_normalized_mse": {
+                "psi": 0.00010163311386906043,
+                "u": 0.00037124208779560426,
+                "zj": 0.0003608544176394096,
+                "w": 0.000897738128815432,
+                "rho": 4.409159120409386e-06,
+                "T": 0.0008133871300512445,
+                "Vpar": 0.0007560722894256267
+              },
+              "audit_passed": true
+            },
+            "96": {
+              "normalized_volume_mse": 0.002197180089570259,
+              "per_field_normalized_mse": {
+                "psi": 0.000370604400724255,
+                "u": 0.001039917766734735,
+                "zj": 0.0008810816047388069,
+                "w": 0.002175811229817455,
+                "rho": 0.004339819058112619,
+                "T": 0.0028964734333247967,
+                "Vpar": 0.003676553133539147
+              },
+              "audit_passed": true
+            }
+          },
+          "failure": [],
+          "guard_statistics": [
+            {
+              "steps": 192,
+              "limited_field_steps": 24,
+              "minimum_alpha": 0.982842149899189,
+              "worst_proposed_density_bound": -3.813143462503033e-06,
+              "worst_proposed_temperature_bound": 8.708149970695264e-05
+            },
+            {
+              "steps": 192,
+              "limited_field_steps": 24,
+              "minimum_alpha": 0.982842149899189,
+              "worst_proposed_density_bound": -3.813143462503033e-06,
+              "worst_proposed_temperature_bound": 8.708149970695264e-05
+            },
+            {
+              "steps": 192,
+              "limited_field_steps": 24,
+              "minimum_alpha": 0.982842149899189,
+              "worst_proposed_density_bound": -3.813143462503033e-06,
+              "worst_proposed_temperature_bound": 8.708149970695264e-05
+            }
+          ],
+          "stage_statistics": [
+            {
+              "stages": 192,
+              "boundary_iterations": 716,
+              "maximum_boundary_iterations": 4,
+              "maximum_boundary_residual": 9.855817067924796e-11,
+              "guarded_stages": 192,
+              "maximum_guard_change": 168.57437551660405,
+              "maximum_held_dof_change": 5.684341886080802e-14,
+              "physical_rhs_evaluations": 192,
+              "linear_rhs_evaluations": 0,
+              "learned_network_evaluations": 384
+            },
+            {
+              "stages": 192,
+              "boundary_iterations": 716,
+              "maximum_boundary_iterations": 4,
+              "maximum_boundary_residual": 9.855817067924796e-11,
+              "guarded_stages": 192,
+              "maximum_guard_change": 168.57437551660405,
+              "maximum_held_dof_change": 5.684341886080802e-14,
+              "physical_rhs_evaluations": 192,
+              "linear_rhs_evaluations": 0,
+              "learned_network_evaluations": 384
+            },
+            {
+              "stages": 192,
+              "boundary_iterations": 716,
+              "maximum_boundary_iterations": 4,
+              "maximum_boundary_residual": 9.855817067924796e-11,
+              "guarded_stages": 192,
+              "maximum_guard_change": 168.57437551660405,
+              "maximum_held_dof_change": 5.684341886080802e-14,
+              "physical_rhs_evaluations": 192,
+              "linear_rhs_evaluations": 0,
+              "learned_network_evaluations": 384
+            }
+          ],
+          "reference_frames": 97,
+          "ground_truth_validated_through": 96,
+          "long_horizon_scope": "Ground truth available throughout",
+          "setup_seconds": 28.281162150000455,
+          "cold_first_frame_seconds": 13.149972465005703,
+          "timing_scope": "Synchronized wall time of autonomous CUDA inference with deployed guards; no plotting, scoring, file IO or device-to-host frame export. CPU orchestration and synchronizations inside model included. One warmup frame; cached factorizations. Batch one. GPU trials run sequentially."
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "method": "ar",
+      "label": "Autoregressive",
+      "complete": true,
+      "cases": 2,
+      "expected_cases": 2,
+      "microsteps": 1,
+      "mean_rollout_seconds": 6.2132698869972955,
+      "rollout_seconds_range": [
+        5.9396378379897214,
+        6.662659045003238
+      ],
+      "mean_normalized_volume_mse": 25.16361321657274,
+      "training_updates": 2000,
+      "historical_training_update_seconds": 699.464655065909,
+      "timing_aggregation": "Arithmetic mean of two case medians, each from three repeated warm CUDA rollouts"
+    },
+    {
+      "method": "node",
+      "label": "Neural ODE",
+      "complete": true,
+      "cases": 2,
+      "expected_cases": 2,
+      "microsteps": 1,
+      "mean_rollout_seconds": 6.206519765000849,
+      "rollout_seconds_range": [
+        5.810392996005248,
+        6.28876883200428
+      ],
+      "mean_normalized_volume_mse": 1.4458830263054372,
+      "training_updates": 2000,
+      "historical_training_update_seconds": 690.98415874294,
+      "timing_aggregation": "Arithmetic mean of two case medians, each from three repeated warm CUDA rollouts"
+    },
+    {
+      "method": "implicit",
+      "label": "Implicit Neural OpsSplit",
+      "complete": true,
+      "cases": 2,
+      "expected_cases": 2,
+      "microsteps": 2,
+      "mean_rollout_seconds": 47.678766744502354,
+      "rollout_seconds_range": [
+        45.56388963799691,
+        49.96346409599937
+      ],
+      "mean_normalized_volume_mse": 0.0018761410949679203,
+      "training_updates": 64,
+      "historical_training_update_seconds": 335.3688629750686,
+      "timing_aggregation": "Arithmetic mean of two case medians, each from three repeated warm CUDA rollouts"
+    }
+  ],
+  "native_ground_truth": [
+    {
+      "case_id": "mastu_004",
+      "wall_seconds": 4294.569143182132,
+      "iteration_wall_seconds": 4291.660609300004,
+      "iteration_count": 384,
+      "native_steps": 384,
+      "saved_intervals": 96,
+      "physical_duration_seconds": 1.4059131112280782e-06,
+      "mpi_ranks": 4,
+      "omp_threads_per_rank": 1,
+      "selected_reference_rate": "fine",
+      "includes_setup_diagnostics_and_io": true,
+      "result_path": "/pitagora_scratch/userexternal/vgopakum/mastu_euler_ensemble100_20261105/runs/mastu_004_fine/result.json",
+      "result_sha256": "3e4cef4ca4bb5955e3edb827484069a072dd65fe5f22eaf9205c3cfc660de7e1",
+      "provenance_path": "/pitagora_scratch/userexternal/vgopakum/mastu_euler_ensemble100_20261105/runs/mastu_004_fine/provenance.json",
+      "provenance_sha256": "c8e6b37235f64c4138b7dc60776dc9c538bf0903acf14ae718e3fbf82acac0d2",
+      "stdout_sha256": "f7d3f3736e923c764982e18982cd5885b6d18f800c3a41ab064eb5497efe0c76",
+      "resource_scope": "4 MPI ranks; at most 768 steps, 14000 seconds per invocation; diagnostic refinement only",
+      "timing_scope": "Historical accepted native solve on four CPU MPI ranks. Wall time includes setup, diagnostics and output. Iteration sum also includes diagnostics/IO inside native iteration. Not hardware-matched to GPU inference."
+    },
+    {
+      "case_id": "mastu_010",
+      "wall_seconds": 4261.680326333968,
+      "iteration_wall_seconds": 4258.601079200001,
+      "iteration_count": 384,
+      "native_steps": 384,
+      "saved_intervals": 96,
+      "physical_duration_seconds": 1.4059131112280782e-06,
+      "mpi_ranks": 4,
+      "omp_threads_per_rank": 1,
+      "selected_reference_rate": "fine",
+      "includes_setup_diagnostics_and_io": true,
+      "result_path": "/pitagora_scratch/userexternal/vgopakum/mastu_euler_ensemble100_20261105/runs/mastu_010_fine/result.json",
+      "result_sha256": "e08bb329441ff3ddbedffd59af3905355611eee4fba9812f4c5b82d235c6572b",
+      "provenance_path": "/pitagora_scratch/userexternal/vgopakum/mastu_euler_ensemble100_20261105/runs/mastu_010_fine/provenance.json",
+      "provenance_sha256": "3b50abf9ae64741edafe81f9c1311e0b60959f14f19e2252ab478c392ec4d2c7",
+      "stdout_sha256": "527eaada4af2fa943488dfc943ddd8f7c6349cc3920de13db8a336600001392b",
+      "resource_scope": "4 MPI ranks; at most 768 steps, 14000 seconds per invocation; diagnostic refinement only",
+      "timing_scope": "Historical accepted native solve on four CPU MPI ranks. Wall time includes setup, diagnostics and output. Iteration sum also includes diagnostics/IO inside native iteration. Not hardware-matched to GPU inference."
+    }
+  ],
+  "extras": [
+    {
+      "path": "/pitagora_scratch/userexternal/vgopakum/mastu_comparison_videos_20261111/runs/mastu_004_ar_m1_h384",
+      "method": "ar",
+      "label": "Autoregressive",
+      "case_id": "mastu_004",
+      "horizon": 384,
+      "microsteps": 1,
+      "status": "complete",
+      "complete": true,
+      "audits_passed": true,
+      "rollout_seconds": 24.442949987991597,
+      "timing_samples": [
+        24.442949987991597
+      ],
+      "completed_intervals": [
+        384
+      ],
+      "training_updates": 2000,
+      "normalized_volume_mse": 13.385188474973699,
+      "per_field_normalized_mse": {
+        "psi": 15.711892818287035,
+        "u": 20.60949626104598,
+        "zj": 5.588137623261061,
+        "w": 30.862980190243842,
+        "rho": 1.0193227760778243,
+        "T": 1.313170927911761,
+        "Vpar": 18.591318727988384
+      },
+      "horizons": {
+        "4": {
+          "normalized_volume_mse": 0.21332501513010554,
+          "per_field_normalized_mse": {
+            "psi": 0.03250181911552817,
+            "u": 0.04822073284722399,
+            "zj": 0.06506782416751954,
+            "w": 0.16191221947955953,
+            "rho": 0.5100673549012087,
+            "T": 0.2711824196246896,
+            "Vpar": 0.4043227357750092
+          },
+          "audit_passed": true
+        },
+        "16": {
+          "normalized_volume_mse": 0.3419258215945686,
+          "per_field_normalized_mse": {
+            "psi": 0.063188215804325,
+            "u": 0.09644510722152104,
+            "zj": 0.06822840568851914,
+            "w": 0.17092236546043885,
+            "rho": 0.6780695723002431,
+            "T": 0.650793005272486,
+            "Vpar": 0.665834079414447
+          },
+          "audit_passed": true
+        },
+        "32": {
+          "normalized_volume_mse": 0.47110497962005965,
+          "per_field_normalized_mse": {
+            "psi": 0.15262965133199094,
+            "u": 0.1956553661719357,
+            "zj": 0.10973688144246435,
+            "w": 0.3386982861775457,
+            "rho": 0.8764491440322588,
+            "T": 0.8392993965104178,
+            "Vpar": 0.7852661316738043
+          },
+          "audit_passed": true
+        },
+        "64": {
+          "normalized_volume_mse": 0.8775549206886915,
+          "per_field_normalized_mse": {
+            "psi": 0.5795016245988261,
+            "u": 0.5845342828269025,
+            "zj": 0.2866137906947748,
+            "w": 1.012551764192393,
+            "rho": 0.9497103102882573,
+            "T": 1.1538357788378235,
+            "Vpar": 1.5761368933818627
+          },
+          "audit_passed": true
+        },
+        "96": {
+          "normalized_volume_mse": 13.385188474973699,
+          "per_field_normalized_mse": {
+            "psi": 15.711892818287035,
+            "u": 20.60949626104598,
+            "zj": 5.588137623261061,
+            "w": 30.862980190243842,
+            "rho": 1.0193227760778243,
+            "T": 1.313170927911761,
+            "Vpar": 18.591318727988384
+          },
+          "audit_passed": true
+        }
+      },
+      "failure": [],
+      "guard_statistics": [
+        {
+          "steps": 384,
+          "limited_field_steps": 746,
+          "minimum_alpha": 2.4678693058876344e-14,
+          "worst_proposed_density_bound": -29115736152.3538,
+          "worst_proposed_temperature_bound": -251786768.85952383
+        }
+      ],
+      "stage_statistics": [
+        null
+      ],
+      "reference_frames": 97,
+      "ground_truth_validated_through": 96,
+      "long_horizon_scope": "Survival and physical audits only beyond frame 96; accuracy unmeasured",
+      "setup_seconds": 14.057437602998107,
+      "cold_first_frame_seconds": 3.044209833999048,
+      "timing_scope": "Synchronized wall time of autonomous CUDA inference with deployed guards; no plotting, scoring, file IO or device-to-host frame export. CPU orchestration and synchronizations inside model included. One warmup frame; cached factorizations. Batch one. GPU trials run sequentially."
+    },
+    {
+      "path": "/pitagora_scratch/userexternal/vgopakum/mastu_comparison_videos_20261111/runs/mastu_004_implicit_m1_h96",
+      "method": "implicit",
+      "label": "Implicit Neural OpsSplit",
+      "case_id": "mastu_004",
+      "horizon": 96,
+      "microsteps": 1,
+      "status": "complete",
+      "complete": true,
+      "audits_passed": true,
+      "rollout_seconds": 25.435565726002096,
+      "timing_samples": [
+        25.435565726002096
+      ],
+      "completed_intervals": [
+        96
+      ],
+      "training_updates": 64,
+      "normalized_volume_mse": 0.0015602090339076077,
+      "per_field_normalized_mse": {
+        "psi": 1.246815163058822e-05,
+        "u": 0.00014163829704808378,
+        "zj": 4.8085443349081234e-05,
+        "w": 0.0003717890276354533,
+        "rho": 0.004508716073077407,
+        "T": 0.002022672424211325,
+        "Vpar": 0.0038160938204013163
+      },
+      "horizons": {
+        "4": {
+          "normalized_volume_mse": 4.439560186021714e-06,
+          "per_field_normalized_mse": {
+            "psi": 3.995192058301377e-09,
+            "u": 1.533436191634596e-07,
+            "zj": 4.1295780627660545e-06,
+            "w": 2.1837574334876896e-06,
+            "rho": 2.86739243006563e-09,
+            "T": 9.08279845763156e-06,
+            "Vpar": 1.5520581144614863e-05
+          },
+          "audit_passed": true
+        },
+        "16": {
+          "normalized_volume_mse": 9.984170117297564e-06,
+          "per_field_normalized_mse": {
+            "psi": 3.6058909449159254e-07,
+            "u": 1.0451221837891965e-06,
+            "zj": 8.095977100229011e-06,
+            "w": 8.72019916365781e-06,
+            "rho": 4.3151821784491106e-08,
+            "T": 2.214280007815037e-05,
+            "Vpar": 2.9481351378980492e-05
+          },
+          "audit_passed": true
+        },
+        "32": {
+          "normalized_volume_mse": 2.5553575553783226e-05,
+          "per_field_normalized_mse": {
+            "psi": 2.2286339504259236e-06,
+            "u": 3.945239162137125e-06,
+            "zj": 1.3429800921082324e-05,
+            "w": 2.034453993536608e-05,
+            "rho": 1.9209395164495858e-07,
+            "T": 6.066571048392012e-05,
+            "Vpar": 7.806901047190606e-05
+          },
+          "audit_passed": true
+        },
+        "64": {
+          "normalized_volume_mse": 0.00020539940263172778,
+          "per_field_normalized_mse": {
+            "psi": 7.3598936803208014e-06,
+            "u": 1.4872479283960463e-05,
+            "zj": 2.710272050285375e-05,
+            "w": 8.720777656379758e-05,
+            "rho": 8.024957985126202e-07,
+            "T": 0.0005063019692117627,
+            "Vpar": 0.0007941484833808865
+          },
+          "audit_passed": true
+        },
+        "96": {
+          "normalized_volume_mse": 0.0015602090339076077,
+          "per_field_normalized_mse": {
+            "psi": 1.246815163058822e-05,
+            "u": 0.00014163829704808378,
+            "zj": 4.8085443349081234e-05,
+            "w": 0.0003717890276354533,
+            "rho": 0.004508716073077407,
+            "T": 0.002022672424211325,
+            "Vpar": 0.0038160938204013163
+          },
+          "audit_passed": true
+        }
+      },
+      "failure": [],
+      "guard_statistics": [
+        {
+          "steps": 96,
+          "limited_field_steps": 12,
+          "minimum_alpha": 0.9682309893565731,
+          "worst_proposed_density_bound": -1.1772460036972887e-05,
+          "worst_proposed_temperature_bound": 8.709657440461809e-05
+        }
+      ],
+      "stage_statistics": [
+        {
+          "stages": 96,
+          "boundary_iterations": 369,
+          "maximum_boundary_iterations": 4,
+          "maximum_boundary_residual": 9.702253558137344e-11,
+          "guarded_stages": 96,
+          "maximum_guard_change": 298.99473805895104,
+          "maximum_held_dof_change": 5.684341886080802e-14,
+          "physical_rhs_evaluations": 96,
+          "linear_rhs_evaluations": 0,
+          "learned_network_evaluations": 192
+        }
+      ],
+      "reference_frames": 97,
+      "ground_truth_validated_through": 96,
+      "long_horizon_scope": "Ground truth available throughout",
+      "setup_seconds": 30.31053591800446,
+      "cold_first_frame_seconds": 12.50020176799444,
+      "timing_scope": "Synchronized wall time of autonomous CUDA inference with deployed guards; no plotting, scoring, file IO or device-to-host frame export. CPU orchestration and synchronizations inside model included. One warmup frame; cached factorizations. Batch one. GPU trials run sequentially."
+    },
+    {
+      "path": "/pitagora_scratch/userexternal/vgopakum/mastu_comparison_videos_20261111/runs/mastu_004_implicit_m2_h384",
+      "method": "implicit",
+      "label": "Implicit Neural OpsSplit",
+      "case_id": "mastu_004",
+      "horizon": 384,
+      "microsteps": 2,
+      "status": "complete",
+      "complete": true,
+      "audits_passed": true,
+      "rollout_seconds": 208.81577099299466,
+      "timing_samples": [
+        208.81577099299466
+      ],
+      "completed_intervals": [
+        384
+      ],
+      "training_updates": 64,
+      "normalized_volume_mse": 0.0015551021003655816,
+      "per_field_normalized_mse": {
+        "psi": 1.0847725451738176e-05,
+        "u": 0.00015818218009130662,
+        "zj": 2.5719525560227586e-05,
+        "w": 0.00023646393254484412,
+        "rho": 0.004606315336246028,
+        "T": 0.002025663057266988,
+        "Vpar": 0.0038225229453979393
+      },
+      "horizons": {
+        "4": {
+          "normalized_volume_mse": 2.8760771711227907e-06,
+          "per_field_normalized_mse": {
+            "psi": 9.239573725128765e-10,
+            "u": 4.585072060938971e-08,
+            "zj": 9.091869975047847e-07,
+            "w": 6.527117569244373e-07,
+            "rho": 7.22278874446104e-10,
+            "T": 2.193755058247707e-06,
+            "Vpar": 1.6329389428326255e-05
+          },
+          "audit_passed": true
+        },
+        "16": {
+          "normalized_volume_mse": 6.727568316558338e-06,
+          "per_field_normalized_mse": {
+            "psi": 1.204760174230727e-07,
+            "u": 6.842218188550329e-07,
+            "zj": 1.8434660471908058e-06,
+            "w": 3.645243952742784e-06,
+            "rho": 1.1912567430446205e-08,
+            "T": 1.1587990402024235e-05,
+            "Vpar": 2.9199667410241994e-05
+          },
+          "audit_passed": true
+        },
+        "32": {
+          "normalized_volume_mse": 2.159733452889743e-05,
+          "per_field_normalized_mse": {
+            "psi": 1.060411357741704e-06,
+            "u": 3.7444783167279427e-06,
+            "zj": 4.203591431929249e-06,
+            "w": 1.001207837784945e-05,
+            "rho": 6.558902486080382e-08,
+            "T": 5.491994973132347e-05,
+            "Vpar": 7.717524346184936e-05
+          },
+          "audit_passed": true
+        },
+        "64": {
+          "normalized_volume_mse": 0.00019643776728644777,
+          "per_field_normalized_mse": {
+            "psi": 5.831278173441068e-06,
+            "u": 1.2742284978473087e-05,
+            "zj": 1.2037592530496253e-05,
+            "w": 4.373865993872468e-05,
+            "rho": 3.8811798615707343e-07,
+            "T": 0.000505381194076586,
+            "Vpar": 0.0007949452433212563
+          },
+          "audit_passed": true
+        },
+        "96": {
+          "normalized_volume_mse": 0.0015551021003655816,
+          "per_field_normalized_mse": {
+            "psi": 1.0847725451738176e-05,
+            "u": 0.00015818218009130662,
+            "zj": 2.5719525560227586e-05,
+            "w": 0.00023646393254484412,
+            "rho": 0.004606315336246028,
+            "T": 0.002025663057266988,
+            "Vpar": 0.0038225229453979393
+          },
+          "audit_passed": true
+        }
+      },
+      "failure": [],
+      "guard_statistics": [
+        {
+          "steps": 768,
+          "limited_field_steps": 602,
+          "minimum_alpha": 0.5170510451238421,
+          "worst_proposed_density_bound": -5.973535261684855e-06,
+          "worst_proposed_temperature_bound": -0.0005912556991897511
+        }
+      ],
+      "stage_statistics": [
+        {
+          "stages": 768,
+          "boundary_iterations": 3019,
+          "maximum_boundary_iterations": 4,
+          "maximum_boundary_residual": 9.931673741434261e-11,
+          "guarded_stages": 768,
+          "maximum_guard_change": 149074.19306930885,
+          "maximum_held_dof_change": 5.684341886080802e-14,
+          "physical_rhs_evaluations": 768,
+          "linear_rhs_evaluations": 0,
+          "learned_network_evaluations": 1536
+        }
+      ],
+      "reference_frames": 97,
+      "ground_truth_validated_through": 96,
+      "long_horizon_scope": "Survival and physical audits only beyond frame 96; accuracy unmeasured",
+      "setup_seconds": 27.865122904986492,
+      "cold_first_frame_seconds": 13.218433387010009,
+      "timing_scope": "Synchronized wall time of autonomous CUDA inference with deployed guards; no plotting, scoring, file IO or device-to-host frame export. CPU orchestration and synchronizations inside model included. One warmup frame; cached factorizations. Batch one. GPU trials run sequentially."
+    },
+    {
+      "path": "/pitagora_scratch/userexternal/vgopakum/mastu_comparison_videos_20261111/runs/mastu_004_implicit_m4_h96",
+      "method": "implicit",
+      "label": "Implicit Neural OpsSplit",
+      "case_id": "mastu_004",
+      "horizon": 96,
+      "microsteps": 4,
+      "status": "complete",
+      "complete": true,
+      "audits_passed": true,
+      "rollout_seconds": 93.23037030499836,
+      "timing_samples": [
+        93.23037030499836
+      ],
+      "completed_intervals": [
+        96
+      ],
+      "training_updates": 64,
+      "normalized_volume_mse": 0.0015205825544557336,
+      "per_field_normalized_mse": {
+        "psi": 1.132688627499762e-05,
+        "u": 0.00016298757700798357,
+        "zj": 2.153069819617318e-05,
+        "w": 0.00020464673307235247,
+        "rho": 0.0043859454721228135,
+        "T": 0.0020304544120998227,
+        "Vpar": 0.003827186102415992
+      },
+      "horizons": {
+        "4": {
+          "normalized_volume_mse": 2.6772165480327207e-06,
+          "per_field_normalized_mse": {
+            "psi": 2.3268104280557449e-10,
+            "u": 1.5677728426941133e-08,
+            "zj": 1.4148643741667432e-07,
+            "w": 2.181388163839005e-07,
+            "rho": 1.8625434517136165e-10,
+            "T": 1.5745221553317721e-06,
+            "Vpar": 1.679027176328178e-05
+          },
+          "audit_passed": true
+        },
+        "16": {
+          "normalized_volume_mse": 6.4294336611636474e-06,
+          "per_field_normalized_mse": {
+            "psi": 4.9574006981445575e-08,
+            "u": 5.749520576248268e-07,
+            "zj": 4.044039670499349e-07,
+            "w": 2.2115582440449735e-06,
+            "rho": 3.704604847048412e-09,
+            "T": 1.25840008516307e-05,
+            "Vpar": 2.91778418959666e-05
+          },
+          "audit_passed": true
+        },
+        "32": {
+          "normalized_volume_mse": 2.1341820605721576e-05,
+          "per_field_normalized_mse": {
+            "psi": 6.520073468856223e-07,
+            "u": 3.8041210613087945e-06,
+            "zj": 1.8646507551043959e-06,
+            "w": 8.265104596860224e-06,
+            "rho": 2.952327000677264e-08,
+            "T": 5.784241340345628e-05,
+            "Vpar": 7.693492380642893e-05
+          },
+          "audit_passed": true
+        },
+        "64": {
+          "normalized_volume_mse": 0.00019562770370139468,
+          "per_field_normalized_mse": {
+            "psi": 5.501588326380686e-06,
+            "u": 1.2621828461282639e-05,
+            "zj": 8.800735411090412e-06,
+            "w": 3.715126661576802e-05,
+            "rho": 2.638724560393397e-07,
+            "T": 0.0005092471533604046,
+            "Vpar": 0.000795807481278797
+          },
+          "audit_passed": true
+        },
+        "96": {
+          "normalized_volume_mse": 0.0015205825544557336,
+          "per_field_normalized_mse": {
+            "psi": 1.132688627499762e-05,
+            "u": 0.00016298757700798357,
+            "zj": 2.153069819617318e-05,
+            "w": 0.00020464673307235247,
+            "rho": 0.0043859454721228135,
+            "T": 0.0020304544120998227,
+            "Vpar": 0.003827186102415992
+          },
+          "audit_passed": true
+        }
+      },
+      "failure": [],
+      "guard_statistics": [
+        {
+          "steps": 384,
+          "limited_field_steps": 24,
+          "minimum_alpha": 0.9842308531704593,
+          "worst_proposed_density_bound": -3.0689556929891146e-06,
+          "worst_proposed_temperature_bound": 8.707436630557069e-05
+        }
+      ],
+      "stage_statistics": [
+        {
+          "stages": 384,
+          "boundary_iterations": 1347,
+          "maximum_boundary_iterations": 4,
+          "maximum_boundary_residual": 9.818813812554325e-11,
+          "guarded_stages": 384,
+          "maximum_guard_change": 145.82524533312608,
+          "maximum_held_dof_change": 5.684341886080802e-14,
+          "physical_rhs_evaluations": 384,
+          "linear_rhs_evaluations": 0,
+          "learned_network_evaluations": 768
+        }
+      ],
+      "reference_frames": 97,
+      "ground_truth_validated_through": 96,
+      "long_horizon_scope": "Ground truth available throughout",
+      "setup_seconds": 27.92535160300031,
+      "cold_first_frame_seconds": 13.378045784003916,
+      "timing_scope": "Synchronized wall time of autonomous CUDA inference with deployed guards; no plotting, scoring, file IO or device-to-host frame export. CPU orchestration and synchronizations inside model included. One warmup frame; cached factorizations. Batch one. GPU trials run sequentially."
+    },
+    {
+      "path": "/pitagora_scratch/userexternal/vgopakum/mastu_comparison_videos_20261111/runs/mastu_004_node_m1_h384",
+      "method": "node",
+      "label": "Neural ODE",
+      "case_id": "mastu_004",
+      "horizon": 384,
+      "microsteps": 1,
+      "status": "complete",
+      "complete": true,
+      "audits_passed": true,
+      "rollout_seconds": 23.85330608699587,
+      "timing_samples": [
+        23.85330608699587
+      ],
+      "completed_intervals": [
+        384
+      ],
+      "training_updates": 2000,
+      "normalized_volume_mse": 0.7351512449751609,
+      "per_field_normalized_mse": {
+        "psi": 0.4466327537627894,
+        "u": 0.8904190664254877,
+        "zj": 0.13213596212964704,
+        "w": 0.8247322624240573,
+        "rho": 0.635774279073217,
+        "T": 0.4362260261103446,
+        "Vpar": 1.7801383649005833
+      },
+      "horizons": {
+        "4": {
+          "normalized_volume_mse": 0.0023368408450495336,
+          "per_field_normalized_mse": {
+            "psi": 0.00023843815203640598,
+            "u": 0.00042688671055909346,
+            "zj": 0.00030540124886031713,
+            "w": 0.0007875210676742958,
+            "rho": 0.0017527994542847485,
+            "T": 0.008908500401196735,
+            "Vpar": 0.00393833888073514
+          },
+          "audit_passed": true
+        },
+        "16": {
+          "normalized_volume_mse": 0.022134155528917877,
+          "per_field_normalized_mse": {
+            "psi": 0.002461202107495582,
+            "u": 0.003349227446973704,
+            "zj": 0.003190853946104781,
+            "w": 0.01111294601480978,
+            "rho": 0.02143974762712722,
+            "T": 0.06359425832130582,
+            "Vpar": 0.04979085323860827
+          },
+          "audit_passed": true
+        },
+        "32": {
+          "normalized_volume_mse": 0.07170737213722027,
+          "per_field_normalized_mse": {
+            "psi": 0.009317838488920831,
+            "u": 0.009746841390069582,
+            "zj": 0.01208388107489937,
+            "w": 0.049631676288470435,
+            "rho": 0.07999016503949435,
+            "T": 0.14794520186870835,
+            "Vpar": 0.19323600080997894
+          },
+          "audit_passed": true
+        },
+        "64": {
+          "normalized_volume_mse": 0.26056416927779263,
+          "per_field_normalized_mse": {
+            "psi": 0.06679807806206854,
+            "u": 0.0893805373588583,
+            "zj": 0.052105605109111296,
+            "w": 0.241747695489489,
+            "rho": 0.29807734191870033,
+            "T": 0.30227269296248843,
+            "Vpar": 0.7735672340438323
+          },
+          "audit_passed": true
+        },
+        "96": {
+          "normalized_volume_mse": 0.7351512449751609,
+          "per_field_normalized_mse": {
+            "psi": 0.4466327537627894,
+            "u": 0.8904190664254877,
+            "zj": 0.13213596212964704,
+            "w": 0.8247322624240573,
+            "rho": 0.635774279073217,
+            "T": 0.4362260261103446,
+            "Vpar": 1.7801383649005833
+          },
+          "audit_passed": true
+        }
+      },
+      "failure": [],
+      "guard_statistics": [
+        {
+          "steps": 384,
+          "limited_field_steps": 502,
+          "minimum_alpha": 0.00584454183826305,
+          "worst_proposed_density_bound": -0.11676545242220568,
+          "worst_proposed_temperature_bound": -0.001488589677174058
+        }
+      ],
+      "stage_statistics": [
+        null
+      ],
+      "reference_frames": 97,
+      "ground_truth_validated_through": 96,
+      "long_horizon_scope": "Survival and physical audits only beyond frame 96; accuracy unmeasured",
+      "setup_seconds": 14.325432279001689,
+      "cold_first_frame_seconds": 3.1285065639967797,
+      "timing_scope": "Synchronized wall time of autonomous CUDA inference with deployed guards; no plotting, scoring, file IO or device-to-host frame export. CPU orchestration and synchronizations inside model included. One warmup frame; cached factorizations. Batch one. GPU trials run sequentially."
+    },
+    {
+      "path": "/pitagora_scratch/userexternal/vgopakum/mastu_comparison_videos_20261111/runs/mastu_004_node_m2_h96",
+      "method": "node",
+      "label": "Neural ODE",
+      "case_id": "mastu_004",
+      "horizon": 96,
+      "microsteps": 2,
+      "status": "complete",
+      "complete": true,
+      "audits_passed": true,
+      "rollout_seconds": 11.341413463989738,
+      "timing_samples": [
+        11.341413463989738
+      ],
+      "completed_intervals": [
+        96
+      ],
+      "training_updates": 2000,
+      "normalized_volume_mse": 0.7473826029730201,
+      "per_field_normalized_mse": {
+        "psi": 0.46446586074100393,
+        "u": 0.9361341273772535,
+        "zj": 0.13303890129786872,
+        "w": 0.843417608708998,
+        "rho": 0.635646512777389,
+        "T": 0.4363651529348915,
+        "Vpar": 1.7826100569737362
+      },
+      "horizons": {
+        "4": {
+          "normalized_volume_mse": 0.002334717977159683,
+          "per_field_normalized_mse": {
+            "psi": 0.00023506195130874698,
+            "u": 0.0004155291041302887,
+            "zj": 0.0003054460508312216,
+            "w": 0.0007878427404995265,
+            "rho": 0.001752468063202005,
+            "T": 0.008907795128360416,
+            "Vpar": 0.003938882801785577
+          },
+          "audit_passed": true
+        },
+        "16": {
+          "normalized_volume_mse": 0.022127429699843517,
+          "per_field_normalized_mse": {
+            "psi": 0.0024585431337955485,
+            "u": 0.00329045802190742,
+            "zj": 0.003192314555031153,
+            "w": 0.011129867540444555,
+            "rho": 0.021435850768018475,
+            "T": 0.06358670170118423,
+            "Vpar": 0.049798272178523235
+          },
+          "audit_passed": true
+        },
+        "32": {
+          "normalized_volume_mse": 0.07174852966562538,
+          "per_field_normalized_mse": {
+            "psi": 0.009427275753502162,
+            "u": 0.009767372567159392,
+            "zj": 0.012092761508232311,
+            "w": 0.04978021100281986,
+            "rho": 0.0799741248978087,
+            "T": 0.14792314373997317,
+            "Vpar": 0.193274818189882
+          },
+          "audit_passed": true
+        },
+        "64": {
+          "normalized_volume_mse": 0.26176262607546796,
+          "per_field_normalized_mse": {
+            "psi": 0.06878646729960139,
+            "u": 0.09318703965358817,
+            "zj": 0.052198102380602275,
+            "w": 0.24395729560210105,
+            "rho": 0.29799773253753115,
+            "T": 0.3022473007191855,
+            "Vpar": 0.7739644443356662
+          },
+          "audit_passed": true
+        },
+        "96": {
+          "normalized_volume_mse": 0.7473826029730201,
+          "per_field_normalized_mse": {
+            "psi": 0.46446586074100393,
+            "u": 0.9361341273772535,
+            "zj": 0.13303890129786872,
+            "w": 0.843417608708998,
+            "rho": 0.635646512777389,
+            "T": 0.4363651529348915,
+            "Vpar": 1.7826100569737362
+          },
+          "audit_passed": true
+        }
+      },
+      "failure": [],
+      "guard_statistics": [
+        {
+          "steps": 192,
+          "limited_field_steps": 0,
+          "minimum_alpha": 1.0,
+          "worst_proposed_density_bound": 0.0006783920888498985,
+          "worst_proposed_temperature_bound": 2.8475495943452017e-05
+        }
+      ],
+      "stage_statistics": [
+        null
+      ],
+      "reference_frames": 97,
+      "ground_truth_validated_through": 96,
+      "long_horizon_scope": "Ground truth available throughout",
+      "setup_seconds": 14.238552563998383,
+      "cold_first_frame_seconds": 3.58674789199722,
+      "timing_scope": "Synchronized wall time of autonomous CUDA inference with deployed guards; no plotting, scoring, file IO or device-to-host frame export. CPU orchestration and synchronizations inside model included. One warmup frame; cached factorizations. Batch one. GPU trials run sequentially."
+    },
+    {
+      "path": "/pitagora_scratch/userexternal/vgopakum/mastu_comparison_videos_20261111/runs/mastu_004_node_m4_h96",
+      "method": "node",
+      "label": "Neural ODE",
+      "case_id": "mastu_004",
+      "horizon": 96,
+      "microsteps": 4,
+      "status": "complete",
+      "complete": true,
+      "audits_passed": true,
+      "rollout_seconds": 23.82014587300364,
+      "timing_samples": [
+        23.82014587300364
+      ],
+      "completed_intervals": [
+        96
+      ],
+      "training_updates": 2000,
+      "normalized_volume_mse": 0.7537372767224992,
+      "per_field_normalized_mse": {
+        "psi": 0.4736655951559016,
+        "u": 0.9599900564302782,
+        "zj": 0.13351113944898416,
+        "w": 0.8530951956130521,
+        "rho": 0.6355857316956038,
+        "T": 0.4364373544731846,
+        "Vpar": 1.7838758642404902
+      },
+      "horizons": {
+        "4": {
+          "normalized_volume_mse": 0.0023337097241462415,
+          "per_field_normalized_mse": {
+            "psi": 0.0002334877838963287,
+            "u": 0.0004100776425015018,
+            "zj": 0.0003054704117623964,
+            "w": 0.0007880300543448106,
+            "rho": 0.0017523032980542308,
+            "T": 0.008907444848110593,
+            "Vpar": 0.0039391540303538265
+          },
+          "audit_passed": true
+        },
+        "16": {
+          "normalized_volume_mse": 0.022124394405013507,
+          "per_field_normalized_mse": {
+            "psi": 0.002457898205204406,
+            "u": 0.003262279225451104,
+            "zj": 0.003193058229623952,
+            "w": 0.011138664664727653,
+            "rho": 0.021433896046588775,
+            "T": 0.06358295714718509,
+            "Vpar": 0.04980200731631357
+          },
+          "audit_passed": true
+        },
+        "32": {
+          "normalized_volume_mse": 0.07177047319745142,
+          "per_field_normalized_mse": {
+            "psi": 0.009484480753634577,
+            "u": 0.009782054512503859,
+            "zj": 0.01209726439807536,
+            "w": 0.04985665376901033,
+            "rho": 0.07996603927035123,
+            "T": 0.14791226613322195,
+            "Vpar": 0.19329455354536262
+          },
+          "audit_passed": true
+        },
+        "64": {
+          "normalized_volume_mse": 0.2623847191730574,
+          "per_field_normalized_mse": {
+            "psi": 0.06981331111821536,
+            "u": 0.09517768050267594,
+            "zj": 0.052245781207353126,
+            "w": 0.24509529312739214,
+            "rho": 0.2979576947264485,
+            "T": 0.3022352914916525,
+            "Vpar": 0.7741679820376641
+          },
+          "audit_passed": true
+        },
+        "96": {
+          "normalized_volume_mse": 0.7537372767224992,
+          "per_field_normalized_mse": {
+            "psi": 0.4736655951559016,
+            "u": 0.9599900564302782,
+            "zj": 0.13351113944898416,
+            "w": 0.8530951956130521,
+            "rho": 0.6355857316956038,
+            "T": 0.4364373544731846,
+            "Vpar": 1.7838758642404902
+          },
+          "audit_passed": true
+        }
+      },
+      "failure": [],
+      "guard_statistics": [
+        {
+          "steps": 384,
+          "limited_field_steps": 0,
+          "minimum_alpha": 1.0,
+          "worst_proposed_density_bound": 0.000667157924820511,
+          "worst_proposed_temperature_bound": 2.8413501918074855e-05
+        }
+      ],
+      "stage_statistics": [
+        null
+      ],
+      "reference_frames": 97,
+      "ground_truth_validated_through": 96,
+      "long_horizon_scope": "Ground truth available throughout",
+      "setup_seconds": 14.554543695005123,
+      "cold_first_frame_seconds": 3.4221350379957585,
+      "timing_scope": "Synchronized wall time of autonomous CUDA inference with deployed guards; no plotting, scoring, file IO or device-to-host frame export. CPU orchestration and synchronizations inside model included. One warmup frame; cached factorizations. Batch one. GPU trials run sequentially."
+    },
+    {
+      "path": "/pitagora_scratch/userexternal/vgopakum/mastu_comparison_videos_20261111/runs/mastu_010_implicit_m1_h96",
+      "method": "implicit",
+      "label": "Implicit Neural OpsSplit",
+      "case_id": "mastu_010",
+      "horizon": 96,
+      "microsteps": 1,
+      "status": "complete",
+      "complete": true,
+      "audits_passed": true,
+      "rollout_seconds": 24.41682894200494,
+      "timing_samples": [
+        24.41682894200494
+      ],
+      "completed_intervals": [
+        96
+      ],
+      "training_updates": 64,
+      "normalized_volume_mse": 0.0031445573536159383,
+      "per_field_normalized_mse": {
+        "psi": 0.0010287987050862698,
+        "u": 0.001801271463394299,
+        "zj": 0.0028982756844355387,
+        "w": 0.005487729294111624,
+        "rho": 0.004258977806548605,
+        "T": 0.0028768274366134435,
+        "Vpar": 0.0036600210851217892
+      },
+      "horizons": {
+        "4": {
+          "normalized_volume_mse": 4.575966228868407e-05,
+          "per_field_normalized_mse": {
+            "psi": 1.3357285261178868e-05,
+            "u": 9.98147675432141e-06,
+            "zj": 1.7374224980972156e-05,
+            "w": 0.0001679448003561171,
+            "rho": 2.0699131418106296e-07,
+            "T": 9.578588857103078e-05,
+            "Vpar": 1.5666968782987116e-05
+          },
+          "audit_passed": true
+        },
+        "16": {
+          "normalized_volume_mse": 0.00010300093955233347,
+          "per_field_normalized_mse": {
+            "psi": 0.00010348829872440548,
+            "u": 4.963827932462028e-05,
+            "zj": 8.877439854289931e-05,
+            "w": 0.0003304256618525361,
+            "rho": 1.7488591383970997e-06,
+            "T": 0.00011650122387066388,
+            "Vpar": 3.0429855412812127e-05
+          },
+          "audit_passed": true
+        },
+        "32": {
+          "normalized_volume_mse": 0.0002719996765779376,
+          "per_field_normalized_mse": {
+            "psi": 0.0001746169175807938,
+            "u": 0.0003057528508269544,
+            "zj": 0.0003760992564456721,
+            "w": 0.0007917904856664552,
+            "rho": 3.528471837011429e-06,
+            "T": 0.00017289464994462485,
+            "Vpar": 7.931510374405155e-05
+          },
+          "audit_passed": true
+        },
+        "64": {
+          "normalized_volume_mse": 0.001065119816856507,
+          "per_field_normalized_mse": {
+            "psi": 0.00034236673697499235,
+            "u": 0.0012274078080391098,
+            "zj": 0.001774379346602837,
+            "w": 0.0025447077811491543,
+            "rho": 9.265095238168577e-06,
+            "T": 0.000812576039963493,
+            "Vpar": 0.0007451359100277928
+          },
+          "audit_passed": true
+        },
+        "96": {
+          "normalized_volume_mse": 0.0031445573536159383,
+          "per_field_normalized_mse": {
+            "psi": 0.0010287987050862698,
+            "u": 0.001801271463394299,
+            "zj": 0.0028982756844355387,
+            "w": 0.005487729294111624,
+            "rho": 0.004258977806548605,
+            "T": 0.0028768274366134435,
+            "Vpar": 0.0036600210851217892
+          },
+          "audit_passed": true
+        }
+      },
+      "failure": [],
+      "guard_statistics": [
+        {
+          "steps": 96,
+          "limited_field_steps": 12,
+          "minimum_alpha": 0.972082925403336,
+          "worst_proposed_density_bound": -9.650923124517525e-06,
+          "worst_proposed_temperature_bound": 8.709632351517975e-05
+        }
+      ],
+      "stage_statistics": [
+        {
+          "stages": 96,
+          "boundary_iterations": 369,
+          "maximum_boundary_iterations": 4,
+          "maximum_boundary_residual": 9.65784965169278e-11,
+          "guarded_stages": 96,
+          "maximum_guard_change": 277.29433854257513,
+          "maximum_held_dof_change": 5.684341886080802e-14,
+          "physical_rhs_evaluations": 96,
+          "linear_rhs_evaluations": 0,
+          "learned_network_evaluations": 192
+        }
+      ],
+      "reference_frames": 97,
+      "ground_truth_validated_through": 96,
+      "long_horizon_scope": "Ground truth available throughout",
+      "setup_seconds": 28.452601188997505,
+      "cold_first_frame_seconds": 12.300464763000491,
+      "timing_scope": "Synchronized wall time of autonomous CUDA inference with deployed guards; no plotting, scoring, file IO or device-to-host frame export. CPU orchestration and synchronizations inside model included. One warmup frame; cached factorizations. Batch one. GPU trials run sequentially."
+    }
+  ],
+  "long_cases": [
+    {
+      "case_id": "mastu_004",
+      "metadata_path": "/pitagora_scratch/userexternal/vgopakum/mastu_comparison_videos_20261111/cases/mastu_004_h384/metadata.json",
+      "trajectory_path": "/pitagora_scratch/userexternal/vgopakum/mastu_comparison_videos_20261111/cases/mastu_004_h384/trajectory.npz",
+      "methods": [
+        {
+          "method": "ar",
+          "label": "Autoregressive",
+          "case_id": "mastu_004",
+          "horizon": 384,
+          "microsteps": 1,
+          "status": "complete",
+          "complete": true,
+          "audits_passed": true,
+          "rollout_seconds": 24.442949987991597,
+          "timing_samples": [
+            24.442949987991597
+          ],
+          "completed_intervals": [
+            384
+          ],
+          "training_updates": 2000,
+          "normalized_volume_mse": 13.385188474973699,
+          "per_field_normalized_mse": {
+            "psi": 15.711892818287035,
+            "u": 20.60949626104598,
+            "zj": 5.588137623261061,
+            "w": 30.862980190243842,
+            "rho": 1.0193227760778243,
+            "T": 1.313170927911761,
+            "Vpar": 18.591318727988384
+          },
+          "horizons": {
+            "4": {
+              "normalized_volume_mse": 0.21332501513010554,
+              "per_field_normalized_mse": {
+                "psi": 0.03250181911552817,
+                "u": 0.04822073284722399,
+                "zj": 0.06506782416751954,
+                "w": 0.16191221947955953,
+                "rho": 0.5100673549012087,
+                "T": 0.2711824196246896,
+                "Vpar": 0.4043227357750092
+              },
+              "audit_passed": true
+            },
+            "16": {
+              "normalized_volume_mse": 0.3419258215945686,
+              "per_field_normalized_mse": {
+                "psi": 0.063188215804325,
+                "u": 0.09644510722152104,
+                "zj": 0.06822840568851914,
+                "w": 0.17092236546043885,
+                "rho": 0.6780695723002431,
+                "T": 0.650793005272486,
+                "Vpar": 0.665834079414447
+              },
+              "audit_passed": true
+            },
+            "32": {
+              "normalized_volume_mse": 0.47110497962005965,
+              "per_field_normalized_mse": {
+                "psi": 0.15262965133199094,
+                "u": 0.1956553661719357,
+                "zj": 0.10973688144246435,
+                "w": 0.3386982861775457,
+                "rho": 0.8764491440322588,
+                "T": 0.8392993965104178,
+                "Vpar": 0.7852661316738043
+              },
+              "audit_passed": true
+            },
+            "64": {
+              "normalized_volume_mse": 0.8775549206886915,
+              "per_field_normalized_mse": {
+                "psi": 0.5795016245988261,
+                "u": 0.5845342828269025,
+                "zj": 0.2866137906947748,
+                "w": 1.012551764192393,
+                "rho": 0.9497103102882573,
+                "T": 1.1538357788378235,
+                "Vpar": 1.5761368933818627
+              },
+              "audit_passed": true
+            },
+            "96": {
+              "normalized_volume_mse": 13.385188474973699,
+              "per_field_normalized_mse": {
+                "psi": 15.711892818287035,
+                "u": 20.60949626104598,
+                "zj": 5.588137623261061,
+                "w": 30.862980190243842,
+                "rho": 1.0193227760778243,
+                "T": 1.313170927911761,
+                "Vpar": 18.591318727988384
+              },
+              "audit_passed": true
+            }
+          },
+          "failure": [],
+          "guard_statistics": [
+            {
+              "steps": 384,
+              "limited_field_steps": 746,
+              "minimum_alpha": 2.4678693058876344e-14,
+              "worst_proposed_density_bound": -29115736152.3538,
+              "worst_proposed_temperature_bound": -251786768.85952383
+            }
+          ],
+          "stage_statistics": [
+            null
+          ],
+          "reference_frames": 97,
+          "ground_truth_validated_through": 96,
+          "long_horizon_scope": "Survival and physical audits only beyond frame 96; accuracy unmeasured",
+          "setup_seconds": 14.057437602998107,
+          "cold_first_frame_seconds": 3.044209833999048,
+          "timing_scope": "Synchronized wall time of autonomous CUDA inference with deployed guards; no plotting, scoring, file IO or device-to-host frame export. CPU orchestration and synchronizations inside model included. One warmup frame; cached factorizations. Batch one. GPU trials run sequentially."
+        },
+        {
+          "method": "node",
+          "label": "Neural ODE",
+          "case_id": "mastu_004",
+          "horizon": 384,
+          "microsteps": 1,
+          "status": "complete",
+          "complete": true,
+          "audits_passed": true,
+          "rollout_seconds": 23.85330608699587,
+          "timing_samples": [
+            23.85330608699587
+          ],
+          "completed_intervals": [
+            384
+          ],
+          "training_updates": 2000,
+          "normalized_volume_mse": 0.7351512449751609,
+          "per_field_normalized_mse": {
+            "psi": 0.4466327537627894,
+            "u": 0.8904190664254877,
+            "zj": 0.13213596212964704,
+            "w": 0.8247322624240573,
+            "rho": 0.635774279073217,
+            "T": 0.4362260261103446,
+            "Vpar": 1.7801383649005833
+          },
+          "horizons": {
+            "4": {
+              "normalized_volume_mse": 0.0023368408450495336,
+              "per_field_normalized_mse": {
+                "psi": 0.00023843815203640598,
+                "u": 0.00042688671055909346,
+                "zj": 0.00030540124886031713,
+                "w": 0.0007875210676742958,
+                "rho": 0.0017527994542847485,
+                "T": 0.008908500401196735,
+                "Vpar": 0.00393833888073514
+              },
+              "audit_passed": true
+            },
+            "16": {
+              "normalized_volume_mse": 0.022134155528917877,
+              "per_field_normalized_mse": {
+                "psi": 0.002461202107495582,
+                "u": 0.003349227446973704,
+                "zj": 0.003190853946104781,
+                "w": 0.01111294601480978,
+                "rho": 0.02143974762712722,
+                "T": 0.06359425832130582,
+                "Vpar": 0.04979085323860827
+              },
+              "audit_passed": true
+            },
+            "32": {
+              "normalized_volume_mse": 0.07170737213722027,
+              "per_field_normalized_mse": {
+                "psi": 0.009317838488920831,
+                "u": 0.009746841390069582,
+                "zj": 0.01208388107489937,
+                "w": 0.049631676288470435,
+                "rho": 0.07999016503949435,
+                "T": 0.14794520186870835,
+                "Vpar": 0.19323600080997894
+              },
+              "audit_passed": true
+            },
+            "64": {
+              "normalized_volume_mse": 0.26056416927779263,
+              "per_field_normalized_mse": {
+                "psi": 0.06679807806206854,
+                "u": 0.0893805373588583,
+                "zj": 0.052105605109111296,
+                "w": 0.241747695489489,
+                "rho": 0.29807734191870033,
+                "T": 0.30227269296248843,
+                "Vpar": 0.7735672340438323
+              },
+              "audit_passed": true
+            },
+            "96": {
+              "normalized_volume_mse": 0.7351512449751609,
+              "per_field_normalized_mse": {
+                "psi": 0.4466327537627894,
+                "u": 0.8904190664254877,
+                "zj": 0.13213596212964704,
+                "w": 0.8247322624240573,
+                "rho": 0.635774279073217,
+                "T": 0.4362260261103446,
+                "Vpar": 1.7801383649005833
+              },
+              "audit_passed": true
+            }
+          },
+          "failure": [],
+          "guard_statistics": [
+            {
+              "steps": 384,
+              "limited_field_steps": 502,
+              "minimum_alpha": 0.00584454183826305,
+              "worst_proposed_density_bound": -0.11676545242220568,
+              "worst_proposed_temperature_bound": -0.001488589677174058
+            }
+          ],
+          "stage_statistics": [
+            null
+          ],
+          "reference_frames": 97,
+          "ground_truth_validated_through": 96,
+          "long_horizon_scope": "Survival and physical audits only beyond frame 96; accuracy unmeasured",
+          "setup_seconds": 14.325432279001689,
+          "cold_first_frame_seconds": 3.1285065639967797,
+          "timing_scope": "Synchronized wall time of autonomous CUDA inference with deployed guards; no plotting, scoring, file IO or device-to-host frame export. CPU orchestration and synchronizations inside model included. One warmup frame; cached factorizations. Batch one. GPU trials run sequentially."
+        },
+        {
+          "method": "implicit",
+          "label": "Implicit Neural OpsSplit",
+          "case_id": "mastu_004",
+          "horizon": 384,
+          "microsteps": 2,
+          "status": "complete",
+          "complete": true,
+          "audits_passed": true,
+          "rollout_seconds": 208.81577099299466,
+          "timing_samples": [
+            208.81577099299466
+          ],
+          "completed_intervals": [
+            384
+          ],
+          "training_updates": 64,
+          "normalized_volume_mse": 0.0015551021003655816,
+          "per_field_normalized_mse": {
+            "psi": 1.0847725451738176e-05,
+            "u": 0.00015818218009130662,
+            "zj": 2.5719525560227586e-05,
+            "w": 0.00023646393254484412,
+            "rho": 0.004606315336246028,
+            "T": 0.002025663057266988,
+            "Vpar": 0.0038225229453979393
+          },
+          "horizons": {
+            "4": {
+              "normalized_volume_mse": 2.8760771711227907e-06,
+              "per_field_normalized_mse": {
+                "psi": 9.239573725128765e-10,
+                "u": 4.585072060938971e-08,
+                "zj": 9.091869975047847e-07,
+                "w": 6.527117569244373e-07,
+                "rho": 7.22278874446104e-10,
+                "T": 2.193755058247707e-06,
+                "Vpar": 1.6329389428326255e-05
+              },
+              "audit_passed": true
+            },
+            "16": {
+              "normalized_volume_mse": 6.727568316558338e-06,
+              "per_field_normalized_mse": {
+                "psi": 1.204760174230727e-07,
+                "u": 6.842218188550329e-07,
+                "zj": 1.8434660471908058e-06,
+                "w": 3.645243952742784e-06,
+                "rho": 1.1912567430446205e-08,
+                "T": 1.1587990402024235e-05,
+                "Vpar": 2.9199667410241994e-05
+              },
+              "audit_passed": true
+            },
+            "32": {
+              "normalized_volume_mse": 2.159733452889743e-05,
+              "per_field_normalized_mse": {
+                "psi": 1.060411357741704e-06,
+                "u": 3.7444783167279427e-06,
+                "zj": 4.203591431929249e-06,
+                "w": 1.001207837784945e-05,
+                "rho": 6.558902486080382e-08,
+                "T": 5.491994973132347e-05,
+                "Vpar": 7.717524346184936e-05
+              },
+              "audit_passed": true
+            },
+            "64": {
+              "normalized_volume_mse": 0.00019643776728644777,
+              "per_field_normalized_mse": {
+                "psi": 5.831278173441068e-06,
+                "u": 1.2742284978473087e-05,
+                "zj": 1.2037592530496253e-05,
+                "w": 4.373865993872468e-05,
+                "rho": 3.8811798615707343e-07,
+                "T": 0.000505381194076586,
+                "Vpar": 0.0007949452433212563
+              },
+              "audit_passed": true
+            },
+            "96": {
+              "normalized_volume_mse": 0.0015551021003655816,
+              "per_field_normalized_mse": {
+                "psi": 1.0847725451738176e-05,
+                "u": 0.00015818218009130662,
+                "zj": 2.5719525560227586e-05,
+                "w": 0.00023646393254484412,
+                "rho": 0.004606315336246028,
+                "T": 0.002025663057266988,
+                "Vpar": 0.0038225229453979393
+              },
+              "audit_passed": true
+            }
+          },
+          "failure": [],
+          "guard_statistics": [
+            {
+              "steps": 768,
+              "limited_field_steps": 602,
+              "minimum_alpha": 0.5170510451238421,
+              "worst_proposed_density_bound": -5.973535261684855e-06,
+              "worst_proposed_temperature_bound": -0.0005912556991897511
+            }
+          ],
+          "stage_statistics": [
+            {
+              "stages": 768,
+              "boundary_iterations": 3019,
+              "maximum_boundary_iterations": 4,
+              "maximum_boundary_residual": 9.931673741434261e-11,
+              "guarded_stages": 768,
+              "maximum_guard_change": 149074.19306930885,
+              "maximum_held_dof_change": 5.684341886080802e-14,
+              "physical_rhs_evaluations": 768,
+              "linear_rhs_evaluations": 0,
+              "learned_network_evaluations": 1536
+            }
+          ],
+          "reference_frames": 97,
+          "ground_truth_validated_through": 96,
+          "long_horizon_scope": "Survival and physical audits only beyond frame 96; accuracy unmeasured",
+          "setup_seconds": 27.865122904986492,
+          "cold_first_frame_seconds": 13.218433387010009,
+          "timing_scope": "Synchronized wall time of autonomous CUDA inference with deployed guards; no plotting, scoring, file IO or device-to-host frame export. CPU orchestration and synchronizations inside model included. One warmup frame; cached factorizations. Batch one. GPU trials run sequentially."
+        }
+      ]
+    }
+  ],
+  "missing": [],
+  "failures": [],
+  "pending": [],
+  "metric_definition": "Cumulative volume-weighted normalized seven-field MSE over frames 1:H; normalization scales are fitted to 80 training trajectories. Mean over cases, not a relative percentage error. Ground truth exists only through frame 96.",
+  "baseline_audit_path": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/video_baseline_audit_20261111.json",
+  "baseline_audit_sha256": "d730d5494feae7074f9842640d723a128d9296d349b01c7c0fd1cb0ad1a407ca",
+  "protocol_path": "/pitagora_scratch/userexternal/vgopakum/mastu_comparison_videos_20261111/protocol.json",
+  "protocol_sha256": "2fd9d7223bf9ff0999973a3233d71551c49a770989e8e101324e07e98f931796",
+  "assembler_sha256": "bb84c5056b5e33163d50275438154af2d8a80dadb7beb1339f115ba275c802fa",
+  "seed": 17,
+  "training_horizon": 4,
+  "reference_intervals": 96,
+  "comparison_case_selection": "First two held-out trajectories; same cases as pre-existing64updatepilot; no video-based selection.",
+  "caveats": [
+    "Historical training times sum only recorded optimizer-update wall durations; checkpoint IO/setup/evaluation excluded and concurrent jobs may differ. Not a matched training-compute comparison.",
+    "Baselines trained 2000updates; latest learned implicit correction trained64updates and transferred to audited source-axis corrected physics.",
+    "Native ground truth CPUwall and new warm GPUrollout wall have differenthardware and IO scope."
+  ],
+  "array_validation_performed": true,
+  "followup_protocol_path": "/pitagora_scratch/userexternal/vgopakum/mastu_comparison_videos_20261111/protocol_followups.json",
+  "followup_protocol_sha256": "304a9d0969d10785b33955a52ba5aedf0e1b35bf2836a7dfad6f09dd76ce429c",
+  "followup_protocol": {
+    "purpose": "Explore whether the observed coarse-step speed/accuracy trade-off also holds on the second predefined held-out case.",
+    "trigger": {
+      "case_id": "mastu_004",
+      "implicit_microsteps": 1,
+      "rollout_seconds": 25.435565726002096,
+      "h96_mse": 0.0015602090339076077
+    },
+    "additional_jobs": [
+      [
+        "mastu_010",
+        "implicit",
+        1,
+        96,
+        1
+      ]
+    ],
+    "selection_note": "Exploratory follow-up after seeing first-case results; same frozen weights, no retraining, primary comparison remains two implicit microsteps."
+  },
+  "primary_complete": true
+}
