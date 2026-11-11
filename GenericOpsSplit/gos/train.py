@@ -248,7 +248,7 @@ def amplification(model, q, mu, dt):
     return norms(Jw[:, None])[:, 0]
 
 
-def train(model, data, cfg, log):
+def train(model, data, cfg, log, checkpoint_path=None, max_cpu_seconds=None):
     frames, mu = data['train']
     val_frames, val_mu = data['val']
     T_train = (frames.shape[1]-1)//2
@@ -257,7 +257,8 @@ def train(model, data, cfg, log):
         validation_error_ = lambda m, f, u, n: validation_multi(m, f, u, n, dt_mults)
     else:
         validation_error_ = validation_error
-    params = [dict(params=model.network_parameters(), lr=1e-3), dict(params=model.operator_parameters(), lr=1e-2)]
+    params = [dict(params=model.network_parameters(), lr=cfg.get('lr', 1e-3)),
+              dict(params=model.operator_parameters(), lr=cfg.get('operator_lr', 1e-2))]
     params = [p for p in params if p['params']]
     history = dict(loss=[], val=[])
     best = dict(val=validation_error_(model, val_frames, val_mu, T_train), iteration=0,
@@ -266,11 +267,46 @@ def train(model, data, cfg, log):
     if not params:
         return best, history, dict(status='no_parameters')
     opt = torch.optim.Adam(params)
-    sched = torch.optim.lr_scheduler.CosineAnnealingLR(opt, cfg['iters'], eta_min=1e-5)
+    sched = torch.optim.lr_scheduler.CosineAnnealingLR(opt, cfg['iters'], eta_min=cfg.get('lr_min', 1e-5))
     window, bad, status, t0 = cfg['window'], 0, 'completed', time.time()
+    skipped_gradients = 0
     label_iters = int(cfg.get('label_pretrain', 0.)*cfg['iters'])
     label_scale = None
-    for it in range(1, cfg['iters']+1):
+    first, elapsed, resumes = 1, 0., 0
+    cpu_start, elapsed_cpu = time.process_time(), 0.
+    checkpoint_path = Path(checkpoint_path) if checkpoint_path is not None else None
+    if checkpoint_path is not None and checkpoint_path.exists():
+        saved = torch.load(checkpoint_path, map_location='cpu', weights_only=False)
+        if saved['config'] != cfg:
+            raise ValueError(f'Resume configuration differs: {checkpoint_path}')
+        model.load_state_dict(saved['state'])
+        opt.load_state_dict(saved['optimizer'])
+        sched.load_state_dict(saved['scheduler'])
+        best, history = saved['best'], saved['history']
+        first, elapsed, resumes = saved['iteration']+1, saved['seconds'], saved['resumes']+1
+        elapsed_cpu = saved.get('cpu_seconds', 0.)
+        bad, label_scale, skipped_gradients = saved['bad'], saved['label_scale'], saved['skipped_gradients']
+        torch.set_rng_state(saved['rng_cpu'].cpu())
+        if frames.is_cuda:
+            torch.cuda.set_rng_state(saved['rng_cuda'].cpu(), frames.device)
+        log(f'Resuming after iteration {first-1}; optimizer, scheduler, and RNG restored')
+        del saved
+
+    def save_progress(iteration):
+        if checkpoint_path is None:
+            return
+        checkpoint_path.parent.mkdir(parents=True, exist_ok=True)
+        temporary = checkpoint_path.with_suffix('.tmp')
+        torch.save(dict(config=cfg, state=model.state_dict(), optimizer=opt.state_dict(),
+                        scheduler=sched.state_dict(), best=best, history=history, iteration=iteration,
+                        seconds=elapsed+time.time()-t0, resumes=resumes, bad=bad, label_scale=label_scale,
+                        cpu_seconds=elapsed_cpu+time.process_time()-cpu_start,
+                        skipped_gradients=skipped_gradients, rng_cpu=torch.get_rng_state(),
+                        rng_cuda=torch.cuda.get_rng_state(frames.device) if frames.is_cuda else None), temporary)
+        temporary.replace(checkpoint_path)
+
+    it = first-1
+    for it in range(first, cfg['iters']+1):
         stride = dt_mults[it % len(dt_mults)]
         b = torch.randint(len(frames), (cfg['batch'],), device=frames.device)
         s = torch.randint(T_train-window*stride+1, (cfg['batch'],), device=frames.device)
@@ -283,7 +319,7 @@ def train(model, data, cfg, log):
             with torch.no_grad():
                 target = model.exact_increment(states, mus)
                 if label_scale is None:
-                    label_scale = float(target.pow(2).mean())
+                    label_scale = max(float(target.pow(2).mean()), 1e-12)
             label = (model.remainder_increment(states, mus) - target).pow(2).mean()/label_scale
             loss = loss + (label if it <= label_iters else cfg['label_weight']*label)
         if it > label_iters:
@@ -300,20 +336,40 @@ def train(model, data, cfg, log):
                 break
             sched.step()
             continue
-        bad = 0
         loss.backward()
-        torch.nn.utils.clip_grad_norm_([p for g in params for p in g['params']], 1.0)
+        grad_norm = torch.nn.utils.clip_grad_norm_([p for g in params for p in g['params']], 1.0)
+        if not torch.isfinite(grad_norm):
+            skipped_gradients += 1
+            bad += 1
+            if bad >= 100:
+                status = 'nonfinite_gradients'
+                break
+            sched.step()
+            continue
+        bad = 0
         opt.step()
         sched.step()
         if it % 50 == 0:
             history['loss'].append((it, float(loss)))
-        if it % 500 == 0 or it == cfg['iters']:
+        if it % cfg.get('val_every', 500) == 0 or it == cfg['iters']:
             v = validation_error_(model, val_frames, val_mu, T_train)
             history['val'].append((it, v))
             if v < best['val'] and it > label_iters:
                 best = dict(val=v, iteration=it, state={k: x.detach().clone() for k, x in model.state_dict().items()})
             log(f'it {it} loss {float(loss):.3e} val {v:.4f} ({time.time()-t0:.0f}s)')
-    return best, history, dict(status=status, seconds=time.time()-t0)
+            save_progress(it)
+        if max_cpu_seconds is not None and time.process_time() >= max_cpu_seconds and it < cfg['iters']:
+            if checkpoint_path is None:
+                raise ValueError('A CPU budget requires a checkpoint path')
+            status = 'checkpointed'
+            save_progress(it)
+            log(f'Checkpointed iteration {it} within the process CPU budget; rerun to resume')
+            break
+    if status != 'checkpointed':
+        save_progress(it)
+    return best, history, dict(status=status, seconds=elapsed+time.time()-t0,
+                               cpu_seconds=elapsed_cpu+time.process_time()-cpu_start,
+                               skipped_gradients=skipped_gradients, resumes=resumes, iterations=it)
 
 
 def evaluate(model, problem, data, cfg, device):
@@ -337,11 +393,14 @@ def evaluate(model, problem, data, cfg, device):
     out['long'] = long_rollout(model, frames[:16, 0], mu[:16], cfg['long'], ref)
     q = torch.cat([frames[:8, 0], frames[:8, frames.shape[1]//2]])
     try:
+        if cfg.get('skip_jacobian', False):
+            raise ValueError('Not measured: inference-only reference solver')
         sigma = step_jacobian_norm(model, q, torch.cat([mu[:8], mu[:8]]))
         out['jacobian_sigma'] = dict(median=float(sigma.median()), max=float(sigma.max()))
     except Exception as exc:  # explicit arms can be non-finite
         out['jacobian_sigma'] = dict(error=repr(exc))
-    out['operator'] = operator_diagnostics(model, problem, device) if not isinstance(model.linear, OseenNS) else None
+    out['operator'] = (operator_diagnostics(model, problem, device)
+                       if cfg.get('operator_diagnostics', True) and not isinstance(model.linear, OseenNS) else None)
     if isinstance(model.linear, OseenNS):
         with torch.no_grad():
             for dt_mult in (1, 4):
@@ -356,11 +415,15 @@ def run_name(arm, dt_mults, label=False, lip=False, init=False):
 
 def run(args):
     device = args.device
+    if str(device).startswith('cuda') and not torch.cuda.is_available():
+        raise RuntimeError('CUDA requested but unavailable; refusing CPU fallback')
     torch.manual_seed(args.seed)
     problem = get_problem(args.problem, device)
     cfg = dict(CONFIG[args.problem])
     if args.iters is not None:
         cfg['iters'] = args.iters
+    if args.lr is not None:
+        cfg['lr'] = args.lr
     cfg['dt_mults'] = [int(x) for x in args.dt_mults.split(',')]
     if args.labels:
         cfg.update(label_pretrain=0.4, label_weight=1e-2)
@@ -393,6 +456,8 @@ def run(args):
     result = dict(problem=args.problem, arm=name, base_arm=args.arm, seed=args.seed, parameters=n_params, config=cfg,
                   train=dict(info, best_val=best['val'], best_iteration=best['iteration']), history=history,
                   eval=evaluate(model, problem, data, cfg, device))
+    result['device'] = dict(requested=str(device), torch=torch.__version__,
+                           name=torch.cuda.get_device_name(device) if str(device).startswith('cuda') else 'cpu')
     result['eval_seconds'] = time.time()-t0
     torch.save(dict(state=best['state'], arm=args.arm, problem=args.problem, scale=scale), out_dir/'model.pt')
     (out_dir/'result.json').write_text(json.dumps(result, indent=1, default=float))
@@ -427,6 +492,7 @@ def main():
     ap.add_argument('--seed', type=int, default=0)
     ap.add_argument('--root', required=True)
     ap.add_argument('--iters', type=int)
+    ap.add_argument('--lr', type=float, help='network learning rate (default: 0.001)')
     ap.add_argument('--device', default='cuda')
     ap.add_argument('--dt-mults', default='1', help='comma-separated training step multiples, e.g. 1,2,4')
     ap.add_argument('--labels', action='store_true', help='exact remainder labels: pretrain then regularise N')

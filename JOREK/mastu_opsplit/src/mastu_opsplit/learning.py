@@ -48,7 +48,7 @@ class FieldSplineOperator(nn.Module):
     """Convert [B,N,C] physical fields to upstream layouts using fixed bounds."""
 
     def __init__(self, state_channels: int, output_channels: int, bounds, model_config: dict,
-                 *, condition_transport: bool):
+                 *, condition_transport: bool, condition_time: bool = False):
         super().__init__()
         if state_channels < 1 or output_channels < 1:
             raise ValueError("Field and output channel counts must be positive")
@@ -68,7 +68,11 @@ class FieldSplineOperator(nn.Module):
         self.conditioning_parameters = int(model_config.get("conditioning_parameters", 1))
         if self.conditioning_parameters not in (1, 2):
             raise ValueError("Expected one transport parameter or transport and gamma")
-        self.film = film(n_params=self.conditioning_parameters, field_channels=state_channels) if condition_transport else None
+        self.condition_time = condition_time
+        if condition_time and not condition_transport:
+            raise ValueError("Time conditioning requires the conditioning pathway")
+        self.film = film(n_params=self.conditioning_parameters + int(condition_time),
+                         field_channels=state_channels) if condition_transport else None
 
     def normalized_coordinates(self, coords: torch.Tensor, batch: int) -> torch.Tensor:
         if coords.ndim == 2:
@@ -94,8 +98,11 @@ class FieldSplineOperator(nn.Module):
         source = source.to(fields)
         query = source if query_coords is None else self.normalized_coordinates(query_coords, fields.shape[0]).to(fields)
         if self.film is not None:
-            if parameters is None or parameters.shape != (fields.shape[0], self.conditioning_parameters) or not torch.isfinite(parameters).all() or not (parameters > 0).all():
+            width = self.conditioning_parameters + int(self.condition_time)
+            if parameters is None or parameters.shape != (fields.shape[0], width) or not torch.isfinite(parameters).all() or not (parameters[:, :self.conditioning_parameters] > 0).all():
                 raise ValueError("Conditioning parameters must be finite, positive and match the configured width")
+            if self.condition_time and not (parameters[:, -1] >= 0).all():
+                raise ValueError("Elapsed time must be nonnegative")
             fields = self.film(fields, parameters)
         return self.backbone(fields.transpose(1, 2), source, query_coords=query).transpose(1, 2)
 

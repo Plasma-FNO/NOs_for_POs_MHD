@@ -1,0 +1,137 @@
+{
+  "schema": "mastu_physical_qualification_launch_v1",
+  "recorded_utc": "2026-11-11T12:10:34.195029+00:00",
+  "status": "submitted_queued",
+  "qualification_complete": false,
+  "qualification_result": null,
+  "campaign_root": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_qualification_20261111",
+  "campaign_manifest": {
+    "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_qualification_20261111/campaign.json",
+    "sha256": "0cbd3a6ef579c52780228d584af3362102ed539a2597bb18aacc63e751e3cbfe"
+  },
+  "frozen_study": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_qualification_20261111/frozen/study",
+  "snapshot_manifest_sha256": "a86739e8b122f084a8d33c7c4b6c6219f0054d523b935464e1b52c4a69e44474",
+  "run_config_sha256": "53df0f685d68019aafd69b6c5f0d9132032bf0e58e5ce94df29f230b41acf3e3",
+  "launch_receipt": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_qualification_20261111/launch.json",
+  "qualification_report": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_qualification_20261111/qualification.json",
+  "jobs": {
+    "preflight": {
+      "id": "2829030",
+      "state_at_recording": "PENDING",
+      "reason": "QOSGrpNodeLimit"
+    },
+    "training_and_control": {
+      "id": "2829055",
+      "array": "0-3%4",
+      "state_at_recording": "PENDING",
+      "reason": "Dependency",
+      "dependency": "afterok:2829030",
+      "kill_on_invalid_dependency": true
+    },
+    "summary": {
+      "id": "2829056",
+      "state_at_recording": "PENDING",
+      "reason": "Dependency",
+      "dependency": "afterany:2829055"
+    }
+  },
+  "training": {
+    "seeds": [
+      17,
+      18,
+      19
+    ],
+    "updates_per_seed": 2000,
+    "pretrain_updates": 0,
+    "initialization": "Fresh zero-output defect; no pilot checkpoint",
+    "device": "CUDA, one H100 requested per task",
+    "learning_rate": 0.0001,
+    "window_intervals": 4,
+    "checkpoint_selection": "Final fixed-budget update; no test-based selection",
+    "split": {
+      "train": 80,
+      "validation": 0,
+      "test": 20
+    },
+    "worker_cpu_budget_seconds": 12000
+  },
+  "control": "One shared deterministic native nonlinear physics run, with no optimizer updates or neural evaluations",
+  "method": {
+    "scheme": "BE",
+    "internal_substeps": 2,
+    "source_revision": "Corrected native source-axis formulation, byte-identical numerical package to frozen_source_axis_v2",
+    "defect": "G(q)-G(q*)",
+    "scope": "baseline coefficient 1, axisymmetric n=0, fixed mesh/equilibrium"
+  },
+  "evaluation": {
+    "cases": 20,
+    "case_ids": [
+      "mastu_004",
+      "mastu_010",
+      "mastu_013",
+      "mastu_015",
+      "mastu_017",
+      "mastu_019",
+      "mastu_022",
+      "mastu_024",
+      "mastu_030",
+      "mastu_036",
+      "mastu_049",
+      "mastu_051",
+      "mastu_052",
+      "mastu_073",
+      "mastu_078",
+      "mastu_079",
+      "mastu_084",
+      "mastu_088",
+      "mastu_094",
+      "mastu_095"
+    ],
+    "horizons": [
+      16,
+      32,
+      96
+    ],
+    "requested_substeps": [
+      1,
+      2,
+      4
+    ],
+    "actual_microsteps": [
+      2,
+      4,
+      8
+    ],
+    "rollouts": 240,
+    "horizon_records": 720,
+    "aggregates": 36,
+    "failures": "Retained; incomplete, nonfinite or failed audits suppress campaign averages"
+  },
+  "primary_gate": {
+    "horizon": 96,
+    "actual_microsteps": 2,
+    "metric": "Ratio of learned normalized volume MSE averaged over seeds and paired cases to physics MSE averaged over the same cases",
+    "maximum_mean_ratio": 0.95,
+    "each_seed_ratio_below": 1.0,
+    "bootstrap_upper_bound_below": 1.0
+  },
+  "bootstrap": {
+    "samples": 10000,
+    "seed": 4242,
+    "confidence": 0.95,
+    "unit": "Paired trajectory, identical case draws across all learned seeds and shared physics control",
+    "conditional_on_fitted_seeds": true,
+    "seed_dispersion_reported_separately": true
+  },
+  "validation_before_submission": {
+    "summary_unit_tests_passed": 17,
+    "slurm_scripts_bash_n": "passed",
+    "numerical_modules_matching_validated_snapshot": 37,
+    "new_gpu_preflight": "queued; not yet passed"
+  },
+  "limitations": [
+    "Existing exploratory test cases reused; not independent fresh confirmation.",
+    "Baseline n=0 fixed mesh/equilibrium and coefficient 1 only; no cross-equilibrium or OOD qualification.",
+    "No completed multi-seed result yet; initial generated summary correctly reports incomplete_or_failed."
+  ]
+}

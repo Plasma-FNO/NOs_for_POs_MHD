@@ -1,0 +1,1240 @@
+{
+  "frozen_sha256": "25aa63a36ed7f52167a9f1b5662735c78e83cd37ee56a6347c2ff3b47367e273",
+  "native_parameters": {
+    "bootstrap": false,
+    "corr_neg_dens_coef": [
+      0.5,
+      0.5
+    ],
+    "corr_neg_temp_coef": [
+      0.5,
+      0.5
+    ],
+    "d_par": 0.0,
+    "d_perp": [
+      1e-05,
+      0.0,
+      0.0,
+      99.0,
+      99.0
+    ],
+    "d_perp_file": "none",
+    "d_perp_num": 0.0,
+    "d_prof_neg_thresh": 0.0,
+    "edgeparticlesource": 0.0,
+    "eta": 1e-05,
+    "eta_num": 0.0,
+    "eta_ohmic": 0.0,
+    "eta_t_dependent": true,
+    "f0": 0.64,
+    "ff_0": 1.4,
+    "ff_1": 0.0,
+    "ff_coef": [
+      -1.2,
+      0.2,
+      -0.0,
+      0.005,
+      1.0,
+      0.0003,
+      0.985,
+      0.03,
+      0.0
+    ],
+    "ffprime_file": "none",
+    "freeboundary": false,
+    "freeboundary_equil": false,
+    "gamma": 1.6666666666666667,
+    "heatsource": 1e-07,
+    "heatsource_gauss": 0.0,
+    "heatsource_psin": 1.0,
+    "heatsource_sig": 0.1,
+    "implicit_heat_source": 0.0,
+    "keep_current_prof": true,
+    "keep_n0_const": false,
+    "linear_run": false,
+    "neo": false,
+    "normalized_velocity_profile": true,
+    "particlesource": 1e-05,
+    "particlesource_gauss": 0.0,
+    "particlesource_psin": 100.0,
+    "particlesource_sig": 0.1,
+    "refinement": false,
+    "rho_0": 1.0,
+    "rho_1": 0.01,
+    "rho_coef": [
+      -0.192,
+      0.199,
+      -0.09,
+      0.023,
+      0.99
+    ],
+    "rho_file": "none",
+    "rho_min": 1e-20,
+    "rho_min_neg": -1000000000000.0,
+    "rmp_on": false,
+    "rot_file": "none",
+    "t_0": 0.018,
+    "t_1": 0.0001,
+    "t_coef": [
+      -0.37,
+      -1.135,
+      0.664,
+      0.025,
+      0.989
+    ],
+    "t_file": "none",
+    "t_max_eta": 1e+99,
+    "t_max_eta_ohm": 1e+99,
+    "t_min": 1e-20,
+    "t_min_neg": -1000000000000.0,
+    "t_min_zkpar": 1e-20,
+    "tauic": 0.0,
+    "tgnum": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "time_evol_scheme": "Crank-Nicholson",
+    "use_pellet": false,
+    "v_0": 0.0,
+    "v_1": 0.0,
+    "visco": 1e-05,
+    "visco_num": 0.0,
+    "visco_par": 1e-05,
+    "visco_par_num": 0.0,
+    "visco_t_dependent": true,
+    "xcase": 3,
+    "xpoint": true,
+    "zk_par": 1.0,
+    "zk_par_max": 1e+20,
+    "zk_perp": [
+      1e-05,
+      0.0,
+      0.0,
+      99.0,
+      99.0
+    ],
+    "zk_perp_file": "none",
+    "zk_perp_num": 0.0,
+    "zk_prof_neg_thresh": 0.0,
+    "zkpar_t_dependent": true
+  },
+  "parameter_evidence": {
+    "bootstrap": [
+      {
+        "expression": ".false.",
+        "indices": null,
+        "key": "bootstrap",
+        "line": 205,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      }
+    ],
+    "corr_neg_dens_coef": [
+      {
+        "expression": "(/ 0.5, 0.5 /)",
+        "indices": ":",
+        "key": "corr_neg_dens_coef",
+        "line": 307,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      }
+    ],
+    "corr_neg_temp_coef": [
+      {
+        "expression": "(/ 0.5, 0.5 /)",
+        "indices": ":",
+        "key": "corr_neg_temp_coef",
+        "line": 306,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      }
+    ],
+    "d_par": [
+      {
+        "expression": "0.0",
+        "indices": null,
+        "key": "d_par",
+        "line": 424,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "d_perp": [
+      {
+        "expression": "(/ 1.d-5, 0.d0, 0.d0, 99.d0, 99.d0 /)",
+        "indices": "1:5",
+        "key": "d_perp",
+        "line": 255,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      },
+      {
+        "expression": "1e-05",
+        "indices": "1",
+        "key": "d_perp",
+        "line": 425,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      },
+      {
+        "expression": "0.0",
+        "indices": "2",
+        "key": "d_perp",
+        "line": 426,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      },
+      {
+        "expression": "0.0",
+        "indices": "3",
+        "key": "d_perp",
+        "line": 427,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      },
+      {
+        "expression": "99.0",
+        "indices": "4",
+        "key": "d_perp",
+        "line": 428,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      },
+      {
+        "expression": "99.0",
+        "indices": "5",
+        "key": "d_perp",
+        "line": 429,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "d_perp_file": [
+      {
+        "expression": "'none'",
+        "indices": null,
+        "key": "d_perp_file",
+        "line": 610,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      }
+    ],
+    "d_perp_num": [
+      {
+        "expression": "0.0",
+        "indices": null,
+        "key": "d_perp_num",
+        "line": 438,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "d_prof_neg_thresh": [
+      {
+        "expression": "0.d0",
+        "indices": null,
+        "key": "d_prof_neg_thresh",
+        "line": 267,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      }
+    ],
+    "edgeparticlesource": [
+      {
+        "expression": "0.0",
+        "indices": null,
+        "key": "edgeparticlesource",
+        "line": 446,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "eta": [
+      {
+        "expression": "1e-05",
+        "indices": null,
+        "key": "eta",
+        "line": 416,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "eta_num": [
+      {
+        "expression": "0.0",
+        "indices": null,
+        "key": "eta_num",
+        "line": 435,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "eta_ohmic": [
+      {
+        "expression": "0.d0",
+        "indices": null,
+        "key": "eta_ohmic",
+        "line": 47,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      }
+    ],
+    "eta_t_dependent": [
+      {
+        "expression": ".true.",
+        "indices": null,
+        "key": "eta_t_dependent",
+        "line": 419,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "f0": [
+      {
+        "expression": "0.64",
+        "indices": null,
+        "key": "f0",
+        "line": 202,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "ff_0": [
+      {
+        "expression": "1.4",
+        "indices": null,
+        "key": "ff_0",
+        "line": 222,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "ff_1": [
+      {
+        "expression": "0.d0",
+        "indices": null,
+        "key": "ff_1",
+        "line": 223,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "ff_coef": [
+      {
+        "expression": "0.d0",
+        "indices": null,
+        "key": "ff_coef",
+        "line": 555,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      },
+      {
+        "expression": "-1.d0",
+        "indices": "1",
+        "key": "ff_coef",
+        "line": 555,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      },
+      {
+        "expression": "-1.2",
+        "indices": "1",
+        "key": "ff_coef",
+        "line": 224,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      },
+      {
+        "expression": "+0.20",
+        "indices": "2",
+        "key": "ff_coef",
+        "line": 225,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      },
+      {
+        "expression": "-0.0",
+        "indices": "3",
+        "key": "ff_coef",
+        "line": 226,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      },
+      {
+        "expression": "0.005d0",
+        "indices": "4",
+        "key": "ff_coef",
+        "line": 227,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      },
+      {
+        "expression": "1.00d0",
+        "indices": "5",
+        "key": "ff_coef",
+        "line": 228,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      },
+      {
+        "expression": "0.0003",
+        "indices": "6",
+        "key": "ff_coef",
+        "line": 229,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      },
+      {
+        "expression": "0.985",
+        "indices": "7",
+        "key": "ff_coef",
+        "line": 230,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      },
+      {
+        "expression": "0.03d0",
+        "indices": "8",
+        "key": "ff_coef",
+        "line": 231,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "ffprime_file": [
+      {
+        "expression": "'none'",
+        "indices": null,
+        "key": "ffprime_file",
+        "line": 609,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      }
+    ],
+    "freeboundary": [
+      {
+        "expression": ".false.",
+        "indices": null,
+        "key": "freeboundary",
+        "line": 454,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "freeboundary_equil": [
+      {
+        "expression": ".false.",
+        "indices": null,
+        "key": "freeboundary_equil",
+        "line": 455,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "gamma": [
+      {
+        "expression": "5.d0 / 3.d0",
+        "indices": null,
+        "key": "gamma",
+        "line": 180,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      }
+    ],
+    "heatsource": [
+      {
+        "expression": "1e-07",
+        "indices": null,
+        "key": "heatsource",
+        "line": 443,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "heatsource_gauss": [
+      {
+        "expression": "0.d0",
+        "indices": null,
+        "key": "heatsource_gauss",
+        "line": 370,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      }
+    ],
+    "heatsource_psin": [
+      {
+        "expression": "1.0",
+        "indices": null,
+        "key": "heatsource_psin",
+        "line": 444,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "heatsource_sig": [
+      {
+        "expression": "0.1",
+        "indices": null,
+        "key": "heatsource_sig",
+        "line": 445,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "implicit_heat_source": [
+      {
+        "expression": "0.d0",
+        "indices": null,
+        "key": "implicit_heat_source",
+        "line": 304,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      }
+    ],
+    "keep_current_prof": [
+      {
+        "expression": ".true.",
+        "indices": null,
+        "key": "keep_current_prof",
+        "line": 456,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "keep_n0_const": [
+      {
+        "expression": ".false.",
+        "indices": null,
+        "key": "keep_n0_const",
+        "line": 457,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "linear_run": [
+      {
+        "expression": ".false.",
+        "indices": null,
+        "key": "linear_run",
+        "line": 458,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "neo": [
+      {
+        "expression": ".false.",
+        "indices": null,
+        "key": "neo",
+        "line": 749,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      }
+    ],
+    "normalized_velocity_profile": [
+      {
+        "expression": ".true.",
+        "indices": null,
+        "key": "normalized_velocity_profile",
+        "line": 620,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      }
+    ],
+    "particlesource": [
+      {
+        "expression": "1e-05",
+        "indices": null,
+        "key": "particlesource",
+        "line": 440,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "particlesource_gauss": [
+      {
+        "expression": "0.d0",
+        "indices": null,
+        "key": "particlesource_gauss",
+        "line": 379,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      }
+    ],
+    "particlesource_psin": [
+      {
+        "expression": "100.0",
+        "indices": null,
+        "key": "particlesource_psin",
+        "line": 441,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "particlesource_sig": [
+      {
+        "expression": "0.1",
+        "indices": null,
+        "key": "particlesource_sig",
+        "line": 442,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "refinement": [
+      {
+        "expression": ".false.",
+        "indices": null,
+        "key": "refinement",
+        "line": 691,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      }
+    ],
+    "rho_0": [
+      {
+        "expression": "1.0",
+        "indices": null,
+        "key": "rho_0",
+        "line": 205,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "rho_1": [
+      {
+        "expression": "0.01",
+        "indices": null,
+        "key": "rho_1",
+        "line": 206,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "rho_coef": [
+      {
+        "expression": "0.d0",
+        "indices": null,
+        "key": "rho_coef",
+        "line": 554,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      },
+      {
+        "expression": "0.d0",
+        "indices": "1",
+        "key": "rho_coef",
+        "line": 554,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      },
+      {
+        "expression": "-0.192d0",
+        "indices": "1",
+        "key": "rho_coef",
+        "line": 207,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      },
+      {
+        "expression": "0.199d0",
+        "indices": "2",
+        "key": "rho_coef",
+        "line": 208,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      },
+      {
+        "expression": "-0.090d0",
+        "indices": "3",
+        "key": "rho_coef",
+        "line": 209,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      },
+      {
+        "expression": "0.023d0",
+        "indices": "4",
+        "key": "rho_coef",
+        "line": 210,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      },
+      {
+        "expression": "0.990d0",
+        "indices": "5",
+        "key": "rho_coef",
+        "line": 211,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "rho_file": [
+      {
+        "expression": "'none'",
+        "indices": null,
+        "key": "rho_file",
+        "line": 602,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      }
+    ],
+    "rho_min": [
+      {
+        "expression": "1e-20",
+        "indices": null,
+        "key": "rho_min",
+        "line": 448,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "rho_min_neg": [
+      {
+        "expression": "-1000000000000.0",
+        "indices": null,
+        "key": "rho_min_neg",
+        "line": 450,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "rmp_on": [
+      {
+        "expression": ".false.",
+        "indices": null,
+        "key": "rmp_on",
+        "line": 736,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      }
+    ],
+    "rot_file": [
+      {
+        "expression": "'none'",
+        "indices": null,
+        "key": "rot_file",
+        "line": 618,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      }
+    ],
+    "t_0": [
+      {
+        "expression": "0.018d0",
+        "indices": null,
+        "key": "t_0",
+        "line": 214,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "t_1": [
+      {
+        "expression": "0.01d-2",
+        "indices": null,
+        "key": "t_1",
+        "line": 215,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "t_coef": [
+      {
+        "expression": "0.d0",
+        "indices": null,
+        "key": "t_coef",
+        "line": 551,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      },
+      {
+        "expression": "-1.d0",
+        "indices": "1",
+        "key": "t_coef",
+        "line": 551,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      },
+      {
+        "expression": "-0.37d0",
+        "indices": "1",
+        "key": "t_coef",
+        "line": 216,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      },
+      {
+        "expression": "-1.135d0",
+        "indices": "2",
+        "key": "t_coef",
+        "line": 217,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      },
+      {
+        "expression": "0.664d0",
+        "indices": "3",
+        "key": "t_coef",
+        "line": 218,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      },
+      {
+        "expression": "0.025d0",
+        "indices": "4",
+        "key": "t_coef",
+        "line": 219,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      },
+      {
+        "expression": "0.989d0",
+        "indices": "5",
+        "key": "t_coef",
+        "line": 220,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "t_file": [
+      {
+        "expression": "'none'",
+        "indices": null,
+        "key": "t_file",
+        "line": 604,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      }
+    ],
+    "t_max_eta": [
+      {
+        "expression": "1.d99",
+        "indices": null,
+        "key": "t_max_eta",
+        "line": 46,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      }
+    ],
+    "t_max_eta_ohm": [
+      {
+        "expression": "1.d99",
+        "indices": null,
+        "key": "t_max_eta_ohm",
+        "line": 48,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      }
+    ],
+    "t_min": [
+      {
+        "expression": "1e-20",
+        "indices": null,
+        "key": "t_min",
+        "line": 447,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "t_min_neg": [
+      {
+        "expression": "-1000000000000.0",
+        "indices": null,
+        "key": "t_min_neg",
+        "line": 449,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "t_min_zkpar": [
+      {
+        "expression": "-1.d12",
+        "indices": null,
+        "key": "t_min_zkpar",
+        "line": 299,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      }
+    ],
+    "tauic": [
+      {
+        "expression": "0.0",
+        "indices": null,
+        "key": "tauic",
+        "line": 451,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "tgnum": [
+      {
+        "expression": "0.d0",
+        "indices": null,
+        "key": "tgnum",
+        "line": 657,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      }
+    ],
+    "time_evol_scheme": [
+      {
+        "expression": "'Crank-Nicholson'",
+        "indices": null,
+        "key": "time_evol_scheme",
+        "line": 415,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "use_pellet": [
+      {
+        "expression": ".false.",
+        "indices": null,
+        "key": "use_pellet",
+        "line": 583,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      }
+    ],
+    "v_0": [
+      {
+        "expression": "0.0",
+        "indices": null,
+        "key": "v_0",
+        "line": 234,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "v_1": [
+      {
+        "expression": "0.0",
+        "indices": null,
+        "key": "v_1",
+        "line": 235,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "visco": [
+      {
+        "expression": "1e-05",
+        "indices": null,
+        "key": "visco",
+        "line": 417,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "visco_num": [
+      {
+        "expression": "0.0",
+        "indices": null,
+        "key": "visco_num",
+        "line": 436,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "visco_par": [
+      {
+        "expression": "1e-05",
+        "indices": null,
+        "key": "visco_par",
+        "line": 418,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "visco_par_num": [
+      {
+        "expression": "0.0",
+        "indices": null,
+        "key": "visco_par_num",
+        "line": 437,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "visco_t_dependent": [
+      {
+        "expression": ".true.",
+        "indices": null,
+        "key": "visco_t_dependent",
+        "line": 420,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "xcase": [
+      {
+        "expression": "3",
+        "indices": null,
+        "key": "xcase",
+        "line": 193,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "xpoint": [
+      {
+        "expression": ".t.",
+        "indices": null,
+        "key": "xpoint",
+        "line": 192,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "zk_par": [
+      {
+        "expression": "1.0",
+        "indices": null,
+        "key": "zk_par",
+        "line": 422,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "zk_par_max": [
+      {
+        "expression": "1e+20",
+        "indices": null,
+        "key": "zk_par_max",
+        "line": 423,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "zk_perp": [
+      {
+        "expression": "(/ 1.d-5, 0.d0, 0.d0, 99.d0, 99.d0 /)",
+        "indices": "1:5",
+        "key": "zk_perp",
+        "line": 239,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      },
+      {
+        "expression": "1e-05",
+        "indices": "1",
+        "key": "zk_perp",
+        "line": 430,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      },
+      {
+        "expression": "0.0",
+        "indices": "2",
+        "key": "zk_perp",
+        "line": 431,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      },
+      {
+        "expression": "0.0",
+        "indices": "3",
+        "key": "zk_perp",
+        "line": 432,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      },
+      {
+        "expression": "99.0",
+        "indices": "4",
+        "key": "zk_perp",
+        "line": 433,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      },
+      {
+        "expression": "99.0",
+        "indices": "5",
+        "key": "zk_perp",
+        "line": 434,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "zk_perp_file": [
+      {
+        "expression": "'none'",
+        "indices": null,
+        "key": "zk_perp_file",
+        "line": 612,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      }
+    ],
+    "zk_perp_num": [
+      {
+        "expression": "0.0",
+        "indices": null,
+        "key": "zk_perp_num",
+        "line": 439,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ],
+    "zk_prof_neg_thresh": [
+      {
+        "expression": "0.d0",
+        "indices": null,
+        "key": "zk_prof_neg_thresh",
+        "line": 278,
+        "namelist": false,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90"
+      }
+    ],
+    "zkpar_t_dependent": [
+      {
+        "expression": ".true.",
+        "indices": null,
+        "key": "zkpar_t_dependent",
+        "line": 421,
+        "namelist": true,
+        "source": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input"
+      }
+    ]
+  },
+  "physics": {
+    "corr_neg_temp_coef": [
+      0.5,
+      0.5
+    ],
+    "d_par": 0.0,
+    "d_perp": 1e-05,
+    "eta": 1e-05,
+    "eta_ohmic": 0.0,
+    "eta_t_dependent": true,
+    "f0": 0.64,
+    "ff_0": 1.4,
+    "ff_1": 0.0,
+    "ff_coef": [
+      -1.2,
+      0.2,
+      -0.0,
+      0.005,
+      1.0,
+      0.0003,
+      0.985,
+      0.03,
+      0.0
+    ],
+    "gamma": 1.6666666666666667,
+    "heatsource": 1e-07,
+    "heatsource_psin": 1.0,
+    "heatsource_sig": 0.1,
+    "normalized_velocity_profile": true,
+    "particlesource": 1e-05,
+    "particlesource_psin": 100.0,
+    "particlesource_sig": 0.1,
+    "rho_0": 1.0,
+    "rho_1": 0.01,
+    "rho_coef": [
+      -0.192,
+      0.199,
+      -0.09,
+      0.023,
+      0.99
+    ],
+    "t_0": 0.018,
+    "t_1": 0.0001,
+    "t_coef": [
+      -0.37,
+      -1.135,
+      0.664,
+      0.025,
+      0.989
+    ],
+    "t_max_eta": 1e+99,
+    "t_max_eta_ohm": 1e+99,
+    "t_min": 1e-20,
+    "t_min_neg": -1000000000000.0,
+    "t_min_zkpar": 1e-20,
+    "visco": 1e-05,
+    "visco_par": 1e-05,
+    "visco_t_dependent": true,
+    "zk_par": 1.0,
+    "zk_par_max": 1e+20,
+    "zk_perp": 1e-05,
+    "zkpar_t_dependent": true
+  },
+  "provenance": {
+    "defaults": {
+      "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/preset_parameters.f90",
+      "sha256": "b13d9d03ad0b7db077896c62875e43fd4ff0bd9413c8822b42fd646b0599921f"
+    },
+    "frozen_tangent": {
+      "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_full_opsplit_20261104/frozen_tangent/baseline_terms.h5",
+      "sha256": "25aa63a36ed7f52167a9f1b5662735c78e83cd37ee56a6347c2ff3b47367e273"
+    },
+    "initialization": {
+      "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/initialise_and_broadcast_parameters.f90",
+      "sha256": "6400660b7dd30afcfc9846f8583fbe6c81050bfda7afa91add444016d08457df"
+    },
+    "model_initialization": {
+      "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/model303/initialise_parameters.f90",
+      "sha256": "c24dfb1cef84b1d66ac129ec4fa1a02bdd381dee6d8044158f30c6d6143326f0"
+    },
+    "namelist": {
+      "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/input",
+      "sha256": "a373c3a74d404b65fd45dbd2fa477a740249209d1731dd79213ceb2b60967b90"
+    },
+    "plasma_functions": {
+      "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/mod_plasma_functions.f90",
+      "sha256": "1940e414f78a66c98fc08758d42cb3a814a955afde66938a31b252ca474d73d9"
+    },
+    "profile_selection": {
+      "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/mastu-opsplit/cpu-development-20261102/single_writer_build_20261102/source/models/read_num_profiles.f90",
+      "sha256": "aa6ceafcd96be69d172ecbe373014dc32434911726e8096d27b382f3e36143e0"
+    },
+    "reference_restart": {
+      "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/jorek000144.h5",
+      "sha256": "3e778b498901b50db3461efacce0f90f550beb3b11ee5782b8557783c4227dc7"
+    }
+  },
+  "reference": {
+    "index_now": 144,
+    "interpretation": "actual warm native baseline; stationarity not assumed",
+    "jorek_model": 303,
+    "maximum_relative_jet_error": 9.540476655877148e-13,
+    "n_coord_tor": 1,
+    "n_degrees": 4,
+    "n_dim": 2,
+    "n_order": 3,
+    "n_tor": 1,
+    "n_var": 7,
+    "native_time": {
+      "canonical_native_dofs": 46203,
+      "expanded_nodal_dofs": 46324,
+      "mapping_status": "diagnostic_restart_only",
+      "minimum_signed_jacobian_m2": 2.4428501087284193e-06,
+      "native_constraints_available": false,
+      "native_dof_aliases_verified": true,
+      "negative_jacobian_samples": 0,
+      "patch_ids_available": false,
+      "quadrature_order": 4,
+      "steps": 144,
+      "time_seconds": 4.2177393336842355e-06
+    },
+    "t_now": 9.0
+  },
+  "schema": "mastu_native_profiles_v1",
+  "scope": "Configured coefficient only; exact volume RHS, frozen native coupled temporal operator. No new simulation, training, future restart or fitted profile coefficient.",
+  "supported_branches": "n0_model303_analytic_double_null_v1",
+  "transformations": [
+    {
+      "after": 1e-20,
+      "before": -1000000000000.0,
+      "parameter": "t_min_zkpar",
+      "rule": "native sentinel <-1e10 resolves to T_min"
+    }
+  ]
+}

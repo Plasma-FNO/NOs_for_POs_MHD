@@ -1,0 +1,6267 @@
+{
+  "burgers": {
+    "horizon": "200",
+    "historical_best": {
+      "arm": "implicit_free_tf",
+      "error": {
+        "mean": 0.003288818600897988,
+        "std": 0.00029949957059269457,
+        "n": 3
+      }
+    },
+    "historical_data_best": {
+      "arm": "node",
+      "error": {
+        "mean": 0.005901564067850511,
+        "std": 0.000488724451524138,
+        "n": 3
+      }
+    },
+    "runs": [
+      {
+        "arm": "physics_etdrk4_n1_known_exact_capped",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 32,
+          "closure": false,
+          "closure_each_stage": false,
+          "closure_in_range": false,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            25,
+            50,
+            100,
+            200
+          ],
+          "iters": 5000,
+          "linear_mode": "known",
+          "long": 1000,
+          "lr": 0.0001,
+          "lr_min": 1e-05,
+          "max_step": true,
+          "net": {
+            "layers": 4,
+            "modes": 24,
+            "width": 48
+          },
+          "scheme": "etdrk4",
+          "substeps": 1,
+          "val_every": 500,
+          "window": 8,
+          "zero_equilibrium": false
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 24,
+              "width": 48,
+              "layers": 4
+            },
+            "iters": 5000,
+            "window": 8,
+            "batch": 32,
+            "horizons": [
+              25,
+              50,
+              100,
+              200
+            ],
+            "long": 1000,
+            "scheme": "etdrk4",
+            "substeps": 1,
+            "closure": false,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 0.0001,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": true,
+            "max_step": true,
+            "zero_equilibrium": false
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/burgers/physics_etdrk4_n1_known_exact_capped_s0/result.json"
+        ],
+        "statuses": [
+          "no_parameters"
+        ],
+        "parameters": 0,
+        "primary": {
+          "mean": 1.583822779593902e-07,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 4.8157802901061513e-05,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "200",
+            "error": {
+              "mean": 1.195073480175779e-07,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "200",
+            "error": {
+              "mean": 1.1962711710111762e-07,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "200",
+            "error": {
+              "mean": 1.6250572798526264e-07,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {
+          "0.012": {
+            "mean": 1.7639446241446421e-06,
+            "std": 0.0,
+            "n": 1
+          },
+          "0.1": {
+            "mean": 9.648844923049182e-08,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "train_seconds": null,
+        "training": [
+          {
+            "status": "no_parameters",
+            "best_val": 6.917063728906214e-06,
+            "best_iteration": 0
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.003896132399677299,
+          "std": 0.0,
+          "n": 1
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.003896132399677299,
+            "neural_calls_per_step": 0,
+            "physics_substeps": 1
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          0
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      },
+      {
+        "arm": "physics_etdrk4_n1_known_exact",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 32,
+          "closure": false,
+          "closure_each_stage": false,
+          "closure_in_range": false,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            25,
+            50,
+            100,
+            200
+          ],
+          "iters": 5000,
+          "linear_mode": "known",
+          "long": 1000,
+          "lr": 0.0001,
+          "lr_min": 1e-05,
+          "max_step": false,
+          "net": {
+            "layers": 4,
+            "modes": 24,
+            "width": 48
+          },
+          "scheme": "etdrk4",
+          "substeps": 1,
+          "val_every": 500,
+          "window": 8,
+          "zero_equilibrium": false
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 24,
+              "width": 48,
+              "layers": 4
+            },
+            "iters": 5000,
+            "window": 8,
+            "batch": 32,
+            "horizons": [
+              25,
+              50,
+              100,
+              200
+            ],
+            "long": 1000,
+            "scheme": "etdrk4",
+            "substeps": 1,
+            "closure": false,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 0.0001,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": true
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/burgers/physics_etdrk4_n1_known_exact_s0/result.json"
+        ],
+        "statuses": [
+          "no_parameters"
+        ],
+        "parameters": 0,
+        "primary": {
+          "mean": 1.583822779593902e-07,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 4.8157802901061513e-05,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "200",
+            "error": {
+              "mean": 1.133646378548292e-06,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "200",
+            "error": {
+              "mean": 1.8090180674334988e-05,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "200",
+            "error": {
+              "mean": 1.6250572798526264e-07,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {
+          "0.012": {
+            "mean": 1.7639446241446421e-06,
+            "std": 0.0,
+            "n": 1
+          },
+          "0.1": {
+            "mean": 9.648844923049182e-08,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "train_seconds": null,
+        "training": [
+          {
+            "status": "no_parameters",
+            "best_val": 6.917063728906214e-06,
+            "best_iteration": 0
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.006639230699511245,
+          "std": 0.0,
+          "n": 1
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.006639230699511245,
+            "neural_calls_per_step": 0,
+            "physics_substeps": 1
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          0
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      },
+      {
+        "arm": "physics_ars222_n2_known_closure_lr5",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 32,
+          "closure": true,
+          "closure_each_stage": false,
+          "closure_in_range": false,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            25,
+            50,
+            100,
+            200
+          ],
+          "iters": 5000,
+          "linear_mode": "known",
+          "long": 1000,
+          "lr": 1e-05,
+          "lr_min": 1e-05,
+          "max_step": false,
+          "net": {
+            "layers": 4,
+            "modes": 24,
+            "width": 48
+          },
+          "scheme": "ars222",
+          "substeps": 2,
+          "val_every": 500,
+          "window": 8,
+          "zero_equilibrium": false
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 24,
+              "width": 48,
+              "layers": 4
+            },
+            "iters": 5000,
+            "window": 8,
+            "batch": 32,
+            "horizons": [
+              25,
+              50,
+              100,
+              200
+            ],
+            "long": 1000,
+            "scheme": "ars222",
+            "substeps": 2,
+            "closure": true,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 1e-05,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": false
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/burgers/physics_ars222_n2_known_closure_lr5_s0/result.json"
+        ],
+        "statuses": [
+          "completed"
+        ],
+        "parameters": 237137,
+        "primary": {
+          "mean": 5.116950342198834e-05,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 0.01555862746823947,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "200",
+            "error": {
+              "mean": 0.00017709231178741902,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "200",
+            "error": {
+              "mean": 0.03194800764322281,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "200",
+            "error": {
+              "mean": 4.394622737891041e-05,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {
+          "0.012": {
+            "mean": 7.214181823655963e-05,
+            "std": 0.0,
+            "n": 1
+          },
+          "0.1": {
+            "mean": 1.773452095221728e-05,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "train_seconds": {
+          "mean": 315.75492787361145,
+          "std": 0.0,
+          "n": 1
+        },
+        "training": [
+          {
+            "status": "completed",
+            "seconds": 315.75492787361145,
+            "best_val": 0.00014094759535510093,
+            "best_iteration": 0
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.002599015300074825,
+          "std": 0.0,
+          "n": 1
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.002599015300074825,
+            "neural_calls_per_step": 1,
+            "physics_substeps": 2
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          0
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      },
+      {
+        "arm": "physics_ars222_n2_known_exact_capped",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 32,
+          "closure": false,
+          "closure_each_stage": false,
+          "closure_in_range": false,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            25,
+            50,
+            100,
+            200
+          ],
+          "iters": 5000,
+          "linear_mode": "known",
+          "long": 1000,
+          "lr": 0.0001,
+          "lr_min": 1e-05,
+          "max_step": true,
+          "net": {
+            "layers": 4,
+            "modes": 24,
+            "width": 48
+          },
+          "scheme": "ars222",
+          "substeps": 2,
+          "val_every": 500,
+          "window": 8,
+          "zero_equilibrium": false
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 24,
+              "width": 48,
+              "layers": 4
+            },
+            "iters": 5000,
+            "window": 8,
+            "batch": 32,
+            "horizons": [
+              25,
+              50,
+              100,
+              200
+            ],
+            "long": 1000,
+            "scheme": "ars222",
+            "substeps": 2,
+            "closure": false,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 0.0001,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": false,
+            "max_step": true
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/burgers/physics_ars222_n2_known_exact_capped_s0/result.json"
+        ],
+        "statuses": [
+          "no_parameters"
+        ],
+        "parameters": 0,
+        "primary": {
+          "mean": 5.116950342198834e-05,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 0.01555862746823947,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "200",
+            "error": {
+              "mean": 5.116950342198834e-05,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "200",
+            "error": {
+              "mean": 5.116950342198834e-05,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "200",
+            "error": {
+              "mean": 5.116950342198834e-05,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {
+          "0.012": {
+            "mean": 7.214181823655963e-05,
+            "std": 0.0,
+            "n": 1
+          },
+          "0.1": {
+            "mean": 1.773452095221728e-05,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "train_seconds": null,
+        "training": [
+          {
+            "status": "no_parameters",
+            "best_val": 0.00014094759535510093,
+            "best_iteration": 0
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.001306801899772836,
+          "std": 0.0,
+          "n": 1
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.001306801899772836,
+            "neural_calls_per_step": 0,
+            "physics_substeps": 2
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          0
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      },
+      {
+        "arm": "physics_ars222_n2_known_exact",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 32,
+          "closure": false,
+          "closure_each_stage": false,
+          "closure_in_range": false,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            25,
+            50,
+            100,
+            200
+          ],
+          "iters": 5000,
+          "linear_mode": "known",
+          "long": 1000,
+          "lr": 0.0001,
+          "lr_min": 1e-05,
+          "max_step": false,
+          "net": {
+            "layers": 4,
+            "modes": 24,
+            "width": 48
+          },
+          "scheme": "ars222",
+          "substeps": 2,
+          "val_every": 500,
+          "window": 8,
+          "zero_equilibrium": false
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 24,
+              "width": 48,
+              "layers": 4
+            },
+            "iters": 5000,
+            "window": 8,
+            "batch": 32,
+            "horizons": [
+              25,
+              50,
+              100,
+              200
+            ],
+            "long": 1000,
+            "scheme": "ars222",
+            "substeps": 2,
+            "closure": false,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 0.0001,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": false
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/burgers/physics_ars222_n2_known_exact_s0/result.json"
+        ],
+        "statuses": [
+          "no_parameters"
+        ],
+        "parameters": 0,
+        "primary": {
+          "mean": 5.116950342198834e-05,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 0.01555862746823947,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "200",
+            "error": {
+              "mean": 0.00017709231178741902,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "200",
+            "error": {
+              "mean": 0.03194800764322281,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "200",
+            "error": {
+              "mean": 4.394622737891041e-05,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {
+          "0.012": {
+            "mean": 7.214181823655963e-05,
+            "std": 0.0,
+            "n": 1
+          },
+          "0.1": {
+            "mean": 1.773452095221728e-05,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "train_seconds": null,
+        "training": [
+          {
+            "status": "no_parameters",
+            "best_val": 0.00014094759535510093,
+            "best_iteration": 0
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.001675460799742723,
+          "std": 0.0,
+          "n": 1
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.001675460799742723,
+            "neural_calls_per_step": 0,
+            "physics_substeps": 2
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          0
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      },
+      {
+        "arm": "physics_ars222_n2_known_closure_lr4",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 32,
+          "closure": true,
+          "closure_each_stage": false,
+          "closure_in_range": false,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            25,
+            50,
+            100,
+            200
+          ],
+          "iters": 5000,
+          "linear_mode": "known",
+          "long": 1000,
+          "lr": 0.0001,
+          "lr_min": 1e-05,
+          "max_step": false,
+          "net": {
+            "layers": 4,
+            "modes": 24,
+            "width": 48
+          },
+          "scheme": "ars222",
+          "substeps": 2,
+          "val_every": 500,
+          "window": 8,
+          "zero_equilibrium": false
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 24,
+              "width": 48,
+              "layers": 4
+            },
+            "iters": 5000,
+            "window": 8,
+            "batch": 32,
+            "horizons": [
+              25,
+              50,
+              100,
+              200
+            ],
+            "long": 1000,
+            "scheme": "ars222",
+            "substeps": 2,
+            "closure": true,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 0.0001,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": false
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/burgers/physics_ars222_n2_known_closure_lr4_s0/result.json"
+        ],
+        "statuses": [
+          "completed"
+        ],
+        "parameters": 237137,
+        "primary": {
+          "mean": 0.00024289375869557261,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 0.07385441040416527,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "200",
+            "error": {
+              "mean": 0.0003106709336861968,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "200",
+            "error": {
+              "mean": 0.03199654817581177,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "200",
+            "error": {
+              "mean": 0.00022414587147068232,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {
+          "0.012": {
+            "mean": 0.0012638053158298135,
+            "std": 0.0,
+            "n": 1
+          },
+          "0.1": {
+            "mean": 0.000887606292963028,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "train_seconds": {
+          "mean": 310.55164670944214,
+          "std": 0.0,
+          "n": 1
+        },
+        "training": [
+          {
+            "status": "completed",
+            "seconds": 310.55164670944214,
+            "best_val": 0.00012393391807563603,
+            "best_iteration": 5000
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.0030654661000880878,
+          "std": 0.0,
+          "n": 1
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.0030654661000880878,
+            "neural_calls_per_step": 1,
+            "physics_substeps": 2
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          5000
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      }
+    ]
+  },
+  "burgers_fem": {
+    "horizon": "100",
+    "historical_best": {
+      "arm": "implicit_known_cn",
+      "error": {
+        "mean": 0.0035451927687972784,
+        "std": 0.0002085921999199241,
+        "n": 3
+      }
+    },
+    "historical_data_best": {
+      "arm": "node_lip",
+      "error": {
+        "mean": 0.007947058727343878,
+        "std": 0.0006082156773945634,
+        "n": 3
+      }
+    },
+    "runs": [
+      {
+        "arm": "physics_ars222_n2_known_closure_zero_equilibrium_gated",
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "config": {
+          "batch": 32,
+          "closure": true,
+          "closure_each_stage": false,
+          "closure_in_range": true,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            12,
+            25,
+            50,
+            100
+          ],
+          "iters": 5000,
+          "linear_mode": "known",
+          "long": 500,
+          "lr": 0.0001,
+          "lr_min": 1e-07,
+          "max_step": false,
+          "net": {
+            "layers": 4,
+            "modes": 24,
+            "pad": 16,
+            "width": 48
+          },
+          "scheme": "ars222",
+          "substeps": 2,
+          "val_every": 500,
+          "window": 8,
+          "zero_equilibrium": true
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 24,
+              "width": 48,
+              "layers": 4,
+              "pad": 16
+            },
+            "iters": 5000,
+            "window": 8,
+            "batch": 32,
+            "horizons": [
+              12,
+              25,
+              50,
+              100
+            ],
+            "long": 500,
+            "scheme": "ars222",
+            "substeps": 2,
+            "closure": true,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 0.0001,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": false,
+            "max_step": false,
+            "zero_equilibrium": true,
+            "lr_min": 1e-07,
+            "closure_in_range": true
+          },
+          {
+            "net": {
+              "modes": 24,
+              "width": 48,
+              "layers": 4,
+              "pad": 16
+            },
+            "iters": 5000,
+            "window": 8,
+            "batch": 32,
+            "horizons": [
+              12,
+              25,
+              50,
+              100
+            ],
+            "long": 500,
+            "scheme": "ars222",
+            "substeps": 2,
+            "closure": true,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 0.0001,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": false,
+            "max_step": false,
+            "zero_equilibrium": true,
+            "lr_min": 1e-07,
+            "closure_in_range": true
+          },
+          {
+            "net": {
+              "modes": 24,
+              "width": 48,
+              "layers": 4,
+              "pad": 16
+            },
+            "iters": 5000,
+            "window": 8,
+            "batch": 32,
+            "horizons": [
+              12,
+              25,
+              50,
+              100
+            ],
+            "long": 500,
+            "scheme": "ars222",
+            "substeps": 2,
+            "closure": true,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 0.0001,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": false,
+            "max_step": false,
+            "zero_equilibrium": true,
+            "lr_min": 1e-07,
+            "closure_in_range": true
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/burgers_fem/physics_ars222_n2_known_closure_zero_equilibrium_gated_s0/result.json",
+          "GenericOpsSplit/research_runs/20261110/runs/burgers_fem/physics_ars222_n2_known_closure_zero_equilibrium_gated_s1/result.json",
+          "GenericOpsSplit/research_runs/20261110/runs/burgers_fem/physics_ars222_n2_known_closure_zero_equilibrium_gated_s2/result.json"
+        ],
+        "statuses": [
+          "completed",
+          "completed",
+          "completed"
+        ],
+        "parameters": 237185,
+        "primary": {
+          "mean": 0.0009492881751308838,
+          "std": 8.10114487478995e-05,
+          "n": 3
+        },
+        "historical_ratio": 0.2677677173117257,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 3
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "100",
+            "error": {
+              "mean": 0.0009540792088955641,
+              "std": 7.57425839303867e-05,
+              "n": 3
+            }
+          },
+          "x4/1": {
+            "horizon": "100",
+            "error": {
+              "mean": 0.001134858699515462,
+              "std": 7.062057956593913e-05,
+              "n": 3
+            }
+          },
+          "x1/2": {
+            "horizon": "100",
+            "error": {
+              "mean": 0.0009521815615395705,
+              "std": 8.258217707876032e-05,
+              "n": 3
+            }
+          }
+        },
+        "ood": {
+          "0.002": {
+            "mean": 0.018556736409664154,
+            "std": 0.0,
+            "n": 3
+          },
+          "0.024": {
+            "mean": 0.0006195937748998404,
+            "std": 0.0,
+            "n": 3
+          }
+        },
+        "train_seconds": {
+          "mean": 1210.3217245737712,
+          "std": 8.395553977515249,
+          "n": 3
+        },
+        "training": [
+          {
+            "status": "completed",
+            "seconds": 1201.9358265399933,
+            "cpu_seconds": 1068.458457811,
+            "skipped_gradients": 0,
+            "resumes": 2,
+            "iterations": 5000,
+            "best_val": 0.00045450610923580825,
+            "best_iteration": 5000
+          },
+          {
+            "status": "completed",
+            "seconds": 1218.726901292801,
+            "cpu_seconds": 1085.365760993,
+            "skipped_gradients": 0,
+            "resumes": 2,
+            "iterations": 5000,
+            "best_val": 0.00039910964551381767,
+            "best_iteration": 5000
+          },
+          {
+            "status": "completed",
+            "seconds": 1210.3024458885193,
+            "cpu_seconds": 1076.206334687,
+            "skipped_gradients": 0,
+            "resumes": 2,
+            "iterations": 5000,
+            "best_val": 0.0003954024869017303,
+            "best_iteration": 5000
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.003737510700011626,
+          "std": 2.1691439871718503e-05,
+          "n": 3
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.0037598039001750295,
+            "neural_calls_per_step": 2,
+            "physics_substeps": 2,
+            "neural_sample_evaluations_per_step": 16
+          },
+          {
+            "batch": 8,
+            "seconds_per_step": 0.0037362524002674037,
+            "neural_calls_per_step": 2,
+            "physics_substeps": 2,
+            "neural_sample_evaluations_per_step": 16
+          },
+          {
+            "batch": 8,
+            "seconds_per_step": 0.0037164757995924447,
+            "neural_calls_per_step": 2,
+            "physics_substeps": 2,
+            "neural_sample_evaluations_per_step": 16
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          },
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          },
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          5000,
+          5000,
+          5000
+        ],
+        "provenance": [
+          {},
+          {},
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      },
+      {
+        "arm": "physics_ars222_n2_known_closure_zero_equilibrium",
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "config": {
+          "batch": 32,
+          "closure": true,
+          "closure_each_stage": false,
+          "closure_in_range": false,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            12,
+            25,
+            50,
+            100
+          ],
+          "iters": 5000,
+          "linear_mode": "known",
+          "long": 500,
+          "lr": 0.0001,
+          "lr_min": 1e-07,
+          "max_step": false,
+          "net": {
+            "layers": 4,
+            "modes": 24,
+            "pad": 16,
+            "width": 48
+          },
+          "scheme": "ars222",
+          "substeps": 2,
+          "val_every": 500,
+          "window": 8,
+          "zero_equilibrium": true
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 24,
+              "width": 48,
+              "layers": 4,
+              "pad": 16
+            },
+            "iters": 5000,
+            "window": 8,
+            "batch": 32,
+            "horizons": [
+              12,
+              25,
+              50,
+              100
+            ],
+            "long": 500,
+            "scheme": "ars222",
+            "substeps": 2,
+            "closure": true,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 0.0001,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": false,
+            "max_step": false,
+            "zero_equilibrium": true,
+            "lr_min": 1e-07
+          },
+          {
+            "net": {
+              "modes": 24,
+              "width": 48,
+              "layers": 4,
+              "pad": 16
+            },
+            "iters": 5000,
+            "window": 8,
+            "batch": 32,
+            "horizons": [
+              12,
+              25,
+              50,
+              100
+            ],
+            "long": 500,
+            "scheme": "ars222",
+            "substeps": 2,
+            "closure": true,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 0.0001,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": false,
+            "max_step": false,
+            "zero_equilibrium": true,
+            "lr_min": 1e-07
+          },
+          {
+            "net": {
+              "modes": 24,
+              "width": 48,
+              "layers": 4,
+              "pad": 16
+            },
+            "iters": 5000,
+            "window": 8,
+            "batch": 32,
+            "horizons": [
+              12,
+              25,
+              50,
+              100
+            ],
+            "long": 500,
+            "scheme": "ars222",
+            "substeps": 2,
+            "closure": true,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 0.0001,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": false,
+            "max_step": false,
+            "zero_equilibrium": true,
+            "lr_min": 1e-07
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/burgers_fem/physics_ars222_n2_known_closure_zero_equilibrium_s0/result.json",
+          "GenericOpsSplit/research_runs/20261110/runs/burgers_fem/physics_ars222_n2_known_closure_zero_equilibrium_s1/result.json",
+          "GenericOpsSplit/research_runs/20261110/runs/burgers_fem/physics_ars222_n2_known_closure_zero_equilibrium_s2/result.json"
+        ],
+        "statuses": [
+          "completed",
+          "completed",
+          "completed"
+        ],
+        "parameters": 237185,
+        "primary": {
+          "mean": 0.0009492881751308838,
+          "std": 8.10114487478995e-05,
+          "n": 3
+        },
+        "historical_ratio": 0.2677677173117257,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 3
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "100",
+            "error": {
+              "mean": 0.0009540792088955641,
+              "std": 7.57425839303867e-05,
+              "n": 3
+            }
+          },
+          "x4/1": {
+            "horizon": "100",
+            "error": {
+              "mean": 0.001134858699515462,
+              "std": 7.062057956593913e-05,
+              "n": 3
+            }
+          },
+          "x1/2": {
+            "horizon": "100",
+            "error": {
+              "mean": 0.0009521815615395705,
+              "std": 8.258217707876032e-05,
+              "n": 3
+            }
+          }
+        },
+        "ood": {
+          "0.002": {
+            "mean": 0.018480558569232624,
+            "std": 0.003493017903574672,
+            "n": 3
+          },
+          "0.024": {
+            "mean": 0.00762584526091814,
+            "std": 0.0025088924443722824,
+            "n": 3
+          }
+        },
+        "train_seconds": {
+          "mean": 1210.3217245737712,
+          "std": 8.395553977515249,
+          "n": 3
+        },
+        "training": [
+          {
+            "status": "completed",
+            "seconds": 1201.9358265399933,
+            "cpu_seconds": 1068.458457811,
+            "skipped_gradients": 0,
+            "resumes": 2,
+            "iterations": 5000,
+            "best_val": 0.00045450610923580825,
+            "best_iteration": 5000
+          },
+          {
+            "status": "completed",
+            "seconds": 1218.726901292801,
+            "cpu_seconds": 1085.365760993,
+            "skipped_gradients": 0,
+            "resumes": 2,
+            "iterations": 5000,
+            "best_val": 0.00039910964551381767,
+            "best_iteration": 5000
+          },
+          {
+            "status": "completed",
+            "seconds": 1210.3024458885193,
+            "cpu_seconds": 1076.206334687,
+            "skipped_gradients": 0,
+            "resumes": 2,
+            "iterations": 5000,
+            "best_val": 0.0003954024869017303,
+            "best_iteration": 5000
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.010267873466606639,
+          "std": 0.0024319089870450884,
+          "n": 3
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.01300026329990942,
+            "neural_calls_per_step": 2,
+            "physics_substeps": 2
+          },
+          {
+            "batch": 8,
+            "seconds_per_step": 0.008340683300048113,
+            "neural_calls_per_step": 2,
+            "physics_substeps": 2
+          },
+          {
+            "batch": 8,
+            "seconds_per_step": 0.009462673799862386,
+            "neural_calls_per_step": 2,
+            "physics_substeps": 2
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          },
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          },
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          5000,
+          5000,
+          5000
+        ],
+        "provenance": [
+          {},
+          {},
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      },
+      {
+        "arm": "physics_ars222_n2_known_closure_lr4",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 32,
+          "closure": true,
+          "closure_each_stage": false,
+          "closure_in_range": false,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            12,
+            25,
+            50,
+            100
+          ],
+          "iters": 5000,
+          "linear_mode": "known",
+          "long": 500,
+          "lr": 0.0001,
+          "lr_min": 1e-05,
+          "max_step": false,
+          "net": {
+            "layers": 4,
+            "modes": 24,
+            "pad": 16,
+            "width": 48
+          },
+          "scheme": "ars222",
+          "substeps": 2,
+          "val_every": 500,
+          "window": 8,
+          "zero_equilibrium": false
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 24,
+              "width": 48,
+              "layers": 4,
+              "pad": 16
+            },
+            "iters": 5000,
+            "window": 8,
+            "batch": 32,
+            "horizons": [
+              12,
+              25,
+              50,
+              100
+            ],
+            "long": 500,
+            "scheme": "ars222",
+            "substeps": 2,
+            "closure": true,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 0.0001,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": false,
+            "max_step": false,
+            "zero_equilibrium": false
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/burgers_fem/physics_ars222_n2_known_closure_lr4_s0/result.json"
+        ],
+        "statuses": [
+          "completed"
+        ],
+        "parameters": 237185,
+        "primary": {
+          "mean": 0.0012809809995815158,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 0.3613290117411849,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "100",
+            "error": {
+              "mean": 0.0012786900624632835,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "100",
+            "error": {
+              "mean": 0.0014162783045321703,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "100",
+            "error": {
+              "mean": 0.0012850414495915174,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {
+          "0.002": {
+            "mean": 0.03090784326195717,
+            "std": 0.0,
+            "n": 1
+          },
+          "0.024": {
+            "mean": 0.005418827757239342,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "train_seconds": {
+          "mean": 432.7569396495819,
+          "std": 0.0,
+          "n": 1
+        },
+        "training": [
+          {
+            "status": "completed",
+            "seconds": 432.7569396495819,
+            "cpu_seconds": 308.826238065,
+            "skipped_gradients": 0,
+            "resumes": 0,
+            "iterations": 5000,
+            "best_val": 0.0004787674406543374,
+            "best_iteration": 5000
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.0036152387998299672,
+          "std": 0.0,
+          "n": 1
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.0036152387998299672,
+            "neural_calls_per_step": 1,
+            "physics_substeps": 2
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          5000
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      },
+      {
+        "arm": "physics_ars222_n2_known_exact_capped",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 32,
+          "closure": false,
+          "closure_each_stage": false,
+          "closure_in_range": false,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            12,
+            25,
+            50,
+            100
+          ],
+          "iters": 5000,
+          "linear_mode": "known",
+          "long": 500,
+          "lr": 0.0001,
+          "lr_min": 1e-05,
+          "max_step": true,
+          "net": {
+            "layers": 4,
+            "modes": 24,
+            "pad": 16,
+            "width": 48
+          },
+          "scheme": "ars222",
+          "substeps": 2,
+          "val_every": 500,
+          "window": 8,
+          "zero_equilibrium": false
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 24,
+              "width": 48,
+              "layers": 4,
+              "pad": 16
+            },
+            "iters": 5000,
+            "window": 8,
+            "batch": 32,
+            "horizons": [
+              12,
+              25,
+              50,
+              100
+            ],
+            "long": 500,
+            "scheme": "ars222",
+            "substeps": 2,
+            "closure": false,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 0.0001,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": false,
+            "max_step": true
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/burgers_fem/physics_ars222_n2_known_exact_capped_s0/result.json"
+        ],
+        "statuses": [
+          "no_parameters"
+        ],
+        "parameters": 0,
+        "primary": {
+          "mean": 0.0041215429082512856,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 1.1625722991783989,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "100",
+            "error": {
+              "mean": 0.0041215429082512856,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "100",
+            "error": {
+              "mean": 0.0041215429082512856,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "100",
+            "error": {
+              "mean": 0.0041215429082512856,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {
+          "0.002": {
+            "mean": 0.018556736409664154,
+            "std": 0.0,
+            "n": 1
+          },
+          "0.024": {
+            "mean": 0.0006195937748998404,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "train_seconds": null,
+        "training": [
+          {
+            "status": "no_parameters",
+            "best_val": 0.0022304323501884937,
+            "best_iteration": 0
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.004237343100248836,
+          "std": 0.0,
+          "n": 1
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.004237343100248836,
+            "neural_calls_per_step": 0,
+            "physics_substeps": 2
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          0
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      },
+      {
+        "arm": "physics_ars222_n2_known_exact",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 32,
+          "closure": false,
+          "closure_each_stage": false,
+          "closure_in_range": false,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            12,
+            25,
+            50,
+            100
+          ],
+          "iters": 5000,
+          "linear_mode": "known",
+          "long": 500,
+          "lr": 0.0001,
+          "lr_min": 1e-05,
+          "max_step": false,
+          "net": {
+            "layers": 4,
+            "modes": 24,
+            "pad": 16,
+            "width": 48
+          },
+          "scheme": "ars222",
+          "substeps": 2,
+          "val_every": 500,
+          "window": 8,
+          "zero_equilibrium": false
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 24,
+              "width": 48,
+              "layers": 4,
+              "pad": 16
+            },
+            "iters": 5000,
+            "window": 8,
+            "batch": 32,
+            "horizons": [
+              12,
+              25,
+              50,
+              100
+            ],
+            "long": 500,
+            "scheme": "ars222",
+            "substeps": 2,
+            "closure": false,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 0.0001,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": false
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/burgers_fem/physics_ars222_n2_known_exact_s0/result.json"
+        ],
+        "statuses": [
+          "no_parameters"
+        ],
+        "parameters": 0,
+        "primary": {
+          "mean": 0.0041215429082512856,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 1.1625722991783989,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "100",
+            "error": {
+              "mean": 0.004116887226700783,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "100",
+            "error": {
+              "mean": 0.004140223376452923,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "100",
+            "error": {
+              "mean": 0.00412340834736824,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {
+          "0.002": {
+            "mean": 0.018556736409664154,
+            "std": 0.0,
+            "n": 1
+          },
+          "0.024": {
+            "mean": 0.0006195937748998404,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "train_seconds": null,
+        "training": [
+          {
+            "status": "no_parameters",
+            "best_val": 0.0022304323501884937,
+            "best_iteration": 0
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.010292689200286986,
+          "std": 0.0,
+          "n": 1
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.010292689200286986,
+            "neural_calls_per_step": 0,
+            "physics_substeps": 2
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          0
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      },
+      {
+        "arm": "physics_ars222_n2_known_closure_lr5",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 32,
+          "closure": true,
+          "closure_each_stage": false,
+          "closure_in_range": false,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            12,
+            25,
+            50,
+            100
+          ],
+          "iters": 5000,
+          "linear_mode": "known",
+          "long": 500,
+          "lr": 1e-05,
+          "lr_min": 1e-05,
+          "max_step": false,
+          "net": {
+            "layers": 4,
+            "modes": 24,
+            "pad": 16,
+            "width": 48
+          },
+          "scheme": "ars222",
+          "substeps": 2,
+          "val_every": 500,
+          "window": 8,
+          "zero_equilibrium": false
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 24,
+              "width": 48,
+              "layers": 4,
+              "pad": 16
+            },
+            "iters": 5000,
+            "window": 8,
+            "batch": 32,
+            "horizons": [
+              12,
+              25,
+              50,
+              100
+            ],
+            "long": 500,
+            "scheme": "ars222",
+            "substeps": 2,
+            "closure": true,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 1e-05,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": false,
+            "max_step": false,
+            "zero_equilibrium": false
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/burgers_fem/physics_ars222_n2_known_closure_lr5_s0/result.json"
+        ],
+        "statuses": [
+          "completed"
+        ],
+        "parameters": 237185,
+        "primary": {
+          "mean": 0.004632646217942238,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 1.3067402875003276,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "100",
+            "error": {
+              "mean": 0.004673956893384457,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "100",
+            "error": {
+              "mean": 0.004878877196460962,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "100",
+            "error": {
+              "mean": 0.004623791202902794,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {
+          "0.002": {
+            "mean": 0.021888215094804764,
+            "std": 0.0,
+            "n": 1
+          },
+          "0.024": {
+            "mean": 0.01319131813943386,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "train_seconds": {
+          "mean": 432.7554454803467,
+          "std": 0.0,
+          "n": 1
+        },
+        "training": [
+          {
+            "status": "completed",
+            "seconds": 432.7554454803467,
+            "cpu_seconds": 307.58576233499997,
+            "skipped_gradients": 0,
+            "resumes": 0,
+            "iterations": 5000,
+            "best_val": 0.001347432960756123,
+            "best_iteration": 5000
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.003616121199593181,
+          "std": 0.0,
+          "n": 1
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.003616121199593181,
+            "neural_calls_per_step": 1,
+            "physics_substeps": 2
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          5000
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      }
+    ]
+  },
+  "kdv": {
+    "horizon": "200",
+    "historical_best": {
+      "arm": "implicit_free_init",
+      "error": {
+        "mean": 0.09989603857199351,
+        "std": 0.007232918320655395,
+        "n": 3
+      }
+    },
+    "historical_data_best": {
+      "arm": "node",
+      "error": {
+        "mean": 0.3506223460038503,
+        "std": 0.08572833586909276,
+        "n": 3
+      }
+    },
+    "runs": [
+      {
+        "arm": "physics_etdrk4_n16_known_exact_capped",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 32,
+          "closure": false,
+          "closure_each_stage": false,
+          "closure_in_range": false,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            25,
+            50,
+            100,
+            200
+          ],
+          "iters": 5000,
+          "linear_mode": "known",
+          "long": 1000,
+          "lr": 0.0001,
+          "lr_min": 1e-05,
+          "max_step": true,
+          "net": {
+            "layers": 4,
+            "modes": 24,
+            "width": 48
+          },
+          "scheme": "etdrk4",
+          "substeps": 16,
+          "val_every": 500,
+          "window": 8,
+          "zero_equilibrium": false
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 24,
+              "width": 48,
+              "layers": 4
+            },
+            "iters": 5000,
+            "window": 8,
+            "batch": 32,
+            "horizons": [
+              25,
+              50,
+              100,
+              200
+            ],
+            "long": 1000,
+            "scheme": "etdrk4",
+            "substeps": 16,
+            "closure": false,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 0.0001,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": true,
+            "max_step": true,
+            "zero_equilibrium": false
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/kdv/physics_etdrk4_n16_known_exact_capped_s0/result.json"
+        ],
+        "statuses": [
+          "no_parameters"
+        ],
+        "parameters": 0,
+        "primary": {
+          "mean": 3.0370897547982167e-06,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 3.0402504425732895e-05,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "200",
+            "error": {
+              "mean": 2.9656234801223036e-06,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "200",
+            "error": {
+              "mean": 2.9757043193967547e-06,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "200",
+            "error": {
+              "mean": 3.39149573846953e-06,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {
+          "0.00026": {
+            "mean": 6.146564555820078e-05,
+            "std": 0.0,
+            "n": 1
+          },
+          "0.002": {
+            "mean": 1.1098505865447805e-06,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "train_seconds": null,
+        "training": [
+          {
+            "status": "no_parameters",
+            "best_val": 3.409442399515683e-07,
+            "best_iteration": 0
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.011794987300527282,
+          "std": 0.0,
+          "n": 1
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.011794987300527282,
+            "neural_calls_per_step": 0,
+            "physics_substeps": 16
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          0
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      },
+      {
+        "arm": "physics_ars222_n16_known_exact_capped",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 32,
+          "closure": false,
+          "closure_each_stage": false,
+          "closure_in_range": false,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            25,
+            50,
+            100,
+            200
+          ],
+          "iters": 5000,
+          "linear_mode": "known",
+          "long": 1000,
+          "lr": 0.0001,
+          "lr_min": 1e-05,
+          "max_step": true,
+          "net": {
+            "layers": 4,
+            "modes": 24,
+            "width": 48
+          },
+          "scheme": "ars222",
+          "substeps": 16,
+          "val_every": 500,
+          "window": 8,
+          "zero_equilibrium": false
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 24,
+              "width": 48,
+              "layers": 4
+            },
+            "iters": 5000,
+            "window": 8,
+            "batch": 32,
+            "horizons": [
+              25,
+              50,
+              100,
+              200
+            ],
+            "long": 1000,
+            "scheme": "ars222",
+            "substeps": 16,
+            "closure": false,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 0.0001,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": false,
+            "max_step": true
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/kdv/physics_ars222_n16_known_exact_capped_s0/result.json"
+        ],
+        "statuses": [
+          "no_parameters"
+        ],
+        "parameters": 0,
+        "primary": {
+          "mean": 0.0011289542308077216,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 0.011301291291887434,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "200",
+            "error": {
+              "mean": 0.0011289542308077216,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "200",
+            "error": {
+              "mean": 0.0011289542308077216,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "200",
+            "error": {
+              "mean": 0.0011289542308077216,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {
+          "0.00026": {
+            "mean": 0.006148222833871841,
+            "std": 0.0,
+            "n": 1
+          },
+          "0.002": {
+            "mean": 0.000757828529458493,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "train_seconds": null,
+        "training": [
+          {
+            "status": "no_parameters",
+            "best_val": 0.00010879155161092058,
+            "best_iteration": 0
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.011625335399730829,
+          "std": 0.0,
+          "n": 1
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.011625335399730829,
+            "neural_calls_per_step": 0,
+            "physics_substeps": 16
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          0
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      },
+      {
+        "arm": "physics_etdrk4_n4_known_exact",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 32,
+          "closure": false,
+          "closure_each_stage": false,
+          "closure_in_range": false,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            25,
+            50,
+            100,
+            200
+          ],
+          "iters": 5000,
+          "linear_mode": "known",
+          "long": 1000,
+          "lr": 0.0001,
+          "lr_min": 1e-05,
+          "max_step": false,
+          "net": {
+            "layers": 4,
+            "modes": 24,
+            "width": 48
+          },
+          "scheme": "etdrk4",
+          "substeps": 4,
+          "val_every": 500,
+          "window": 8,
+          "zero_equilibrium": false
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 24,
+              "width": 48,
+              "layers": 4
+            },
+            "iters": 5000,
+            "window": 8,
+            "batch": 32,
+            "horizons": [
+              25,
+              50,
+              100,
+              200
+            ],
+            "long": 1000,
+            "scheme": "etdrk4",
+            "substeps": 4,
+            "closure": false,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 0.0001,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": true
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/kdv/physics_etdrk4_n4_known_exact_s0/result.json"
+        ],
+        "statuses": [
+          "no_parameters"
+        ],
+        "parameters": 0,
+        "primary": {
+          "mean": 0.0014408398419618607,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 0.01442339318514087,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "200",
+            "error": {
+              "mean": 0.016797855496406555,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "200",
+            "error": {
+              "mean": 0.09603696316480637,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "200",
+            "error": {
+              "mean": 7.0489666541107e-05,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {
+          "0.00026": {
+            "mean": 0.027576619759202003,
+            "std": 0.0,
+            "n": 1
+          },
+          "0.002": {
+            "mean": 1.299067480431404e-05,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "train_seconds": null,
+        "training": [
+          {
+            "status": "no_parameters",
+            "best_val": 6.822206341894343e-05,
+            "best_iteration": 0
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.007097064299887279,
+          "std": 0.0,
+          "n": 1
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.007097064299887279,
+            "neural_calls_per_step": 0,
+            "physics_substeps": 4
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          0
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      },
+      {
+        "arm": "physics_ars222_n4_known_closure_lr4",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 32,
+          "closure": true,
+          "closure_each_stage": false,
+          "closure_in_range": false,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            25,
+            50,
+            100,
+            200
+          ],
+          "iters": 5000,
+          "linear_mode": "known",
+          "long": 1000,
+          "lr": 0.0001,
+          "lr_min": 1e-05,
+          "max_step": false,
+          "net": {
+            "layers": 4,
+            "modes": 24,
+            "width": 48
+          },
+          "scheme": "ars222",
+          "substeps": 4,
+          "val_every": 500,
+          "window": 8,
+          "zero_equilibrium": false
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 24,
+              "width": 48,
+              "layers": 4
+            },
+            "iters": 5000,
+            "window": 8,
+            "batch": 32,
+            "horizons": [
+              25,
+              50,
+              100,
+              200
+            ],
+            "long": 1000,
+            "scheme": "ars222",
+            "substeps": 4,
+            "closure": true,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 0.0001,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": false,
+            "max_step": false,
+            "zero_equilibrium": false
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/kdv/physics_ars222_n4_known_closure_lr4_s0/result.json"
+        ],
+        "statuses": [
+          "completed"
+        ],
+        "parameters": 237137,
+        "primary": {
+          "mean": 0.01859566941857338,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 0.18615021861123923,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "200",
+            "error": {
+              "mean": 0.12897427380084991,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "200",
+            "error": {
+              "mean": 0.493332177400589,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "200",
+            "error": {
+              "mean": 0.03021925687789917,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {
+          "0.00026": {
+            "mean": 0.07112159579992294,
+            "std": 0.0,
+            "n": 1
+          },
+          "0.002": {
+            "mean": 0.014494583010673523,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "train_seconds": {
+          "mean": 501.04956579208374,
+          "std": 0.0,
+          "n": 1
+        },
+        "training": [
+          {
+            "status": "completed",
+            "seconds": 501.04956579208374,
+            "skipped_gradients": 0,
+            "best_val": 0.001524477731436491,
+            "best_iteration": 5000
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.003717020899784984,
+          "std": 0.0,
+          "n": 1
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.003717020899784984,
+            "neural_calls_per_step": 1,
+            "physics_substeps": 4
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          5000
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      },
+      {
+        "arm": "physics_ars222_n4_known_exact",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 32,
+          "closure": false,
+          "closure_each_stage": false,
+          "closure_in_range": false,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            25,
+            50,
+            100,
+            200
+          ],
+          "iters": 5000,
+          "linear_mode": "known",
+          "long": 1000,
+          "lr": 0.0001,
+          "lr_min": 1e-05,
+          "max_step": false,
+          "net": {
+            "layers": 4,
+            "modes": 24,
+            "width": 48
+          },
+          "scheme": "ars222",
+          "substeps": 4,
+          "val_every": 500,
+          "window": 8,
+          "zero_equilibrium": false
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 24,
+              "width": 48,
+              "layers": 4
+            },
+            "iters": 5000,
+            "window": 8,
+            "batch": 32,
+            "horizons": [
+              25,
+              50,
+              100,
+              200
+            ],
+            "long": 1000,
+            "scheme": "ars222",
+            "substeps": 4,
+            "closure": false,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 0.0001,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": false
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/kdv/physics_ars222_n4_known_exact_s0/result.json"
+        ],
+        "statuses": [
+          "no_parameters"
+        ],
+        "parameters": 0,
+        "primary": {
+          "mean": 0.029879773035645485,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 0.2991086880198117,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "200",
+            "error": {
+              "mean": 0.14399632811546326,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "200",
+            "error": {
+              "mean": 0.5048248171806335,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "200",
+            "error": {
+              "mean": 0.004502725787460804,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {
+          "0.00026": {
+            "mean": 0.2410295307636261,
+            "std": 0.0,
+            "n": 1
+          },
+          "0.002": {
+            "mean": 0.0020772689022123814,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "train_seconds": null,
+        "training": [
+          {
+            "status": "no_parameters",
+            "best_val": 0.002339706290513277,
+            "best_iteration": 0
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.004287998999643605,
+          "std": 0.0,
+          "n": 1
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.004287998999643605,
+            "neural_calls_per_step": 0,
+            "physics_substeps": 4
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          0
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      },
+      {
+        "arm": "physics_ars222_n4_known_closure_lr5",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 32,
+          "closure": true,
+          "closure_each_stage": false,
+          "closure_in_range": false,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            25,
+            50,
+            100,
+            200
+          ],
+          "iters": 5000,
+          "linear_mode": "known",
+          "long": 1000,
+          "lr": 1e-05,
+          "lr_min": 1e-05,
+          "max_step": false,
+          "net": {
+            "layers": 4,
+            "modes": 24,
+            "width": 48
+          },
+          "scheme": "ars222",
+          "substeps": 4,
+          "val_every": 500,
+          "window": 8,
+          "zero_equilibrium": false
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 24,
+              "width": 48,
+              "layers": 4
+            },
+            "iters": 5000,
+            "window": 8,
+            "batch": 32,
+            "horizons": [
+              25,
+              50,
+              100,
+              200
+            ],
+            "long": 1000,
+            "scheme": "ars222",
+            "substeps": 4,
+            "closure": true,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 1e-05,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": false,
+            "max_step": false,
+            "zero_equilibrium": false
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/kdv/physics_ars222_n4_known_closure_lr5_s0/result.json"
+        ],
+        "statuses": [
+          "completed"
+        ],
+        "parameters": 237137,
+        "primary": {
+          "mean": 0.03117934986948967,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 0.31211798100501453,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "200",
+            "error": {
+              "mean": 0.11022865772247314,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "200",
+            "error": {
+              "mean": 0.4835550785064697,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "200",
+            "error": {
+              "mean": 0.04863905906677246,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {
+          "0.00026": {
+            "mean": 0.13189579546451569,
+            "std": 0.0,
+            "n": 1
+          },
+          "0.002": {
+            "mean": 0.0580744631588459,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "train_seconds": {
+          "mean": 506.82447028160095,
+          "std": 0.0,
+          "n": 1
+        },
+        "training": [
+          {
+            "status": "completed",
+            "seconds": 506.82447028160095,
+            "skipped_gradients": 0,
+            "best_val": 0.0021996779832988977,
+            "best_iteration": 5000
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.0034724158002063634,
+          "std": 0.0,
+          "n": 1
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.0034724158002063634,
+            "neural_calls_per_step": 1,
+            "physics_substeps": 4
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          5000
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      }
+    ]
+  },
+  "ks": {
+    "horizon": "50",
+    "historical_best": {
+      "arm": "implicit_free_tf",
+      "error": {
+        "mean": 0.29875967899958294,
+        "std": 0.04405772518928701,
+        "n": 3
+      }
+    },
+    "historical_data_best": {
+      "arm": "node",
+      "error": {
+        "mean": 0.32610923051834106,
+        "std": 0.025666089816572726,
+        "n": 3
+      }
+    },
+    "runs": [
+      {
+        "arm": "physics_etdrk4_n4_known_exact_capped",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 32,
+          "closure": false,
+          "closure_each_stage": false,
+          "closure_in_range": false,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            5,
+            10,
+            20,
+            50
+          ],
+          "iters": 5000,
+          "linear_mode": "known",
+          "long": 1000,
+          "lr": 0.0001,
+          "lr_min": 1e-05,
+          "max_step": true,
+          "net": {
+            "layers": 4,
+            "modes": 32,
+            "width": 48
+          },
+          "scheme": "etdrk4",
+          "substeps": 4,
+          "val_every": 500,
+          "window": 8,
+          "zero_equilibrium": false
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 32,
+              "width": 48,
+              "layers": 4
+            },
+            "iters": 5000,
+            "window": 8,
+            "batch": 32,
+            "horizons": [
+              5,
+              10,
+              20,
+              50
+            ],
+            "long": 1000,
+            "scheme": "etdrk4",
+            "substeps": 4,
+            "closure": false,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 0.0001,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": true,
+            "max_step": true,
+            "zero_equilibrium": false
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/ks/physics_etdrk4_n4_known_exact_capped_s0/result.json"
+        ],
+        "statuses": [
+          "no_parameters"
+        ],
+        "parameters": 0,
+        "primary": {
+          "mean": 0.04755565524101257,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 0.15917695252671282,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "50",
+            "error": {
+              "mean": 0.047555770725011826,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "20",
+            "error": {
+              "mean": 0.0049232542514801025,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "50",
+            "error": {
+              "mean": 0.047556109726428986,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {},
+        "train_seconds": null,
+        "training": [
+          {
+            "status": "no_parameters",
+            "best_val": 0.04940450191497803,
+            "best_iteration": 0
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.003285862300253939,
+          "std": 0.0,
+          "n": 1
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.003285862300253939,
+            "neural_calls_per_step": 0,
+            "physics_substeps": 4
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          0
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": {
+          "mean": 1.6647112917227576,
+          "std": 0.0,
+          "n": 1
+        },
+        "ks_energy": {
+          "mean": 1.0028144545414814,
+          "std": 0.0,
+          "n": 1
+        }
+      },
+      {
+        "arm": "physics_etdrk4_n4_known_exact",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 32,
+          "closure": false,
+          "closure_each_stage": false,
+          "closure_in_range": false,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            5,
+            10,
+            20,
+            50
+          ],
+          "iters": 5000,
+          "linear_mode": "known",
+          "long": 1000,
+          "lr": 0.0001,
+          "lr_min": 1e-05,
+          "max_step": false,
+          "net": {
+            "layers": 4,
+            "modes": 32,
+            "width": 48
+          },
+          "scheme": "etdrk4",
+          "substeps": 4,
+          "val_every": 500,
+          "window": 8,
+          "zero_equilibrium": false
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 32,
+              "width": 48,
+              "layers": 4
+            },
+            "iters": 5000,
+            "window": 8,
+            "batch": 32,
+            "horizons": [
+              5,
+              10,
+              20,
+              50
+            ],
+            "long": 1000,
+            "scheme": "etdrk4",
+            "substeps": 4,
+            "closure": false,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 0.0001,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": true
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/ks/physics_etdrk4_n4_known_exact_s0/result.json"
+        ],
+        "statuses": [
+          "no_parameters"
+        ],
+        "parameters": 0,
+        "primary": {
+          "mean": 0.04755565524101257,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 0.15917695252671282,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "50",
+            "error": {
+              "mean": 0.11055923998355865,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "20",
+            "error": {
+              "mean": 0.054886989295482635,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "50",
+            "error": {
+              "mean": 0.04999769479036331,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {},
+        "train_seconds": null,
+        "training": [
+          {
+            "status": "no_parameters",
+            "best_val": 0.04940450191497803,
+            "best_iteration": 0
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.004200272000161931,
+          "std": 0.0,
+          "n": 1
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.004200272000161931,
+            "neural_calls_per_step": 0,
+            "physics_substeps": 4
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          0
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": {
+          "mean": 1.6647112917227576,
+          "std": 0.0,
+          "n": 1
+        },
+        "ks_energy": {
+          "mean": 1.0028144545414814,
+          "std": 0.0,
+          "n": 1
+        }
+      },
+      {
+        "arm": "physics_ars222_n16_known_exact_capped",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 32,
+          "closure": false,
+          "closure_each_stage": false,
+          "closure_in_range": false,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            5,
+            10,
+            20,
+            50
+          ],
+          "iters": 5000,
+          "linear_mode": "known",
+          "long": 1000,
+          "lr": 0.0001,
+          "lr_min": 1e-05,
+          "max_step": true,
+          "net": {
+            "layers": 4,
+            "modes": 32,
+            "width": 48
+          },
+          "scheme": "ars222",
+          "substeps": 16,
+          "val_every": 500,
+          "window": 8,
+          "zero_equilibrium": false
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 32,
+              "width": 48,
+              "layers": 4
+            },
+            "iters": 5000,
+            "window": 8,
+            "batch": 32,
+            "horizons": [
+              5,
+              10,
+              20,
+              50
+            ],
+            "long": 1000,
+            "scheme": "ars222",
+            "substeps": 16,
+            "closure": false,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 0.0001,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": false,
+            "max_step": true
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/ks/physics_ars222_n16_known_exact_capped_s0/result.json"
+        ],
+        "statuses": [
+          "no_parameters"
+        ],
+        "parameters": 0,
+        "primary": {
+          "mean": 0.05649435892701149,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 0.18909633025509562,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "50",
+            "error": {
+              "mean": 0.05649435892701149,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "20",
+            "error": {
+              "mean": 0.005181705579161644,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "50",
+            "error": {
+              "mean": 0.05649435892701149,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {},
+        "train_seconds": null,
+        "training": [
+          {
+            "status": "no_parameters",
+            "best_val": 0.04443679749965668,
+            "best_iteration": 0
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.01929492150011356,
+          "std": 0.0,
+          "n": 1
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.01929492150011356,
+            "neural_calls_per_step": 0,
+            "physics_substeps": 16
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          0
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": {
+          "mean": 1.8808422235677984,
+          "std": 0.0,
+          "n": 1
+        },
+        "ks_energy": {
+          "mean": 1.0087296873686464,
+          "std": 0.0,
+          "n": 1
+        }
+      },
+      {
+        "arm": "physics_ars222_n4_known_closure_lr4",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 32,
+          "closure": true,
+          "closure_each_stage": false,
+          "closure_in_range": false,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            5,
+            10,
+            20,
+            50
+          ],
+          "iters": 5000,
+          "linear_mode": "known",
+          "long": 1000,
+          "lr": 0.0001,
+          "lr_min": 1e-05,
+          "max_step": false,
+          "net": {
+            "layers": 4,
+            "modes": 32,
+            "width": 48
+          },
+          "scheme": "ars222",
+          "substeps": 4,
+          "val_every": 500,
+          "window": 8,
+          "zero_equilibrium": false
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 32,
+              "width": 48,
+              "layers": 4
+            },
+            "iters": 5000,
+            "window": 8,
+            "batch": 32,
+            "horizons": [
+              5,
+              10,
+              20,
+              50
+            ],
+            "long": 1000,
+            "scheme": "ars222",
+            "substeps": 4,
+            "closure": true,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 0.0001,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": false,
+            "max_step": false,
+            "zero_equilibrium": false
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/ks/physics_ars222_n4_known_closure_lr4_s0/result.json"
+        ],
+        "statuses": [
+          "completed"
+        ],
+        "parameters": 310865,
+        "primary": {
+          "mean": 0.08038029074668884,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 0.26904664985532084,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "50",
+            "error": {
+              "mean": 0.3076615035533905,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "20",
+            "error": {
+              "mean": 0.16494883596897125,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "50",
+            "error": {
+              "mean": 0.23392285406589508,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {},
+        "train_seconds": {
+          "mean": 783.0414304733276,
+          "std": 0.0,
+          "n": 1
+        },
+        "training": [
+          {
+            "status": "completed",
+            "seconds": 783.0414304733276,
+            "cpu_seconds": 226.206214703,
+            "skipped_gradients": 0,
+            "resumes": 1,
+            "iterations": 5000,
+            "best_val": 0.08892755210399628,
+            "best_iteration": 4500,
+            "cpu_seconds_complete": false,
+            "cpu_seconds_note": "The first approximately 450 CPU-second worker segment predates the cumulative CPU counter and is omitted from cpu_seconds. The measured value is preserved; cumulative wall time and all 5000 training iterations remain valid."
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.009761851499933982,
+          "std": 0.0,
+          "n": 1
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.009761851499933982,
+            "neural_calls_per_step": 1,
+            "physics_substeps": 4
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          4500
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": {
+          "mean": 1.7155462369406518,
+          "std": 0.0,
+          "n": 1
+        },
+        "ks_energy": {
+          "mean": 0.9964325466683743,
+          "std": 0.0,
+          "n": 1
+        }
+      },
+      {
+        "arm": "physics_ars222_n4_known_closure_lr5",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 32,
+          "closure": true,
+          "closure_each_stage": false,
+          "closure_in_range": false,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            5,
+            10,
+            20,
+            50
+          ],
+          "iters": 5000,
+          "linear_mode": "known",
+          "long": 1000,
+          "lr": 1e-05,
+          "lr_min": 1e-05,
+          "max_step": false,
+          "net": {
+            "layers": 4,
+            "modes": 32,
+            "width": 48
+          },
+          "scheme": "ars222",
+          "substeps": 4,
+          "val_every": 500,
+          "window": 8,
+          "zero_equilibrium": false
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 32,
+              "width": 48,
+              "layers": 4
+            },
+            "iters": 5000,
+            "window": 8,
+            "batch": 32,
+            "horizons": [
+              5,
+              10,
+              20,
+              50
+            ],
+            "long": 1000,
+            "scheme": "ars222",
+            "substeps": 4,
+            "closure": true,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 1e-05,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": false,
+            "max_step": false,
+            "zero_equilibrium": false
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/ks/physics_ars222_n4_known_closure_lr5_s0/result.json"
+        ],
+        "statuses": [
+          "completed"
+        ],
+        "parameters": 310865,
+        "primary": {
+          "mean": 0.14502283930778503,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 0.4854163714240283,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "50",
+            "error": {
+              "mean": 0.3385397791862488,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "20",
+            "error": {
+              "mean": 0.16717571020126343,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "50",
+            "error": {
+              "mean": 0.20499840378761292,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {},
+        "train_seconds": {
+          "mean": 787.9881618022919,
+          "std": 0.0,
+          "n": 1
+        },
+        "training": [
+          {
+            "status": "completed",
+            "seconds": 787.9881618022919,
+            "cpu_seconds": 232.509344301,
+            "skipped_gradients": 0,
+            "resumes": 1,
+            "iterations": 5000,
+            "best_val": 0.0971304327249527,
+            "best_iteration": 3000,
+            "cpu_seconds_complete": false,
+            "cpu_seconds_note": "The first approximately 450 CPU-second worker segment predates the cumulative CPU counter and is omitted from cpu_seconds. The measured value is preserved; cumulative wall time and all 5000 training iterations remain valid."
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.008404018500004894,
+          "std": 0.0,
+          "n": 1
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.008404018500004894,
+            "neural_calls_per_step": 1,
+            "physics_substeps": 4
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          3000
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": {
+          "mean": 1.6807438208001637,
+          "std": 0.0,
+          "n": 1
+        },
+        "ks_energy": {
+          "mean": 1.0028476630374197,
+          "std": 0.0,
+          "n": 1
+        }
+      },
+      {
+        "arm": "physics_ars222_n4_known_exact",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 32,
+          "closure": false,
+          "closure_each_stage": false,
+          "closure_in_range": false,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            5,
+            10,
+            20,
+            50
+          ],
+          "iters": 5000,
+          "linear_mode": "known",
+          "long": 1000,
+          "lr": 0.0001,
+          "lr_min": 1e-05,
+          "max_step": false,
+          "net": {
+            "layers": 4,
+            "modes": 32,
+            "width": 48
+          },
+          "scheme": "ars222",
+          "substeps": 4,
+          "val_every": 500,
+          "window": 8,
+          "zero_equilibrium": false
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 32,
+              "width": 48,
+              "layers": 4
+            },
+            "iters": 5000,
+            "window": 8,
+            "batch": 32,
+            "horizons": [
+              5,
+              10,
+              20,
+              50
+            ],
+            "long": 1000,
+            "scheme": "ars222",
+            "substeps": 4,
+            "closure": false,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 0.0001,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": false
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/ks/physics_ars222_n4_known_exact_s0/result.json"
+        ],
+        "statuses": [
+          "no_parameters"
+        ],
+        "parameters": 0,
+        "primary": {
+          "mean": 0.2399672269821167,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 0.8032115571474144,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "50",
+            "error": {
+              "mean": 0.37578338384628296,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "20",
+            "error": {
+              "mean": 0.1797219216823578,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "50",
+            "error": {
+              "mean": 0.08281567692756653,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {},
+        "train_seconds": null,
+        "training": [
+          {
+            "status": "no_parameters",
+            "best_val": 0.13765113055706024,
+            "best_iteration": 0
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.004305631200259086,
+          "std": 0.0,
+          "n": 1
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.004305631200259086,
+            "neural_calls_per_step": 0,
+            "physics_substeps": 4
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          0
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": {
+          "mean": 1.8787207711297487,
+          "std": 0.0,
+          "n": 1
+        },
+        "ks_energy": {
+          "mean": 1.001925295600474,
+          "std": 0.0,
+          "n": 1
+        }
+      }
+    ]
+  },
+  "ns2d": {
+    "horizon": "80",
+    "historical_best": {
+      "arm": "implicit_struct_tf",
+      "error": {
+        "mean": 0.24620727698008218,
+        "std": 0.011307058302042525,
+        "n": 3
+      }
+    },
+    "historical_data_best": {
+      "arm": "node",
+      "error": {
+        "mean": 0.25948257247606915,
+        "std": 0.013748100622441773,
+        "n": 3
+      }
+    },
+    "runs": [
+      {
+        "arm": "physics_etdrk4_n16_known_exact_capped",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 16,
+          "closure": false,
+          "closure_each_stage": false,
+          "closure_in_range": false,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            10,
+            20,
+            40,
+            80
+          ],
+          "iters": 4000,
+          "linear_mode": "known",
+          "long": 400,
+          "lr": 0.0001,
+          "lr_min": 1e-05,
+          "max_step": true,
+          "net": {
+            "layers": 4,
+            "modes": 12,
+            "width": 32
+          },
+          "scheme": "etdrk4",
+          "substeps": 16,
+          "val_every": 500,
+          "window": 6,
+          "zero_equilibrium": false
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 12,
+              "width": 32,
+              "layers": 4
+            },
+            "iters": 4000,
+            "window": 6,
+            "batch": 16,
+            "horizons": [
+              10,
+              20,
+              40,
+              80
+            ],
+            "long": 400,
+            "scheme": "etdrk4",
+            "substeps": 16,
+            "closure": false,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 0.0001,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": true,
+            "max_step": true,
+            "zero_equilibrium": false
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/ns2d/physics_etdrk4_n16_known_exact_capped_s0/result.json"
+        ],
+        "statuses": [
+          "no_parameters"
+        ],
+        "parameters": 0,
+        "primary": {
+          "mean": 6.802257246363297e-08,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 2.7628173016647227e-07,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "80",
+            "error": {
+              "mean": 6.699227839135347e-08,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "80",
+            "error": {
+              "mean": 6.669755236998753e-08,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "80",
+            "error": {
+              "mean": 6.781453976145713e-08,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {
+          "0.0006": {
+            "mean": 1.909696038637776e-06,
+            "std": 0.0,
+            "n": 1
+          },
+          "0.007": {
+            "mean": 4.176792600674162e-08,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "train_seconds": null,
+        "training": [
+          {
+            "status": "no_parameters",
+            "best_val": 5.1066752604356225e-08,
+            "best_iteration": 0
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.5707195182003488,
+          "std": 0.0,
+          "n": 1
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.5707195182003488,
+            "neural_calls_per_step": 0,
+            "physics_substeps": 16
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          0
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      },
+      {
+        "arm": "physics_ars222_n8_known_closure_lr4_screen500",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 16,
+          "closure": true,
+          "closure_each_stage": false,
+          "closure_in_range": false,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            10,
+            20,
+            40,
+            80
+          ],
+          "iters": 500,
+          "linear_mode": "known",
+          "long": 400,
+          "lr": 0.0001,
+          "lr_min": 1e-05,
+          "max_step": false,
+          "net": {
+            "layers": 4,
+            "modes": 12,
+            "width": 32
+          },
+          "planned_iters": 4000,
+          "scheme": "ars222",
+          "substeps": 8,
+          "val_every": 500,
+          "window": 6,
+          "zero_equilibrium": false
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 12,
+              "width": 32,
+              "layers": 4
+            },
+            "iters": 500,
+            "window": 6,
+            "batch": 16,
+            "horizons": [
+              10,
+              20,
+              40,
+              80
+            ],
+            "long": 400,
+            "scheme": "ars222",
+            "substeps": 8,
+            "closure": true,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 0.0001,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": false,
+            "max_step": false,
+            "zero_equilibrium": false,
+            "planned_iters": 4000
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/ns2d/physics_ars222_n8_known_closure_lr4_screen500_s0/result.json"
+        ],
+        "statuses": [
+          "screened"
+        ],
+        "parameters": 1188353,
+        "primary": {
+          "mean": 8.789810817688704e-05,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 0.00035700857121293727,
+        "long_bounded": {
+          "mean": 0.9375,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "80",
+            "error": {
+              "mean": 0.6885758638381958,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "80",
+            "error": {
+              "mean": 1.1250475645065308,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "80",
+            "error": {
+              "mean": 3.670948353828862e-05,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {
+          "0.0006": {
+            "mean": 2.0,
+            "std": 0.0,
+            "n": 1
+          },
+          "0.007": {
+            "mean": 6.307580406428315e-06,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "train_seconds": {
+          "mean": 572.9869825839996,
+          "std": 0.0,
+          "n": 1
+        },
+        "training": [
+          {
+            "status": "screened",
+            "seconds": 572.9869825839996,
+            "cpu_seconds": 525.1091836209999,
+            "resumes": 1,
+            "iterations": 500,
+            "skipped_gradients": 0,
+            "best_val": 2.6697616704041138e-05,
+            "best_iteration": 0
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.014601462499558692,
+          "std": 0.0,
+          "n": 1
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.014601462499558692,
+            "neural_calls_per_step": 1,
+            "physics_substeps": 8
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          0
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      },
+      {
+        "arm": "physics_ars222_n8_known_closure_lr5_screen500",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 16,
+          "closure": true,
+          "closure_each_stage": false,
+          "closure_in_range": false,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            10,
+            20,
+            40,
+            80
+          ],
+          "iters": 500,
+          "linear_mode": "known",
+          "long": 400,
+          "lr": 1e-05,
+          "lr_min": 1e-05,
+          "max_step": false,
+          "net": {
+            "layers": 4,
+            "modes": 12,
+            "width": 32
+          },
+          "planned_iters": 4000,
+          "scheme": "ars222",
+          "substeps": 8,
+          "val_every": 500,
+          "window": 6,
+          "zero_equilibrium": false
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 12,
+              "width": 32,
+              "layers": 4
+            },
+            "iters": 500,
+            "window": 6,
+            "batch": 16,
+            "horizons": [
+              10,
+              20,
+              40,
+              80
+            ],
+            "long": 400,
+            "scheme": "ars222",
+            "substeps": 8,
+            "closure": true,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 1e-05,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": false,
+            "max_step": false,
+            "zero_equilibrium": false,
+            "planned_iters": 4000
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/ns2d/physics_ars222_n8_known_closure_lr5_screen500_s0/result.json"
+        ],
+        "statuses": [
+          "screened"
+        ],
+        "parameters": 1188353,
+        "primary": {
+          "mean": 8.789810817688704e-05,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 0.00035700857121293727,
+        "long_bounded": {
+          "mean": 0.9375,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "80",
+            "error": {
+              "mean": 0.6885758638381958,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "80",
+            "error": {
+              "mean": 1.1250475645065308,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "80",
+            "error": {
+              "mean": 3.670948353828862e-05,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {
+          "0.0006": {
+            "mean": 2.0,
+            "std": 0.0,
+            "n": 1
+          },
+          "0.007": {
+            "mean": 6.307580406428315e-06,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "train_seconds": {
+          "mean": 568.5333914756775,
+          "std": 0.0,
+          "n": 1
+        },
+        "training": [
+          {
+            "status": "screened",
+            "seconds": 568.5333914756775,
+            "cpu_seconds": 521.399893893,
+            "resumes": 1,
+            "iterations": 500,
+            "skipped_gradients": 0,
+            "best_val": 2.6697616704041138e-05,
+            "best_iteration": 0
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.009079721799935214,
+          "std": 0.0,
+          "n": 1
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.009079721799935214,
+            "neural_calls_per_step": 1,
+            "physics_substeps": 8
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          0
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      },
+      {
+        "arm": "physics_ars222_n8_known_exact",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 16,
+          "closure": false,
+          "closure_each_stage": false,
+          "closure_in_range": false,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            10,
+            20,
+            40,
+            80
+          ],
+          "iters": 4000,
+          "linear_mode": "known",
+          "long": 400,
+          "lr": 0.0001,
+          "lr_min": 1e-05,
+          "max_step": false,
+          "net": {
+            "layers": 4,
+            "modes": 12,
+            "width": 32
+          },
+          "scheme": "ars222",
+          "substeps": 8,
+          "val_every": 500,
+          "window": 6,
+          "zero_equilibrium": false
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 12,
+              "width": 32,
+              "layers": 4
+            },
+            "iters": 4000,
+            "window": 6,
+            "batch": 16,
+            "horizons": [
+              10,
+              20,
+              40,
+              80
+            ],
+            "long": 400,
+            "scheme": "ars222",
+            "substeps": 8,
+            "closure": false,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 0.0001,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": false
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/ns2d/physics_ars222_n8_known_exact_s0/result.json"
+        ],
+        "statuses": [
+          "no_parameters"
+        ],
+        "parameters": 0,
+        "primary": {
+          "mean": 8.789810817688704e-05,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 0.00035700857121293727,
+        "long_bounded": {
+          "mean": 0.9375,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "80",
+            "error": {
+              "mean": 0.6885758638381958,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "80",
+            "error": {
+              "mean": 1.1250475645065308,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "80",
+            "error": {
+              "mean": 3.670948353828862e-05,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {
+          "0.0006": {
+            "mean": 2.0,
+            "std": 0.0,
+            "n": 1
+          },
+          "0.007": {
+            "mean": 6.307580406428315e-06,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "train_seconds": null,
+        "training": [
+          {
+            "status": "no_parameters",
+            "best_val": 2.6697616704041138e-05,
+            "best_iteration": 0
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.019965286000660852,
+          "std": 0.0,
+          "n": 1
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.019965286000660852,
+            "neural_calls_per_step": 0,
+            "physics_substeps": 8
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          0
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      },
+      {
+        "arm": "physics_ars222_n32_known_exact_capped",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 16,
+          "closure": false,
+          "closure_each_stage": false,
+          "closure_in_range": false,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            10,
+            20,
+            40,
+            80
+          ],
+          "iters": 4000,
+          "linear_mode": "known",
+          "long": 400,
+          "lr": 0.0001,
+          "lr_min": 1e-05,
+          "max_step": true,
+          "net": {
+            "layers": 4,
+            "modes": 12,
+            "width": 32
+          },
+          "scheme": "ars222",
+          "substeps": 32,
+          "val_every": 500,
+          "window": 6,
+          "zero_equilibrium": false
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 12,
+              "width": 32,
+              "layers": 4
+            },
+            "iters": 4000,
+            "window": 6,
+            "batch": 16,
+            "horizons": [
+              10,
+              20,
+              40,
+              80
+            ],
+            "long": 400,
+            "scheme": "ars222",
+            "substeps": 32,
+            "closure": false,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 0.0001,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": false,
+            "max_step": true
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/ns2d/physics_ars222_n32_known_exact_capped_s0/result.json"
+        ],
+        "statuses": [
+          "no_parameters"
+        ],
+        "parameters": 0,
+        "primary": {
+          "mean": 9.678212518338114e-05,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 0.0003930920579216295,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "80",
+            "error": {
+              "mean": 9.678212518338114e-05,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "80",
+            "error": {
+              "mean": 9.678212518338114e-05,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "80",
+            "error": {
+              "mean": 9.678212518338114e-05,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {
+          "0.0006": {
+            "mean": 0.00029990827897563577,
+            "std": 0.0,
+            "n": 1
+          },
+          "0.007": {
+            "mean": 9.700013833935373e-06,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "train_seconds": null,
+        "training": [
+          {
+            "status": "no_parameters",
+            "best_val": 3.180199928465299e-05,
+            "best_iteration": 0
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.10860265609953786,
+          "std": 0.0,
+          "n": 1
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.10860265609953786,
+            "neural_calls_per_step": 0,
+            "physics_substeps": 32
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          0
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      },
+      {
+        "arm": "node_rk2_forced",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 16,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            10,
+            20,
+            40,
+            80
+          ],
+          "init_known": false,
+          "iters": 4000,
+          "long": 400,
+          "lr_min": 1e-05,
+          "net": {
+            "layers": 4,
+            "modes": 12,
+            "width": 32
+          },
+          "window": 6
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 12,
+              "width": 32,
+              "layers": 4
+            },
+            "iters": 4000,
+            "window": 6,
+            "batch": 16,
+            "horizons": [
+              10,
+              20,
+              40,
+              80
+            ],
+            "long": 400,
+            "dt_mults": [
+              1
+            ],
+            "init_known": false
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/ns2d/node_rk2_forced_s0/result.json"
+        ],
+        "statuses": [
+          "completed"
+        ],
+        "parameters": 1188353,
+        "primary": {
+          "mean": 0.013000590726733208,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 0.05280343816882771,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "80",
+            "error": {
+              "mean": 2.0,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "80",
+            "error": {
+              "mean": 2.0,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "80",
+            "error": {
+              "mean": 0.014592934399843216,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {
+          "0.0006": {
+            "mean": 0.5942263603210449,
+            "std": 0.0,
+            "n": 1
+          },
+          "0.007": {
+            "mean": 2.0,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "train_seconds": {
+          "mean": 403.4027361869812,
+          "std": 0.0,
+          "n": 1
+        },
+        "training": [
+          {
+            "status": "completed",
+            "seconds": 403.4027361869812,
+            "cpu_seconds": 344.468638184,
+            "skipped_gradients": 0,
+            "resumes": 0,
+            "iterations": 4000,
+            "best_val": 0.007839265279471874,
+            "best_iteration": 4000
+          }
+        ],
+        "seconds_per_step": null,
+        "timing": [
+          {}
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "torch": "2.7.1+cu126",
+            "name": "NVIDIA H100 PCIe"
+          }
+        ],
+        "best_iterations": [
+          4000
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      },
+      {
+        "arm": "implicit_known_forced",
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "config": {
+          "batch": 16,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            10,
+            20,
+            40,
+            80
+          ],
+          "init_known": false,
+          "iters": 4000,
+          "long": 400,
+          "lr_min": 1e-05,
+          "net": {
+            "layers": 4,
+            "modes": 12,
+            "width": 32
+          },
+          "window": 6
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 12,
+              "width": 32,
+              "layers": 4
+            },
+            "iters": 4000,
+            "window": 6,
+            "batch": 16,
+            "horizons": [
+              10,
+              20,
+              40,
+              80
+            ],
+            "long": 400,
+            "dt_mults": [
+              1
+            ],
+            "init_known": false
+          },
+          {
+            "net": {
+              "modes": 12,
+              "width": 32,
+              "layers": 4
+            },
+            "iters": 4000,
+            "window": 6,
+            "batch": 16,
+            "horizons": [
+              10,
+              20,
+              40,
+              80
+            ],
+            "long": 400,
+            "dt_mults": [
+              1
+            ],
+            "init_known": false
+          },
+          {
+            "net": {
+              "modes": 12,
+              "width": 32,
+              "layers": 4
+            },
+            "iters": 4000,
+            "window": 6,
+            "batch": 16,
+            "horizons": [
+              10,
+              20,
+              40,
+              80
+            ],
+            "long": 400,
+            "dt_mults": [
+              1
+            ],
+            "init_known": false
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/ns2d/implicit_known_forced_s0/result.json",
+          "GenericOpsSplit/research_runs/20261110/runs/ns2d/implicit_known_forced_s1/result.json",
+          "GenericOpsSplit/research_runs/20261110/runs/ns2d/implicit_known_forced_s2/result.json"
+        ],
+        "statuses": [
+          "completed",
+          "completed",
+          "completed"
+        ],
+        "parameters": 1188353,
+        "primary": {
+          "mean": 0.01351974563052257,
+          "std": 0.0015586022153850736,
+          "n": 3
+        },
+        "historical_ratio": 0.05491204726502173,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 3
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "80",
+            "error": {
+              "mean": 0.34149428208669025,
+              "std": 0.04523985028186396,
+              "n": 3
+            }
+          },
+          "x4/1": {
+            "horizon": "80",
+            "error": {
+              "mean": 0.8744440873463949,
+              "std": 0.027109537120989263,
+              "n": 3
+            }
+          },
+          "x1/2": {
+            "horizon": "80",
+            "error": {
+              "mean": 0.07542189459005992,
+              "std": 0.0014697139385204015,
+              "n": 3
+            }
+          }
+        },
+        "ood": {
+          "0.0006": {
+            "mean": 0.8606530825297037,
+            "std": 0.16168771261912135,
+            "n": 3
+          },
+          "0.007": {
+            "mean": 0.07234256512795885,
+            "std": 0.08809950453535109,
+            "n": 3
+          }
+        },
+        "train_seconds": {
+          "mean": 296.49874146779376,
+          "std": 140.53769187255526,
+          "n": 3
+        },
+        "training": [
+          {
+            "status": "completed",
+            "seconds": 134.22779393196106,
+            "best_val": 0.006636769976466894,
+            "best_iteration": 3500
+          },
+          {
+            "status": "completed",
+            "seconds": 379.0297532081604,
+            "cpu_seconds": 332.706463239,
+            "skipped_gradients": 0,
+            "resumes": 0,
+            "iterations": 4000,
+            "best_val": 0.007177532650530338,
+            "best_iteration": 4000
+          },
+          {
+            "status": "completed",
+            "seconds": 376.2386772632599,
+            "cpu_seconds": 330.49847323200004,
+            "skipped_gradients": 0,
+            "resumes": 0,
+            "iterations": 4000,
+            "best_val": 0.006535888649523258,
+            "best_iteration": 4000
+          }
+        ],
+        "seconds_per_step": null,
+        "timing": [
+          {},
+          {},
+          {}
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "torch": "2.7.1+cu126",
+            "name": "NVIDIA H100 PCIe"
+          },
+          {
+            "requested": "cuda",
+            "torch": "2.7.1+cu126",
+            "name": "NVIDIA H100 PCIe"
+          },
+          {
+            "requested": "cuda",
+            "torch": "2.7.1+cu126",
+            "name": "NVIDIA H100 PCIe"
+          }
+        ],
+        "best_iterations": [
+          3500,
+          4000,
+          4000
+        ],
+        "provenance": [
+          {},
+          {},
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      },
+      {
+        "arm": "implicit_struct_forced_init",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 16,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            10,
+            20,
+            40,
+            80
+          ],
+          "init_known": true,
+          "iters": 4000,
+          "long": 400,
+          "lr_min": 1e-05,
+          "net": {
+            "layers": 4,
+            "modes": 12,
+            "width": 32
+          },
+          "window": 6
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 12,
+              "width": 32,
+              "layers": 4
+            },
+            "iters": 4000,
+            "window": 6,
+            "batch": 16,
+            "horizons": [
+              10,
+              20,
+              40,
+              80
+            ],
+            "long": 400,
+            "dt_mults": [
+              1
+            ],
+            "init_known": true
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/ns2d/implicit_struct_forced_init_s0/result.json"
+        ],
+        "statuses": [
+          "completed"
+        ],
+        "parameters": 1196801,
+        "primary": {
+          "mean": 0.014184148982167244,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 0.05761060012582293,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "80",
+            "error": {
+              "mean": 0.38447079062461853,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "80",
+            "error": {
+              "mean": 0.873969316482544,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "80",
+            "error": {
+              "mean": 0.07841768860816956,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {
+          "0.0006": {
+            "mean": 0.6839350461959839,
+            "std": 0.0,
+            "n": 1
+          },
+          "0.007": {
+            "mean": 0.21561768651008606,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "train_seconds": {
+          "mean": 240.37632417678833,
+          "std": 0.0,
+          "n": 1
+        },
+        "training": [
+          {
+            "status": "completed",
+            "seconds": 240.37632417678833,
+            "best_val": 0.006592231336981058,
+            "best_iteration": 4000
+          }
+        ],
+        "seconds_per_step": null,
+        "timing": [
+          {}
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "torch": "2.7.1+cu126",
+            "name": "NVIDIA H100 PCIe"
+          }
+        ],
+        "best_iterations": [
+          4000
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      },
+      {
+        "arm": "node_forced",
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "config": {
+          "batch": 16,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            10,
+            20,
+            40,
+            80
+          ],
+          "init_known": false,
+          "iters": 4000,
+          "long": 400,
+          "lr_min": 1e-05,
+          "net": {
+            "layers": 4,
+            "modes": 12,
+            "width": 32
+          },
+          "window": 6
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 12,
+              "width": 32,
+              "layers": 4
+            },
+            "iters": 4000,
+            "window": 6,
+            "batch": 16,
+            "horizons": [
+              10,
+              20,
+              40,
+              80
+            ],
+            "long": 400,
+            "dt_mults": [
+              1
+            ],
+            "init_known": false
+          },
+          {
+            "net": {
+              "modes": 12,
+              "width": 32,
+              "layers": 4
+            },
+            "iters": 4000,
+            "window": 6,
+            "batch": 16,
+            "horizons": [
+              10,
+              20,
+              40,
+              80
+            ],
+            "long": 400,
+            "dt_mults": [
+              1
+            ],
+            "init_known": false
+          },
+          {
+            "net": {
+              "modes": 12,
+              "width": 32,
+              "layers": 4
+            },
+            "iters": 4000,
+            "window": 6,
+            "batch": 16,
+            "horizons": [
+              10,
+              20,
+              40,
+              80
+            ],
+            "long": 400,
+            "dt_mults": [
+              1
+            ],
+            "init_known": false
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/ns2d/node_forced_s0/result.json",
+          "GenericOpsSplit/research_runs/20261110/runs/ns2d/node_forced_s1/result.json",
+          "GenericOpsSplit/research_runs/20261110/runs/ns2d/node_forced_s2/result.json"
+        ],
+        "statuses": [
+          "completed",
+          "completed",
+          "completed"
+        ],
+        "parameters": 1188353,
+        "primary": {
+          "mean": 0.016665172452727955,
+          "std": 0.001329305516460207,
+          "n": 3
+        },
+        "historical_ratio": 0.06768757064022987,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 3
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "80",
+            "error": {
+              "mean": 1.6946723858515422,
+              "std": 0.5137255907022419,
+              "n": 3
+            }
+          },
+          "x4/1": {
+            "horizon": "80",
+            "error": {
+              "mean": 2.0,
+              "std": 0.0,
+              "n": 3
+            }
+          },
+          "x1/2": {
+            "horizon": "80",
+            "error": {
+              "mean": 0.04561589037378629,
+              "std": 0.0038619150319042952,
+              "n": 3
+            }
+          }
+        },
+        "ood": {
+          "0.0006": {
+            "mean": 0.7098732590675354,
+            "std": 0.08416884128800556,
+            "n": 3
+          },
+          "0.007": {
+            "mean": 0.15231830875078836,
+            "std": 0.01861115301484768,
+            "n": 3
+          }
+        },
+        "train_seconds": {
+          "mean": 328.7433675130208,
+          "std": 173.9122849368351,
+          "n": 3
+        },
+        "training": [
+          {
+            "status": "completed",
+            "seconds": 127.96218252182007,
+            "best_val": 0.008301849476993084,
+            "best_iteration": 4000
+          },
+          {
+            "status": "completed",
+            "seconds": 432.4004056453705,
+            "cpu_seconds": 393.825790676,
+            "skipped_gradients": 0,
+            "resumes": 0,
+            "iterations": 4000,
+            "best_val": 0.008616678416728973,
+            "best_iteration": 4000
+          },
+          {
+            "status": "completed",
+            "seconds": 425.86751437187195,
+            "cpu_seconds": 386.921803159,
+            "skipped_gradients": 0,
+            "resumes": 0,
+            "iterations": 4000,
+            "best_val": 0.008010215125977993,
+            "best_iteration": 4000
+          }
+        ],
+        "seconds_per_step": null,
+        "timing": [
+          {},
+          {},
+          {}
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "torch": "2.7.1+cu126",
+            "name": "NVIDIA H100 PCIe"
+          },
+          {
+            "requested": "cuda",
+            "torch": "2.7.1+cu126",
+            "name": "NVIDIA H100 PCIe"
+          },
+          {
+            "requested": "cuda",
+            "torch": "2.7.1+cu126",
+            "name": "NVIDIA H100 PCIe"
+          }
+        ],
+        "best_iterations": [
+          4000,
+          4000,
+          4000
+        ],
+        "provenance": [
+          {},
+          {},
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      },
+      {
+        "arm": "ar_forced",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 16,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            10,
+            20,
+            40,
+            80
+          ],
+          "init_known": false,
+          "iters": 4000,
+          "long": 400,
+          "lr_min": 1e-05,
+          "net": {
+            "layers": 4,
+            "modes": 12,
+            "width": 32
+          },
+          "window": 6
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 12,
+              "width": 32,
+              "layers": 4
+            },
+            "iters": 4000,
+            "window": 6,
+            "batch": 16,
+            "horizons": [
+              10,
+              20,
+              40,
+              80
+            ],
+            "long": 400,
+            "dt_mults": [
+              1
+            ],
+            "init_known": false
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/ns2d/ar_forced_s0/result.json"
+        ],
+        "statuses": [
+          "completed"
+        ],
+        "parameters": 1188353,
+        "primary": {
+          "mean": 0.039944492280483246,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 0.16223928378735408,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {},
+        "ood": {
+          "0.0006": {
+            "mean": 0.984786868095398,
+            "std": 0.0,
+            "n": 1
+          },
+          "0.007": {
+            "mean": 0.0774565190076828,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "train_seconds": {
+          "mean": 299.035329580307,
+          "std": 0.0,
+          "n": 1
+        },
+        "training": [
+          {
+            "status": "completed",
+            "seconds": 299.035329580307,
+            "cpu_seconds": 263.340320707,
+            "skipped_gradients": 0,
+            "resumes": 0,
+            "iterations": 4000,
+            "best_val": 0.017934834584593773,
+            "best_iteration": 3500
+          }
+        ],
+        "seconds_per_step": null,
+        "timing": [
+          {}
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "torch": "2.7.1+cu126",
+            "name": "NVIDIA H100 PCIe"
+          }
+        ],
+        "best_iterations": [
+          3500
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      },
+      {
+        "arm": "physics_etdrk4_n4_known_exact",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 16,
+          "closure": false,
+          "closure_each_stage": false,
+          "closure_in_range": false,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            10,
+            20,
+            40,
+            80
+          ],
+          "iters": 4000,
+          "linear_mode": "known",
+          "long": 400,
+          "lr": 0.0001,
+          "lr_min": 1e-05,
+          "max_step": false,
+          "net": {
+            "layers": 4,
+            "modes": 12,
+            "width": 32
+          },
+          "scheme": "etdrk4",
+          "substeps": 4,
+          "val_every": 500,
+          "window": 6,
+          "zero_equilibrium": false
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 12,
+              "width": 32,
+              "layers": 4
+            },
+            "iters": 4000,
+            "window": 6,
+            "batch": 16,
+            "horizons": [
+              10,
+              20,
+              40,
+              80
+            ],
+            "long": 400,
+            "scheme": "etdrk4",
+            "substeps": 4,
+            "closure": false,
+            "linear_mode": "known",
+            "closure_each_stage": false,
+            "dt_mults": [
+              1
+            ],
+            "lr": 0.0001,
+            "val_every": 500,
+            "operator_diagnostics": false,
+            "skip_jacobian": true
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/ns2d/physics_etdrk4_n4_known_exact_s0/result.json"
+        ],
+        "statuses": [
+          "no_parameters"
+        ],
+        "parameters": 0,
+        "primary": {
+          "mean": 0.12500014901161194,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 0.5077029019809365,
+        "long_bounded": {
+          "mean": 0.875,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "80",
+            "error": {
+              "mean": 0.6875001192092896,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "80",
+            "error": {
+              "mean": 0.8125243186950684,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "80",
+            "error": {
+              "mean": 7.064653573252144e-08,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {
+          "0.0006": {
+            "mean": 2.0,
+            "std": 0.0,
+            "n": 1
+          },
+          "0.007": {
+            "mean": 4.1755640722840326e-08,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "train_seconds": null,
+        "training": [
+          {
+            "status": "no_parameters",
+            "best_val": 1.5078998671924637e-07,
+            "best_iteration": 0
+          }
+        ],
+        "seconds_per_step": {
+          "mean": 0.0605358075001277,
+          "std": 0.0,
+          "n": 1
+        },
+        "timing": [
+          {
+            "batch": 8,
+            "seconds_per_step": 0.0605358075001277,
+            "neural_calls_per_step": 0,
+            "physics_substeps": 4
+          }
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "name": "NVIDIA H100 PCIe",
+            "torch": "2.7.1+cu126"
+          }
+        ],
+        "best_iterations": [
+          0
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      },
+      {
+        "arm": "oseen_residual",
+        "seeds": [
+          0
+        ],
+        "config": {
+          "batch": 16,
+          "dt_mults": [
+            1
+          ],
+          "horizons": [
+            10,
+            20,
+            40,
+            80
+          ],
+          "init_known": false,
+          "iters": 500,
+          "long": 400,
+          "lr": 0.0001,
+          "lr_min": 1e-05,
+          "net": {
+            "layers": 4,
+            "modes": 12,
+            "width": 32
+          },
+          "window": 6
+        },
+        "source_configs": [
+          {
+            "net": {
+              "modes": 12,
+              "width": 32,
+              "layers": 4
+            },
+            "iters": 500,
+            "window": 6,
+            "batch": 16,
+            "horizons": [
+              10,
+              20,
+              40,
+              80
+            ],
+            "long": 400,
+            "lr": 0.0001,
+            "dt_mults": [
+              1
+            ],
+            "init_known": false
+          }
+        ],
+        "sources": [
+          "GenericOpsSplit/research_runs/20261110/runs/ns2d/oseen_residual_s0/result.json"
+        ],
+        "statuses": [
+          "completed"
+        ],
+        "parameters": 1188353,
+        "primary": {
+          "mean": 0.19329747557640076,
+          "std": 0.0,
+          "n": 1
+        },
+        "historical_ratio": 0.785100578453001,
+        "long_bounded": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "transfer": {
+          "x2/1": {
+            "horizon": "80",
+            "error": {
+              "mean": 0.5021834373474121,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x4/1": {
+            "horizon": "80",
+            "error": {
+              "mean": 0.6823170781135559,
+              "std": 0.0,
+              "n": 1
+            }
+          },
+          "x1/2": {
+            "horizon": "80",
+            "error": {
+              "mean": 0.2267005443572998,
+              "std": 0.0,
+              "n": 1
+            }
+          }
+        },
+        "ood": {
+          "0.0006": {
+            "mean": 0.9999410510063171,
+            "std": 0.0,
+            "n": 1
+          },
+          "0.007": {
+            "mean": 0.30124396085739136,
+            "std": 0.0,
+            "n": 1
+          }
+        },
+        "train_seconds": {
+          "mean": 451.55561351776123,
+          "std": 0.0,
+          "n": 1
+        },
+        "training": [
+          {
+            "status": "completed",
+            "seconds": 451.55561351776123,
+            "best_val": 0.05959104374051094,
+            "best_iteration": 500
+          }
+        ],
+        "seconds_per_step": null,
+        "timing": [
+          {}
+        ],
+        "devices": [
+          {
+            "requested": "cuda",
+            "torch": "2.7.1+cu126",
+            "name": "NVIDIA H100 PCIe"
+          }
+        ],
+        "best_iterations": [
+          500
+        ],
+        "provenance": [
+          {}
+        ],
+        "ks_spectrum": null,
+        "ks_energy": null
+      }
+    ]
+  }
+}

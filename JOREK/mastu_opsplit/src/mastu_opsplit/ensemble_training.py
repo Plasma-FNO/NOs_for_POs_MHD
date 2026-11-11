@@ -35,6 +35,40 @@ def atomic_checkpoint(path, value):
     temporary.replace(path)
 
 
+def model_device(model):
+    """Device holding the model's tensors (the CPU for tensor-free or duck-typed models)."""
+    tensors = lambda name: list(getattr(model, name, lambda: [])())
+    for tensor in tensors('parameters') + tensors('buffers'):
+        return tensor.device
+    return torch.device('cpu')
+
+
+def cpu_budget_expired(config):
+    """Optional worker limit; checkpoints and completed trajectory reports survive a restart."""
+    budget = config.get('cpu_budget_seconds')
+    return budget is not None and time.process_time() >= budget
+
+
+def is_direct(model):
+    """Initial-field time-query model (no autoregressive state); every other family steps one interval."""
+    return getattr(model, 'direct_query', False)
+
+
+def step_time(model, sample, index):
+    """Physical time of the state being advanced, for the time-conditioned one-step family only."""
+    return sample['time_seconds'][index] if model.family == 'conditional' and not is_direct(model) else None
+
+
+def time_conditioning(data, config):
+    """Origin, scale and step of the one-step conditional model's FiLM time input (training data only)."""
+    horizon = config['time_conditioning_intervals']*config['stride']
+    if horizon >= len(data.time_seconds):
+        raise ValueError('Time-conditioning scale exceeds the trajectory')
+    return dict(origin_seconds=float(data.time_seconds[0]),
+                scale_seconds=float(data.time_seconds[horizon]-data.time_seconds[0]),
+                interval_seconds=float(data.time_seconds[config['stride']]-data.time_seconds[0]))
+
+
 def neural_hash(model):
     digest = hashlib.sha256()
     for name, value in model.operator.state_dict().items():
@@ -96,6 +130,9 @@ def merge_training_split(data, space):
 
 
 def prepare_data(config):
+    if config.get('prepared_data_cache'):
+        from .physical_data_cache import prepare_cached_data
+        return prepare_cached_data(config, prepare_data)
     started = time.monotonic()
     manifest = Path(config['manifest'])
     if sha256_file(manifest) != config['manifest_sha256']:
@@ -153,6 +190,21 @@ def prepare_data(config):
 
 
 def check_config(config):
+    direct = config.get('prediction_mode') == 'initial_time_query'
+    if config.get('prediction_mode') not in (None, 'initial_time_query'):
+        raise ValueError('Unknown prediction mode')
+    if direct:
+        if config.get('query_start', 'initial') not in ('initial', 'sampled_window'):
+            raise ValueError('Query start must be initial or sampled_window')
+        if type(config.get('query_horizon')) is not int or config['query_horizon'] < config['horizon']:
+            raise ValueError('Query horizon must be an integer >= queries per update (horizon)')
+        if config.get('coefficient_split') is not None:
+            raise ValueError('Direct time queries do not use a physical RHS split')
+    if config.get('device', 'cpu') not in ('cpu', 'cuda'):
+        raise ValueError("device must be 'cpu' or 'cuda'")
+    if config.get('time_conditioning_intervals') is not None and (
+            direct or type(config['time_conditioning_intervals']) is not int or config['time_conditioning_intervals'] < 1):
+        raise ValueError('Stepwise time conditioning needs a positive integer interval count')
     if config.get('coefficient_split') not in (None, 'density_diffusion', 'density_diffusion_gamma'):
         raise ValueError('Unknown coefficient-aware physical split')
     for name in ('steps', 'horizon', 'stride', 'threads'):
@@ -173,7 +225,9 @@ def check_config(config):
     for name in ('evaluation_horizons', 'evaluation_substeps'):
         if not config[name] or any(type(value) is not int or value < 1 for value in config[name]):
             raise ValueError(f'Invalid {name}')
-    if sorted(set(config['evaluation_substeps'])) != [1, 2, 4]:
+    if sorted(set(config['evaluation_substeps'])) != ([1] if direct else [1, 2, 4]):
+        if direct:
+            raise ValueError('Direct time queries have no substep refinement; require [1]')
         raise ValueError('Require fixed-weight 1/2/4-substep comparison')
     if config.get('evaluation_cases') is not None and (
             not config.get('diagnostic_only') or type(config['evaluation_cases']) is not int or config['evaluation_cases'] < 1):
@@ -181,11 +235,20 @@ def check_config(config):
 
 
 def train_family(model, data, space, config, folder, provenance_hash, *, resume=False, stop_after=None):
-    windows = data.windows('train', config['horizon'], stride=config['stride'])
+    direct = is_direct(model)
+    from_initial = direct and config.get('query_start', 'initial') == 'initial'
+    windows = data.windows('train', config['query_horizon'] if direct else config['horizon'], stride=config['stride'])
     sampler = np.random.default_rng(config['seed'])
-    schedule = sampler.integers(len(windows), size=config['steps'])
+    schedule = sampler.integers(len(windows.cases) if from_initial else len(windows), size=config['steps'])
+    if from_initial:
+        schedule *= windows.starts  # Always use the trajectory's original initial state.
     schedule_records = [dict(index=int(index), case_id=windows.cases[index//windows.starts]['case_id'],
                              start_frame=int(index % windows.starts)*config['stride']) for index in schedule]
+    if direct:
+        for row in schedule_records:
+            row['query_frames'] = sorted(sampler.choice(config['query_horizon'], config['horizon'],
+                                                        replace=False).astype(int).tolist())
+            row['query_frames'] = [frame+1 for frame in row['query_frames']]
     schedule_path = folder/'sampled_windows.json'
     if schedule_path.exists():
         if json.loads(schedule_path.read_text()) != schedule_records:
@@ -193,6 +256,7 @@ def train_family(model, data, space, config, folder, provenance_hash, *, resume=
     else:
         write_json(schedule_path, schedule_records)
     optimizer = torch.optim.Adam(model.parameters(), lr=config['learning_rate'])
+    device = model_device(model)
     checkpoint_path = folder/'last.pt'
     history, completed = [], 0
     if resume and checkpoint_path.exists():
@@ -203,22 +267,38 @@ def train_family(model, data, space, config, folder, provenance_hash, *, resume=
         model.operator.load_state_dict(saved['model'])
         optimizer.load_state_dict(saved['optimizer'])
         torch.set_rng_state(saved['torch_rng'])
+        if device.type == 'cuda' and saved.get('cuda_rng') is not None:
+            torch.cuda.set_rng_state_all(saved['cuda_rng'])
         np.random.set_state(saved['numpy_rng'])
         random.setstate(saved['python_rng'])
         sampler.bit_generator.state = saved['sampler_rng']
         history, completed = saved['history'], saved['step']
     for index in range(completed, config['steps']):
-        if stop_after is not None and index >= stop_after:
+        if (stop_after is not None and index >= stop_after) or cpu_budget_expired(config):
             return None
         started = time.monotonic()
-        sample = windows[int(schedule[index])]
+        if direct:
+            from .conditional import initial_time_sample
+            sample = initial_time_sample(data, windows.cases[int(schedule[index])//windows.starts],
+                                         schedule_records[index]['query_frames'], stride=config['stride'],
+                                         start_frame=schedule_records[index]['start_frame'])
+        else:
+            sample = windows[int(schedule[index])]
         model.train()
         model.physical_guard.reset_statistics()
         optimizer.zero_grad(set_to_none=True)
-        state = sample['state'][:1]
+        states, parameters = sample['state'].to(device), sample['parameters'][None].to(device)
+        state = states[:1]
+        initial = state
         loss = state.new_zeros(())
-        for target in sample['state'][1:]:
-            state = model(state, sample['parameters'][None])
+        for query, target in enumerate(states[1:], 1):
+            if direct:
+                state = model(initial, parameters, elapsed_seconds=
+                              sample['time_seconds'][query]-sample['time_seconds'][0])
+            elif model.family == 'conditional':
+                state = model(state, parameters, time_seconds=step_time(model, sample, query-1))
+            else:
+                state = model(state, parameters)
             loss = loss + field_loss(state, target[None], space) + config['positivity_penalty']*model.physical_guard.last_penalty
         loss = loss/config['horizon']
         if not torch.isfinite(loss):
@@ -232,6 +312,7 @@ def train_family(model, data, space, config, folder, provenance_hash, *, resume=
         atomic_checkpoint(checkpoint_path, dict(model=model.operator.state_dict(), optimizer=optimizer.state_dict(),
             step=index+1, history=history, family=model.family,
             torch_rng=torch.get_rng_state(), numpy_rng=np.random.get_state(), python_rng=random.getstate(),
+            cuda_rng=torch.cuda.get_rng_state_all() if device.type == 'cuda' else None,
             sampler_rng=sampler.bit_generator.state, schedule_sha256=sha256_file(schedule_path),
             provenance_hash=provenance_hash))
         print(json.dumps(dict(family=model.family, **row)), flush=True)
@@ -247,33 +328,56 @@ def evaluate_trajectory(model, sample, space, guard, dense, horizons, substeps, 
     """Append completed horizons so the caller can retain them after a later failure."""
     started = time.monotonic()
     guard.reset_statistics()
-    state = sample['state'][:1]
+    if hasattr(model, 'reset_stage_statistics'):
+        model.reset_stage_statistics()
+    device = model_device(model)
+    parameters = sample['parameters'][None].to(device)
+    state = sample['state'][:1].to(device)
+    initial = state
+    direct = is_direct(model)
+    record_raw = direct or getattr(model, 'record_raw_prediction', False)
+    if direct and substeps != 1:
+        raise ValueError('Direct time queries have no substep refinement')
     weights = space.weights/space.weights.sum()
-    mean, scale = guard.mean.numpy(), guard.scale.numpy()
+    mean, scale = guard.mean.cpu().numpy(), guard.scale.cpu().numpy()
+    fixed_boundary = guard.fixed_boundary_values.cpu().numpy()
     vertices = np.unique(space.geometry.dof_map[:, ::4])
-    initial_boundary = (state[0].numpy()*scale+mean)[guard.fixed_boundary_values.numpy(), :2]
+    initial_boundary = (state[0].cpu().numpy()*scale+mean)[fixed_boundary, :2]
     squared_error, decoded_norm = np.zeros(7), np.zeros(7)
+    raw_squared_error = np.zeros(7)
     target_mean, target_moment = np.zeros((len(weights), 7)), np.zeros((len(weights), 7))
     bounds, dense_minimum, vertex_minimum, defects = np.full(2, np.inf), np.full(2, np.inf), np.full(2, np.inf), np.zeros(2)
     boundary_drift = 0.
     records = [] if records is None else records
     for step, target in enumerate(sample['state'][1:], 1):
-        state = model(state, sample['parameters'][None], substeps=substeps)
+        if direct:
+            state = model(initial, parameters, elapsed_seconds=
+                          sample['time_seconds'][step]-sample['time_seconds'][0])
+        elif model.family == 'conditional':
+            state = model(state, parameters, substeps=substeps, time_seconds=step_time(model, sample, step-1))
+        else:
+            state = model(state, parameters, substeps=substeps)
         if not torch.isfinite(state).all():
             raise FloatingPointError(f'Nonfinite rollout at step {step}')
-        predicted = space.basis@state[0].numpy()
+        current = state[0].detach().cpu().numpy()
+        predicted = space.basis@current
         truth = space.basis@target.numpy()
+        if record_raw:
+            raw = space.basis@model.last_raw_prediction[0].detach().cpu().numpy()
+            if not np.isfinite(raw).all():
+                raise FloatingPointError(f'Nonfinite raw prediction at query {step}')
+            raw_squared_error += np.einsum('pc,p->c', (raw-truth)**2, weights)
         squared_error += np.einsum('pc,p->c', (predicted-truth)**2, weights)
         decoded_norm += np.einsum('pc,p->c', (truth*scale+space.basis@mean)**2, weights)
         delta = truth-target_mean
         target_mean += delta/step
         target_moment += delta*(truth-target_mean)
-        physical = state[0].numpy()*scale+mean
+        physical = current*scale+mean
         bounds = np.minimum(bounds, (guard.sampler.basis@physical[:, 4:6]).min(0))
         dense_minimum = np.minimum(dense_minimum, (dense.basis@physical[:, 4:6]).min(0))
         vertex_minimum = np.minimum(vertex_minimum, physical[vertices, 4:6].min(0))
         boundary_drift = max(boundary_drift, float(np.max(np.abs(
-            (physical[guard.fixed_boundary_values.numpy(), :2]-initial_boundary)/scale[:2]))))
+            (physical[fixed_boundary, :2]-initial_boundary)/scale[:2]))))
         for channel, (pair, potential, auxiliary) in enumerate(((guard.current, 0, 2), (guard.vorticity, 1, 3))):
             left, right = pair.stiff@physical[:, potential], pair.mass@physical[:, auxiliary]
             defects[channel] = max(defects[channel], float(np.linalg.norm(left+right)/max(np.linalg.norm(left)+np.linalg.norm(right), 1e-30)))
@@ -292,6 +396,15 @@ def evaluate_trajectory(model, sample, space, guard, dense, horizons, substeps, 
                 vertex_minima=vertex_minimum.tolist(), constraint_defects=defects.tolist(),
                 boundary_max_normalized_drift=boundary_drift, guard_statistics=dict(guard.statistics),
                 audit_passed=passed, elapsed_seconds=time.monotonic()-started))
+            if record_raw:
+                records[-1].update(raw_normalized_volume_mse=float((raw_squared_error/step).mean()),
+                    raw_per_field_normalized_mse=dict(zip(FIELDS, (raw_squared_error/step).tolist())))
+            if hasattr(model, 'stage_statistics'):
+                records[-1]['stage_statistics'] = dict(model.stage_statistics)
+            if direct:
+                records[-1].update(prediction_mode='initial_time_query',
+                    query_time_regime=('within_training_range' if float(sample['time_seconds'][step]-sample['time_seconds'][0])
+                                       <= model.time_scale_seconds*(1+1e-10) else 'beyond_training_range'))
     return records
 
 
@@ -310,6 +423,8 @@ def evaluate(model, data, space, guard, dense, config, folder, provenance_hash):
                 if result['provenance_hash'] != provenance_hash:
                     raise ValueError('Evaluation provenance mismatch')
             else:
+                if cpu_budget_expired(config):
+                    return None
                 records = []
                 try:
                     evaluate_trajectory(model, sample, space, guard, dense, horizons, substeps, records=records)
@@ -335,6 +450,15 @@ def evaluate(model, data, space, guard, dense, config, folder, provenance_hash):
                 trajectory_std=float(np.std(scores, ddof=1)) if complete and len(scores) > 1 else None,
                 per_field_normalized_mse={name: float(np.mean([row['per_field_normalized_mse'][name] for row in rows]))
                                           for name in FIELDS} if complete else {}))
+            if is_direct(model) or getattr(model, 'record_raw_prediction', False):
+                raw_complete = complete and all(np.isfinite(row['raw_normalized_volume_mse']) and
+                    np.isfinite(list(row['raw_per_field_normalized_mse'].values())).all() for row in rows)
+                aggregates[-1].update(
+                    raw_mean_normalized_volume_mse=float(np.mean([row['raw_normalized_volume_mse']
+                                                                 for row in rows])) if raw_complete else None,
+                    raw_per_field_normalized_mse={name: float(np.mean([
+                        row['raw_per_field_normalized_mse'][name] for row in rows]))
+                        for name in FIELDS} if raw_complete else {})
     return dict(trajectories=results, aggregates=aggregates,
                 numerical_failures=sum(result['failure'] is not None for result in results),
                 audits_passed=bool(aggregates) and all(row['complete'] for row in aggregates)
@@ -343,16 +467,33 @@ def evaluate(model, data, space, guard, dense, config, folder, provenance_hash):
 
 def run_ensemble(config, model_config, output, *, families=('ar', 'node', 'opsplit'), resume=False, stop_after=None):
     check_config(config)
-    if not families or any(family not in ('ar', 'node', 'opsplit') for family in families):
+    direct = config.get('prediction_mode') == 'initial_time_query'
+    if not families or any(family not in ('ar', 'node', 'opsplit', 'conditional') for family in families):
         raise ValueError('Invalid model families')
+    if direct and tuple(families) != ('conditional',):
+        raise ValueError('Initial time-query configuration requires the conditional family alone')
+    if 'conditional' in families and not direct and config.get('time_conditioning_intervals') is None:
+        raise ValueError('The one-step conditional family needs time_conditioning_intervals')
+    if 'conditional' in families and model_config.get('conditioning_parameters', 1) != 1:
+        raise ValueError('The baseline dataset supplies one fixed transport multiplier')
     output = Path(output)
     if output.exists() and not resume:
         raise FileExistsError(output)
     output.mkdir(parents=True, exist_ok=resume)
+    device = torch.device(config.get('device', 'cpu'))
+    if device.type == 'cuda':
+        from .gpu_native import configure_cuda_numerics
+        configure_cuda_numerics()
+        if not torch.cuda.is_available():
+            raise RuntimeError('device: cuda requested but no CUDA device is visible')
     torch.set_num_threads(config['threads'])
     torch.use_deterministic_algorithms(True)
     started = time.monotonic()
     data, space, guard, physical, dense, verification = prepare_data(config)
+    stepwise_time = time_conditioning(data, config) if config.get('time_conditioning_intervals') else None
+    if direct:
+        data.windows('train', config['query_horizon'], stride=config['stride'])
+        time_scale = float(data.time_seconds[config['query_horizon']*config['stride']]-data.time_seconds[0])
     architecture = {**model_config, 'architecture': {**model_config['architecture'], **config['architecture']}}
     provenance = dict(config=config, model_config=architecture, manifest_sha256=sha256_file(config['manifest']),
         source_sha256={path.name: sha256_file(path) for path in Path(__file__).parent.glob('*.py')},
@@ -369,6 +510,24 @@ def run_ensemble(config, model_config, output, *, families=('ar', 'node', 'opspl
                                  decoded='volume-weighted physical truth squared, future frames only', floor=1e-30),
         uncertainty_unit='independent initial-condition trajectory; seeds reported separately',
         independent_initial_conditions=True, independent_equilibria=False)
+    if direct:
+        provenance.update(prediction_mode='initial_time_query', time_scale_seconds=time_scale,
+            time_basis='elapsed physical seconds / training query duration', training_substeps=None,
+            query_start=config.get('query_start', 'initial'),
+            supervision='query-start field plus uniformly sampled future offsets; no autoregressive feedback',
+            conditioning=['D_perp / D_perp_baseline', 'elapsed_seconds / time_scale_seconds'],
+            parameter_generalization='not trained: all training diffusivity multipliers equal one',
+            comparison_caveat='same trajectories and updates; broader temporal supervision and different parameter count',
+            initial_condition='q0 + normalized_elapsed_time * learned_correction',
+            spatial_solves='native mass projection and elliptic guards retained')
+        if config.get('query_start') == 'sampled_window' and config['query_horizon'] == config['horizon']:
+            provenance['comparison_caveat'] = ('same sampled windows and target frames as rollout baselines; '
+                'different parameter count and predictions; longer direct queries extrapolate in lead time')
+    if stepwise_time is not None:
+        provenance.update(time_conditioning=stepwise_time,
+            conditional_form=("q' = G(q + h P N(q; [D/D0, (t - t0)/T])): Euler NODE with FiLM time input; t is the "
+                              'time of the state being advanced, t0 the trajectory start, T the conditioning scale'),
+            conditional_exposure='same sampled windows, targets, rollout feedback and update budget as AR/NODE/OpsSplit')
     provenance_hash = config_hash(provenance)
     provenance_path = output/'provenance.json'
     if provenance_path.exists():
@@ -393,24 +552,33 @@ def run_ensemble(config, model_config, output, *, families=('ar', 'node', 'opspl
         torch.manual_seed(config['seed'])
         np.random.seed(config['seed'])
         random.seed(config['seed'])
-        if config.get('coefficient_split') in ('density_diffusion', 'density_diffusion_gamma'):
+        if direct:
+            from .conditional import TimeConditionalSplineModel
+            model = TimeConditionalSplineModel(space, architecture, time_scale, physical_guard=guard)
+        elif config.get('coefficient_split') in ('density_diffusion', 'density_diffusion_gamma'):
             from .coefficient_ood import DensityDiffusionEulerModel, GammaEulerModel
             model_class = GammaEulerModel if config['coefficient_split'] == 'density_diffusion_gamma' else DensityDiffusionEulerModel
             model = model_class(family, space, architecture, mean=data.mean, scale=data.scale,
                 code_interval=verification['code_interval'], physical_guard=guard, physical_linear=physical)
         else:
             model = EulerSplineModel(family, space, architecture, linear_branch=config['linear_branch'],
-                                     physical_guard=guard, physical_linear=physical)
+                                     physical_guard=guard, physical_linear=physical,
+                                     time_conditioning=stepwise_time if family == 'conditional' else None)
+        model = model.to(device)
         initial_hash = neural_hash(model)
         training = train_family(model, data, space, config, folder, provenance_hash, resume=resume, stop_after=stop_after)
         if training is None:
             return dict(interrupted=True)
         evaluation_started = time.monotonic()
         evaluation = evaluate(model, data, space, guard, dense, config, folder, provenance_hash)
+        if evaluation is None:
+            return dict(interrupted=True)
         result = dict(training, evaluation=evaluation, initial_neural_sha256=initial_hash,
                       parameters=sum(parameter.numel() for parameter in model.parameters()),
                       evaluation_seconds=time.monotonic()-evaluation_started,
-                      peak_rss_kib=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
+                      peak_rss_kib=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss, device=str(device),
+                      device_name=torch.cuda.get_device_name(device) if device.type == 'cuda' else 'cpu',
+                      peak_device_gib=torch.cuda.max_memory_allocated(device)/2**30 if device.type == 'cuda' else None)
         atomic_json(folder/'metrics.json', result)
         results[family] = result
         del model

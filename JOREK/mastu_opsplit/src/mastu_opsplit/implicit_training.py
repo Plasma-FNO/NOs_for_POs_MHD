@@ -22,11 +22,13 @@ import scipy
 import torch
 
 from .common import config_hash, sha256_file, write_json
-from .ensemble_training import atomic_checkpoint, atomic_json, evaluate, neural_hash, prepare_data, train_family
+from .ensemble_training import (atomic_checkpoint, atomic_json, cpu_budget_expired, evaluate, model_device, neural_hash, prepare_data,
+                                train_family)
+from .gpu_native import configure_cuda_numerics
 from .implicit_labels import sha256
 from .implicit_opsplit import (ACTIVE_CHANNELS, BoundaryRelations, ImplicitNativeSystem, ImplicitOpsSplitModel,
-                               fixed_dofs_from_trajectories, identify_boundary_rows, load_frozen_tangent,
-                               remainder_loss)
+                               TangentCorrection, fixed_dofs_from_trajectories, identify_boundary_rows,
+                               load_frozen_tangent, remainder_loss)
 
 ARMS = ('implicit', 'implicit_rollout', 'physics')
 
@@ -48,6 +50,57 @@ def check_implicit_config(config):
         raise ValueError('Require fixed-weight 1/2/4-substep comparison')
     if config.get('evaluation_cases') is not None and not config.get('diagnostic_only'):
         raise ValueError('Case caps are permitted only in labeled smoke diagnostics')
+    if config.get('device', 'cpu') not in ('cpu', 'cuda'):
+        raise ValueError("device must be 'cpu' (SciPy/SuperLU) or 'cuda' (torch + cuDSS)")
+    if config.get('cpu_budget_seconds') is not None and (
+            not np.isfinite(config['cpu_budget_seconds']) or config['cpu_budget_seconds'] <= 0):
+        raise ValueError('cpu_budget_seconds must be finite and positive')
+    physical = config.get('physical_defect')
+    if physical is not None:
+        if not isinstance(physical, dict) or physical.get('scheme', 'be') not in ('be', 'ars222'):
+            raise ValueError('physical_defect requires a be or ars222 scheme')
+        if config['theta'] != 1 or config['pretrain_steps'] != 0 or config.get('tangent_correction'):
+            raise ValueError('Physical defects require theta=1, no remainder-label pretraining, and no learned tangent')
+        if config.get('device') != 'cuda':
+            raise ValueError('Physical-defect research training requires CUDA')
+    correction = config.get('tangent_correction')
+    if correction is not None:
+        allowed = {'basis_shape', 'bound', 'share', 'train_iterations', 'max_iterations', 'tolerance',
+                   'train_tolerance'}
+        if not isinstance(correction, dict) or set(correction) - allowed:
+            raise ValueError(f'tangent_correction keys must be among {sorted(allowed)}')
+
+
+def build_model(config, space, system, architecture, label_scale, *, physical_guard, physics_only=False, mean=None,
+                scale=None):
+    """The implicit model of a configuration (shared by training and both OOD evaluators)."""
+    physical = config.get('physical_defect')
+    if physical is not None:
+        from .physical_defect import PhysicalDefectModel
+        from .physical_rhs import PhysicalRemainder
+        rhs = PhysicalRemainder.from_config(physical, space.geometry, system.frozen,
+                                           system.mean if mean is None else mean,
+                                           system.scale if scale is None else scale)
+        if rhs.profiles.physics['f0'] != config['F0'] or rhs.profiles.physics['gamma'] != config['gamma']:
+            raise ValueError('Native volume profiles and temporal-system F0/gamma differ')
+        return PhysicalDefectModel(space, system, architecture, label_scale, physical_guard=physical_guard,
+                                   physical_rhs=rhs, reference_state=rhs.reference_coefficients,
+                                   scheme=physical.get('scheme', 'be'), physics_only=physics_only,
+                                   internal_substeps=physical.get('internal_substeps', 1),
+                                   boundary_tolerance=physical.get('boundary_tolerance', 1e-10),
+                                   boundary_max_iterations=physical.get('boundary_max_iterations', 12),
+                                   held_dof_tolerance=physical.get('held_dof_tolerance'))
+    options = config.get('tangent_correction')
+    correction = picard = None
+    if options is not None and not physics_only:
+        correction = TangentCorrection(space.geometry, system.frozen, system.mean if mean is None else mean,
+                                       system.scale if scale is None else scale,
+                                       basis_shape=tuple(options.get('basis_shape', (6, 12))),
+                                       bound=options.get('bound', .5), share=options.get('share', 'pair'))
+        picard = {k: options[k] for k in ('train_iterations', 'max_iterations', 'tolerance', 'train_tolerance')
+                  if k in options}
+    return ImplicitOpsSplitModel(space, system, architecture, label_scale, physical_guard=physical_guard,
+                                 physics_only=physics_only, correction=correction, picard=picard)
 
 
 class LabelStore:
@@ -85,7 +138,8 @@ def pretrain(model, data, labels, space, config, folder, provenance_hash, *, res
     else:
         write_json(schedule_path, schedule_records)
     optimizer = torch.optim.Adam(model.parameters(), lr=config['pretrain_learning_rate'])
-    weights = torch.as_tensor(space.weights, dtype=torch.float64)
+    device = model_device(model)
+    weights = torch.as_tensor(space.weights, dtype=torch.float64, device=device)
     path = folder/'last.pt'
     history, completed = [], 0
     if resume and path.exists():
@@ -95,22 +149,25 @@ def pretrain(model, data, labels, space, config, folder, provenance_hash, *, res
         model.operator.load_state_dict(saved['model'])
         optimizer.load_state_dict(saved['optimizer'])
         torch.set_rng_state(saved['torch_rng'])
+        if device.type == 'cuda' and saved.get('cuda_rng') is not None:
+            torch.cuda.set_rng_state_all(saved['cuda_rng'])
         history, completed = saved['history'], saved['step']
     if completed >= config['pretrain_steps'] and (folder/'pretrained.pt').exists():
         model.operator.load_state_dict(torch.load(folder/'pretrained.pt', map_location='cpu', weights_only=False)['model'])
         return dict(steps=completed, history=history)
     for index in range(completed, config['pretrain_steps']):
-        if stop_after is not None and index >= stop_after:
+        if (stop_after is not None and index >= stop_after) or cpu_budget_expired(config):
             return None
         started = time.monotonic()
         entry = labels.entries[int(schedule[index])]
         with h5py.File(entry['data']) as stream:
             native = stream['native_state'][entry['frame']]
-        state = torch.from_numpy((native-data.mean)/data.scale)[None]
-        target = torch.from_numpy(np.load(entry['path']).astype(np.float64))[None]
+        state = torch.from_numpy((native-data.mean)/data.scale)[None].to(device)
+        target = torch.from_numpy(np.load(entry['path']).astype(np.float64))[None].to(device)
         model.train()
         optimizer.zero_grad(set_to_none=True)
-        loss = remainder_loss(model.remainder(state, torch.ones(1, 1)), target, weights, model.remainder_scale)
+        loss = remainder_loss(model.remainder(state, torch.ones(1, 1, device=device)), target, weights,
+                              model.remainder_scale)
         if not torch.isfinite(loss):
             raise FloatingPointError('Nonfinite pretraining loss')
         loss.backward()
@@ -120,6 +177,7 @@ def pretrain(model, data, labels, space, config, folder, provenance_hash, *, res
                             case_id=entry['case_id'], frame=entry['frame'], seconds=time.monotonic()-started))
         atomic_checkpoint(path, dict(model=model.operator.state_dict(), optimizer=optimizer.state_dict(), step=index+1,
                                      history=history, torch_rng=torch.get_rng_state(),
+                                     cuda_rng=torch.cuda.get_rng_state_all() if device.type == 'cuda' else None,
                                      schedule_sha256=sha256_file(schedule_path), provenance_hash=provenance_hash))
         print(json.dumps(dict(stage='pretrain', **history[-1])), flush=True)
     atomic_json(folder/'history.json', history)
@@ -182,9 +240,12 @@ def build_system(config, data, space, verification, output, *, resume, labels=No
         wall_report['identity_states'] = [dict(case_id=e['case_id'], frame=e['frame']) for e in chosen]
         np.savez(wall_cache, held=held, rows=relations.rows, kind=relations.kind, value_dofs=relations.value_dofs,
                  coefficients=relations.coefficients, case_ids=train_ids, report=json.dumps(wall_report))
+    device = torch.device(config.get('device', 'cpu'))
     system = ImplicitNativeSystem(space.geometry, frozen, data.mean, data.scale, fixed | held,
                                   code_interval=verification['code_interval'], theta=config['theta'], F0=config['F0'],
-                                  relations=relations)
+                                  relations=relations, backend='scipy' if device.type == 'cpu' else 'torch',
+                                  device=device)
+    system.frozen = frozen   # the tangent correction re-weights these couplings
     digest = lambda *arrays: hashlib.sha256(b''.join(np.ascontiguousarray(a).tobytes() for a in arrays)).hexdigest()
     return system, dict(fixed_report, fixed_sha256=digest(np.packbits(fixed)),
                         wall=dict(wall_report, sha256=digest(np.packbits(held), relations.rows, relations.coefficients)))
@@ -198,6 +259,11 @@ def run_implicit(config, model_config, output, *, arm, resume=False, stop_after=
     if output.exists() and not resume:
         raise FileExistsError(output)
     output.mkdir(parents=True, exist_ok=resume)
+    device = torch.device(config.get('device', 'cpu'))
+    if device.type == 'cuda':
+        configure_cuda_numerics()
+        if not torch.cuda.is_available():
+            raise RuntimeError('device: cuda requested but no CUDA device is visible')
     torch.set_num_threads(config['threads'])
     torch.use_deterministic_algorithms(True)
     started = time.monotonic()
@@ -222,6 +288,12 @@ def run_implicit(config, model_config, output, *, arm, resume=False, stop_after=
         uncertainty_unit='independent initial-condition trajectory; seeds reported separately',
         independent_initial_conditions=True, independent_equilibria=False)
     provenance_hash = config_hash(provenance)
+    if config.get('physical_defect') is not None:
+        provenance.update(method='Native state-dependent volume RHS with frozen M* and implicit L*; '
+                          'learned defect G(q)-G(q*); stage constraints and positivity guards',
+                          reference_forcing_retained=True,
+                          physical_internal_substeps=config['physical_defect'].get('internal_substeps', 1))
+        provenance_hash = config_hash(provenance)
     provenance_path = output/'provenance.json'
     if provenance_path.exists():
         if json.loads(provenance_path.read_text()) != provenance:
@@ -240,13 +312,14 @@ def run_implicit(config, model_config, output, *, arm, resume=False, stop_after=
     torch.manual_seed(config['seed'])
     np.random.seed(config['seed'])
     random.seed(config['seed'])
-    model = ImplicitOpsSplitModel(space, system, architecture, labels.scale, physical_guard=guard,
-                                  physics_only=(arm == 'physics'))
+    model = build_model(config, space, system, architecture, labels.scale, physical_guard=guard,
+                        physics_only=(arm == 'physics')).to(device)
     initial_hash = neural_hash(model)
     folder = output/arm
     folder.mkdir(exist_ok=resume)
     result = dict(arm=arm, initial_neural_sha256=initial_hash,
-                  parameters=0 if arm == 'physics' else sum(p.numel() for p in model.parameters()))
+                  parameters=0 if arm == 'physics' else sum(p.numel() for p in model.parameters()),
+                  correction_parameters=0 if model.correction is None else model.correction.weight.numel())
     if arm == 'implicit' and config['pretrain_steps']:
         stage = pretrain(model, data, labels, space, config, folder/'pretrain', provenance_hash,
                          resume=resume, stop_after=stop_after)
@@ -261,11 +334,25 @@ def run_implicit(config, model_config, output, *, arm, resume=False, stop_after=
         if training is None:
             return dict(interrupted=True)
         result.update(selected_step=training['selected_step'], rollout_history=training['history'])
+        if model.correction is not None:
+            result['picard_training'] = dict(model.picard_statistics)
     model.eval()
+    model.reset_picard_statistics()
+    system.release_adjoints()  # cuDSS: the A^T factorisation (~13 GB on the production system) is training-only
     evaluation_started = time.monotonic()
     result['evaluation'] = evaluate(model, data, space, guard, dense, config, folder, provenance_hash)
+    if result['evaluation'] is None:
+        return dict(interrupted=True)
+    if hasattr(model, 'stage_statistics'):
+        result['last_trajectory_stage_statistics'] = dict(model.stage_statistics)
+        result['physics_provenance'] = getattr(model.physical_rhs, 'provenance', {})
+    if model.correction is not None:
+        result.update(picard_evaluation=dict(model.picard_statistics), correction=model.correction.summary(),
+                      picard_settings=model.picard)
     result.update(evaluation_seconds=time.monotonic()-evaluation_started, system=system.report(),
-                  peak_rss_kib=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
+                  peak_rss_kib=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
+                  device=str(device), device_name=torch.cuda.get_device_name(device) if device.type == 'cuda' else 'cpu',
+                  peak_device_gib=torch.cuda.max_memory_allocated(device)/2**30 if device.type == 'cuda' else None)
     atomic_json(folder/'metrics.json', result)
     atomic_json(output/'results.json', dict(results={arm: result}, elapsed_seconds=time.monotonic()-started,
                 diagnostic_only=config.get('diagnostic_only', False), all_audits_passed=result['evaluation']['audits_passed']))

@@ -16,8 +16,12 @@ def main():
     source = Path(__file__).resolve().parents[1]
     snapshot = root/'study'
     snapshot.mkdir()
-    for name in ('src', 'tests', 'configs', 'scripts', 'slurm'):
+    for name in ('src', 'tests', 'configs', 'scripts', 'slurm', 'native'):
         shutil.copytree(source/name, snapshot/name, ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
+    profile_manifest = source/'reports/physical_profiles_20261111.json'
+    if profile_manifest.exists():
+        (snapshot/'reports').mkdir()
+        shutil.copy2(profile_manifest, snapshot/'reports'/profile_manifest.name)
     shutil.copy2(source/'ENSEMBLE_TRAINING.md', snapshot/'ENSEMBLE_TRAINING.md')
     records = []
     for path in sorted(snapshot.rglob('*')):

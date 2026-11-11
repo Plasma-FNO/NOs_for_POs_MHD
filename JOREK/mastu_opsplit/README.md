@@ -4,6 +4,258 @@ Implementation of the [study handoff](../MASTU_OPSSPLIT_HANDOFF.md), started 2 N
 
 The selected fluid-benchmark formulation is now wired into `scripts/train.py`: Euler rollouts of normalized field states, numerical spline gradients in the linear branch, and L-SplineFNO contributions trained through field-trajectory losses. The [normalized Euler protocol](configs/normalized_euler.yaml) and [pilot configuration](configs/euler_pilot.yaml) describe this separate experiment. Native nonlinear-term labels and native split convergence remain requirements of the physical-RHS experiment, not prerequisites for trajectory supervision. Reference-data convergence and learned-rollout validation remain required. Legacy [gate records](reports/gates.json) remain separate.
 
+## Native physical defect (11 November 2026)
+
+The new [physical-defect experiment](IMPLICIT_OPSSPLIT.md#native-physical-defect-11-november-2026)
+retains the state-dependent native volume RHS and learns only
+`G(q) - G(q*)`, anchored at the immutable native reference. It preserves the
+nonzero reference forcing, treats the frozen tangent implicitly, and keeps the
+native mass operator frozen. Both first-order IMEX Euler and two-stage ARS222
+are available; algebraic constraints, iterated Mach wall relations and the
+existing positivity/elliptic guard act at each stage. The physics control now
+includes the full known nonlinear volume equations.
+
+Initial CUDA checks passed at the reference (maximum absolute RHS error
+`4.75e-13`) and four native training states. A broader 240-state check then found
+22 late-state induction comparisons above the declared tolerance (worst
+`1.58e-4` of training-label RMS), although every critical-point search succeeded.
+The cause is native source normalization: its axis search can select a stationary
+saddle, while the frozen tracker requires a minimum. A separate autonomous
+source-axis correction now passes all 240 selected states at unchanged thresholds
+(worst training-scaled RMS `2.38e-7`), with strict root diagnostics unchanged.
+Original failures remain archived. These checks cover selected training states,
+not unrestricted parity. Moving X-point derivative checks passed. Rollout sources
+use current predicted states without native trajectory histories. Evidence is under
+`/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/diagnostics/`.
+
+The BE physics screen passed on one training trajectory through 16 intervals
+(0.234 microseconds), with no network calls or positivity limiting. Its cumulative
+normalized MSE was `1.354e-4`, `6.718e-5` and `4.511e-5` with 1/2/4 physical
+microsteps per saved interval. All constraint, boundary and positivity audits
+passed. See the [audited status report](reports/physical_defect_status_20261111.json).
+The full-window training screens are complete. BE passed H96 and all audits on
+both cases at 1/2/4 microsteps: H96 MSE ranged from `1.362e-3` to `2.906e-3`.
+ARS222 failed axis tracking in three of four case/substep pairs. Broader searches
+(up to 2,048 cells, multistart Newton) did not recover a qualified smooth axis;
+acceptance gates remained unchanged. Both original CPU-budget interruptions and
+subsequent numerical outcomes are preserved. These results support BE for the
+current pilot and do not establish a general integrator ranking.
+
+The original frozen 64-update CUDA pilot now completes its matched two-case
+held-out comparison: the learned defect reduces H96 total MSE by **5.16–5.53%**
+versus its full-physics control at 2/4/8 microsteps. Both cases improve, all audits
+pass, and density-field error worsens slightly (0.18–0.19%). Guards remain active.
+Most of the roughly 98.8% gain over the older affine baseline comes from physics,
+before learning. Those pilot results retain the original source-parity caveat.
+Separate corrected-source verification now passes all four matched rollouts at
+two microsteps and confirms a **5.157%** H96 reduction with the same frozen weights
+(`1.97816e-3` physics versus `1.87614e-3` learned). One independent CUDA training
+update also passes; its weights were not used in evaluation. Corrected sources
+have not repeated the full training campaign or four/eight-step evaluation.
+This is one seed and two cases, not a 2,000-update/20-case study or live deployment.
+The implemented profile path supports the pinned
+`n=0`, baseline-coefficient, fixed-boundary double-null case on this mesh;
+topology changes, coefficient/geometry transfer and nonaxisymmetric modes remain
+unqualified. Frozen mass and identified boundary rows remain approximations.
+See the [formulation, limits and commands](IMPLICIT_OPSSPLIT.md#native-physical-defect-11-november-2026).
+[`configs/physical_defect.yaml`](configs/physical_defect.yaml) and
+[`scripts/train_physical_defect.py`](scripts/train_physical_defect.py) provide
+CUDA-only training with bounded resumable workers, exact optimizer/RNG recovery
+and checked reuse of native setup caches.
+
+## GPU one-step campaign (9 November 2026)
+
+Every compared model takes one saved state to the next. AR, Euler NODE, explicit
+OpsSplit, the one-step conditional L-SplineFNO and the three implicit arms are
+trained with the same 80/0/20 split, four-step rollout windows, loss, guards,
+2,000-update budget and seeds 17–19, and are evaluated from frame 0 at 16/32/96
+intervals with 1/2/4 substeps (AR: 1). Each run uses one H100.
+
+**One-step conditional L-SplineFNO** (`EulerSplineModel('conditional', ...)`):
+`q' = G(q + h P N(q; [D/D0, (t - t0)/T]))`. This is the Euler NODE update with the
+FiLM input widened by the time `t` of the state being advanced. `t0` is the
+trajectory start and `T` is `time_conditioning_intervals` (96) intervals. Euler
+substeps advance `t` with the state. The model sees exactly the windows, targets
+and rollout feedback of the other families, and adds 64 FiLM parameters.
+The earlier direct time-query model (below) queried up to 96 intervals from `q0`.
+That gave it longer temporal supervision, so it is not part of this comparison.
+
+**Device path.** `--device cuda` (config `device`) runs native sampling, the
+consistent-mass projection (cuDSS LU of the symmetric scaled mass) and the
+elliptic/positivity guards on the GPU. Implicit arms use the cuDSS tangent system.
+`configs/gpu_onestep.yaml` equals `ensemble_training.yaml` except for `device`,
+`threads` and `time_conditioning_intervals`.
+
+**Campaign.** The study snapshot is at
+`/pitagora_scratch/userexternal/vgopakum/mastu_gpu_onestep_20261109/study`. Array
+`slurm/gpu_onestep.sbatch` (`--array=0-18`, `fupb2_fauna`) runs one task per
+model/seed. Tasks 0–11 cover AR/NODE/OpsSplit/conditional and tasks 12–18 the
+implicit arms. Each task trains, evaluates the test set, then runs the
+fixed-conditioning D⊥ OOD set into `ood/`. The conditional model also runs the
+true-D/D0-in-FiLM extrapolation into `ood_film/`. The implicit arms also run
+coefficient physics into `ood_coefficient/`. `SMOKE=1 FAMILY=...` runs the
+six-update smoke. Summarize with
+`scripts/summarize_gpu_onestep.py --root <campaign> --output comparison.json`.
+The two-page report (`Paper/results_one_page/build.py --refresh`) reads only this campaign.
+The conditional OOD steps of tasks 9–11 failed because the pinned OOD loader has no `gamma_ood` attribute.
+They were rerun as array 2812238 (`ood_conditional_rerun/`) with the fixed evaluator against the unchanged snapshot.
+
+Results (all 19 runs complete, seed means, test MSE at 16/32/96 intervals): NODE 0.064/0.18/1.00,
+explicit OpsSplit 0.064/0.18/0.99, conditional 0.061/0.18/0.94 (wins 25/60 paired trajectories at 96),
+implicit labels+rollout 7.5e-4/6.5e-3/0.11 (wins 120/120 with rollout-only), physics-only 5.0e-4/5.9e-3/0.10.
+AR diverges (1.3e12 at 96). OOD with conditioning 1: NODE 2.86 and implicit 1.49 at 96; implicit with the true
+D⊥ in its physics 0.25; conditional with the true D⊥/D0 in FiLM 1.2e7.
+
+## Larger remainder and learned tangent correction (10 November 2026)
+
+The GPU campaign showed the 9,727-parameter remainder adds nothing over physics-only. Its label loss
+plateaus at 0.86–0.92. This study gives the implicit model more room in two ways.
+
+**Larger N_theta.** `configs/implicit_large.yaml` uses the upstream L-SplineFNO default: a 64×64 grid,
+12 modes, width 32 and 4 layers, about 1.19M parameters. Everything else matches `implicit_opsplit.yaml`.
+In the smoke test its label loss fell to 0.21 within two updates.
+
+**Learned ΔL** (`TangentCorrection` in `implicit_opsplit.py`, `configs/implicit_dl.yaml`,
+`implicit_large_dl.yaml`). The correction is `ΔL(q - q*) = assemble(Σ_p T*_p m_p(R,Z) (jet_p(q) - jet_p(q*)))`
+over the 83 nonzero couplings of the frozen tangent:
+- `m = 0.5 tanh(φ W)` on a 6×12 cubic-spline basis.
+- `W = 0` gives exactly the frozen tangent.
+- ΔL only re-weights couplings that model303 already has.
+
+ΔL is treated implicitly by Picard iteration on the fixed factorization,
+`q'_{k+1} = solve(N(q) + ΔL q'_k)`, so the matrix is never refactorized. Training uses 3 iterations.
+Evaluation iterates to 1e-7 or fails loudly.
+
+Multipliers are shared per (weak equation, field) (`share: block_field`, 22 fields, 1,584 parameters).
+The contraction of the Picard map was measured on the production system
+(`/pitagora_scratch/userexternal/vgopakum/mastu_tangent_correction_diagnostics/picard_contraction.json`).
+- With per-equation or per-(equation, field) sharing, any sign or spatial pattern at |m| = 0.5 gives
+  ρ ≤ 0.50.
+- With independent multipliers per coupling, ρ reaches 30–61 and the iteration diverges.
+- The cause: the value and gradient terms of one field cancel inside the stiff tangent, so they must
+  share one multiplier.
+
+The coefficient-physics OOD step rebuilds `F*, L*` for the true D⊥ and keeps ΔL as trained.
+
+Campaign: `/pitagora_scratch/userexternal/vgopakum/mastu_tangent_correction_20261110` runs
+`slurm/tangent_correction.sbatch --array=0-11`. It covers the larger network rollout-only, the larger
+network with labels + rollout, ΔL with the small network, and the larger network + ΔL, each for seeds
+17–19. Every run does test, fixed-conditioning OOD and coefficient-physics OOD. The references are the
+small-network and physics-only runs of the GPU campaign. Summarize with
+`scripts/summarize_tangent_correction.py --root <campaign> --output comparison.json`.
+
+Outcome (`comparison.json` in that campaign):
+- The larger-network runs pass every audit. On test they reach 0.097–0.101 at 96 intervals, against
+  0.103 for physics-only, and z_j remains about 91% of the error. In the coefficient-physics OOD they are
+  worse than physics-only, at 0.26–0.51 against 0.24.
+- All six ΔL runs failed their audits. Evaluation allowed 12 Picard iterations, and on 2–8 of the 20
+  cases per run at one substep the iteration stalled at a change of 1–2.5e-7 (it was still contracting).
+- The 3-iteration training also left a 0.6–2.3% unconverged change, so the trained and evaluated maps
+  differed.
+
+Rerun of the ΔL arms with converged-Picard training: configs `implicit_dl_conv` and
+`implicit_large_dl_conv`, run by `slurm/tangent_correction_conv.sbatch --array=0-5`. Each training step
+iterates without gradients until the change is below `train_tolerance` = 1e-6, then backpropagates
+through 3 iterations (Jacobian-free backpropagation), so the trained map is the converged solve.
+Evaluation allows 40 iterations. Campaign:
+`/pitagora_scratch/userexternal/vgopakum/mastu_tangent_correction_conv_20261111`. Summarize with
+`--conv-root <rerun campaign>`, which also pairs each ΔL arm with the same network without ΔL.
+
+## Direct time-conditioned baseline (superseded for the comparison)
+
+`configs/conditional_time.yaml` adds an initial-field L-SplineFNO baseline alongside
+the implicit experiment. It conditions the seven initial fields through upstream
+FiLM on `[D_perp / D_perp_baseline, elapsed_seconds / T]`, where `T` is the training
+query duration (96 observation intervals by default). Each prediction is
+`q0 + (elapsed_seconds / T) * learned_correction(q0, parameters, time)`, projected
+to native coefficients and passed through the existing elliptic and whole-cell
+positivity guards. A zero-time query returns the initial coefficients exactly.
+Every query uses the original initial state; predictions never feed later queries.
+There is no time integrator, but native mass projection and elliptic guards still
+require spatial solves. This adapts the paper's conditioning to input fields;
+it is not the geometry-only conditional lifting used in its steady-state examples.
+
+The baseline uses the current ensemble/implicit protocol: the original 60 training
+and 20 validation trajectories become 80 training trajectories, normalization is
+pooled over those 80 only, and the 20 test trajectories remain held out. Checkpoint
+selection is the final fixed-budget update. Each of 2,000 updates samples a training
+trajectory and four distinct future times uniformly from intervals 1–96, always
+starting at frame zero. The saved sampling schedule and optimizer/RNG checkpoint
+support exact resume. Only the requested frames are read for training.
+
+Evaluation queries every saved time independently and reports cumulative-through-
+horizon errors at 16, 32 and 96 intervals using the shared volume-weighted metrics,
+constraint defects, positivity bounds, boundary checks and guard intervention counts.
+Both raw and guarded prediction MSEs are recorded. `evaluation_substeps` must be
+`[1]`; a substep-refinement comparison has no meaning for this model.
+Equal updates do not imply equal compute or parameter counts, and the direct
+baseline sees longer-time targets than the four-step rollout training. Its default
+test establishes held-out-initial-condition performance within the supervised time
+range; it does not establish withheld-time interpolation or future-time extrapolation.
+
+The accepted baseline ensemble has one PDE coefficient setting. Its conditioning
+parameter is therefore always one: this run tests time/initial-condition learning,
+not learned coefficient generalization. The model interface also accepts the
+existing two-parameter `[D/D0, gamma]` convention, but the baseline runner rejects
+that configuration because this dataset supplies only one parameter. Parameter-varied
+training requires a separate accepted dataset; existing coefficient OOD test cases
+must not be repurposed as training cases.
+
+From this directory, run:
+
+```bash
+python scripts/train_ensemble.py --config configs/conditional_time.yaml \
+  --model-config configs/lsplinefno.yaml --family conditional \
+  --output /absolute/fresh/conditional_run
+```
+
+Add `--resume` to resume an unchanged experiment. `results.json` and
+`conditional/metrics.json` contain aggregate and trajectory metrics; checkpoints,
+query schedules, normalization and source/dependency provenance are retained.
+For cluster execution, use `scripts/freeze_ensemble.py --output /absolute/fresh/study`
+to create a snapshot. Submit **`slurm/conditional_time.sbatch`** with `SMOKE=1`
+and `--array=0-1` first: each arm runs three real-data updates with an interruption
+after update one, checkpoint resume, and one-trajectory evaluation at 4/16 intervals.
+Review `smoke_passed.json`, runtime and memory before the production array.
+Production uses `SMOKE=0`, `--array=0-5%3`, and exported `STUDY_ROOT`/`OUTPUT_ROOT`.
+Tasks 0–2 run the full-time model at seeds 17–19; tasks 3–5 run the matched variant.
+The freeze script's printed commands target the existing AR/NODE/OpsSplit experiment;
+use the conditional job script for this baseline.
+
+`configs/conditional_time_matched.yaml` samples exactly the existing four-step
+rollout windows and queries all four target frames directly from the window's
+initial field. It uses four intervals for time normalization. At evaluation it
+queries from frame zero; horizons 16/32/96 are explicitly labeled lead-time
+extrapolation. This controls target exposure, but differs from autoregressive
+composition and does not make the two architectures identical.
+`scripts/summarize_conditional.py` checks data/normalization/budget compatibility,
+matching sampled windows for the short-time arm, paired test cases, and physical
+audits. It withholds three-seed averages unless every seed has a complete horizon.
+
+### Coefficient extrapolation of conditional checkpoints
+
+The accepted ten-case density-diffusivity OOD dataset spans `D_perp(1)/D0` from
+2 to 10 (`D0 = 1e-5`), with initial conditions matched to held-out baseline cases.
+`evaluate_ood_fixed_conditioning.py --family conditional --conditioning coefficient`
+loads each final frozen checkpoint and supplies the true multiplier. The default
+`--conditioning fixed` supplies one as a control. Both use the saved training
+normalization, original time scale, direct time queries, and physical guards.
+No retraining or OOD-based checkpoint selection occurs.
+
+The campaign at
+`/pitagora_scratch/userexternal/vgopakum/mastu_conditional_coefficient_ood_20261109`
+tests both conditional variants, seeds 17–19, and horizons 16/32/96.
+`slurm/conditional_ood.sbatch` maps the twelve production tasks to seed, variant,
+and conditioning mode; its four-task smoke array checks both variants/modes first.
+`summarize_conditional_ood.py` writes `comparison.json`, including raw and guarded
+errors, guard interventions, per-coefficient scores, and the corresponding ten
+baseline-case errors. Three-seed means require all ten cases and successful audits.
+
+All checkpoints trained only at `D/D0 = 1`, so this tests coefficient extrapolation,
+not learning across a parameter range. The four-step variant also extrapolates in
+time. Each OOD coefficient has a different initial condition, so this dataset does
+not isolate a coefficient-response curve at a fixed initial condition.
+
 ## Independent Euler dataset
 
 `scripts/build_euler_dataset.py` prepares 100 independent density/temperature

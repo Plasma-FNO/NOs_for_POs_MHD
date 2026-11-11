@@ -1,0 +1,262 @@
+{
+  "status": "production_submitted",
+  "root": "/pitagora_scratch/userexternal/vgopakum/mastu_conditional_coefficient_ood_20261109",
+  "training_root": "/pitagora_scratch/userexternal/vgopakum/mastu_conditional_time_20261109",
+  "ood_root": "/pitagora_scratch/userexternal/vgopakum/mastu_coefficient_ood10_20261106",
+  "ood_manifest_sha256": "4f92430b7dac859fbe5fed2a96b3866f6a433ab6bd813af5cb331a62525b664e",
+  "coefficient": "D_perp(1)",
+  "baseline_coefficient": 1e-05,
+  "multiplier_range": [
+    2.0,
+    10.0
+  ],
+  "arms": [
+    "conditional",
+    "conditional_matched"
+  ],
+  "seeds": [
+    17,
+    18,
+    19
+  ],
+  "conditioning_modes": [
+    "fixed",
+    "coefficient"
+  ],
+  "horizons": [
+    16,
+    32,
+    96
+  ],
+  "test_cases": 10,
+  "training_performed": false,
+  "normalization_refitted": false,
+  "smoke_job": "2808396",
+  "tests_passed": 31,
+  "summary_output": "/pitagora_scratch/userexternal/vgopakum/mastu_conditional_coefficient_ood_20261109/comparison.json",
+  "caveat": "All checkpoints trained at D/D0=1: this is extrapolation, not parameter-varied learning. Matched arm also extrapolates in time.",
+  "resources": {
+    "cpus_per_task": 4,
+    "memory_gib": 24,
+    "time_limit_hours": 1,
+    "maximum_concurrency": 3
+  },
+  "smoke_evaluator_sha256": "3aacaf15ab9e0fce72170ea7fcf6b5908b0c565ea789bbf1980d277c848cbe1d",
+  "production_evaluator_sha256": "28945cf19376dcbd76c4ce4ef5f7ab4a206cbf88e404e1b236fa3a0ec1373246",
+  "post_smoke_change": "Checkpoint family compared with model.family to retain implicit-arm compatibility; conditional behavior identical.",
+  "smoke_results": {
+    "conditional_fixed": {
+      "audits_passed": true,
+      "aggregates": [
+        {
+          "horizon": 4,
+          "substeps": 1,
+          "trajectories": 2,
+          "expected_trajectories": 2,
+          "audit_failures": 0,
+          "complete": true,
+          "mean_normalized_volume_mse": 0.0037368092982871157,
+          "trajectory_std": 0.0014206848274420586,
+          "per_field_normalized_mse": {
+            "psi": 0.000981300018731322,
+            "u": 0.0016284122164698799,
+            "zj": 0.0004303503756484119,
+            "w": 0.00316888909826573,
+            "rho": 0.00831004007770466,
+            "T": 0.01117747911393023,
+            "Vpar": 0.0004611941872595802
+          },
+          "raw_mean_normalized_volume_mse": 0.004220993010927136,
+          "raw_per_field_normalized_mse": {
+            "psi": 0.0006624473060893837,
+            "u": 0.005336550917591967,
+            "zj": 0.0004303503756484094,
+            "w": 0.00316888909826573,
+            "rho": 0.008310040077704656,
+            "T": 0.01117747911393022,
+            "Vpar": 0.00046119418725958084
+          }
+        }
+      ]
+    },
+    "conditional_coefficient": {
+      "audits_passed": true,
+      "aggregates": [
+        {
+          "horizon": 4,
+          "substeps": 1,
+          "trajectories": 2,
+          "expected_trajectories": 2,
+          "audit_failures": 0,
+          "complete": true,
+          "mean_normalized_volume_mse": 0.004309816939649269,
+          "trajectory_std": 0.0008467482010196064,
+          "per_field_normalized_mse": {
+            "psi": 0.0023065889392306256,
+            "u": 0.0009468359301773011,
+            "zj": 0.000655925506300669,
+            "w": 0.003404571467591394,
+            "rho": 0.008523952771047706,
+            "T": 0.010586292689515574,
+            "Vpar": 0.0037445512736816126
+          },
+          "raw_mean_normalized_volume_mse": 0.004949724322155348,
+          "raw_per_field_normalized_mse": {
+            "psi": 0.0016502588397958131,
+            "u": 0.006082517707154676,
+            "zj": 0.0006559255063006651,
+            "w": 0.0034045714675913948,
+            "rho": 0.008523952771047706,
+            "T": 0.010586292689515575,
+            "Vpar": 0.0037445512736816104
+          }
+        }
+      ]
+    },
+    "conditional_matched_fixed": {
+      "audits_passed": true,
+      "aggregates": [
+        {
+          "horizon": 4,
+          "substeps": 1,
+          "trajectories": 2,
+          "expected_trajectories": 2,
+          "audit_failures": 0,
+          "complete": true,
+          "mean_normalized_volume_mse": 0.004751892926966154,
+          "trajectory_std": 0.0020146796662884182,
+          "per_field_normalized_mse": {
+            "psi": 0.00024352767898855283,
+            "u": 0.0022354405606353177,
+            "zj": 0.0003377682216009528,
+            "w": 0.002996117656684574,
+            "rho": 0.008426559495050334,
+            "T": 0.015311117511124243,
+            "Vpar": 0.0037127193646791013
+          },
+          "raw_mean_normalized_volume_mse": 0.02328708138410068,
+          "raw_per_field_normalized_mse": {
+            "psi": 0.07702588320383591,
+            "u": 0.05519940423572964,
+            "zj": 0.0003377682216009529,
+            "w": 0.0029961176566845743,
+            "rho": 0.008426559495050336,
+            "T": 0.015311117511124246,
+            "Vpar": 0.003712719364679101
+          }
+        }
+      ]
+    },
+    "conditional_matched_coefficient": {
+      "audits_passed": true,
+      "aggregates": [
+        {
+          "horizon": 4,
+          "substeps": 1,
+          "trajectories": 2,
+          "expected_trajectories": 2,
+          "audit_failures": 0,
+          "complete": true,
+          "mean_normalized_volume_mse": 0.009761259471277428,
+          "trajectory_std": 0.0013138500300599533,
+          "per_field_normalized_mse": {
+            "psi": 0.006149636762158132,
+            "u": 0.028863637051985046,
+            "zj": 0.0004725365501138557,
+            "w": 0.004819747452387654,
+            "rho": 0.008398398144686008,
+            "T": 0.015543170821799445,
+            "Vpar": 0.004081689515811855
+          },
+          "raw_mean_normalized_volume_mse": 0.025853626054948543,
+          "raw_per_field_normalized_mse": {
+            "psi": 0.08513959993118249,
+            "u": 0.06252023996865852,
+            "zj": 0.00047253655011385656,
+            "w": 0.004819747452387654,
+            "rho": 0.008398398144686002,
+            "T": 0.015543170821799433,
+            "Vpar": 0.0040816895158118545
+          }
+        }
+      ]
+    }
+  },
+  "production_job": "2808403",
+  "summary_job": "2808407",
+  "summary_dependency": "afterany:2808403",
+  "task_mapping": [
+    {
+      "task": 0,
+      "seed": 17,
+      "arm": "conditional",
+      "conditioning": "fixed"
+    },
+    {
+      "task": 1,
+      "seed": 17,
+      "arm": "conditional",
+      "conditioning": "coefficient"
+    },
+    {
+      "task": 2,
+      "seed": 17,
+      "arm": "conditional_matched",
+      "conditioning": "fixed"
+    },
+    {
+      "task": 3,
+      "seed": 17,
+      "arm": "conditional_matched",
+      "conditioning": "coefficient"
+    },
+    {
+      "task": 4,
+      "seed": 18,
+      "arm": "conditional",
+      "conditioning": "fixed"
+    },
+    {
+      "task": 5,
+      "seed": 18,
+      "arm": "conditional",
+      "conditioning": "coefficient"
+    },
+    {
+      "task": 6,
+      "seed": 18,
+      "arm": "conditional_matched",
+      "conditioning": "fixed"
+    },
+    {
+      "task": 7,
+      "seed": 18,
+      "arm": "conditional_matched",
+      "conditioning": "coefficient"
+    },
+    {
+      "task": 8,
+      "seed": 19,
+      "arm": "conditional",
+      "conditioning": "fixed"
+    },
+    {
+      "task": 9,
+      "seed": 19,
+      "arm": "conditional",
+      "conditioning": "coefficient"
+    },
+    {
+      "task": 10,
+      "seed": 19,
+      "arm": "conditional_matched",
+      "conditioning": "fixed"
+    },
+    {
+      "task": 11,
+      "seed": 19,
+      "arm": "conditional_matched",
+      "conditioning": "coefficient"
+    }
+  ]
+}

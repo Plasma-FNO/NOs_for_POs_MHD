@@ -170,7 +170,7 @@ class CoefficientImplicitModel(nn.Module):
             extra = self.correction(state, delta)
             if extra is not None:
                 forcing = extra if forcing is None else forcing + extra
-            proposal = system.step(state, forcing, interval/substeps)
+            proposal = self.base.advance(system, state, forcing, interval/substeps)   # Delta L kept as trained
             guard = self.base.physical_guard
             state = guard(state, proposal) if guard is not None else proposal
         return state

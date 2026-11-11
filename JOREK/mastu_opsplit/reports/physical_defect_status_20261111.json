@@ -1,0 +1,3533 @@
+{
+  "be_screen": {
+    "all_audits_passed": true,
+    "all_rollouts_completed": true,
+    "cases": [
+      "mastu_000"
+    ],
+    "data_access_note": "Shared release verification may inspect all splits; selected and scored windows are training only.",
+    "evaluation_split": "train",
+    "evidence": {
+      "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/physics_be_screen/report.json",
+      "sha256": "67e631fb26bdb70f106743320fb72178abc45067e2ab215cedd1c87868b39bf4"
+    },
+    "frozen_source_sha256": {
+      "implicit_opsplit.py": "cf94352a0fba5ef539a7331fad5a4f91d1bf49f717449d65185a20f34f61dc89",
+      "native_critical.py": "510f7e8c27e03e134aaf790dc0845bf56587eef76fd9889dc4f9fa6e60af9494",
+      "physical_defect.py": "b3dc0ac1892ea89b2ddb617f7b503c310cd180e42140f0fa996c7c4942c2aa3b",
+      "physical_rhs.py": "9c8df5dbf4b7e6e65a057120b2cca8978748e03c08d12fd0d94b3fb972e58c29"
+    },
+    "independent_checks": [
+      "canonical provenance hash",
+      "frozen physical module hashes",
+      "seven-field MSE arithmetic",
+      "stage and RHS counts",
+      "zero learned-network calls",
+      "all six horizon/substep audits"
+    ],
+    "learned_parameters_used": 0,
+    "maximum_constraint_defect": 2.9190297200507077e-13,
+    "maximum_raw_guarded_mse_difference": 2.4201587999275742e-14,
+    "metric": "Volume-weighted normalized MSE averaged over seven fields and all predicted frames through each horizon",
+    "positivity_limiter_activated": false,
+    "provenance_canonical_sha256": "f13950d90b4b3d35d54c5d4990e66cf690f1cbbc943846c146e162db43afe553",
+    "provenance_file": {
+      "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/physics_be_screen/provenance.json",
+      "sha256": "d680328feccb12bc82e1ac631c49475e20153e31c6f5bb07b4ff682491493752"
+    },
+    "rows": [
+      {
+        "audit_passed": true,
+        "boundary_max_normalized_drift": 0.0,
+        "case_id": "mastu_000",
+        "constraint_defects": [
+          2.709799998697671e-13,
+          6.041200080071685e-14
+        ],
+        "density_temperature_lower_bounds": [
+          0.0006231068122705865,
+          8.709803349918345e-05
+        ],
+        "duration_seconds": 5.857971296783663e-08,
+        "guard_statistics": {
+          "limited_field_steps": 0,
+          "minimum_alpha": 1.0,
+          "steps": 4,
+          "worst_proposed_density_bound": 0.0006231068122705865,
+          "worst_proposed_temperature_bound": 8.709803349918345e-05
+        },
+        "horizon": 4,
+        "normalized_volume_mse": 4.076071593532323e-05,
+        "per_field_normalized_mse": {
+          "T": 2.3637396757169427e-05,
+          "Vpar": 1.6143842371960307e-05,
+          "psi": 5.0602711300735815e-06,
+          "rho": 7.379567392150669e-08,
+          "u": 4.9714484378805964e-05,
+          "w": 0.00018109013202376393,
+          "zj": 9.605089211567909e-06
+        },
+        "raw_normalized_volume_mse": 4.076071594518575e-05,
+        "stage_statistics": {
+          "boundary_iterations": 16,
+          "guarded_stages": 4,
+          "learned_network_evaluations": 0,
+          "linear_rhs_evaluations": 0,
+          "maximum_boundary_iterations": 4,
+          "maximum_boundary_residual": 7.1046250311303205e-12,
+          "maximum_guard_change": 1.9153753774148186e-06,
+          "maximum_held_dof_change": 5.684341886080802e-14,
+          "physical_rhs_evaluations": 4,
+          "stages": 4
+        },
+        "substeps": 1
+      },
+      {
+        "audit_passed": true,
+        "boundary_max_normalized_drift": 0.0,
+        "case_id": "mastu_000",
+        "constraint_defects": [
+          2.837832823074247e-13,
+          1.2799283571139753e-13
+        ],
+        "density_temperature_lower_bounds": [
+          0.000524775777286693,
+          8.709803349918345e-05
+        ],
+        "duration_seconds": 2.343188518713465e-07,
+        "guard_statistics": {
+          "limited_field_steps": 0,
+          "minimum_alpha": 1.0,
+          "steps": 16,
+          "worst_proposed_density_bound": 0.000524775777286693,
+          "worst_proposed_temperature_bound": 8.709803349918345e-05
+        },
+        "horizon": 16,
+        "normalized_volume_mse": 0.00013540662612362048,
+        "per_field_normalized_mse": {
+          "T": 4.164573915767083e-05,
+          "Vpar": 3.5426777889078424e-05,
+          "psi": 2.817602824215963e-05,
+          "rho": 4.506235099893558e-07,
+          "u": 0.0003164242972797718,
+          "w": 0.00045427239057256624,
+          "zj": 7.14505262141071e-05
+        },
+        "raw_normalized_volume_mse": 0.00013540662614782207,
+        "stage_statistics": {
+          "boundary_iterations": 64,
+          "guarded_stages": 16,
+          "learned_network_evaluations": 0,
+          "linear_rhs_evaluations": 0,
+          "maximum_boundary_iterations": 4,
+          "maximum_boundary_residual": 7.1046250311303205e-12,
+          "maximum_guard_change": 1.991432526438075e-06,
+          "maximum_held_dof_change": 5.684341886080802e-14,
+          "physical_rhs_evaluations": 16,
+          "stages": 16
+        },
+        "substeps": 1
+      },
+      {
+        "audit_passed": true,
+        "boundary_max_normalized_drift": 0.0,
+        "case_id": "mastu_000",
+        "constraint_defects": [
+          2.8212949733664877e-13,
+          6.11076401103604e-14
+        ],
+        "density_temperature_lower_bounds": [
+          0.0006231143331567315,
+          8.709793895370352e-05
+        ],
+        "duration_seconds": 5.857971296783663e-08,
+        "guard_statistics": {
+          "limited_field_steps": 0,
+          "minimum_alpha": 1.0,
+          "steps": 8,
+          "worst_proposed_density_bound": 0.0006231143331567315,
+          "worst_proposed_temperature_bound": 8.708269550707738e-05
+        },
+        "horizon": 4,
+        "normalized_volume_mse": 1.74876833161097e-05,
+        "per_field_normalized_mse": {
+          "T": 1.0300852666194256e-05,
+          "Vpar": 1.6856142197319714e-05,
+          "psi": 1.1954417063561768e-06,
+          "rho": 1.739141998266348e-08,
+          "u": 2.3012608600116093e-05,
+          "w": 6.887126942666891e-05,
+          "zj": 2.1600771961300875e-06
+        },
+        "raw_normalized_volume_mse": 1.748768332072575e-05,
+        "stage_statistics": {
+          "boundary_iterations": 32,
+          "guarded_stages": 8,
+          "learned_network_evaluations": 0,
+          "linear_rhs_evaluations": 0,
+          "maximum_boundary_iterations": 4,
+          "maximum_boundary_residual": 1.406123704077876e-12,
+          "maximum_guard_change": 1.9369260355617257e-06,
+          "maximum_held_dof_change": 5.684341886080802e-14,
+          "physical_rhs_evaluations": 8,
+          "stages": 8
+        },
+        "substeps": 2
+      },
+      {
+        "audit_passed": true,
+        "boundary_max_normalized_drift": 0.0,
+        "case_id": "mastu_000",
+        "constraint_defects": [
+          2.9190297200507077e-13,
+          1.3041903684293868e-13
+        ],
+        "density_temperature_lower_bounds": [
+          0.0005247090082184571,
+          8.709793895370352e-05
+        ],
+        "duration_seconds": 2.343188518713465e-07,
+        "guard_statistics": {
+          "limited_field_steps": 0,
+          "minimum_alpha": 1.0,
+          "steps": 32,
+          "worst_proposed_density_bound": 0.0005247090082184571,
+          "worst_proposed_temperature_bound": 8.708269550707738e-05
+        },
+        "horizon": 16,
+        "normalized_volume_mse": 6.718336105999256e-05,
+        "per_field_normalized_mse": {
+          "T": 2.3519770687706283e-05,
+          "Vpar": 3.492901641058575e-05,
+          "psi": 5.07698436299155e-06,
+          "rho": 8.481447116871873e-08,
+          "u": 0.0001532320277927815,
+          "w": 0.00023625144764625105,
+          "zj": 1.7189466048463104e-05
+        },
+        "raw_normalized_volume_mse": 6.718336106995642e-05,
+        "stage_statistics": {
+          "boundary_iterations": 128,
+          "guarded_stages": 32,
+          "learned_network_evaluations": 0,
+          "linear_rhs_evaluations": 0,
+          "maximum_boundary_iterations": 4,
+          "maximum_boundary_residual": 1.406123704077876e-12,
+          "maximum_guard_change": 2.085881216196128e-06,
+          "maximum_held_dof_change": 5.684341886080802e-14,
+          "physical_rhs_evaluations": 32,
+          "stages": 32
+        },
+        "substeps": 2
+      },
+      {
+        "audit_passed": true,
+        "boundary_max_normalized_drift": 0.0,
+        "case_id": "mastu_000",
+        "constraint_defects": [
+          2.7559620768138606e-13,
+          5.807097778629174e-14
+        ],
+        "density_temperature_lower_bounds": [
+          0.0006231189096139909,
+          8.709789183689558e-05
+        ],
+        "duration_seconds": 5.857971296783663e-08,
+        "guard_statistics": {
+          "limited_field_steps": 0,
+          "minimum_alpha": 1.0,
+          "steps": 16,
+          "worst_proposed_density_bound": 0.0006231189096139909,
+          "worst_proposed_temperature_bound": 8.707509848944491e-05
+        },
+        "horizon": 4,
+        "normalized_volume_mse": 9.903802812008303e-06,
+        "per_field_normalized_mse": {
+          "T": 5.580546360657633e-06,
+          "Vpar": 1.7253458870615888e-05,
+          "psi": 2.568126881038694e-07,
+          "rho": 3.752678133468392e-09,
+          "u": 1.3446056856792759e-05,
+          "w": 3.230756778616676e-05,
+          "zj": 4.784244435877386e-07
+        },
+        "raw_normalized_volume_mse": 9.903802814192195e-06,
+        "stage_statistics": {
+          "boundary_iterations": 64,
+          "guarded_stages": 16,
+          "learned_network_evaluations": 0,
+          "linear_rhs_evaluations": 0,
+          "maximum_boundary_iterations": 4,
+          "maximum_boundary_residual": 1.3806839660106775e-12,
+          "maximum_guard_change": 2.1845154689614787e-06,
+          "maximum_held_dof_change": 5.684341886080802e-14,
+          "physical_rhs_evaluations": 16,
+          "stages": 16
+        },
+        "substeps": 4
+      },
+      {
+        "audit_passed": true,
+        "boundary_max_normalized_drift": 0.0,
+        "case_id": "mastu_000",
+        "constraint_defects": [
+          2.8669515261878527e-13,
+          1.3425290407516006e-13
+        ],
+        "density_temperature_lower_bounds": [
+          0.0005246763285119873,
+          8.709789183689558e-05
+        ],
+        "duration_seconds": 2.343188518713465e-07,
+        "guard_statistics": {
+          "limited_field_steps": 0,
+          "minimum_alpha": 1.0,
+          "steps": 64,
+          "worst_proposed_density_bound": 0.0005246763285119873,
+          "worst_proposed_temperature_bound": 8.707509848944491e-05
+        },
+        "horizon": 16,
+        "normalized_volume_mse": 4.5109373351562026e-05,
+        "per_field_normalized_mse": {
+          "T": 1.6994391769355774e-05,
+          "Vpar": 3.47579221409295e-05,
+          "psi": 5.972040229782213e-07,
+          "rho": 1.2934140376785365e-08,
+          "u": 9.443926398501013e-05,
+          "w": 0.00016357008516818536,
+          "zj": 5.3938122340984075e-06
+        },
+        "raw_normalized_volume_mse": 4.5109373354767395e-05,
+        "stage_statistics": {
+          "boundary_iterations": 256,
+          "guarded_stages": 64,
+          "learned_network_evaluations": 0,
+          "linear_rhs_evaluations": 0,
+          "maximum_boundary_iterations": 4,
+          "maximum_boundary_residual": 2.206319101464299e-12,
+          "maximum_guard_change": 2.327043441496812e-06,
+          "maximum_held_dof_change": 5.684341886080802e-14,
+          "physical_rhs_evaluations": 64,
+          "stages": 64
+        },
+        "substeps": 4
+      }
+    ],
+    "runtime": {
+      "caveat": "Descriptive setup/LU/audit-inclusive timing; not a controlled throughput comparison. Torch allocation excludes external cuDSS allocations.",
+      "cpu_seconds": 284.442864475,
+      "device": "cuda",
+      "device_name": "NVIDIA H100 PCIe",
+      "elapsed_seconds": 339.33299588400405,
+      "peak_torch_allocated_gib": 4.2958807945251465,
+      "row_seconds": {
+        "1": 17.43975358500029,
+        "2": 19.022318439005176,
+        "4": 24.132515363002312
+      }
+    },
+    "scheme": "be",
+    "start_frame": 0,
+    "test_rollouts_evaluated": false,
+    "training_updates": 0
+  },
+  "campaign": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111",
+  "completed_learned_comparison_available": true,
+  "critical_failure_audit": {
+    "acceptance_gates_unchanged": true,
+    "assessment": "The failure reproduces and is not removed by substantially increasing candidate cells, Newton iterations, or starting points with the existing acceptance criteria.",
+    "captured_state": {
+      "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/critical_capture/critical_failure_1794393546739402432_001.npz",
+      "sha256": "c41e114200e17113fea264c93b160c9d0aaabaf760e86d8d403d5a28a9fb7ada"
+    },
+    "evidence": {
+      "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/critical_capture/independent_verdict.json",
+      "sha256": "d056b6c2a6af1220fbd423fad6fe105b2a9dcd11f6fb72d889f12f0fac242b9a"
+    },
+    "findings": {
+      "candidate_iteration_expansions": [
+        [
+          128,
+          60
+        ],
+        [
+          512,
+          20
+        ],
+        [
+          512,
+          60
+        ],
+        [
+          2048,
+          60
+        ]
+      ],
+      "geometric_observation": "Best classified minimum candidates stall at element edges near the previous axis, well within the unchanged 0.08 reference neighborhood.",
+      "gradient_to_tolerance_ratio": 181463.93957791955,
+      "multistart_searches": [
+        {
+          "candidate_cells": 128,
+          "iterations": 100,
+          "qualified_axis_roots": 0,
+          "seeds_per_cell": 81
+        },
+        {
+          "candidate_cells": 2048,
+          "iterations": 100,
+          "qualified_axis_roots": 0,
+          "seeds_per_cell": 16
+        }
+      ],
+      "original_search_reproduces_failure": true,
+      "physical_gradient_tolerance": 1e-09,
+      "previous_state_valid_axis_candidates": 29,
+      "smallest_multistart_gradient_at_classified_minimum": 0.00018146393957791954,
+      "tracker_only_gpu_peak_bytes": 107219968,
+      "xpoint_tracking": "Both retained X-point groups remain valid; the reported missing group is the magnetic axis."
+    },
+    "implementation_source_edits": false,
+    "recommendation": "Preserve the failed ARS result and keep the tracker gates unchanged. Use separately validated BE full-window behavior for the current pilot; investigate ARS field evolution independently before any robustness claim.",
+    "regression": {
+      "command": "OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/bin/python -m pytest tests/test_physical_rhs.py tests/test_native_critical.py tests/test_physical_defect.py tests/test_physical_profiles.py tests/test_physical_parity.py tests/test_physical_affine.py tests/test_physical_data_cache.py tests/test_physical_training.py tests/test_implicit_opsplit.py tests/test_implicit_coefficient.py tests/test_gpu_native.py -k 'not (pretraining_and_rollout_resume_exactly_on_device and cpu)' -q --basetemp=/scratch_local/mastu_final_regression_20261111 --junitxml=/scratch_local/mastu_final_regression_20261111.xml",
+      "current_vs_frozen_sources": {
+        "ensemble_training.py": {
+          "frozen_sha256": "a2bd013eccc50e0f5b70719d30fc12d9c66eb75233cae0974a7f63d5f13cec11",
+          "identical": true,
+          "workspace_sha256": "a2bd013eccc50e0f5b70719d30fc12d9c66eb75233cae0974a7f63d5f13cec11"
+        },
+        "implicit_opsplit.py": {
+          "frozen_sha256": "cf94352a0fba5ef539a7331fad5a4f91d1bf49f717449d65185a20f34f61dc89",
+          "identical": true,
+          "workspace_sha256": "cf94352a0fba5ef539a7331fad5a4f91d1bf49f717449d65185a20f34f61dc89"
+        },
+        "implicit_training.py": {
+          "frozen_sha256": "4da8f97823fbde43ba4e4708e6fb18e8daa7619253dc149a38416911079c47c9",
+          "identical": true,
+          "workspace_sha256": "4da8f97823fbde43ba4e4708e6fb18e8daa7619253dc149a38416911079c47c9"
+        },
+        "native_critical.py": {
+          "frozen_sha256": "510f7e8c27e03e134aaf790dc0845bf56587eef76fd9889dc4f9fa6e60af9494",
+          "identical": true,
+          "workspace_sha256": "510f7e8c27e03e134aaf790dc0845bf56587eef76fd9889dc4f9fa6e60af9494"
+        },
+        "physical_data_cache.py": {
+          "frozen_sha256": "c806d0a45d8486c53f107a64ea30eb2a50f4faefd842b7fabe947a59aece6d73",
+          "identical": true,
+          "workspace_sha256": "c806d0a45d8486c53f107a64ea30eb2a50f4faefd842b7fabe947a59aece6d73"
+        },
+        "physical_defect.py": {
+          "frozen_sha256": "b3dc0ac1892ea89b2ddb617f7b503c310cd180e42140f0fa996c7c4942c2aa3b",
+          "identical": true,
+          "workspace_sha256": "b3dc0ac1892ea89b2ddb617f7b503c310cd180e42140f0fa996c7c4942c2aa3b"
+        },
+        "physical_rhs.py": {
+          "frozen_sha256": "9c8df5dbf4b7e6e65a057120b2cca8978748e03c08d12fd0d94b3fb972e58c29",
+          "identical": true,
+          "workspace_sha256": "9c8df5dbf4b7e6e65a057120b2cca8978748e03c08d12fd0d94b3fb972e58c29"
+        }
+      },
+      "deselected": 1,
+      "excluded_test": "test_pretraining_and_rollout_resume_exactly_on_device[cpu]",
+      "failed": 0,
+      "junit": {
+        "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/critical_capture/final_regression_20261111.xml",
+        "sha256": "36e09f0bcdfe79c86729165f91f386ab4e64355931497855c676e786fbd1736d"
+      },
+      "junit_suite_attributes": {
+        "errors": "0",
+        "failures": "0",
+        "hostname": "login02",
+        "name": "pytest",
+        "skipped": "0",
+        "tests": "80",
+        "time": "29.770",
+        "timestamp": "2026-11-11T11:34:26.503151+01:00"
+      },
+      "optimizer_updating_tests": [
+        "test_worker_budget_resume_restores_cuda_randomness_and_optimizer",
+        "test_pretraining_and_rollout_resume_exactly_on_device[cuda]"
+      ],
+      "passed": 80,
+      "pytest_reported_seconds": 29.77,
+      "skipped": 0,
+      "source_tree": "Current workspace source; frozen-source comparison recorded below.",
+      "training_policy": "All optimizer-updating tests ran on CUDA. Synthetic value, gradient, DAE-order and cache checks also used CPU; no full-mesh experiment or training job was launched by this suite.",
+      "working_directory": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit"
+    },
+    "scientific_limits": [
+      "Finite local searches do not prove that no mathematical minimum exists anywhere, nor do they establish physical magnetic topology loss.",
+      "Roots outside the qualified reference neighborhood, degenerate or nonsmooth extrema, and basins missed by the tested starts are not excluded.",
+      "This analysis does not establish whether frozen-mass evolution, stage/guard interaction, spatial artifacts, or another mechanism caused the field to leave the qualified tracker regime.",
+      "Canonical native coefficient extrema in the expansion report include derivative DOFs; they are not physical density or temperature extrema.",
+      "No native JOREK restart simulation from the failed predicted state was performed.",
+      "Instrumented capture timing includes retaining the previous state and is not bare-driver inference timing."
+    ],
+    "verdict": "No qualified smooth minimum root found in the predicted field under broad local searches; not a proof of physical topology loss."
+  },
+  "formulation": {
+    "data_scope": "One fixed axisymmetric model303 equilibrium/mesh and baseline coefficient",
+    "explicit": "F_native(q)-I(q)+assemble[G(q)-G(q*)]",
+    "implicit": "I(q)=F*+L*(q-q*)",
+    "mass": "Native M* frozen at q*",
+    "physical_profile_manifest": {
+      "path": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/physical_profiles_20261111.json",
+      "sha256": "7d259061d1bb0932c26717c2cc2eafa4daafd3816804330917a8c88817d0cdb4"
+    },
+    "physics_control": "Full known nonlinear volume RHS; learned defect zero",
+    "reference": "Immutable native restart, distinct from training mean; nonzero F* retained"
+  },
+  "held_out_diagnostic_gain_observed": true,
+  "learning_pilot": {
+    "all_audits_passed": true,
+    "cases": [
+      "mastu_004",
+      "mastu_010"
+    ],
+    "claim_scope": "Observed total MSE improvement on two existing held-out cases, one seed and64updates; not a full-budget/full-test-set or independent-confirmation claim.",
+    "comparison_evidence": {
+      "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/learning_pilot64_comparison.json",
+      "sha256": "bd09e13469faa62e482a11d716444b5864f01f63f31b015d27c1c97f7f03c697"
+    },
+    "comparison_path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/learning_pilot64_comparison.json",
+    "complete_arm_horizon_substep_aggregates": 18,
+    "completed_comparison_available": true,
+    "completed_updates": 64,
+    "historical_affine_context": {
+      "caveat": "Same data, scales, tangent and fitted boundary identities; different physics and stage wall/guard policy. Descriptive context only, without an equal-runtime or isolated learned-defect claim.",
+      "h96": [
+        {
+          "actual_substeps_per_frame": 2,
+          "exact_physics_over_historical_affine_mse_ratio": 0.012230694473991086,
+          "historical": {
+            "normalized_volume_mse": 0.1617365510624586,
+            "per_field_normalized_mse": {
+              "T": 0.0025099252012625592,
+              "Vpar": 0.0029084654510171627,
+              "psi": 0.0005899853391570007,
+              "rho": 0.004695085492265452,
+              "u": 0.001289175401866899,
+              "w": 0.07226219606436593,
+              "zj": 1.0479010244872753
+            },
+            "rollout_prefix_seconds": 48.97054424392991
+          },
+          "horizon": 96,
+          "learned_over_historical_affine_mse_ratio": 0.011599936021051267
+        },
+        {
+          "actual_substeps_per_frame": 4,
+          "exact_physics_over_historical_affine_mse_ratio": 0.01140688506478822,
+          "historical": {
+            "normalized_volume_mse": 0.161523974214765,
+            "per_field_normalized_mse": {
+              "T": 0.0025080011795525024,
+              "Vpar": 0.0029192373608054314,
+              "psi": 0.00046869738361646565,
+              "rho": 0.004603464101873407,
+              "u": 0.0010978980824769915,
+              "w": 0.071361029264551,
+              "zj": 1.0477094921304795
+            },
+            "rollout_prefix_seconds": 59.10479820286855
+          },
+          "horizon": 96,
+          "learned_over_historical_affine_mse_ratio": 0.010780455513533608
+        }
+      ],
+      "identity_verified": true
+    },
+    "history": {
+      "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/pilot64_learned/implicit_rollout/rollout/history.json",
+      "sha256": "797de325b87342612b4b4cb271b98a3d4d772ce394684e31164b8f9a2cd43be1"
+    },
+    "interpretation": {
+      "memory": "Torch allocator peak excludes external cuDSS allocations.",
+      "prefixes": "A complete short prefix remains reported if the same rollout fails later; full failures stay explicit.",
+      "ratio": "Learned MSE / matched physics MSE; lower is better. No survivor-only averaging.",
+      "raw": "Final preguard stage along guarded history, not an independently unguarded rollout.",
+      "scope": "Two diagnostic held-out cases, one seed and 64 fixed updates. No bootstrap or independent confirmation claim.",
+      "timing": "Pilot learning overlapped physics screens on the GPU; observed costs are not clean throughput benchmarks. Rollout prefix timing includes CPU audits and factor-cache differences; not isolated inference latency. Training step time omits checkpoint/setup overhead outside updates; final-worker timing is not total campaign time.",
+      "training_losses": "Successive losses use different randomly sampled windows; first/last losses are not a measured improvement."
+    },
+    "learned_gain_claimed": true,
+    "note": "Final fixed-budget checkpoint; two existing held-out cases and matching physics control, not an independent fresh holdout or full20-case study.",
+    "original_source_parity_caveat": "This frozen revision failed22/240induction training-state parity checks; all such failures are retained and a source correction is separately qualified.",
+    "paired_comparisons": [
+      {
+        "actual_substeps_per_frame": 2,
+        "horizon": 16,
+        "learned": {
+          "limited_field_steps": 0,
+          "maximum_guard_change": 2.059059047709866e-06,
+          "maximum_held_dof_change": 5.684341886080802e-14,
+          "minimum_alpha": 1.0,
+          "normalized_volume_mse": 2.424382010889777e-05,
+          "per_field_normalized_mse": {
+            "T": 3.727020757290256e-05,
+            "Vpar": 3.085014365885592e-05,
+            "psi": 1.7546191173457115e-05,
+            "rho": 3.066047476460937e-07,
+            "u": 5.197531797418833e-06,
+            "w": 6.445680634476695e-05,
+            "zj": 1.4079255467236878e-05
+          },
+          "raw_normalized_volume_mse": 2.4243820101676024e-05,
+          "raw_per_field_normalized_mse": {
+            "T": 3.727020757290286e-05,
+            "Vpar": 3.085014365885574e-05,
+            "psi": 1.7546191122994337e-05,
+            "rho": 3.0660474764610616e-07,
+            "u": 5.197531797329349e-06,
+            "w": 6.445680634476695e-05,
+            "zj": 1.4079255467236853e-05
+          },
+          "rollout_prefix_seconds": 40.71396282000933,
+          "work": {
+            "boundary_iterations": 256,
+            "learned_network_evaluations": 128,
+            "linear_rhs_evaluations": 0,
+            "physical_rhs_evaluations": 64,
+            "stages": 64
+          }
+        },
+        "mse_ratio_learned_over_physics": 0.990971034253319,
+        "mse_reduction_percent": 0.9028965746680995,
+        "paired_cases": [
+          {
+            "case_id": "mastu_004",
+            "ratio": 0.97115180212844
+          },
+          {
+            "case_id": "mastu_010",
+            "ratio": 0.9942398296659462
+          }
+        ],
+        "per_field_mse_ratio_learned_over_physics": {
+          "T": 1.0001789282899636,
+          "Vpar": 0.962654156113328,
+          "psi": 0.9993193028064612,
+          "rho": 0.9992703085819205,
+          "u": 0.9902083251285423,
+          "w": 0.9957871250855069,
+          "zj": 0.9985945829600745
+        },
+        "physics": {
+          "limited_field_steps": 0,
+          "maximum_guard_change": 2.1104400689253566e-06,
+          "maximum_held_dof_change": 5.684341886080802e-14,
+          "minimum_alpha": 1.0,
+          "normalized_volume_mse": 2.4464711147854188e-05,
+          "per_field_normalized_mse": {
+            "T": 3.7263540071399595e-05,
+            "Vpar": 3.2046964595688193e-05,
+            "psi": 1.7558142952088355e-05,
+            "rho": 3.0682863786996846e-07,
+            "u": 5.248927589801999e-06,
+            "w": 6.47295036469086e-05,
+            "zj": 1.4099070541222623e-05
+          },
+          "raw_normalized_volume_mse": 2.4464711140863493e-05,
+          "raw_per_field_normalized_mse": {
+            "T": 3.7263540071399446e-05,
+            "Vpar": 3.204696459568787e-05,
+            "psi": 1.75581429031106e-05,
+            "rho": 3.0682863786994363e-07,
+            "u": 5.2489275898446645e-06,
+            "w": 6.472950364690861e-05,
+            "zj": 1.4099070541223311e-05
+          },
+          "rollout_prefix_seconds": 43.48412148999341,
+          "work": {
+            "boundary_iterations": 256,
+            "learned_network_evaluations": 0,
+            "linear_rhs_evaluations": 0,
+            "physical_rhs_evaluations": 64,
+            "stages": 64
+          }
+        },
+        "raw_mse_ratio_learned_over_physics": 0.9909710342412948,
+        "requested_substeps": 1
+      },
+      {
+        "actual_substeps_per_frame": 4,
+        "horizon": 16,
+        "learned": {
+          "limited_field_steps": 0,
+          "maximum_guard_change": 2.1372521592510907e-06,
+          "maximum_held_dof_change": 5.684341886080802e-14,
+          "minimum_alpha": 1.0,
+          "normalized_volume_mse": 2.1779497556533422e-05,
+          "per_field_normalized_mse": {
+            "T": 3.881887568548268e-05,
+            "Vpar": 3.172518136499542e-05,
+            "psi": 7.08062392360075e-06,
+            "rho": 1.2751703156729875e-07,
+            "u": 1.428906182831965e-05,
+            "w": 5.264906021833648e-05,
+            "zj": 7.76616284343168e-06
+          },
+          "raw_normalized_volume_mse": 2.1779497552275306e-05,
+          "raw_per_field_normalized_mse": {
+            "T": 3.881887568548159e-05,
+            "Vpar": 3.17251813649953e-05,
+            "psi": 7.080623893589786e-06,
+            "rho": 1.2751703156727697e-07,
+            "u": 1.4289061828524908e-05,
+            "w": 5.26490602183365e-05,
+            "zj": 7.766162843431773e-06
+          },
+          "rollout_prefix_seconds": 68.64966653799638,
+          "work": {
+            "boundary_iterations": 512,
+            "learned_network_evaluations": 256,
+            "linear_rhs_evaluations": 0,
+            "physical_rhs_evaluations": 128,
+            "stages": 128
+          }
+        },
+        "mse_ratio_learned_over_physics": 0.9920335104458411,
+        "mse_reduction_percent": 0.7966489554158906,
+        "paired_cases": [
+          {
+            "case_id": "mastu_004",
+            "ratio": 0.9683771327684424
+          },
+          {
+            "case_id": "mastu_010",
+            "ratio": 0.9962477963291995
+          }
+        ],
+        "per_field_mse_ratio_learned_over_physics": {
+          "T": 1.0001978021103912,
+          "Vpar": 0.961690531417557,
+          "psi": 0.9990487048417819,
+          "rho": 0.9989486374927792,
+          "u": 1.0104643333269392,
+          "w": 0.9980994634906352,
+          "zj": 0.9988383641159729
+        },
+        "physics": {
+          "limited_field_steps": 0,
+          "maximum_guard_change": 2.177899936839367e-06,
+          "maximum_held_dof_change": 5.684341886080802e-14,
+          "minimum_alpha": 1.0,
+          "normalized_volume_mse": 2.1954397031149934e-05,
+          "per_field_normalized_mse": {
+            "T": 3.881119874846342e-05,
+            "Vpar": 3.298897132555904e-05,
+            "psi": 7.087366100656824e-06,
+            "rho": 1.2765123929429305e-07,
+            "u": 1.414108480333306e-05,
+            "w": 5.274931221203934e-05,
+            "zj": 7.775194788703538e-06
+          },
+          "raw_normalized_volume_mse": 2.195439702688212e-05,
+          "raw_per_field_normalized_mse": {
+            "T": 3.881119874846359e-05,
+            "Vpar": 3.298897132555889e-05,
+            "psi": 7.087366070505414e-06,
+            "rho": 1.2765123929427992e-07,
+            "u": 1.4141084803609565e-05,
+            "w": 5.274931221203936e-05,
+            "zj": 7.775194788703766e-06
+          },
+          "rollout_prefix_seconds": 49.27367285700166,
+          "work": {
+            "boundary_iterations": 512,
+            "learned_network_evaluations": 0,
+            "linear_rhs_evaluations": 0,
+            "physical_rhs_evaluations": 128,
+            "stages": 128
+          }
+        },
+        "raw_mse_ratio_learned_over_physics": 0.9920335104447342,
+        "requested_substeps": 2
+      },
+      {
+        "actual_substeps_per_frame": 8,
+        "horizon": 16,
+        "learned": {
+          "limited_field_steps": 0,
+          "maximum_guard_change": 2.294046923978499e-06,
+          "maximum_held_dof_change": 5.684341886080802e-14,
+          "minimum_alpha": 1.0,
+          "normalized_volume_mse": 2.4193862687305615e-05,
+          "per_field_normalized_mse": {
+            "T": 4.443652721222276e-05,
+            "Vpar": 3.227511514260909e-05,
+            "psi": 3.6221407317643817e-06,
+            "rho": 6.834082802515233e-08,
+            "u": 2.3665958936530586e-05,
+            "w": 5.7800560567706907e-05,
+            "zj": 7.488395392280428e-06
+          },
+          "raw_normalized_volume_mse": 2.419386268442475e-05,
+          "raw_per_field_normalized_mse": {
+            "T": 4.4436527212222595e-05,
+            "Vpar": 3.22751151426737e-05,
+            "psi": 3.622140711487868e-06,
+            "rho": 6.834082802515581e-08,
+            "u": 2.366595893657696e-05,
+            "w": 5.780056056770689e-05,
+            "zj": 7.488395392280081e-06
+          },
+          "rollout_prefix_seconds": 85.15912562599988,
+          "work": {
+            "boundary_iterations": 846,
+            "learned_network_evaluations": 512,
+            "linear_rhs_evaluations": 0,
+            "physical_rhs_evaluations": 256,
+            "stages": 256
+          }
+        },
+        "mse_ratio_learned_over_physics": 0.9938379500931196,
+        "mse_reduction_percent": 0.6162049906880407,
+        "paired_cases": [
+          {
+            "case_id": "mastu_004",
+            "ratio": 0.9685973045458361
+          },
+          {
+            "case_id": "mastu_010",
+            "ratio": 0.9979711681652572
+          }
+        ],
+        "per_field_mse_ratio_learned_over_physics": {
+          "T": 1.0001840147036953,
+          "Vpar": 0.9613341165986964,
+          "psi": 0.998794292117185,
+          "rho": 0.9986515073284147,
+          "u": 1.0108254406526747,
+          "w": 0.9998965826054245,
+          "zj": 0.9995861084258713
+        },
+        "physics": {
+          "limited_field_steps": 0,
+          "maximum_guard_change": 2.1294547778438755e-06,
+          "maximum_held_dof_change": 5.684341886080802e-14,
+          "minimum_alpha": 1.0,
+          "normalized_volume_mse": 2.4343870834313305e-05,
+          "per_field_normalized_mse": {
+            "T": 4.442835174224124e-05,
+            "Vpar": 3.357325469400995e-05,
+            "psi": 3.6265132473738734e-06,
+            "rho": 6.843310957190383e-08,
+            "u": 2.3412508218283303e-05,
+            "w": 5.780653876933586e-05,
+            "zj": 7.491496059377022e-06
+          },
+          "raw_normalized_volume_mse": 2.4343870831492092e-05,
+          "raw_per_field_normalized_mse": {
+            "T": 4.4428351742242336e-05,
+            "Vpar": 3.357325469414938e-05,
+            "psi": 3.626513227167427e-06,
+            "rho": 6.843310957190169e-08,
+            "u": 2.3412508218600842e-05,
+            "w": 5.780653876933582e-05,
+            "zj": 7.49149605937696e-06
+          },
+          "rollout_prefix_seconds": 65.7158198540128,
+          "work": {
+            "boundary_iterations": 845,
+            "learned_network_evaluations": 0,
+            "linear_rhs_evaluations": 0,
+            "physical_rhs_evaluations": 256,
+            "stages": 256
+          }
+        },
+        "raw_mse_ratio_learned_over_physics": 0.9938379500899551,
+        "requested_substeps": 4
+      },
+      {
+        "actual_substeps_per_frame": 2,
+        "horizon": 32,
+        "learned": {
+          "limited_field_steps": 0,
+          "maximum_guard_change": 2.1892321870886633e-06,
+          "maximum_held_dof_change": 5.684341886080802e-14,
+          "minimum_alpha": 1.0,
+          "normalized_volume_mse": 5.9844835992527386e-05,
+          "per_field_normalized_mse": {
+            "T": 0.0001017502959891386,
+            "Vpar": 8.044161999527175e-05,
+            "psi": 3.625644703394136e-05,
+            "rho": 8.102578984619447e-07,
+            "u": 2.0903630117965218e-05,
+            "w": 0.00013858953371526445,
+            "zj": 4.016206719764841e-05
+          },
+          "raw_normalized_volume_mse": 5.9844835979498874e-05,
+          "raw_per_field_normalized_mse": {
+            "T": 0.00010175029598913905,
+            "Vpar": 8.044161999527152e-05,
+            "psi": 3.625644694154956e-05,
+            "rho": 8.102578984619803e-07,
+            "u": 2.090363011915713e-05,
+            "w": 0.00013858953371526442,
+            "zj": 4.016206719764853e-05
+          },
+          "rollout_prefix_seconds": 67.33427839400247,
+          "work": {
+            "boundary_iterations": 512,
+            "learned_network_evaluations": 256,
+            "linear_rhs_evaluations": 0,
+            "physical_rhs_evaluations": 128,
+            "stages": 128
+          }
+        },
+        "mse_ratio_learned_over_physics": 0.952342211907166,
+        "mse_reduction_percent": 4.765778809283406,
+        "paired_cases": [
+          {
+            "case_id": "mastu_004",
+            "ratio": 0.8816285517665341
+          },
+          {
+            "case_id": "mastu_010",
+            "ratio": 0.9694626078837235
+          }
+        ],
+        "per_field_mse_ratio_learned_over_physics": {
+          "T": 0.9993244438328749,
+          "Vpar": 0.8092181951806979,
+          "psi": 1.0027212537790275,
+          "rho": 1.0014132554312598,
+          "u": 0.9610799498234499,
+          "w": 0.9926907072069728,
+          "zj": 0.995972556488789
+        },
+        "physics": {
+          "limited_field_steps": 0,
+          "maximum_guard_change": 2.1104400689253566e-06,
+          "maximum_held_dof_change": 5.684341886080802e-14,
+          "minimum_alpha": 1.0,
+          "normalized_volume_mse": 6.283963395120518e-05,
+          "per_field_normalized_mse": {
+            "T": 0.00010181908049689929,
+            "Vpar": 9.94065883272795e-05,
+            "psi": 3.615805179884149e-05,
+            "rho": 8.091144131230879e-07,
+            "u": 2.1750146927740204e-05,
+            "w": 0.00013960998396489368,
+            "zj": 4.032447172965904e-05
+          },
+          "raw_normalized_volume_mse": 6.283963393808167e-05,
+          "raw_per_field_normalized_mse": {
+            "T": 0.00010181908049689822,
+            "Vpar": 9.940658832727903e-05,
+            "psi": 3.6158051704666314e-05,
+            "rho": 8.091144131230158e-07,
+            "u": 2.1750146930052584e-05,
+            "w": 0.00013960998396489373,
+            "zj": 4.032447172965885e-05
+          },
+          "rollout_prefix_seconds": 62.688782049008296,
+          "work": {
+            "boundary_iterations": 512,
+            "learned_network_evaluations": 0,
+            "linear_rhs_evaluations": 0,
+            "physical_rhs_evaluations": 128,
+            "stages": 128
+          }
+        },
+        "raw_mse_ratio_learned_over_physics": 0.9523422118987247,
+        "requested_substeps": 1
+      },
+      {
+        "actual_substeps_per_frame": 4,
+        "horizon": 32,
+        "learned": {
+          "limited_field_steps": 0,
+          "maximum_guard_change": 2.2354244144651148e-06,
+          "maximum_held_dof_change": 5.684341886080802e-14,
+          "minimum_alpha": 1.0,
+          "normalized_volume_mse": 5.001765200592766e-05,
+          "per_field_normalized_mse": {
+            "T": 0.00010734811511440654,
+            "Vpar": 8.188281026235099e-05,
+            "psi": 1.9382992007700992e-05,
+            "rho": 4.653346371383076e-07,
+            "u": 1.5465272300679338e-05,
+            "w": 0.00010512407718042343,
+            "zj": 2.0454962538794015e-05
+          },
+          "raw_normalized_volume_mse": 5.001765199689814e-05,
+          "raw_per_field_normalized_mse": {
+            "T": 0.00010734811511440587,
+            "Vpar": 8.188281026250515e-05,
+            "psi": 1.9382991944111833e-05,
+            "rho": 4.6533463713836245e-07,
+            "u": 1.5465272300908742e-05,
+            "w": 0.00010512407718042343,
+            "zj": 2.0454962538793632e-05
+          },
+          "rollout_prefix_seconds": 108.77818692399887,
+          "work": {
+            "boundary_iterations": 964,
+            "learned_network_evaluations": 512,
+            "linear_rhs_evaluations": 0,
+            "physical_rhs_evaluations": 256,
+            "stages": 256
+          }
+        },
+        "mse_ratio_learned_over_physics": 0.9472100485145952,
+        "mse_reduction_percent": 5.278995148540478,
+        "paired_cases": [
+          {
+            "case_id": "mastu_004",
+            "ratio": 0.8781557047257224
+          },
+          {
+            "case_id": "mastu_010",
+            "ratio": 0.9678505610264195
+          }
+        ],
+        "per_field_mse_ratio_learned_over_physics": {
+          "T": 0.9993456203317,
+          "Vpar": 0.8085590606728503,
+          "psi": 1.0042058660679951,
+          "rho": 1.001979968018343,
+          "u": 1.0107714234250953,
+          "w": 0.9970742811391962,
+          "zj": 1.0002924659808083
+        },
+        "physics": {
+          "limited_field_steps": 0,
+          "maximum_guard_change": 2.177899936839367e-06,
+          "maximum_held_dof_change": 5.684341886080802e-14,
+          "minimum_alpha": 1.0,
+          "normalized_volume_mse": 5.280523795578902e-05,
+          "per_field_normalized_mse": {
+            "T": 0.00010741840753629945,
+            "Vpar": 0.0001012700422826397,
+            "psi": 1.9301811175029088e-05,
+            "rho": 4.6441511007312755e-07,
+            "u": 1.5300464518747265e-05,
+            "w": 0.0001054325431604906,
+            "zj": 2.044898190724398e-05
+          },
+          "raw_normalized_volume_mse": 5.280523794671183e-05,
+          "raw_per_field_normalized_mse": {
+            "T": 0.00010741840753629938,
+            "Vpar": 0.00010127004228286314,
+            "psi": 1.9301811111084247e-05,
+            "rho": 4.64415110073177e-07,
+            "u": 1.530046451892769e-05,
+            "w": 0.00010543254316049063,
+            "zj": 2.0448981907244547e-05
+          },
+          "rollout_prefix_seconds": 77.32331373899069,
+          "work": {
+            "boundary_iterations": 965,
+            "learned_network_evaluations": 0,
+            "linear_rhs_evaluations": 0,
+            "physical_rhs_evaluations": 256,
+            "stages": 256
+          }
+        },
+        "raw_mse_ratio_learned_over_physics": 0.9472100485064234,
+        "requested_substeps": 2
+      },
+      {
+        "actual_substeps_per_frame": 8,
+        "horizon": 32,
+        "learned": {
+          "limited_field_steps": 0,
+          "maximum_guard_change": 2.294046923978499e-06,
+          "maximum_held_dof_change": 5.684341886080802e-14,
+          "minimum_alpha": 1.0,
+          "normalized_volume_mse": 5.418428042824462e-05,
+          "per_field_normalized_mse": {
+            "T": 0.00011367509543752356,
+            "Vpar": 8.274844957634458e-05,
+            "psi": 1.3400179450915084e-05,
+            "rho": 3.4051900693596635e-07,
+            "u": 2.84006694033534e-05,
+            "w": 0.00011509525119930931,
+            "zj": 2.5629798923330434e-05
+          },
+          "raw_normalized_volume_mse": 5.4184280421351804e-05,
+          "raw_per_field_normalized_mse": {
+            "T": 0.00011367509543752343,
+            "Vpar": 8.274844957646154e-05,
+            "psi": 1.340017940240206e-05,
+            "rho": 3.4051900693597773e-07,
+            "u": 2.8400669403500857e-05,
+            "w": 0.00011509525119930933,
+            "zj": 2.5629798923329444e-05
+          },
+          "rollout_prefix_seconds": 150.81836429801479,
+          "work": {
+            "boundary_iterations": 1614,
+            "learned_network_evaluations": 1024,
+            "linear_rhs_evaluations": 0,
+            "physical_rhs_evaluations": 512,
+            "stages": 512
+          }
+        },
+        "mse_ratio_learned_over_physics": 0.9528914963748447,
+        "mse_reduction_percent": 4.7108503625155285,
+        "paired_cases": [
+          {
+            "case_id": "mastu_004",
+            "ratio": 0.8786435292280702
+          },
+          {
+            "case_id": "mastu_010",
+            "ratio": 0.9734451548844028
+          }
+        ],
+        "per_field_mse_ratio_learned_over_physics": {
+          "T": 0.9993751138889858,
+          "Vpar": 0.8084902340198515,
+          "psi": 1.0053851347951401,
+          "rho": 1.0023428157968841,
+          "u": 1.0247926496734838,
+          "w": 1.0005717432779597,
+          "zj": 1.0037372020872128
+        },
+        "physics": {
+          "limited_field_steps": 0,
+          "maximum_guard_change": 2.1294547778438755e-06,
+          "maximum_held_dof_change": 5.684341886080802e-14,
+          "minimum_alpha": 1.0,
+          "normalized_volume_mse": 5.6863011827035784e-05,
+          "per_field_normalized_mse": {
+            "T": 0.00011374617384173828,
+            "Vpar": 0.00010234934955851648,
+            "psi": 1.3328404197706323e-05,
+            "rho": 3.397230982947151e-07,
+            "u": 2.7713576412167214e-05,
+            "w": 0.00011502948386514223,
+            "zj": 2.5534371815685188e-05
+          },
+          "raw_normalized_volume_mse": 5.686301182013867e-05,
+          "raw_per_field_normalized_mse": {
+            "T": 0.00011374617384173917,
+            "Vpar": 0.0001023493495587165,
+            "psi": 1.3328404148897723e-05,
+            "rho": 3.3972309829469853e-07,
+            "u": 2.7713576412495385e-05,
+            "w": 0.00011502948386514221,
+            "zj": 2.553437181568503e-05
+          },
+          "rollout_prefix_seconds": 108.53204353700858,
+          "work": {
+            "boundary_iterations": 1613,
+            "learned_network_evaluations": 0,
+            "linear_rhs_evaluations": 0,
+            "physical_rhs_evaluations": 512,
+            "stages": 512
+          }
+        },
+        "raw_mse_ratio_learned_over_physics": 0.9528914963692062,
+        "requested_substeps": 4
+      },
+      {
+        "actual_substeps_per_frame": 2,
+        "horizon": 96,
+        "learned": {
+          "limited_field_steps": 48,
+          "maximum_guard_change": 196.90221403893156,
+          "maximum_held_dof_change": 5.684341886080802e-14,
+          "minimum_alpha": 0.9788328273061465,
+          "normalized_volume_mse": 0.001876133644590011,
+          "per_field_normalized_mse": {
+            "T": 0.0024610681092473966,
+            "Vpar": 0.003749538040881648,
+            "psi": 0.00019072615430606126,
+            "rho": 0.004473067283406365,
+            "u": 0.0005990550849936158,
+            "w": 0.0012061415060766153,
+            "zj": 0.00045333933321837464
+          },
+          "raw_normalized_volume_mse": 0.001808380566221083,
+          "raw_per_field_normalized_mse": {
+            "T": 0.002461068109247397,
+            "Vpar": 0.0037495380408816806,
+            "psi": 0.00019072615429003873,
+            "rho": 0.0039987957348234845,
+            "u": 0.000599055085009992,
+            "w": 0.0012061415060766148,
+            "zj": 0.00045333933321837426
+          },
+          "rollout_prefix_seconds": 164.04845581801783,
+          "work": {
+            "boundary_iterations": 1431,
+            "learned_network_evaluations": 768,
+            "linear_rhs_evaluations": 0,
+            "physical_rhs_evaluations": 384,
+            "stages": 384
+          }
+        },
+        "mse_ratio_learned_over_physics": 0.9484282389457814,
+        "mse_reduction_percent": 5.157176105421857,
+        "paired_cases": [
+          {
+            "case_id": "mastu_004",
+            "ratio": 0.9452621443314877
+          },
+          {
+            "case_id": "mastu_010",
+            "ratio": 0.9506819751508538
+          }
+        ],
+        "per_field_mse_ratio_learned_over_physics": {
+          "T": 0.9976450585214627,
+          "Vpar": 0.8441540434716193,
+          "psi": 0.9833498789784728,
+          "rho": 1.001793891962927,
+          "u": 0.989837059176609,
+          "w": 0.9935320213819336,
+          "zj": 0.985107682474902
+        },
+        "physics": {
+          "limited_field_steps": 48,
+          "maximum_guard_change": 195.71351034290092,
+          "maximum_held_dof_change": 5.684341886080802e-14,
+          "minimum_alpha": 0.9788721345248834,
+          "normalized_volume_mse": 0.0019781503413219895,
+          "per_field_normalized_mse": {
+            "T": 0.002466877461303489,
+            "Vpar": 0.004441769923249451,
+            "psi": 0.00019395553747786302,
+            "rho": 0.004465057452727909,
+            "u": 0.0006052057552704045,
+            "w": 0.0012139935906634964,
+            "zj": 0.0004601926685613119
+          },
+          "raw_normalized_volume_mse": 0.0019104769609698843,
+          "raw_per_field_normalized_mse": {
+            "T": 0.0024668774613034886,
+            "Vpar": 0.004441769923249487,
+            "psi": 0.0001939555374648861,
+            "rho": 0.00399134379026569,
+            "u": 0.0006052057552808305,
+            "w": 0.0012139935906634969,
+            "zj": 0.0004601926685613113
+          },
+          "rollout_prefix_seconds": 138.77571547000844,
+          "work": {
+            "boundary_iterations": 1431,
+            "learned_network_evaluations": 0,
+            "linear_rhs_evaluations": 0,
+            "physical_rhs_evaluations": 384,
+            "stages": 384
+          }
+        },
+        "raw_mse_ratio_learned_over_physics": 0.9465597351684522,
+        "requested_substeps": 1
+      },
+      {
+        "actual_substeps_per_frame": 4,
+        "horizon": 96,
+        "learned": {
+          "limited_field_steps": 48,
+          "maximum_guard_change": 145.82524533312608,
+          "maximum_held_dof_change": 5.684341886080802e-14,
+          "minimum_alpha": 0.9842308531704593,
+          "normalized_volume_mse": 0.0017413020183914237,
+          "per_field_normalized_mse": {
+            "T": 0.0024729352293856146,
+            "Vpar": 0.0037576842135034648,
+            "psi": 9.43524654487154e-05,
+            "rho": 0.004255708068722353,
+            "u": 0.000514697816228746,
+            "w": 0.0008845173659730694,
+            "zj": 0.00020921896947800295
+          },
+          "raw_normalized_volume_mse": 0.0017413020183870702,
+          "raw_per_field_normalized_mse": {
+            "T": 0.0024729352293856137,
+            "Vpar": 0.003757684213503397,
+            "psi": 9.435246541903006e-05,
+            "rho": 0.004255708068722349,
+            "u": 0.0005146978162280299,
+            "w": 0.000884517365973069,
+            "zj": 0.00020921896947800206
+          },
+          "rollout_prefix_seconds": 265.591596475002,
+          "work": {
+            "boundary_iterations": 2695,
+            "learned_network_evaluations": 1536,
+            "linear_rhs_evaluations": 0,
+            "physical_rhs_evaluations": 768,
+            "stages": 768
+          }
+        },
+        "mse_ratio_learned_over_physics": 0.9450832065286316,
+        "mse_reduction_percent": 5.491679347136835,
+        "paired_cases": [
+          {
+            "case_id": "mastu_004",
+            "ratio": 0.9438425387558218
+          },
+          {
+            "case_id": "mastu_010",
+            "ratio": 0.9460469798566977
+          }
+        ],
+        "per_field_mse_ratio_learned_over_physics": {
+          "T": 0.997630078194208,
+          "Vpar": 0.8438042503822312,
+          "psi": 0.9790897060044247,
+          "rho": 1.0018446248202588,
+          "u": 0.9925649778768112,
+          "w": 0.9946458364481264,
+          "zj": 0.9810932000125778
+        },
+        "physics": {
+          "limited_field_steps": 48,
+          "maximum_guard_change": 144.84811053669,
+          "maximum_held_dof_change": 5.684341886080802e-14,
+          "minimum_alpha": 0.9842702700329579,
+          "normalized_volume_mse": 0.0018424854090756404,
+          "per_field_normalized_mse": {
+            "T": 0.0024788098148181632,
+            "Vpar": 0.004453265329964015,
+            "psi": 9.636753902128044e-05,
+            "rho": 0.004247872337974435,
+            "u": 0.0005185532712727105,
+            "w": 0.0008892787096276147,
+            "zj": 0.00021325086085126338
+          },
+          "raw_normalized_volume_mse": 0.0018424854090721386,
+          "raw_per_field_normalized_mse": {
+            "T": 0.0024788098148181637,
+            "Vpar": 0.004453265329963941,
+            "psi": 9.636753899754376e-05,
+            "rho": 0.004247872337974432,
+            "u": 0.000518553271272012,
+            "w": 0.0008892787096276148,
+            "zj": 0.00021325086085126392
+          },
+          "rollout_prefix_seconds": 186.5135327750031,
+          "work": {
+            "boundary_iterations": 2692,
+            "learned_network_evaluations": 0,
+            "linear_rhs_evaluations": 0,
+            "physical_rhs_evaluations": 768,
+            "stages": 768
+          }
+        },
+        "raw_mse_ratio_learned_over_physics": 0.945083206528065,
+        "requested_substeps": 2
+      },
+      {
+        "actual_substeps_per_frame": 8,
+        "horizon": 96,
+        "learned": {
+          "limited_field_steps": 48,
+          "maximum_guard_change": 129.42004070595613,
+          "maximum_held_dof_change": 5.684341886080802e-14,
+          "minimum_alpha": 0.9869546680117134,
+          "normalized_volume_mse": 0.0017210339007230537,
+          "per_field_normalized_mse": {
+            "T": 0.002480535750200607,
+            "Vpar": 0.0037622227569575483,
+            "psi": 6.433016985647211e-05,
+            "rho": 0.004206462417899915,
+            "u": 0.0005005618615253195,
+            "w": 0.0008753209755792846,
+            "zj": 0.00015780337304222862
+          },
+          "raw_normalized_volume_mse": 0.0017210339007170954,
+          "raw_per_field_normalized_mse": {
+            "T": 0.0024805357502006077,
+            "Vpar": 0.0037622227569568314,
+            "psi": 6.433016981608768e-05,
+            "rho": 0.004206462417899916,
+            "u": 0.0005005618615247129,
+            "w": 0.0008753209755792846,
+            "zj": 0.000157803373042228
+          },
+          "rollout_prefix_seconds": 412.1359317340102,
+          "work": {
+            "boundary_iterations": 4728,
+            "learned_network_evaluations": 3072,
+            "linear_rhs_evaluations": 0,
+            "physical_rhs_evaluations": 1536,
+            "stages": 1536
+          }
+        },
+        "mse_ratio_learned_over_physics": 0.9447084338529447,
+        "mse_reduction_percent": 5.529156614705533,
+        "paired_cases": [
+          {
+            "case_id": "mastu_004",
+            "ratio": 0.9431940619538118
+          },
+          {
+            "case_id": "mastu_010",
+            "ratio": 0.9458893519780566
+          }
+        ],
+        "per_field_mse_ratio_learned_over_physics": {
+          "T": 0.99762398986111,
+          "Vpar": 0.8436454939463426,
+          "psi": 0.9788232478316886,
+          "rho": 1.0018695862190563,
+          "u": 0.9946622603489302,
+          "w": 0.9964373438789106,
+          "zj": 0.9839718595574773
+        },
+        "physics": {
+          "limited_field_steps": 48,
+          "maximum_guard_change": 128.8027611187772,
+          "maximum_held_dof_change": 5.684341886080802e-14,
+          "minimum_alpha": 0.9869941386680927,
+          "normalized_volume_mse": 0.0018217619733782895,
+          "per_field_normalized_mse": {
+            "T": 0.0024864435653215887,
+            "Vpar": 0.004459483022138719,
+            "psi": 6.572194724530477e-05,
+            "rho": 0.00419861274936455,
+            "u": 0.000503248068695922,
+            "w": 0.0008784505929613731,
+            "zj": 0.0001603738679205701
+          },
+          "raw_normalized_volume_mse": 0.0018217619733727122,
+          "raw_per_field_normalized_mse": {
+            "T": 0.0024864435653215887,
+            "Vpar": 0.004459483022137943,
+            "psi": 6.572194720764838e-05,
+            "rho": 0.004198612749364547,
+            "u": 0.0005032480686953166,
+            "w": 0.0008784505929613725,
+            "zj": 0.0001603738679205701
+          },
+          "rollout_prefix_seconds": 280.25775633601006,
+          "work": {
+            "boundary_iterations": 4719,
+            "learned_network_evaluations": 0,
+            "linear_rhs_evaluations": 0,
+            "physical_rhs_evaluations": 1536,
+            "stages": 1536
+          }
+        },
+        "raw_mse_ratio_learned_over_physics": 0.9447084338525662,
+        "requested_substeps": 4
+      }
+    ],
+    "protocol": {
+      "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/learning_pilot64_protocol.json",
+      "sha256": "8785d3b55694ad1dc034c77dfcd9c8fb55f2b28e8f3a859a079ed07483be86c9"
+    },
+    "protocol_settings": {
+      "actual_substeps_per_frame": [
+        2,
+        4,
+        8
+      ],
+      "checkpoint_selection": "final fixed-budget update",
+      "configuration": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/learning_pilot64.yaml",
+      "configuration_sha256": "9d0767db91a8b0302fcfe40b0d22d9c52683ff30e5f3de053e50c047dae41922",
+      "control": "physics arm with identical config and no learned evaluations",
+      "device": "cuda",
+      "evaluation_horizons": [
+        16,
+        32,
+        96
+      ],
+      "evaluation_requested_substeps": [
+        1,
+        2,
+        4
+      ],
+      "held_out_diagnostic_cases": 2,
+      "learning_rate": 0.0001,
+      "rationale": "BE passes initial full-length training window; two internal steps improve initial short training-window accuracy. Fixed engineering pilot budget; no held-out scoring used to set it.",
+      "scheme": "be",
+      "scope": "Exploratory implementation pilot, not a full-budget 20-case study or independent new holdout.",
+      "seed": 17,
+      "training_horizon": 4,
+      "training_substeps_per_frame": 2,
+      "training_updates": 64
+    },
+    "selected_checkpoint": {
+      "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/pilot64_learned/implicit_rollout/rollout/selected.pt",
+      "sha256": "cc5dccd2d63c8720309d29fc009c4ee1ed62a535cbe89f03c3baa7430b0f1612"
+    },
+    "status": "complete_original_frozen_source_revision",
+    "total_full_rollouts": 12,
+    "training_diagnostics": {
+      "training_guard_limited_field_steps": 85,
+      "training_guard_updates_activated": 13,
+      "training_minimum_alpha": 0.8165244824075014,
+      "training_recorded_step_seconds": 335.3688629750686,
+      "training_updates_completed": 64
+    },
+    "training_schedule": {
+      "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/pilot64_learned/implicit_rollout/rollout/sampled_windows.json",
+      "sha256": "c629c9a4377a5184c98e8dd788e81bc0a8dec28336d45661af0e6ccf6267b7d9"
+    }
+  },
+  "limitations": [
+    "Original source revision failed22/240training-state parity checks; all are retained and resolved by separately qualified source revisionv2. Corrected-source frozen-weight rollout verification covers two cases at actual2microsteps only.",
+    "Learning evidence is an exploratory one-seed64-update comparison on two existing held-out cases; no2000-update/full20-case or fresh-holdout claim.",
+    "ARS loses a qualified smooth minimum axis on mastu_000 under both tested substeps; broad unchanged-gate searches do not repair that captured failure.",
+    "Exact volume RHS retains frozen mass and training-identified wall/held-row approximations.",
+    "Stage guards can alter the integrator; raw scores use guarded history.",
+    "Critical roots are tracked within the reference neighborhood; root loss/topology or limiter transitions are unsupported.",
+    "Boundary-flux min is nonsmooth when upper/lower X-point fluxes exchange order.",
+    "Only baseline coefficients, fixed boundary and n=0 on the existing mesh/equilibrium are qualified.",
+    "No robust coefficient OOD, cross-equilibrium, nonaxisymmetric or live JOREK deployment claim."
+  ],
+  "live_deployment_qualified": false,
+  "observed_at_utc": "2026-11-11T11:25:30.423547+00:00",
+  "physics_full_window_screens": {
+    "ars222": {
+      "all_requested_horizons_available_and_audited": false,
+      "cases": [
+        "mastu_000",
+        "mastu_028"
+      ],
+      "completed_h96": [
+        {
+          "case_id": "mastu_028",
+          "normalized_volume_mse": 0.0013978052615991506,
+          "substeps": 1
+        }
+      ],
+      "continuation_checks": "Canonical provenance and scientific configuration/source/normalization identity checked; repeated completed prefix metrics agree within rtol1e-8/atol1e-12.",
+      "evaluation_split": "train",
+      "failures_retained": [
+        {
+          "case_id": "mastu_000",
+          "message": "Native axis/X-point tracking failed in its qualified neighborhood: [[0, 2, 1]]",
+          "run": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/physics_ars222_full/report.json",
+          "substeps": 1,
+          "type": "FloatingPointError"
+        },
+        {
+          "case_id": "mastu_000",
+          "message": "Native axis/X-point tracking failed in its qualified neighborhood: [[0, 2, 1]]",
+          "run": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/physics_ars222_full/report.json",
+          "substeps": 2,
+          "type": "FloatingPointError"
+        },
+        {
+          "case_id": "mastu_028",
+          "message": "Worker reached 450 CPU seconds before the next macrostep",
+          "run": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/physics_ars222_full/report.json",
+          "substeps": 2,
+          "type": "CpuBudgetExhausted"
+        },
+        {
+          "case_id": "mastu_028",
+          "message": "Native axis/X-point tracking failed in its qualified neighborhood: [[0, 2, 1]]",
+          "run": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/physics_ars222_remaining/report.json",
+          "substeps": 2,
+          "type": "FloatingPointError"
+        }
+      ],
+      "horizons": [
+        16,
+        32,
+        96
+      ],
+      "interpretation": "Incomplete across-case full-window qualification; numerical failures remain failures even when CPU-budget continuations complete.",
+      "repeated_prefix_differences": [
+        {
+          "absolute_mse_difference": 3.5904676313255196e-15,
+          "case_id": "mastu_028",
+          "horizon": 16,
+          "relative_mse_difference": 3.6367153732896895e-10,
+          "substeps": 2
+        },
+        {
+          "absolute_mse_difference": 9.01403653325375e-15,
+          "case_id": "mastu_028",
+          "horizon": 32,
+          "relative_mse_difference": 2.922095898583166e-10,
+          "substeps": 2
+        }
+      ],
+      "runs": [
+        {
+          "cpu_seconds": 448.075581541,
+          "elapsed_seconds": 504.43440695499885,
+          "evidence": {
+            "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/physics_ars222_full/report.json",
+            "sha256": "6cd7d91f209c23c3ed4cf3e459049e7e4209cc5f253d24c668f7d651c030672c"
+          },
+          "provenance": {
+            "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/physics_ars222_full/provenance.json",
+            "sha256": "bb278c3dfb6afbfdc7520ab254ef112d723e217108baf96038cd391f2b85058d"
+          },
+          "provenance_canonical_sha256": "2362022fb7d0c2ad1a4f80b0ccfefdac87b0261ee9d041bb4d6355853b5e5277",
+          "remaining_pairs": [
+            [
+              2,
+              20
+            ]
+          ],
+          "rows": [
+            {
+              "case_id": "mastu_000",
+              "failure": {
+                "message": "Native axis/X-point tracking failed in its qualified neighborhood: [[0, 2, 1]]",
+                "type": "FloatingPointError"
+              },
+              "horizons": [
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    2.8338946562199244e-13,
+                    1.304278372022841e-13
+                  ],
+                  "density_temperature_lower_bounds": [
+                    0.0005246443197471351,
+                    8.70978456353602e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 0,
+                    "minimum_alpha": 1.0,
+                    "steps": 32,
+                    "worst_proposed_density_bound": 0.0005246443197471351,
+                    "worst_proposed_temperature_bound": 8.707639852717437e-05
+                  },
+                  "horizon": 16,
+                  "normalized_volume_mse": 3.183690125617846e-05,
+                  "raw_normalized_volume_mse": 3.183690125251087e-05,
+                  "stage_statistics": {
+                    "boundary_iterations": 128,
+                    "guarded_stages": 32,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 16,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 2.31732886757571e-12,
+                    "maximum_guard_change": 1.9487391602623916e-06,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 32,
+                    "stages": 32
+                  }
+                },
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    2.845515416017422e-13,
+                    1.5180564419754747e-13
+                  ],
+                  "density_temperature_lower_bounds": [
+                    0.00039749073006057484,
+                    8.70978456353602e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 0,
+                    "minimum_alpha": 1.0,
+                    "steps": 64,
+                    "worst_proposed_density_bound": 0.00039749073006057473,
+                    "worst_proposed_temperature_bound": 8.707639852717437e-05
+                  },
+                  "horizon": 32,
+                  "normalized_volume_mse": 8.432740965859614e-05,
+                  "raw_normalized_volume_mse": 8.432740964752542e-05,
+                  "stage_statistics": {
+                    "boundary_iterations": 252,
+                    "guarded_stages": 64,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 32,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 9.087999518987535e-11,
+                    "maximum_guard_change": 2.106818472791261e-06,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 64,
+                    "stages": 64
+                  }
+                }
+              ],
+              "substeps": 1
+            },
+            {
+              "case_id": "mastu_028",
+              "failure": null,
+              "horizons": [
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    2.902500278746065e-13,
+                    8.775614764635826e-14
+                  ],
+                  "density_temperature_lower_bounds": [
+                    0.0005260761353699918,
+                    8.70978452873533e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 0,
+                    "minimum_alpha": 1.0,
+                    "steps": 32,
+                    "worst_proposed_density_bound": 0.0005260761353699918,
+                    "worst_proposed_temperature_bound": 8.707639845502088e-05
+                  },
+                  "horizon": 16,
+                  "normalized_volume_mse": 9.993990795399413e-06,
+                  "raw_normalized_volume_mse": 9.993990794413594e-06,
+                  "stage_statistics": {
+                    "boundary_iterations": 128,
+                    "guarded_stages": 32,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 16,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 1.7669054439399625e-12,
+                    "maximum_guard_change": 1.9716148154103053e-06,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 32,
+                    "stages": 32
+                  }
+                },
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    2.902500278746065e-13,
+                    1.0046856679073908e-13
+                  ],
+                  "density_temperature_lower_bounds": [
+                    0.0004015427643090338,
+                    8.70978452873533e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 0,
+                    "minimum_alpha": 1.0,
+                    "steps": 64,
+                    "worst_proposed_density_bound": 0.0004015427643090337,
+                    "worst_proposed_temperature_bound": 8.707639845502088e-05
+                  },
+                  "horizon": 32,
+                  "normalized_volume_mse": 3.101295671404284e-05,
+                  "raw_normalized_volume_mse": 3.101295671104627e-05,
+                  "stage_statistics": {
+                    "boundary_iterations": 252,
+                    "guarded_stages": 64,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 32,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 9.073198216839347e-11,
+                    "maximum_guard_change": 2.067664783389489e-06,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 64,
+                    "stages": 64
+                  }
+                },
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    2.99196313247419e-13,
+                    1.0046856679073908e-13
+                  ],
+                  "density_temperature_lower_bounds": [
+                    5.236530105049398e-06,
+                    8.70978452873533e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 13,
+                    "minimum_alpha": 0.975000935745003,
+                    "steps": 192,
+                    "worst_proposed_density_bound": -8.054925291652944e-06,
+                    "worst_proposed_temperature_bound": 8.707639845502088e-05
+                  },
+                  "horizon": 96,
+                  "normalized_volume_mse": 0.0013978052615991506,
+                  "raw_normalized_volume_mse": 0.0013212164605708808,
+                  "stage_statistics": {
+                    "boundary_iterations": 698,
+                    "guarded_stages": 192,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 96,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 9.937224229739832e-11,
+                    "maximum_guard_change": 236.76368014860054,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 192,
+                    "stages": 192
+                  }
+                }
+              ],
+              "substeps": 1
+            },
+            {
+              "case_id": "mastu_000",
+              "failure": {
+                "message": "Native axis/X-point tracking failed in its qualified neighborhood: [[0, 2, 1]]",
+                "type": "FloatingPointError"
+              },
+              "horizons": [
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    2.864833343088787e-13,
+                    1.335189176300557e-13
+                  ],
+                  "density_temperature_lower_bounds": [
+                    0.0005246441657194493,
+                    8.709784512808455e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 0,
+                    "minimum_alpha": 1.0,
+                    "steps": 64,
+                    "worst_proposed_density_bound": 0.0005246441657194493,
+                    "worst_proposed_temperature_bound": 8.70719657325732e-05
+                  },
+                  "horizon": 16,
+                  "normalized_volume_mse": 3.159183341018621e-05,
+                  "raw_normalized_volume_mse": 3.159183340647985e-05,
+                  "stage_statistics": {
+                    "boundary_iterations": 245,
+                    "guarded_stages": 64,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 32,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 9.974227485110302e-11,
+                    "maximum_guard_change": 2.120849506681566e-06,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 64,
+                    "stages": 64
+                  }
+                },
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    2.864833343088787e-13,
+                    1.5501202863267652e-13
+                  ],
+                  "density_temperature_lower_bounds": [
+                    0.0003974913585455715,
+                    8.709784512808455e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 0,
+                    "minimum_alpha": 1.0,
+                    "steps": 128,
+                    "worst_proposed_density_bound": 0.0003974913585455714,
+                    "worst_proposed_temperature_bound": 8.70719657325732e-05
+                  },
+                  "horizon": 32,
+                  "normalized_volume_mse": 8.403152736615448e-05,
+                  "raw_normalized_volume_mse": 8.403152735583101e-05,
+                  "stage_statistics": {
+                    "boundary_iterations": 451,
+                    "guarded_stages": 128,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 64,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 9.974227485110302e-11,
+                    "maximum_guard_change": 2.120849506681566e-06,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 128,
+                    "stages": 128
+                  }
+                }
+              ],
+              "substeps": 2
+            },
+            {
+              "case_id": "mastu_028",
+              "failure": {
+                "message": "Worker reached 450 CPU seconds before the next macrostep",
+                "type": "CpuBudgetExhausted"
+              },
+              "horizons": [
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    2.912127990819105e-13,
+                    8.338319521809575e-14
+                  ],
+                  "density_temperature_lower_bounds": [
+                    0.000526076184611896,
+                    8.709784476382891e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 0,
+                    "minimum_alpha": 1.0,
+                    "steps": 64,
+                    "worst_proposed_density_bound": 0.000526076184611896,
+                    "worst_proposed_temperature_bound": 8.707196570999065e-05
+                  },
+                  "horizon": 16,
+                  "normalized_volume_mse": 9.87283023812466e-06,
+                  "raw_normalized_volume_mse": 9.872830237200676e-06,
+                  "stage_statistics": {
+                    "boundary_iterations": 245,
+                    "guarded_stages": 64,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 32,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 9.953875694656542e-11,
+                    "maximum_guard_change": 2.0674711036505755e-06,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 64,
+                    "stages": 64
+                  }
+                },
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    2.912127990819105e-13,
+                    1.0194337909443945e-13
+                  ],
+                  "density_temperature_lower_bounds": [
+                    0.00040154314982744876,
+                    8.709784476382891e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 0,
+                    "minimum_alpha": 1.0,
+                    "steps": 128,
+                    "worst_proposed_density_bound": 0.00040154314982744865,
+                    "worst_proposed_temperature_bound": 8.707196570999065e-05
+                  },
+                  "horizon": 32,
+                  "normalized_volume_mse": 3.08478476906985e-05,
+                  "raw_normalized_volume_mse": 3.084784768791634e-05,
+                  "stage_statistics": {
+                    "boundary_iterations": 451,
+                    "guarded_stages": 128,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 64,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 9.953875694656542e-11,
+                    "maximum_guard_change": 2.0674711036505755e-06,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 128,
+                    "stages": 128
+                  }
+                }
+              ],
+              "substeps": 2
+            }
+          ],
+          "status": "cpu_budget_exhausted"
+        },
+        {
+          "cpu_seconds": 121.284595833,
+          "elapsed_seconds": 125.55367018500692,
+          "evidence": {
+            "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/physics_ars222_remaining/report.json",
+            "sha256": "a163ad33e41eca31cba176f5ae2d907190fb454e32ed706f059a559ada2c6137"
+          },
+          "provenance": {
+            "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/physics_ars222_remaining/provenance.json",
+            "sha256": "e6d82347651d9a070640c1c5d9787b322dc74ad8ffab0f816a0fd7c179089ac8"
+          },
+          "provenance_canonical_sha256": "4b50d01ec0eb70023cc562592ad9925207941d33bf5bdcefce345c1b2c8b656c",
+          "remaining_pairs": [],
+          "rows": [
+            {
+              "case_id": "mastu_028",
+              "failure": {
+                "message": "Native axis/X-point tracking failed in its qualified neighborhood: [[0, 2, 1]]",
+                "type": "FloatingPointError"
+              },
+              "horizons": [
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    2.930114143544993e-13,
+                    8.349387843199992e-14
+                  ],
+                  "density_temperature_lower_bounds": [
+                    0.0005260761846120777,
+                    8.70978447638289e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 0,
+                    "minimum_alpha": 1.0,
+                    "steps": 64,
+                    "worst_proposed_density_bound": 0.0005260761846120777,
+                    "worst_proposed_temperature_bound": 8.707196570999066e-05
+                  },
+                  "horizon": 16,
+                  "normalized_volume_mse": 9.872830234534192e-06,
+                  "raw_normalized_volume_mse": 9.872830233597841e-06,
+                  "stage_statistics": {
+                    "boundary_iterations": 245,
+                    "guarded_stages": 64,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 32,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 9.952025531888019e-11,
+                    "maximum_guard_change": 2.067505414871107e-06,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 64,
+                    "stages": 64
+                  }
+                },
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    2.930114143544993e-13,
+                    1.0283010785214786e-13
+                  ],
+                  "density_temperature_lower_bounds": [
+                    0.0004015431498279089,
+                    8.70978447638289e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 0,
+                    "minimum_alpha": 1.0,
+                    "steps": 128,
+                    "worst_proposed_density_bound": 0.0004015431498279088,
+                    "worst_proposed_temperature_bound": 8.707196570999066e-05
+                  },
+                  "horizon": 32,
+                  "normalized_volume_mse": 3.084784768168446e-05,
+                  "raw_normalized_volume_mse": 3.084784767888925e-05,
+                  "stage_statistics": {
+                    "boundary_iterations": 451,
+                    "guarded_stages": 128,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 64,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 9.952025531888019e-11,
+                    "maximum_guard_change": 2.067505414871107e-06,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 128,
+                    "stages": 128
+                  }
+                }
+              ],
+              "substeps": 2
+            }
+          ],
+          "status": "completed"
+        }
+      ],
+      "scheme": "ars222",
+      "substeps": [
+        1,
+        2
+      ]
+    },
+    "be": {
+      "all_requested_horizons_available_and_audited": true,
+      "cases": [
+        "mastu_000",
+        "mastu_028"
+      ],
+      "completed_h96": [
+        {
+          "case_id": "mastu_000",
+          "normalized_volume_mse": 0.0029056895266701154,
+          "substeps": 1
+        },
+        {
+          "case_id": "mastu_000",
+          "normalized_volume_mse": 0.002348104724172653,
+          "substeps": 2
+        },
+        {
+          "case_id": "mastu_000",
+          "normalized_volume_mse": 0.0022002895251835093,
+          "substeps": 4
+        },
+        {
+          "case_id": "mastu_028",
+          "normalized_volume_mse": 0.0016665418612107972,
+          "substeps": 1
+        },
+        {
+          "case_id": "mastu_028",
+          "normalized_volume_mse": 0.0014237930978853973,
+          "substeps": 2
+        },
+        {
+          "case_id": "mastu_028",
+          "normalized_volume_mse": 0.0013617119118317382,
+          "substeps": 4
+        }
+      ],
+      "continuation_checks": "Canonical provenance and scientific configuration/source/normalization identity checked; repeated completed prefix metrics agree within rtol1e-8/atol1e-12.",
+      "evaluation_split": "train",
+      "failures_retained": [
+        {
+          "case_id": "mastu_028",
+          "message": "Worker reached 450 CPU seconds before the next macrostep",
+          "run": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/physics_be_full/report.json",
+          "substeps": 4,
+          "type": "CpuBudgetExhausted"
+        }
+      ],
+      "horizons": [
+        16,
+        32,
+        96
+      ],
+      "interpretation": "Completed training-window numerical diagnostic, not held-out generalization or a learned comparison.",
+      "repeated_prefix_differences": [
+        {
+          "absolute_mse_difference": 0.0,
+          "case_id": "mastu_028",
+          "horizon": 16,
+          "relative_mse_difference": 0.0,
+          "substeps": 4
+        },
+        {
+          "absolute_mse_difference": 0.0,
+          "case_id": "mastu_028",
+          "horizon": 32,
+          "relative_mse_difference": 0.0,
+          "substeps": 4
+        }
+      ],
+      "runs": [
+        {
+          "cpu_seconds": 449.193413013,
+          "elapsed_seconds": 469.9247302330041,
+          "evidence": {
+            "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/physics_be_full/report.json",
+            "sha256": "08a027349e119e94638152c9f6f0c18218ab317eb9712a4fb9a9f36084318db0"
+          },
+          "provenance": {
+            "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/physics_be_full/provenance.json",
+            "sha256": "e617a5cfefa0df047285689e543669305538d6989425430005cafcdb62d7e8ee"
+          },
+          "provenance_canonical_sha256": "dd9454438de4a4269caa6bf0f6a5a227326b048c09e0579118e6d316cee82a7d",
+          "remaining_pairs": [
+            [
+              4,
+              20
+            ]
+          ],
+          "rows": [
+            {
+              "case_id": "mastu_000",
+              "failure": null,
+              "horizons": [
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    2.8723749583857775e-13,
+                    1.2828520721363331e-13
+                  ],
+                  "density_temperature_lower_bounds": [
+                    0.000524775777286562,
+                    8.709803349918354e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 0,
+                    "minimum_alpha": 1.0,
+                    "steps": 16,
+                    "worst_proposed_density_bound": 0.000524775777286562,
+                    "worst_proposed_temperature_bound": 8.709803349918354e-05
+                  },
+                  "horizon": 16,
+                  "normalized_volume_mse": 0.00013540662604411872,
+                  "raw_normalized_volume_mse": 0.00013540662606696346,
+                  "stage_statistics": {
+                    "boundary_iterations": 64,
+                    "guarded_stages": 16,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 0,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 7.178631541871261e-12,
+                    "maximum_guard_change": 2.029573147765973e-06,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 16,
+                    "stages": 16
+                  }
+                },
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    2.9569227389464277e-13,
+                    1.4983097928806366e-13
+                  ],
+                  "density_temperature_lower_bounds": [
+                    0.0003978771669000095,
+                    8.709803349918354e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 0,
+                    "minimum_alpha": 1.0,
+                    "steps": 32,
+                    "worst_proposed_density_bound": 0.00039787716690000937,
+                    "worst_proposed_temperature_bound": 8.709803349918354e-05
+                  },
+                  "horizon": 32,
+                  "normalized_volume_mse": 0.00035279192152327417,
+                  "raw_normalized_volume_mse": 0.0003527919215457033,
+                  "stage_statistics": {
+                    "boundary_iterations": 128,
+                    "guarded_stages": 32,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 0,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 7.178631541871261e-12,
+                    "maximum_guard_change": 2.029573147765973e-06,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 32,
+                    "stages": 32
+                  }
+                },
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    2.9569227389464277e-13,
+                    1.518016539329708e-13
+                  ],
+                  "density_temperature_lower_bounds": [
+                    5.236530105049398e-06,
+                    8.709803349918354e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 13,
+                    "minimum_alpha": 0.975050536759922,
+                    "steps": 96,
+                    "worst_proposed_density_bound": -8.027878720020877e-06,
+                    "worst_proposed_temperature_bound": 8.709803349918354e-05
+                  },
+                  "horizon": 96,
+                  "normalized_volume_mse": 0.0029056895266701154,
+                  "raw_normalized_volume_mse": 0.0027123827974990288,
+                  "stage_statistics": {
+                    "boundary_iterations": 369,
+                    "guarded_stages": 96,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 0,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 9.295217749062169e-11,
+                    "maximum_guard_change": 239.22876548349996,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 96,
+                    "stages": 96
+                  }
+                }
+              ],
+              "substeps": 1
+            },
+            {
+              "case_id": "mastu_028",
+              "failure": null,
+              "horizons": [
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    2.923415071276304e-13,
+                    8.138172902312473e-14
+                  ],
+                  "density_temperature_lower_bounds": [
+                    0.0005262110742318025,
+                    8.709803320018735e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 0,
+                    "minimum_alpha": 1.0,
+                    "steps": 16,
+                    "worst_proposed_density_bound": 0.0005262110742318025,
+                    "worst_proposed_temperature_bound": 8.709803320018735e-05
+                  },
+                  "horizon": 16,
+                  "normalized_volume_mse": 4.363874233908556e-05,
+                  "raw_normalized_volume_mse": 4.363874234852173e-05,
+                  "stage_statistics": {
+                    "boundary_iterations": 64,
+                    "guarded_stages": 16,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 0,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 7.1046250311303205e-12,
+                    "maximum_guard_change": 1.947903278676222e-06,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 16,
+                    "stages": 16
+                  }
+                },
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    2.923415071276304e-13,
+                    9.847580717232815e-14
+                  ],
+                  "density_temperature_lower_bounds": [
+                    0.00040187326430977515,
+                    8.709803320018735e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 0,
+                    "minimum_alpha": 1.0,
+                    "steps": 32,
+                    "worst_proposed_density_bound": 0.00040187326430977504,
+                    "worst_proposed_temperature_bound": 8.709803320018735e-05
+                  },
+                  "horizon": 32,
+                  "normalized_volume_mse": 0.0001204197874181352,
+                  "raw_normalized_volume_mse": 0.00012041978743093552,
+                  "stage_statistics": {
+                    "boundary_iterations": 128,
+                    "guarded_stages": 32,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 0,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 7.1046250311303205e-12,
+                    "maximum_guard_change": 1.947903278676222e-06,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 32,
+                    "stages": 32
+                  }
+                },
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    2.933015144001264e-13,
+                    9.872442907200831e-14
+                  ],
+                  "density_temperature_lower_bounds": [
+                    4.3762513892318833e-07,
+                    8.709803320018735e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 12,
+                    "minimum_alpha": 0.9664358255841354,
+                    "steps": 96,
+                    "worst_proposed_density_bound": -1.2766962570452815e-05,
+                    "worst_proposed_temperature_bound": 8.709803320018735e-05
+                  },
+                  "horizon": 96,
+                  "normalized_volume_mse": 0.0016665418612107972,
+                  "raw_normalized_volume_mse": 0.001591135711540768,
+                  "stage_statistics": {
+                    "boundary_iterations": 369,
+                    "guarded_stages": 96,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 0,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 9.421028817321768e-11,
+                    "maximum_guard_change": 308.36677779436286,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 96,
+                    "stages": 96
+                  }
+                }
+              ],
+              "substeps": 1
+            },
+            {
+              "case_id": "mastu_000",
+              "failure": null,
+              "horizons": [
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    2.9806791559253914e-13,
+                    1.268763759554245e-13
+                  ],
+                  "density_temperature_lower_bounds": [
+                    0.0005247090082194969,
+                    8.709793895370362e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 0,
+                    "minimum_alpha": 1.0,
+                    "steps": 32,
+                    "worst_proposed_density_bound": 0.0005247090082194969,
+                    "worst_proposed_temperature_bound": 8.708269550707743e-05
+                  },
+                  "horizon": 16,
+                  "normalized_volume_mse": 6.718336102761757e-05,
+                  "raw_normalized_volume_mse": 6.718336103754999e-05,
+                  "stage_statistics": {
+                    "boundary_iterations": 128,
+                    "guarded_stages": 32,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 0,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 1.7484038162547274e-12,
+                    "maximum_guard_change": 2.08597504069985e-06,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 32,
+                    "stages": 32
+                  }
+                },
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    2.9806791559253914e-13,
+                    1.505849616624161e-13
+                  ],
+                  "density_temperature_lower_bounds": [
+                    0.00039768383635163706,
+                    8.709793895370362e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 0,
+                    "minimum_alpha": 1.0,
+                    "steps": 64,
+                    "worst_proposed_density_bound": 0.00039768383635163695,
+                    "worst_proposed_temperature_bound": 8.708269550707743e-05
+                  },
+                  "horizon": 32,
+                  "normalized_volume_mse": 0.0001726123379522785,
+                  "raw_normalized_volume_mse": 0.00017261233795882105,
+                  "stage_statistics": {
+                    "boundary_iterations": 256,
+                    "guarded_stages": 64,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 0,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 1.7484038162547274e-12,
+                    "maximum_guard_change": 2.14803167786215e-06,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 64,
+                    "stages": 64
+                  }
+                },
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    2.9806791559253914e-13,
+                    1.505849616624161e-13
+                  ],
+                  "density_temperature_lower_bounds": [
+                    5.236530105049832e-06,
+                    8.709793895370362e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 25,
+                    "minimum_alpha": 0.9873484147971969,
+                    "steps": 192,
+                    "worst_proposed_density_bound": -1.4059204345195213e-06,
+                    "worst_proposed_temperature_bound": 8.708269550707743e-05
+                  },
+                  "horizon": 96,
+                  "normalized_volume_mse": 0.002348104724172653,
+                  "raw_normalized_volume_mse": 0.0022461427985951956,
+                  "stage_statistics": {
+                    "boundary_iterations": 715,
+                    "guarded_stages": 192,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 0,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 9.670800791072445e-11,
+                    "maximum_guard_change": 120.01275554730819,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 192,
+                    "stages": 192
+                  }
+                }
+              ],
+              "substeps": 2
+            },
+            {
+              "case_id": "mastu_028",
+              "failure": null,
+              "horizons": [
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    2.886206084640409e-13,
+                    8.087143546592395e-14
+                  ],
+                  "density_temperature_lower_bounds": [
+                    0.0005261430671641653,
+                    8.709793857634068e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 0,
+                    "minimum_alpha": 1.0,
+                    "steps": 32,
+                    "worst_proposed_density_bound": 0.0005261430671641653,
+                    "worst_proposed_temperature_bound": 8.708269534564619e-05
+                  },
+                  "horizon": 16,
+                  "normalized_volume_mse": 2.0720446344692636e-05,
+                  "raw_normalized_volume_mse": 2.072044634895305e-05,
+                  "stage_statistics": {
+                    "boundary_iterations": 128,
+                    "guarded_stages": 32,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 0,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 1.2349836479894502e-12,
+                    "maximum_guard_change": 2.151459863597438e-06,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 32,
+                    "stages": 32
+                  }
+                },
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    2.886206084640409e-13,
+                    1.0056287744894894e-13
+                  ],
+                  "density_temperature_lower_bounds": [
+                    0.000401708065874666,
+                    8.709793857634068e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 0,
+                    "minimum_alpha": 1.0,
+                    "steps": 64,
+                    "worst_proposed_density_bound": 0.0004017080658746659,
+                    "worst_proposed_temperature_bound": 8.708269534564619e-05
+                  },
+                  "horizon": 32,
+                  "normalized_volume_mse": 5.801973648872769e-05,
+                  "raw_normalized_volume_mse": 5.801973649390841e-05,
+                  "stage_statistics": {
+                    "boundary_iterations": 256,
+                    "guarded_stages": 64,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 0,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 1.382996669471332e-12,
+                    "maximum_guard_change": 2.166703307437956e-06,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 64,
+                    "stages": 64
+                  }
+                },
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    3.0407861015228473e-13,
+                    1.0083773531353596e-13
+                  ],
+                  "density_temperature_lower_bounds": [
+                    5.236530105049832e-06,
+                    8.709793857634068e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 25,
+                    "minimum_alpha": 0.9873371674151837,
+                    "steps": 192,
+                    "worst_proposed_density_bound": -1.411901373130213e-06,
+                    "worst_proposed_temperature_bound": 8.708269534564619e-05
+                  },
+                  "horizon": 96,
+                  "normalized_volume_mse": 0.0014237930978853973,
+                  "raw_normalized_volume_mse": 0.0013840877812150228,
+                  "stage_statistics": {
+                    "boundary_iterations": 715,
+                    "guarded_stages": 192,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 0,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 9.787361045489426e-11,
+                    "maximum_guard_change": 118.52028631706162,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 192,
+                    "stages": 192
+                  }
+                }
+              ],
+              "substeps": 2
+            },
+            {
+              "case_id": "mastu_000",
+              "failure": null,
+              "horizons": [
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    2.8642267676360767e-13,
+                    1.2881619399059765e-13
+                  ],
+                  "density_temperature_lower_bounds": [
+                    0.000524676328512012,
+                    8.709789183689564e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 0,
+                    "minimum_alpha": 1.0,
+                    "steps": 64,
+                    "worst_proposed_density_bound": 0.000524676328512012,
+                    "worst_proposed_temperature_bound": 8.707509848944494e-05
+                  },
+                  "horizon": 16,
+                  "normalized_volume_mse": 4.510937332750121e-05,
+                  "raw_normalized_volume_mse": 4.5109373330737375e-05,
+                  "stage_statistics": {
+                    "boundary_iterations": 256,
+                    "guarded_stages": 64,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 0,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 1.896416837736609e-12,
+                    "maximum_guard_change": 2.32072922035087e-06,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 64,
+                    "stages": 64
+                  }
+                },
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    2.946573895816556e-13,
+                    1.5516521808036248e-13
+                  ],
+                  "density_temperature_lower_bounds": [
+                    0.00039758758918659624,
+                    8.709789183689564e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 0,
+                    "minimum_alpha": 1.0,
+                    "steps": 128,
+                    "worst_proposed_density_bound": 0.00039758758918659613,
+                    "worst_proposed_temperature_bound": 8.707509848944494e-05
+                  },
+                  "horizon": 32,
+                  "normalized_volume_mse": 0.0001165193894369583,
+                  "raw_normalized_volume_mse": 0.00011651938943469138,
+                  "stage_statistics": {
+                    "boundary_iterations": 482,
+                    "guarded_stages": 128,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 0,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 9.939074392508354e-11,
+                    "maximum_guard_change": 2.5269468713062793e-06,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 128,
+                    "stages": 128
+                  }
+                },
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    2.946573895816556e-13,
+                    1.5516521808036248e-13
+                  ],
+                  "density_temperature_lower_bounds": [
+                    5.236530105049398e-06,
+                    8.709789183689564e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 25,
+                    "minimum_alpha": 0.987314566678952,
+                    "steps": 384,
+                    "worst_proposed_density_bound": -1.4239200144424203e-06,
+                    "worst_proposed_temperature_bound": 8.707509848944494e-05
+                  },
+                  "horizon": 96,
+                  "normalized_volume_mse": 0.0022002895251835093,
+                  "raw_normalized_volume_mse": 0.0020978843657439134,
+                  "stage_statistics": {
+                    "boundary_iterations": 1344,
+                    "guarded_stages": 384,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 0,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 9.950175369119495e-11,
+                    "maximum_guard_change": 120.08313564318087,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 384,
+                    "stages": 384
+                  }
+                }
+              ],
+              "substeps": 4
+            },
+            {
+              "case_id": "mastu_028",
+              "failure": {
+                "message": "Worker reached 450 CPU seconds before the next macrostep",
+                "type": "CpuBudgetExhausted"
+              },
+              "horizons": [
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    3.049508008016395e-13,
+                    7.918873939935329e-14
+                  ],
+                  "density_temperature_lower_bounds": [
+                    0.0005261094953399469,
+                    8.709789145111674e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 0,
+                    "minimum_alpha": 1.0,
+                    "steps": 64,
+                    "worst_proposed_density_bound": 0.0005261094953399469,
+                    "worst_proposed_temperature_bound": 8.707509843370683e-05
+                  },
+                  "horizon": 16,
+                  "normalized_volume_mse": 1.3713744782631048e-05,
+                  "raw_normalized_volume_mse": 1.3713744784329342e-05,
+                  "stage_statistics": {
+                    "boundary_iterations": 256,
+                    "guarded_stages": 64,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 0,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 2.580977062090312e-12,
+                    "maximum_guard_change": 2.160770251613542e-06,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 64,
+                    "stages": 64
+                  }
+                },
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    3.049508008016395e-13,
+                    1.0152978050736137e-13
+                  ],
+                  "density_temperature_lower_bounds": [
+                    0.00040162562632370006,
+                    8.709789145111674e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 0,
+                    "minimum_alpha": 1.0,
+                    "steps": 128,
+                    "worst_proposed_density_bound": 0.00040162562632369995,
+                    "worst_proposed_temperature_bound": 8.707509843370683e-05
+                  },
+                  "horizon": 32,
+                  "normalized_volume_mse": 3.9878184208243514e-05,
+                  "raw_normalized_volume_mse": 3.987818420933287e-05,
+                  "stage_statistics": {
+                    "boundary_iterations": 482,
+                    "guarded_stages": 128,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 0,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 9.939074392508354e-11,
+                    "maximum_guard_change": 2.4518181294119756e-06,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 128,
+                    "stages": 128
+                  }
+                }
+              ],
+              "substeps": 4
+            }
+          ],
+          "status": "cpu_budget_exhausted"
+        },
+        {
+          "cpu_seconds": 154.98068847599998,
+          "elapsed_seconds": 160.9849907119933,
+          "evidence": {
+            "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/physics_be_remaining/report.json",
+            "sha256": "99dd8e362e021da68d9b21330f344a349bea077a92a697d248a5a429a31ea854"
+          },
+          "provenance": {
+            "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/physics_be_remaining/provenance.json",
+            "sha256": "c4e5b501237128e544512b6acae7ea8486a39c4db774397bc98aff2e92e8c650"
+          },
+          "provenance_canonical_sha256": "a238ca481d448cef342d6eb797c40c5605a90e92eb507d2b5fcaec2a944d5232",
+          "remaining_pairs": [],
+          "rows": [
+            {
+              "case_id": "mastu_028",
+              "failure": null,
+              "horizons": [
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    3.049508008016395e-13,
+                    7.918873939935329e-14
+                  ],
+                  "density_temperature_lower_bounds": [
+                    0.0005261094953399469,
+                    8.709789145111674e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 0,
+                    "minimum_alpha": 1.0,
+                    "steps": 64,
+                    "worst_proposed_density_bound": 0.0005261094953399469,
+                    "worst_proposed_temperature_bound": 8.707509843370683e-05
+                  },
+                  "horizon": 16,
+                  "normalized_volume_mse": 1.3713744782631048e-05,
+                  "raw_normalized_volume_mse": 1.3713744784329342e-05,
+                  "stage_statistics": {
+                    "boundary_iterations": 256,
+                    "guarded_stages": 64,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 0,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 2.580977062090312e-12,
+                    "maximum_guard_change": 2.160770251613542e-06,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 64,
+                    "stages": 64
+                  }
+                },
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    3.049508008016395e-13,
+                    1.0152978050736137e-13
+                  ],
+                  "density_temperature_lower_bounds": [
+                    0.00040162562632370006,
+                    8.709789145111674e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 0,
+                    "minimum_alpha": 1.0,
+                    "steps": 128,
+                    "worst_proposed_density_bound": 0.00040162562632369995,
+                    "worst_proposed_temperature_bound": 8.707509843370683e-05
+                  },
+                  "horizon": 32,
+                  "normalized_volume_mse": 3.9878184208243514e-05,
+                  "raw_normalized_volume_mse": 3.987818420933287e-05,
+                  "stage_statistics": {
+                    "boundary_iterations": 482,
+                    "guarded_stages": 128,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 0,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 9.939074392508354e-11,
+                    "maximum_guard_change": 2.4518181294119756e-06,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 128,
+                    "stages": 128
+                  }
+                },
+                {
+                  "audit_passed": true,
+                  "boundary_max_normalized_drift": 0.0,
+                  "constraint_defects": [
+                    3.049508008016395e-13,
+                    1.0152978050736137e-13
+                  ],
+                  "density_temperature_lower_bounds": [
+                    5.236530105049398e-06,
+                    8.709789145111674e-05
+                  ],
+                  "guard_statistics": {
+                    "limited_field_steps": 25,
+                    "minimum_alpha": 0.9873335520013832,
+                    "steps": 384,
+                    "worst_proposed_density_bound": -1.4138239443986325e-06,
+                    "worst_proposed_temperature_bound": 8.707509843370683e-05
+                  },
+                  "horizon": 96,
+                  "normalized_volume_mse": 0.0013617119118317382,
+                  "raw_normalized_volume_mse": 0.0013218617579954857,
+                  "stage_statistics": {
+                    "boundary_iterations": 1345,
+                    "guarded_stages": 384,
+                    "learned_network_evaluations": 0,
+                    "linear_rhs_evaluations": 0,
+                    "maximum_boundary_iterations": 4,
+                    "maximum_boundary_residual": 9.939074392508354e-11,
+                    "maximum_guard_change": 118.58067683664922,
+                    "maximum_held_dof_change": 5.684341886080802e-14,
+                    "physical_rhs_evaluations": 384,
+                    "stages": 384
+                  }
+                }
+              ],
+              "substeps": 4
+            }
+          ],
+          "status": "completed"
+        }
+      ],
+      "scheme": "be",
+      "substeps": [
+        1,
+        2,
+        4
+      ]
+    }
+  },
+  "qualification": {
+    "broader_training_label_parity": {
+      "affected_active_channel": 0,
+      "affected_equation": "induction",
+      "failed_states": [
+        {
+          "induction_training_scaled_max": 0.0001983788880174488,
+          "induction_training_scaled_rms": 1.772243170951055e-05,
+          "state": "mastu_007:48"
+        },
+        {
+          "induction_training_scaled_max": 0.0004342209940465152,
+          "induction_training_scaled_rms": 3.87876811199736e-05,
+          "state": "mastu_021:48"
+        },
+        {
+          "induction_training_scaled_max": 0.0010652270807511867,
+          "induction_training_scaled_rms": 9.514649561786223e-05,
+          "state": "mastu_039:48"
+        },
+        {
+          "induction_training_scaled_max": 0.00015078619563350885,
+          "induction_training_scaled_rms": 1.3463105832673647e-05,
+          "state": "mastu_041:48"
+        },
+        {
+          "induction_training_scaled_max": 0.00018034770608457408,
+          "induction_training_scaled_rms": 1.6104908995589954e-05,
+          "state": "mastu_053:48"
+        },
+        {
+          "induction_training_scaled_max": 0.00022449925459730607,
+          "induction_training_scaled_rms": 2.0049098270222713e-05,
+          "state": "mastu_071:48"
+        },
+        {
+          "induction_training_scaled_max": 0.0008485746920856086,
+          "induction_training_scaled_rms": 7.578843216058962e-05,
+          "state": "mastu_092:48"
+        },
+        {
+          "induction_training_scaled_max": 0.00019726363132874185,
+          "induction_training_scaled_rms": 1.761967882699381e-05,
+          "state": "mastu_093:48"
+        },
+        {
+          "induction_training_scaled_max": 0.0010046466380187933,
+          "induction_training_scaled_rms": 8.794529423913773e-05,
+          "state": "mastu_008:96"
+        },
+        {
+          "induction_training_scaled_max": 0.0002550300842079353,
+          "induction_training_scaled_rms": 2.232093470863014e-05,
+          "state": "mastu_011:96"
+        },
+        {
+          "induction_training_scaled_max": 0.00036907432595273203,
+          "induction_training_scaled_rms": 3.230458298594889e-05,
+          "state": "mastu_020:96"
+        },
+        {
+          "induction_training_scaled_max": 0.0018058246964086859,
+          "induction_training_scaled_rms": 0.00015806273038830994,
+          "state": "mastu_026:96"
+        },
+        {
+          "induction_training_scaled_max": 0.0005008187514263292,
+          "induction_training_scaled_rms": 4.383115439120122e-05,
+          "state": "mastu_032:96"
+        },
+        {
+          "induction_training_scaled_max": 0.00035642846430825574,
+          "induction_training_scaled_rms": 3.120383890128772e-05,
+          "state": "mastu_034:96"
+        },
+        {
+          "induction_training_scaled_max": 0.00037681747009090456,
+          "induction_training_scaled_rms": 3.298351554873776e-05,
+          "state": "mastu_053:96"
+        },
+        {
+          "induction_training_scaled_max": 0.00025020912833664013,
+          "induction_training_scaled_rms": 2.1909525722121018e-05,
+          "state": "mastu_054:96"
+        },
+        {
+          "induction_training_scaled_max": 0.001044933862299412,
+          "induction_training_scaled_rms": 9.147672987656425e-05,
+          "state": "mastu_062:96"
+        },
+        {
+          "induction_training_scaled_max": 0.001337977412195264,
+          "induction_training_scaled_rms": 0.00011711785634426145,
+          "state": "mastu_063:96"
+        },
+        {
+          "induction_training_scaled_max": 0.00022446307165362335,
+          "induction_training_scaled_rms": 1.963895512047588e-05,
+          "state": "mastu_075:96"
+        },
+        {
+          "induction_training_scaled_max": 0.00040569650692622044,
+          "induction_training_scaled_rms": 3.5518775298801526e-05,
+          "state": "mastu_085:96"
+        },
+        {
+          "induction_training_scaled_max": 0.0002221952865182486,
+          "induction_training_scaled_rms": 1.9448457779867162e-05,
+          "state": "mastu_093:96"
+        },
+        {
+          "induction_training_scaled_max": 0.0009955122319435657,
+          "induction_training_scaled_rms": 8.713258552801138e-05,
+          "state": "mastu_099:96"
+        }
+      ],
+      "frozen_revision": true,
+      "interpretation": "Reference and initial four-state checks remain passed, but they do not establish complete training-pool parity. All240states were scored without tracker failure; late source normalization differs from native.",
+      "maximum_point_failures": 5,
+      "rms_failures": 22,
+      "runs": [
+        {
+          "evidence": {
+            "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/diagnostics/parity_all80_frame0.json",
+            "sha256": "649dc1da774fa6dac4e391131bc311660c5da294de542078272ee08956edb9dd"
+          },
+          "frame": 0,
+          "maximum_point_failures": 0,
+          "passed": true,
+          "rms_failures": 0,
+          "source_sha256": {
+            "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/frozen/study/scripts/verify_physical_defect.py": "eaf9ac7fff016b44dfec080850b6449fe65c6e85d43a85a5a93a93f5132d11ca",
+            "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/frozen/study/src/mastu_opsplit/implicit_opsplit.py": "cf94352a0fba5ef539a7331fad5a4f91d1bf49f717449d65185a20f34f61dc89",
+            "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/frozen/study/src/mastu_opsplit/native_critical.py": "510f7e8c27e03e134aaf790dc0845bf56587eef76fd9889dc4f9fa6e60af9494",
+            "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/frozen/study/src/mastu_opsplit/numerical.py": "839b59c6158302b531dc3a5f357b033120deb63b13a0bcc745d77d1958bc23ed",
+            "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/frozen/study/src/mastu_opsplit/physical_rhs.py": "9c8df5dbf4b7e6e65a057120b2cca8978748e03c08d12fd0d94b3fb972e58c29",
+            "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/frozen/study/src/mastu_opsplit/restart.py": "830671db304963210d913ec14e202579f8252331bbedee1b6c4c4f5ec059c795"
+          },
+          "states": 80,
+          "tracker_successes": 80,
+          "worst_training_scaled_max": 7.237664711162644e-06,
+          "worst_training_scaled_rms": 2.3776459486493578e-07
+        },
+        {
+          "evidence": {
+            "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/diagnostics/parity_all80_frame48.json",
+            "sha256": "ab73cd47ce9c8413d761018f0db72492f33332fcd5785b95d468ef4455cde5b1"
+          },
+          "frame": 48,
+          "maximum_point_failures": 1,
+          "passed": false,
+          "rms_failures": 8,
+          "source_sha256": {
+            "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/frozen/study/scripts/verify_physical_defect.py": "eaf9ac7fff016b44dfec080850b6449fe65c6e85d43a85a5a93a93f5132d11ca",
+            "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/frozen/study/src/mastu_opsplit/implicit_opsplit.py": "cf94352a0fba5ef539a7331fad5a4f91d1bf49f717449d65185a20f34f61dc89",
+            "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/frozen/study/src/mastu_opsplit/native_critical.py": "510f7e8c27e03e134aaf790dc0845bf56587eef76fd9889dc4f9fa6e60af9494",
+            "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/frozen/study/src/mastu_opsplit/numerical.py": "839b59c6158302b531dc3a5f357b033120deb63b13a0bcc745d77d1958bc23ed",
+            "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/frozen/study/src/mastu_opsplit/physical_rhs.py": "9c8df5dbf4b7e6e65a057120b2cca8978748e03c08d12fd0d94b3fb972e58c29",
+            "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/frozen/study/src/mastu_opsplit/restart.py": "830671db304963210d913ec14e202579f8252331bbedee1b6c4c4f5ec059c795"
+          },
+          "states": 80,
+          "tracker_successes": 80,
+          "worst_training_scaled_max": 0.0010652270807511867,
+          "worst_training_scaled_rms": 9.514649561786223e-05
+        },
+        {
+          "evidence": {
+            "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/diagnostics/parity_all80_frame96.json",
+            "sha256": "6c6cbed97e18c7d3eeac06f5ff6e0930f05da992163d344659f0ea522396360e"
+          },
+          "frame": 96,
+          "maximum_point_failures": 4,
+          "passed": false,
+          "rms_failures": 14,
+          "source_sha256": {
+            "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/frozen/study/scripts/verify_physical_defect.py": "eaf9ac7fff016b44dfec080850b6449fe65c6e85d43a85a5a93a93f5132d11ca",
+            "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/frozen/study/src/mastu_opsplit/implicit_opsplit.py": "cf94352a0fba5ef539a7331fad5a4f91d1bf49f717449d65185a20f34f61dc89",
+            "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/frozen/study/src/mastu_opsplit/native_critical.py": "510f7e8c27e03e134aaf790dc0845bf56587eef76fd9889dc4f9fa6e60af9494",
+            "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/frozen/study/src/mastu_opsplit/numerical.py": "839b59c6158302b531dc3a5f357b033120deb63b13a0bcc745d77d1958bc23ed",
+            "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/frozen/study/src/mastu_opsplit/physical_rhs.py": "9c8df5dbf4b7e6e65a057120b2cca8978748e03c08d12fd0d94b3fb972e58c29",
+            "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/frozen/study/src/mastu_opsplit/restart.py": "830671db304963210d913ec14e202579f8252331bbedee1b6c4c4f5ec059c795"
+          },
+          "states": 80,
+          "tracker_successes": 80,
+          "worst_training_scaled_max": 0.0018058246964086859,
+          "worst_training_scaled_rms": 0.00015806273038830994
+        }
+      ],
+      "status": "failed_declared_tolerance",
+      "tolerances": {
+        "training_scaled_max": 0.001,
+        "training_scaled_rms": 1e-05
+      },
+      "total_states": 240,
+      "tracker_successes": 240
+    },
+    "moving_critical_gradient": {
+      "best_finite_difference_scaled_error": 6.969123024078519e-09,
+      "branch_limit": "The 1e-6 perturbation switches the selected X-point boundary-flux branch; 1e-7/1e-8 checks agree locally.",
+      "evidence": {
+        "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/diagnostics/mastu_late_critical_gradient_20261111.json",
+        "sha256": "ea4bc9a1cbfe841e3a0b428f7b6a3e663627b3f0e898071c30744f962d355f8f"
+      },
+      "passed": true,
+      "state": "mastu_060:96"
+    },
+    "reference_rhs": {
+      "evidence": {
+        "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/diagnostics/mastu_rhs_reference_validation.json",
+        "sha256": "f7e855723de9b168db93b8c05b256bb31e97089a584ed48e2a191cd64bf3e784"
+      },
+      "finite_gradient": true,
+      "maximum_absolute_error": 4.747799375870443e-13,
+      "maximum_channel_scaled_error": 6.411251379542867e-11,
+      "remainder_max_absolute": 4.066191827689636e-15
+    },
+    "source_revision_v2": {
+      "evidence": {
+        "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/diagnostics/source_axis_resolution.json",
+        "sha256": "06a0d21cf936641bcf0f6e5c90791efa20b125977b88372accf149a9ca77c36b"
+      },
+      "implementation": {
+        "qualified_candidate_counts_identical_across240": true,
+        "qualified_root_maximum_absolute_change_across240": 0.0,
+        "scope": "Native source-axis search restricted to128 reference-neighborhood candidates; native full500-candidate fallback is not implemented. Failed source search raises. No stored trajectory diagnostics are consumed.",
+        "source_axis": "Autonomous native-compatible Q4-gradient priority and mnewtax20-iteration local-gradient/step stopping; explicit source_psi_axis normalizes profiles.",
+        "source_sha256": {
+          "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/src/mastu_opsplit/native_critical.py": "c1e5f7d8086ea049e71daa493bcd0367b932f09c502ef6a95414043e4bcb57c0",
+          "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/src/mastu_opsplit/physical_rhs.py": "42d758f95c60d296e007d51a7c92b3b4dc7f8e0e75da21ed2180e7d5ce570c64"
+        },
+        "topology_gate": "Original minimum and two saddle roots, physical-gradient1e-9, reference-neighborhood.08, finite/bounding checks execute unchanged before source-axis calculation."
+      },
+      "limits": [
+        "This verifies selected states from80accepted pooled training cases atframes0,48,96, not arbitrary future states or unsupported native branches.",
+        "The strict topology gate remains independent of native-compatible source normalization. The prior captured ARS predicted-state root-loss evidence is not invalidated by this source fix.",
+        "The original frozen64-update pilot used the earlier source revision; its training results must not be presented as training with the corrected implementation.",
+        "A fixed native mass/tangent split and model guards still differ from full native JOREK time evolution; pointwise RHS parity does not establish long-rollout accuracy or a training win."
+      ],
+      "original_failures_resolved": 22,
+      "parity": {
+        "execution": {
+          "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/diagnostics/parity_source_axis_status.json",
+          "sha256": "22b61a124428c8df8558109db38a13ec22c796ad49c0d893c6cbe7ba8d95df9d"
+        },
+        "original_selection": {
+          "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/diagnostics/parity_all80_selection.json",
+          "sha256": "2b4436f4bf2ab11b6dbb88a6b83159fa1dcbb5d298cd18fe4e078a38e0263ad0"
+        },
+        "revised_selection": {
+          "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/diagnostics/parity_source_axis_selection.json",
+          "sha256": "1a2f232fce29193f0f75fa65c03514249dd21614a3cf99c97e3331964a174f46"
+        },
+        "rows": [
+          {
+            "frame": 0,
+            "original": {
+              "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/diagnostics/parity_all80_frame0.json",
+              "sha256": "649dc1da774fa6dac4e391131bc311660c5da294de542078272ee08956edb9dd"
+            },
+            "original_failures": 0,
+            "original_worst_training_scaled_rms": 2.3776459486493578e-07,
+            "revised": {
+              "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/diagnostics/parity_source_axis_frame0.json",
+              "sha256": "ef850e00b3d2bde82ef42ecb44d68ec2164a8c2c2aa85f266fd69d317b2bd410"
+            },
+            "revised_failures": 0,
+            "revised_worst_training_scaled_max": 7.237664711162644e-06,
+            "revised_worst_training_scaled_rms": 2.3776459486493578e-07,
+            "state_count": 80
+          },
+          {
+            "frame": 48,
+            "original": {
+              "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/diagnostics/parity_all80_frame48.json",
+              "sha256": "ab73cd47ce9c8413d761018f0db72492f33332fcd5785b95d468ef4455cde5b1"
+            },
+            "original_failures": 8,
+            "original_worst_training_scaled_rms": 9.514649561786223e-05,
+            "revised": {
+              "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/diagnostics/parity_source_axis_frame48.json",
+              "sha256": "ed823f7168bc48a69c6ca813e6bc4b3d17f9030f69ab1df7937cffad7eb79495"
+            },
+            "revised_failures": 0,
+            "revised_worst_training_scaled_max": 5.6390013462430044e-05,
+            "revised_worst_training_scaled_rms": 1.092207170124992e-07,
+            "state_count": 80
+          },
+          {
+            "frame": 96,
+            "original": {
+              "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/diagnostics/parity_all80_frame96.json",
+              "sha256": "6c6cbed97e18c7d3eeac06f5ff6e0930f05da992163d344659f0ea522396360e"
+            },
+            "original_failures": 14,
+            "original_worst_training_scaled_rms": 0.00015806273038830994,
+            "revised": {
+              "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/diagnostics/parity_source_axis_frame96.json",
+              "sha256": "8f2704290778988203687763579d6460c60b0c5ae09953fb633465c9d84b1a9d"
+            },
+            "revised_failures": 0,
+            "revised_worst_training_scaled_max": 9.806490717075688e-05,
+            "revised_worst_training_scaled_rms": 1.809727295496613e-07,
+            "state_count": 80
+          }
+        ],
+        "tolerances": {
+          "training_scaled_max": 0.001,
+          "training_scaled_rms": 1e-05
+        }
+      },
+      "source_snapshot": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/frozen_source_axis_v2/study",
+      "status": "passed_original_parity_thresholds_all240_selected_states",
+      "strict_root_diagnostics_unchanged": true,
+      "validation": {
+        "command": "OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/bin/python -m pytest tests/test_physical_rhs.py tests/test_native_critical.py tests/test_physical_defect.py tests/test_physical_profiles.py tests/test_physical_parity.py tests/test_physical_affine.py tests/test_physical_data_cache.py tests/test_physical_training.py tests/test_implicit_opsplit.py tests/test_implicit_coefficient.py tests/test_gpu_native.py -k 'not (pretraining_and_rollout_resume_exactly_on_device and cpu)' -q --basetemp=/scratch_local/mastu_source_axis_regression_20261111 --junitxml=/scratch_local/mastu_source_axis_regression_20261111.xml",
+        "cwd": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit",
+        "excluded": "CPU pretraining test; actual optimizer-update tests use CUDA.",
+        "junit": {
+          "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/diagnostics/mastu_source_axis_regression_20261111.xml",
+          "sha256": "c083bfac6e04af451a9c99bc2736596604a8891a6b33797d83104764518e2a96"
+        },
+        "real_cuda_gradient": {
+          "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/diagnostics/source_axis_real_gradient.json",
+          "sha256": "1b7fc2b8712048c6f7dfa1325818f12ebf31ecd16cabfd2d06cadd6a57bf23d1"
+        },
+        "seconds": 27.45,
+        "tests_deselected": 1,
+        "tests_passed": 83
+      },
+      "worst_training_scaled_max": 9.806490717075688e-05,
+      "worst_training_scaled_rms": 2.3776459486493578e-07
+    },
+    "training_label_parity": {
+      "evidence": {
+        "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/diagnostics/mastu_training_rhs_parity_20261111.json",
+        "sha256": "a26ca33debcef7e6fa7b7956e9234f3c8abda0313a36cf986716fcb3d5e9df3c"
+      },
+      "passed": true,
+      "states": [
+        "mastu_000:0",
+        "mastu_000:48",
+        "mastu_000:96",
+        "mastu_060:96"
+      ],
+      "worst_training_scaled_max": 5.606828400672611e-05,
+      "worst_training_scaled_rms": 7.475845963335215e-08
+    }
+  },
+  "recommendation": "Use BE with native volume formulas, autonomous native-compatible source normalization, strict independent root gates, and a reference-anchored defect for the next larger study. Observed corrected-source H96 gain is5.157% on two held-out cases after64updates; broader robustness and live deployment remain unqualified.",
+  "robust_held_out_performance_established": false,
+  "schema": "mastu_physical_defect_status_v1",
+  "source_normalization_audit": {
+    "axis_classification_evidence": {
+      "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/diagnostics/parity_native_axis_roots_v2.json",
+      "sha256": "3375b6bcafd7cfbd77f9a4de864b0f1310f0df64e9c75064418d8e7665fee7a1"
+    },
+    "diagnosis_scope": "Aligned native histories were used only for offline attribution, never fed into autonomous rollouts.",
+    "exemplar": {
+      "autonomous_induction_rms": 4.619195421958678e-11,
+      "autonomous_training_scaled_rms": 9.514649561787175e-05,
+      "native_axis_only_induction_rms": 1.2986051732196923e-14,
+      "native_axis_only_training_scaled_rms": 2.6748756035677926e-08,
+      "native_axis_stationary_saddle": true,
+      "state": "mastu_039:48"
+    },
+    "numerical_evidence": {
+      "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/diagnostics/parity_axis_source_audit_039_48.json",
+      "sha256": "2bcdebffcdf81bfd17f75b1e8c893a6e2fc963048e8ffd82ab6820c62ef1072c"
+    },
+    "revision_policy": "Separate autonomous source-priority flux added; strict minimum/X-point diagnostics bitwise unchanged across240states. Frozen pilot remains unchanged; revised-source frozen-weight rollout verification recorded separately.",
+    "source_files": {
+      "diagnostics/find_axis.f90": {
+        "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_full_opsplit_20261104/build/source/diagnostics/find_axis.f90",
+        "sha256": "8c9fda30985d2d56408ca033a70b8cdd0615160fcd2527b14297eeaf4b67aa29"
+      },
+      "jorek2_main.f90": {
+        "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_full_opsplit_20261104/build/source/jorek2_main.f90",
+        "sha256": "8e944014a83ea467d02addf84374186a6828d6b2335480002596bbed1604f341"
+      },
+      "models/equil_info.f90": {
+        "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_full_opsplit_20261104/build/source/models/equil_info.f90",
+        "sha256": "02a7cb2c94f94a92e60b1acbe1aba44f0ce1d8b7ec37ef63251bd588c2e3e6b9"
+      },
+      "solvers/mnewtax.f90": {
+        "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_full_opsplit_20261104/build/source/solvers/mnewtax.f90",
+        "sha256": "9aed4a29bf751b5f596460b6bd6911eaec7dbf6635fc39228373167795c23613"
+      }
+    },
+    "source_findings": [
+      "find_axis.f90:142-172 selects minimum-Q4-physical-gradient candidate then accepts Newton success without Hessian/minimum classification.",
+      "mnewtax.f90:18-20,42-49,58-75 uses20iterations and accepts local derivative L1<=1e-16 or unclipped Newton-step L1<=1e-8; no physical-gradient postcheck.",
+      "find_axis.f90:182-188 returns the first approximate candidate if all500attempts fail; source-only inspection cannot identify whether that fallback occurred in a particular state.",
+      "equil_info.f90:134 suppresses find_axis warnings with my_id_fake9999; per-step nonverbose logs omit ifail_axis.",
+      "jorek2_main.f90:586,706 recomputes ES on current coefficients before volume assembly741; update_values779 precedes history copying833-839 with unchanged pre-step ES. Correctly aligned next-step histories diagnose the input state.",
+      "Numerical reproduction at039:48 matches the aligned native stationary saddle; lack of minimum classification, rather than early stopping alone, explains the confirmed difference."
+    ],
+    "status": "cause_confirmed_source_revision_v2_passes_all240_selected_states"
+  },
+  "source_revision_rollout_verification": {
+    "all_audits_passed": true,
+    "changes_from_original_revision": [
+      {
+        "absolute_mse_change": 0.0,
+        "arm": "physics",
+        "case_id": "mastu_004",
+        "horizon": 16,
+        "relative_mse_change": 0.0
+      },
+      {
+        "absolute_mse_change": 0.0,
+        "arm": "frozen_pilot_weights",
+        "case_id": "mastu_004",
+        "horizon": 16,
+        "relative_mse_change": 0.0
+      },
+      {
+        "absolute_mse_change": 0.0,
+        "arm": "physics",
+        "case_id": "mastu_010",
+        "horizon": 16,
+        "relative_mse_change": 0.0
+      },
+      {
+        "absolute_mse_change": 0.0,
+        "arm": "frozen_pilot_weights",
+        "case_id": "mastu_010",
+        "horizon": 16,
+        "relative_mse_change": 0.0
+      },
+      {
+        "absolute_mse_change": 0.0,
+        "arm": "physics",
+        "case_id": "mastu_004",
+        "horizon": 32,
+        "relative_mse_change": 0.0
+      },
+      {
+        "absolute_mse_change": 0.0,
+        "arm": "frozen_pilot_weights",
+        "case_id": "mastu_004",
+        "horizon": 32,
+        "relative_mse_change": 0.0
+      },
+      {
+        "absolute_mse_change": 1.8075489686291725e-10,
+        "arm": "physics",
+        "case_id": "mastu_010",
+        "horizon": 32,
+        "relative_mse_change": 1.7864301967707163e-06
+      },
+      {
+        "absolute_mse_change": 1.636277238784836e-10,
+        "arm": "frozen_pilot_weights",
+        "case_id": "mastu_010",
+        "horizon": 32,
+        "relative_mse_change": 1.668098937424034e-06
+      },
+      {
+        "absolute_mse_change": 5.204170427930421e-18,
+        "arm": "physics",
+        "case_id": "mastu_004",
+        "horizon": 96,
+        "relative_mse_change": 3.1086244689504383e-15
+      },
+      {
+        "absolute_mse_change": 2.8560053627613158e-15,
+        "arm": "frozen_pilot_weights",
+        "case_id": "mastu_004",
+        "horizon": 96,
+        "relative_mse_change": 1.836530927334934e-12
+      },
+      {
+        "absolute_mse_change": 1.5146046408384684e-08,
+        "arm": "physics",
+        "case_id": "mastu_010",
+        "horizon": 96,
+        "relative_mse_change": 6.553477812420994e-06
+      },
+      {
+        "absolute_mse_change": 1.4900752963106778e-08,
+        "arm": "frozen_pilot_weights",
+        "case_id": "mastu_010",
+        "horizon": 96,
+        "relative_mse_change": 6.7818082314374806e-06
+      }
+    ],
+    "checkpoint": {
+      "original_provenance_sha256": "7026b113e1ce2fd8292d958411c82b53cb48d45ab0a63a17abb4652994443012",
+      "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/pilot64_learned/implicit_rollout/rollout/selected.pt",
+      "selected_update": 64,
+      "sha256": "cc5dccd2d63c8720309d29fc009c4ee1ed62a535cbe89f03c3baa7430b0f1612"
+    },
+    "comparisons": [
+      {
+        "actual_microsteps_per_frame": 2,
+        "cases": [
+          {
+            "case_id": "mastu_004",
+            "frozen_weights_mse": 6.727568316558341e-06,
+            "mse_ratio": 0.97115180212844,
+            "physics_mse": 6.927411658830021e-06
+          },
+          {
+            "case_id": "mastu_010",
+            "frozen_weights_mse": 4.1760071901237195e-05,
+            "mse_ratio": 0.9942398296659462,
+            "physics_mse": 4.200201063687836e-05
+          }
+        ],
+        "frozen_weights_mean_mse": 2.424382010889777e-05,
+        "horizon": 16,
+        "mse_reduction_percent": 0.9028965746680995,
+        "physics_mean_mse": 2.4464711147854188e-05
+      },
+      {
+        "actual_microsteps_per_frame": 2,
+        "cases": [
+          {
+            "case_id": "mastu_004",
+            "frozen_weights_mse": 2.1597334528897422e-05,
+            "mse_ratio": 0.8816285517665341,
+            "physics_mse": 2.449709062350859e-05
+          },
+          {
+            "case_id": "mastu_010",
+            "frozen_weights_mse": 9.809217382843347e-05,
+            "mse_ratio": 0.9694627226016597,
+            "physics_mse": 0.00010118199652400491
+          }
+        ],
+        "frozen_weights_mean_mse": 5.9844754178665446e-05,
+        "horizon": 32,
+        "mse_reduction_percent": 4.765772035845906,
+        "physics_mean_mse": 6.283954357375675e-05
+      },
+      {
+        "actual_microsteps_per_frame": 2,
+        "cases": [
+          {
+            "case_id": "mastu_004",
+            "frozen_weights_mse": 0.0015551021003655813,
+            "mse_ratio": 0.9452621443332268,
+            "physics_mse": 0.0016451543200881342
+          },
+          {
+            "case_id": "mastu_010",
+            "frozen_weights_mse": 0.0021971800895702596,
+            "mse_ratio": 0.9506821922190449,
+            "physics_mse": 0.0023111615086022475
+          }
+        ],
+        "frozen_weights_mean_mse": 0.0018761410949679205,
+        "horizon": 96,
+        "mse_reduction_percent": 5.157162562071804,
+        "physics_mean_mse": 0.001978157914345191
+      }
+    ],
+    "completed_rollouts": 4,
+    "cuda_training_smoke": {
+      "case_id": "mastu_039",
+      "fresh_zero_output_start": true,
+      "gradient_norm": 0.00010118491627508774,
+      "guard_statistics": {
+        "limited_field_steps": 0,
+        "minimum_alpha": 1.0,
+        "steps": 8,
+        "worst_proposed_density_bound": 0.0002779177675721808,
+        "worst_proposed_temperature_bound": 8.910706368224352e-05
+      },
+      "initial_neural_sha256": "e8d5b4e7f62218c97fa7ae28214b61656bbdd45c2701158b05e907cbeef676c4",
+      "loss": 9.57349809404741e-06,
+      "not_used_for_evaluation": true,
+      "stage_statistics": {
+        "boundary_iterations": 24,
+        "guarded_stages": 8,
+        "learned_network_evaluations": 16,
+        "linear_rhs_evaluations": 0,
+        "maximum_boundary_iterations": 3,
+        "maximum_boundary_residual": 1.7021497470416393e-12,
+        "maximum_guard_change": 2.033197198603176e-06,
+        "maximum_held_dof_change": 3.944304526105059e-31,
+        "physical_rhs_evaluations": 8,
+        "stages": 8
+      },
+      "start_frame": 48,
+      "updated_neural_sha256": "24dddfaf474da117b79b7c2b0c8b1ad9cb24a60faed608a9459aecf7ae210ea8",
+      "updates": 1
+    },
+    "evaluation": {
+      "actual_microsteps_per_frame": 2,
+      "case_indices": [
+        0,
+        1
+      ],
+      "horizons": [
+        16,
+        32,
+        96
+      ],
+      "requested_substeps": 1,
+      "split": "test"
+    },
+    "evidence": {
+      "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/source_revision_verification/report.json",
+      "sha256": "51378701a0518add11d77afe2337055fd5dd91c95a795e9a8736b0c623aa3ed1"
+    },
+    "final_result_claimed": true,
+    "independent_checks": [
+      "four distinct arm/case pairs",
+      "allH16/H32/H96audits",
+      "selected checkpoint file hash",
+      "corrected frozen-source hashes",
+      "unchanged normalization identity",
+      "seven-field MSE arithmetic",
+      "paired mean ratios"
+    ],
+    "independent_comparison_evidence": {
+      "path": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/source_revision_comparison.json",
+      "sha256": "b5362bea0b47882262614f90e4488e10cd79753e67aa485211bdb0617f20ae82"
+    },
+    "interpretation": "Corrected-source verification reuses the original64-update weights; the independent one-update CUDA smoke weights are not used. Only actual2microsteps rechecked; original4/8microstep results remain original-revision evidence.",
+    "maximum_absolute_mse_change": 1.5146046408384684e-08,
+    "maximum_relative_mse_change": 6.7818082314374806e-06,
+    "source_sha256": {
+      "__init__.py": "c1831d082111ff642f71ffd5d6f7197bd412dd89d830340376c741c8424d6aff",
+      "case.py": "dec88218ac5b8f1afd0bc6b2b1c860beb37b1415c4eb3c1b371eead1a75c29a4",
+      "coefficient_ood.py": "f5dd5209d1c2129b65011d7f27fca059a59db97c17c978a2d33e7407d0e84f3b",
+      "common.py": "fd31887b3f2532cf5d5f47bf05e96aa955ed7378290e28971a11b05d45d6277f",
+      "conditional.py": "50f571f72e7b85fc5d01aae99d929e23335a92829fa11693e83006a1e75f9bb9",
+      "continuity.py": "989bdc4f7343c09c3288939c592158bea020e2458e79edaf21e6cc5136e18cdd",
+      "data.py": "e3e6aae9e848e634455d95287a0cffcd50f34026ae85e8dd69ebe0858e119892",
+      "ensemble_training.py": "a2bd013eccc50e0f5b70719d30fc12d9c66eb75233cae0974a7f63d5f13cec11",
+      "euler.py": "c0888515d62e2713491fc93f1ffc21ccdeeeff7ac5d75dfa18383ee205623533",
+      "euler_dataset.py": "eb3a7bb60c1dee50f3668e36678bb744e04c59378171371e5b030c48edfc5ae3",
+      "euler_training.py": "4d8683fbd848f11b3b2f3eb4ca172f71eab5da462ed8fe196eb5ededd81198d2",
+      "evaluation.py": "e8f5e4477dc10552d079bbe09864c27f5beed6744cd7d5a462c181be07bd70d6",
+      "full_rollout.py": "9927cfb0d886c3fb0fe460cd96147859cedeca91adb1d9b0aa0fc73af36adebf",
+      "gpu_native.py": "23824b11457cd29a62bca3dfe69a5ab1296c02338051f3c29b96d87226d1b06a",
+      "implicit_coefficient.py": "1a1af48c4760ca84dfdedc17064b7958ec4f8bec8f24edfe23edbd1e6bd8dc5a",
+      "implicit_labels.py": "fa86987755f2ad10f494dd969c49b49544416a028f80b7ac426736098c1530e3",
+      "implicit_opsplit.py": "cf94352a0fba5ef539a7331fad5a4f91d1bf49f717449d65185a20f34f61dc89",
+      "implicit_training.py": "4da8f97823fbde43ba4e4708e6fb18e8daa7619253dc149a38416911079c47c9",
+      "learning.py": "d2972ce404d7e77012942f713a0b656200ce3c7439670a443dd961549cdab0b9",
+      "manifest.py": "2c38f62f290adeb2b30cf9cbe6c8a7ecc5ae90ccdfd90ad2c7bbcd12b555eeb8",
+      "native_balance.py": "4ab809941632b3c9b3c42971f9e25de62927226a74e1d4fe215251364331f715",
+      "native_critical.py": "c1e5f7d8086ea049e71daa493bcd0367b932f09c502ef6a95414043e4bcb57c0",
+      "native_export.py": "ff8ff3b7688cc7a1b66c67ec7682740b69245db38d225193d9b6248bfde362c7",
+      "native_patches.py": "432e615f597251c49786cd95558a9e21fd8c4d19914f23e63661d565b1d74aae",
+      "numerical.py": "839b59c6158302b531dc3a5f357b033120deb63b13a0bcc745d77d1958bc23ed",
+      "physical_data_cache.py": "c806d0a45d8486c53f107a64ea30eb2a50f4faefd842b7fabe947a59aece6d73",
+      "physical_defect.py": "b3dc0ac1892ea89b2ddb617f7b503c310cd180e42140f0fa996c7c4942c2aa3b",
+      "physical_guard.py": "4f29a813ac0853579b56b8120f4a681c4c44ec4fa81ee1570dfb43f8d278706c",
+      "physical_rhs.py": "42d758f95c60d296e007d51a7c92b3b4dc7f8e0e75da21ed2180e7d5ce570c64",
+      "queries.py": "b2e24b4422b94677819ed6ed642888b2451b5655d2790d3b1c3b60abb5f3b9bc",
+      "restart.py": "830671db304963210d913ec14e202579f8252331bbedee1b6c4c4f5ec059c795",
+      "runner.py": "f6f54604659f09f18527ed762dbc35b35da4171c6806a8bb8411e376aff096ce",
+      "sampling.py": "9501e3d71d731d3e828368bd6f9fdcc94ee75912cc4523b47117d94295bc7923",
+      "spline_derivatives.py": "4b0695dcefe1748fa77426a4d34d62a3474ce122a14597c1e9fd4a81d822204e",
+      "surface.py": "3fb02ce91c96b552f96da5037ac0b30487de004c0c384c38cd20c6dd5a076eb1",
+      "temporal.py": "f6b3cec0eda44c276f4e5c478e357808109be97c5d8d79ff1c52c4e2fefdf0f0",
+      "training.py": "6cdbda2f182362f96ab056509410999dc1fdab9f31145e6c8c7e150031ca19b6"
+    },
+    "source_snapshot": "/pitagora_scratch/userexternal/vgopakum/mastu_physical_defect_20261111/frozen_source_axis_v2/study",
+    "status": "completed"
+  },
+  "status": "qualified_source_revision_with_matched_two_case_frozen_weight_gain_confirmed"
+}

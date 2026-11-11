@@ -1,8 +1,95 @@
-# Generic implicit OpsSplit: a stiffness-independent neural PDE step
+# Generic implicit OpsSplit: methods, experiments, and limits
 
 A PDE-agnostic version of the MAST-U implicit OpsSplit (`JOREK/mastu_opsplit/IMPLICIT_OPSSPLIT.md`), set
 against the "unconditionally temporally stable neural operators" question of the upgrade-viva
 future-work chapter (sections 4.1.1 and 4.1.2), and tested on standard CFD and time-dependent benchmarks.
+
+## Confirmed research result — 10 November 2026
+
+**The clear learned-model win is FEM: preserve exact physics and learn an equilibrium-preserving
+defect inside an accurate implicit solver.** On independent trajectories, its H=100 relative L2 error
+is **0.0007704 ± 0.0001482** across three training seeds, versus **0.003087** for the matched classical
+solver and **0.002335** for the preselected historical implicit baseline: **75% and 67% lower error**.
+The paired trajectory-bootstrap error ratios are 0.250 [95% CI: 0.189, 0.346] and
+0.330 [0.283, 0.392], respectively. These intervals do not include training-seed uncertainty.
+
+The campaign audited all 381 historical runs and produced 44 new result records: 21 completed training
+runs, three inference variants reusing trained weights, 18 classical controls, and two explicitly
+partial training screens. All new training ran on an **NVIDIA H100 GPU**. The final 49 checkpoints,
+method choices, source hashes, and extra coefficient cases were frozen before generating 32 fresh
+test trajectories per PDE and 16 trajectories per OOD coefficient.
+
+| Problem / horizon | Historical implicit | Refined implicit strategy | ETDRK4 physics control |
+|---|---:|---:|---:|
+| Burgers / 200 | 0.002897 | 0.00003748 | 0.0000001422 |
+| KdV / 200 | 0.06237 | 0.0008324 | 0.000001613 |
+| KS / 50 | 0.2840 | 0.04641 | 0.03379 |
+| NS2D / 80 | 0.1941 | 0.00008520 | 0.00000007615 |
+| Burgers FEM / 100 | 0.002335 | **0.0007704** | Not applicable |
+
+Entries are mean trajectory relative L2 errors, clipped at 2, averaged across three seeds for learned
+methods; classical methods are deterministic controls. The refined implicit strategy uses
+**untrained ARS222 physics on the four Fourier problems**, and a **learned defect on FEM**. Thus the
+Fourier gains are numerical improvements, not neural gains. ETDRK4 is more accurate on all four Fourier
+cases and faster as implemented on three; KdV costs are similar. Its float64 implementation and shared
+method family with the finer-grid reference generator help explain the very small errors.
+
+The supported recipe and its limits:
+
+- **FEM:** known coefficient-dependent L, exact nonlinear physics, ARS222 with two internal steps,
+  and a zero-initialized defect constrained by `G(q, mu, x) - G(0, mu, x)`. Train 5,000 updates with
+  learning rate 1e-4 decaying to 1e-7. The learning-rate and equilibrium changes were tested together.
+  A fixed coefficient-support gate uses the classical solver outside `[0.004, 0.012]`; this protects
+  against some extrapolation failures but is discontinuous at the boundaries and gives up a useful
+  correction at the new OOD value 0.003. Inference costs approximately **2.1×** the historical baseline.
+- **Fourier problems:** use adequately resolved physical integration; retain ETDRK4 as the stronger
+  accuracy control. Capped internal steps at 4h perform four times as much physics work. This is not
+  an equal-runtime comparison or a claim of unconditional nonlinear stability.
+- **NS2D learned models:** supply the fixed spatial forcing to every network. Corrected implicit and
+  NODE errors are 0.01101 and 0.01234; their ratio CI [0.805, 1.013] does not establish an implicit
+  accuracy advantage. Much of the old deficit came from the missing forcing input.
+- **KS:** H=50 is within the training time span. Improvements at H=100/H=200 have ratio CIs crossing
+  one, and the refined solver's spectrum error is worse. Short-time gains do not establish better
+  long-time chaotic statistics.
+
+All selected strategies stayed bounded in long rollouts from the first 16 fresh trajectories per PDE,
+using a norm threshold ten times the reference maximum; this finite experiment is not a stability
+proof. Checkpoints used original validation selection, while outer research choices also
+used exploratory test/OOD evidence. The fresh holdout was evaluated only after the final freeze.
+
+Read the [complete findings and reproduction commands](results/research_findings_20261110.md),
+[fresh confirmation data](results/research_confirmation_20261110.json),
+[frozen selection](results/research_frozen_selection_20261110.json), and
+[exploratory method tables](results/research_20261110.md).
+Validation: **149 tests passed, 20 skipped**; CUDA checks include adjoint gradients, equilibrium and
+support-gate behavior, and exact checkpoint resumption on this GPU/software setup.
+
+The [MAST-U implementation](../JOREK/mastu_opsplit/IMPLICIT_OPSSPLIT.md) now carries this recipe to
+the native JOREK finite-element system: retain the nonlinear volume physics and learn
+`G(q) - G(q*)` about the actual restart state. The physical forcing at `q*` remains present.
+It uses a frozen mass/tangent pair, coupled current/vorticity constraints, and stage-wise wall and
+positivity enforcement. [Native parity and rollout evidence](../JOREK/mastu_opsplit/reports/physical_defect_status_20261111.json)
+tracks its qualification separately; the FEM gain above does not establish a learned MAST-U gain.
+The first MAST-U pilot trained 64 updates on the H100. On two held-out trajectories, its frozen
+weights with the corrected native source reduce H=96 normalized volume MSE by **5.16%** relative to
+matched nonlinear physics at two internal steps. All 240 native-state parity checks pass. This is
+an exploratory baseline-coefficient, axisymmetric result, not qualification across equilibria or OOD cases.
+
+**Multi-seed qualification submitted, 11 November 2026:** three fresh seeds (17–19),
+2,000 H100 updates each, all 20 existing test trajectories, and one matched physics control.
+Array **2829055** awaits GPU preflight **2829030**, currently queued at `QOSGrpNodeLimit`;
+automatic summary **2829056** follows the array. The primary H96/two-microstep target is at least
+5% lower mean MSE, improvement for every seed, and a paired trajectory-bootstrap 95% upper
+ratio below one. This reuses exploratory test cases; it is not independent confirmation.
+[Launch protocol and artifact paths](../JOREK/mastu_opsplit/reports/physical_qualification_20261111.json)
+record the pending campaign; no multi-seed result is available yet.
+
+The [SCML presentation package](../Paper/mastu_scml_2026/README.md) compares native MAST-U, AR, Neural ODE, and the 64-update learned implicit model in synchronized plasma videos, with explicit equations, fresh H100 rollout timings, and timestep/horizon stress tests.
+
+![Preselected methods on the independent holdout](results/research_20261110.png)
+
+The following sections retain the original formulation and historical experiments. Their recommendations
+describe those experiments; the confirmed comparison above supersedes the broader historical claims.
 
 ## Formulation
 
@@ -30,7 +117,7 @@ One linearly implicit theta-step of size h (no Newton iteration; one linear solv
 | known | learned | MAST-U implicit OpsSplit |
 | L0 + mu L1, known | learned | coefficient physics (affine in mu) |
 | learned J - D (+ mu-affine) | learned | **structured implicit neural operator** (section 4.1.2) |
-| known L, plus learned J - D correction (warm start) | learned | **physics-anchored structured operator** (best in the tests) |
+| known L, plus learned J - D correction (warm start) | learned | **physics-anchored structured operator** (useful in historical tests) |
 | any of the above, two-stage Rosenbrock-W (ROS2) | learned | second-order linearly implicit step, same factorisation |
 
 Keeping A explicit and *solving* with it is the inductive bias; learning A^-1 directly is just AR.
@@ -72,21 +159,23 @@ Assume M is symmetric positive definite and use the M-norm.
 
 ## What the experiments say about the formulation
 
-Evidence from the 381 runs below (14 + 11 variants x 3 seeds x 5 problems), stated as revisions to the notes:
+Evidence from the 381 historical runs below, stated as revisions to the notes:
 
-1. **Implicit L is necessary.** The explicit split of section 4.1.1 diverges on all five problems at these
-   steps; every implicit variant trains. This is the part of section 4.1.2 the tests confirm outright.
+1. **The coarse explicit Euler split fails.** The tested explicit split of section 4.1.1 diverges on all
+   five problems at these steps; the basic implicit variants train. This does not rule out other
+   explicit or exponential integrators, or establish unconditional stability of the learned model.
 2. **A dissipative parameterisation alone is not enough.** Learned from scratch, a J - D operator is not
    identified (the network absorbs the linear response) and gives no measurable gain over an unconstrained
    one. Where a learned implicit L is identified it moves toward the operator whose resolvent reproduces
    exp(hL) (for skew L this has Re > 0, which J - D cannot represent), not toward the PDE operator.
-3. **Recommended form: physical operator + learned structured correction + learned remainder.** Initialising
+3. **Historical improvement: physical operator + learned structured correction + learned remainder.** Initialising
    the J - D operator at the known L and training it with the network keeps the physics (FEM conductance
    within 5%) and gives the best accuracy (KdV 0.10 vs 0.19 known L) and out-of-range robustness (FEM
    0.026 vs 0.163 from scratch). This is the testbed form of "L* + Delta L" for MAST-U.
-4. **Put varying coefficients in L(mu), never in network conditioning.** Known L(mu) gives the OOD gains
+4. **Retain known coefficient dependence in L(mu).** Known L(mu) gives the OOD gains
    (FEM 0.018 vs NODE 0.157), as with D_perp on MAST-U. A learned mu-affine L carries the coefficient only once
-   it is identified (warm start, or partly on Burgers).
+   it is identified (warm start, or partly on Burgers). Network conditioning can still be useful;
+   all historical FNO arms already receive log(mu).
 5. **Exact remainder labels trade accuracy for identifiability at coarse steps.** They roughly halve
    operator-recovery error but worsen rollouts (FEM 0.005 -> 0.14), because the remainder can no longer absorb
    the time-discretisation error. Use them when h is small relative to the dynamics, or with a higher-order
@@ -119,13 +208,15 @@ Arms (`gos/models.py`): `ar`, `node`, `explicit_known`, `imex_exact` (no learnin
 same locality, no sign constraint). All learned arms share one FNO backbone with log(mu) as an input
 channel; learned operators are L = O0 + mu_t O1 (section 4.1.1's alpha NO_1 + beta NO_2 with known
 coefficients). Training: 8-step rollout MSE on the first half of each trajectory, validation selection.
-Evaluation: test rollouts to the full (2x training) horizon, 2h/4h/h-half step transfer, OOD coefficients,
+Evaluation: test rollouts to the full generated (2x training) horizon, 2h/4h/h-half step transfer, OOD coefficients,
 5x-length stability rollouts, step-Jacobian sigma_max, and recovery of the true operator.
+The reported KS endpoint is H=50, inside its 100-step training time window; it tests unseen trajectories,
+not temporal extrapolation. KS spectrum statistics also use the later generated frames.
 
 ```bash
 PY=/pitagora/home/userexternal/vgopakum/NOs_for_POs/.venv/bin/python
 ROOT=/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109
-$PY -m pytest -q tests                                   # 52 tests
+$PY -m pytest -q tests
 $PY -m gos.train data --problem burgers --root $ROOT
 $PY -m gos.train run --problem burgers --arm implicit_struct --seed 0 --root $ROOT
 $PY summarize.py $ROOT                                   # -> $ROOT/summary/summary.{json,md}
@@ -138,7 +229,8 @@ Full tables: [results/summary.md](results/summary.md) (machine-readable: `result
 ignores `*.png`); they are in `$ROOT/summary/` and are regenerated with `python plots.py $ROOT`. Checkpoints,
 per-run JSON and generated data stay on scratch under `$ROOT` (runs/, data/; the transient-dominated first
 NS2D sweep is in archive/). Errors are test relative L2 (mean over trajectories, clipped at 2), mean over
-seeds, at the longest horizon (2x the training horizon) unless stated.
+seeds, at the longest reported horizon unless stated. This is 2x the training horizon except for KS
+(H=50 versus a 100-step training window).
 
 **Main comparison (single training step h):**
 
@@ -156,7 +248,7 @@ seeds, at the longest horizon (2x the training horizon) unless stated.
 
 Findings:
 
-1. **Implicit L is what makes an OpsSplit trainable at stiff steps.** The explicit Euler split of section
+1. **Implicit L stabilizes this tested stiff split.** The explicit Euler split of section
    4.1.1 with exact operators diverges on all five problems (sigma_max of the step Jacobian 30-1200). Every
    implicit arm trains and its 5x-length rollouts stay bounded on Burgers, KS, NS2D and FEM.
 2. **The stability bound predicts which classical IMEX steps fail.** With exact N, IMEX Euler is stable
@@ -184,15 +276,15 @@ Findings:
    vs >= 1.2), but costs ~5x accuracy at h: a step-independent remainder in a first-order scheme carries the
    O(h) error of IMEX Euler. Accurate and step-robust needs a higher-order linearly implicit integrator
    (SBDF2, Rosenbrock-W, ETD), the implicit analogue of the Euler/midpoint/RK4 table in section 4.1.1.
-7. **NS2D (advection-dominated CFD): all learned arms tie (0.25-0.29).** The binding stiffness is advective
+7. **Historical NS2D: learned arms without forcing inputs tie (0.25-0.29).** The binding stiffness is advective
    and sits in N, so implicit viscosity cannot help in-distribution (it does stabilise 2h transfer: known
    0.39 vs node 1.6). Exploiting the formulation here needs linearised advection in L (Oseen/Picard about
    q_n, iterative solve). An initial-transient protocol issue (rollouts from the decaying GRF initial
    condition) was fixed with a 5-time-unit burn-in; the first NS2D runs are archived.
 
-Next experiments: supervise N with exact remainder labels (available for all five problems; the MAST-U
-recipe) to test identifiability of learned L; penalise sigma_max(DPhi) or spectrally normalise N; SBDF2 /
-Rosenbrock-W steps with multi-step training; warm-start struct L; NS2D with linearised advection in L.
+The follow-up experiments below supervise N with exact remainder labels (available for all five problems; the MAST-U
+recipe) to test identifiability of learned L; penalise sigma_max(DPhi); use Rosenbrock-W steps with
+multi-step training; warm-start struct L; and test NS2D with linearised advection in L.
 
 ## Follow-up experiments (9-10 November 2026; 171 runs, 3 seeds each)
 
@@ -202,7 +294,7 @@ loss), `--jac-weight` (penalty on step-Jacobian amplification above the near-exa
 `node_rk2` (second order, trained on {h, 2h, 4h}), `oseen*` (NS2D with advection re-linearised every step and
 solved implicitly by batched GMRES). Run names carry suffixes `_lab`, `_lip`, `_init`, `_mdt`.
 
-1. **Warm-started learned operators are the strongest variant.** The structure-constrained L keeps the physics
+1. **Warm starts improve several historical comparisons.** The structure-constrained L keeps the physics
    and learns a correction. KdV H=200: 0.10 (free) / 0.12 (struct) vs 0.19 known L and 0.22 free from scratch,
    bounded 0.96-1.0. FEM: struct_init 0.0039 (known 0.0038) with conductance recovered to 5% (was 97% wrong) and
    skew to 15%; kappa0 = 0.024 OOD 0.026 vs 0.163 untrained-init struct. Burgers OOD nu = 0.1: 0.014-0.022 vs

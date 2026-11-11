@@ -1,0 +1,37 @@
+{
+  "case_id": "mastu_000",
+  "constraint_defects": [
+    4.439722924757997e-13,
+    2.3980887404026175e-13
+  ],
+  "density_temperature_lower_bounds": [
+    0.0009514033268708147,
+    9.15395130420303e-05
+  ],
+  "elapsed_seconds": 16.889401089167222,
+  "exact_initial_identity": true,
+  "finite_loss_and_gradients": true,
+  "guard_statistics": {
+    "limited_field_steps": 0,
+    "minimum_alpha": 1.0,
+    "steps": 1,
+    "worst_proposed_density_bound": 0.0009514033268708147,
+    "worst_proposed_temperature_bound": 9.15395130420303e-05
+  },
+  "input_artifact_hashes_verified": true,
+  "manifest_sha256": "f0f0f56c611c9f9d48081d4a611bfa44a0709e5cf4b691fc219c69396c81b87c",
+  "native_dofs": 46203,
+  "nonzero_gradient": true,
+  "normalization": "original 60-case training normalization for preflight only; production pools 80 cases",
+  "parameters": 9737,
+  "purpose": "Untrained real-mesh forward/backward preflight; not an accuracy experiment",
+  "q12_minima": [
+    0.0018063598270337934,
+    9.31107902042676e-05
+  ],
+  "source_sha256": {
+    "conditional.py": "0714c02ab965743ca15ada0a08c06026e770517111f6f7e02b45b2fa61c0cc74",
+    "learning.py": "d2972ce404d7e77012942f713a0b656200ce3c7439670a443dd961549cdab0b9"
+  },
+  "time_scale_seconds": 1.4059131112280782e-06
+}

@@ -23,6 +23,7 @@ boundary operators or the time discretisation.
 from dataclasses import dataclass
 import hashlib
 import time
+from types import SimpleNamespace
 
 import h5py
 import numpy as np
@@ -314,6 +315,30 @@ class WeakAssembler:
             out[:, :, block] += (self.test[kind] @ x[:, :, c].T).T
         return out
 
+    torch_operations = ('assemble',)
+
+    def apply_torch(self, x, operation, transpose=False):
+        """Device version of apply (deterministic; float64 internally, input dtype out)."""
+        from .gpu_native import apply_batched, device_matrix
+        if operation != 'assemble':
+            raise ValueError('Unknown weak operation')
+        xd = x.to(torch.float64)
+        groups = [(kind, [c for c, (_, k) in enumerate(self.channels) if k == kind]) for kind in range(3)]
+        if transpose:
+            out = xd.new_zeros(x.shape[0], self.test[0].shape[1], len(self.channels))
+            for kind, columns in groups:
+                if columns:
+                    matrix = device_matrix(self, f'test{kind}', lambda kind=kind: self.test[kind], x.device, transpose=True)
+                    out[:, :, columns] = apply_batched(matrix, xd[:, :, [self.channels[c][0] for c in columns]])
+            return out.to(x.dtype)
+        out = xd.new_zeros(x.shape[0], self.ndof, 5)
+        for kind, columns in groups:
+            if columns:
+                blocks = [self.channels[c][0] for c in columns]  # distinct within one test-function kind
+                matrix = device_matrix(self, f'test{kind}', lambda kind=kind: self.test[kind], x.device)
+                out[:, :, blocks] = out[:, :, blocks] + apply_batched(matrix, xd[:, :, columns])
+        return out.to(x.dtype)
+
     def __call__(self, pointwise):
         from .euler import _FixedNative
         return _FixedNative.apply(pointwise, self, 'assemble')
@@ -358,15 +383,67 @@ def nested_dissection(graph, library=METIS_LIBRARY):
     return perm.astype(np.int64)
 
 
-class _Factor:
-    """Row-scaled square system for one step fraction; LU reused for all solves.
+def _unit_rows(A):
+    """Rows a_ii x_i = b_i (Dirichlet/held DOFs) of a CSR/CSC matrix: indices and diagonal values."""
+    csr = sp.csr_matrix(A)
+    single = np.flatnonzero(np.diff(csr.indptr) == 1)
+    rows = single[csr.indices[csr.indptr[single]] == single]
+    return rows, csr.data[csr.indptr[rows]]
+
+
+class _Refinement:
+    """Iterative refinement shared by the SciPy and torch factors.
+
+    Refinement stops on the normwise backward error
+        |r|_inf / (|A|_inf |x|_inf + |b|_inf) <= tolerance,
+    or when a correction fails to halve it (the attainable floor), after at least `refinement`
+    and at most `max_refinement` corrections. A relative-residual target is not used: the
+    system is ill-conditioned in the adjoint direction (|x| >> |b|), so |r|/|b| stalls far
+    above roundoff there although the solution itself is accurate. Unit rows (Dirichlet/held
+    DOFs) are set exactly after every forward solve, so pinned values never pick up roundoff.
+    Subclasses provide _solve, _matvec, backward_error and _exact_rows.
+    """
+    def _init_refinement(self, A, refinement, max_refinement, tolerance):
+        magnitude = abs(sp.csr_matrix(A))
+        self.norms = dict(N=float(magnitude.sum(axis=1).max()), T=float(magnitude.sum(axis=0).max()))
+        self.refinement, self.max_refinement, self.tolerance = refinement, max_refinement, tolerance
+        self.statistics = {trans: dict(solves=0, lu_solves=0, stalled=0, worst_backward_error=0.) for trans in 'NT'}
+
+    def solve(self, rhs, transpose=False):
+        """LU solve, refined only while the backward error exceeds the tolerance and keeps halving."""
+        trans = 'T' if transpose else 'N'
+        stats = self.statistics[trans]
+        x = self._exact_rows(self._solve(rhs, trans), rhs, trans)
+        residual = rhs - self._matvec(x, trans)
+        error = float(self.backward_error(residual, x, rhs, trans).max())
+        for step in range(self.max_refinement):
+            forced = step < self.refinement
+            if not forced and error <= self.tolerance:
+                break
+            candidate = self._exact_rows(x + self._solve(residual, trans), rhs, trans)
+            candidate_residual = rhs - self._matvec(candidate, trans)
+            candidate_error = float(self.backward_error(candidate_residual, candidate, rhs, trans).max())
+            if not forced and candidate_error > .5*error:
+                stats['stalled'] += 1
+                if candidate_error < error:
+                    x, error = candidate, candidate_error
+                break
+            x, residual, error = candidate, candidate_residual, candidate_error
+        stats['solves'] += 1
+        stats['worst_backward_error'] = max(stats['worst_backward_error'], error)
+        return x
+
+
+class _Factor(_Refinement):
+    """Row-scaled square system for one step fraction (SciPy/NumPy); LU reused for all solves.
 
     ordering='metis': nested dissection of the DOF graph with the seven field unknowns of
     each DOF kept adjacent, then SuperLU with that fixed column order and diagonal-preferring
     threshold pivoting. ordering='colamd': SuperLU's own column ordering (much more fill here).
+    Refinement policy: see _Refinement.
     """
-    def __init__(self, A, B, constant, forcing_rows, forcing_scale, h, refinement, *, permutation=None,
-                 pivot_threshold=.01, relation_rows=None, relation_scale=None):
+    def __init__(self, A, B, constant, forcing_rows, forcing_scale, h, refinement=0, *, permutation=None,
+                 pivot_threshold=.01, relation_rows=None, relation_scale=None, tolerance=1e-14, max_refinement=3):
         started = time.monotonic()
         self.A, self.B, self.constant = A.tocsc(), B.tocsr(), constant
         self.forcing_rows, self.forcing_scale, self.h = forcing_rows, forcing_scale, h
@@ -379,28 +456,29 @@ class _Factor:
             permuted = self.A[permutation][:, permutation].tocsc()
             self.lu = splu(permuted, permc_spec='NATURAL', diag_pivot_thresh=pivot_threshold,
                            options=dict(SymmetricMode=True))
-        self.refinement = refinement
+        self.unit_rows, self.unit_values = _unit_rows(self.A)
+        self._init_refinement(self.A, refinement, max_refinement, tolerance)
         self.seconds = time.monotonic()-started
         self.fill = int(self.lu.L.nnz + self.lu.U.nnz)
 
     def _solve(self, rhs, trans):
+        self.statistics[trans]['lu_solves'] += 1
         if self.permutation is None:
             return self.lu.solve(rhs, trans=trans)
         out = np.empty_like(rhs)
         out[self.permutation] = self.lu.solve(rhs[self.permutation], trans=trans)
         return out
 
-    def solve(self, rhs, transpose=False, tolerance=1e-11):
-        """LU solve plus at least `refinement` and at most 6 iterative-refinement steps, stopping at tolerance."""
-        trans = 'T' if transpose else 'N'
-        x = self._solve(rhs, trans)
-        matrix = self.A.T if transpose else self.A
-        scale = max(np.linalg.norm(rhs), 1e-300)
-        for iteration in range(max(self.refinement, 6)):
-            residual = rhs - matrix @ x
-            if iteration >= self.refinement and np.linalg.norm(residual) <= tolerance*scale:
-                break
-            x = x + self._solve(residual, trans)
+    def _matvec(self, x, trans):
+        return (self.A.T if trans == 'T' else self.A) @ x
+
+    def backward_error(self, residual, x, rhs, trans):
+        """Normwise backward error of each right-hand side (columns of 2-D arrays)."""
+        return np.abs(residual).max(axis=0)/(self.norms[trans]*np.abs(x).max(axis=0) + np.abs(rhs).max(axis=0) + 1e-300)
+
+    def _exact_rows(self, x, rhs, trans):
+        if trans == 'N' and len(self.unit_rows):
+            x[self.unit_rows] = (rhs[self.unit_rows].T/self.unit_values).T
         return x
 
     def relative_residual(self, rhs, x, transpose=False):
@@ -408,11 +486,81 @@ class _Factor:
         return float(np.linalg.norm(matrix @ x - rhs)/max(np.linalg.norm(rhs), 1e-300))
 
 
+class _TorchFactor(_Refinement):
+    """Device version of _Factor: torch tensors throughout, deterministic sparse products, and a
+    direct solver from gpu_native (cuDSS on CUDA, SuperLU on CPU). cuDSS 0.7.1 cannot solve with
+    the transpose, so A^T gets its own factorisation the first time an adjoint is needed."""
+    def __init__(self, A, B, constant, forcing_rows, forcing_scale, h, refinement=0, *, device, forcing_index,
+                 permutation=None, pivot_threshold=.01, relation_rows=None, relation_scale=None, tolerance=1e-14,
+                 max_refinement=3):
+        from .gpu_native import DeviceCSR, canonical_device, direct_solver
+        started = time.monotonic()
+        self.device = canonical_device(device)
+        self.A_host, self.B_host = sp.csc_matrix(A), sp.csr_matrix(B)
+        self.A, self.B = DeviceCSR(self.A_host, self.device), DeviceCSR(self.B_host, self.device)
+        self._transposes = {}
+        as_device = lambda a, dtype=torch.float64: torch.as_tensor(np.asarray(a), dtype=dtype, device=self.device)
+        self.constant = as_device(constant)
+        self.forcing_rows, self.forcing_index = as_device(forcing_rows, torch.long), as_device(forcing_index, torch.long)
+        self.forcing_scale, self.h = as_device(forcing_scale), h
+        self.relation_rows = as_device(np.zeros(0, dtype=np.int64) if relation_rows is None else relation_rows, torch.long)
+        self.relation_scale = as_device(np.zeros(0) if relation_scale is None else relation_scale)
+        unit_rows, unit_values = _unit_rows(self.A_host)
+        self.unit_rows, self.unit_values = as_device(unit_rows, torch.long), as_device(unit_values)
+        self._init_refinement(self.A_host, refinement, max_refinement, tolerance)
+        self._make_solver = lambda matrix: direct_solver(matrix, self.device, permutation=permutation,
+                                                         pivot_threshold=pivot_threshold)
+        self.lu = {'N': self._make_solver(self.A_host)}
+        self.seconds = time.monotonic()-started
+        self.fill = self.lu['N'].fill
+
+    def transposed(self, name):
+        """Device A^T or B^T, built on first use (adjoint only)."""
+        from .gpu_native import DeviceCSR
+        if name not in self._transposes:
+            self._transposes[name] = DeviceCSR((self.A_host if name == 'A' else self.B_host).T, self.device)
+        return self._transposes[name]
+
+    def _solve(self, rhs, trans):
+        self.statistics[trans]['lu_solves'] += 1
+        solver = self.lu['N']
+        if trans == 'N' or solver.supports_transpose:
+            return solver.solve(rhs, transpose=trans == 'T')
+        if 'T' not in self.lu:
+            self.lu['T'] = self._make_solver(self.A_host.T)
+        return self.lu['T'].solve(rhs)
+
+    def _matvec(self, x, trans):
+        return (self.transposed('A') if trans == 'T' else self.A) @ x
+
+    def backward_error(self, residual, x, rhs, trans):
+        return residual.abs().amax(dim=0)/(self.norms[trans]*x.abs().amax(dim=0) + rhs.abs().amax(dim=0) + 1e-300)
+
+    def _exact_rows(self, x, rhs, trans):
+        if trans == 'N' and len(self.unit_rows):
+            values = self.unit_values if rhs.ndim == 1 else self.unit_values[:, None]
+            x[self.unit_rows] = rhs[self.unit_rows]/values
+        return x
+
+    def relative_residual(self, rhs, x, transpose=False):
+        return float((self._matvec(x, 'T' if transpose else 'N') - rhs).norm()/rhs.norm().clamp_min(1e-300))
+
+    def release_adjoint(self):
+        """Free the A^T factorisation and transposed products (rebuilt on demand if an adjoint is needed again)."""
+        solver = self.lu.pop('T', None)
+        if solver is not None and hasattr(solver, 'close'):
+            solver.close()
+        self._transposes.clear()
+
+
 class _ImplicitStep(torch.autograd.Function):
+    """One implicit step for a [batch, ndof, 7] state; adjoint = transpose solve with the same system."""
     @staticmethod
     def forward(ctx, state, forcing, explicit, system, fraction):
         factor = system.factor(fraction)
         ctx.factor, ctx.system = factor, system
+        if isinstance(factor, _TorchFactor):
+            return _ImplicitStep._forward_torch(factor, state, forcing, explicit)
         y = state.detach().cpu().double().numpy()
         n = forcing.detach().cpu().double().numpy()
         e = explicit.detach().cpu().double().numpy()
@@ -427,6 +575,8 @@ class _ImplicitStep(torch.autograd.Function):
     @staticmethod
     def backward(ctx, gradient):
         factor, system = ctx.factor, ctx.system
+        if isinstance(factor, _TorchFactor):
+            return _ImplicitStep._backward_torch(factor, gradient) + (None, None)
         g = gradient.detach().cpu().double().numpy()
         grad_state, grad_forcing = np.empty_like(g), np.zeros((len(g), system.ndof, 5))
         grad_explicit = np.zeros((len(g), len(factor.relation_rows)))
@@ -440,12 +590,47 @@ class _ImplicitStep(torch.autograd.Function):
         as_tensor = lambda a: torch.as_tensor(a, dtype=gradient.dtype, device=gradient.device)
         return as_tensor(grad_state), as_tensor(grad_forcing), as_tensor(grad_explicit), None, None
 
+    # Device path: field-major columns [7n, batch], all on factor.device.
+    @staticmethod
+    def _forward_torch(factor, state, forcing, explicit):
+        batch, n = state.shape[0], state.shape[1]
+        to = lambda t: t.detach().to(device=factor.device, dtype=torch.float64)
+        Y = to(state).transpose(1, 2).reshape(batch, 7*n).T
+        F = to(forcing).transpose(1, 2).reshape(batch, 5*n).T
+        rhs = factor.B @ Y + factor.constant[:, None]
+        rhs[factor.forcing_rows] += factor.forcing_scale[:, None]*F[factor.forcing_index]
+        rhs[factor.relation_rows] += factor.relation_scale[:, None]*to(explicit).T
+        X = factor.solve(rhs)
+        return X.T.reshape(batch, 7, n).transpose(1, 2).to(device=state.device, dtype=state.dtype)
+
+    @staticmethod
+    def _backward_torch(factor, gradient):
+        batch, n = gradient.shape[0], gradient.shape[1]
+        G = gradient.detach().to(device=factor.device, dtype=torch.float64).transpose(1, 2).reshape(batch, 7*n).T
+        adjoint = factor.solve(G, transpose=True)
+        grad_state = (factor.transposed('B') @ adjoint).T.reshape(batch, 7, n).transpose(1, 2)
+        flat = adjoint.new_zeros(5*n, batch)
+        flat[factor.forcing_index] = factor.forcing_scale[:, None]*adjoint[factor.forcing_rows]
+        grad_forcing = flat.T.reshape(batch, 5, n).transpose(1, 2)
+        grad_explicit = (factor.relation_scale[:, None]*adjoint[factor.relation_rows]).T
+        cast = lambda t: t.to(device=gradient.device, dtype=gradient.dtype).contiguous()
+        return cast(grad_state), cast(grad_forcing), cast(grad_explicit)
+
 
 class ImplicitNativeSystem:
-    """Normalized implicit step y -> y' for q = mean + scale*y (field-major unknowns)."""
+    """Normalized implicit step y -> y' for q = mean + scale*y (field-major unknowns).
+
+    backend='scipy': NumPy/SuperLU on the CPU (the original path). backend='torch': device tensors with
+    deterministic sparse products and cuDSS LU on CUDA (SuperLU when device='cpu', used by the tests).
+    """
     def __init__(self, geometry, frozen, mean, scale, fixed, *, code_interval, theta=1., F0=0.64,
-                 rho_1=0.01, density_coefficients=(0.5, 0.5), refinement=1, ordering='metis', relations=None):
+                 rho_1=0.01, density_coefficients=(0.5, 0.5), refinement=0, max_refinement=3,
+                 refinement_tolerance=1e-14, ordering='metis', relations=None, backend='scipy', device='cpu'):
         started = time.monotonic()
+        if backend not in ('scipy', 'torch') or (backend == 'scipy' and torch.device(device).type != 'cpu'):
+            raise ValueError("backend must be 'scipy' (CPU) or 'torch' (any device)")
+        from .gpu_native import canonical_device
+        self.backend, self.device = backend, canonical_device(device)
         n = len(geometry.dof_ids)
         mean, scale, fixed = np.asarray(mean, float), np.asarray(scale, float), np.asarray(fixed, bool)
         if mean.shape != (n, 7) or scale.shape != (7,) or fixed.shape != (n, 7) or not (scale > 0).all():
@@ -464,10 +649,13 @@ class ImplicitNativeSystem:
         self.relation_mask = relation_mask
         if not 0.5 <= theta <= 1 or not np.isfinite(code_interval) or code_interval <= 0:
             raise ValueError('Require 1/2 <= theta <= 1 and positive code-time interval')
-        if type(refinement) is not int or refinement < 0:
-            raise ValueError('Refinement must be a nonnegative integer')
+        if type(refinement) is not int or type(max_refinement) is not int or not 0 <= refinement <= max_refinement:
+            raise ValueError('Require integers 0 <= refinement <= max_refinement')
+        if not np.isfinite(refinement_tolerance) or refinement_tolerance <= 0:
+            raise ValueError('Refinement backward-error tolerance must be positive and finite')
         self.geometry, self.ndof, self.theta, self.code_interval = geometry, n, float(theta), float(code_interval)
         self.mean, self.scale, self.fixed, self.refinement = mean, scale, fixed, refinement
+        self.max_refinement, self.refinement_tolerance = max_refinement, float(refinement_tolerance)
         self.tangent_sha256 = frozen.sha256
         self.L = assemble_tangent(geometry, frozen)
         self.M = assemble_mass(geometry, frozen, F0=F0, rho_1=rho_1, coefficients=density_coefficients)
@@ -553,11 +741,23 @@ class ImplicitNativeSystem:
             raise ValueError('Step fraction must lie in (0, 1]')
         if key not in self._factors:
             A, B, constant, row_scale, h = self.matrices(key)
-            self._factors[key] = _Factor(A, B, constant, self.forcing_global_rows,
-                                         h*row_scale[self.forcing_global_rows], h, self.refinement,
-                                         permutation=self.permutation, relation_rows=self.relation_global_rows,
-                                         relation_scale=row_scale[self.relation_global_rows])
+            options = dict(permutation=self.permutation, relation_rows=self.relation_global_rows,
+                           relation_scale=row_scale[self.relation_global_rows], tolerance=self.refinement_tolerance,
+                           max_refinement=self.max_refinement)
+            if self.backend == 'torch':
+                options.update(device=self.device, forcing_index=self.forcing_index)
+            self._factors[key] = (_TorchFactor if self.backend == 'torch' else _Factor)(
+                A, B, constant, self.forcing_global_rows, h*row_scale[self.forcing_global_rows], h, self.refinement,
+                **options)
         return self._factors[key]
+
+    def release_adjoints(self):
+        """Free adjoint-only device memory (evaluation needs forward solves only); a no-op for SciPy factors."""
+        for factor in self._factors.values():
+            if isinstance(factor, _TorchFactor):
+                factor.release_adjoint()
+        if self.device.type == 'cuda':
+            torch.cuda.empty_cache()
 
     def relation_explicit(self, state):
         """E(q_n) = G(T_n) - g_v T_n,v - g_d T_n,d: explicit nonlinear part of the wall rows (Torch)."""
@@ -581,8 +781,13 @@ class ImplicitNativeSystem:
         return _ImplicitStep.apply(state, forcing, self.relation_explicit(state), self, fraction)
 
     def residual(self, state, next_state, forcing=None, fraction=1.):
-        """Row-scaled residual of the step equations for diagnostics and tests."""
+        """Row-scaled residual of the step equations for diagnostics and tests (NumPy, either backend)."""
         factor = self.factor(fraction)
+        if isinstance(factor, _TorchFactor):
+            host = lambda t: t.detach().cpu().numpy()
+            factor = SimpleNamespace(A=factor.A_host, B=factor.B_host, constant=host(factor.constant),
+                                     forcing_rows=host(factor.forcing_rows), forcing_scale=host(factor.forcing_scale),
+                                     relation_rows=host(factor.relation_rows), relation_scale=host(factor.relation_scale))
         y, z = self.vector(state), self.vector(next_state)
         rhs = factor.B @ y + factor.constant
         if forcing is not None:
@@ -592,50 +797,227 @@ class ImplicitNativeSystem:
 
     def report(self):
         return dict(ndof=self.ndof, unknowns=7*self.ndof, theta=self.theta, code_interval=self.code_interval,
+                    backend=self.backend, device=str(self.device),
                     ordering=self.ordering, mach_relation_rows=int(len(self.relations.rows)),
                     tangent_sha256=self.tangent_sha256, setup_seconds=self.setup_seconds,
                     fixed_per_field={name: int(self.fixed[:, i].sum()) for i, name in enumerate(FIELDS)},
+                    refinement=dict(minimum=self.refinement, maximum=self.max_refinement,
+                                    backward_error_tolerance=self.refinement_tolerance),
                     factors={str(k): dict(seconds=f.seconds, lu_nonzeros=f.fill, matrix_nonzeros=int(f.A.nnz),
-                                          h_code=f.h) for k, f in self._factors.items()})
+                                          h_code=f.h, solves={'forward' if t == 'N' else 'transpose': dict(s)
+                                                              for t, s in f.statistics.items()})
+                             for k, f in self._factors.items()})
+
+
+def spline_basis(points, bounds, shape):
+    """[P, nR*nZ] tensor-product clamped cubic B-splines on a box (partition of unity on the box)."""
+    from scipy.interpolate import BSpline
+    columns = []
+    for axis, count in enumerate(shape):
+        lo, hi = bounds[axis]
+        inner = np.linspace(lo, hi, count-2)
+        knots = np.concatenate(([lo]*3, inner, [hi]*3))
+        x = np.clip(points[:, axis], lo, hi)
+        columns.append(BSpline.design_matrix(x, knots, 3).toarray())
+    return np.einsum('pa,pb->pab', *columns).reshape(len(points), -1)
+
+
+class TangentCorrection(nn.Module):
+    """Learned correction Delta L to the frozen native tangent, applied about q*.
+
+    Delta L (q - q*) = assemble( sum_p T*_p m_p(R,Z) (jet_p(q) - jet_p(q*)) ) over the nonzero
+    (jet, weak channel) couplings p of the frozen tangent T*. m_p = bound*tanh(phi(R,Z) W_p) is a smooth
+    multiplier field on a coarse cubic-spline basis: Delta L only re-weights couplings model303 has,
+    W = 0 is exactly the frozen tangent. Linear in q for fixed W; forcing units match N_theta.
+
+    `share` ties multipliers across couplings: 'pair' (one field per coupling), 'block_field' (per weak
+    equation and field: jet value/gradient terms share), 'block' (per weak equation). Re-weighting
+    couplings independently breaks cancellations inside the stiff tangent: on the production MAST-U
+    system, uniform |m| = 0.5 gives Picard contraction 0.5 but random per-pair signs give 29.
+    """
+    SHARES = ('pair', 'block_field', 'block')
+
+    def __init__(self, geometry, frozen, mean, scale, *, basis_shape=(6, 12), bound=0.5, share='pair'):
+        super().__init__()
+        from .physical_guard import QuadratureSampler
+        if not 0 < bound < 1 or len(basis_shape) != 2 or min(basis_shape) < 4 or share not in self.SHARES:
+            raise ValueError('Require 0 < bound < 1, at least 4x4 spline functions and a known share mode')
+        tangent = frozen.tangent.reshape(-1, 21, 15)
+        magnitude = np.abs(tangent).max(axis=0)
+        pairs = [(j, o) for j in range(21) for o in ACTIVE_CHANNELS if magnitude[j, o] > 0]
+        self.pairs, self.bound, self.basis_shape, self.share = pairs, float(bound), tuple(basis_shape), share
+        # jet j = derivative kind d*7 + field f; weak channel o = block b*3 + test kind i
+        keys = [dict(pair=(j, o), block_field=(o//3, j % 7), block=(o//3,))[share] for j, o in pairs]
+        self.groups = sorted(set(keys))
+        group_of = np.array([self.groups.index(k) for k in keys])
+        jets, channels = np.array([j for j, _ in pairs]), np.array([ACTIVE_CHANNELS.index(o) for _, o in pairs])
+        points = geometry.quadrature_rz.reshape(-1, 2)
+        box = np.stack((points.min(0), points.max(0)), axis=1)
+        self.register_buffer('coefficients', torch.as_tensor(tangent[:, jets, [o for _, o in pairs]], dtype=torch.float64), persistent=False)
+        self.register_buffer('reference', torch.as_tensor(frozen.jets.reshape(-1, 21)[:, jets], dtype=torch.float64), persistent=False)
+        self.register_buffer('basis', torch.as_tensor(spline_basis(points, box, basis_shape), dtype=torch.float64), persistent=False)
+        self.register_buffer('jet_index', torch.as_tensor(jets, dtype=torch.long), persistent=False)
+        self.register_buffer('channel_index', torch.as_tensor(channels, dtype=torch.long), persistent=False)
+        self.register_buffer('mean', torch.as_tensor(mean, dtype=torch.float64), persistent=False)
+        self.register_buffer('scale', torch.as_tensor(scale, dtype=torch.float64), persistent=False)
+        self.register_buffer('group_index', torch.as_tensor(group_of, dtype=torch.long), persistent=False)
+        self.weight = nn.Parameter(torch.zeros(len(self.groups), self.basis.shape[1], dtype=torch.float64))
+        self.samplers = [QuadratureSampler(geometry, basis) for basis in
+                         (geometry.basis, geometry.basis_grad[..., 0], geometry.basis_grad[..., 1])]
+        self.assembler = WeakAssembler(geometry)
+
+    def multipliers(self):
+        """[E*Q, pairs] bounded multiplier fields m_p(R,Z) (shared within a group)."""
+        return (self.bound*torch.tanh(self.basis @ self.weight.T))[:, self.group_index]
+
+    def forward(self, state):
+        """Assembled [batch, ndof, 5] weak forcing Delta L (q - q*) for a normalized state."""
+        physical = state.to(torch.float64)*self.scale + self.mean
+        jets = torch.cat([sampler(physical) for sampler in self.samplers], dim=-1)   # [B, E*Q, 21]
+        deviation = jets[..., self.jet_index] - self.reference
+        contribution = self.coefficients*self.multipliers()*deviation
+        pointwise = contribution.new_zeros(*contribution.shape[:2], len(ACTIVE_CHANNELS))
+        pointwise = pointwise.index_add(2, self.channel_index, contribution)
+        return self.assembler(pointwise).to(state.dtype)
+
+    @torch.no_grad()
+    def summary(self):
+        m = self.multipliers()
+        largest = m.abs().amax(dim=0)
+        order = torch.argsort(largest, descending=True)[:10]
+        return dict(pairs=len(self.pairs), groups=len(self.groups), share=self.share,
+                    basis_shape=list(self.basis_shape), bound=self.bound,
+                    parameters=self.weight.numel(), max_abs_multiplier=float(largest.max()),
+                    mean_abs_multiplier=float(m.abs().mean()),
+                    largest=[dict(jet=int(self.pairs[i][0]), channel=int(self.pairs[i][1]), max_abs=float(largest[i]))
+                             for i in order.tolist()])
+
+
+class _RemainderOperators(nn.Module):
+    """N_theta network plus Delta L, saved together as model.operator (one checkpoint state dict)."""
+    def __init__(self, network, correction):
+        super().__init__()
+        self.network, self.correction = network, correction
+
+    @property
+    def backbone(self):
+        return self.network.backbone
+
+    def forward(self, *arguments, **keywords):
+        return self.network(*arguments, **keywords)
 
 
 class ImplicitOpsSplitModel(nn.Module):
-    """Native implicit linear physics plus a learned explicit volume remainder N_theta."""
+    """Native implicit linear physics plus a learned explicit volume remainder N_theta.
+
+    With `correction` (a TangentCorrection), the step solves (M* - hL* - h Delta L) q' = ... implicitly by
+    Picard iteration on the frozen factorization: q'_{k+1} = solve(N(q) + Delta L q'_k), starting from q.
+    Evaluation iterates to `tolerance` (else it fails loudly). Training backpropagates through `train_iterations`
+    iterations; with `train_tolerance` those start from the fixed point reached without gradients (Jacobian-free
+    backpropagation), so the trained map is the converged implicit solve; without it they start from q (truncated).
+    """
     family = 'opsplit'
     variant = 'implicit_native_tangent'
 
     def __init__(self, space, system, model_config, remainder_scale, *, physical_guard, physics_only=False,
-                 zero_output=True):
+                 zero_output=True, correction=None, picard=None):
         super().__init__()
         remainder_scale = torch.as_tensor(remainder_scale, dtype=torch.float64)
         if remainder_scale.shape != (len(ACTIVE_CHANNELS),) or not torch.all(torch.isfinite(remainder_scale) & (remainder_scale > 0)):
             raise ValueError('Require one positive training-label scale per active weak channel')
+        if correction is not None and physics_only:
+            raise ValueError('Physics-only means no learned terms')
         self.space, self.system, self.physical_guard, self.physics_only = space, system, physical_guard, physics_only
-        self.operator = FieldSplineOperator(7, len(ACTIVE_CHANNELS), space.geometry.bounds, model_config,
-                                            condition_transport=True)
+        network = FieldSplineOperator(7, len(ACTIVE_CHANNELS), space.geometry.bounds, model_config,
+                                      condition_transport=True)
         if zero_output:
             with torch.no_grad():
-                self.operator.backbone.project.weight.zero_()
-                self.operator.backbone.project.bias.zero_()
+                network.backbone.project.weight.zero_()
+                network.backbone.project.bias.zero_()
+        self.operator = network if correction is None else _RemainderOperators(network, correction)
+        self.picard = {**dict(train_iterations=3, max_iterations=12, tolerance=1e-7, train_tolerance=None),
+                       **(picard or {})}
+        train_tolerance = self.picard['train_tolerance']
+        if type(self.picard['train_iterations']) is not int or self.picard['train_iterations'] < 1 or \
+                self.picard['max_iterations'] < self.picard['train_iterations'] or not self.picard['tolerance'] > 0 or \
+                not (train_tolerance is None or train_tolerance > 0):
+            raise ValueError('Invalid Picard settings')
+        self.reset_picard_statistics()
         self.register_buffer('coordinates', torch.tensor(space.geometry.quadrature_rz.reshape(-1, 2), dtype=torch.float64))
         self.register_buffer('remainder_scale', remainder_scale)
         self.assembler = WeakAssembler(space.geometry)
 
+    @property
+    def correction(self):
+        return getattr(self.operator, 'correction', None)
+
+    def reset_picard_statistics(self):
+        self.picard_statistics = dict(steps=0, iterations=0, max_iterations=0, max_final_change=0.)
+        if self.picard['train_tolerance'] is not None:
+            self.picard_statistics.update(warm_iterations=0, max_warm_iterations=0, unconverged_warm_steps=0,
+                                          max_warm_change=0.)
+
     def remainder(self, state, parameters):
         """Pointwise [batch, E*Q, 13] weak remainder channels in native code units."""
         values = self.space.sample(state)
-        return self.operator(values.float(), self.coordinates, parameters.float()).to(state.dtype)*self.remainder_scale
+        return self.operator(values.float(), self.coordinates,
+                             parameters.to(state.device).float()).to(state.dtype)*self.remainder_scale
 
     def forcing(self, state, parameters):
         if self.physics_only:
             return None
         return self.assembler(self.remainder(state, parameters))
 
+    def advance(self, system, state, forcing, fraction):
+        """One implicit step with `system`; Delta L (if any) is treated implicitly by Picard iteration."""
+        correction = self.correction
+        if correction is None:
+            return system.step(state, forcing, fraction)
+        training = torch.is_grad_enabled()
+        limit = self.picard['train_iterations'] if training else self.picard['max_iterations']
+        current, change = state, float('inf')
+        stats = self.picard_statistics
+        if training and self.picard['train_tolerance'] is not None:
+            with torch.no_grad():
+                frozen = None if forcing is None else forcing.detach()
+                for warm in range(1, self.picard['max_iterations']+1):
+                    extra = correction(current)
+                    new = system.step(state.detach(), extra if frozen is None else frozen + extra, fraction)
+                    change = float((new-current).norm()/new.norm().clamp_min(1e-30))
+                    current = new
+                    if not np.isfinite(change):
+                        raise FloatingPointError('Picard warm start for Delta L produced a non-finite iterate')
+                    if change <= self.picard['train_tolerance']:
+                        break
+            stats['warm_iterations'] += warm
+            stats['max_warm_iterations'] = max(stats['max_warm_iterations'], warm)
+            stats['max_warm_change'] = max(stats['max_warm_change'], change)
+            stats['unconverged_warm_steps'] += change > self.picard['train_tolerance']
+            current = current.detach()
+        for iteration in range(1, limit+1):
+            extra = correction(current)
+            new = system.step(state, extra if forcing is None else forcing + extra, fraction)
+            with torch.no_grad():
+                change = float((new-current).norm()/new.norm().clamp_min(1e-30))
+            current = new
+            if not training and change <= self.picard['tolerance']:
+                break
+        stats['steps'] += 1
+        stats['iterations'] += iteration
+        stats['max_iterations'] = max(stats['max_iterations'], iteration)
+        if training:
+            stats['max_final_change'] = max(stats['max_final_change'], change)
+        elif change > self.picard['tolerance']:
+            raise FloatingPointError(f'Picard iteration for Delta L did not converge: change {change:.3g}')
+        else:
+            stats['max_final_change'] = max(stats['max_final_change'], change)
+        return current
+
     def forward(self, state, parameters, *, substeps=1, interval=1.):
         if type(substeps) is not int or substeps < 1 or not 0 < interval <= 1:
             raise ValueError('Require positive substeps and 0 < frame interval <= 1')
         for _ in range(substeps):
-            proposal = self.system.step(state, self.forcing(state, parameters), interval/substeps)
+            proposal = self.advance(self.system, state, self.forcing(state, parameters), interval/substeps)
             state = self.physical_guard(state, proposal) if self.physical_guard is not None else proposal
         return state
 

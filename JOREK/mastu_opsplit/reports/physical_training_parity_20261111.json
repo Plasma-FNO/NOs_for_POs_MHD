@@ -1,0 +1,609 @@
+{
+  "active_channels": [
+    0,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "device": "cuda",
+  "device_name": "NVIDIA H100 PCIe",
+  "dtype": "float64",
+  "passed": true,
+  "peak_cuda_memory_bytes": 741059072,
+  "provenance": {
+    "frozen_tangent": {
+      "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_full_opsplit_20261104/frozen_tangent/baseline_terms.h5",
+      "sha256": "25aa63a36ed7f52167a9f1b5662735c78e83cd37ee56a6347c2ff3b47367e273"
+    },
+    "label_plan": {
+      "path": "/pitagora_scratch/userexternal/vgopakum/mastu_implicit_opsplit_20261108/labels/plan.json",
+      "sha256": "664eee7431089a50d21a1229abd784d9543fc465a0ae2fc063cb060f10b17482"
+    },
+    "label_summary": {
+      "path": "/pitagora_scratch/userexternal/vgopakum/mastu_implicit_opsplit_20261108/labels/summary.json",
+      "sha256": "06fa428872fcb5f096126a7588cef129e9ef08ac74b6c9e891df4ebdf5e7994b"
+    },
+    "normalization": {
+      "path": "/pitagora_scratch/userexternal/vgopakum/mastu_gpu_onestep_20261109/seed17_physics/normalization.npz",
+      "sha256": "7a0f78a842afcbfb4553fe4fc7df528480d57c130252c93d6e9252960c01a306"
+    },
+    "profile_manifest": {
+      "path": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/physical_profiles_20261111.json",
+      "sha256": "7d259061d1bb0932c26717c2cc2eafa4daafd3816804330917a8c88817d0cdb4"
+    },
+    "reference_restart": {
+      "path": "/pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/jorek000144.h5",
+      "sha256": "3e778b498901b50db3461efacce0f90f550beb3b11ee5782b8557783c4227dc7"
+    }
+  },
+  "relative_rms_floor_fraction": 1e-06,
+  "schema": "mastu_physical_remainder_parity_v1",
+  "seconds": 7.356843926987494,
+  "source_sha256": {
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/scripts/verify_physical_defect.py": "eaf9ac7fff016b44dfec080850b6449fe65c6e85d43a85a5a93a93f5132d11ca",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/src/mastu_opsplit/implicit_opsplit.py": "cf94352a0fba5ef539a7331fad5a4f91d1bf49f717449d65185a20f34f61dc89",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/src/mastu_opsplit/native_critical.py": "510f7e8c27e03e134aaf790dc0845bf56587eef76fd9889dc4f9fa6e60af9494",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/src/mastu_opsplit/numerical.py": "839b59c6158302b531dc3a5f357b033120deb63b13a0bcc745d77d1958bc23ed",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/src/mastu_opsplit/physical_rhs.py": "9c8df5dbf4b7e6e65a057120b2cca8978748e03c08d12fd0d94b3fb972e58c29",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/src/mastu_opsplit/restart.py": "830671db304963210d913ec14e202579f8252331bbedee1b6c4c4f5ec059c795"
+  },
+  "states": [
+    {
+      "channel_native_rms": [
+        1.344653858647174e-11,
+        0.0,
+        6.878034340306695e-06,
+        1.6004835649051005e-05,
+        1.6405566512490128e-21,
+        5.780520333194805e-23,
+        3.5979287984768296e-23,
+        1.33150058158049e-10,
+        7.241454336512696e-08,
+        8.347552679831204e-08,
+        9.790092779380877e-07,
+        9.968620651052223e-26,
+        6.707833045184105e-26
+      ],
+      "channel_relative_rms_with_floor": [
+        1.0677524982367746e-07,
+        1.498298888569601e-07,
+        2.6723593099205913e-08,
+        2.587103330081024e-08,
+        8.624700387504663e-09,
+        8.357662754204558e-05,
+        1.8987823508865242e-05,
+        2.5207701727903114e-08,
+        2.4772416943001524e-08,
+        2.5701072984032588e-08,
+        2.5784427783224203e-08,
+        3.390148669933762e-08,
+        2.4464534021008874e-08
+      ],
+      "channel_rms_error": [
+        1.4357575168342388e-18,
+        7.91237620234122e-17,
+        1.8380579103272128e-13,
+        4.140616360505934e-13,
+        1.214101507736114e-19,
+        3.748509778799857e-21,
+        2.16242562551726e-21,
+        3.356406951101052e-18,
+        1.7938832609779896e-15,
+        2.145410606623986e-15,
+        2.5243194026101095e-14,
+        9.47419265992484e-23,
+        1.0127051446386209e-22
+      ],
+      "channel_training_scaled_max": [
+        9.191555600689752e-11,
+        7.69979907468945e-12,
+        3.2911438418093755e-07,
+        3.469380320695025e-07,
+        2.2335582839655378e-13,
+        2.417332926876053e-09,
+        4.760080359794717e-10,
+        2.2016436543160423e-10,
+        1.0367274016917254e-06,
+        6.215868187563848e-07,
+        9.101195650344713e-07,
+        1.2123745938461931e-12,
+        8.184916000367664e-13
+      ],
+      "channel_training_scaled_rms": [
+        2.9573829163926067e-12,
+        1.4982988885696007e-13,
+        1.6635457252691064e-08,
+        1.9747083339706658e-08,
+        8.624700387504662e-15,
+        8.357662754204557e-11,
+        1.898782350886524e-11,
+        1.331458279462202e-11,
+        3.3426894379087106e-08,
+        2.3598144395079014e-08,
+        5.053356836629693e-08,
+        3.390148669933762e-14,
+        2.446453402100887e-14
+      ],
+      "critical_solver": {
+        "candidate_counts": [
+          [
+            18,
+            2,
+            2
+          ]
+        ],
+        "max_gradient": 1.1967419551344085e-17
+      },
+      "data_path": "/pitagora_scratch/userexternal/vgopakum/mastu_euler_ensemble100_20261105/cases/mastu_000.h5",
+      "diagnostics": {
+        "R_axis": [
+          0.8699676592832623
+        ],
+        "R_xpoint": [
+          [
+            0.48402241812459645,
+            0.4840094180662774
+          ]
+        ],
+        "Z_axis": [
+          0.0003826076659214465
+        ],
+        "Z_xpoint": [
+          [
+            -1.2448948232203787,
+            1.244943338570478
+          ]
+        ],
+        "psi_axis": [
+          -0.10330500101729331
+        ],
+        "psi_bnd": [
+          -0.012301856463779414
+        ],
+        "psi_xpoint": [
+          [
+            -0.012300532497163097,
+            -0.012301856463779414
+          ]
+        ]
+      },
+      "label": {
+        "path": "/pitagora_scratch/userexternal/vgopakum/mastu_implicit_opsplit_20261108/labels/states/mastu_000_000.npy",
+        "sha256": "fc716aef1143f3caf617c40d6be911d5add6976d516a9ef058281c5a2e814bfd"
+      },
+      "label_metadata": {
+        "path": "/pitagora_scratch/userexternal/vgopakum/mastu_implicit_opsplit_20261108/labels/states/mastu_000_000.json",
+        "sha256": "0d6069626e78068a529e02502f0a01dc8629c9bd0a096d487ab16c8401f1e560"
+      },
+      "maximum_absolute_error": 7.274680857705107e-12,
+      "restart": {
+        "path": "/pitagora_scratch/userexternal/vgopakum/mastu_euler_ensemble100_20261105/runs/mastu_000_fine/work/jorek000144.h5",
+        "sha256": "5c112c892a33713534d7603605824ae6ee815863c55d425661678d5487a76093"
+      },
+      "state": "mastu_000:0",
+      "time_seconds": 4.2177393336842355e-06
+    },
+    {
+      "channel_native_rms": [
+        7.969048323008285e-07,
+        0.0007386186553498403,
+        8.664938027217913e-06,
+        1.3427823092689098e-05,
+        3.5145217230230796e-05,
+        5.2267305256346664e-11,
+        1.2942523465288387e-10,
+        6.372127273529456e-07,
+        7.341876774107622e-09,
+        1.1746015284350705e-08,
+        3.3634371495903323e-07,
+        2.8260128790426826e-09,
+        3.100981869511508e-09
+      ],
+      "channel_relative_rms_with_floor": [
+        2.502796389716687e-08,
+        2.6289759131161522e-08,
+        2.583770292673755e-08,
+        2.5170480302259913e-08,
+        2.518071252872265e-08,
+        2.5016238826074027e-08,
+        2.425619426225111e-08,
+        2.4307714194820747e-08,
+        2.6140897646805885e-08,
+        2.5094353810985766e-08,
+        2.3929232239698724e-08,
+        2.6173531721274786e-08,
+        2.4350666485328174e-08
+      ],
+      "channel_rms_error": [
+        1.9944905372302956e-14,
+        1.941810653892971e-11,
+        2.2388209462584775e-13,
+        3.3798475665676173e-13,
+        8.849816118339517e-13,
+        1.3075313910880825e-18,
+        3.1393636341777852e-18,
+        1.548918485779764e-14,
+        1.9192324928740873e-16,
+        2.9475866341474316e-16,
+        8.048446867617736e-15,
+        7.396673773435474e-17,
+        7.551097528152418e-17
+      ],
+      "channel_training_scaled_max": [
+        9.096704302092228e-07,
+        2.8037782825762387e-05,
+        3.290606501693013e-07,
+        3.461735977223494e-07,
+        1.0335139376185619e-06,
+        6.176285628168316e-07,
+        4.87432228842979e-07,
+        9.019301719346319e-07,
+        6.613520985964512e-08,
+        7.670891531060722e-08,
+        2.2717909538824112e-07,
+        6.350949152110141e-07,
+        4.2848767268377176e-07
+      ],
+      "channel_training_scaled_rms": [
+        4.108264921166754e-08,
+        3.6770404618521194e-08,
+        2.0262587995000704e-08,
+        1.611888804988453e-08,
+        6.286707661496257e-08,
+        2.915266879935652e-08,
+        2.7566119228567098e-08,
+        6.14442876608568e-08,
+        3.5762629165310725e-09,
+        3.2421567598694634e-09,
+        1.611193653254537e-08,
+        2.646750457272751e-08,
+        1.8241645492910212e-08
+      ],
+      "critical_solver": {
+        "candidate_counts": [
+          [
+            14,
+            2,
+            1
+          ]
+        ],
+        "max_gradient": 1.8452966137988716e-18
+      },
+      "data_path": "/pitagora_scratch/userexternal/vgopakum/mastu_euler_ensemble100_20261105/cases/mastu_000.h5",
+      "diagnostics": {
+        "R_axis": [
+          0.8698302245036582
+        ],
+        "R_xpoint": [
+          [
+            0.4840721214028472,
+            0.4840477690001118
+          ]
+        ],
+        "Z_axis": [
+          0.0007471065966271559
+        ],
+        "Z_xpoint": [
+          [
+            -1.2449705583151847,
+            1.2450249968109668
+          ]
+        ],
+        "psi_axis": [
+          -0.10330468104661598
+        ],
+        "psi_bnd": [
+          -0.012303876893840056
+        ],
+        "psi_xpoint": [
+          [
+            -0.01230269545163839,
+            -0.012303876893840056
+          ]
+        ]
+      },
+      "label": {
+        "path": "/pitagora_scratch/userexternal/vgopakum/mastu_implicit_opsplit_20261108/labels/states/mastu_000_048.npy",
+        "sha256": "de490a62f17e62d8d9e00782cdfa9ef8de13378ea75386268db14b4bea97eaba"
+      },
+      "label_metadata": {
+        "path": "/pitagora_scratch/userexternal/vgopakum/mastu_implicit_opsplit_20261108/labels/states/mastu_000_048.json",
+        "sha256": "f551d9741e886896cc4795435a84e692814a4b4c1e1bf250f6d78c8443d8b251"
+      },
+      "maximum_absolute_error": 1.480649070018103e-08,
+      "restart": {
+        "path": "/pitagora_scratch/userexternal/vgopakum/mastu_euler_ensemble100_20261105/runs/mastu_000_fine/work/jorek000336.h5",
+        "sha256": "e887a6f70023992f822a9ca2696776a0eba9f8d24c54464a2df5dbd4d729f64c"
+      },
+      "state": "mastu_000:48",
+      "time_seconds": 4.920695889298274e-06
+    },
+    {
+      "channel_native_rms": [
+        9.408170856443494e-07,
+        0.0013498623911273135,
+        1.9245516932765324e-05,
+        3.427473310705738e-05,
+        2.156120669460662e-05,
+        1.1602008908017395e-10,
+        2.604642953277396e-10,
+        3.997026691630802e-07,
+        1.8111765093621984e-08,
+        2.1151711847180973e-08,
+        5.045908176472324e-07,
+        8.463761841203368e-09,
+        9.646245007606036e-09
+      ],
+      "channel_relative_rms_with_floor": [
+        2.5752565020237704e-08,
+        2.699949970621839e-08,
+        2.4526340733911717e-08,
+        2.4684841312910085e-08,
+        2.6205047628549094e-08,
+        2.52100864598881e-08,
+        2.44912261529042e-08,
+        2.6174012226481695e-08,
+        2.5254995292673427e-08,
+        2.5604645195704176e-08,
+        2.382356309876105e-08,
+        2.468427510394524e-08,
+        2.4828811888569934e-08
+      ],
+      "channel_rms_error": [
+        2.4228453170206654e-14,
+        3.6445609232677156e-11,
+        4.720221058932698e-13,
+        8.46066347790057e-13,
+        5.65012448361158e-13,
+        2.9248764767951045e-18,
+        6.3790899616284995e-18,
+        1.046182254963183e-14,
+        4.574125421814301e-16,
+        5.415820771288414e-16,
+        1.2021151183274271e-14,
+        2.08921825702538e-16,
+        2.395048027249071e-16
+      ],
+      "channel_training_scaled_max": [
+        9.36292983612626e-07,
+        5.606828400672611e-05,
+        1.3039329981985187e-06,
+        6.937599098291129e-07,
+        5.166707380556696e-07,
+        1.2370701253288202e-06,
+        9.745074516589734e-07,
+        9.007298875465236e-07,
+        1.3232676666386648e-07,
+        7.810172525826763e-08,
+        4.0277006326165215e-07,
+        2.3470582820250366e-06,
+        1.4641839632594551e-06
+      ],
+      "channel_training_scaled_rms": [
+        4.9905929557086844e-08,
+        6.901392756123563e-08,
+        4.272065379874147e-08,
+        4.0349892929201614e-08,
+        4.01371965299017e-08,
+        6.521293162688769e-08,
+        5.601350303532514e-08,
+        4.1501166142568525e-08,
+        8.52334210802137e-09,
+        5.957056434052185e-09,
+        2.406477027168055e-08,
+        7.475845963335215e-08,
+        5.785863166074266e-08
+      ],
+      "critical_solver": {
+        "candidate_counts": [
+          [
+            37,
+            2,
+            1
+          ]
+        ],
+        "max_gradient": 3.870130504938549e-17
+      },
+      "data_path": "/pitagora_scratch/userexternal/vgopakum/mastu_euler_ensemble100_20261105/cases/mastu_000.h5",
+      "diagnostics": {
+        "R_axis": [
+          0.8691502416876463
+        ],
+        "R_xpoint": [
+          [
+            0.4841026926535448,
+            0.48407775702516953
+          ]
+        ],
+        "Z_axis": [
+          0.0016806867196173974
+        ],
+        "Z_xpoint": [
+          [
+            -1.245035972690964,
+            1.2450914657079235
+          ]
+        ],
+        "psi_axis": [
+          -0.10330423283909088
+        ],
+        "psi_bnd": [
+          -0.012305871947362122
+        ],
+        "psi_xpoint": [
+          [
+            -0.01230482253050186,
+            -0.012305871947362122
+          ]
+        ]
+      },
+      "label": {
+        "path": "/pitagora_scratch/userexternal/vgopakum/mastu_implicit_opsplit_20261108/labels/states/mastu_000_096.npy",
+        "sha256": "9ee11cc057fc931094b8f82567b1d6fe88c4a77393068917de4368a212525a3d"
+      },
+      "label_metadata": {
+        "path": "/pitagora_scratch/userexternal/vgopakum/mastu_implicit_opsplit_20261108/labels/states/mastu_000_096.json",
+        "sha256": "f72c08a246fb73eb078168d2b839a3289aab90671fd9c0779eb136db959a8d2b"
+      },
+      "maximum_absolute_error": 2.9609136031893968e-08,
+      "restart": {
+        "path": "/pitagora_scratch/userexternal/vgopakum/mastu_euler_ensemble100_20261105/runs/mastu_000_fine/work/jorek000528.h5",
+        "sha256": "27a0c56d92f3bcb6ea8edc4bd2549def8b3b4571d24a48fb5807b64a35bdc530"
+      },
+      "state": "mastu_000:96",
+      "time_seconds": 5.623652444912314e-06
+    },
+    {
+      "channel_native_rms": [
+        5.416492966423163e-07,
+        0.0005196121552081892,
+        1.897625599738558e-05,
+        3.6233244007324854e-05,
+        6.953579248133371e-06,
+        3.875417194677484e-11,
+        9.004366650449186e-11,
+        6.281271561065438e-08,
+        1.2467504809179732e-08,
+        1.520917689295591e-08,
+        2.2336581264984582e-07,
+        2.5614783497948096e-09,
+        3.698969935808951e-09
+      ],
+      "channel_relative_rms_with_floor": [
+        2.5566644245172438e-08,
+        2.5472521474450595e-08,
+        2.4822367082472468e-08,
+        2.4729378347304212e-08,
+        2.6330876633731687e-08,
+        2.480277941333424e-08,
+        2.632535111899952e-08,
+        2.6387491872669502e-08,
+        2.4409853439631134e-08,
+        2.548848152053415e-08,
+        2.5071729695623837e-08,
+        2.4776790228662626e-08,
+        2.5972639553126346e-08
+      ],
+      "channel_rms_error": [
+        1.3848154872901976e-14,
+        1.3235831781926156e-11,
+        4.710355922180746e-13,
+        8.960255998073294e-13,
+        1.8309383734547654e-13,
+        9.612111781422823e-19,
+        2.3704311367728447e-18,
+        1.6574700226764432e-15,
+        3.0432996514997356e-16,
+        3.876588241786417e-16,
+        5.60016727800029e-15,
+        6.346521174812691e-17,
+        9.607201286061679e-17
+      ],
+      "channel_training_scaled_max": [
+        4.681425975820807e-07,
+        1.3958697800008376e-05,
+        1.312757151273771e-06,
+        1.3874430452995507e-06,
+        5.133620988523054e-07,
+        6.188372292802696e-07,
+        4.873132268339842e-07,
+        1.1267710350674516e-07,
+        1.2927213684831523e-07,
+        7.564856970176562e-08,
+        1.1379142488448972e-07,
+        6.3420125779604e-07,
+        4.287944999264863e-07
+      ],
+      "channel_training_scaled_rms": [
+        2.852452183916206e-08,
+        2.5063560605581703e-08,
+        4.263136876598652e-08,
+        4.273250804559926e-08,
+        1.300656888934918e-08,
+        2.1431126865185547e-08,
+        2.0814277972771983e-08,
+        6.575043541513962e-09,
+        5.67082921321949e-09,
+        4.263999106161526e-09,
+        1.1210801442674507e-08,
+        2.2709745401850828e-08,
+        2.32087003758046e-08
+      ],
+      "critical_solver": {
+        "candidate_counts": [
+          [
+            22,
+            1,
+            1
+          ]
+        ],
+        "max_gradient": 5.971212091297171e-18
+      },
+      "data_path": "/pitagora_scratch/userexternal/vgopakum/mastu_euler_ensemble100_20261105/cases/mastu_060.h5",
+      "diagnostics": {
+        "R_axis": [
+          0.8696678472541693
+        ],
+        "R_xpoint": [
+          [
+            0.48406297676239873,
+            0.4840504135943061
+          ]
+        ],
+        "Z_axis": [
+          0.001065172555418414
+        ],
+        "Z_xpoint": [
+          [
+            -1.2450328546915268,
+            1.2450895641596251
+          ]
+        ],
+        "psi_axis": [
+          -0.10330446764017592
+        ],
+        "psi_bnd": [
+          -0.012305540814047831
+        ],
+        "psi_xpoint": [
+          [
+            -0.012304259886017658,
+            -0.012305540814047831
+          ]
+        ]
+      },
+      "label": {
+        "path": "/pitagora_scratch/userexternal/vgopakum/mastu_implicit_opsplit_20261108/labels/states/mastu_060_096.npy",
+        "sha256": "6c21d1fdd893657de4cfff3e34d7adf7abcd2c317c2010016ab3d528412d31c4"
+      },
+      "label_metadata": {
+        "path": "/pitagora_scratch/userexternal/vgopakum/mastu_implicit_opsplit_20261108/labels/states/mastu_060_096.json",
+        "sha256": "bf58979319e1ef39b07ec4083fe4568b56dda3899e34cef337d84156313dc30e"
+      },
+      "maximum_absolute_error": 7.371457666494052e-09,
+      "restart": {
+        "path": "/pitagora_scratch/userexternal/vgopakum/mastu_euler_ensemble100_20261105/runs/mastu_060_fine/work/jorek000528.h5",
+        "sha256": "7122088ae4361f28fd8a154a4840047338ce1b680352e23c05609d04460c284b"
+      },
+      "state": "mastu_060:96",
+      "time_seconds": 5.623652444912314e-06
+    }
+  ],
+  "tolerances": {
+    "training_scaled_max": 0.001,
+    "training_scaled_rms": 1e-05
+  },
+  "training_only": true,
+  "trajectory_diagnostics_used": false,
+  "worst_training_scaled_max": 5.606828400672611e-05,
+  "worst_training_scaled_rms": 7.475845963335215e-08
+}

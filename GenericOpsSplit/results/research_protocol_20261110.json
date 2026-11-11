@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-10",
+  "git_head": "44b87352f24132eb450ebe259a3259b60334c600",
+  "training_device": "CUDA only; NVIDIA H100 PCIe",
+  "historical_root": "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109",
+  "data_sha256": {
+    "burgers.pt": "3ebb89901750357d375b57b273b58511f2bac82076d682fb8d244e5aca1fa2a4",
+    "burgers_fem.pt": "095fdccac6726fa42b29676fda5ebbfd6e97c381b7e1f77345581a24cdb12b05",
+    "kdv.pt": "9b578dab6bec4ce4e63fa2ee0b51c69953bb201c6d9f7e95d39950cf826acc7c",
+    "ks.pt": "d663da3b07a15156082de6a79fbdc76a9355c93c300ee4ed4a3d544b73a3702a",
+    "ns2d.pt": "88754c6bdf6b9675d1d347f31b82dcf5cb754c67e1948142694a97b5d2db279a"
+  },
+  "selection": "Original validation split only; historical test metrics exploratory. Freeze candidates and source before independent holdout generation.",
+  "screen": {
+    "schemes": [
+      "ars222",
+      "midpoint",
+      "ros2_low"
+    ],
+    "substeps": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "reference": "Untrained ETDRK4, Fourier only"
+  },
+  "pilot_manifest": [
+    "--problem burgers --scheme ars222 --substeps 2 --lr 0.0001 --tag lr4 --seed 0",
+    "--problem burgers --scheme ars222 --substeps 2 --lr 0.00001 --tag lr5 --seed 0",
+    "--problem burgers_fem --scheme ars222 --substeps 2 --lr 0.0001 --tag lr4 --seed 0",
+    "--problem burgers_fem --scheme ars222 --substeps 2 --lr 0.00001 --tag lr5 --seed 0",
+    "--problem kdv --scheme ars222 --substeps 4 --lr 0.0001 --tag lr4 --seed 0",
+    "--problem kdv --scheme ars222 --substeps 4 --lr 0.00001 --tag lr5 --seed 0",
+    "--problem ks --scheme ars222 --substeps 4 --lr 0.0001 --tag lr4 --seed 0",
+    "--problem ks --scheme ars222 --substeps 4 --lr 0.00001 --tag lr5 --seed 0",
+    "--problem ns2d --scheme ars222 --substeps 8 --lr 0.0001 --tag lr4 --seed 0",
+    "--problem ns2d --scheme ars222 --substeps 8 --lr 0.00001 --tag lr5 --seed 0"
+  ],
+  "primary_horizons": {
+    "burgers": 200,
+    "kdv": 200,
+    "ks": 50,
+    "ns2d": 80,
+    "burgers_fem": 100
+  },
+  "caveat": "KS H=50 is inside training time window; fresh holdout also evaluates H=100 and200."
+}

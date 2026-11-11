@@ -38,7 +38,8 @@ class EllipticPair:
         block = stiff[self.interior][:, self.interior].tocsc()
         self.diagonal = np.sqrt(block.diagonal())
         d = sp.diags(1/self.diagonal)
-        self.factor = splu((d @ block @ d).tocsc())
+        self.scaled = (d @ block @ d).tocsc()
+        self.factor = splu(self.scaled)
 
     def solve(self, rhs, transpose=False):
         return self.factor.solve(rhs/self.diagonal[:, None], trans='T' if transpose else 'N')/self.diagonal[:, None]
@@ -57,6 +58,45 @@ class EllipticPair:
             potential[self.interior] = self.solve(-self.mass @ a - self.cross @ p[self.boundary])
             auxiliary = a
         return np.stack((potential.T, auxiliary.T), axis=-1)
+
+    torch_operations = ('closure',)
+
+    def _device_solve(self, rhs, transpose):
+        """K^-1 rhs (or K^-T) on rhs.device: cuDSS on CUDA, this pair's SuperLU on the CPU."""
+        from .gpu_native import device_tensor, direct_solver
+        if rhs.device.type == 'cpu':
+            return torch.as_tensor(self.solve(rhs.numpy(), transpose), dtype=rhs.dtype)
+        cache = self.__dict__.setdefault('_device_solvers', {})
+        if transpose and 'symmetric' not in cache:
+            cache['symmetric'] = (self.scaled != self.scaled.T).nnz == 0
+        key = (str(rhs.device), transpose and not cache['symmetric'])
+        if key not in cache:
+            cache[key] = direct_solver(self.scaled.T if key[1] else self.scaled, rhs.device)
+        diagonal = device_tensor(self, 'diagonal', lambda: self.diagonal, rhs.device, torch.float64)[:, None]
+        return cache[key].solve(rhs/diagonal)/diagonal
+
+    def apply_torch(self, x, operation, transpose=False):
+        """Device version of apply (same linear map and exact transpose)."""
+        from .gpu_native import device_matrix, device_tensor
+        if operation != 'closure' or x.ndim != 3 or x.shape[-1] != 2 or not torch.isfinite(x).all():
+            raise ValueError('Expected finite native potential/auxiliary pair')
+        device, xd = x.device, x.to(torch.float64)
+        interior = device_tensor(self, 'interior', lambda: self.interior, device, torch.long)
+        boundary = device_tensor(self, 'boundary', lambda: self.boundary, device, torch.long)
+        mass = device_matrix(self, 'mass', lambda: self.mass, device, transpose)
+        cross = device_matrix(self, 'cross', lambda: self.cross, device, transpose)
+        p, a = xd[..., 0].T, xd[..., 1].T   # [ndof, batch]
+        if transpose:
+            z = self._device_solve(p[interior], True)
+            potential = torch.zeros_like(p)
+            potential[boundary] = p[boundary] - cross @ z
+            auxiliary = a.clone()
+            auxiliary -= mass @ z
+        else:
+            potential = p.clone()
+            potential[interior] = self._device_solve(-(mass @ a) - cross @ p[boundary], False)
+            auxiliary = a
+        return torch.stack((potential.T, auxiliary.T), dim=-1).to(x.dtype)
 
     def __call__(self, pair):
         return _FixedNative.apply(pair, self, 'closure')
@@ -96,6 +136,14 @@ class QuadratureSampler:
         a = x.transpose(1,0,2).reshape(x.shape[1],-1)
         result = self.basis.T @ a if transpose else self.basis @ a
         return result.reshape(-1,batch,channels).transpose(1,0,2).copy()
+
+    torch_operations = ('sample',)
+
+    def apply_torch(self, x, operation, transpose=False):
+        from .gpu_native import apply_batched, device_matrix
+        if operation != 'sample':
+            raise ValueError('Unknown sampler operation')
+        return apply_batched(device_matrix(self, 'basis', lambda: self.basis, x.device, transpose), x).to(x.dtype)
 
     def __call__(self, x):
         return _FixedNative.apply(x, self, 'sample')

@@ -1,0 +1,115 @@
+{
+  "selection_date_utc": "2026-11-10",
+  "selection": "Chosen on original exploratory data before fresh generation; no adaptation to fresh metrics is allowed.",
+  "selected_runs": [
+    "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/burgers/implicit_free_tf_s0",
+    "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/burgers/implicit_free_tf_s1",
+    "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/burgers/implicit_free_tf_s2",
+    "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/burgers/node_s0",
+    "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/burgers/node_s1",
+    "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/burgers/node_s2",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/burgers/physics_ars222_n2_known_exact_capped_s0",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/burgers/physics_etdrk4_n1_known_exact_capped_s0",
+    "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/kdv/implicit_free_init_s0",
+    "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/kdv/implicit_free_init_s1",
+    "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/kdv/implicit_free_init_s2",
+    "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/kdv/node_s0",
+    "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/kdv/node_s1",
+    "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/kdv/node_s2",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/kdv/physics_ars222_n16_known_exact_capped_s0",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/kdv/physics_etdrk4_n16_known_exact_capped_s0",
+    "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/ks/implicit_free_tf_s0",
+    "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/ks/implicit_free_tf_s1",
+    "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/ks/implicit_free_tf_s2",
+    "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/ks/node_s0",
+    "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/ks/node_s1",
+    "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/ks/node_s2",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/ks/physics_ars222_n16_known_exact_capped_s0",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/ks/physics_etdrk4_n4_known_exact_capped_s0",
+    "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/ns2d/implicit_struct_tf_s0",
+    "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/ns2d/implicit_struct_tf_s1",
+    "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/ns2d/implicit_struct_tf_s2",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/ns2d/node_forced_s0",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/ns2d/node_forced_s1",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/ns2d/node_forced_s2",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/ns2d/implicit_known_forced_s0",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/ns2d/implicit_known_forced_s1",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/ns2d/implicit_known_forced_s2",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/ns2d/physics_ars222_n32_known_exact_capped_s0",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/ns2d/physics_etdrk4_n16_known_exact_capped_s0",
+    "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/burgers_fem/implicit_known_cn_s0",
+    "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/burgers_fem/implicit_known_cn_s1",
+    "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/burgers_fem/implicit_known_cn_s2",
+    "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/burgers_fem/node_lip_s0",
+    "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/burgers_fem/node_lip_s1",
+    "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/burgers_fem/node_lip_s2",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/burgers_fem/physics_ars222_n2_known_exact_s0",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/burgers_fem/physics_ars222_n2_known_closure_zero_equilibrium_gated_s0",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/burgers_fem/physics_ars222_n2_known_closure_zero_equilibrium_gated_s1",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/burgers_fem/physics_ars222_n2_known_closure_zero_equilibrium_gated_s2",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/ns2d/node_rk2_forced_s0",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/burgers_fem/physics_ars222_n2_known_closure_zero_equilibrium_s0",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/burgers_fem/physics_ars222_n2_known_closure_zero_equilibrium_s1",
+    "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/burgers_fem/physics_ars222_n2_known_closure_zero_equilibrium_s2"
+  ],
+  "plot_roles": {
+    "burgers": {
+      "Historical implicit": "implicit_free_tf",
+      "NODE": "node",
+      "Implicit physics": "physics_ars222_n2_known_exact_capped",
+      "ETDRK4 physics": "physics_etdrk4_n1_known_exact_capped"
+    },
+    "kdv": {
+      "Historical implicit": "implicit_free_init",
+      "NODE": "node",
+      "Implicit physics": "physics_ars222_n16_known_exact_capped",
+      "ETDRK4 physics": "physics_etdrk4_n16_known_exact_capped"
+    },
+    "ks": {
+      "Historical implicit": "implicit_free_tf",
+      "NODE": "node",
+      "Implicit physics": "physics_ars222_n16_known_exact_capped",
+      "ETDRK4 physics": "physics_etdrk4_n4_known_exact_capped"
+    },
+    "ns2d": {
+      "Historical implicit": "implicit_struct_tf",
+      "NODE + forcing": "node_forced",
+      "Implicit + forcing": "implicit_known_forced",
+      "Implicit physics": "physics_ars222_n32_known_exact_capped",
+      "ETDRK4 physics": "physics_etdrk4_n16_known_exact_capped"
+    },
+    "burgers_fem": {
+      "Historical implicit": "implicit_known_cn",
+      "NODE": "node_lip",
+      "Physics only": "physics_ars222_n2_known_exact",
+      "Learned defect + gate": "physics_ars222_n2_known_closure_zero_equilibrium_gated"
+    }
+  },
+  "fresh": {
+    "test_count": 32,
+    "ood_count": 16,
+    "test_seed": 7103,
+    "original_ood_seeds": [
+      7203,
+      7303
+    ],
+    "extra_fem_coefficients": [
+      0.003,
+      0.018
+    ],
+    "extra_fem_seeds": [
+      7403,
+      7503
+    ]
+  },
+  "strategy": {
+    "fourier": "Known physics with validation-screened ARS222 substeps, capped microstep; ETDRK4 retained as competing reference.",
+    "fem": "Exact physics plus equilibrium-preserving learned defect, gated to the original training coefficient interval."
+  },
+  "limitations": [
+    "Extra OOD values are fixed before generation, derived from training bounds.",
+    "Gate is discontinuous at training coefficient boundaries.",
+    "Capped macrostep transfer performs more physics stages; not equal-runtime comparison.",
+    "Only FEM learned strategy is a three-seed final candidate; KdV/KS closure pilots remain exploratory."
+  ]
+}

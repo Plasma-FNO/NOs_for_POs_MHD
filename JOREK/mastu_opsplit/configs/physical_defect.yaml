@@ -1,0 +1,58 @@
+# Native nonlinear physics plus a reference-anchored learned defect. CUDA only.
+manifest: /pitagora_scratch/userexternal/vgopakum/mastu_euler_ensemble100_20261105/manifest.json
+manifest_sha256: f0f0f56c611c9f9d48081d4a611bfa44a0709e5cf4b691fc219c69396c81b87c
+source_split_counts:
+  train: 60
+  validation: 20
+  test: 20
+split_counts:
+  train: 80
+  validation: 0
+  test: 20
+seed: 17
+threads: 4
+steps: 2000
+pretrain_steps: 0
+horizon: 4
+stride: 1
+batch_size: 1
+learning_rate: 0.0001
+pretrain_learning_rate: 0.001
+physical_guard: true
+positivity_basis: bernstein_subdivided
+positivity_penalty: 0.001
+gamma: 1.6666666666666667
+theta: 1.0
+F0: 0.64
+dirichlet_tolerance: 1.0e-07
+tangent: /pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_full_opsplit_20261104/frozen_tangent/baseline_terms.h5
+tangent_sha256: 25aa63a36ed7f52167a9f1b5662735c78e83cd37ee56a6347c2ff3b47367e273
+labels: /pitagora_scratch/userexternal/vgopakum/mastu_implicit_opsplit_20261108/labels
+architecture:
+  grid_shape:
+  - 16
+  - 32
+  modes: 4
+  width: 8
+  n_layers: 2
+evaluation_horizons:
+- 16
+- 32
+- 96
+evaluation_substeps:
+- 1
+- 2
+- 4
+diagnostic_only: false
+device: cuda
+physical_defect:
+  scheme: be
+  internal_substeps: 2
+  profile_manifest:
+    path: /pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/JOREK/mastu_opsplit/reports/physical_profiles_20261111.json
+    sha256: 7d259061d1bb0932c26717c2cc2eafa4daafd3816804330917a8c88817d0cdb4
+  reference_restart:
+    path: /pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_refinement_20261104/runs/baseline_settle1/work/jorek000144.h5
+    sha256: 3e778b498901b50db3461efacce0f90f550beb3b11ee5782b8557783c4227dc7
+  boundary_tolerance: 1.0e-10
+  boundary_max_iterations: 12

@@ -63,6 +63,13 @@ JOREK/mastu_opsplit/runs
 # Fortran module files from compiler invocations
 *.mod
 
+# Reproducible scripts and compact reports are tracked; research checkpoints/logs stay local.
+GenericOpsSplit/research_runs/
+!GenericOpsSplit/tests/
+!GenericOpsSplit/tests/**
+GenericOpsSplit/tests/__pycache__/
+!GenericOpsSplit/results/research_20261110.png
+
 # Tearing pilot: keep scripts, protocols and summary reports; the JOREK build
 # tree, executable and raw per-run outputs stay outside source control.
 JOREK/tearing_pilot/single_writer_build/

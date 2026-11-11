@@ -18,10 +18,14 @@ def main():
     parser.add_argument('--arm', choices=ARMS, required=True)
     parser.add_argument('--seed', type=int)
     parser.add_argument('--resume', action='store_true')
+    parser.add_argument('--device', choices=('cpu', 'cuda'),
+                        help='cuda: torch backend with cuDSS LU (deterministic); default from config (cpu)')
     args = parser.parse_args()
     config = load_config(args.config)
     if args.seed is not None:
         config['seed'] = args.seed
+    if args.device is not None:
+        config['device'] = args.device
     results = run_implicit(config, load_config(args.model_config), args.output, arm=args.arm, resume=args.resume)
     if any(not result['evaluation']['audits_passed'] for result in results.values()):
         raise RuntimeError('Rollout numerical/physical audit failed; inspect per-trajectory reports')

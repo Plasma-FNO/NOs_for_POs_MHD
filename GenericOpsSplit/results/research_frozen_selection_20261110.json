@@ -1,0 +1,1562 @@
+{
+  "selection": "Frozen before generating the independent holdout",
+  "runs": [
+    {
+      "directory": "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/burgers/implicit_free_tf_s0",
+      "problem": "burgers",
+      "arm": "implicit_free_tf",
+      "seed": 0,
+      "config": {
+        "net": {
+          "modes": 24,
+          "width": 48,
+          "layers": 4
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          25,
+          50,
+          100,
+          200
+        ],
+        "long": 1000,
+        "dt_mults": [
+          1
+        ]
+      },
+      "checkpoint_sha256": "6dd6a38b66a11616bd04ec47a1788d07017bc1454204af5a33392154befff3e9",
+      "result_sha256": "f5a4b7f3fcdcce231290a52fa322e5a1da50450849891cfd06a3b39a62925849"
+    },
+    {
+      "directory": "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/burgers/implicit_free_tf_s1",
+      "problem": "burgers",
+      "arm": "implicit_free_tf",
+      "seed": 1,
+      "config": {
+        "net": {
+          "modes": 24,
+          "width": 48,
+          "layers": 4
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          25,
+          50,
+          100,
+          200
+        ],
+        "long": 1000,
+        "dt_mults": [
+          1
+        ]
+      },
+      "checkpoint_sha256": "8d9df080eaa374690fe545b7ec31f62870b72e038f70d495a7d994a42cb72750",
+      "result_sha256": "2ebefb8a7da59a53156c09157950fbcf669ef86e89f35f13db9c63e4b15a9cfc"
+    },
+    {
+      "directory": "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/burgers/implicit_free_tf_s2",
+      "problem": "burgers",
+      "arm": "implicit_free_tf",
+      "seed": 2,
+      "config": {
+        "net": {
+          "modes": 24,
+          "width": 48,
+          "layers": 4
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          25,
+          50,
+          100,
+          200
+        ],
+        "long": 1000,
+        "dt_mults": [
+          1
+        ]
+      },
+      "checkpoint_sha256": "70676918d0382cb6ef348f06b83fb6c484be72840d0853d6535bfea4a583d9fc",
+      "result_sha256": "6e2c933fea26811e7816349e755708a67fce4d39bbf7315ab86e3f29cfb3751c"
+    },
+    {
+      "directory": "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/burgers/node_s0",
+      "problem": "burgers",
+      "arm": "node",
+      "seed": 0,
+      "config": {
+        "net": {
+          "modes": 24,
+          "width": 48,
+          "layers": 4
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          25,
+          50,
+          100,
+          200
+        ],
+        "long": 1000
+      },
+      "checkpoint_sha256": "2a456af92854c8277213c80e72e62cd2279348687044ccbe3726d690d89a5bbe",
+      "result_sha256": "698c8e21ab76fa57a0596689188c20bbc10f3ca6d48c7be3e7aa62dbc4f350bd"
+    },
+    {
+      "directory": "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/burgers/node_s1",
+      "problem": "burgers",
+      "arm": "node",
+      "seed": 1,
+      "config": {
+        "net": {
+          "modes": 24,
+          "width": 48,
+          "layers": 4
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          25,
+          50,
+          100,
+          200
+        ],
+        "long": 1000
+      },
+      "checkpoint_sha256": "f8f1a8ab2d844d253b485ffe5e8da7a231aeb6a3cc0f5a29388ac0cac61acc8c",
+      "result_sha256": "3c6f18ad8926a2b681b38c3a64f1dd6303811afaa663d5cf8d9aa982ff9c1184"
+    },
+    {
+      "directory": "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/burgers/node_s2",
+      "problem": "burgers",
+      "arm": "node",
+      "seed": 2,
+      "config": {
+        "net": {
+          "modes": 24,
+          "width": 48,
+          "layers": 4
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          25,
+          50,
+          100,
+          200
+        ],
+        "long": 1000
+      },
+      "checkpoint_sha256": "91dec80bcea158cea7a2c47117ed4b6e97bb19ea56644d8f82b52ac4abba208d",
+      "result_sha256": "f9388416ad123e7a183d49728e75c35339cded70f4c3c7231c2d3d8631546130"
+    },
+    {
+      "directory": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/burgers/physics_ars222_n2_known_exact_capped_s0",
+      "problem": "burgers",
+      "arm": "physics_ars222_n2_known_exact_capped",
+      "seed": 0,
+      "config": {
+        "net": {
+          "modes": 24,
+          "width": 48,
+          "layers": 4
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          25,
+          50,
+          100,
+          200
+        ],
+        "long": 1000,
+        "scheme": "ars222",
+        "substeps": 2,
+        "closure": false,
+        "linear_mode": "known",
+        "closure_each_stage": false,
+        "dt_mults": [
+          1
+        ],
+        "lr": 0.0001,
+        "val_every": 500,
+        "operator_diagnostics": false,
+        "skip_jacobian": false,
+        "max_step": true
+      },
+      "checkpoint_sha256": "fb71eab2e3996158dd80de4ae319e945ff45ff943a83433c43d807909c146b66",
+      "result_sha256": "70ee69b559986c50c6894aaa765e0cc5dd2f9abca98a1ff9544033b123c37313"
+    },
+    {
+      "directory": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/burgers/physics_etdrk4_n1_known_exact_capped_s0",
+      "problem": "burgers",
+      "arm": "physics_etdrk4_n1_known_exact_capped",
+      "seed": 0,
+      "config": {
+        "net": {
+          "modes": 24,
+          "width": 48,
+          "layers": 4
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          25,
+          50,
+          100,
+          200
+        ],
+        "long": 1000,
+        "scheme": "etdrk4",
+        "substeps": 1,
+        "closure": false,
+        "linear_mode": "known",
+        "closure_each_stage": false,
+        "dt_mults": [
+          1
+        ],
+        "lr": 0.0001,
+        "val_every": 500,
+        "operator_diagnostics": false,
+        "skip_jacobian": true,
+        "max_step": true,
+        "zero_equilibrium": false
+      },
+      "checkpoint_sha256": "b51637b21efd929624274b797ba4d36b66dcd422c80bc6b1b8807be55c9f1cd2",
+      "result_sha256": "dd50dd6a8cd05a9acb5eeea3d72b73a5a7497c5b854032bae3073b1ce0f9740b"
+    },
+    {
+      "directory": "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/kdv/implicit_free_init_s0",
+      "problem": "kdv",
+      "arm": "implicit_free_init",
+      "seed": 0,
+      "config": {
+        "net": {
+          "modes": 24,
+          "width": 48,
+          "layers": 4
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          25,
+          50,
+          100,
+          200
+        ],
+        "long": 1000,
+        "dt_mults": [
+          1
+        ],
+        "init_known": true
+      },
+      "checkpoint_sha256": "039710c449484525690d5533bf746fd026defc98825d86852313f7a809b59260",
+      "result_sha256": "7c76c8dbaa7ff56a4f4351a1639d522889be843fb516f4b200c48d85d5408787"
+    },
+    {
+      "directory": "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/kdv/implicit_free_init_s1",
+      "problem": "kdv",
+      "arm": "implicit_free_init",
+      "seed": 1,
+      "config": {
+        "net": {
+          "modes": 24,
+          "width": 48,
+          "layers": 4
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          25,
+          50,
+          100,
+          200
+        ],
+        "long": 1000,
+        "dt_mults": [
+          1
+        ],
+        "init_known": true
+      },
+      "checkpoint_sha256": "df84744b0be5c001f3a23deefc5598738484ec1ec5bd81de6d8a249675d5e30f",
+      "result_sha256": "ac5ac9cddb726a5654c7818e38ff26f56dddd6e2238427d853a56e9468224fc8"
+    },
+    {
+      "directory": "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/kdv/implicit_free_init_s2",
+      "problem": "kdv",
+      "arm": "implicit_free_init",
+      "seed": 2,
+      "config": {
+        "net": {
+          "modes": 24,
+          "width": 48,
+          "layers": 4
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          25,
+          50,
+          100,
+          200
+        ],
+        "long": 1000,
+        "dt_mults": [
+          1
+        ],
+        "init_known": true
+      },
+      "checkpoint_sha256": "507512a2a23a7fb3e9d0dd0e45f72a48049e96e4197d2ad2ef04ad8fb788a5f9",
+      "result_sha256": "ce82b596c928f79f9c8d031416004a266be024c2b47c95163de40efe4303488b"
+    },
+    {
+      "directory": "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/kdv/node_s0",
+      "problem": "kdv",
+      "arm": "node",
+      "seed": 0,
+      "config": {
+        "net": {
+          "modes": 24,
+          "width": 48,
+          "layers": 4
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          25,
+          50,
+          100,
+          200
+        ],
+        "long": 1000
+      },
+      "checkpoint_sha256": "76c87336ecf02a6e92bbac2fe2fa5329f1ae8348900bbeaa03ba516a822f696f",
+      "result_sha256": "28f258e55e2642efb698ebac7920c682790294e000208121dc25d4121393453d"
+    },
+    {
+      "directory": "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/kdv/node_s1",
+      "problem": "kdv",
+      "arm": "node",
+      "seed": 1,
+      "config": {
+        "net": {
+          "modes": 24,
+          "width": 48,
+          "layers": 4
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          25,
+          50,
+          100,
+          200
+        ],
+        "long": 1000
+      },
+      "checkpoint_sha256": "bc85a5ac3f279a7e9c776118d402647cc9fdd2d71b96c9b11a0c22699c8b22ad",
+      "result_sha256": "bef0ba7779c18d55c4211a00e309967ca3578ca051bd7aba353f5e24c65819ef"
+    },
+    {
+      "directory": "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/kdv/node_s2",
+      "problem": "kdv",
+      "arm": "node",
+      "seed": 2,
+      "config": {
+        "net": {
+          "modes": 24,
+          "width": 48,
+          "layers": 4
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          25,
+          50,
+          100,
+          200
+        ],
+        "long": 1000
+      },
+      "checkpoint_sha256": "03d79c024f7845cc317b4edc21a660fa9f64d8e6ad1722cea0d4560e8c659a24",
+      "result_sha256": "f16c047ee1a68c781469d34f1f240b55095edb83d3b80b91e13cdb60d0baf9bc"
+    },
+    {
+      "directory": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/kdv/physics_ars222_n16_known_exact_capped_s0",
+      "problem": "kdv",
+      "arm": "physics_ars222_n16_known_exact_capped",
+      "seed": 0,
+      "config": {
+        "net": {
+          "modes": 24,
+          "width": 48,
+          "layers": 4
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          25,
+          50,
+          100,
+          200
+        ],
+        "long": 1000,
+        "scheme": "ars222",
+        "substeps": 16,
+        "closure": false,
+        "linear_mode": "known",
+        "closure_each_stage": false,
+        "dt_mults": [
+          1
+        ],
+        "lr": 0.0001,
+        "val_every": 500,
+        "operator_diagnostics": false,
+        "skip_jacobian": false,
+        "max_step": true
+      },
+      "checkpoint_sha256": "5c58a6eae66f1130405ec8afb2c2ede43fe33872cb5a6cdd215e06bd92d23c80",
+      "result_sha256": "78c101b37b9d71d6d12c9b456fcc615db0945f8ff4726870d42e14f6f7ee7d0d"
+    },
+    {
+      "directory": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/kdv/physics_etdrk4_n16_known_exact_capped_s0",
+      "problem": "kdv",
+      "arm": "physics_etdrk4_n16_known_exact_capped",
+      "seed": 0,
+      "config": {
+        "net": {
+          "modes": 24,
+          "width": 48,
+          "layers": 4
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          25,
+          50,
+          100,
+          200
+        ],
+        "long": 1000,
+        "scheme": "etdrk4",
+        "substeps": 16,
+        "closure": false,
+        "linear_mode": "known",
+        "closure_each_stage": false,
+        "dt_mults": [
+          1
+        ],
+        "lr": 0.0001,
+        "val_every": 500,
+        "operator_diagnostics": false,
+        "skip_jacobian": true,
+        "max_step": true,
+        "zero_equilibrium": false
+      },
+      "checkpoint_sha256": "326c1ab5c3b13b1b1dcc8eefc450031b833ac1cc32255ae31e396b1c774e98a5",
+      "result_sha256": "cc85560e6a5334a1fcddea73077abf3db64f29e9008af6d9198df89ca131880b"
+    },
+    {
+      "directory": "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/ks/implicit_free_tf_s0",
+      "problem": "ks",
+      "arm": "implicit_free_tf",
+      "seed": 0,
+      "config": {
+        "net": {
+          "modes": 32,
+          "width": 48,
+          "layers": 4
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          5,
+          10,
+          20,
+          50
+        ],
+        "long": 1000,
+        "dt_mults": [
+          1
+        ]
+      },
+      "checkpoint_sha256": "d652478297e7188cfda2108569ff2c93f1c327ee015b85da1d0f6f4fc4d3eff8",
+      "result_sha256": "40cb17d34595ba1df255419ec37b13530f386a1ba37d89ff93914bbbf187f378"
+    },
+    {
+      "directory": "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/ks/implicit_free_tf_s1",
+      "problem": "ks",
+      "arm": "implicit_free_tf",
+      "seed": 1,
+      "config": {
+        "net": {
+          "modes": 32,
+          "width": 48,
+          "layers": 4
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          5,
+          10,
+          20,
+          50
+        ],
+        "long": 1000,
+        "dt_mults": [
+          1
+        ]
+      },
+      "checkpoint_sha256": "dbd56c31f973286b6c569f8df9e35a8cc81dee02f1c7520b5b8d9e18806d12b5",
+      "result_sha256": "28b7fa268473a414c3577abceb1867108e2b6d5a35d34a384d1eebf17106008d"
+    },
+    {
+      "directory": "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/ks/implicit_free_tf_s2",
+      "problem": "ks",
+      "arm": "implicit_free_tf",
+      "seed": 2,
+      "config": {
+        "net": {
+          "modes": 32,
+          "width": 48,
+          "layers": 4
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          5,
+          10,
+          20,
+          50
+        ],
+        "long": 1000,
+        "dt_mults": [
+          1
+        ]
+      },
+      "checkpoint_sha256": "d8df00b178db97b970c38ef0e6a26730d41c35fbdb110ac7fbb0a60892ade865",
+      "result_sha256": "7b5f787a28453affd92cfc3116a79379487833a831e8730505e47a3f6459f042"
+    },
+    {
+      "directory": "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/ks/node_s0",
+      "problem": "ks",
+      "arm": "node",
+      "seed": 0,
+      "config": {
+        "net": {
+          "modes": 32,
+          "width": 48,
+          "layers": 4
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          5,
+          10,
+          20,
+          50
+        ],
+        "long": 1000
+      },
+      "checkpoint_sha256": "ef808ee403e1e6337de61809903d4d8c633afb00e597648cbc009279c1cffb86",
+      "result_sha256": "6771293bd5f951f6eb680267ccb70b354e3e89223b94e947e9345257c248ecc4"
+    },
+    {
+      "directory": "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/ks/node_s1",
+      "problem": "ks",
+      "arm": "node",
+      "seed": 1,
+      "config": {
+        "net": {
+          "modes": 32,
+          "width": 48,
+          "layers": 4
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          5,
+          10,
+          20,
+          50
+        ],
+        "long": 1000
+      },
+      "checkpoint_sha256": "067bbf9511c5e5db961720e9ac970dfadee29f9d4f73e320c3fd76ac61993bf9",
+      "result_sha256": "25d4e3a21b839ec9543b496d1c98e764c21746660d11083b52bbcdd85a601476"
+    },
+    {
+      "directory": "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/ks/node_s2",
+      "problem": "ks",
+      "arm": "node",
+      "seed": 2,
+      "config": {
+        "net": {
+          "modes": 32,
+          "width": 48,
+          "layers": 4
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          5,
+          10,
+          20,
+          50
+        ],
+        "long": 1000
+      },
+      "checkpoint_sha256": "d777059f8737de9cb061da36f467506e13a2c69b2b4182024b676119d14acff0",
+      "result_sha256": "de558a6d008bca6106fe408f6f3eeed14d61ce6dd0205e5701f55d9612cb3f1f"
+    },
+    {
+      "directory": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/ks/physics_ars222_n16_known_exact_capped_s0",
+      "problem": "ks",
+      "arm": "physics_ars222_n16_known_exact_capped",
+      "seed": 0,
+      "config": {
+        "net": {
+          "modes": 32,
+          "width": 48,
+          "layers": 4
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          5,
+          10,
+          20,
+          50
+        ],
+        "long": 1000,
+        "scheme": "ars222",
+        "substeps": 16,
+        "closure": false,
+        "linear_mode": "known",
+        "closure_each_stage": false,
+        "dt_mults": [
+          1
+        ],
+        "lr": 0.0001,
+        "val_every": 500,
+        "operator_diagnostics": false,
+        "skip_jacobian": false,
+        "max_step": true
+      },
+      "checkpoint_sha256": "0b8b6dfd19b067c6ef0fc4eace7905c9680c6a52119f22949967f6a396ef6e76",
+      "result_sha256": "ef7916b6e0d304ed8c6a6c4f742f97ef57a2be29cad573fc4a298490f745a226"
+    },
+    {
+      "directory": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/ks/physics_etdrk4_n4_known_exact_capped_s0",
+      "problem": "ks",
+      "arm": "physics_etdrk4_n4_known_exact_capped",
+      "seed": 0,
+      "config": {
+        "net": {
+          "modes": 32,
+          "width": 48,
+          "layers": 4
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          5,
+          10,
+          20,
+          50
+        ],
+        "long": 1000,
+        "scheme": "etdrk4",
+        "substeps": 4,
+        "closure": false,
+        "linear_mode": "known",
+        "closure_each_stage": false,
+        "dt_mults": [
+          1
+        ],
+        "lr": 0.0001,
+        "val_every": 500,
+        "operator_diagnostics": false,
+        "skip_jacobian": true,
+        "max_step": true,
+        "zero_equilibrium": false
+      },
+      "checkpoint_sha256": "96c4d40714bc0a47a8e32363c9f96d695bba6f5490ad7ddd3e63b35f0439a1ef",
+      "result_sha256": "d2a735a1aaad65cce2c64dc70d43cae0e0bd01efca0df6cad113c0c4d6fb1809"
+    },
+    {
+      "directory": "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/ns2d/implicit_struct_tf_s0",
+      "problem": "ns2d",
+      "arm": "implicit_struct_tf",
+      "seed": 0,
+      "config": {
+        "net": {
+          "modes": 12,
+          "width": 32,
+          "layers": 4
+        },
+        "iters": 4000,
+        "window": 6,
+        "batch": 16,
+        "horizons": [
+          10,
+          20,
+          40,
+          80
+        ],
+        "long": 400,
+        "dt_mults": [
+          1
+        ]
+      },
+      "checkpoint_sha256": "46d5432020e653968d0b1d8ecf4849ad34957858a942a399c27d0fbf42ee765a",
+      "result_sha256": "7d3645eb35958f5c0d7219ca52934de4e35db5306d17cb62bcbc7421ad0076fd"
+    },
+    {
+      "directory": "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/ns2d/implicit_struct_tf_s1",
+      "problem": "ns2d",
+      "arm": "implicit_struct_tf",
+      "seed": 1,
+      "config": {
+        "net": {
+          "modes": 12,
+          "width": 32,
+          "layers": 4
+        },
+        "iters": 4000,
+        "window": 6,
+        "batch": 16,
+        "horizons": [
+          10,
+          20,
+          40,
+          80
+        ],
+        "long": 400,
+        "dt_mults": [
+          1
+        ]
+      },
+      "checkpoint_sha256": "e79bcd276ea188040e945b6e2a02d20f0d720248296b6cbd1713a7ba2615031e",
+      "result_sha256": "0ef66f0453dc51879ef44696e6828438b15d6d451a6c605da41945a1191aea07"
+    },
+    {
+      "directory": "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/ns2d/implicit_struct_tf_s2",
+      "problem": "ns2d",
+      "arm": "implicit_struct_tf",
+      "seed": 2,
+      "config": {
+        "net": {
+          "modes": 12,
+          "width": 32,
+          "layers": 4
+        },
+        "iters": 4000,
+        "window": 6,
+        "batch": 16,
+        "horizons": [
+          10,
+          20,
+          40,
+          80
+        ],
+        "long": 400,
+        "dt_mults": [
+          1
+        ]
+      },
+      "checkpoint_sha256": "80f7b3d44b9e07b966edd3147851d3905b32398c556bb490b0cf688e544e45ff",
+      "result_sha256": "97cb181b397af7ee420259559a8445e7d5fae5e36cbb511e3502f9533b2a1b82"
+    },
+    {
+      "directory": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/ns2d/node_forced_s0",
+      "problem": "ns2d",
+      "arm": "node_forced",
+      "seed": 0,
+      "config": {
+        "net": {
+          "modes": 12,
+          "width": 32,
+          "layers": 4
+        },
+        "iters": 4000,
+        "window": 6,
+        "batch": 16,
+        "horizons": [
+          10,
+          20,
+          40,
+          80
+        ],
+        "long": 400,
+        "dt_mults": [
+          1
+        ],
+        "init_known": false
+      },
+      "checkpoint_sha256": "1b1e1c0d24df9aa748d77f255d7d9486a2ef98a35f6f8b1c080c5a6ce8e79d0c",
+      "result_sha256": "6c8622549925dbed0a6968260a865415e43f10217537aa410aea998c6c58952e"
+    },
+    {
+      "directory": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/ns2d/node_forced_s1",
+      "problem": "ns2d",
+      "arm": "node_forced",
+      "seed": 1,
+      "config": {
+        "net": {
+          "modes": 12,
+          "width": 32,
+          "layers": 4
+        },
+        "iters": 4000,
+        "window": 6,
+        "batch": 16,
+        "horizons": [
+          10,
+          20,
+          40,
+          80
+        ],
+        "long": 400,
+        "dt_mults": [
+          1
+        ],
+        "init_known": false
+      },
+      "checkpoint_sha256": "cd095129db8c653133a0e042826c9ed6c80f0c03e77ca1a664ce520e2ef87a2b",
+      "result_sha256": "351ffc1523c3b7d737a76ad8ae8d9e6e96bbab851807a39ade6b94f4eaf70cd3"
+    },
+    {
+      "directory": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/ns2d/node_forced_s2",
+      "problem": "ns2d",
+      "arm": "node_forced",
+      "seed": 2,
+      "config": {
+        "net": {
+          "modes": 12,
+          "width": 32,
+          "layers": 4
+        },
+        "iters": 4000,
+        "window": 6,
+        "batch": 16,
+        "horizons": [
+          10,
+          20,
+          40,
+          80
+        ],
+        "long": 400,
+        "dt_mults": [
+          1
+        ],
+        "init_known": false
+      },
+      "checkpoint_sha256": "98a9ab9045e58fa92e024411b4cd7429a67d7350f061fa4bfc9860e0c97620b4",
+      "result_sha256": "ebf6f2199b40d5df56141455b047a832886619a94b42dcd1d699cd2d43c4bce1"
+    },
+    {
+      "directory": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/ns2d/implicit_known_forced_s0",
+      "problem": "ns2d",
+      "arm": "implicit_known_forced",
+      "seed": 0,
+      "config": {
+        "net": {
+          "modes": 12,
+          "width": 32,
+          "layers": 4
+        },
+        "iters": 4000,
+        "window": 6,
+        "batch": 16,
+        "horizons": [
+          10,
+          20,
+          40,
+          80
+        ],
+        "long": 400,
+        "dt_mults": [
+          1
+        ],
+        "init_known": false
+      },
+      "checkpoint_sha256": "887ad81ce33cfbbc6d9b776eaaa15f2146235a50b44b55d3b04d4ac0887d15d2",
+      "result_sha256": "311224b97361fd3f7ad66ae9b176648aee2c3f9bb1f42d506322fd7f61b18f1c"
+    },
+    {
+      "directory": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/ns2d/implicit_known_forced_s1",
+      "problem": "ns2d",
+      "arm": "implicit_known_forced",
+      "seed": 1,
+      "config": {
+        "net": {
+          "modes": 12,
+          "width": 32,
+          "layers": 4
+        },
+        "iters": 4000,
+        "window": 6,
+        "batch": 16,
+        "horizons": [
+          10,
+          20,
+          40,
+          80
+        ],
+        "long": 400,
+        "dt_mults": [
+          1
+        ],
+        "init_known": false
+      },
+      "checkpoint_sha256": "eec60e620f3c656a235c7c5f0505af549b7698c9f2cb9a0ff9a04e8c8cec2447",
+      "result_sha256": "0eeaf8f811f07bab316e86da85e5bab781224844347cf2d75ff7de1c15de1bfc"
+    },
+    {
+      "directory": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/ns2d/implicit_known_forced_s2",
+      "problem": "ns2d",
+      "arm": "implicit_known_forced",
+      "seed": 2,
+      "config": {
+        "net": {
+          "modes": 12,
+          "width": 32,
+          "layers": 4
+        },
+        "iters": 4000,
+        "window": 6,
+        "batch": 16,
+        "horizons": [
+          10,
+          20,
+          40,
+          80
+        ],
+        "long": 400,
+        "dt_mults": [
+          1
+        ],
+        "init_known": false
+      },
+      "checkpoint_sha256": "c9bdc9f72bb7edaa563f14a7a02ac2883872bb647533cd56efd235f081a603ec",
+      "result_sha256": "e2d34152ee1a432f9b91d1ac3aa6cfa1299fa37269069aede4cbbe11ef10a4ac"
+    },
+    {
+      "directory": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/ns2d/physics_ars222_n32_known_exact_capped_s0",
+      "problem": "ns2d",
+      "arm": "physics_ars222_n32_known_exact_capped",
+      "seed": 0,
+      "config": {
+        "net": {
+          "modes": 12,
+          "width": 32,
+          "layers": 4
+        },
+        "iters": 4000,
+        "window": 6,
+        "batch": 16,
+        "horizons": [
+          10,
+          20,
+          40,
+          80
+        ],
+        "long": 400,
+        "scheme": "ars222",
+        "substeps": 32,
+        "closure": false,
+        "linear_mode": "known",
+        "closure_each_stage": false,
+        "dt_mults": [
+          1
+        ],
+        "lr": 0.0001,
+        "val_every": 500,
+        "operator_diagnostics": false,
+        "skip_jacobian": false,
+        "max_step": true
+      },
+      "checkpoint_sha256": "901f24fd1cd8c5e1a9e77a18b6160f54e591648c25c54d08cf483d2954b5efc2",
+      "result_sha256": "132705b2c88477ab4189516dd24e13c8fb8833b846acbdb96ca0bd43714c90c1"
+    },
+    {
+      "directory": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/ns2d/physics_etdrk4_n16_known_exact_capped_s0",
+      "problem": "ns2d",
+      "arm": "physics_etdrk4_n16_known_exact_capped",
+      "seed": 0,
+      "config": {
+        "net": {
+          "modes": 12,
+          "width": 32,
+          "layers": 4
+        },
+        "iters": 4000,
+        "window": 6,
+        "batch": 16,
+        "horizons": [
+          10,
+          20,
+          40,
+          80
+        ],
+        "long": 400,
+        "scheme": "etdrk4",
+        "substeps": 16,
+        "closure": false,
+        "linear_mode": "known",
+        "closure_each_stage": false,
+        "dt_mults": [
+          1
+        ],
+        "lr": 0.0001,
+        "val_every": 500,
+        "operator_diagnostics": false,
+        "skip_jacobian": true,
+        "max_step": true,
+        "zero_equilibrium": false
+      },
+      "checkpoint_sha256": "fa81692493fd9039e7365a45d41d68801fc89e1d2583c7642e9d99fc9a2abe5d",
+      "result_sha256": "947b5003df65c3abfa0d43e8cae0529242cf1e4955a74a4f12853f25422f5049"
+    },
+    {
+      "directory": "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/burgers_fem/implicit_known_cn_s0",
+      "problem": "burgers_fem",
+      "arm": "implicit_known_cn",
+      "seed": 0,
+      "config": {
+        "net": {
+          "modes": 24,
+          "width": 48,
+          "layers": 4,
+          "pad": 16
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          12,
+          25,
+          50,
+          100
+        ],
+        "long": 500
+      },
+      "checkpoint_sha256": "1c5736cd9c401f801e271eff0c04d93d9f6afcfde1602df0d66d88946bd24f13",
+      "result_sha256": "037a7999c5c647e6f02ad8ade34921c9070aa3e75606ed5359d5b13fa88024ef"
+    },
+    {
+      "directory": "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/burgers_fem/implicit_known_cn_s1",
+      "problem": "burgers_fem",
+      "arm": "implicit_known_cn",
+      "seed": 1,
+      "config": {
+        "net": {
+          "modes": 24,
+          "width": 48,
+          "layers": 4,
+          "pad": 16
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          12,
+          25,
+          50,
+          100
+        ],
+        "long": 500
+      },
+      "checkpoint_sha256": "edb73eeda8538763422618cfbd10e9f8d0189fa688d1e48dc376fa6192fb3e8b",
+      "result_sha256": "beed5c40552b73f47304d887e42b6c36af887d9203375e8276779088a4b9e228"
+    },
+    {
+      "directory": "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/burgers_fem/implicit_known_cn_s2",
+      "problem": "burgers_fem",
+      "arm": "implicit_known_cn",
+      "seed": 2,
+      "config": {
+        "net": {
+          "modes": 24,
+          "width": 48,
+          "layers": 4,
+          "pad": 16
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          12,
+          25,
+          50,
+          100
+        ],
+        "long": 500
+      },
+      "checkpoint_sha256": "1d55cb9e4593c75e312754ef7069c82bc2b4a86c6486df617cf9066c46764e15",
+      "result_sha256": "6ecb0be1229f515199bcf2d228b0702d06a20094bc17b0f5faeb0481d40ae289"
+    },
+    {
+      "directory": "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/burgers_fem/node_lip_s0",
+      "problem": "burgers_fem",
+      "arm": "node_lip",
+      "seed": 0,
+      "config": {
+        "net": {
+          "modes": 24,
+          "width": 48,
+          "layers": 4,
+          "pad": 16
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          12,
+          25,
+          50,
+          100
+        ],
+        "long": 500,
+        "dt_mults": [
+          1
+        ],
+        "jac_weight": 1.0,
+        "jac_threshold": 1.021,
+        "init_known": false
+      },
+      "checkpoint_sha256": "e0874d19ab486de01344383ee15fd59cafdaeee403b629a883983dcae1b2ab0e",
+      "result_sha256": "06236d5026f9fc19900d1e6994b0a17c90447e5462afa15d90b21a24db68ed4b"
+    },
+    {
+      "directory": "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/burgers_fem/node_lip_s1",
+      "problem": "burgers_fem",
+      "arm": "node_lip",
+      "seed": 1,
+      "config": {
+        "net": {
+          "modes": 24,
+          "width": 48,
+          "layers": 4,
+          "pad": 16
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          12,
+          25,
+          50,
+          100
+        ],
+        "long": 500,
+        "dt_mults": [
+          1
+        ],
+        "jac_weight": 1.0,
+        "jac_threshold": 1.021,
+        "init_known": false
+      },
+      "checkpoint_sha256": "46032ad0e969dd1efc22628cd79aa31ed8871104c6c72fe6914e778b880a4a45",
+      "result_sha256": "f5e4986e986f20e53a0b08fdea5958f2f8bf8f96c6ffac64fddddf88063e9408"
+    },
+    {
+      "directory": "/pitagora_scratch/userexternal/vgopakum/generic_opsplit_20261109/runs/burgers_fem/node_lip_s2",
+      "problem": "burgers_fem",
+      "arm": "node_lip",
+      "seed": 2,
+      "config": {
+        "net": {
+          "modes": 24,
+          "width": 48,
+          "layers": 4,
+          "pad": 16
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          12,
+          25,
+          50,
+          100
+        ],
+        "long": 500,
+        "dt_mults": [
+          1
+        ],
+        "jac_weight": 1.0,
+        "jac_threshold": 1.021,
+        "init_known": false
+      },
+      "checkpoint_sha256": "0ffd672c8bf97b996289d8b6d7db880d3593614bfc6edede8e99eea02867add1",
+      "result_sha256": "0c1df18499800f75b359b13d0fdc51d25f579794965f4cee6a25a1b9d466c8d6"
+    },
+    {
+      "directory": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/burgers_fem/physics_ars222_n2_known_exact_s0",
+      "problem": "burgers_fem",
+      "arm": "physics_ars222_n2_known_exact",
+      "seed": 0,
+      "config": {
+        "net": {
+          "modes": 24,
+          "width": 48,
+          "layers": 4,
+          "pad": 16
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          12,
+          25,
+          50,
+          100
+        ],
+        "long": 500,
+        "scheme": "ars222",
+        "substeps": 2,
+        "closure": false,
+        "linear_mode": "known",
+        "closure_each_stage": false,
+        "dt_mults": [
+          1
+        ],
+        "lr": 0.0001,
+        "val_every": 500,
+        "operator_diagnostics": false,
+        "skip_jacobian": false
+      },
+      "checkpoint_sha256": "9a6a6eecc6937ccc1bf7f6641a16a3ed011cd16e276b4782c2a31d2d2869c75c",
+      "result_sha256": "0bd9e653d2736b8a99d57264c9e226dc66fd4d2eb007db2288c188bee169d276"
+    },
+    {
+      "directory": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/burgers_fem/physics_ars222_n2_known_closure_zero_equilibrium_gated_s0",
+      "problem": "burgers_fem",
+      "arm": "physics_ars222_n2_known_closure_zero_equilibrium_gated",
+      "seed": 0,
+      "config": {
+        "net": {
+          "modes": 24,
+          "width": 48,
+          "layers": 4,
+          "pad": 16
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          12,
+          25,
+          50,
+          100
+        ],
+        "long": 500,
+        "scheme": "ars222",
+        "substeps": 2,
+        "closure": true,
+        "linear_mode": "known",
+        "closure_each_stage": false,
+        "dt_mults": [
+          1
+        ],
+        "lr": 0.0001,
+        "val_every": 500,
+        "operator_diagnostics": false,
+        "skip_jacobian": false,
+        "max_step": false,
+        "zero_equilibrium": true,
+        "lr_min": 1e-07,
+        "closure_in_range": true
+      },
+      "checkpoint_sha256": "57189a5a27e97ecd86aa3ac2aa3ab091bfa21354eba7fa9ec7aec5bf06c49b2a",
+      "result_sha256": "4256d7fee03bf695b9833adc29e373c11326b0ecb7628bc28f242d1b7ade74d9"
+    },
+    {
+      "directory": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/burgers_fem/physics_ars222_n2_known_closure_zero_equilibrium_gated_s1",
+      "problem": "burgers_fem",
+      "arm": "physics_ars222_n2_known_closure_zero_equilibrium_gated",
+      "seed": 1,
+      "config": {
+        "net": {
+          "modes": 24,
+          "width": 48,
+          "layers": 4,
+          "pad": 16
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          12,
+          25,
+          50,
+          100
+        ],
+        "long": 500,
+        "scheme": "ars222",
+        "substeps": 2,
+        "closure": true,
+        "linear_mode": "known",
+        "closure_each_stage": false,
+        "dt_mults": [
+          1
+        ],
+        "lr": 0.0001,
+        "val_every": 500,
+        "operator_diagnostics": false,
+        "skip_jacobian": false,
+        "max_step": false,
+        "zero_equilibrium": true,
+        "lr_min": 1e-07,
+        "closure_in_range": true
+      },
+      "checkpoint_sha256": "5e00291c6d18543d660161d5c87071fff6e64e9ec2e0944ff97cb9220034712c",
+      "result_sha256": "a847f3616ca328090750c34edd6a01bb450d1063b42566d9cf76453fa627fc43"
+    },
+    {
+      "directory": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/burgers_fem/physics_ars222_n2_known_closure_zero_equilibrium_gated_s2",
+      "problem": "burgers_fem",
+      "arm": "physics_ars222_n2_known_closure_zero_equilibrium_gated",
+      "seed": 2,
+      "config": {
+        "net": {
+          "modes": 24,
+          "width": 48,
+          "layers": 4,
+          "pad": 16
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          12,
+          25,
+          50,
+          100
+        ],
+        "long": 500,
+        "scheme": "ars222",
+        "substeps": 2,
+        "closure": true,
+        "linear_mode": "known",
+        "closure_each_stage": false,
+        "dt_mults": [
+          1
+        ],
+        "lr": 0.0001,
+        "val_every": 500,
+        "operator_diagnostics": false,
+        "skip_jacobian": false,
+        "max_step": false,
+        "zero_equilibrium": true,
+        "lr_min": 1e-07,
+        "closure_in_range": true
+      },
+      "checkpoint_sha256": "18172198c6368a719a166b8c72c7dd81de186d85500b38b411ae3b004b84a06c",
+      "result_sha256": "8e250a40e5d510b0f00a25800fb05e7476c053bd85b231321c1304f71a25dd59"
+    },
+    {
+      "directory": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/ns2d/node_rk2_forced_s0",
+      "problem": "ns2d",
+      "arm": "node_rk2_forced",
+      "seed": 0,
+      "config": {
+        "net": {
+          "modes": 12,
+          "width": 32,
+          "layers": 4
+        },
+        "iters": 4000,
+        "window": 6,
+        "batch": 16,
+        "horizons": [
+          10,
+          20,
+          40,
+          80
+        ],
+        "long": 400,
+        "dt_mults": [
+          1
+        ],
+        "init_known": false
+      },
+      "checkpoint_sha256": "782d51404f10bb38e0c55b48e9c8c54d27d49a5c0b6afe8a3078142a89df4dbb",
+      "result_sha256": "ccadedfb58d05d9ec798116a93fea7b195f88db57ca156ff56b1d07e29ae3df3"
+    },
+    {
+      "directory": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/burgers_fem/physics_ars222_n2_known_closure_zero_equilibrium_s0",
+      "problem": "burgers_fem",
+      "arm": "physics_ars222_n2_known_closure_zero_equilibrium",
+      "seed": 0,
+      "config": {
+        "net": {
+          "modes": 24,
+          "width": 48,
+          "layers": 4,
+          "pad": 16
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          12,
+          25,
+          50,
+          100
+        ],
+        "long": 500,
+        "scheme": "ars222",
+        "substeps": 2,
+        "closure": true,
+        "linear_mode": "known",
+        "closure_each_stage": false,
+        "dt_mults": [
+          1
+        ],
+        "lr": 0.0001,
+        "val_every": 500,
+        "operator_diagnostics": false,
+        "skip_jacobian": false,
+        "max_step": false,
+        "zero_equilibrium": true,
+        "lr_min": 1e-07
+      },
+      "checkpoint_sha256": "6cb55b1a5d974d6661b660aa226a60ba221520d24ba14e40f82e3ca0a100eccd",
+      "result_sha256": "cb485920e69ef970aeff4c8a0efb4ea904e0325a2d12fe482ca9d3b751308eb7"
+    },
+    {
+      "directory": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/burgers_fem/physics_ars222_n2_known_closure_zero_equilibrium_s1",
+      "problem": "burgers_fem",
+      "arm": "physics_ars222_n2_known_closure_zero_equilibrium",
+      "seed": 1,
+      "config": {
+        "net": {
+          "modes": 24,
+          "width": 48,
+          "layers": 4,
+          "pad": 16
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          12,
+          25,
+          50,
+          100
+        ],
+        "long": 500,
+        "scheme": "ars222",
+        "substeps": 2,
+        "closure": true,
+        "linear_mode": "known",
+        "closure_each_stage": false,
+        "dt_mults": [
+          1
+        ],
+        "lr": 0.0001,
+        "val_every": 500,
+        "operator_diagnostics": false,
+        "skip_jacobian": false,
+        "max_step": false,
+        "zero_equilibrium": true,
+        "lr_min": 1e-07
+      },
+      "checkpoint_sha256": "f3d8b08d14be41ee8cf2276e43aef2bb5b7cbfd6850f02d45b9d5c394f4f8457",
+      "result_sha256": "a6dff2f4fd59d0bed3d60965237df1d15551e16e04d8fbfd32889d09c259a60a"
+    },
+    {
+      "directory": "/pitagora/home/userexternal/vgopakum/NOs_for_POs_MHD/GenericOpsSplit/research_runs/20261110/runs/burgers_fem/physics_ars222_n2_known_closure_zero_equilibrium_s2",
+      "problem": "burgers_fem",
+      "arm": "physics_ars222_n2_known_closure_zero_equilibrium",
+      "seed": 2,
+      "config": {
+        "net": {
+          "modes": 24,
+          "width": 48,
+          "layers": 4,
+          "pad": 16
+        },
+        "iters": 5000,
+        "window": 8,
+        "batch": 32,
+        "horizons": [
+          12,
+          25,
+          50,
+          100
+        ],
+        "long": 500,
+        "scheme": "ars222",
+        "substeps": 2,
+        "closure": true,
+        "linear_mode": "known",
+        "closure_each_stage": false,
+        "dt_mults": [
+          1
+        ],
+        "lr": 0.0001,
+        "val_every": 500,
+        "operator_diagnostics": false,
+        "skip_jacobian": false,
+        "max_step": false,
+        "zero_equilibrium": true,
+        "lr_min": 1e-07
+      },
+      "checkpoint_sha256": "db03662436aff3ecbd5b7945b506e5667d1898e05cebca6cb3444e02b181c953",
+      "result_sha256": "0e28402c42c7cbdffca45fc15773056736e6f963c6cd845492a615931a0d6f05"
+    }
+  ],
+  "source_sha256": {
+    "models.py": "72a368fc8741f915dd3535c399f3fd4908ae02a965cc0dc3863aaa5aecbce366",
+    "operators.py": "60515cc87ed1332bed488d6e057351d02030c5b794dc46231a3580ab944700f6",
+    "problems.py": "92d86324f424198e1d60c9dff8827c376709bac2e481803cd28a31207fa47b65",
+    "research_models.py": "4052232bd725d9f0a5949e81100fa22ea93da3c75f51d099bda869a7ec6e105e",
+    "train.py": "c984b9d95a174aab3b9a637ca4db3700252837d9a3368bdde8fd5eb6874ece3e",
+    "research.py": "f4094a39035340ad98d68872e33cba6b20eab7e7bdd1d701a22ba01136e99d0d",
+    "research_holdout.py": "fb345edbca80d1e25dbc7bd430ac50e4b73f55d8175e3c697c038aa353e8d58d",
+    "research_gate.py": "b69b43bb71f299b038a98caac828a3c9b7836eb390ff6d3c86a94fe245027bef"
+  },
+  "selection_protocol_sha256": "b0a37388c3746a5a308d20541e50cdcfc625591d5a75a90043ae167baa323a0c",
+  "plot_roles_sha256": "e4b6a880cbf7f6eba653f8f68df83a2cd2ae3e44bf3b006dab8456ca7391e464",
+  "independent_cases": {
+    "test_seed": 7103,
+    "test_count": 32,
+    "ood_count": 16,
+    "extra_fem_coefficients": [
+      0.003,
+      0.018
+    ]
+  }
+}

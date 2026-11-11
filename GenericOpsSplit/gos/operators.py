@@ -194,10 +194,64 @@ def gmres(A, b, Minv, iterations, eps=1e-30):
     e1 = torch.zeros(B, iterations+1, 1, device=b.device, dtype=b.dtype)
     e1[:, 0, 0] = beta
     Q, R = torch.linalg.qr(H)
+    # Exact Krylov breakdown leaves unused zero pivots (including an entirely zero RHS).
+    diagonal = R.diagonal(dim1=-2, dim2=-1)
+    floor = torch.finfo(b.dtype).eps*H.abs().amax((1, 2)).clamp_min(1.)[:, None]
+    safe = torch.where(diagonal.abs() < floor, torch.where(diagonal < 0, -floor, floor), diagonal)
+    R = R + torch.diag_embed(safe-diagonal)
     y = torch.linalg.solve_triangular(R, Q.transpose(1, 2) @ e1, upper=True)
     residual = (e1 - H @ y).squeeze(-1).norm(dim=1)/beta.clamp_min(eps)
     x = sum(y[:, j]*V[j] for j in range(iterations))
     return Minv(x.view(shape)), residual
+
+
+class _OseenSolve(torch.autograd.Function):
+    """Differentiate the linear system, avoiding gradients through Arnoldi and QR."""
+
+    @staticmethod
+    def forward(q, load, mu_t, dt, operator):
+        return operator._solve(q, load, mu_t, dt)
+
+    @staticmethod
+    def setup_context(ctx, inputs, output):
+        q, load, mu_t, dt, operator = inputs
+        ctx.dt, ctx.operator = dt, operator
+        ctx.save_for_backward(q, output, mu_t)
+        ctx.save_for_forward(q, output, mu_t)
+
+    @staticmethod
+    def backward(ctx, grad):
+        q, x, mu_t = ctx.saved_tensors
+        op, dt = ctx.operator, ctx.dt
+        A, Minv = op.system(q, mu_t, dt, transpose=True)
+        adjoint, _ = gmres(A, grad, Minv, op.iterations)
+        g = op.grid
+        ph = g.ifft(g.fft(adjoint)*g.mask)
+        xh = g.fft(x)
+        dx, dy = g.ifft(1j*g.ks[1]*xh), g.ifft(1j*g.ks[0]*xh)
+        # velocity() is skew-adjoint in each component on the periodic grid.
+        uq, _ = op.velocity(ph*dx)
+        _, wq = op.velocity(ph*dy)
+        grad_q = adjoint + dt*(uq + wq)
+        grad_mu = -dt*op.problem.mu_ref*(adjoint*g.ifft(g.k2*xh)).flatten(1).sum(1)
+        return grad_q, dt*adjoint, grad_mu, None, None
+
+    @staticmethod
+    def jvp(ctx, dq, dload, dmu, _dt, _operator):
+        q, x, mu_t = ctx.saved_tensors
+        op, dt = ctx.operator, ctx.dt
+        rhs = torch.zeros_like(q)
+        if dq is not None:
+            u, w = op.velocity(dq)
+            rhs = rhs + dq - dt*op.advect(u, w, x)
+        if dload is not None:
+            rhs = rhs + dt*dload
+        if dmu is not None:
+            dnu = (dmu*op.problem.mu_ref).view(-1, 1, 1, 1)
+            rhs = rhs - dt*dnu*op.grid.ifft(op.grid.k2*op.grid.fft(x))
+        A, Minv = op.system(q, mu_t, dt)
+        tangent, _ = gmres(A, rhs, Minv, op.iterations)
+        return tangent
 
 
 class OseenNS(nn.Module):
@@ -211,6 +265,7 @@ class OseenNS(nn.Module):
         self.problem, self.mode, self.h, self.iterations = problem, mode, problem.h, iterations
         self.grid = FourierGrid(problem.n, problem.length, problem.dim, device, torch.float32)
         self.scale, self.last_residual = 1.0, None
+        self.implicit_gradient = False
 
     def velocity(self, q):
         g = self.grid
@@ -238,12 +293,29 @@ class OseenNS(nn.Module):
     def solve(self, q, load, mu_t, dt, theta):
         if theta != 1:
             raise ValueError('Oseen step is backward Euler only')
+        if self.implicit_gradient:
+            return _OseenSolve.apply(q, load, mu_t, dt, self)
+        return self._solve(q, load, mu_t, dt)
+
+    def system(self, q, mu_t, dt, transpose=False):
         g = self.grid
         nu = (mu_t*self.problem.mu_ref).view(-1, 1, 1, 1)
         u, w = self.velocity(q)
         diag = 1 + dt*nu*g.k2
-        A = lambda x: x + dt*(g.ifft(nu*g.k2*g.fft(x)) + self.advect(u, w, x))
-        Minv = lambda r: g.ifft(g.fft(r)/diag)
+
+        def A(x):
+            diffusion = g.ifft(nu*g.k2*g.fft(x))
+            if transpose:
+                projected = g.ifft(g.fft(x)*g.mask)
+                advection = -g.ifft(1j*g.ks[1]*g.fft(u*projected) + 1j*g.ks[0]*g.fft(w*projected))
+            else:
+                advection = self.advect(u, w, x)
+            return x + dt*(diffusion + advection)
+
+        return A, lambda r: g.ifft(g.fft(r)/diag)
+
+    def _solve(self, q, load, mu_t, dt):
+        A, Minv = self.system(q, mu_t, dt)
         x, self.last_residual = gmres(A, q + dt*load, Minv, self.iterations)
         return x
 

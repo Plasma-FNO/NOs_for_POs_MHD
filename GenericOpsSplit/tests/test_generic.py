@@ -95,8 +95,8 @@ def test_fem_burgers_load_is_energy_neutral():
 @pytest.mark.parametrize('arm', sorted(ARMS))
 @pytest.mark.parametrize('name', ['burgers', 'ns2d', 'burgers_fem'])
 def test_arm_gradients_and_jacobian(arm, name):
-    if arm.startswith('oseen') and name != 'ns2d':
-        pytest.skip('Oseen operator is defined for ns2d only')
+    if (arm.startswith('oseen') or arm.endswith('_forced')) and name != 'ns2d':
+        pytest.skip('Oseen and forcing-input arms are defined for ns2d only')
     problem = get_problem(name, DEVICE)
     net = dict(CONFIG[name]['net'], modes=4, width=8, layers=2)
     model = StepModel(problem, arm, net, 0.3, DEVICE).to(DEVICE)

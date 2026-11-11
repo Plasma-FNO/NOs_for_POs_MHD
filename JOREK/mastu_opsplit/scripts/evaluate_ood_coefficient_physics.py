@@ -34,6 +34,8 @@ def main():
     parser.add_argument('--loader', type=Path, required=True, help='coefficient_ood.py providing CoefficientOODDataset')
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--smoke', action='store_true')
+    parser.add_argument('--device', choices=('cpu', 'cuda'),
+                        help='cuda: torch backend with cuDSS LU (needs a snapshot with gpu_native.py); default cpu')
     args = parser.parse_args()
     study = (args.study or args.run.parent/'study').resolve()
     sys.path.insert(0, str(study/'src'))
@@ -43,6 +45,9 @@ def main():
     from mastu_opsplit.implicit_training import build_system
     provenance = json.loads((args.run/'provenance.json').read_text())
     config = dict(provenance['config'])
+    if config.get('physical_defect') is not None:
+        raise ValueError('This legacy OOD wrapper does not preserve physical-defect stages; '
+                         'use a separately validated profile/system configuration for that coefficient')
     if provenance['source_sha256'] != {p.name: sha256_file(p) for p in (study/'src'/'mastu_opsplit').glob('*.py')}:
         raise ValueError('Study snapshot source differs from the training provenance')
     if provenance['arm'] != args.family:
@@ -59,6 +64,12 @@ def main():
     spec.loader.exec_module(coefficient)
     if args.smoke:
         config.update(evaluation_horizons=[4], evaluation_cases=2, diagnostic_only=True)
+    if args.device is not None:
+        config['device'] = args.device
+    device = torch.device(config.get('device', 'cpu'))
+    if device.type == 'cuda':
+        from mastu_opsplit.gpu_native import configure_cuda_numerics
+        configure_cuda_numerics()
     torch.set_num_threads(config['threads'])
     torch.use_deterministic_algorithms(True)
     manifest = args.ood_root/'manifest.json'
@@ -84,8 +95,13 @@ def main():
     frozen = load_frozen_tangent(config['tangent'], space.geometry)
     if frozen.sha256 != config['tangent_sha256']:
         raise ValueError('Frozen tangent hash differs from configuration')
-    base = ImplicitOpsSplitModel(space, system, provenance['model_config'], provenance['label_scale'],
-                                 physical_guard=guard, physics_only=args.family == 'physics')
+    from mastu_opsplit import implicit_training
+    if hasattr(implicit_training, 'build_model'):
+        base = implicit_training.build_model(config, space, system, provenance['model_config'], provenance['label_scale'],
+                                             physical_guard=guard, physics_only=args.family == 'physics')
+    else:   # snapshots that predate the tangent correction
+        base = ImplicitOpsSplitModel(space, system, provenance['model_config'], provenance['label_scale'],
+                                     physical_guard=guard, physics_only=args.family == 'physics')
     checkpoint_sha256 = None
     if args.family != 'physics':
         path = args.run/args.family/'rollout'/'selected.pt'
@@ -100,12 +116,14 @@ def main():
         moved = coefficient.coefficient_tangent(frozen, multiplier, F0=config['F0'])
         return ImplicitNativeSystem(space.geometry, moved, baseline.mean, baseline.scale, system.fixed,
                                     code_interval=verification['code_interval'], theta=config['theta'],
-                                    F0=config['F0'], relations=system.relations)
+                                    F0=config['F0'], relations=system.relations,
+                                    **({} if device.type == 'cpu' else dict(backend='torch', device=device)))
 
     correction = coefficient.DensityDiffusionRemainder(space.geometry, frozen, baseline.mean, baseline.scale,
                                                        F0=config['F0'])
     model = coefficient.CoefficientImplicitModel(base, factory, correction,
                                                  known_multipliers=[case['coefficient_multiplier'] for case in ood.cases])
+    model = model.to(device)
     model.eval()
     record = dict(run=str(args.run.resolve()), family=args.family, study=str(study), checkpoint_sha256=checkpoint_sha256,
                   training_provenance_sha256=config_hash(provenance), ood_manifest_sha256=sha256_file(manifest),

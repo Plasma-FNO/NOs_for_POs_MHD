@@ -1,13 +1,15 @@
 import h5py
 import numpy as np
 import pytest
+import scipy.sparse as sp
+from scipy.sparse.linalg import splu
 import torch
 
 from mastu_opsplit.euler import NativeSplineSpace
 from mastu_opsplit.implicit_opsplit import (ACTIVE_CHANNELS, BLOCK_ROWS, FrozenTangent, ImplicitNativeSystem,
-                                            ImplicitOpsSplitModel, WeakAssembler, assemble_mass, assemble_tangent,
-                                            corr_neg_dens1, fixed_dofs_from_trajectories, load_frozen_tangent,
-                                            remainder_loss)
+                                            ImplicitOpsSplitModel, WeakAssembler, _Factor, assemble_mass,
+                                            assemble_tangent, corr_neg_dens1, fixed_dofs_from_trajectories,
+                                            load_frozen_tangent, remainder_loss)
 from mastu_opsplit.physical_guard import PhysicalGuard
 from test_learning import configuration
 from test_physical_guard import fixture
@@ -93,7 +95,10 @@ def test_implicit_step_solves_requested_equations(tmp_path, theta):
     forcing = torch.tensor(rng.normal(size=(1, n, 5)))
     fraction = .5
     out = system.step(y, forcing, fraction)
-    np.testing.assert_allclose(system.residual(y[0].numpy(), out[0].numpy(), forcing[0].numpy(), fraction), 0, atol=1e-11)
+    # Roundoff-level (backward-stable) residual; the fixture is ill-conditioned (|x| ~ 1e5 for O(1) data).
+    factor = system.factor(fraction)
+    residual = system.residual(y[0].numpy(), out[0].numpy(), forcing[0].numpy(), fraction)
+    assert np.abs(residual).max() <= 1e-15*factor.norms['N']*np.abs(system.vector(out[0].numpy())).max()
     # Same equations in physical units, independently of normalization and row scaling.
     q, z = mean + scale*y[0].numpy(), mean + scale*out[0].numpy()
     h = .03125*fraction
@@ -111,6 +116,8 @@ def test_implicit_step_solves_requested_equations(tmp_path, theta):
         free = ~fixed[:, auxiliary]
         np.testing.assert_allclose((stiff@z[:, potential] + mass@z[:, auxiliary])[free], 0, atol=1e-10)
     np.testing.assert_array_equal(out[0].numpy()[fixed], y[0].numpy()[fixed])
+    solves = system.report()['factors'][str(fraction)]['solves']['forward']
+    assert solves['solves'] == 1 and solves['worst_backward_error'] <= system.refinement_tolerance
 
 
 def test_implicit_step_adjoint_is_exact_transpose_solve(tmp_path):
@@ -137,6 +144,51 @@ def test_implicit_step_adjoint_is_exact_transpose_solve(tmp_path):
         np.testing.assert_allclose(grad_f[i].numpy().T.ravel(), exact_forcing.T @ w, rtol=1e-9, atol=1e-9*np.abs(exact_forcing).max())
         forward = np.linalg.solve(A, B @ y[i].detach().numpy().T.ravel() + factor.constant + E @ forcing[i].detach().numpy().T.ravel())
         np.testing.assert_allclose(out[i].detach().numpy().T.ravel(), forward, rtol=1e-9, atol=1e-9*np.abs(forward).max())
+
+
+def small_factor(refinement=0, n=60, seed=5):
+    rng = np.random.default_rng(seed)
+    A = (sp.diags(rng.uniform(2, 3, n)) + .05*sp.random(n, n, density=.1, random_state=seed)).tocsc()
+    factor = _Factor(A, sp.identity(n), np.zeros(n), np.zeros(0, dtype=int), np.zeros(0), 1., refinement)
+    return factor, A.toarray(), rng.normal(size=n)
+
+
+def reset(factor):
+    for stats in factor.statistics.values():
+        stats.update(solves=0, lu_solves=0, stalled=0, worst_backward_error=0.)
+
+
+def test_refinement_skips_exact_solves_and_converges_inexact_ones():
+    factor, A, b = small_factor()
+    for transpose, matrix in ((False, A), (True, A.T)):
+        np.testing.assert_allclose(factor.solve(b, transpose), np.linalg.solve(matrix, b), rtol=1e-12)
+    assert factor.statistics['N']['lu_solves'] == 1 and factor.statistics['T']['lu_solves'] == 1
+    assert max(s['worst_backward_error'] for s in factor.statistics.values()) <= factor.tolerance
+    # Factors of a nearby matrix: each correction contracts by ~1e-6, so refinement must converge.
+    factor.lu = splu(sp.csc_matrix(A + 1e-6*np.eye(len(A))))
+    reset(factor)
+    x = factor.solve(b)
+    stats = factor.statistics['N']
+    assert 2 <= stats['lu_solves'] <= 1 + factor.max_refinement and stats['stalled'] == 0
+    assert stats['worst_backward_error'] <= factor.tolerance
+    np.testing.assert_allclose(x, np.linalg.solve(A, b), rtol=1e-12)
+
+
+def test_refinement_stops_at_stagnation_and_keeps_the_better_iterate():
+    factor, A, b = small_factor()
+    factor.lu = splu(sp.csc_matrix(A + 20*np.eye(len(A))))  # corrections contract by ~0.9: never halve
+    first = factor.lu.solve(b)
+    x = factor.solve(b)
+    stats = factor.statistics['N']
+    assert stats['lu_solves'] == 2 and stats['stalled'] == 1
+    berr = lambda y: float(factor.backward_error(b - factor.A @ y, y, b, 'N'))
+    assert berr(x) < berr(first)
+
+
+def test_minimum_refinement_is_always_applied():
+    factor, A, b = small_factor(refinement=2)
+    np.testing.assert_allclose(factor.solve(b, True), np.linalg.solve(A.T, b), rtol=1e-12)
+    assert factor.statistics['T']['lu_solves'] == 3
 
 
 def test_nested_dissection_and_colamd_orderings_agree(tmp_path):

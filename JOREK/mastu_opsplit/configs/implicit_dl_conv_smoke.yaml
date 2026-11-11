@@ -1,0 +1,42 @@
+# Learned tangent correction Delta L with the original small network; otherwise identical to implicit_opsplit_smoke.yaml. Smoke. Converged-Picard training (rerun of the 3-iteration truncation).
+manifest: /pitagora_scratch/userexternal/vgopakum/mastu_euler_ensemble100_20261105/manifest.json
+manifest_sha256: f0f0f56c611c9f9d48081d4a611bfa44a0709e5cf4b691fc219c69396c81b87c
+source_split_counts: {train: 60, validation: 20, test: 20}
+split_counts: {train: 80, validation: 0, test: 20}
+seed: 17
+threads: 4
+steps: 3
+pretrain_steps: 3
+horizon: 4
+stride: 1
+batch_size: 1
+learning_rate: 0.001
+pretrain_learning_rate: 0.001
+physical_guard: true
+positivity_basis: bernstein_subdivided
+positivity_penalty: 0.001
+gamma: 1.6666666666666667
+theta: 1.0                  # 1 = (M* - hL) q' = M* q + h (F* - L q* + N)
+F0: 0.64
+dirichlet_tolerance: 1.0e-7
+tangent: /pitagora_work/FUPB2_UKAEA_ML/vgopakum/runs/mastu_full_opsplit_20261104/frozen_tangent/baseline_terms.h5
+tangent_sha256: 25aa63a36ed7f52167a9f1b5662735c78e83cd37ee56a6347c2ff3b47367e273
+labels: /pitagora_scratch/userexternal/vgopakum/mastu_implicit_opsplit_20261108/labels
+architecture:
+  grid_shape: [16, 32]
+  modes: 4
+  width: 8
+  n_layers: 2
+tangent_correction:         # learned Delta L = T* (.) m(R,Z), |m| < bound, treated implicitly by Picard iteration
+  basis_shape: [6, 12]      # cubic B-spline functions in R, Z per coupling (83 couplings)
+  bound: 0.5
+  share: block_field        # one multiplier per (weak equation, field): Picard contraction <= bound measured
+                            # on the production system; per-coupling multipliers diverge (rho 30-61)
+  train_tolerance: 1.0e-6   # training: Picard without gradients to this change (counted if not reached) ...
+  train_iterations: 3       # ... then 3 differentiable iterations (Jacobian-free backprop; trained map = converged solve)
+  max_iterations: 40        # 12 was too tight in mastu_tangent_correction_20261110 (stalled at 1-2.5e-7, rho ~0.3-0.45)
+  tolerance: 1.0e-7         # evaluation iterates to `tolerance` or fails loudly
+evaluation_horizons: [4]
+evaluation_cases: 2
+evaluation_substeps: [1, 2, 4]
+diagnostic_only: true

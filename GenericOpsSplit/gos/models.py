@@ -16,6 +16,8 @@ All arms share one backbone G_theta(q, log mu_t[, x]). With h the data interval 
                     q' = q + dt (3 k1 + k2)/2,  g = 1 + 1/sqrt(2)   (Verwer et al. 1999)
   node_rk2          explicit Heun with the learned rate
   oseen*            (I - dt [nu lap - u(q).grad]) q' = q + dt N(q): implicit linearised advection (ns2d)
+  *_forced          fixed NS2D forcing field supplied as an additional FNO input channel
+  oseen_residual    exact forcing plus a zero-initialized neural correction, with implicit solve derivatives
 """
 import torch
 from torch import nn
@@ -42,7 +44,11 @@ ARMS = {
     # 2D NS only: advection re-linearised every step and treated implicitly (GMRES)
     'oseen_exact': dict(kind='implicit', linear='oseen', exact=True),
     'oseen': dict(kind='implicit', linear='oseen'),
+    'oseen_residual': dict(kind='implicit', linear='oseen', forcing_input=True, residual_forcing=True, implicit_gradient=True),
 }
+# Fixed spatial forcing breaks translation symmetry; supply the same physical input to each baseline.
+for _arm in ('ar', 'node', 'node_rk2', 'implicit_known', 'implicit_struct', 'implicit_free', 'oseen'):
+    ARMS[_arm + '_forced'] = dict(ARMS[_arm], forcing_input=True)
 ROS2_GAMMA = 1 + 2**-0.5
 
 
@@ -96,14 +102,23 @@ class StepModel(nn.Module):
         self.problem, self.arm, self.kind = problem, arm, spec['kind']
         self.theta, self.exact, self.h, self.scale = spec.get('theta', 1.), spec.get('exact', False), problem.h, scale
         self.tangent_free = spec.get('tangent_free', False)
+        self.residual_forcing = spec.get('residual_forcing', False)
         self.linear = make_linear(problem, spec['linear'], device) if 'linear' in spec else None
         if spec.get('linear') == 'oseen':
             self.linear.scale = scale
+            self.linear.implicit_gradient = spec.get('implicit_gradient', False)
         grid = self.linear.grid if self.linear is not None else make_linear(problem, 'known', device).grid
         self.register_buffer('coords', grid.coords.float() if problem.needs_coords else torch.zeros(0, *grid.shape))
+        if spec.get('forcing_input', False):
+            if problem.name != 'ns2d':
+                raise ValueError('Forcing-input arms are defined for ns2d only')
+            forcing = problem.grid.ifft(problem.forcing_hat(problem.grid)).float()[None]/scale
+        else:
+            forcing = torch.zeros(0, *grid.shape, device=device)
+        self.register_buffer('forcing', forcing, persistent=False)
         if not self.exact:
             c = problem.channels
-            cin = c + 1 + self.coords.shape[0]
+            cin = c + 1 + self.coords.shape[0] + self.forcing.shape[0]
             self.net = FNO(cin, c, problem.dim, **net_config)
             if self.kind != 'ar':
                 nn.init.zeros_(self.net.project[-1].weight)
@@ -120,6 +135,8 @@ class StepModel(nn.Module):
         extra = [torch.log(mu_t).view(b, 1, *([1]*(q.ndim-2))).expand(b, 1, *q.shape[2:])]
         if self.coords.shape[0]:
             extra.append(self.coords[None].expand(b, *self.coords.shape))
+        if self.forcing.shape[0]:
+            extra.append(self.forcing[None].expand(b, *self.forcing.shape))
         return self.net(torch.cat([q] + extra, 1))
 
     def exact_load(self, q, mu_t):
@@ -141,6 +158,8 @@ class StepModel(nn.Module):
 
     def exact_increment(self, q, mu_t):
         """Label for remainder_increment: h M^-1 N_exact(q)."""
+        if self.residual_forcing:
+            return torch.zeros_like(q)
         return self.h*self.linear.mass_solve(self.exact_load(q, mu_t))
 
     def load(self, q, mu_t):
@@ -148,7 +167,8 @@ class StepModel(nn.Module):
         if self.exact:
             return self.exact_load(q, mu_t)
         g = self.remainder_increment(q, mu_t)
-        return self.linear.mass(g/self.h) if self.linear is not None else g/self.h
+        load = self.linear.mass(g/self.h) if self.linear is not None else g/self.h
+        return load + self.exact_load(q, mu_t) if self.residual_forcing else load
 
     def init_operator_from_known(self, device):
         self.linear.init_from(make_linear(self.problem, 'known', device))
